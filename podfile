@@ -1,0 +1,52 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target "JiangYouSearch" do
+
+platform :ios, '8.0'
+
+pod "AFNetworking"
+pod 'SDWebImage'
+pod 'Reachability'
+pod 'MBProgressHUD'
+pod "MagicalRecord"
+pod 'JSONModel'
+pod 'Masonry'
+pod 'PINCache'
+pod 'MZTimerLabel'
+pod 'WebViewJavascriptBridge', '~> 4.1.5'
+pod 'MJRefresh'
+pod 'IQKeyboardManager'
+pod 'GTSDK'
+pod 'RongCloudIM/IMKit'
+pod 'HZActionSheet'
+pod 'JMHoledView', '~> 0.1.1'
+pod 'FDFullscreenPopGesture'
+#pod 'UMengAnalytics' //在升级友盟新版时 老师编译错误显示文件冲突 项目里没用 暂时去掉
+pod 'OHHTTPStubs'
+pod 'MagicWindowSDK'
+pod 'SDCycleScrollView'
+pod 'LTNavigationBar'
+pod 'AutoScrollLabel'
+pod 'Bugly'
+pod 'GrowingIO'
+pod 'MMPopupView'
+
+#友盟分享包含微信库，与魔窗出现冲突，故暂时手动集成
+#pod 'UMengUShare/UI'
+#pod 'UMengUShare/Social/WeChat'
+#pod 'UMengUShare/Social/QQ'
+
+#星星评分组件
+#pod 'HCSStarRatingView', '~> 1.4.5'
+#轮播组件
+#pod 'iCarousel'
+#scheme应用外部跳转组件，暂时不用
+#pod 'JLRoutes'
+#暂时不用
+#pod 'PSCarouselView'
+#pod 'NJKWebViewProgress'
+pod 'UICKeyChainStore'
+pod 'TXScrollLabelView'
+
+
+end
