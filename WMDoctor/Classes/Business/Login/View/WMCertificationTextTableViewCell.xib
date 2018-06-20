@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="WMCertificationTextTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="以下信息仅供认证使用，我们将严格保密" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ChB-tN-AwO">
+                        <rect key="frame" x="0.0" y="46" width="600" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="CPG-dU-dTR"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="成为微脉认证医生，开启你的线上个人诊室！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hxb-t8-XsM">
+                        <rect key="frame" x="0.0" y="20" width="600" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="n3W-lj-Gun"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.094117647060000004" green="0.63529411759999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ChB-tN-AwO" firstAttribute="top" secondItem="Hxb-t8-XsM" secondAttribute="bottom" constant="6" id="0B3-Rp-tWu"/>
+                    <constraint firstAttribute="trailing" secondItem="ChB-tN-AwO" secondAttribute="trailing" id="5da-Ry-GES"/>
+                    <constraint firstItem="ChB-tN-AwO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="J9F-Ba-KrW"/>
+                    <constraint firstItem="Hxb-t8-XsM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="T9Q-vC-d4J"/>
+                    <constraint firstItem="Hxb-t8-XsM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="pmQ-6H-cQg"/>
+                    <constraint firstAttribute="trailing" secondItem="Hxb-t8-XsM" secondAttribute="trailing" id="ztg-LK-V0d"/>
+                </constraints>
+            </tableViewCellContentView>
+        </tableViewCell>
+    </objects>
+</document>

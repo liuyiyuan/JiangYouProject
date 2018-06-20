@@ -1,0 +1,75 @@
+//
+//  WMDoctor-Prefix.pch
+//  WMDoctor
+//
+//  Created by choice-ios1 on 16/12/13.
+//  Copyright © 2016年 Choice. All rights reserved.
+//
+
+#ifndef WMDoctor_Prefix_pch
+#define WMDoctor_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+//http://blog.csdn.net/jymn_chen/article/details/39314163
+
+#import "Macro.h"
+
+// 第三方
+#import <WMHUDUntil.h>
+#import <MagicalRecord/MagicalRecord.h>
+#import <MJRefresh.h>
+#import <JSONModel.h>
+#import <UINavigationController+FDFullscreenPopGesture.h>
+
+//其他
+#import "Macro.h"
+#import "HTTPConfig.h"
+//融云
+#import <RongIMKit/RongIMKit.h>
+#import "AppDelegate+RongCloud.h"
+#import "RCUserInfo+WMAddition.h"
+#import "WMIMGroupModel.h"
+#import "WMGroupActivityModel.h"
+#import "WMGroupNewsModel.h"
+
+//公共类
+#import "UIColor+Hex.h"
+#import "CommonUtil.h"
+#import "UIView+Additions.h"
+#import "UITableView+BackgroundView.h"
+#import "UITableView+ListEmptyView.h"
+#import "HZActionSheet.h"
+#import "UIImageView+WebCache.h"
+#import "MJWeiMaiHeader.h"
+#import "MJWeiMaiFooter.h"
+#import "WMJSONModel.h"
+#import "WMLoginCache.h"
+#import "WMDoctorVoiceModel.h"
+#import "WMQuestionModel.h"
+#import "WMIntegralDetailModel.h"
+#import "WMMyMicroBeanModel.h"
+#import "WMOrderListModel.h"
+
+#import "PopUpUtil.h"
+
+#import "WMBaseWKWebController.h"
+#import "WMShareData.h"
+#import "WMInformationModel.h"
+#import "WMStringUtil.h"
+#import "WMRCCommonUtil.h"
+
+//圈子
+#import "WMPatientReportedModel.h"
+
+//个推
+#import "WMOtherDataModel.h"
+
+//胎心
+#define RGBA(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]
+#define UI_SCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
+#define UI_SCREEN_WIDTH [[UIScreen mainScreen] bounds].size.width
+
+
+#endif /* WMDoctor_Prefix_pch */

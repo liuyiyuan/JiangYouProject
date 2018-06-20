@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="WMIMComFirstCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="170"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="600" height="170"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rOk-Dn-vWM">
+                        <rect key="frame" x="15" y="10" width="570" height="150"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSq-aD-DbN">
+                                <rect key="frame" x="0.0" y="88" width="570" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="eMy-xN-zyE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jiankangdangan_tianjia" translatesAutoresizingMaskIntoConstraints="NO" id="i5m-cq-mMh">
+                                <rect key="frame" x="270" y="33" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="cnj-y9-eey"/>
+                                    <constraint firstAttribute="height" constant="30" id="w7A-lY-fdl"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="cSq-aD-DbN" firstAttribute="leading" secondItem="rOk-Dn-vWM" secondAttribute="leading" id="7So-GK-xYZ"/>
+                            <constraint firstItem="i5m-cq-mMh" firstAttribute="top" secondItem="rOk-Dn-vWM" secondAttribute="top" constant="33" id="BUy-zz-dic"/>
+                            <constraint firstAttribute="trailing" secondItem="cSq-aD-DbN" secondAttribute="trailing" id="CrH-iA-VW2"/>
+                            <constraint firstItem="i5m-cq-mMh" firstAttribute="top" secondItem="rOk-Dn-vWM" secondAttribute="top" constant="33" id="LeW-az-EJI"/>
+                            <constraint firstAttribute="bottom" secondItem="cSq-aD-DbN" secondAttribute="bottom" constant="22" id="QVt-nI-suq"/>
+                            <constraint firstItem="i5m-cq-mMh" firstAttribute="centerX" secondItem="rOk-Dn-vWM" secondAttribute="centerX" id="Zxb-Z2-A2f"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="rOk-Dn-vWM" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="45R-ZJ-nWf"/>
+                <constraint firstItem="rOk-Dn-vWM" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="X45-2G-9mx"/>
+                <constraint firstItem="rOk-Dn-vWM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="Zvq-qn-LOq"/>
+                <constraint firstItem="rOk-Dn-vWM" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="ibR-QA-gFm"/>
+            </constraints>
+            <connections>
+                <outlet property="addImageView" destination="i5m-cq-mMh" id="53b-gQ-gwP"/>
+                <outlet property="detailLable" destination="cSq-aD-DbN" id="Qtg-Yv-MXw"/>
+                <outlet property="showView" destination="rOk-Dn-vWM" id="Pqt-1r-C4S"/>
+            </connections>
+            <point key="canvasLocation" x="81" y="104"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="jiankangdangan_tianjia" width="30" height="30"/>
+    </resources>
+</document>

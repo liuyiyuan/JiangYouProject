@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>HTTP_URL_TYPE</key>
+	<integer>1</integer>
+	<key>HTTP_URL_SET</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string> </string>
+			<key>content</key>
+			<string>https://doctor.myweimai.com</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>医生端-test1</string>
+			<key>content</key>
+			<string>http://192.168.1.201:8484</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>医生端-test2</string>
+			<key>content</key>
+			<string>http://192.168.1.212:8484</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>医生端-test3</string>
+			<key>content</key>
+			<string>http://192.168.1.220:8484</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>医生端-test4</string>
+			<key>content</key>
+			<string>http://192.168.1.206:8484</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>医生端-集成(预发)</string>
+			<key>content</key>
+			<string>http://integration-doc.myweimai.com</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>预发环境</string>
+			<key>content</key>
+			<string>http://pre-doc.myweimai.com/</string>
+		</dict>
+	</array>
+</dict>
+</plist>

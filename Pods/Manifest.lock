@@ -1,0 +1,126 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - Bugly (2.5.0)
+  - DZNSegmentedControl (1.3.3)
+  - FDFullscreenPopGesture (1.1)
+  - GRKPageViewController (1.2)
+  - GrowingIO (1.4.2):
+    - GrowingIO/Core (= 1.4.2)
+  - GrowingIO/Core (1.4.2)
+  - GTSDK (1.6.4.1)
+  - HZActionSheet (1.0.1):
+    - Masonry
+  - IQKeyboardManager (6.0.3)
+  - JSONModel (1.7.0)
+  - LTNavigationBar (2.1.9)
+  - MagicalRecord (2.3.2):
+    - MagicalRecord/Core (= 2.3.2)
+  - MagicalRecord/Core (2.3.2)
+  - MagicWindowSDK (4.2.171115):
+    - WechatOpenSDK
+  - Masonry (1.1.0)
+  - MBProgressHUD (1.0.0)
+  - MJRefresh (3.1.15.3)
+  - MZTimerLabel (0.5.4)
+  - OHHTTPStubs (5.2.3):
+    - OHHTTPStubs/Default (= 5.2.3)
+  - OHHTTPStubs/Core (5.2.3)
+  - OHHTTPStubs/Default (5.2.3):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (5.2.3):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (5.2.3):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (5.2.3)
+  - PINCache (2.3)
+  - RongCloudIM/IMKit (2.9.0):
+    - RongCloudIM/IMLib
+  - RongCloudIM/IMLib (2.9.0)
+  - SDCycleScrollView (1.65):
+    - SDWebImage (~> 3.7)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
+  - TTTAttributedLabel (2.0.0)
+  - UMengAnalytics (4.1.8)
+  - WebViewJavascriptBridge (6.0.3)
+  - WechatOpenSDK (1.8.1)
+  - WMHUDUntil (0.0.4):
+    - MBProgressHUD
+
+DEPENDENCIES:
+  - AFNetworking
+  - Bugly
+  - DZNSegmentedControl
+  - FDFullscreenPopGesture
+  - GRKPageViewController
+  - GrowingIO (~> 1.4.1)
+  - GTSDK
+  - HZActionSheet
+  - IQKeyboardManager
+  - JSONModel
+  - LTNavigationBar
+  - MagicalRecord
+  - MagicWindowSDK (~> 4.2.171115)
+  - Masonry
+  - MJRefresh
+  - MZTimerLabel
+  - OHHTTPStubs
+  - PINCache
+  - RongCloudIM/IMKit
+  - SDCycleScrollView
+  - SDWebImage
+  - TTTAttributedLabel
+  - UMengAnalytics
+  - WebViewJavascriptBridge
+  - WMHUDUntil
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  Bugly: 3ca9f255c01025582df26f9222893b383c7e4b4e
+  DZNSegmentedControl: ecc2f31c5581cce10c4d766ea4bd2d0781814c1f
+  FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
+  GRKPageViewController: a7e5fd59370ad7b5e5eff7daef4018c929e073e2
+  GrowingIO: 3156c9fabd8c8f59c33efce01f384b969bce40c2
+  GTSDK: b27e433447371587c823353d37af981e4682c008
+  HZActionSheet: 97229e6ab57a95835d09ccd858891b05403a7a48
+  IQKeyboardManager: c390e612f4b98c8fd748016470138537dc163ead
+  JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
+  LTNavigationBar: c278785bed344862e18146b5f06792932e4feacc
+  MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
+  MagicWindowSDK: aa91ae646bb8b1ccd9479ea7fb0f4f7277ef31de
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
+  MZTimerLabel: cd9bfb9304540ef2a9e163384fca9c978f0dbf83
+  OHHTTPStubs: e238cd5b66d8efa51c861db45895de8fe079f4a7
+  PINCache: ce36ed282031b92fc7733ffe831f474ff80fddc2
+  RongCloudIM: 7b4f347758640d5cda8e0ac722110f8cfb8a6480
+  SDCycleScrollView: f72904c77698a7f93a41bcbbc2d78b073bf7326c
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
+  UMengAnalytics: 6ef66c49bea0779d2ce02a72d862510d97619a7a
+  WebViewJavascriptBridge: 7f5bc4d3581e672e8f32bd0f812d54bc69bb8e29
+  WechatOpenSDK: 491d965d79335070328571d3e79f714549e79a5e
+  WMHUDUntil: a0a5ad2a3b952b3641ee4e5607b3d6f93f178ae6
+
+PODFILE CHECKSUM: f110c670d2ab50c25054156a2d2338b1cfec0a96
+
+COCOAPODS: 1.3.1
