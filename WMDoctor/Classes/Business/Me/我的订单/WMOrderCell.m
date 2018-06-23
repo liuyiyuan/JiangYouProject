@@ -57,6 +57,8 @@
     } else if ([order.orderType intValue] == 9) {
         //一问医答
         [self.accept setTitle:@"查看提问" forState:UIControlStateNormal];
+    } else{
+        
     }
 }
 
