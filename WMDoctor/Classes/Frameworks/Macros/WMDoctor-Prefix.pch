@@ -71,6 +71,7 @@
 #define UI_SCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
 #define UI_SCREEN_WIDTH [[UIScreen mainScreen] bounds].size.width
 
+//===========================----江油----==============================
 
 //全局
 #define kScreenWidth                [UIScreen mainScreen].bounds.size.width
@@ -100,5 +101,6 @@
 //WYButtonChooseView
 #define kButtonChooseViewSelectedTopicMaxCount  24
 
+//===========================----江油----==============================
 
 #endif /* WMDoctor_Prefix_pch */

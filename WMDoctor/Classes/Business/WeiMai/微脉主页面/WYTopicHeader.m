@@ -24,7 +24,7 @@
 - (void)initSubviews
 {
 //    self.clipsToBounds = NO;
-    self.backgroundColor = [UIColor lightGrayColor];
+    self.backgroundColor = [UIColor colorWithRed:246 / 255.0 green:246 / 255.0 blue:246 / 255.0 alpha:1];
     CGRect frame = self.frame;
     _topicScrollView = [[WYTopicScrollView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width - kButtonW, frame.size.height)];
     [self addSubview:_topicScrollView];
