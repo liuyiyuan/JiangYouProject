@@ -76,30 +76,30 @@
 #pragma mark - Refresh
 - (void)loadMoreData
 {
-////    if (_footer.state == MJRefreshFooterStateIdle) {
-//        NSLog(@"loadmoreData");
-////        NSMutableString *url = [NSMutableString stringWithString:kWYNetWorkNewsListBaseStr];
-////        [url appendFormat:@"/%@/%ld-%d.html", _tid, kWYNetWorkNewsListFetchOnceCount * _page, kWYNetWorkNewsListFetchOnceCount];
-////        [[WYNetwork sharedWYNetwork] HttpGetNews:url success:^(id responseObject) {
-//////            NSLog(@"abc");
-////            if (![responseObject isKindOfClass:[NSDictionary class]]) {
-////                return;
-////            }
-////            if (![[responseObject allObjects] isKindOfClass:[NSArray class]]) {
-////                return;
-////            }
-////            for (NSDictionary *dic in [[responseObject allObjects] lastObject]) {
-////                WYNews *news = [[WYNews alloc] initWithDic:dic];
-////                [_dataArray addObject:news];
-////            }
-////            _page++;
-////            [_footer endRefreshing];
-////            [self.tableView reloadData];
-////        } failure:^(NSError *error) {
-////            NSLog(@"\nerror is %@", [error localizedDescription]);
-////            [_footer endRefreshing];
-////        }];
-////    }else [_footer endRefreshing];
+    //    if (_footer.state == MJRefreshFooterStateIdle) {
+    NSLog(@"loadmoreData");
+    NSMutableString *url = [NSMutableString stringWithString:kWYNetWorkNewsListBaseStr];
+    [url appendFormat:@"/%@/%ld-%d.html", _tid, kWYNetWorkNewsListFetchOnceCount * _page, kWYNetWorkNewsListFetchOnceCount];
+    [[WYNetwork sharedWYNetwork] HttpGetNews:url success:^(id responseObject) {
+        //            NSLog(@"abc");
+        if (![responseObject isKindOfClass:[NSDictionary class]]) {
+            return;
+        }
+        if (![[responseObject allObjects] isKindOfClass:[NSArray class]]) {
+            return;
+        }
+        for (NSDictionary *dic in [[responseObject allObjects] lastObject]) {
+            WYNews *news = [[WYNews alloc] initWithDic:dic];
+            [_dataArray addObject:news];
+        }
+        _page++;
+        [_footer endRefreshing];
+        [self.tableView reloadData];
+    } failure:^(NSError *error) {
+        NSLog(@"\nerror is %@", [error localizedDescription]);
+        [_footer endRefreshing];
+    }];
+    //    }else [_footer endRefreshing];
 }
 
 - (void)loadNewData
