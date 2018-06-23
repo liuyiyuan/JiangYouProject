@@ -34,6 +34,7 @@
 
 - (void)loadData
 {
+    
     NSString *urlStr = [NSString stringWithFormat:kWYNetWorkNewsDetailURLStr, _docid];
     __block typeof(self) blockSelf = self;
     [[WYNetwork sharedWYNetwork] HttpGet:urlStr parameter:nil success:^(id responseObject) {
