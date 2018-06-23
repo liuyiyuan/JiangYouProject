@@ -562,6 +562,26 @@
 		85E4B6091F2AD44F005F6D21 /* RCDGroupInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E4B6081F2AD44F005F6D21 /* RCDGroupInfo.m */; };
 		85E4B60C1F2AD4E8005F6D21 /* WMRCGroupNewsMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E4B60B1F2AD4E8005F6D21 /* WMRCGroupNewsMessage.m */; };
 		85E4B60F1F2AD502005F6D21 /* WMRCGroupNewsMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E4B60E1F2AD502005F6D21 /* WMRCGroupNewsMessageCell.m */; };
+		AD93FE7E20DDDC8100C8EF83 /* JYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FE7D20DDDC8100C8EF83 /* JYHomeViewController.m */; };
+		AD93FE8120DDDE8C00C8EF83 /* WYTopicHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FE8020DDDE8C00C8EF83 /* WYTopicHeader.m */; };
+		AD93FE8420DDDEA800C8EF83 /* WYTopicScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FE8320DDDEA700C8EF83 /* WYTopicScrollView.m */; };
+		AD93FE8720DDDEC300C8EF83 /* WYNewsScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FE8620DDDEC200C8EF83 /* WYNewsScrollView.m */; };
+		AD93FE8A20DDDEDF00C8EF83 /* WYNewsTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FE8920DDDEDF00C8EF83 /* WYNewsTableController.m */; };
+		AD93FE8D20DDDEFC00C8EF83 /* WYTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FE8C20DDDEFC00C8EF83 /* WYTopic.m */; };
+		AD93FE9020DDDF2F00C8EF83 /* WYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FE8F20DDDF2F00C8EF83 /* WYModel.m */; };
+		AD93FE9520DDDF6400C8EF83 /* WYBaseScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FE9120DDDF6300C8EF83 /* WYBaseScrollView.m */; };
+		AD93FE9620DDDF6400C8EF83 /* WYBaseNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FE9320DDDF6300C8EF83 /* WYBaseNewsCell.m */; };
+		AD93FE9B20DDDF8B00C8EF83 /* WYNewsDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FE9820DDDF8A00C8EF83 /* WYNewsDetail.m */; };
+		AD93FE9C20DDDF8B00C8EF83 /* WYNews.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FE9920DDDF8A00C8EF83 /* WYNews.m */; };
+		AD93FE9F20DDDFB900C8EF83 /* WYButtonChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FE9D20DDDFB800C8EF83 /* WYButtonChooseViewController.m */; };
+		AD93FEA220DDE02A00C8EF83 /* WYDefaultNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FEA020DDE02900C8EF83 /* WYDefaultNewsCell.m */; };
+		AD93FEA520DDE04400C8EF83 /* WYImagesNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FEA420DDE04400C8EF83 /* WYImagesNewsCell.m */; };
+		AD93FEA820DDE06000C8EF83 /* WYWideImageNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FEA720DDE06000C8EF83 /* WYWideImageNewsCell.m */; };
+		AD93FEAB20DDE08F00C8EF83 /* WYNewsDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FEA920DDE08E00C8EF83 /* WYNewsDetailVC.m */; };
+		AD93FEAE20DDE23B00C8EF83 /* WYCategoryButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FEAD20DDE23A00C8EF83 /* WYCategoryButton.m */; };
+		AD93FEB120DDE34B00C8EF83 /* WYButtonChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FEAF20DDE34B00C8EF83 /* WYButtonChooseView.m */; };
+		AD93FEB420DDE39200C8EF83 /* WYLabelButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FEB320DDE39200C8EF83 /* WYLabelButton.m */; };
+		AD93FEB720DDE55F00C8EF83 /* WYNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FEB620DDE55F00C8EF83 /* WYNetwork.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1647,6 +1667,47 @@
 		85E4B60E1F2AD502005F6D21 /* WMRCGroupNewsMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMRCGroupNewsMessageCell.m; sourceTree = "<group>"; };
 		9DA11EC04838AD96A5B81976 /* Pods-WMDoctor.prerelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WMDoctor.prerelease.xcconfig"; path = "Pods/Target Support Files/Pods-WMDoctor/Pods-WMDoctor.prerelease.xcconfig"; sourceTree = "<group>"; };
 		A38FA6E6C5C6E86F870A04C5 /* Pods-WMDoctor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WMDoctor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WMDoctor/Pods-WMDoctor.debug.xcconfig"; sourceTree = "<group>"; };
+		AD93FE7C20DDDC8100C8EF83 /* JYHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYHomeViewController.h; sourceTree = "<group>"; };
+		AD93FE7D20DDDC8100C8EF83 /* JYHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYHomeViewController.m; sourceTree = "<group>"; };
+		AD93FE7F20DDDE8B00C8EF83 /* WYTopicHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYTopicHeader.h; sourceTree = "<group>"; };
+		AD93FE8020DDDE8C00C8EF83 /* WYTopicHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYTopicHeader.m; sourceTree = "<group>"; };
+		AD93FE8220DDDEA700C8EF83 /* WYTopicScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYTopicScrollView.h; sourceTree = "<group>"; };
+		AD93FE8320DDDEA700C8EF83 /* WYTopicScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYTopicScrollView.m; sourceTree = "<group>"; };
+		AD93FE8520DDDEC200C8EF83 /* WYNewsScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNewsScrollView.h; sourceTree = "<group>"; };
+		AD93FE8620DDDEC200C8EF83 /* WYNewsScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNewsScrollView.m; sourceTree = "<group>"; };
+		AD93FE8820DDDEDF00C8EF83 /* WYNewsTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNewsTableController.h; sourceTree = "<group>"; };
+		AD93FE8920DDDEDF00C8EF83 /* WYNewsTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNewsTableController.m; sourceTree = "<group>"; };
+		AD93FE8B20DDDEFB00C8EF83 /* WYTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYTopic.h; sourceTree = "<group>"; };
+		AD93FE8C20DDDEFC00C8EF83 /* WYTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYTopic.m; sourceTree = "<group>"; };
+		AD93FE8E20DDDF2F00C8EF83 /* WYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYModel.h; sourceTree = "<group>"; };
+		AD93FE8F20DDDF2F00C8EF83 /* WYModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYModel.m; sourceTree = "<group>"; };
+		AD93FE9120DDDF6300C8EF83 /* WYBaseScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYBaseScrollView.m; sourceTree = "<group>"; };
+		AD93FE9220DDDF6300C8EF83 /* WYBaseScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYBaseScrollView.h; sourceTree = "<group>"; };
+		AD93FE9320DDDF6300C8EF83 /* WYBaseNewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYBaseNewsCell.m; sourceTree = "<group>"; };
+		AD93FE9420DDDF6400C8EF83 /* WYBaseNewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYBaseNewsCell.h; sourceTree = "<group>"; };
+		AD93FE9720DDDF8900C8EF83 /* WYNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNews.h; sourceTree = "<group>"; };
+		AD93FE9820DDDF8A00C8EF83 /* WYNewsDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNewsDetail.m; sourceTree = "<group>"; };
+		AD93FE9920DDDF8A00C8EF83 /* WYNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNews.m; sourceTree = "<group>"; };
+		AD93FE9A20DDDF8A00C8EF83 /* WYNewsDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNewsDetail.h; sourceTree = "<group>"; };
+		AD93FE9D20DDDFB800C8EF83 /* WYButtonChooseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYButtonChooseViewController.m; sourceTree = "<group>"; };
+		AD93FE9E20DDDFB900C8EF83 /* WYButtonChooseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYButtonChooseViewController.h; sourceTree = "<group>"; };
+		AD93FEA020DDE02900C8EF83 /* WYDefaultNewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYDefaultNewsCell.m; sourceTree = "<group>"; };
+		AD93FEA120DDE02A00C8EF83 /* WYDefaultNewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYDefaultNewsCell.h; sourceTree = "<group>"; };
+		AD93FEA320DDE04400C8EF83 /* WYImagesNewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYImagesNewsCell.h; sourceTree = "<group>"; };
+		AD93FEA420DDE04400C8EF83 /* WYImagesNewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYImagesNewsCell.m; sourceTree = "<group>"; };
+		AD93FEA620DDE06000C8EF83 /* WYWideImageNewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYWideImageNewsCell.h; sourceTree = "<group>"; };
+		AD93FEA720DDE06000C8EF83 /* WYWideImageNewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYWideImageNewsCell.m; sourceTree = "<group>"; };
+		AD93FEA920DDE08E00C8EF83 /* WYNewsDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNewsDetailVC.m; sourceTree = "<group>"; };
+		AD93FEAA20DDE08F00C8EF83 /* WYNewsDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNewsDetailVC.h; sourceTree = "<group>"; };
+		AD93FEAC20DDE23A00C8EF83 /* WYCategoryButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYCategoryButton.h; sourceTree = "<group>"; };
+		AD93FEAD20DDE23A00C8EF83 /* WYCategoryButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYCategoryButton.m; sourceTree = "<group>"; };
+		AD93FEAF20DDE34B00C8EF83 /* WYButtonChooseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYButtonChooseView.m; sourceTree = "<group>"; };
+		AD93FEB020DDE34B00C8EF83 /* WYButtonChooseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYButtonChooseView.h; sourceTree = "<group>"; };
+		AD93FEB220DDE39100C8EF83 /* WYLabelButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYLabelButton.h; sourceTree = "<group>"; };
+		AD93FEB320DDE39200C8EF83 /* WYLabelButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYLabelButton.m; sourceTree = "<group>"; };
+		AD93FEB520DDE55F00C8EF83 /* WYNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNetwork.h; sourceTree = "<group>"; };
+		AD93FEB620DDE55F00C8EF83 /* WYNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNetwork.m; sourceTree = "<group>"; };
+		AD93FEB820DDE66500C8EF83 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2036,6 +2097,14 @@
 				18999EC8202050CA0090C893 /* WMIndexDataModel.m */,
 				18F73BDE202D8E8F000A7D11 /* WMCertificationStatusAPIManager.h */,
 				18F73BDF202D8E8F000A7D11 /* WMCertificationStatusAPIManager.m */,
+				AD93FE8B20DDDEFB00C8EF83 /* WYTopic.h */,
+				AD93FE8C20DDDEFC00C8EF83 /* WYTopic.m */,
+				AD93FE8E20DDDF2F00C8EF83 /* WYModel.h */,
+				AD93FE8F20DDDF2F00C8EF83 /* WYModel.m */,
+				AD93FE9720DDDF8900C8EF83 /* WYNews.h */,
+				AD93FE9920DDDF8A00C8EF83 /* WYNews.m */,
+				AD93FE9A20DDDF8A00C8EF83 /* WYNewsDetail.h */,
+				AD93FE9820DDDF8A00C8EF83 /* WYNewsDetail.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -2068,6 +2137,34 @@
 				180756B4204EB135001EC512 /* WMIndexQuestionCell.h */,
 				180756B5204EB135001EC512 /* WMIndexQuestionCell.m */,
 				180756B6204EB135001EC512 /* WMIndexQuestionCell.xib */,
+				AD93FE7F20DDDE8B00C8EF83 /* WYTopicHeader.h */,
+				AD93FE8020DDDE8C00C8EF83 /* WYTopicHeader.m */,
+				AD93FE8220DDDEA700C8EF83 /* WYTopicScrollView.h */,
+				AD93FE8320DDDEA700C8EF83 /* WYTopicScrollView.m */,
+				AD93FE8520DDDEC200C8EF83 /* WYNewsScrollView.h */,
+				AD93FE8620DDDEC200C8EF83 /* WYNewsScrollView.m */,
+				AD93FE8820DDDEDF00C8EF83 /* WYNewsTableController.h */,
+				AD93FE8920DDDEDF00C8EF83 /* WYNewsTableController.m */,
+				AD93FE9420DDDF6400C8EF83 /* WYBaseNewsCell.h */,
+				AD93FE9320DDDF6300C8EF83 /* WYBaseNewsCell.m */,
+				AD93FE9220DDDF6300C8EF83 /* WYBaseScrollView.h */,
+				AD93FE9120DDDF6300C8EF83 /* WYBaseScrollView.m */,
+				AD93FE9E20DDDFB900C8EF83 /* WYButtonChooseViewController.h */,
+				AD93FE9D20DDDFB800C8EF83 /* WYButtonChooseViewController.m */,
+				AD93FEA120DDE02A00C8EF83 /* WYDefaultNewsCell.h */,
+				AD93FEA020DDE02900C8EF83 /* WYDefaultNewsCell.m */,
+				AD93FEA320DDE04400C8EF83 /* WYImagesNewsCell.h */,
+				AD93FEA420DDE04400C8EF83 /* WYImagesNewsCell.m */,
+				AD93FEA620DDE06000C8EF83 /* WYWideImageNewsCell.h */,
+				AD93FEA720DDE06000C8EF83 /* WYWideImageNewsCell.m */,
+				AD93FEAA20DDE08F00C8EF83 /* WYNewsDetailVC.h */,
+				AD93FEA920DDE08E00C8EF83 /* WYNewsDetailVC.m */,
+				AD93FEAC20DDE23A00C8EF83 /* WYCategoryButton.h */,
+				AD93FEAD20DDE23A00C8EF83 /* WYCategoryButton.m */,
+				AD93FEB020DDE34B00C8EF83 /* WYButtonChooseView.h */,
+				AD93FEAF20DDE34B00C8EF83 /* WYButtonChooseView.m */,
+				AD93FEB220DDE39100C8EF83 /* WYLabelButton.h */,
+				AD93FEB320DDE39200C8EF83 /* WYLabelButton.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -2093,6 +2190,8 @@
 				1D38169C1ED2CCF700562FCA /* WMNewGuideViewController.m */,
 				188ACA8F2045310200A54692 /* WMOutLinkWebViewController.h */,
 				188ACA902045310200A54692 /* WMOutLinkWebViewController.m */,
+				AD93FE7C20DDDC8100C8EF83 /* JYHomeViewController.h */,
+				AD93FE7D20DDDC8100C8EF83 /* JYHomeViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -2100,6 +2199,9 @@
 		0CAF8F6A1E0CF05A0092E6A8 /* Actions */ = {
 			isa = PBXGroup;
 			children = (
+				AD93FEB520DDE55F00C8EF83 /* WYNetwork.h */,
+				AD93FEB620DDE55F00C8EF83 /* WYNetwork.m */,
+				AD93FEB820DDE66500C8EF83 /* Singleton.h */,
 			);
 			name = Actions;
 			sourceTree = "<group>";
@@ -4481,7 +4583,7 @@
 					0C9817E61DFFBC070016AD20 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 3YA54AB2B7;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 0940;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -4719,7 +4821,9 @@
 				1D3B76421E14A0320035EE65 /* WMMessageTypeAPIManager.m in Sources */,
 				184AD55E20A968C500F973D3 /* WMTagGroupCollectionViewCell.m in Sources */,
 				1890BA4F1FC7EE700009339C /* WMQuestionDetailViewController.m in Sources */,
+				AD93FEAB20DDE08F00C8EF83 /* WYNewsDetailVC.m in Sources */,
 				183287E51F10CBB600F87E01 /* WMReadReportTableViewCell.m in Sources */,
+				AD93FEA820DDE06000C8EF83 /* WYWideImageNewsCell.m in Sources */,
 				1D3B76361E13623C0035EE65 /* WMCricleMainParamModel.m in Sources */,
 				85A74BD01F9844B300F1453F /* WMIncomeCell.m in Sources */,
 				0CED7DB01E1F6BEC00892555 /* WMBackButtonItem.m in Sources */,
@@ -4753,6 +4857,7 @@
 				18237ED61EA75A9800C30F51 /* WMGetServicePriceAPIManager.m in Sources */,
 				18237ED91EA76ACD00C30F51 /* WMOpenServiceCell.m in Sources */,
 				850142A21F3C04FD000BA97F /* WMPatientDataHeaderView.m in Sources */,
+				AD93FE9620DDDF6400C8EF83 /* WYBaseNewsCell.m in Sources */,
 				0CAF8F321E0CED5D0092E6A8 /* WMTradeMessageViewController.m in Sources */,
 				0CAF8F231E0CED2A0092E6A8 /* WMNormalMessageCell.m in Sources */,
 				1D51B4EE2022E39D00F0F848 /* AppDelegate+MWindow.m in Sources */,
@@ -4775,6 +4880,7 @@
 				1855DC4B1E83C3A3001B4DDD /* WMEducationCustomModel.m in Sources */,
 				1D3B76481E14AE470035EE65 /* WMMessageTypeModel.m in Sources */,
 				1D29FAA01E1CC65500472F0E /* WMPatientsInfoAPIManager.m in Sources */,
+				AD93FEB420DDE39200C8EF83 /* WYLabelButton.m in Sources */,
 				0C5CB0831E1DEBC1005AF239 /* WMDoctor.xcdatamodeld in Sources */,
 				18F5B6801E149E7D0051C60E /* WMAdvertModel.m in Sources */,
 				18237EE81EA78CE000C30F51 /* WMServiceUpdatePriceAPIManager.m in Sources */,
@@ -4878,8 +4984,10 @@
 				0CAF8F681E0CEFDB0092E6A8 /* WMHealthRecordCell.m in Sources */,
 				184AD57720BBF3CF00F973D3 /* WMPatientRemarkViewController.m in Sources */,
 				85DBE7B21FC66DB200E821E4 /* WMIntegralDetailModel.m in Sources */,
+				AD93FE7E20DDDC8100C8EF83 /* JYHomeViewController.m in Sources */,
 				0C40048F1E026D79003E1FC4 /* WMDevice.m in Sources */,
 				186E786A2023FECB0058743A /* WMSixFunctionView.m in Sources */,
+				AD93FEB120DDE34B00C8EF83 /* WYButtonChooseView.m in Sources */,
 				1818DE751E811F73009767A2 /* WMSelectorTableViewController.m in Sources */,
 				1D8203F61E63BA7100494F1C /* WMTotalPatientsAPIManagere.m in Sources */,
 				1D3B76541E152C930035EE65 /* WMRCDataManager.m in Sources */,
@@ -4907,6 +5015,7 @@
 				18328A1E1F1470F300F87E01 /* LKCHeart.m in Sources */,
 				18328A291F1470F300F87E01 /* STKAutoRecoveringHTTPDataSource.m in Sources */,
 				1D6829151E7ABB6700422732 /* WMVIPPatientViewController.m in Sources */,
+				AD93FE8A20DDDEDF00C8EF83 /* WYNewsTableController.m in Sources */,
 				186ADFDE1ECAD98D0070288B /* WMPatientCommentsModel.m in Sources */,
 				186AF3111ED5258100F699C6 /* WMInfoTransitionViewController.m in Sources */,
 				0CD6E2D91DFFF8A500E75DB5 /* AppConfig.m in Sources */,
@@ -4925,6 +5034,7 @@
 				1D3816541EC98E8F00562FCA /* WMHospitalChooseViewController.m in Sources */,
 				1D34F8031E9F9E3A00B3D539 /* WMCricleVIPPatientAPIManager.m in Sources */,
 				188F14BC1F2882F60058B4CB /* QuickEntity+CoreDataProperties.m in Sources */,
+				AD93FE9020DDDF2F00C8EF83 /* WYModel.m in Sources */,
 				1D2AEAE01E1FA7BE0026DB19 /* WMHealthRecordView.m in Sources */,
 				188F14CE1F29E1F10058B4CB /* WMQuickReplyEditViewController.m in Sources */,
 				18328A4F1F15012A00F87E01 /* ACOGTwoCollectionViewCell.m in Sources */,
@@ -4946,6 +5056,7 @@
 				85CF6D1F20BD3D3E00FCDD21 /* WMDoctorInformationAPIManager.m in Sources */,
 				854180C61FCBEB7E00EA4235 /* WMMyMicroBeanCell.m in Sources */,
 				186E78642021AF5B0058743A /* WMDynamicModuleView.m in Sources */,
+				AD93FE8720DDDEC300C8EF83 /* WYNewsScrollView.m in Sources */,
 				1D3708C41E84E61900974C73 /* WMDoctorOfficesModel.m in Sources */,
 				85AA97F81FD8E53600EAF5A4 /* WMFriendCircleSetViewController.m in Sources */,
 				8552604E1F4138C500F16618 /* WMGroupMemberViewCell.m in Sources */,
@@ -4981,6 +5092,7 @@
 				184AD55B20A9685F00F973D3 /* WMTagGroupViewController.m in Sources */,
 				850142801F39ADB1000BA97F /* WMGroupActivityAPIManager.m in Sources */,
 				1814F1E51E9CC905005B4260 /* WMEducationSelectViewController.m in Sources */,
+				AD93FEAE20DDE23B00C8EF83 /* WYCategoryButton.m in Sources */,
 				0C9817EC1DFFBC070016AD20 /* main.m in Sources */,
 				850142A81F3C0A0A000BA97F /* WMPatientDataCell.m in Sources */,
 				85D2BAD11FC2A00B00C67F98 /* WMQuestionsCell.m in Sources */,
@@ -4991,6 +5103,7 @@
 				1D38169D1ED2CCF700562FCA /* WMNewGuideViewController.m in Sources */,
 				188ACA912045310200A54692 /* WMOutLinkWebViewController.m in Sources */,
 				184AD56420B55E7700F973D3 /* WMTagGroupGetAPIManager.m in Sources */,
+				AD93FEA220DDE02A00C8EF83 /* WYDefaultNewsCell.m in Sources */,
 				1814F1EE1E9DF8A3005B4260 /* WMSchoolSelectViewController.m in Sources */,
 				1D8203F91E63C09D00494F1C /* WMTotalPatientsDataModel.m in Sources */,
 				1D34F8061E9F9FE000B3D539 /* WMVPIPatientsModel.m in Sources */,
@@ -5001,6 +5114,7 @@
 				184AD56120AEC1F600F973D3 /* WMTagGroupSelectCollectionViewCell.m in Sources */,
 				184AD56A20B6A3E400F973D3 /* WMTagGroupSaveAPIManager.m in Sources */,
 				18F5B6921E1500980051C60E /* WMPersonalInfoModel.m in Sources */,
+				AD93FE8420DDDEA800C8EF83 /* WYTopicScrollView.m in Sources */,
 				855C9BDE20C8CD2E007383EB /* UIView+Extension.m in Sources */,
 				1DE56A911E113AD800B93397 /* WMPatientReportedAPIManager.m in Sources */,
 				1844EE251F7B3F2B00EAF6FC /* WMDoctorRecordViewController.m in Sources */,
@@ -5022,6 +5136,8 @@
 				18237EDF1EA7767E00C30F51 /* WMServiceCustomPriceCell.m in Sources */,
 				18328A681F150B0D00F87E01 /* WMCostomAdviceModel.m in Sources */,
 				18328A521F15014C00F87E01 /* LKCResultFormVC.m in Sources */,
+				AD93FE8D20DDDEFC00C8EF83 /* WYTopic.m in Sources */,
+				AD93FE8120DDDE8C00C8EF83 /* WYTopicHeader.m in Sources */,
 				0CAF8F301E0CED5D0092E6A8 /* WMRecommendNewViewController.m in Sources */,
 				180756B7204EB135001EC512 /* WMIndexQuestionCell.m in Sources */,
 				18F5B67D1E13EE400051C60E /* WMLaunchImageAPIManager.m in Sources */,
@@ -5094,8 +5210,11 @@
 				1DA7E50C1E5DB84F00CDBEC5 /* WMPatientsAcceptAPIManager.m in Sources */,
 				85A74BD31F984C1700F1453F /* WMIncomeAPIManager.m in Sources */,
 				184C603D1E11FD5200A2E477 /* WMLoginParam.m in Sources */,
+				AD93FE9C20DDDF8B00C8EF83 /* WYNews.m in Sources */,
+				AD93FE9520DDDF6400C8EF83 /* WYBaseScrollView.m in Sources */,
 				18237EEB1EA78D6D00C30F51 /* WMServiceUpdatePriceModel.m in Sources */,
 				186E7867202308AD0058743A /* WMIndexQuestionsCell.m in Sources */,
+				AD93FEA520DDE04400C8EF83 /* WYImagesNewsCell.m in Sources */,
 				1814F1FD1E9E5B06005B4260 /* WMSearchWordAPIManager.m in Sources */,
 				1890BA801FCCE3D00009339C /* WMQuestionDetailAnswerCell.m in Sources */,
 				0CAF8F661E0CEFDB0092E6A8 /* WMFasterReplyCell.m in Sources */,
@@ -5150,15 +5269,18 @@
 				0CD6E2B51DFFD41C00E75DB5 /* WMBaseViewController.m in Sources */,
 				186AF2E81ECED44E00F699C6 /* WMGetStatusAPIManager.m in Sources */,
 				1D38167A1ECAEF4600562FCA /* BUIView.m in Sources */,
+				AD93FEB720DDE55F00C8EF83 /* WYNetwork.m in Sources */,
 				855C9BD820C8C488007383EB /* WMPatientTagViewController.m in Sources */,
 				18237ECA1EA7375B00C30F51 /* WMDoctorServiceModel.m in Sources */,
 				1D2AEACB1E1E3DDE0026DB19 /* WMPatientsHealthAPIManager.m in Sources */,
 				1855DC421E83C1F7001B4DDD /* WMSpecialtieListAPIManager.m in Sources */,
+				AD93FE9F20DDDFB900C8EF83 /* WYButtonChooseViewController.m in Sources */,
 				18328A6B1F15B35F00F87E01 /* WMHistoryReportWebViewController.m in Sources */,
 				1890BA911FCD54C60009339C /* WMScoreTaskViewController.m in Sources */,
 				1890BA621FC8058A0009339C /* WMGuidanceCollectionViewCell.m in Sources */,
 				1855DC3F1E83C124001B4DDD /* WMSpecialtieModel.m in Sources */,
 				183287C71F0B73B000F87E01 /* WMReportDetailViewController.m in Sources */,
+				AD93FE9B20DDDF8B00C8EF83 /* WYNewsDetail.m in Sources */,
 				1890BA6C1FC805AD0009339C /* WMIMComFirstCollectionViewCell.m in Sources */,
 				18328A1D1F1470F300F87E01 /* LKCDrawLayer.m in Sources */,
 				0CAF8F531E0CEF130092E6A8 /* WMShowImageViewController.m in Sources */,

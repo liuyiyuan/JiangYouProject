@@ -70,7 +70,7 @@
     //[self loadIndexData];
     [self setTabUnread];
     [self CertificationResultView];
-    self.title = @"工作台";
+    self.title = @"首页";
     // Do any additional setup after loading the view.
     
     //注册刷新通知

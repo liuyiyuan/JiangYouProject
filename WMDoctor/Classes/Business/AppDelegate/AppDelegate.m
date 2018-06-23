@@ -26,8 +26,6 @@
 
 
 
-
-
 #define UMENG_APPKEY        @"563b130be0f55ab47e0021ea"
 #define BUGLY_APPID        @"842cdc8615"
 
@@ -147,7 +145,8 @@ static NSString * const kNetworkTestURL = @"https://www.baidu.com";
     [[RCIM sharedRCIM] initWithAppKey:RONGCLOUNDAPP_KEY];
     [self initializeDiskData];
     
-    [self initializeNotification];
+//    [self initializeNotification];
+    [self loadMainView];
     
     [self initializeCoreData];
     
