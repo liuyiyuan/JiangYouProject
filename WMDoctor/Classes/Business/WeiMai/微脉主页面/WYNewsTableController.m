@@ -54,11 +54,18 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-//    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-//
-//    self.tableView.preservesSuperviewLayoutMargins = NO;
-//    self.tableView.separatorInset = UIEdgeInsetsZero;
+    //    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    //
+    //    self.tableView.preservesSuperviewLayoutMargins = NO;
+    //    self.tableView.separatorInset = UIEdgeInsetsZero;
     self.tableView.delegate = self;
+   
+    self.tableView.mj_header = [MJWeiMaiHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
+    __weak typeof(self) weakSelf = self;
+    MJWeiMaiFooter *footer = [MJWeiMaiFooter footerWithRefreshingBlock:^{
+        [weakSelf loadMoreData];
+    }];
+    self.tableView.mj_footer = footer;
 //    _header = [self.tableView addLegendHeaderWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
 //    _footer = [self.tableView addLegendFooterWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
 }
@@ -104,30 +111,30 @@
 
 - (void)loadNewData
 {
-    if (_header.state == 1) {
-        NSMutableString *url = [NSMutableString stringWithString:kWYNetWorkNewsListBaseStr];
-        [url appendFormat:@"/%@/%d-%d.html", _tid, 0, kWYNetWorkNewsListFetchOnceCount];
-        [[WYNetwork sharedWYNetwork] HttpGetNews:url success:^(id responseObject) {
-//            NSLog(@"abc");
-            if (![responseObject isKindOfClass:[NSDictionary class]]) {
-                return;
-            }
-            if (![[responseObject allObjects] isKindOfClass:[NSArray class]]) {
-                return;
-            }
-            [_dataArray removeAllObjects];
-            for (NSDictionary *dic in [[responseObject allObjects] lastObject]) {
-                WYNews *news = [[WYNews alloc] initWithDic:dic];
-                [_dataArray addObject:news];
-            }
-            _page = 1;
-            [_header endRefreshing];
-            [self.tableView reloadData];
-        } failure:^(NSError *error) {
-            NSLog(@"\nerror is %@", [error localizedDescription]);
-            [_header endRefreshing];
-        }];
-    }else [_header endRefreshing];
+    //    if (_header.state == MJRefreshHeaderStateIdle) {
+    NSMutableString *url = [NSMutableString stringWithString:kWYNetWorkNewsListBaseStr];
+    [url appendFormat:@"/%@/%d-%d.html", _tid, 0, kWYNetWorkNewsListFetchOnceCount];
+    [[WYNetwork sharedWYNetwork] HttpGetNews:url success:^(id responseObject) {
+        //            NSLog(@"abc");
+        if (![responseObject isKindOfClass:[NSDictionary class]]) {
+            return;
+        }
+        if (![[responseObject allObjects] isKindOfClass:[NSArray class]]) {
+            return;
+        }
+        [_dataArray removeAllObjects];
+        for (NSDictionary *dic in [[responseObject allObjects] lastObject]) {
+            WYNews *news = [[WYNews alloc] initWithDic:dic];
+            [_dataArray addObject:news];
+        }
+        _page = 1;
+        [_header endRefreshing];
+        [self.tableView reloadData];
+    } failure:^(NSError *error) {
+        NSLog(@"\nerror is %@", [error localizedDescription]);
+        [_header endRefreshing];
+    }];
+    //    }else [_header endRefreshing];
 }
 
 #pragma mark - ScrollView Delegate
@@ -185,14 +192,14 @@
     }else {
         reuseIdentifier = @"DefaultNews";
     }
-//    NSClassFromString([NSString stringWithFormat:@"WY%@Cell", reuseIdentifier]);
+    //    NSClassFromString([NSString stringWithFormat:@"WY%@Cell", reuseIdentifier]);
     WYBaseNewsCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
     if (cell == nil) {
         cell = [NSClassFromString([NSString stringWithFormat:@"WY%@Cell", reuseIdentifier]) cell];
     }
     // Configure the cell...
     cell.news = news;
-//    cell.textLabel.text = news.title;
+    //    cell.textLabel.text = news.title;
     return cell;
 }
 
@@ -216,56 +223,55 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    WYNewsDetailVC *vc = [[WYNewsDetailVC alloc] init];
-//    WYNews *news = _dataArray[indexPath.row];
-//    vc.docid = news.docid;
-//    vc.news = news;
-//    [self.navigationController pushViewController:vc animated:YES];
+    //    WYNewsDetailVC *vc = [[WYNewsDetailVC alloc] init];
+    //    WYNews *news = _dataArray[indexPath.row];
+    //    vc.docid = news.docid;
+    //    vc.news = news;
+    //    [self.navigationController pushViewController:vc animated:YES];
 //    [WYTool showMsg:@"why I can't get in?"];
-    //弹个提示框
 }
 /*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
+ // Override to support conditional editing of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+ // Return NO if you do not want the specified item to be editable.
+ return YES;
+ }
+ */
 
 /*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
+ // Override to support editing the table view.
+ - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+ if (editingStyle == UITableViewCellEditingStyleDelete) {
+ // Delete the row from the data source
+ [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+ } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+ // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+ }
+ }
+ */
 
 /*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
+ // Override to support rearranging the table view.
+ - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+ }
+ */
 
 /*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
+ // Override to support conditional rearranging of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
+ // Return NO if you do not want the item to be re-orderable.
+ return YES;
+ }
+ */
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
