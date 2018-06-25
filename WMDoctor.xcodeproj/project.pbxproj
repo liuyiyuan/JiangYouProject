@@ -582,6 +582,12 @@
 		AD93FEB120DDE34B00C8EF83 /* WYButtonChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FEAF20DDE34B00C8EF83 /* WYButtonChooseView.m */; };
 		AD93FEB420DDE39200C8EF83 /* WYLabelButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FEB320DDE39200C8EF83 /* WYLabelButton.m */; };
 		AD93FEB720DDE55F00C8EF83 /* WYNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FEB620DDE55F00C8EF83 /* WYNetwork.m */; };
+		CC2DAF1A20E0E1DF008B630C /* JYMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2DAF1520E0E1DE008B630C /* JYMeViewController.m */; };
+		CC2DAF1B20E0E1DF008B630C /* JYMeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2DAF1920E0E1DE008B630C /* JYMeHeaderView.m */; };
+		CC2DAF1E20E0E638008B630C /* JYMeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2DAF1D20E0E638008B630C /* JYMeTableViewCell.m */; };
+		CC2DAF2020E0EABA008B630C /* DefaultNews.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC2DAF1F20E0EABA008B630C /* DefaultNews.xib */; };
+		CC2DAF2320E0EB55008B630C /* ImagesNews.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC2DAF2120E0EB54008B630C /* ImagesNews.xib */; };
+		CC2DAF2420E0EB55008B630C /* WideImageNews.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC2DAF2220E0EB55008B630C /* WideImageNews.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1708,6 +1714,15 @@
 		AD93FEB520DDE55F00C8EF83 /* WYNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNetwork.h; sourceTree = "<group>"; };
 		AD93FEB620DDE55F00C8EF83 /* WYNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNetwork.m; sourceTree = "<group>"; };
 		AD93FEB820DDE66500C8EF83 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		CC2DAF1420E0E1DE008B630C /* JYMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYMeViewController.h; sourceTree = "<group>"; };
+		CC2DAF1520E0E1DE008B630C /* JYMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYMeViewController.m; sourceTree = "<group>"; };
+		CC2DAF1820E0E1DE008B630C /* JYMeHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYMeHeaderView.h; sourceTree = "<group>"; };
+		CC2DAF1920E0E1DE008B630C /* JYMeHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYMeHeaderView.m; sourceTree = "<group>"; };
+		CC2DAF1C20E0E638008B630C /* JYMeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYMeTableViewCell.h; sourceTree = "<group>"; };
+		CC2DAF1D20E0E638008B630C /* JYMeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYMeTableViewCell.m; sourceTree = "<group>"; };
+		CC2DAF1F20E0EABA008B630C /* DefaultNews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DefaultNews.xib; sourceTree = "<group>"; };
+		CC2DAF2120E0EB54008B630C /* ImagesNews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImagesNews.xib; sourceTree = "<group>"; };
+		CC2DAF2220E0EB55008B630C /* WideImageNews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WideImageNews.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2165,6 +2180,9 @@
 				AD93FEAF20DDE34B00C8EF83 /* WYButtonChooseView.m */,
 				AD93FEB220DDE39100C8EF83 /* WYLabelButton.h */,
 				AD93FEB320DDE39200C8EF83 /* WYLabelButton.m */,
+				CC2DAF1F20E0EABA008B630C /* DefaultNews.xib */,
+				CC2DAF2120E0EB54008B630C /* ImagesNews.xib */,
+				CC2DAF2220E0EB55008B630C /* WideImageNews.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -2700,6 +2718,7 @@
 		0CD6E2F81E001E6600E75DB5 /* Me */ = {
 			isa = PBXGroup;
 			children = (
+				CC2DAF1220E0E1DE008B630C /* JYMe */,
 				85AA97F31FD8E4CA00EAF5A4 /* 我的服务 */,
 				1890BA8A1FCD49FC0009339C /* 我的微豆 */,
 				1890BA851FCD49BB0009339C /* 积分明细 */,
@@ -4511,6 +4530,44 @@
 			path = "积分明细";
 			sourceTree = "<group>";
 		};
+		CC2DAF1220E0E1DE008B630C /* JYMe */ = {
+			isa = PBXGroup;
+			children = (
+				CC2DAF1320E0E1DE008B630C /* Controller */,
+				CC2DAF1620E0E1DE008B630C /* Model */,
+				CC2DAF1720E0E1DE008B630C /* View */,
+			);
+			name = JYMe;
+			path = ../../../../../Desktop/JYMe;
+			sourceTree = "<group>";
+		};
+		CC2DAF1320E0E1DE008B630C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CC2DAF1420E0E1DE008B630C /* JYMeViewController.h */,
+				CC2DAF1520E0E1DE008B630C /* JYMeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CC2DAF1620E0E1DE008B630C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CC2DAF1720E0E1DE008B630C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CC2DAF1820E0E1DE008B630C /* JYMeHeaderView.h */,
+				CC2DAF1920E0E1DE008B630C /* JYMeHeaderView.m */,
+				CC2DAF1C20E0E638008B630C /* JYMeTableViewCell.h */,
+				CC2DAF1D20E0E638008B630C /* JYMeTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -4582,7 +4639,7 @@
 				TargetAttributes = {
 					0C9817E61DFFBC070016AD20 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = Y9W5YNYUFU;
+						DevelopmentTeam = 93VVYXS8JB;
 						LastSwiftMigration = 0940;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -4639,6 +4696,7 @@
 				0C9817FD1DFFBC070016AD20 /* LaunchScreen.storyboard in Resources */,
 				854180C71FCBEB7E00EA4235 /* WMMyMicroBeanCell.xib in Resources */,
 				0CEB2EE51E0CFFE70070119A /* WMRateTableViewCell.xib in Resources */,
+				CC2DAF2420E0EB55008B630C /* WideImageNews.xib in Resources */,
 				0CD6E2D51DFFF81500E75DB5 /* ConstantConfig.plist in Resources */,
 				8552604D1F4138C500F16618 /* WMGroupMemberViewCell.xib in Resources */,
 				0CAF8EED1E08CF010092E6A8 /* Circle.storyboard in Resources */,
@@ -4667,7 +4725,9 @@
 				186AF3001ED51D4600F699C6 /* reimbursement_delete@2x.png in Resources */,
 				181809B01F95E29500FDC12C /* RecordLoading.bundle in Resources */,
 				1DA7E5091E5C6F6800CDBEC5 /* WMAllPatienAcceptCell.xib in Resources */,
+				CC2DAF2320E0EB55008B630C /* ImagesNews.xib in Resources */,
 				1890BA701FC805BB0009339C /* WMAddPictureViewCell.xib in Resources */,
+				CC2DAF2020E0EABA008B630C /* DefaultNews.xib in Resources */,
 				854180D81FD6742700EA4235 /* WMOrderCell.xib in Resources */,
 				1D68291A1E7ABBCE00422732 /* WMVIPPatientTableViewCell.xib in Resources */,
 				0CEB2EB81E0CF81E0070119A /* WMNewPatienReportCell.xib in Resources */,
@@ -4829,6 +4889,7 @@
 				0CED7DB01E1F6BEC00892555 /* WMBackButtonItem.m in Sources */,
 				1D1C5BF51E0907ED008B469E /* AppDelegate+RongCloud.m in Sources */,
 				1D412B771E163FC300698A17 /* WMChatFooterView.m in Sources */,
+				CC2DAF1B20E0E1DF008B630C /* JYMeHeaderView.m in Sources */,
 				186ADFDB1ECA9F7F0070288B /* WMPatientEvaluationViewController.m in Sources */,
 				188F14C51F28885D0058B4CB /* WMQuickReplyModel.m in Sources */,
 				8512521E20BD475400685E7A /* WMDoctorInfoNewsModel.m in Sources */,
@@ -4859,6 +4920,7 @@
 				850142A21F3C04FD000BA97F /* WMPatientDataHeaderView.m in Sources */,
 				AD93FE9620DDDF6400C8EF83 /* WYBaseNewsCell.m in Sources */,
 				0CAF8F321E0CED5D0092E6A8 /* WMTradeMessageViewController.m in Sources */,
+				CC2DAF1A20E0E1DF008B630C /* JYMeViewController.m in Sources */,
 				0CAF8F231E0CED2A0092E6A8 /* WMNormalMessageCell.m in Sources */,
 				1D51B4EE2022E39D00F0F848 /* AppDelegate+MWindow.m in Sources */,
 				181A03511FDE295300868821 /* WMServiceSetCell.m in Sources */,
@@ -4932,6 +4994,7 @@
 				183287DC1F10C3E600F87E01 /* WMReadReportViewController.m in Sources */,
 				0C4004831E026B84003E1FC4 /* DateTimeUtil.m in Sources */,
 				1890BA581FC804F10009339C /* WMNewPictureSelectView.m in Sources */,
+				CC2DAF1E20E0E638008B630C /* JYMeTableViewCell.m in Sources */,
 				852473BE1F344A060049FB67 /* WMRCIMGroupDataEntity+CoreDataProperties.m in Sources */,
 				0CEB2EDC1E0CFE6A0070119A /* WMAboutTableViewController.m in Sources */,
 				183287EB1F10D49400F87E01 /* WMAllReportListGetAPIManager.m in Sources */,
@@ -5460,7 +5523,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = WMDoctor/WMDoctor.entitlements;
-				DEVELOPMENT_TEAM = Y9W5YNYUFU;
+				DEVELOPMENT_TEAM = 93VVYXS8JB;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -5480,7 +5543,7 @@
 					"$(PROJECT_DIR)/WMDoctor/Classes/Librarys/Libs/UMSocial/SocialLibraries/WeChat",
 					"$(PROJECT_DIR)/WMDoctor/Classes/Librarys/Libs/CardiotocographyLibs",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.qiushi.WMDoctor;
+				PRODUCT_BUNDLE_IDENTIFIER = vip.dkgj.www;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -5496,7 +5559,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = WMDoctor/WMDoctor.entitlements;
-				DEVELOPMENT_TEAM = Y9W5YNYUFU;
+				DEVELOPMENT_TEAM = 93VVYXS8JB;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -5516,7 +5579,7 @@
 					"$(PROJECT_DIR)/WMDoctor/Classes/Librarys/Libs/UMSocial/SocialLibraries/WeChat",
 					"$(PROJECT_DIR)/WMDoctor/Classes/Librarys/Libs/CardiotocographyLibs",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.qiushi.WMDoctor;
+				PRODUCT_BUNDLE_IDENTIFIER = vip.dkgj.www;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -5631,7 +5694,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = WMDoctor/WMDoctor.entitlements;
-				DEVELOPMENT_TEAM = Y9W5YNYUFU;
+				DEVELOPMENT_TEAM = 93VVYXS8JB;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -5651,7 +5714,7 @@
 					"$(PROJECT_DIR)/WMDoctor/Classes/Librarys/Libs/UMSocial/SocialLibraries/WeChat",
 					"$(PROJECT_DIR)/WMDoctor/Classes/Librarys/Libs/CardiotocographyLibs",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.qiushi.WMDoctor;
+				PRODUCT_BUNDLE_IDENTIFIER = vip.dkgj.www;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
