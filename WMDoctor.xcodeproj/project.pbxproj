@@ -557,6 +557,7 @@
 		85DBE7AC1FC55D1500E821E4 /* WMIntegralDetailAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DBE7AB1FC55D1500E821E4 /* WMIntegralDetailAPIManager.m */; };
 		85DBE7AF1FC6599100E821E4 /* WMQuestionStateAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DBE7AE1FC6599100E821E4 /* WMQuestionStateAPIManager.m */; };
 		85DBE7B21FC66DB200E821E4 /* WMIntegralDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 85DBE7B11FC66DB200E821E4 /* WMIntegralDetailModel.m */; };
+		85E3C7F320E2887700F51D66 /* JYMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E3C7F220E2887700F51D66 /* JYMeViewController.m */; };
 		85E4B6051F2AD437005F6D21 /* RCIMGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E4B6021F2AD437005F6D21 /* RCIMGroupViewController.m */; };
 		85E4B6061F2AD437005F6D21 /* WMGroupRCDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E4B6041F2AD437005F6D21 /* WMGroupRCDataManager.m */; };
 		85E4B6091F2AD44F005F6D21 /* RCDGroupInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E4B6081F2AD44F005F6D21 /* RCDGroupInfo.m */; };
@@ -582,9 +583,6 @@
 		AD93FEB120DDE34B00C8EF83 /* WYButtonChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FEAF20DDE34B00C8EF83 /* WYButtonChooseView.m */; };
 		AD93FEB420DDE39200C8EF83 /* WYLabelButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FEB320DDE39200C8EF83 /* WYLabelButton.m */; };
 		AD93FEB720DDE55F00C8EF83 /* WYNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FEB620DDE55F00C8EF83 /* WYNetwork.m */; };
-		CC2DAF1A20E0E1DF008B630C /* JYMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2DAF1520E0E1DE008B630C /* JYMeViewController.m */; };
-		CC2DAF1B20E0E1DF008B630C /* JYMeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2DAF1920E0E1DE008B630C /* JYMeHeaderView.m */; };
-		CC2DAF1E20E0E638008B630C /* JYMeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2DAF1D20E0E638008B630C /* JYMeTableViewCell.m */; };
 		CC2DAF2020E0EABA008B630C /* DefaultNews.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC2DAF1F20E0EABA008B630C /* DefaultNews.xib */; };
 		CC2DAF2320E0EB55008B630C /* ImagesNews.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC2DAF2120E0EB54008B630C /* ImagesNews.xib */; };
 		CC2DAF2420E0EB55008B630C /* WideImageNews.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC2DAF2220E0EB55008B630C /* WideImageNews.xib */; };
@@ -1661,6 +1659,8 @@
 		85DBE7AE1FC6599100E821E4 /* WMQuestionStateAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMQuestionStateAPIManager.m; sourceTree = "<group>"; };
 		85DBE7B01FC66DB200E821E4 /* WMIntegralDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMIntegralDetailModel.h; sourceTree = "<group>"; };
 		85DBE7B11FC66DB200E821E4 /* WMIntegralDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMIntegralDetailModel.m; sourceTree = "<group>"; };
+		85E3C7F120E2887600F51D66 /* JYMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JYMeViewController.h; path = WMDoctor/Classes/Business/Me/JYMe/Controller/JYMeViewController.h; sourceTree = SOURCE_ROOT; };
+		85E3C7F220E2887700F51D66 /* JYMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JYMeViewController.m; path = WMDoctor/Classes/Business/Me/JYMe/Controller/JYMeViewController.m; sourceTree = SOURCE_ROOT; };
 		85E4B6011F2AD436005F6D21 /* RCIMGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCIMGroupViewController.h; sourceTree = "<group>"; };
 		85E4B6021F2AD437005F6D21 /* RCIMGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCIMGroupViewController.m; sourceTree = "<group>"; };
 		85E4B6031F2AD437005F6D21 /* WMGroupRCDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMGroupRCDataManager.h; sourceTree = "<group>"; };
@@ -1714,12 +1714,6 @@
 		AD93FEB520DDE55F00C8EF83 /* WYNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNetwork.h; sourceTree = "<group>"; };
 		AD93FEB620DDE55F00C8EF83 /* WYNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNetwork.m; sourceTree = "<group>"; };
 		AD93FEB820DDE66500C8EF83 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
-		CC2DAF1420E0E1DE008B630C /* JYMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYMeViewController.h; sourceTree = "<group>"; };
-		CC2DAF1520E0E1DE008B630C /* JYMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYMeViewController.m; sourceTree = "<group>"; };
-		CC2DAF1820E0E1DE008B630C /* JYMeHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYMeHeaderView.h; sourceTree = "<group>"; };
-		CC2DAF1920E0E1DE008B630C /* JYMeHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYMeHeaderView.m; sourceTree = "<group>"; };
-		CC2DAF1C20E0E638008B630C /* JYMeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYMeTableViewCell.h; sourceTree = "<group>"; };
-		CC2DAF1D20E0E638008B630C /* JYMeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYMeTableViewCell.m; sourceTree = "<group>"; };
 		CC2DAF1F20E0EABA008B630C /* DefaultNews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DefaultNews.xib; sourceTree = "<group>"; };
 		CC2DAF2120E0EB54008B630C /* ImagesNews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImagesNews.xib; sourceTree = "<group>"; };
 		CC2DAF2220E0EB55008B630C /* WideImageNews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WideImageNews.xib; sourceTree = "<group>"; };
@@ -2718,7 +2712,7 @@
 		0CD6E2F81E001E6600E75DB5 /* Me */ = {
 			isa = PBXGroup;
 			children = (
-				CC2DAF1220E0E1DE008B630C /* JYMe */,
+				85E3C7F020E2886500F51D66 /* 我的主页面 */,
 				85AA97F31FD8E4CA00EAF5A4 /* 我的服务 */,
 				1890BA8A1FCD49FC0009339C /* 我的微豆 */,
 				1890BA851FCD49BB0009339C /* 积分明细 */,
@@ -4530,42 +4524,13 @@
 			path = "积分明细";
 			sourceTree = "<group>";
 		};
-		CC2DAF1220E0E1DE008B630C /* JYMe */ = {
+		85E3C7F020E2886500F51D66 /* 我的主页面 */ = {
 			isa = PBXGroup;
 			children = (
-				CC2DAF1320E0E1DE008B630C /* Controller */,
-				CC2DAF1620E0E1DE008B630C /* Model */,
-				CC2DAF1720E0E1DE008B630C /* View */,
+				85E3C7F120E2887600F51D66 /* JYMeViewController.h */,
+				85E3C7F220E2887700F51D66 /* JYMeViewController.m */,
 			);
-			name = JYMe;
-			path = ../../../../../Desktop/JYMe;
-			sourceTree = "<group>";
-		};
-		CC2DAF1320E0E1DE008B630C /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				CC2DAF1420E0E1DE008B630C /* JYMeViewController.h */,
-				CC2DAF1520E0E1DE008B630C /* JYMeViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		CC2DAF1620E0E1DE008B630C /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		CC2DAF1720E0E1DE008B630C /* View */ = {
-			isa = PBXGroup;
-			children = (
-				CC2DAF1820E0E1DE008B630C /* JYMeHeaderView.h */,
-				CC2DAF1920E0E1DE008B630C /* JYMeHeaderView.m */,
-				CC2DAF1C20E0E638008B630C /* JYMeTableViewCell.h */,
-				CC2DAF1D20E0E638008B630C /* JYMeTableViewCell.m */,
-			);
-			path = View;
+			path = "我的主页面";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -4889,7 +4854,6 @@
 				0CED7DB01E1F6BEC00892555 /* WMBackButtonItem.m in Sources */,
 				1D1C5BF51E0907ED008B469E /* AppDelegate+RongCloud.m in Sources */,
 				1D412B771E163FC300698A17 /* WMChatFooterView.m in Sources */,
-				CC2DAF1B20E0E1DF008B630C /* JYMeHeaderView.m in Sources */,
 				186ADFDB1ECA9F7F0070288B /* WMPatientEvaluationViewController.m in Sources */,
 				188F14C51F28885D0058B4CB /* WMQuickReplyModel.m in Sources */,
 				8512521E20BD475400685E7A /* WMDoctorInfoNewsModel.m in Sources */,
@@ -4920,7 +4884,7 @@
 				850142A21F3C04FD000BA97F /* WMPatientDataHeaderView.m in Sources */,
 				AD93FE9620DDDF6400C8EF83 /* WYBaseNewsCell.m in Sources */,
 				0CAF8F321E0CED5D0092E6A8 /* WMTradeMessageViewController.m in Sources */,
-				CC2DAF1A20E0E1DF008B630C /* JYMeViewController.m in Sources */,
+				85E3C7F320E2887700F51D66 /* JYMeViewController.m in Sources */,
 				0CAF8F231E0CED2A0092E6A8 /* WMNormalMessageCell.m in Sources */,
 				1D51B4EE2022E39D00F0F848 /* AppDelegate+MWindow.m in Sources */,
 				181A03511FDE295300868821 /* WMServiceSetCell.m in Sources */,
@@ -4994,7 +4958,6 @@
 				183287DC1F10C3E600F87E01 /* WMReadReportViewController.m in Sources */,
 				0C4004831E026B84003E1FC4 /* DateTimeUtil.m in Sources */,
 				1890BA581FC804F10009339C /* WMNewPictureSelectView.m in Sources */,
-				CC2DAF1E20E0E638008B630C /* JYMeTableViewCell.m in Sources */,
 				852473BE1F344A060049FB67 /* WMRCIMGroupDataEntity+CoreDataProperties.m in Sources */,
 				0CEB2EDC1E0CFE6A0070119A /* WMAboutTableViewController.m in Sources */,
 				183287EB1F10D49400F87E01 /* WMAllReportListGetAPIManager.m in Sources */,
