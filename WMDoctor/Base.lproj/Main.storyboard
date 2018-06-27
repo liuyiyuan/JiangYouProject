@@ -115,6 +115,25 @@
             </objects>
             <point key="canvasLocation" x="2031.2" y="2097.3013493253375"/>
         </scene>
+        <!--Shopping Mall View Controller-->
+        <scene sceneID="S1a-Xm-1Xs">
+            <objects>
+                <viewController id="mAF-hy-fQl" customClass="JYShoppingMallViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VXp-yj-ynA"/>
+                        <viewControllerLayoutGuide type="bottom" id="QqW-qW-Jtl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="e6d-2z-Eaw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="QtN-5r-s9U"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gEQ-gP-IAU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1919" y="1454"/>
+        </scene>
         <!--消息-->
         <scene sceneID="LVl-lb-bbn">
             <objects>
@@ -132,7 +151,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rD6-7e-a0a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2031.2" y="1441.529235382309"/>
+            <point key="canvasLocation" x="2721" y="1442"/>
         </scene>
         <!--工作台-->
         <scene sceneID="m9P-V5-zad">
@@ -352,11 +371,11 @@
             </objects>
             <point key="canvasLocation" x="1092" y="1441.529235382309"/>
         </scene>
-        <!--消息-->
+        <!--商城-->
         <scene sceneID="Uq5-ct-SIc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="g5R-u8-ZdU" customClass="WMNavgationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="消息" image="bt_bottom_mess0" selectedImage="bt_bottom_mess1" id="CbU-o4-kd7"/>
+                    <tabBarItem key="tabBarItem" title="商城" image="bt_bottom_mess0" selectedImage="bt_bottom_mess1" id="CbU-o4-kd7"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zdd-pJ-Xri">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -364,7 +383,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="I9i-df-0IW" kind="relationship" relationship="rootViewController" id="fvM-1l-gEd"/>
+                        <segue destination="mAF-hy-fQl" kind="relationship" relationship="rootViewController" id="zdF-kc-66l"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3zV-g1-VKY" userLabel="First Responder" sceneMemberID="firstResponder"/>

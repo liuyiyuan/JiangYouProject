@@ -531,6 +531,7 @@
 		856F6F061F41C65D001E73C3 /* BaseWebForH5ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 856F6F041F41C65D001E73C3 /* BaseWebForH5ViewController.m */; };
 		85752CAE201F01BE00E9E34D /* WMcounselingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 85752CAD201F01BE00E9E34D /* WMcounselingVC.m */; };
 		85752CB22020089700E9E34D /* WMNoCounselingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 85752CB12020089700E9E34D /* WMNoCounselingView.m */; };
+		858836CB20E3DF5A00DE928F /* JYShoppingMallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 858836CA20E3DF5A00DE928F /* JYShoppingMallViewController.m */; };
 		85A74BC31F98418400F1453F /* WMDoctorIncomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85A74BC21F98418400F1453F /* WMDoctorIncomeViewController.m */; };
 		85A74BD01F9844B300F1453F /* WMIncomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85A74BCF1F9844B300F1453F /* WMIncomeCell.m */; };
 		85A74BD31F984C1700F1453F /* WMIncomeAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85A74BD21F984C1700F1453F /* WMIncomeAPIManager.m */; };
@@ -1619,6 +1620,8 @@
 		85752CAD201F01BE00E9E34D /* WMcounselingVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMcounselingVC.m; sourceTree = "<group>"; };
 		85752CB02020089700E9E34D /* WMNoCounselingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMNoCounselingView.h; sourceTree = "<group>"; };
 		85752CB12020089700E9E34D /* WMNoCounselingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMNoCounselingView.m; sourceTree = "<group>"; };
+		858836C920E3DF5A00DE928F /* JYShoppingMallViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYShoppingMallViewController.h; sourceTree = "<group>"; };
+		858836CA20E3DF5A00DE928F /* JYShoppingMallViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYShoppingMallViewController.m; sourceTree = "<group>"; };
 		85A74BC11F98418400F1453F /* WMDoctorIncomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMDoctorIncomeViewController.h; sourceTree = "<group>"; };
 		85A74BC21F98418400F1453F /* WMDoctorIncomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMDoctorIncomeViewController.m; sourceTree = "<group>"; };
 		85A74BCE1F9844B300F1453F /* WMIncomeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMIncomeCell.h; sourceTree = "<group>"; };
@@ -2400,6 +2403,7 @@
 		0CD6E2571DFFCAD700E75DB5 /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				858836C520E3DEDF00DE928F /* ShoppingMall */,
 				188ACA842044FCA200A54692 /* New */,
 				856F6F001F41C42F001E73C3 /* Base */,
 				8501428C1F3B0BDA000BA97F /* Other */,
@@ -4365,6 +4369,39 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		858836C520E3DEDF00DE928F /* ShoppingMall */ = {
+			isa = PBXGroup;
+			children = (
+				858836C820E3DF0C00DE928F /* Model */,
+				858836C720E3DF0500DE928F /* View */,
+				858836C620E3DEFA00DE928F /* ViewController */,
+			);
+			path = ShoppingMall;
+			sourceTree = "<group>";
+		};
+		858836C620E3DEFA00DE928F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				858836C920E3DF5A00DE928F /* JYShoppingMallViewController.h */,
+				858836CA20E3DF5A00DE928F /* JYShoppingMallViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		858836C720E3DF0500DE928F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		858836C820E3DF0C00DE928F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		85AA97F31FD8E4CA00EAF5A4 /* 我的服务 */ = {
 			isa = PBXGroup;
 			children = (
@@ -5009,6 +5046,7 @@
 				181A03541FDE2A0200868821 /* WMServiceSetInfoAPImanager.m in Sources */,
 				1D29FAB21E1DDB2A00472F0E /* WMPatientsCloseParamModel.m in Sources */,
 				183287DF1F10C3FB00F87E01 /* WMUNReadReportViewController.m in Sources */,
+				858836CB20E3DF5A00DE928F /* JYShoppingMallViewController.m in Sources */,
 				184AD57A20BBF52C00F973D3 /* WMRemarkUpdateAPIManager.m in Sources */,
 				0C4650A61E1B45F20084053A /* WMBaseWKWebController.m in Sources */,
 				856237351F7DE5B600451954 /* WMDoctorVoiceAPIManager.m in Sources */,
