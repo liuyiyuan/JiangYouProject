@@ -9,6 +9,7 @@
 #import "JYMeViewController.h"
 #import "JYMeHeaderView.h"
 #import "JYMeTableViewCell.h"
+#import "JYMyWalletViewController.h"//我的钱包
 @interface JYMeViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic,strong)UITableView *meTableView;
@@ -82,28 +83,44 @@
 
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    switch (indexPath.row) {
+        case 0:
+        {
+            JYMyWalletViewController *Wallet = [JYMyWalletViewController new];
+            Wallet.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:Wallet animated:YES];
+        }
+            break;
+            
+        default:
+            break;
+    }
 }
 
 -(JYMeHeaderView *)headerView{
     if(!_headerView){
-        _headerView = [[JYMeHeaderView alloc]initWithFrame:CGRectMake(0, 0, UI_SCREEN_WIDTH, 60)];
+        _headerView = [[JYMeHeaderView alloc]initWithFrame:CGRectMake(0, 0, UI_SCREEN_WIDTH, 120)];
     }
     return _headerView;
 }
 -(UITableView *)meTableView{
     if(!_meTableView){
-        _meTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(self.headerView.frame), UI_SCREEN_WIDTH, 240)];
+        _meTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(self.headerView.frame), UI_SCREEN_WIDTH, pixelValue(600))];
         _meTableView.delegate = self;
         _meTableView.dataSource = self;
         _meTableView.backgroundColor = [UIColor whiteColor];
         _meTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _meTableView.showsVerticalScrollIndicator = NO;
+        _meTableView.scrollEnabled = NO;
     }
     return _meTableView;
 }
 
 
-
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    NSIndexPath *selected = [self.meTableView indexPathForSelectedRow];
+    if(selected) [self.meTableView deselectRowAtIndexPath:selected animated:NO];
+}
 
 @end

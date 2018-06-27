@@ -13,6 +13,7 @@
 -(instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if(self){
+        self.backgroundColor = [UIColor lightGrayColor];
         [self configUI];
     }
     return self;
@@ -27,38 +28,38 @@
     [self addSubview:self.arrowButton];
     
     [self.headerImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(10);
-        make.left.mas_equalTo(20);
-        make.width.height.mas_equalTo(40);
+        make.top.mas_equalTo(20);
+        make.left.mas_equalTo(pixelValue(20));
+        make.width.height.mas_equalTo(80);
     }];
     
     [self.nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.headerImageView.mas_right).offset(10);
-        make.top.mas_equalTo(self.headerImageView.mas_top).offset(5);
-        make.height.mas_equalTo(10);
+        make.top.mas_equalTo(self.headerImageView.mas_top).offset(10);
+        make.height.mas_equalTo(20);
     }];
     
     [self.ageLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.nameLabel.mas_left);
-        make.top.mas_equalTo(self.nameLabel.mas_bottom).offset(5);
-        make.height.mas_equalTo(7);
+        make.top.mas_equalTo(self.nameLabel.mas_bottom).offset(10);
+        make.height.mas_equalTo(14);
     }];
     
     [self.phoneLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.ageLabel.mas_left);
-        make.top.mas_equalTo(self.ageLabel.mas_bottom).offset(5);
-        make.height.mas_equalTo(6);
+        make.top.mas_equalTo(self.ageLabel.mas_bottom).offset(10);
+        make.height.mas_equalTo(14);
     }];
     
     [self.moneyLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.mas_equalTo(self.mas_right).offset(-20);
+        make.right.mas_equalTo(self.mas_right).offset(-pixelValue(20));
         make.bottom.mas_equalTo(self.mas_bottom).offset(-10);
-        make.height.mas_equalTo(11);
+        make.height.mas_equalTo(22);
     }];
     
     [self.arrowButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.mas_equalTo(self.mas_right).offset(-20);
-        make.width.height.mas_equalTo(17);
+        make.right.mas_equalTo(self.mas_right).offset(-pixelValue(20));
+        make.width.height.mas_equalTo(34);
         make.top.mas_equalTo(self.mas_top).offset(10);
     }];
     
