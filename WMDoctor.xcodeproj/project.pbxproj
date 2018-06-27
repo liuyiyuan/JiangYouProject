@@ -590,6 +590,9 @@
 		CCA4FC5A20E31D35000A783A /* JYMeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA4FC5720E31D35000A783A /* JYMeHeaderView.m */; };
 		CCA4FC5D20E322ED000A783A /* JYMyWalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA4FC5C20E322ED000A783A /* JYMyWalletViewController.m */; };
 		CCA4FC6020E323DB000A783A /* JYMyWalletCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA4FC5F20E323DB000A783A /* JYMyWalletCollectionViewCell.m */; };
+		CCA4FC6320E32B09000A783A /* JYAboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA4FC6220E32B09000A783A /* JYAboutUsViewController.m */; };
+		CCA4FC6620E32B40000A783A /* JYAboutUsHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA4FC6520E32B40000A783A /* JYAboutUsHeaderView.m */; };
+		CCA4FC6920E32FBF000A783A /* JYAboutUsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA4FC6820E32FBF000A783A /* JYAboutUsTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1729,6 +1732,12 @@
 		CCA4FC5C20E322ED000A783A /* JYMyWalletViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYMyWalletViewController.m; sourceTree = "<group>"; };
 		CCA4FC5E20E323DB000A783A /* JYMyWalletCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYMyWalletCollectionViewCell.h; sourceTree = "<group>"; };
 		CCA4FC5F20E323DB000A783A /* JYMyWalletCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYMyWalletCollectionViewCell.m; sourceTree = "<group>"; };
+		CCA4FC6120E32B09000A783A /* JYAboutUsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYAboutUsViewController.h; sourceTree = "<group>"; };
+		CCA4FC6220E32B09000A783A /* JYAboutUsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYAboutUsViewController.m; sourceTree = "<group>"; };
+		CCA4FC6420E32B40000A783A /* JYAboutUsHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYAboutUsHeaderView.h; sourceTree = "<group>"; };
+		CCA4FC6520E32B40000A783A /* JYAboutUsHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYAboutUsHeaderView.m; sourceTree = "<group>"; };
+		CCA4FC6720E32FBF000A783A /* JYAboutUsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYAboutUsTableViewCell.h; sourceTree = "<group>"; };
+		CCA4FC6820E32FBF000A783A /* JYAboutUsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYAboutUsTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -4562,6 +4571,10 @@
 				CCA4FC5620E31D35000A783A /* JYMeTableViewCell.m */,
 				CCA4FC5E20E323DB000A783A /* JYMyWalletCollectionViewCell.h */,
 				CCA4FC5F20E323DB000A783A /* JYMyWalletCollectionViewCell.m */,
+				CCA4FC6420E32B40000A783A /* JYAboutUsHeaderView.h */,
+				CCA4FC6520E32B40000A783A /* JYAboutUsHeaderView.m */,
+				CCA4FC6720E32FBF000A783A /* JYAboutUsTableViewCell.h */,
+				CCA4FC6820E32FBF000A783A /* JYAboutUsTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -4573,6 +4586,8 @@
 				CCA4FC5320E31D23000A783A /* JYMeViewController.m */,
 				CCA4FC5B20E322ED000A783A /* JYMyWalletViewController.h */,
 				CCA4FC5C20E322ED000A783A /* JYMyWalletViewController.m */,
+				CCA4FC6120E32B09000A783A /* JYAboutUsViewController.h */,
+				CCA4FC6220E32B09000A783A /* JYAboutUsViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -5141,6 +5156,7 @@
 				1DE56A471E0A289C00B93397 /* UITableView+BackgroundView.m in Sources */,
 				184AF9CB1F4D2FBC009EAE3E /* MBProgressHUDGIOFixed.m in Sources */,
 				1D6829201E7BC87700422732 /* WMDoctorFirendDetailModel.m in Sources */,
+				CCA4FC6320E32B09000A783A /* JYAboutUsViewController.m in Sources */,
 				18F5B6861E14D47A0051C60E /* WMDoctorInfoModel.m in Sources */,
 				1DE56A4B1E0A2FF700B93397 /* CommonUtil.m in Sources */,
 				0CEB2EF11E1350490070119A /* LoginModel.m in Sources */,
@@ -5178,6 +5194,7 @@
 				184AD56420B55E7700F973D3 /* WMTagGroupGetAPIManager.m in Sources */,
 				AD93FEA220DDE02A00C8EF83 /* WYDefaultNewsCell.m in Sources */,
 				1814F1EE1E9DF8A3005B4260 /* WMSchoolSelectViewController.m in Sources */,
+				CCA4FC6620E32B40000A783A /* JYAboutUsHeaderView.m in Sources */,
 				1D8203F91E63C09D00494F1C /* WMTotalPatientsDataModel.m in Sources */,
 				1D34F8061E9F9FE000B3D539 /* WMVPIPatientsModel.m in Sources */,
 				0CEB2ECC1E0CFD040070119A /* WMMyServiceTableViewController.m in Sources */,
@@ -5284,6 +5301,7 @@
 				85A74BD31F984C1700F1453F /* WMIncomeAPIManager.m in Sources */,
 				184C603D1E11FD5200A2E477 /* WMLoginParam.m in Sources */,
 				AD93FE9C20DDDF8B00C8EF83 /* WYNews.m in Sources */,
+				CCA4FC6920E32FBF000A783A /* JYAboutUsTableViewCell.m in Sources */,
 				AD93FE9520DDDF6400C8EF83 /* WYBaseScrollView.m in Sources */,
 				18237EEB1EA78D6D00C30F51 /* WMServiceUpdatePriceModel.m in Sources */,
 				186E7867202308AD0058743A /* WMIndexQuestionsCell.m in Sources */,

@@ -10,6 +10,7 @@
 #import "JYMeHeaderView.h"
 #import "JYMeTableViewCell.h"
 #import "JYMyWalletViewController.h"//我的钱包
+#import "JYAboutUsViewController.h"//关于我们
 @interface JYMeViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic,strong)UITableView *meTableView;
@@ -84,14 +85,21 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     switch (indexPath.row) {
-        case 0:
+        case 0://我的钱包
         {
             JYMyWalletViewController *Wallet = [JYMyWalletViewController new];
             Wallet.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:Wallet animated:YES];
         }
             break;
-            
+         
+        case 4://关于我们
+        {
+            JYAboutUsViewController *aboutUs = [JYAboutUsViewController new];
+            aboutUs.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:aboutUs animated:YES];
+        }
+            break;
         default:
             break;
     }
