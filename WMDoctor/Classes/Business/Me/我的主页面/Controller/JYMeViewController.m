@@ -11,6 +11,7 @@
 #import "JYMeTableViewCell.h"
 #import "JYMyWalletViewController.h"//我的钱包
 #import "JYAboutUsViewController.h"//关于我们
+#import "JYPersonalInformationViewController.h"//个人资料
 @interface JYMeViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic,strong)UITableView *meTableView;
@@ -108,6 +109,7 @@
 -(JYMeHeaderView *)headerView{
     if(!_headerView){
         _headerView = [[JYMeHeaderView alloc]initWithFrame:CGRectMake(0, 0, UI_SCREEN_WIDTH, 120)];
+        [_headerView.arrowButton addTarget:self action:@selector(click_arrowButton) forControlEvents:UIControlEventTouchUpInside];
     }
     return _headerView;
 }
@@ -122,6 +124,13 @@
         _meTableView.scrollEnabled = NO;
     }
     return _meTableView;
+}
+
+#pragma mark - 跳转个人资料
+-(void)click_arrowButton{
+    JYPersonalInformationViewController *personalInformation = [JYPersonalInformationViewController new];
+    personalInformation.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:personalInformation animated:YES];
 }
 
 

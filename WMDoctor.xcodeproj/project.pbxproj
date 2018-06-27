@@ -593,6 +593,9 @@
 		CCA4FC6320E32B09000A783A /* JYAboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA4FC6220E32B09000A783A /* JYAboutUsViewController.m */; };
 		CCA4FC6620E32B40000A783A /* JYAboutUsHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA4FC6520E32B40000A783A /* JYAboutUsHeaderView.m */; };
 		CCA4FC6920E32FBF000A783A /* JYAboutUsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA4FC6820E32FBF000A783A /* JYAboutUsTableViewCell.m */; };
+		CCA4FC6C20E33A32000A783A /* JYPersonalInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA4FC6B20E33A32000A783A /* JYPersonalInformationViewController.m */; };
+		CCA4FC6F20E33A77000A783A /* JYPersonalInformationHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA4FC6E20E33A77000A783A /* JYPersonalInformationHeaderView.m */; };
+		CCA4FC7420E341B3000A783A /* SelectPhotoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA4FC7220E341B2000A783A /* SelectPhotoManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1738,6 +1741,12 @@
 		CCA4FC6520E32B40000A783A /* JYAboutUsHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYAboutUsHeaderView.m; sourceTree = "<group>"; };
 		CCA4FC6720E32FBF000A783A /* JYAboutUsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYAboutUsTableViewCell.h; sourceTree = "<group>"; };
 		CCA4FC6820E32FBF000A783A /* JYAboutUsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYAboutUsTableViewCell.m; sourceTree = "<group>"; };
+		CCA4FC6A20E33A32000A783A /* JYPersonalInformationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYPersonalInformationViewController.h; sourceTree = "<group>"; };
+		CCA4FC6B20E33A32000A783A /* JYPersonalInformationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYPersonalInformationViewController.m; sourceTree = "<group>"; };
+		CCA4FC6D20E33A77000A783A /* JYPersonalInformationHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYPersonalInformationHeaderView.h; sourceTree = "<group>"; };
+		CCA4FC6E20E33A77000A783A /* JYPersonalInformationHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYPersonalInformationHeaderView.m; sourceTree = "<group>"; };
+		CCA4FC7220E341B2000A783A /* SelectPhotoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectPhotoManager.m; sourceTree = "<group>"; };
+		CCA4FC7320E341B3000A783A /* SelectPhotoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectPhotoManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -4246,6 +4255,7 @@
 		85475943207F631D00A29175 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				CCA4FC7120E34195000A783A /* SelectedManger */,
 				85CF6CC720A5997F00FCDD21 /* UISearchBarCategories */,
 				85475944207F633C00A29175 /* RongCloudCategories */,
 			);
@@ -4575,6 +4585,8 @@
 				CCA4FC6520E32B40000A783A /* JYAboutUsHeaderView.m */,
 				CCA4FC6720E32FBF000A783A /* JYAboutUsTableViewCell.h */,
 				CCA4FC6820E32FBF000A783A /* JYAboutUsTableViewCell.m */,
+				CCA4FC6D20E33A77000A783A /* JYPersonalInformationHeaderView.h */,
+				CCA4FC6E20E33A77000A783A /* JYPersonalInformationHeaderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -4588,8 +4600,19 @@
 				CCA4FC5C20E322ED000A783A /* JYMyWalletViewController.m */,
 				CCA4FC6120E32B09000A783A /* JYAboutUsViewController.h */,
 				CCA4FC6220E32B09000A783A /* JYAboutUsViewController.m */,
+				CCA4FC6A20E33A32000A783A /* JYPersonalInformationViewController.h */,
+				CCA4FC6B20E33A32000A783A /* JYPersonalInformationViewController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		CCA4FC7120E34195000A783A /* SelectedManger */ = {
+			isa = PBXGroup;
+			children = (
+				CCA4FC7320E341B3000A783A /* SelectPhotoManager.h */,
+				CCA4FC7220E341B2000A783A /* SelectPhotoManager.m */,
+			);
+			path = SelectedManger;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -4994,6 +5017,7 @@
 				1814F2001E9F710A005B4260 /* WMAreaSelectViewController.m in Sources */,
 				852473D21F39551D0049FB67 /* WMIMGroupModel.m in Sources */,
 				183287FB1F12105B00F87E01 /* WMReportReadCell.m in Sources */,
+				CCA4FC6C20E33A32000A783A /* JYPersonalInformationViewController.m in Sources */,
 				1D2AEAC51E1E294E0026DB19 /* WMPatientsUpHuifuParamModel.m in Sources */,
 				1855DC481E83C30F001B4DDD /* WMEntranceYearListAPIManager.m in Sources */,
 				0CB61DF41E4D6A880019AC2A /* NSFileManager+Paths.m in Sources */,
@@ -5003,6 +5027,7 @@
 				0CEB2EDD1E0CFE6A0070119A /* WMSettingTableViewController.m in Sources */,
 				0CAF8F2F1E0CED5D0092E6A8 /* WMNotificationMessageViewController.m in Sources */,
 				1D38168E1ECC73AA00562FCA /* WMCertificationSucViewController.m in Sources */,
+				CCA4FC6F20E33A77000A783A /* JYPersonalInformationHeaderView.m in Sources */,
 				0CAF8F3B1E0CEDBE0092E6A8 /* WMServiceViewController.m in Sources */,
 				18237EDC1EA76E1500C30F51 /* WMServiceTitleCell.m in Sources */,
 				183287FE1F1372C600F87E01 /* WMTaiXinTableViewCell.m in Sources */,
@@ -5061,6 +5086,7 @@
 				0CEB2ECA1E0CFD040070119A /* WMMeMainTableViewController.m in Sources */,
 				0CAF8F051E0A256F0092E6A8 /* WMNetworkConfig.m in Sources */,
 				0C40048B1E026CA3003E1FC4 /* WMFunctionUtil.m in Sources */,
+				CCA4FC7420E341B3000A783A /* SelectPhotoManager.m in Sources */,
 				85DBE7AC1FC55D1500E821E4 /* WMIntegralDetailAPIManager.m in Sources */,
 				18F5B68F1E14F7CA0051C60E /* WMGetPersonalInfoManager.m in Sources */,
 				18F73BE0202D8E8F000A7D11 /* WMCertificationStatusAPIManager.m in Sources */,
