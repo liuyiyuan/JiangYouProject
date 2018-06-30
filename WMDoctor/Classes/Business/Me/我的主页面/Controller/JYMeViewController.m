@@ -12,6 +12,7 @@
 #import "JYMyWalletViewController.h"//我的钱包
 #import "JYAboutUsViewController.h"//关于我们
 #import "JYPersonalInformationViewController.h"//个人资料
+#import "JYPersonEditInformationViewController.h"//个人信息编辑页
 @interface JYMeViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic,strong)UITableView *meTableView;
@@ -100,6 +101,14 @@
             aboutUs.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:aboutUs animated:YES];
         }
+            
+        case 5://关于我们
+        {
+            JYPersonEditInformationViewController *aboutUs = [JYPersonEditInformationViewController new];
+            aboutUs.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:aboutUs animated:YES];
+        }
+            
             break;
         default:
             break;

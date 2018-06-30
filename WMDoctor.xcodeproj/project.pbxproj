@@ -584,6 +584,10 @@
 		AD93FEB120DDE34B00C8EF83 /* WYButtonChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FEAF20DDE34B00C8EF83 /* WYButtonChooseView.m */; };
 		AD93FEB420DDE39200C8EF83 /* WYLabelButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FEB320DDE39200C8EF83 /* WYLabelButton.m */; };
 		AD93FEB720DDE55F00C8EF83 /* WYNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FEB620DDE55F00C8EF83 /* WYNetwork.m */; };
+		ADA4A8DF20E71975006400F3 /* JYPersonEditInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA4A8DE20E71975006400F3 /* JYPersonEditInformationViewController.m */; };
+		ADA4A8E220E719EB006400F3 /* JYInformaitonHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA4A8E120E719EB006400F3 /* JYInformaitonHeaderView.m */; };
+		ADA4A8E520E71B7C006400F3 /* JYInformationNicknameView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA4A8E420E71B7C006400F3 /* JYInformationNicknameView.m */; };
+		ADA4A8E820E7277D006400F3 /* JYInformationRealNameView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA4A8E720E7277C006400F3 /* JYInformationRealNameView.m */; };
 		CC2DAF2020E0EABA008B630C /* DefaultNews.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC2DAF1F20E0EABA008B630C /* DefaultNews.xib */; };
 		CC2DAF2320E0EB55008B630C /* ImagesNews.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC2DAF2120E0EB54008B630C /* ImagesNews.xib */; };
 		CC2DAF2420E0EB55008B630C /* WideImageNews.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC2DAF2220E0EB55008B630C /* WideImageNews.xib */; };
@@ -1728,6 +1732,14 @@
 		AD93FEB520DDE55F00C8EF83 /* WYNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNetwork.h; sourceTree = "<group>"; };
 		AD93FEB620DDE55F00C8EF83 /* WYNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNetwork.m; sourceTree = "<group>"; };
 		AD93FEB820DDE66500C8EF83 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		ADA4A8DD20E71975006400F3 /* JYPersonEditInformationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYPersonEditInformationViewController.h; sourceTree = "<group>"; };
+		ADA4A8DE20E71975006400F3 /* JYPersonEditInformationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYPersonEditInformationViewController.m; sourceTree = "<group>"; };
+		ADA4A8E020E719EB006400F3 /* JYInformaitonHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYInformaitonHeaderView.h; sourceTree = "<group>"; };
+		ADA4A8E120E719EB006400F3 /* JYInformaitonHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYInformaitonHeaderView.m; sourceTree = "<group>"; };
+		ADA4A8E320E71B7C006400F3 /* JYInformationNicknameView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYInformationNicknameView.h; sourceTree = "<group>"; };
+		ADA4A8E420E71B7C006400F3 /* JYInformationNicknameView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYInformationNicknameView.m; sourceTree = "<group>"; };
+		ADA4A8E620E7277C006400F3 /* JYInformationRealNameView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYInformationRealNameView.h; sourceTree = "<group>"; };
+		ADA4A8E720E7277C006400F3 /* JYInformationRealNameView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYInformationRealNameView.m; sourceTree = "<group>"; };
 		CC2DAF1F20E0EABA008B630C /* DefaultNews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DefaultNews.xib; sourceTree = "<group>"; };
 		CC2DAF2120E0EB54008B630C /* ImagesNews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImagesNews.xib; sourceTree = "<group>"; };
 		CC2DAF2220E0EB55008B630C /* WideImageNews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WideImageNews.xib; sourceTree = "<group>"; };
@@ -4629,6 +4641,12 @@
 				CCA4FC6820E32FBF000A783A /* JYAboutUsTableViewCell.m */,
 				CCA4FC6D20E33A77000A783A /* JYPersonalInformationHeaderView.h */,
 				CCA4FC6E20E33A77000A783A /* JYPersonalInformationHeaderView.m */,
+				ADA4A8E020E719EB006400F3 /* JYInformaitonHeaderView.h */,
+				ADA4A8E120E719EB006400F3 /* JYInformaitonHeaderView.m */,
+				ADA4A8E320E71B7C006400F3 /* JYInformationNicknameView.h */,
+				ADA4A8E420E71B7C006400F3 /* JYInformationNicknameView.m */,
+				ADA4A8E620E7277C006400F3 /* JYInformationRealNameView.h */,
+				ADA4A8E720E7277C006400F3 /* JYInformationRealNameView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -4644,6 +4662,8 @@
 				CCA4FC6220E32B09000A783A /* JYAboutUsViewController.m */,
 				CCA4FC6A20E33A32000A783A /* JYPersonalInformationViewController.h */,
 				CCA4FC6B20E33A32000A783A /* JYPersonalInformationViewController.m */,
+				ADA4A8DD20E71975006400F3 /* JYPersonEditInformationViewController.h */,
+				ADA4A8DE20E71975006400F3 /* JYPersonEditInformationViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -4962,6 +4982,7 @@
 				852473B41F32B63E0049FB67 /* WMCricleHomeAPIManager.m in Sources */,
 				18328A611F1503A200F87E01 /* ASFTableViewPrivateGlobals.m in Sources */,
 				0C4681281E28810C00BDE355 /* WMVersionUpgradeAPIManager.m in Sources */,
+				ADA4A8E520E71B7C006400F3 /* JYInformationNicknameView.m in Sources */,
 				18153C341E154A6C00956D2A /* WMEvaluateLabelView.m in Sources */,
 				18777AA91E27219A000957D6 /* WMMyWalletViewController.m in Sources */,
 				854180C21FCBE6B300EA4235 /* WMMyMicroBeanModel.m in Sources */,
@@ -5087,6 +5108,7 @@
 				183287DC1F10C3E600F87E01 /* WMReadReportViewController.m in Sources */,
 				0C4004831E026B84003E1FC4 /* DateTimeUtil.m in Sources */,
 				1890BA581FC804F10009339C /* WMNewPictureSelectView.m in Sources */,
+				ADA4A8E220E719EB006400F3 /* JYInformaitonHeaderView.m in Sources */,
 				852473BE1F344A060049FB67 /* WMRCIMGroupDataEntity+CoreDataProperties.m in Sources */,
 				0CEB2EDC1E0CFE6A0070119A /* WMAboutTableViewController.m in Sources */,
 				183287EB1F10D49400F87E01 /* WMAllReportListGetAPIManager.m in Sources */,
@@ -5109,6 +5131,7 @@
 				855C9BDB20C8CBD1007383EB /* WMQAQuestionLabelsView.m in Sources */,
 				850142921F3B0C57000BA97F /* WMOtherDataModel.m in Sources */,
 				1D3B763F1E1393AF0035EE65 /* WMPatientReportedModel.m in Sources */,
+				ADA4A8E820E7277D006400F3 /* JYInformationRealNameView.m in Sources */,
 				18328A251F1470F300F87E01 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				181C6CA11E88B9EE00CD0119 /* WMStreetsAPIManger.m in Sources */,
 				85CF6D0520AEA6E600FCDD21 /* WMMedicalCircleAPIManager.m in Sources */,
@@ -5159,6 +5182,7 @@
 				18F73BDB20295684000A7D11 /* WMCardPopupView.m in Sources */,
 				0CB61DEB1E4D68660019AC2A /* UIImage+Generate.m in Sources */,
 				180A36B61E235F2A00124839 /* WMShareWebViewController.m in Sources */,
+				ADA4A8DF20E71975006400F3 /* JYPersonEditInformationViewController.m in Sources */,
 				1D2734811E5EB4F600CBD97F /* WMAllPatientTableViewCell.m in Sources */,
 				1DE56A9A1E114D3200B93397 /* WMJSONModel.m in Sources */,
 				0CAF8F4E1E0CEEFE0092E6A8 /* WMImageView.m in Sources */,
