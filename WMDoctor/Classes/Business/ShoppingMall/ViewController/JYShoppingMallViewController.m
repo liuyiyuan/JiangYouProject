@@ -10,9 +10,11 @@
 #import "WYTopicScrollView.h"
 #import "WYTopicHeader.h"
 #import "WYTopic.h"
+#import "JYMenuSelectorView.h"
 
 @interface JYShoppingMallViewController ()<TopicScrollViewDelegate>{
     WYTopicScrollView *_topicScrollView;
+    JYMenuSelectorView *_menuSelectorView;
 }
 
 @end
@@ -26,10 +28,14 @@
 }
 
 - (void)initView{
+    self.title = @"江油商城";
     WYTopicHeader *header = [[WYTopicHeader alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kTopicHeaderHeight)];
     _topicScrollView = header.topicScrollView;
     _topicScrollView.topicDelegate = self;
-    [self.view addSubview:header];
+    
+    _menuSelectorView = [[JYMenuSelectorView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 44)];
+    [_menuSelectorView setMenuWithArr:@[@"精选", @"抢购", @"团购", @"福利", @"商城", @"贴吧"]];
+    [self.view addSubview:_menuSelectorView];
 }
 
 - (void)didReceiveMemoryWarning {

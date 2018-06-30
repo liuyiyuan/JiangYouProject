@@ -532,6 +532,7 @@
 		85752CAE201F01BE00E9E34D /* WMcounselingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 85752CAD201F01BE00E9E34D /* WMcounselingVC.m */; };
 		85752CB22020089700E9E34D /* WMNoCounselingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 85752CB12020089700E9E34D /* WMNoCounselingView.m */; };
 		858836CB20E3DF5A00DE928F /* JYShoppingMallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 858836CA20E3DF5A00DE928F /* JYShoppingMallViewController.m */; };
+		8588374B20E7181600DE928F /* JYMenuSelectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8588374A20E7181600DE928F /* JYMenuSelectorView.m */; };
 		85A74BC31F98418400F1453F /* WMDoctorIncomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85A74BC21F98418400F1453F /* WMDoctorIncomeViewController.m */; };
 		85A74BD01F9844B300F1453F /* WMIncomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85A74BCF1F9844B300F1453F /* WMIncomeCell.m */; };
 		85A74BD31F984C1700F1453F /* WMIncomeAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85A74BD21F984C1700F1453F /* WMIncomeAPIManager.m */; };
@@ -1622,6 +1623,8 @@
 		85752CB12020089700E9E34D /* WMNoCounselingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMNoCounselingView.m; sourceTree = "<group>"; };
 		858836C920E3DF5A00DE928F /* JYShoppingMallViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYShoppingMallViewController.h; sourceTree = "<group>"; };
 		858836CA20E3DF5A00DE928F /* JYShoppingMallViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYShoppingMallViewController.m; sourceTree = "<group>"; };
+		8588374920E7181600DE928F /* JYMenuSelectorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYMenuSelectorView.h; sourceTree = "<group>"; };
+		8588374A20E7181600DE928F /* JYMenuSelectorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYMenuSelectorView.m; sourceTree = "<group>"; };
 		85A74BC11F98418400F1453F /* WMDoctorIncomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMDoctorIncomeViewController.h; sourceTree = "<group>"; };
 		85A74BC21F98418400F1453F /* WMDoctorIncomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMDoctorIncomeViewController.m; sourceTree = "<group>"; };
 		85A74BCE1F9844B300F1453F /* WMIncomeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMIncomeCell.h; sourceTree = "<group>"; };
@@ -4391,6 +4394,8 @@
 		858836C720E3DF0500DE928F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8588374920E7181600DE928F /* JYMenuSelectorView.h */,
+				8588374A20E7181600DE928F /* JYMenuSelectorView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -4981,6 +4986,7 @@
 				85DBE7A01FC3D3C700E821E4 /* WMQuestionModel.m in Sources */,
 				0CAF8F4F1E0CEEFE0092E6A8 /* WMShowImageCollectionViewCell.m in Sources */,
 				1D38164E1EC9769B00562FCA /* WMPerfectPerInfoViewController.m in Sources */,
+				8588374B20E7181600DE928F /* JYMenuSelectorView.m in Sources */,
 				18328A621F1503A200F87E01 /* ASFTableViewPublicGlobals.m in Sources */,
 				852473C11F345DF50049FB67 /* WMGroupMessageAPIManager.m in Sources */,
 				0CEB2EE61E0CFFE70070119A /* WMStarView.m in Sources */,
