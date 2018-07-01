@@ -588,6 +588,8 @@
 		ADA4A8E220E719EB006400F3 /* JYInformaitonHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA4A8E120E719EB006400F3 /* JYInformaitonHeaderView.m */; };
 		ADA4A8E520E71B7C006400F3 /* JYInformationNicknameView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA4A8E420E71B7C006400F3 /* JYInformationNicknameView.m */; };
 		ADA4A8E820E7277D006400F3 /* JYInformationRealNameView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA4A8E720E7277C006400F3 /* JYInformationRealNameView.m */; };
+		ADA4A8EB20E89380006400F3 /* JYInformationButtonArrayView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA4A8EA20E89380006400F3 /* JYInformationButtonArrayView.m */; };
+		ADA4A8EE20E8995A006400F3 /* JYInformationInComeView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA4A8ED20E8995A006400F3 /* JYInformationInComeView.m */; };
 		CC2DAF2020E0EABA008B630C /* DefaultNews.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC2DAF1F20E0EABA008B630C /* DefaultNews.xib */; };
 		CC2DAF2320E0EB55008B630C /* ImagesNews.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC2DAF2120E0EB54008B630C /* ImagesNews.xib */; };
 		CC2DAF2420E0EB55008B630C /* WideImageNews.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC2DAF2220E0EB55008B630C /* WideImageNews.xib */; };
@@ -1740,6 +1742,10 @@
 		ADA4A8E420E71B7C006400F3 /* JYInformationNicknameView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYInformationNicknameView.m; sourceTree = "<group>"; };
 		ADA4A8E620E7277C006400F3 /* JYInformationRealNameView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYInformationRealNameView.h; sourceTree = "<group>"; };
 		ADA4A8E720E7277C006400F3 /* JYInformationRealNameView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYInformationRealNameView.m; sourceTree = "<group>"; };
+		ADA4A8E920E89380006400F3 /* JYInformationButtonArrayView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYInformationButtonArrayView.h; sourceTree = "<group>"; };
+		ADA4A8EA20E89380006400F3 /* JYInformationButtonArrayView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYInformationButtonArrayView.m; sourceTree = "<group>"; };
+		ADA4A8EC20E8995A006400F3 /* JYInformationInComeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYInformationInComeView.h; sourceTree = "<group>"; };
+		ADA4A8ED20E8995A006400F3 /* JYInformationInComeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYInformationInComeView.m; sourceTree = "<group>"; };
 		CC2DAF1F20E0EABA008B630C /* DefaultNews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DefaultNews.xib; sourceTree = "<group>"; };
 		CC2DAF2120E0EB54008B630C /* ImagesNews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImagesNews.xib; sourceTree = "<group>"; };
 		CC2DAF2220E0EB55008B630C /* WideImageNews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WideImageNews.xib; sourceTree = "<group>"; };
@@ -4647,6 +4653,10 @@
 				ADA4A8E420E71B7C006400F3 /* JYInformationNicknameView.m */,
 				ADA4A8E620E7277C006400F3 /* JYInformationRealNameView.h */,
 				ADA4A8E720E7277C006400F3 /* JYInformationRealNameView.m */,
+				ADA4A8E920E89380006400F3 /* JYInformationButtonArrayView.h */,
+				ADA4A8EA20E89380006400F3 /* JYInformationButtonArrayView.m */,
+				ADA4A8EC20E8995A006400F3 /* JYInformationInComeView.h */,
+				ADA4A8ED20E8995A006400F3 /* JYInformationInComeView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -5058,6 +5068,7 @@
 				18237EE81EA78CE000C30F51 /* WMServiceUpdatePriceAPIManager.m in Sources */,
 				854180BC1FCBE2DD00EA4235 /* WMMyMicroBeanViewController.m in Sources */,
 				18045B4D1E7B8BD60021D39A /* WMMyContactsViewController.m in Sources */,
+				ADA4A8EB20E89380006400F3 /* JYInformationButtonArrayView.m in Sources */,
 				0CAF8F151E0CC88A0092E6A8 /* UIColor+Hex.m in Sources */,
 				18328A651F150A7500F87E01 /* WMAdviceAPIManager.m in Sources */,
 				18328A1F1F1470F300F87E01 /* LKCHistoryManager.m in Sources */,
@@ -5076,6 +5087,7 @@
 				858836CB20E3DF5A00DE928F /* JYShoppingMallViewController.m in Sources */,
 				184AD57A20BBF52C00F973D3 /* WMRemarkUpdateAPIManager.m in Sources */,
 				0C4650A61E1B45F20084053A /* WMBaseWKWebController.m in Sources */,
+				ADA4A8EE20E8995A006400F3 /* JYInformationInComeView.m in Sources */,
 				856237351F7DE5B600451954 /* WMDoctorVoiceAPIManager.m in Sources */,
 				85DBE7A41FC5121C00E821E4 /* WMIntegralDetailViewController.m in Sources */,
 				1D29FAA91E1D11EF00472F0E /* WMPatientStateParamModel.m in Sources */,

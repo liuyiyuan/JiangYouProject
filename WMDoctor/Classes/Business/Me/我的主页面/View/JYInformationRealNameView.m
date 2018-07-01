@@ -28,7 +28,9 @@
     [self addSubview:self.idNumberLabel];
     [self addSubview:self.idNumberTextField];
     [self addSubview:self.industryLabel];
-    
+    [self addSubview:self.buttonArrayView];
+    [self addSubview:self.workTextFidle];
+    [self addSubview:self.secondLineView];
     [self.doneLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(pixelValue(20));
         make.left.mas_equalTo(pixelValue(20));
@@ -81,6 +83,27 @@
         make.height.mas_equalTo(self.idNumberLabel.mas_height);
     }];
     
+    
+    [self.buttonArrayView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.industryLabel.mas_top);
+        make.left.mas_equalTo(self.idNumberTextField.mas_left);
+        make.right.mas_equalTo(self.idNumberTextField.mas_right);
+        make.height.mas_equalTo(pixelValue(160));
+    }];
+   
+    [self.workTextFidle mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.idNumberTextField.mas_left);
+        make.top.mas_equalTo(self.buttonArrayView.mas_bottom).offset(pixelValue(30));
+        make.right.mas_equalTo(self.idNumberTextField.mas_right);
+        make.height.mas_equalTo(self.idNumberTextField.mas_height);
+    }];
+    
+    [self.secondLineView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.lineView.mas_left);
+        make.right.mas_equalTo(self.lineView.mas_right);
+        make.height.mas_equalTo(pixelValue(4));
+        make.bottom.mas_equalTo(self.mas_bottom);
+    }];
 }
 
 -(UILabel *)doneLabel{
@@ -162,4 +185,33 @@
     return _industryLabel;
 }
 
+
+-(JYInformationButtonArrayView *)buttonArrayView{
+    if(!_buttonArrayView){
+        _buttonArrayView = [[JYInformationButtonArrayView alloc]init];
+        _buttonArrayView.buttonTitlearray = @[@" 软件产业",@" 服务业",@" 公务员",@" 广告业",@" 在校学生",@" 其他"];
+        [_buttonArrayView configUI];
+    }
+    
+    return _buttonArrayView;
+}
+
+-(UITextField *)workTextFidle{
+    if(!_workTextFidle){
+        _workTextFidle = [[UITextField alloc]init];
+        _workTextFidle.hidden = YES;
+        _workTextFidle.layer.borderColor = [UIColor colorWithHexString:@"#666666"].CGColor;
+        _workTextFidle.layer.borderWidth = pixelValue(1);
+        _workTextFidle.placeholder = @" 填入您的行业";
+    }
+    return _workTextFidle;
+}
+
+-(UIView *)secondLineView{
+    if(!_secondLineView){
+        _secondLineView = [[UIView alloc]init];
+        _secondLineView.backgroundColor = [UIColor colorWithHexString:@"#F2F2F2"];
+    }
+    return _secondLineView;
+}
 @end

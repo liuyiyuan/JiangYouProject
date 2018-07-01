@@ -108,9 +108,13 @@
 -(UIButton *)manButton{
     if(!_manButton){
         _manButton = [[UIButton alloc]init];
-        [_manButton setTitle:@"男" forState:UIControlStateNormal];
+        [_manButton setTitle:@" 男" forState:UIControlStateNormal];
+        [_manButton setImage:[UIImage imageNamed:@"information_btn_normal"] forState:UIControlStateNormal];
+        [_manButton setImage:[UIImage imageNamed:@"information_btn_selected"] forState:UIControlStateSelected];
         _manButton.titleLabel.font = [UIFont systemFontOfSize:pixelValue(28)];
         [_manButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        _manButton.selected = YES;
+        [_manButton addTarget:self action:@selector(click_manButton:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _manButton;
 }
@@ -118,9 +122,13 @@
 -(UIButton *)womanButton{
     if(!_womanButton){
         _womanButton = [[UIButton alloc]init];
-        [_womanButton setTitle:@"男" forState:UIControlStateNormal];
+        [_womanButton setTitle:@" 女" forState:UIControlStateNormal];
+        [_womanButton setImage:[UIImage imageNamed:@"information_btn_normal"] forState:UIControlStateNormal];
+        [_womanButton setImage:[UIImage imageNamed:@"information_btn_selected"] forState:UIControlStateSelected];
         _womanButton.titleLabel.font = [UIFont systemFontOfSize:pixelValue(30)];
         [_womanButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        _womanButton.selected = NO;
+        [_womanButton addTarget:self action:@selector(click_womanButton:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _womanButton;
 }
@@ -144,5 +152,35 @@
     return _IntroductionTextView;
 }
 
+#pragma mark - 男点击
+-(void)click_manButton:(UIButton *)btn{
+    if(btn.selected == YES){
+        return;
+    }else{
+        btn.selected = YES;
+        self.womanButton.selected = NO;
+        if([self.delegate respondsToSelector:@selector(genderSelect:)]){
+            [self.delegate genderSelect:1];
+        }
+    }
+
+   
+    
+}
+#pragma mark - 女点击
+-(void)click_womanButton:(UIButton *)btn{
+    if(btn.selected == YES){
+        return;
+    }else{
+        btn.selected = YES;
+        self.manButton.selected = NO;
+        if([self.delegate respondsToSelector:@selector(genderSelect:)]){
+            [self.delegate genderSelect:2];
+        }
+    }
+
+   
+    
+}
 
 @end

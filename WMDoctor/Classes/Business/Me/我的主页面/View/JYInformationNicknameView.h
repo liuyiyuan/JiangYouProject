@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol JYInformationNicknameViewDelegate <NSObject>
+
+-(void)genderSelect :(int)type;
+
+@end
+
 @interface JYInformationNicknameView : UIView
 
 @property(nonatomic,strong)UILabel *nickNameLabel;//昵称
@@ -23,5 +29,7 @@
 @property(nonatomic,strong)UILabel *IntroductionLabel;//简介
 
 @property(nonatomic,strong)UITextView *IntroductionTextView;//简介输入框
+
+@property(nonatomic,weak) id <JYInformationNicknameViewDelegate>delegate;
 
 @end

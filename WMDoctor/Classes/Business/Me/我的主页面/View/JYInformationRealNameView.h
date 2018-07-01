@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "JYInformationButtonArrayView.h"
 @interface JYInformationRealNameView : UIView
 
 @property(nonatomic,strong)UILabel *doneLabel;//完成实名认证获得更多红利
@@ -26,8 +26,14 @@
 
 @property(nonatomic,strong)UILabel *industryLabel;//行业
 
+@property(nonatomic,strong)NSMutableArray *buttonArray;//按钮数组
 
+@property(nonatomic,strong)UIButton *selectedButton;//已选中按钮
 
+@property(nonatomic,strong)JYInformationButtonArrayView *buttonArrayView;//按钮背景view 
 
+@property(nonatomic,strong)UITextField *workTextFidle;//从事行业输入框
+
+@property(nonatomic,strong)UIView *secondLineView;//下边线
 
 @end
