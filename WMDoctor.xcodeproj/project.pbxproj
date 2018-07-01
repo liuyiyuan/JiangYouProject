@@ -564,6 +564,11 @@
 		85E4B6091F2AD44F005F6D21 /* RCDGroupInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E4B6081F2AD44F005F6D21 /* RCDGroupInfo.m */; };
 		85E4B60C1F2AD4E8005F6D21 /* WMRCGroupNewsMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E4B60B1F2AD4E8005F6D21 /* WMRCGroupNewsMessage.m */; };
 		85E4B60F1F2AD502005F6D21 /* WMRCGroupNewsMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E4B60E1F2AD502005F6D21 /* WMRCGroupNewsMessageCell.m */; };
+		AD526A0E20E8BC4700D4BF85 /* JYFindPassWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD526A0D20E8BC4700D4BF85 /* JYFindPassWordViewController.m */; };
+		AD526A1120E8BC7300D4BF85 /* JYFindPassWordView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD526A1020E8BC7300D4BF85 /* JYFindPassWordView.m */; };
+		AD526A1520E8C42D00D4BF85 /* UIButton+EWTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = AD526A1420E8C42D00D4BF85 /* UIButton+EWTimer.m */; };
+		AD526A1B20E8CB0800D4BF85 /* NSString+PPTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = AD526A1920E8CB0700D4BF85 /* NSString+PPTextField.m */; };
+		AD526A1C20E8CB0800D4BF85 /* PPTextfield.m in Sources */ = {isa = PBXBuildFile; fileRef = AD526A1A20E8CB0700D4BF85 /* PPTextfield.m */; };
 		AD93FE7E20DDDC8100C8EF83 /* JYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FE7D20DDDC8100C8EF83 /* JYHomeViewController.m */; };
 		AD93FE8120DDDE8C00C8EF83 /* WYTopicHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FE8020DDDE8C00C8EF83 /* WYTopicHeader.m */; };
 		AD93FE8420DDDEA800C8EF83 /* WYTopicScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FE8320DDDEA700C8EF83 /* WYTopicScrollView.m */; };
@@ -1693,6 +1698,16 @@
 		85E4B60E1F2AD502005F6D21 /* WMRCGroupNewsMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMRCGroupNewsMessageCell.m; sourceTree = "<group>"; };
 		9DA11EC04838AD96A5B81976 /* Pods-WMDoctor.prerelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WMDoctor.prerelease.xcconfig"; path = "Pods/Target Support Files/Pods-WMDoctor/Pods-WMDoctor.prerelease.xcconfig"; sourceTree = "<group>"; };
 		A38FA6E6C5C6E86F870A04C5 /* Pods-WMDoctor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WMDoctor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WMDoctor/Pods-WMDoctor.debug.xcconfig"; sourceTree = "<group>"; };
+		AD526A0C20E8BC4700D4BF85 /* JYFindPassWordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYFindPassWordViewController.h; sourceTree = "<group>"; };
+		AD526A0D20E8BC4700D4BF85 /* JYFindPassWordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYFindPassWordViewController.m; sourceTree = "<group>"; };
+		AD526A0F20E8BC7300D4BF85 /* JYFindPassWordView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYFindPassWordView.h; sourceTree = "<group>"; };
+		AD526A1020E8BC7300D4BF85 /* JYFindPassWordView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYFindPassWordView.m; sourceTree = "<group>"; };
+		AD526A1320E8C42C00D4BF85 /* UIButton+EWTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+EWTimer.h"; sourceTree = "<group>"; };
+		AD526A1420E8C42D00D4BF85 /* UIButton+EWTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+EWTimer.m"; sourceTree = "<group>"; };
+		AD526A1720E8CB0600D4BF85 /* PPTextfield.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPTextfield.h; sourceTree = "<group>"; };
+		AD526A1820E8CB0700D4BF85 /* NSString+PPTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+PPTextField.h"; sourceTree = "<group>"; };
+		AD526A1920E8CB0700D4BF85 /* NSString+PPTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PPTextField.m"; sourceTree = "<group>"; };
+		AD526A1A20E8CB0700D4BF85 /* PPTextfield.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPTextfield.m; sourceTree = "<group>"; };
 		AD93FE7C20DDDC8100C8EF83 /* JYHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYHomeViewController.h; sourceTree = "<group>"; };
 		AD93FE7D20DDDC8100C8EF83 /* JYHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYHomeViewController.m; sourceTree = "<group>"; };
 		AD93FE7F20DDDE8B00C8EF83 /* WYTopicHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYTopicHeader.h; sourceTree = "<group>"; };
@@ -4280,6 +4295,8 @@
 		85475943207F631D00A29175 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				AD526A1620E8CADE00D4BF85 /* PPTextField */,
+				AD526A1220E8C40400D4BF85 /* Button+EWTime */,
 				CCA4FC7120E34195000A783A /* SelectedManger */,
 				85CF6CC720A5997F00FCDD21 /* UISearchBarCategories */,
 				85475944207F633C00A29175 /* RongCloudCategories */,
@@ -4615,6 +4632,26 @@
 			path = "积分明细";
 			sourceTree = "<group>";
 		};
+		AD526A1220E8C40400D4BF85 /* Button+EWTime */ = {
+			isa = PBXGroup;
+			children = (
+				AD526A1320E8C42C00D4BF85 /* UIButton+EWTimer.h */,
+				AD526A1420E8C42D00D4BF85 /* UIButton+EWTimer.m */,
+			);
+			path = "Button+EWTime";
+			sourceTree = "<group>";
+		};
+		AD526A1620E8CADE00D4BF85 /* PPTextField */ = {
+			isa = PBXGroup;
+			children = (
+				AD526A1820E8CB0700D4BF85 /* NSString+PPTextField.h */,
+				AD526A1920E8CB0700D4BF85 /* NSString+PPTextField.m */,
+				AD526A1720E8CB0600D4BF85 /* PPTextfield.h */,
+				AD526A1A20E8CB0700D4BF85 /* PPTextfield.m */,
+			);
+			path = PPTextField;
+			sourceTree = "<group>";
+		};
 		CCA4FC4E20E31CD8000A783A /* 我的主页面 */ = {
 			isa = PBXGroup;
 			children = (
@@ -4657,6 +4694,8 @@
 				ADA4A8EA20E89380006400F3 /* JYInformationButtonArrayView.m */,
 				ADA4A8EC20E8995A006400F3 /* JYInformationInComeView.h */,
 				ADA4A8ED20E8995A006400F3 /* JYInformationInComeView.m */,
+				AD526A0F20E8BC7300D4BF85 /* JYFindPassWordView.h */,
+				AD526A1020E8BC7300D4BF85 /* JYFindPassWordView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -4674,6 +4713,8 @@
 				CCA4FC6B20E33A32000A783A /* JYPersonalInformationViewController.m */,
 				ADA4A8DD20E71975006400F3 /* JYPersonEditInformationViewController.h */,
 				ADA4A8DE20E71975006400F3 /* JYPersonEditInformationViewController.m */,
+				AD526A0C20E8BC4700D4BF85 /* JYFindPassWordViewController.h */,
+				AD526A0D20E8BC4700D4BF85 /* JYFindPassWordViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -5079,6 +5120,7 @@
 				183287F81F12031300F87E01 /* XHSegmentViewController.m in Sources */,
 				1D29FAAC1E1D120100472F0E /* WMPatientStateModel.m in Sources */,
 				1D3B763C1E1393960035EE65 /* WMPatientReportedParamModel.m in Sources */,
+				AD526A1120E8BC7300D4BF85 /* JYFindPassWordView.m in Sources */,
 				8542E0B72068D997001E8421 /* WMReplyMessage.m in Sources */,
 				0CAF8F211E0CED2A0092E6A8 /* WMNewInfoMessageCell.m in Sources */,
 				181A03541FDE2A0200868821 /* WMServiceSetInfoAPImanager.m in Sources */,
@@ -5096,6 +5138,7 @@
 				183287FB1F12105B00F87E01 /* WMReportReadCell.m in Sources */,
 				CCA4FC6C20E33A32000A783A /* JYPersonalInformationViewController.m in Sources */,
 				1D2AEAC51E1E294E0026DB19 /* WMPatientsUpHuifuParamModel.m in Sources */,
+				AD526A1C20E8CB0800D4BF85 /* PPTextfield.m in Sources */,
 				1855DC481E83C30F001B4DDD /* WMEntranceYearListAPIManager.m in Sources */,
 				0CB61DF41E4D6A880019AC2A /* NSFileManager+Paths.m in Sources */,
 				CCA4FC5920E31D35000A783A /* JYMeTableViewCell.m in Sources */,
@@ -5210,6 +5253,7 @@
 				AD93FE8A20DDDEDF00C8EF83 /* WYNewsTableController.m in Sources */,
 				186ADFDE1ECAD98D0070288B /* WMPatientCommentsModel.m in Sources */,
 				186AF3111ED5258100F699C6 /* WMInfoTransitionViewController.m in Sources */,
+				AD526A1B20E8CB0800D4BF85 /* NSString+PPTextField.m in Sources */,
 				0CD6E2D91DFFF8A500E75DB5 /* AppConfig.m in Sources */,
 				1814F1F41E9DFBD0005B4260 /* WMTimeSelectViewController.m in Sources */,
 				CCA4FC6020E323DB000A783A /* JYMyWalletCollectionViewCell.m in Sources */,
@@ -5386,6 +5430,7 @@
 				1D3816511EC9806600562FCA /* WMNamePerfectViewController.m in Sources */,
 				856237411F7F779300451954 /* WMListeningNotesAPIManager.m in Sources */,
 				854887921F6F66A100F1A9C7 /* WMRCCommonUtil.m in Sources */,
+				AD526A1520E8C42D00D4BF85 /* UIButton+EWTimer.m in Sources */,
 				0CAF8F031E0A256F0092E6A8 /* WMBaseAPIManager.m in Sources */,
 				0CD6E2BC1DFFD4D700E75DB5 /* WMMockHttpUtil.m in Sources */,
 				18328A321F1470F300F87E01 /* UIView+Toast.m in Sources */,
@@ -5415,6 +5460,7 @@
 				1814F1FD1E9E5B06005B4260 /* WMSearchWordAPIManager.m in Sources */,
 				1890BA801FCCE3D00009339C /* WMQuestionDetailAnswerCell.m in Sources */,
 				0CAF8F661E0CEFDB0092E6A8 /* WMFasterReplyCell.m in Sources */,
+				AD526A0E20E8BC4700D4BF85 /* JYFindPassWordViewController.m in Sources */,
 				18045B541E7BC1800021D39A /* WMAddFriendMenuTableViewController.m in Sources */,
 				18FC06C61E1BAC4500A59B4E /* WMOrderListAPIManager.m in Sources */,
 				18F5B67A1E13ECAB0051C60E /* AppDelegate+Business.m in Sources */,

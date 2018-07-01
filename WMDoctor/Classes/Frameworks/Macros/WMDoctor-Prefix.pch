@@ -23,6 +23,7 @@
 #import <JSONModel.h>
 #import <UINavigationController+FDFullscreenPopGesture.h>
 #import "Masonry.h"
+#import "PPTextfield.h"
 //其他
 #import "Macro.h"
 #import "HTTPConfig.h"
@@ -79,6 +80,7 @@
 #define kWYRed                      [UIColor colorWithRed:221.0/255 green:50.0/255 blue:55.0/255 alpha:1]
 #define iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
 #define pixelValue(number) (iPhoneX ? (number) / 750.0 * [[UIScreen mainScreen] bounds].size.width : (number) / 1334.0 * [[UIScreen mainScreen] bounds].size.height)
+#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
 //dock
 #define kDockBgColor                [UIColor colorWithRed:133.0/255 green:133.0/255 blue:133.0/255 alpha:1]
 //Network

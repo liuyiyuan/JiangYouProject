@@ -13,6 +13,7 @@
 #import "JYAboutUsViewController.h"//关于我们
 #import "JYPersonalInformationViewController.h"//个人资料
 #import "JYPersonEditInformationViewController.h"//个人信息编辑页
+#import "JYFindPassWordViewController.h"//忘记密码
 @interface JYMeViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic,strong)UITableView *meTableView;
@@ -102,7 +103,15 @@
             [self.navigationController pushViewController:aboutUs animated:YES];
         }
             
-        case 5://关于我们
+            
+        case 3://忘记密码
+        {
+            JYFindPassWordViewController *aboutUs = [JYFindPassWordViewController new];
+            aboutUs.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:aboutUs animated:YES];
+        }
+            break;
+        case 5://个人资料编辑
         {
             JYPersonEditInformationViewController *aboutUs = [JYPersonEditInformationViewController new];
             aboutUs.hidesBottomBarWhenPushed = YES;
