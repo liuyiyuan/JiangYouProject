@@ -52,7 +52,7 @@ static NSString *eWTempText;
                 
                 [weakSelf setTitle:eWTempText forState:UIControlStateNormal];
                 weakSelf.userInteractionEnabled = YES;
-                [weakSelf setTitleColor:[UIColor colorWithHexString:@"#138CFF"] forState:UIControlStateNormal];
+                [weakSelf setBackgroundColor:[UIColor colorWithHexString:@"#138CFF"]];
             });
             
         }else{

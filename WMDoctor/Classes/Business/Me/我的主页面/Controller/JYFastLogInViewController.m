@@ -48,7 +48,7 @@
 #pragma mark - 获取验证码
 -(void)click_getCodeBtn{
     [_fastLogInView.getCodeBtn startCountDownTime:60 withCountDownBlock:^{
-        [_fastLogInView.getCodeBtn setTitleColor:[UIColor colorWithHexString:@"#138CFF"] forState:UIControlStateNormal];
+        [_fastLogInView.getCodeBtn setBackgroundColor:[UIColor colorWithHexString:@"#138CFF"]];
         [_fastLogInView.getCodeBtn setTitle:@"重新获取" forState:UIControlStateNormal];
         
     }];

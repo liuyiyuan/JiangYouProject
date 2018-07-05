@@ -597,6 +597,8 @@
 		ADA4A8EE20E8995A006400F3 /* JYInformationInComeView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA4A8ED20E8995A006400F3 /* JYInformationInComeView.m */; };
 		CC2B24E420EDEA750050D5B2 /* JYFastLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2B24E320EDEA750050D5B2 /* JYFastLogInViewController.m */; };
 		CC2B24E720EDEABF0050D5B2 /* JYFastLogInView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2B24E620EDEABF0050D5B2 /* JYFastLogInView.m */; };
+		CC2B24EA20EDF2940050D5B2 /* JYFirstLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2B24E920EDF2940050D5B2 /* JYFirstLogInViewController.m */; };
+		CC2B24ED20EDF3840050D5B2 /* JYFirstLogInView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2B24EC20EDF3840050D5B2 /* JYFirstLogInView.m */; };
 		CC2DAF2020E0EABA008B630C /* DefaultNews.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC2DAF1F20E0EABA008B630C /* DefaultNews.xib */; };
 		CC2DAF2320E0EB55008B630C /* ImagesNews.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC2DAF2120E0EB54008B630C /* ImagesNews.xib */; };
 		CC2DAF2420E0EB55008B630C /* WideImageNews.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC2DAF2220E0EB55008B630C /* WideImageNews.xib */; };
@@ -1767,6 +1769,10 @@
 		CC2B24E320EDEA750050D5B2 /* JYFastLogInViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYFastLogInViewController.m; sourceTree = "<group>"; };
 		CC2B24E520EDEABF0050D5B2 /* JYFastLogInView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYFastLogInView.h; sourceTree = "<group>"; };
 		CC2B24E620EDEABF0050D5B2 /* JYFastLogInView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYFastLogInView.m; sourceTree = "<group>"; };
+		CC2B24E820EDF2940050D5B2 /* JYFirstLogInViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYFirstLogInViewController.h; sourceTree = "<group>"; };
+		CC2B24E920EDF2940050D5B2 /* JYFirstLogInViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYFirstLogInViewController.m; sourceTree = "<group>"; };
+		CC2B24EB20EDF3840050D5B2 /* JYFirstLogInView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYFirstLogInView.h; sourceTree = "<group>"; };
+		CC2B24EC20EDF3840050D5B2 /* JYFirstLogInView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYFirstLogInView.m; sourceTree = "<group>"; };
 		CC2DAF1F20E0EABA008B630C /* DefaultNews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DefaultNews.xib; sourceTree = "<group>"; };
 		CC2DAF2120E0EB54008B630C /* ImagesNews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImagesNews.xib; sourceTree = "<group>"; };
 		CC2DAF2220E0EB55008B630C /* WideImageNews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WideImageNews.xib; sourceTree = "<group>"; };
@@ -4704,6 +4710,8 @@
 				AD526A1020E8BC7300D4BF85 /* JYFindPassWordView.m */,
 				CC2B24E520EDEABF0050D5B2 /* JYFastLogInView.h */,
 				CC2B24E620EDEABF0050D5B2 /* JYFastLogInView.m */,
+				CC2B24EB20EDF3840050D5B2 /* JYFirstLogInView.h */,
+				CC2B24EC20EDF3840050D5B2 /* JYFirstLogInView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -4725,6 +4733,8 @@
 				AD526A0D20E8BC4700D4BF85 /* JYFindPassWordViewController.m */,
 				CC2B24E220EDEA750050D5B2 /* JYFastLogInViewController.h */,
 				CC2B24E320EDEA750050D5B2 /* JYFastLogInViewController.m */,
+				CC2B24E820EDF2940050D5B2 /* JYFirstLogInViewController.h */,
+				CC2B24E920EDF2940050D5B2 /* JYFirstLogInViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -5048,6 +5058,7 @@
 				18777AA91E27219A000957D6 /* WMMyWalletViewController.m in Sources */,
 				854180C21FCBE6B300EA4235 /* WMMyMicroBeanModel.m in Sources */,
 				188F14BB1F2882F60058B4CB /* QuickEntity+CoreDataClass.m in Sources */,
+				CC2B24EA20EDF2940050D5B2 /* JYFirstLogInViewController.m in Sources */,
 				18153C371E16287900956D2A /* WMchangePriceAPIManager.m in Sources */,
 				1D3B76421E14A0320035EE65 /* WMMessageTypeAPIManager.m in Sources */,
 				184AD55E20A968C500F973D3 /* WMTagGroupCollectionViewCell.m in Sources */,
@@ -5514,6 +5525,7 @@
 				1818DE721E811464009767A2 /* WMSchoolListTableViewController.m in Sources */,
 				0C896FB71E01422300A57DC6 /* WMNavgationController.m in Sources */,
 				1890BA941FCD5DCE0009339C /* WMScoreTaskListCell.m in Sources */,
+				CC2B24ED20EDF3840050D5B2 /* JYFirstLogInView.m in Sources */,
 				85752CB22020089700E9E34D /* WMNoCounselingView.m in Sources */,
 				1D3B764B1E14DAE80035EE65 /* WMMessageListAPIManager.m in Sources */,
 				1D3B764E1E14DB8E0035EE65 /* WMMessageLisParamModel.m in Sources */,

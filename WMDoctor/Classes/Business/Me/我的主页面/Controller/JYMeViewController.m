@@ -15,6 +15,7 @@
 #import "JYPersonEditInformationViewController.h"//个人信息编辑页
 #import "JYFindPassWordViewController.h"//忘记密码
 #import "JYFastLogInViewController.h"//快捷登录
+#import "JYFirstLogInViewController.h"//首次登录
 @interface JYMeViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic,strong)UITableView *meTableView;
@@ -123,6 +124,15 @@
         case 1://快捷登录
         {
             JYFastLogInViewController *aboutUs = [JYFastLogInViewController new];
+            aboutUs.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:aboutUs animated:YES];
+        }
+            
+            break;
+            
+        case 2://首次登录
+        {
+            JYFirstLogInViewController *aboutUs = [JYFirstLogInViewController new];
             aboutUs.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:aboutUs animated:YES];
         }

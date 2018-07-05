@@ -48,7 +48,6 @@
 #pragma mark - 获取验证码
 -(void)click_getCodeBtn{
     [_findPassWordView.getCodeBtn startCountDownTime:60 withCountDownBlock:^{
-        [_findPassWordView.getCodeBtn setTitleColor:[UIColor colorWithHexString:@"#138CFF"] forState:UIControlStateNormal];
         [_findPassWordView.getCodeBtn setTitle:@"重新获取" forState:UIControlStateNormal];
         
     }];
