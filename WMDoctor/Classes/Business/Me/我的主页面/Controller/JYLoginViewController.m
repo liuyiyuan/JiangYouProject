@@ -46,6 +46,8 @@
         [_loginView.forgetPassWordButton addTarget:self action:@selector(click_forgetPassWordButton) forControlEvents:UIControlEventTouchUpInside];
         [_loginView.firstLoginButton addTarget:self action:@selector(click_firstLoginButton) forControlEvents:UIControlEventTouchUpInside];
         [_loginView.smsFastLoginButton addTarget:self action:@selector(click_smsFastLoginButton) forControlEvents:UIControlEventTouchUpInside];
+        [_loginView.weChatButton addTarget:self action:@selector(click_weChatButton) forControlEvents:UIControlEventTouchUpInside];
+        [_loginView.qqButton addTarget:self action:@selector(click_sqqButton) forControlEvents:UIControlEventTouchUpInside];
     }
     return _loginView;
 }
@@ -85,6 +87,15 @@
 
 #pragma mark - 登录点击
 -(void)click_loginButton{
+    
+}
+#pragma mark - 微信登录按钮
+-(void)click_weChatButton{
+    
+}
+
+#pragma mark - qq登录按钮
+-(void)click_sqqButton{
     
 }
 @end
