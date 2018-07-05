@@ -86,7 +86,7 @@
 -(UIImageView *)phoneNumberImageView{
     if(!_phoneNumberImageView){
         _phoneNumberImageView = [[UIImageView alloc]init];
-        _phoneNumberImageView.image = [UIImage imageNamed:@"find_passWord_phone"];
+        _phoneNumberImageView.image = [UIImage imageNamed:@"login_people"];
     }
     return _phoneNumberImageView;
 }
@@ -106,7 +106,7 @@
 -(UIImageView *)codeImageView{
     if(!_codeImageView){
         _codeImageView = [[UIImageView alloc]init];
-        _codeImageView.image = [UIImage imageNamed:@"find_passWord_code"];
+        _codeImageView.image = [UIImage imageNamed:@"login_lock"];
         
     }
     return _codeImageView;
@@ -127,7 +127,7 @@
 -(UIImageView *)passWordImageView{
     if(!_passWordImageView){
         _passWordImageView = [[UIImageView alloc]init];
-        _passWordImageView.image = [UIImage imageNamed:@"find_passWord_word"];
+        _passWordImageView.image = [UIImage imageNamed:@"login_lock"];
     }
     return _passWordImageView;
 }

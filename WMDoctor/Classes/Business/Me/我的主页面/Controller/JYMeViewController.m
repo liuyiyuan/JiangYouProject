@@ -13,9 +13,7 @@
 #import "JYAboutUsViewController.h"//关于我们
 #import "JYPersonalInformationViewController.h"//个人资料
 #import "JYPersonEditInformationViewController.h"//个人信息编辑页
-#import "JYFindPassWordViewController.h"//忘记密码
-#import "JYFastLogInViewController.h"//快捷登录
-#import "JYFirstLogInViewController.h"//首次登录
+#import "JYLoginViewController.h"//登录页
 @interface JYMeViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic,strong)UITableView *meTableView;
@@ -105,14 +103,7 @@
             [self.navigationController pushViewController:aboutUs animated:YES];
         }
             break;
-            
-        case 3://忘记密码
-        {
-            JYFindPassWordViewController *aboutUs = [JYFindPassWordViewController new];
-            aboutUs.hidesBottomBarWhenPushed = YES;
-            [self.navigationController pushViewController:aboutUs animated:YES];
-        }
-            break;
+    
         case 5://个人资料编辑
         {
             JYPersonEditInformationViewController *aboutUs = [JYPersonEditInformationViewController new];
@@ -121,18 +112,11 @@
         }
             
             break;
-        case 1://快捷登录
-        {
-            JYFastLogInViewController *aboutUs = [JYFastLogInViewController new];
-            aboutUs.hidesBottomBarWhenPushed = YES;
-            [self.navigationController pushViewController:aboutUs animated:YES];
-        }
-            
-            break;
+ 
             
         case 2://首次登录
         {
-            JYFirstLogInViewController *aboutUs = [JYFirstLogInViewController new];
+            JYLoginViewController *aboutUs = [JYLoginViewController new];
             aboutUs.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:aboutUs animated:YES];
         }

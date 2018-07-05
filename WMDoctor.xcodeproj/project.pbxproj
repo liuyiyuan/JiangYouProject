@@ -599,6 +599,8 @@
 		CC2B24E720EDEABF0050D5B2 /* JYFastLogInView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2B24E620EDEABF0050D5B2 /* JYFastLogInView.m */; };
 		CC2B24EA20EDF2940050D5B2 /* JYFirstLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2B24E920EDF2940050D5B2 /* JYFirstLogInViewController.m */; };
 		CC2B24ED20EDF3840050D5B2 /* JYFirstLogInView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2B24EC20EDF3840050D5B2 /* JYFirstLogInView.m */; };
+		CC2B24F020EE08C00050D5B2 /* JYLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2B24EF20EE08C00050D5B2 /* JYLoginViewController.m */; };
+		CC2B24F320EE08D40050D5B2 /* JYLoninView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2B24F220EE08D40050D5B2 /* JYLoninView.m */; };
 		CC2DAF2020E0EABA008B630C /* DefaultNews.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC2DAF1F20E0EABA008B630C /* DefaultNews.xib */; };
 		CC2DAF2320E0EB55008B630C /* ImagesNews.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC2DAF2120E0EB54008B630C /* ImagesNews.xib */; };
 		CC2DAF2420E0EB55008B630C /* WideImageNews.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC2DAF2220E0EB55008B630C /* WideImageNews.xib */; };
@@ -1773,6 +1775,10 @@
 		CC2B24E920EDF2940050D5B2 /* JYFirstLogInViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYFirstLogInViewController.m; sourceTree = "<group>"; };
 		CC2B24EB20EDF3840050D5B2 /* JYFirstLogInView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYFirstLogInView.h; sourceTree = "<group>"; };
 		CC2B24EC20EDF3840050D5B2 /* JYFirstLogInView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYFirstLogInView.m; sourceTree = "<group>"; };
+		CC2B24EE20EE08C00050D5B2 /* JYLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYLoginViewController.h; sourceTree = "<group>"; };
+		CC2B24EF20EE08C00050D5B2 /* JYLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYLoginViewController.m; sourceTree = "<group>"; };
+		CC2B24F120EE08D40050D5B2 /* JYLoninView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYLoninView.h; sourceTree = "<group>"; };
+		CC2B24F220EE08D40050D5B2 /* JYLoninView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYLoninView.m; sourceTree = "<group>"; };
 		CC2DAF1F20E0EABA008B630C /* DefaultNews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DefaultNews.xib; sourceTree = "<group>"; };
 		CC2DAF2120E0EB54008B630C /* ImagesNews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImagesNews.xib; sourceTree = "<group>"; };
 		CC2DAF2220E0EB55008B630C /* WideImageNews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WideImageNews.xib; sourceTree = "<group>"; };
@@ -4712,6 +4718,8 @@
 				CC2B24E620EDEABF0050D5B2 /* JYFastLogInView.m */,
 				CC2B24EB20EDF3840050D5B2 /* JYFirstLogInView.h */,
 				CC2B24EC20EDF3840050D5B2 /* JYFirstLogInView.m */,
+				CC2B24F120EE08D40050D5B2 /* JYLoninView.h */,
+				CC2B24F220EE08D40050D5B2 /* JYLoninView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -4735,6 +4743,8 @@
 				CC2B24E320EDEA750050D5B2 /* JYFastLogInViewController.m */,
 				CC2B24E820EDF2940050D5B2 /* JYFirstLogInViewController.h */,
 				CC2B24E920EDF2940050D5B2 /* JYFirstLogInViewController.m */,
+				CC2B24EE20EE08C00050D5B2 /* JYLoginViewController.h */,
+				CC2B24EF20EE08C00050D5B2 /* JYLoginViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -5376,6 +5386,7 @@
 				184AD56120AEC1F600F973D3 /* WMTagGroupSelectCollectionViewCell.m in Sources */,
 				184AD56A20B6A3E400F973D3 /* WMTagGroupSaveAPIManager.m in Sources */,
 				18F5B6921E1500980051C60E /* WMPersonalInfoModel.m in Sources */,
+				CC2B24F020EE08C00050D5B2 /* JYLoginViewController.m in Sources */,
 				AD93FE8420DDDEA800C8EF83 /* WYTopicScrollView.m in Sources */,
 				855C9BDE20C8CD2E007383EB /* UIView+Extension.m in Sources */,
 				1DE56A911E113AD800B93397 /* WMPatientReportedAPIManager.m in Sources */,
@@ -5522,6 +5533,7 @@
 				1890BA7D1FCC563D0009339C /* WMQuestionDetailBottomCell.m in Sources */,
 				854180CD1FCD331200EA4235 /* WMMyMicroBeanFooterView.m in Sources */,
 				1855DC211E836688001B4DDD /* WMDoctorInformationModel.m in Sources */,
+				CC2B24F320EE08D40050D5B2 /* JYLoninView.m in Sources */,
 				1818DE721E811464009767A2 /* WMSchoolListTableViewController.m in Sources */,
 				0C896FB71E01422300A57DC6 /* WMNavgationController.m in Sources */,
 				1890BA941FCD5DCE0009339C /* WMScoreTaskListCell.m in Sources */,
