@@ -595,6 +595,8 @@
 		ADA4A8E820E7277D006400F3 /* JYInformationRealNameView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA4A8E720E7277C006400F3 /* JYInformationRealNameView.m */; };
 		ADA4A8EB20E89380006400F3 /* JYInformationButtonArrayView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA4A8EA20E89380006400F3 /* JYInformationButtonArrayView.m */; };
 		ADA4A8EE20E8995A006400F3 /* JYInformationInComeView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA4A8ED20E8995A006400F3 /* JYInformationInComeView.m */; };
+		CC2B24E420EDEA750050D5B2 /* JYFastLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2B24E320EDEA750050D5B2 /* JYFastLogInViewController.m */; };
+		CC2B24E720EDEABF0050D5B2 /* JYFastLogInView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2B24E620EDEABF0050D5B2 /* JYFastLogInView.m */; };
 		CC2DAF2020E0EABA008B630C /* DefaultNews.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC2DAF1F20E0EABA008B630C /* DefaultNews.xib */; };
 		CC2DAF2320E0EB55008B630C /* ImagesNews.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC2DAF2120E0EB54008B630C /* ImagesNews.xib */; };
 		CC2DAF2420E0EB55008B630C /* WideImageNews.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC2DAF2220E0EB55008B630C /* WideImageNews.xib */; };
@@ -1761,6 +1763,10 @@
 		ADA4A8EA20E89380006400F3 /* JYInformationButtonArrayView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYInformationButtonArrayView.m; sourceTree = "<group>"; };
 		ADA4A8EC20E8995A006400F3 /* JYInformationInComeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYInformationInComeView.h; sourceTree = "<group>"; };
 		ADA4A8ED20E8995A006400F3 /* JYInformationInComeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYInformationInComeView.m; sourceTree = "<group>"; };
+		CC2B24E220EDEA750050D5B2 /* JYFastLogInViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYFastLogInViewController.h; sourceTree = "<group>"; };
+		CC2B24E320EDEA750050D5B2 /* JYFastLogInViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYFastLogInViewController.m; sourceTree = "<group>"; };
+		CC2B24E520EDEABF0050D5B2 /* JYFastLogInView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYFastLogInView.h; sourceTree = "<group>"; };
+		CC2B24E620EDEABF0050D5B2 /* JYFastLogInView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYFastLogInView.m; sourceTree = "<group>"; };
 		CC2DAF1F20E0EABA008B630C /* DefaultNews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DefaultNews.xib; sourceTree = "<group>"; };
 		CC2DAF2120E0EB54008B630C /* ImagesNews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImagesNews.xib; sourceTree = "<group>"; };
 		CC2DAF2220E0EB55008B630C /* WideImageNews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WideImageNews.xib; sourceTree = "<group>"; };
@@ -4696,6 +4702,8 @@
 				ADA4A8ED20E8995A006400F3 /* JYInformationInComeView.m */,
 				AD526A0F20E8BC7300D4BF85 /* JYFindPassWordView.h */,
 				AD526A1020E8BC7300D4BF85 /* JYFindPassWordView.m */,
+				CC2B24E520EDEABF0050D5B2 /* JYFastLogInView.h */,
+				CC2B24E620EDEABF0050D5B2 /* JYFastLogInView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -4715,6 +4723,8 @@
 				ADA4A8DE20E71975006400F3 /* JYPersonEditInformationViewController.m */,
 				AD526A0C20E8BC4700D4BF85 /* JYFindPassWordViewController.h */,
 				AD526A0D20E8BC4700D4BF85 /* JYFindPassWordViewController.m */,
+				CC2B24E220EDEA750050D5B2 /* JYFastLogInViewController.h */,
+				CC2B24E320EDEA750050D5B2 /* JYFastLogInViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -5048,6 +5058,7 @@
 				1D3B76361E13623C0035EE65 /* WMCricleMainParamModel.m in Sources */,
 				85A74BD01F9844B300F1453F /* WMIncomeCell.m in Sources */,
 				0CED7DB01E1F6BEC00892555 /* WMBackButtonItem.m in Sources */,
+				CC2B24E720EDEABF0050D5B2 /* JYFastLogInView.m in Sources */,
 				1D1C5BF51E0907ED008B469E /* AppDelegate+RongCloud.m in Sources */,
 				1D412B771E163FC300698A17 /* WMChatFooterView.m in Sources */,
 				186ADFDB1ECA9F7F0070288B /* WMPatientEvaluationViewController.m in Sources */,
@@ -5361,6 +5372,7 @@
 				183287C41F0B724C00F87E01 /* WMCardiotocographyReportCell.m in Sources */,
 				1814F2061E9F7153005B4260 /* WMCountrySelectViewController.m in Sources */,
 				1D38169A1ECD7A6000562FCA /* WMPerfectPerInfoAPIManager.m in Sources */,
+				CC2B24E420EDEA750050D5B2 /* JYFastLogInViewController.m in Sources */,
 				0CAF8F311E0CED5D0092E6A8 /* WMSystemMessageViewController.m in Sources */,
 				184AD58020BBF73E00F973D3 /* WMRCUserInfoEntitys+CoreDataClass.m in Sources */,
 				1D6829281E810EFD00422732 /* WMRCChatListSayHelloCell.m in Sources */,

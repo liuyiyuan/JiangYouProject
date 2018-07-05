@@ -6,9 +6,9 @@
 //  Copyright © 2018年 Choice. All rights reserved.
 //
 
-#import "JYFindPassWordView.h"
+#import "JYFastLogInView.h"
 
-@implementation JYFindPassWordView
+@implementation JYFastLogInView
 
 -(instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
@@ -25,8 +25,7 @@
     [self addSubview:self.codeImageView];
     [self addSubview:self.codeTextField];
     [self addSubview:self.getCodeBtn];
-    [self addSubview:self.passWordImageView];
-    [self addSubview:self.passWordTextField];
+    [self addSubview:self.warringLabel];
     [self addSubview:self.loginBtn];
     
     [self.phoneNumberImageView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -63,26 +62,19 @@
         make.right.mas_equalTo(self.getCodeBtn.mas_left).offset(-pixelValue(10));
     }];
     
- 
     
-    [self.passWordImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.codeImageView.mas_bottom).offset(pixelValue(80));
-        make.left.mas_equalTo(self.codeImageView.mas_left);
-        make.width.mas_equalTo(pixelValue(40));
-        make.height.mas_equalTo(pixelValue(40));
-    }];
     
-    [self.passWordTextField mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(self.phoneNumberTextField.mas_left);
-        make.top.mas_equalTo(self.passWordImageView.mas_top).offset(-pixelValue(20));
-        make.right.mas_equalTo(self.phoneNumberTextField.mas_right);
-        make.height.mas_equalTo(self.codeTextField.mas_height);
+    [self.warringLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.codeTextField.mas_left);
+        make.top.mas_equalTo(self.codeTextField.mas_bottom).offset(pixelValue(10));
+        make.height.mas_equalTo(pixelValue(30));
     }];
+
     
     
     [self.loginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(pixelValue(70));
-        make.top.mas_equalTo(self.passWordTextField.mas_bottom).offset(pixelValue(80));
+        make.top.mas_equalTo(self.warringLabel.mas_bottom).offset(pixelValue(80));
         make.right.mas_equalTo(-pixelValue(70));
         make.height.mas_equalTo(pixelValue(88));
     }];
@@ -139,24 +131,16 @@
     }
     return _getCodeBtn;
 }
-//密码图片
--(UIImageView *)passWordImageView{
-    if(!_passWordImageView){
-        _passWordImageView = [[UIImageView alloc]init];
-        _passWordImageView.image = [UIImage imageNamed:@"find_passWord_word"];
-    }
-    return _passWordImageView;
-}
-//密码输入框
--(UITextField *)passWordTextField{
-    if(!_passWordTextField){
-        _passWordTextField = [[UITextField alloc]init];
-        _passWordTextField.backgroundColor = [UIColor whiteColor];
-        _passWordTextField.placeholder = @"  新密码";
 
-        _passWordTextField.keyboardType = UIKeyboardTypeDefault;
+//密码输入框
+-(UILabel *)warringLabel{
+    if(!_warringLabel){
+        _warringLabel = [[UILabel alloc]init];
+        _warringLabel.textColor = [UIColor colorWithHexString:@"#615F5F"];
+        _warringLabel.text = @"(用户使用条款)注册视为同意";
+        _warringLabel.font = [UIFont systemFontOfSize:pixelValue(24)];
     }
-    return _passWordTextField;
+    return _warringLabel;
 }
 //登录按钮
 -(UIButton *)loginBtn{

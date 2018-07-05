@@ -14,6 +14,7 @@
 #import "JYPersonalInformationViewController.h"//个人资料
 #import "JYPersonEditInformationViewController.h"//个人信息编辑页
 #import "JYFindPassWordViewController.h"//忘记密码
+#import "JYFastLogInViewController.h"//快捷登录
 @interface JYMeViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic,strong)UITableView *meTableView;
@@ -102,7 +103,7 @@
             aboutUs.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:aboutUs animated:YES];
         }
-            
+            break;
             
         case 3://忘记密码
         {
@@ -114,6 +115,14 @@
         case 5://个人资料编辑
         {
             JYPersonEditInformationViewController *aboutUs = [JYPersonEditInformationViewController new];
+            aboutUs.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:aboutUs animated:YES];
+        }
+            
+            break;
+        case 1://快捷登录
+        {
+            JYFastLogInViewController *aboutUs = [JYFastLogInViewController new];
             aboutUs.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:aboutUs animated:YES];
         }
