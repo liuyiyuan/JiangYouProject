@@ -601,6 +601,11 @@
 		CC2B24ED20EDF3840050D5B2 /* JYFirstLogInView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2B24EC20EDF3840050D5B2 /* JYFirstLogInView.m */; };
 		CC2B24F020EE08C00050D5B2 /* JYLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2B24EF20EE08C00050D5B2 /* JYLoginViewController.m */; };
 		CC2B24F320EE08D40050D5B2 /* JYLoninView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2B24F220EE08D40050D5B2 /* JYLoninView.m */; };
+		CC2B24F820EF10AA0050D5B2 /* JYCircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2B24F720EF10AA0050D5B2 /* JYCircleViewController.m */; };
+		CC2B250020EF126E0050D5B2 /* HYBLoadImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2B24FA20EF126E0050D5B2 /* HYBLoadImageView.m */; };
+		CC2B250120EF126E0050D5B2 /* HYBLoopScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2B24FC20EF126E0050D5B2 /* HYBLoopScrollView.m */; };
+		CC2B250220EF126E0050D5B2 /* HYBPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2B24FF20EF126E0050D5B2 /* HYBPageControl.m */; };
+		CC2B250520EF12A60050D5B2 /* UIView+HYBUIViewCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2B250420EF12A60050D5B2 /* UIView+HYBUIViewCommon.m */; };
 		CC2DAF2020E0EABA008B630C /* DefaultNews.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC2DAF1F20E0EABA008B630C /* DefaultNews.xib */; };
 		CC2DAF2320E0EB55008B630C /* ImagesNews.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC2DAF2120E0EB54008B630C /* ImagesNews.xib */; };
 		CC2DAF2420E0EB55008B630C /* WideImageNews.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC2DAF2220E0EB55008B630C /* WideImageNews.xib */; };
@@ -1779,6 +1784,16 @@
 		CC2B24EF20EE08C00050D5B2 /* JYLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYLoginViewController.m; sourceTree = "<group>"; };
 		CC2B24F120EE08D40050D5B2 /* JYLoninView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYLoninView.h; sourceTree = "<group>"; };
 		CC2B24F220EE08D40050D5B2 /* JYLoninView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYLoninView.m; sourceTree = "<group>"; };
+		CC2B24F620EF10AA0050D5B2 /* JYCircleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYCircleViewController.h; sourceTree = "<group>"; };
+		CC2B24F720EF10AA0050D5B2 /* JYCircleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYCircleViewController.m; sourceTree = "<group>"; };
+		CC2B24FA20EF126E0050D5B2 /* HYBLoadImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYBLoadImageView.m; sourceTree = "<group>"; };
+		CC2B24FB20EF126E0050D5B2 /* HYBLoadImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBLoadImageView.h; sourceTree = "<group>"; };
+		CC2B24FC20EF126E0050D5B2 /* HYBLoopScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYBLoopScrollView.m; sourceTree = "<group>"; };
+		CC2B24FD20EF126E0050D5B2 /* HYBLoopScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBLoopScrollView.h; sourceTree = "<group>"; };
+		CC2B24FE20EF126E0050D5B2 /* HYBPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBPageControl.h; sourceTree = "<group>"; };
+		CC2B24FF20EF126E0050D5B2 /* HYBPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYBPageControl.m; sourceTree = "<group>"; };
+		CC2B250320EF12A60050D5B2 /* UIView+HYBUIViewCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HYBUIViewCommon.h"; sourceTree = "<group>"; };
+		CC2B250420EF12A60050D5B2 /* UIView+HYBUIViewCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HYBUIViewCommon.m"; sourceTree = "<group>"; };
 		CC2DAF1F20E0EABA008B630C /* DefaultNews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DefaultNews.xib; sourceTree = "<group>"; };
 		CC2DAF2120E0EB54008B630C /* ImagesNews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImagesNews.xib; sourceTree = "<group>"; };
 		CC2DAF2220E0EB55008B630C /* WideImageNews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WideImageNews.xib; sourceTree = "<group>"; };
@@ -2457,6 +2472,7 @@
 		0CD6E2571DFFCAD700E75DB5 /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				CC2B24F520EF10750050D5B2 /* JYCircle */,
 				858836C520E3DEDF00DE928F /* ShoppingMall */,
 				188ACA842044FCA200A54692 /* New */,
 				856F6F001F41C42F001E73C3 /* Base */,
@@ -4313,6 +4329,7 @@
 		85475943207F631D00A29175 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				CC2B24F920EF12430050D5B2 /* JYLoopScrollView */,
 				AD526A1620E8CADE00D4BF85 /* PPTextField */,
 				AD526A1220E8C40400D4BF85 /* Button+EWTime */,
 				CCA4FC7120E34195000A783A /* SelectedManger */,
@@ -4668,6 +4685,54 @@
 				AD526A1A20E8CB0700D4BF85 /* PPTextfield.m */,
 			);
 			path = PPTextField;
+			sourceTree = "<group>";
+		};
+		CC2B24F520EF10750050D5B2 /* JYCircle */ = {
+			isa = PBXGroup;
+			children = (
+				CC2B250820EF13B40050D5B2 /* Controller */,
+				CC2B250720EF13AF0050D5B2 /* View */,
+				CC2B250620EF13A20050D5B2 /* Model */,
+			);
+			path = JYCircle;
+			sourceTree = "<group>";
+		};
+		CC2B24F920EF12430050D5B2 /* JYLoopScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				CC2B250320EF12A60050D5B2 /* UIView+HYBUIViewCommon.h */,
+				CC2B250420EF12A60050D5B2 /* UIView+HYBUIViewCommon.m */,
+				CC2B24FB20EF126E0050D5B2 /* HYBLoadImageView.h */,
+				CC2B24FA20EF126E0050D5B2 /* HYBLoadImageView.m */,
+				CC2B24FD20EF126E0050D5B2 /* HYBLoopScrollView.h */,
+				CC2B24FC20EF126E0050D5B2 /* HYBLoopScrollView.m */,
+				CC2B24FE20EF126E0050D5B2 /* HYBPageControl.h */,
+				CC2B24FF20EF126E0050D5B2 /* HYBPageControl.m */,
+			);
+			path = JYLoopScrollView;
+			sourceTree = "<group>";
+		};
+		CC2B250620EF13A20050D5B2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CC2B250720EF13AF0050D5B2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CC2B250820EF13B40050D5B2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CC2B24F620EF10AA0050D5B2 /* JYCircleViewController.h */,
+				CC2B24F720EF10AA0050D5B2 /* JYCircleViewController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		CCA4FC4E20E31CD8000A783A /* 我的主页面 */ = {
@@ -5088,6 +5153,7 @@
 				1DA7E4FE1E5C5E1B00CDBEC5 /* WMAllPatienCell.m in Sources */,
 				854180D01FCD53A900EA4235 /* WMMicroExplainWebViewController.m in Sources */,
 				85DBE7A01FC3D3C700E821E4 /* WMQuestionModel.m in Sources */,
+				CC2B250520EF12A60050D5B2 /* UIView+HYBUIViewCommon.m in Sources */,
 				0CAF8F4F1E0CEEFE0092E6A8 /* WMShowImageCollectionViewCell.m in Sources */,
 				1D38164E1EC9769B00562FCA /* WMPerfectPerInfoViewController.m in Sources */,
 				8588374B20E7181600DE928F /* JYMenuSelectorView.m in Sources */,
@@ -5151,6 +5217,7 @@
 				1D3B765A1E1531DB0035EE65 /* WMRCChatListSystemCell.m in Sources */,
 				183287F81F12031300F87E01 /* XHSegmentViewController.m in Sources */,
 				1D29FAAC1E1D120100472F0E /* WMPatientStateModel.m in Sources */,
+				CC2B24F820EF10AA0050D5B2 /* JYCircleViewController.m in Sources */,
 				1D3B763C1E1393960035EE65 /* WMPatientReportedParamModel.m in Sources */,
 				AD526A1120E8BC7300D4BF85 /* JYFindPassWordView.m in Sources */,
 				8542E0B72068D997001E8421 /* WMReplyMessage.m in Sources */,
@@ -5196,10 +5263,12 @@
 				0C4004831E026B84003E1FC4 /* DateTimeUtil.m in Sources */,
 				1890BA581FC804F10009339C /* WMNewPictureSelectView.m in Sources */,
 				ADA4A8E220E719EB006400F3 /* JYInformaitonHeaderView.m in Sources */,
+				CC2B250220EF126E0050D5B2 /* HYBPageControl.m in Sources */,
 				852473BE1F344A060049FB67 /* WMRCIMGroupDataEntity+CoreDataProperties.m in Sources */,
 				0CEB2EDC1E0CFE6A0070119A /* WMAboutTableViewController.m in Sources */,
 				183287EB1F10D49400F87E01 /* WMAllReportListGetAPIManager.m in Sources */,
 				18153C4B1E1636AA00956D2A /* WMGetCardInfoAPIManager.m in Sources */,
+				CC2B250120EF126E0050D5B2 /* HYBLoopScrollView.m in Sources */,
 				1D3816851ECC2AD300562FCA /* WMGetSectionAPIManager.m in Sources */,
 				0C46812B1E28819700BDE355 /* WMUpgradecheckModel.m in Sources */,
 				181A03571FDE2A5200868821 /* WMServiceSetInfoModel.m in Sources */,
@@ -5276,6 +5345,7 @@
 				1855DC391E83C020001B4DDD /* WMSchoolModel.m in Sources */,
 				0CAF8F5D1E0CEF7D0092E6A8 /* WMFasterReplyViewController.m in Sources */,
 				186AF30E1ED51FD400F699C6 /* NSString+Valid.m in Sources */,
+				CC2B250020EF126E0050D5B2 /* HYBLoadImageView.m in Sources */,
 				188958E0201EF0190047BCC0 /* WMDoctorIndexViewController.m in Sources */,
 				8504858F20A531D00070D264 /* WMSearchPatientCell.m in Sources */,
 				183110991FF37E8A002B8DB7 /* QuestionEntity+CoreDataProperties.m in Sources */,

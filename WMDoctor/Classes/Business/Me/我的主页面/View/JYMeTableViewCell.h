@@ -14,4 +14,6 @@
 @property(nonatomic,strong)UILabel      *typeLabel;//类型
 
 @property(nonatomic,strong)UIImageView  *arrowImageView;//箭头
+
+@property(nonatomic,strong)UIView *lineView;
 @end

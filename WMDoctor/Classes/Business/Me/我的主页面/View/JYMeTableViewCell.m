@@ -22,7 +22,7 @@
     [self.contentView addSubview:self.iconImageView];
     [self.contentView addSubview:self.typeLabel];
     [self.contentView addSubview:self.arrowImageView];
-    
+    [self.contentView addSubview:self.lineView];
     [self.iconImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(pixelValue(30));
         make.top.mas_equalTo(pixelValue(28));
@@ -42,6 +42,13 @@
         make.height.mas_equalTo(pixelValue(32));
     }];
     
+    
+    [self.lineView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(pixelValue(0));
+        make.right.mas_equalTo(pixelValue(0));
+        make.bottom.mas_equalTo(self.contentView.mas_bottom);
+        make.height.mas_equalTo(pixelValue(2));
+    }];
 }
 
 -(UIImageView *)iconImageView{
@@ -66,5 +73,14 @@
         _arrowImageView.image = [UIImage imageNamed:@"table_arrow"];
     }
     return _arrowImageView;
+}
+
+-(UIView *)lineView{
+    if(!_lineView){
+        _lineView = [[UIView alloc]init];
+        _lineView.backgroundColor = [UIColor colorWithHexString:@"#F2F2F2"];
+        _lineView.hidden = YES;
+    }
+    return _lineView;
 }
 @end
