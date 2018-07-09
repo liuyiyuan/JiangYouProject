@@ -5181,11 +5181,8 @@
 				1DA7E4FE1E5C5E1B00CDBEC5 /* WMAllPatienCell.m in Sources */,
 				854180D01FCD53A900EA4235 /* WMMicroExplainWebViewController.m in Sources */,
 				85DBE7A01FC3D3C700E821E4 /* WMQuestionModel.m in Sources */,
-<<<<<<< 356c86299a65e599a38f08afff94ffae318ef433
 				CC2B250520EF12A60050D5B2 /* UIView+HYBUIViewCommon.m in Sources */,
-=======
 				8588374F20E8885400DE928F /* JYLoginAPIManager.m in Sources */,
->>>>>>> 网络请求回参解密解析
 				0CAF8F4F1E0CEEFE0092E6A8 /* WMShowImageCollectionViewCell.m in Sources */,
 				1D38164E1EC9769B00562FCA /* WMPerfectPerInfoViewController.m in Sources */,
 				8588374B20E7181600DE928F /* JYMenuSelectorView.m in Sources */,
