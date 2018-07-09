@@ -11,6 +11,14 @@
 #import "WYTopicHeader.h"
 #import "WYTopic.h"
 #import "JYMenuSelectorView.h"
+#import "JYLoginAPIManager.h"
+#import <AFURLRequestSerialization.h>
+#import <AFNetworking.h>
+#import <AFSecurityPolicy.h>
+#import <AFURLSessionManager.h>
+#import <AFHTTPSessionManager.h>
+#import <AFAutoPurgingImageCache.h>
+
 
 @interface JYShoppingMallViewController ()<TopicScrollViewDelegate>{
     WYTopicScrollView *_topicScrollView;
@@ -25,6 +33,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self initView];
+    [self login];
 }
 
 - (void)initView{
@@ -36,6 +45,24 @@
     _menuSelectorView = [[JYMenuSelectorView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 44)];
     [_menuSelectorView setMenuWithArr:@[@"精选", @"抢购", @"团购", @"福利", @"商城", @"贴吧"]];
     [self.view addSubview:_menuSelectorView];
+}
+
+- (void)login{
+    
+    
+    NSDictionary *param = @{
+                             @"name" : @"aaa",
+                             @"age" : @"11"
+                             };
+    JYLoginAPIManager *loginAPIManager = [[JYLoginAPIManager alloc] init];
+    [loginAPIManager loadDataWithParams:param withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"responseObject : %@", responseObject);
+        NSDictionary *dic = (NSDictionary *)responseObject;
+        NSLog(@"dic : %@", dic);
+    } withFailure:^(ResponseResult *errorResult) {
+        NSLog(@"login error : %@", errorResult);
+    }];
+    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -16,7 +16,7 @@
 			<key>name</key>
 			<string>医生端-test1</string>
 			<key>content</key>
-			<string>http://192.168.1.201:8484</string>
+			<string>http://39.104.124.199:8080</string>
 		</dict>
 		<dict>
 			<key>name</key>

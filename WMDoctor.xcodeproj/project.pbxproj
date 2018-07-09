@@ -533,6 +533,10 @@
 		85752CB22020089700E9E34D /* WMNoCounselingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 85752CB12020089700E9E34D /* WMNoCounselingView.m */; };
 		858836CB20E3DF5A00DE928F /* JYShoppingMallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 858836CA20E3DF5A00DE928F /* JYShoppingMallViewController.m */; };
 		8588374B20E7181600DE928F /* JYMenuSelectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8588374A20E7181600DE928F /* JYMenuSelectorView.m */; };
+		8588374F20E8885400DE928F /* JYLoginAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8588374E20E8885400DE928F /* JYLoginAPIManager.m */; };
+		8598823420F333F500A5AC04 /* FSAES128.m in Sources */ = {isa = PBXBuildFile; fileRef = 8598823320F333F500A5AC04 /* FSAES128.m */; };
+		8598823720F3345B00A5AC04 /* NSData+FSAES128.m in Sources */ = {isa = PBXBuildFile; fileRef = 8598823620F3345B00A5AC04 /* NSData+FSAES128.m */; };
+		8598823A20F341E400A5AC04 /* JYLoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8598823920F341E400A5AC04 /* JYLoginModel.m */; };
 		85A74BC31F98418400F1453F /* WMDoctorIncomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85A74BC21F98418400F1453F /* WMDoctorIncomeViewController.m */; };
 		85A74BD01F9844B300F1453F /* WMIncomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85A74BCF1F9844B300F1453F /* WMIncomeCell.m */; };
 		85A74BD31F984C1700F1453F /* WMIncomeAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85A74BD21F984C1700F1453F /* WMIncomeAPIManager.m */; };
@@ -1647,6 +1651,14 @@
 		858836CA20E3DF5A00DE928F /* JYShoppingMallViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYShoppingMallViewController.m; sourceTree = "<group>"; };
 		8588374920E7181600DE928F /* JYMenuSelectorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYMenuSelectorView.h; sourceTree = "<group>"; };
 		8588374A20E7181600DE928F /* JYMenuSelectorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYMenuSelectorView.m; sourceTree = "<group>"; };
+		8588374D20E8885400DE928F /* JYLoginAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYLoginAPIManager.h; sourceTree = "<group>"; };
+		8588374E20E8885400DE928F /* JYLoginAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYLoginAPIManager.m; sourceTree = "<group>"; };
+		8598823220F333F500A5AC04 /* FSAES128.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FSAES128.h; sourceTree = "<group>"; };
+		8598823320F333F500A5AC04 /* FSAES128.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSAES128.m; sourceTree = "<group>"; };
+		8598823520F3345B00A5AC04 /* NSData+FSAES128.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+FSAES128.h"; sourceTree = "<group>"; };
+		8598823620F3345B00A5AC04 /* NSData+FSAES128.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+FSAES128.m"; sourceTree = "<group>"; };
+		8598823820F341E400A5AC04 /* JYLoginModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYLoginModel.h; sourceTree = "<group>"; };
+		8598823920F341E400A5AC04 /* JYLoginModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYLoginModel.m; sourceTree = "<group>"; };
 		85A74BC11F98418400F1453F /* WMDoctorIncomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMDoctorIncomeViewController.h; sourceTree = "<group>"; };
 		85A74BC21F98418400F1453F /* WMDoctorIncomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMDoctorIncomeViewController.m; sourceTree = "<group>"; };
 		85A74BCE1F9844B300F1453F /* WMIncomeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMIncomeCell.h; sourceTree = "<group>"; };
@@ -2539,6 +2551,10 @@
 				0CAF8F001E0A256F0092E6A8 /* WMRequestSerializerGenerate.m */,
 				0CAF8F091E0A25840092E6A8 /* AFHTTPSessionManager+MultipleRequest.h */,
 				0CAF8F0A1E0A25840092E6A8 /* AFHTTPSessionManager+MultipleRequest.m */,
+				8598823220F333F500A5AC04 /* FSAES128.h */,
+				8598823320F333F500A5AC04 /* FSAES128.m */,
+				8598823520F3345B00A5AC04 /* NSData+FSAES128.h */,
+				8598823620F3345B00A5AC04 /* NSData+FSAES128.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -2686,6 +2702,7 @@
 		0CD6E2E61E001DD700E75DB5 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				8588374C20E8880900DE928F /* JYLogin */,
 				0CAF8F6D1E0CF1100092E6A8 /* Actions */,
 				0CD6E2E71E001DD700E75DB5 /* Controller */,
 				0CD6E2E81E001DD700E75DB5 /* Model */,
@@ -4473,8 +4490,19 @@
 		858836C820E3DF0C00DE928F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8598823820F341E400A5AC04 /* JYLoginModel.h */,
+				8598823920F341E400A5AC04 /* JYLoginModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8588374C20E8880900DE928F /* JYLogin */ = {
+			isa = PBXGroup;
+			children = (
+				8588374D20E8885400DE928F /* JYLoginAPIManager.h */,
+				8588374E20E8885400DE928F /* JYLoginAPIManager.m */,
+			);
+			path = JYLogin;
 			sourceTree = "<group>";
 		};
 		85AA97F31FD8E4CA00EAF5A4 /* 我的服务 */ = {
@@ -5153,7 +5181,11 @@
 				1DA7E4FE1E5C5E1B00CDBEC5 /* WMAllPatienCell.m in Sources */,
 				854180D01FCD53A900EA4235 /* WMMicroExplainWebViewController.m in Sources */,
 				85DBE7A01FC3D3C700E821E4 /* WMQuestionModel.m in Sources */,
+<<<<<<< 356c86299a65e599a38f08afff94ffae318ef433
 				CC2B250520EF12A60050D5B2 /* UIView+HYBUIViewCommon.m in Sources */,
+=======
+				8588374F20E8885400DE928F /* JYLoginAPIManager.m in Sources */,
+>>>>>>> 网络请求回参解密解析
 				0CAF8F4F1E0CEEFE0092E6A8 /* WMShowImageCollectionViewCell.m in Sources */,
 				1D38164E1EC9769B00562FCA /* WMPerfectPerInfoViewController.m in Sources */,
 				8588374B20E7181600DE928F /* JYMenuSelectorView.m in Sources */,
@@ -5166,6 +5198,7 @@
 				1D3B76451E14AE330035EE65 /* WMMessageTypeParamModel.m in Sources */,
 				0C40047F1E026632003E1FC4 /* PopUpUtil.m in Sources */,
 				181C6CA71E88D89C00CD0119 /* NSString+IDCardVerify.m in Sources */,
+				8598823420F333F500A5AC04 /* FSAES128.m in Sources */,
 				1D3708BB1E83C5DC00974C73 /* WMDoctorCardModel.m in Sources */,
 				183287D91F10BE1C00F87E01 /* WMAllReportListViewController.m in Sources */,
 				188ACA8E2045010500A54692 /* WMNewDetailWebViewController.m in Sources */,
@@ -5483,6 +5516,7 @@
 				AD93FE8D20DDDEFC00C8EF83 /* WYTopic.m in Sources */,
 				AD93FE8120DDDE8C00C8EF83 /* WYTopicHeader.m in Sources */,
 				0CAF8F301E0CED5D0092E6A8 /* WMRecommendNewViewController.m in Sources */,
+				8598823720F3345B00A5AC04 /* NSData+FSAES128.m in Sources */,
 				180756B7204EB135001EC512 /* WMIndexQuestionCell.m in Sources */,
 				18F5B67D1E13EE400051C60E /* WMLaunchImageAPIManager.m in Sources */,
 				1DE56A971E113E6D00B93397 /* MJWeiMaiFooter.m in Sources */,
@@ -5583,6 +5617,7 @@
 				0C4650BC1E1CF8F80084053A /* WMCoreDataUtil.m in Sources */,
 				85C081DF20215D7B0095B224 /* WMDocChatCircleVC.m in Sources */,
 				18328A601F1503A200F87E01 /* ASFTableViewCell.m in Sources */,
+				8598823A20F341E400A5AC04 /* JYLoginModel.m in Sources */,
 				0C46812F1E28A19400BDE355 /* WMShareData.m in Sources */,
 				186AF2F11ED45A1F00F699C6 /* WMAvatarAPIManager.m in Sources */,
 				1D38166B1ECACF8100562FCA /* WMCertificationExampleCell.m in Sources */,
