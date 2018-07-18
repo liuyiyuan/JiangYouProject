@@ -43,8 +43,6 @@ static NSString * const kLaunchStoreName = @"wmdoctor.sqlite";
 static NSString * const kNetworkTestURL = @"https://www.baidu.com";
 
 
-
-
 @interface AppDelegate ()<selectDelegate,BuglyDelegate,UIApplicationDelegate>{
     BOOL _isLaunchByPushInfo;
 }
@@ -89,7 +87,6 @@ static NSString * const kNetworkTestURL = @"https://www.baidu.com";
     self.window.rootViewController = loginNavController;
 }
 
-
 /**
  加载引导页
  */
@@ -98,10 +95,6 @@ static NSString * const kNetworkTestURL = @"https://www.baidu.com";
     NSString *launchVersion = [[NSUserDefaults standardUserDefaults] objectForKey:@"launchVersion"];
     NSString *appVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
     if (launchVersion==nil || ![launchVersion isEqualToString:appVersion]) {//版本为空或者版本不一致
-    
-//        WMGuidePageViewController * guideView = [[WMGuidePageViewController alloc] init];
-//        UIViewController * view = self.window.rootViewController;
-//        [view presentViewController:guideView animated:YES completion:nil];
         
         NSArray *images = @[@"bg_yindao1", @"bg_yindao2", @"bg_yindao3"];
         UIViewController * viewVC = self.window.rootViewController;
@@ -145,7 +138,6 @@ static NSString * const kNetworkTestURL = @"https://www.baidu.com";
     [[RCIM sharedRCIM] initWithAppKey:RONGCLOUNDAPP_KEY];
     [self initializeDiskData];
     
-//    [self initializeNotification];
     [self loadMainView];
     
     [self initializeCoreData];
@@ -155,11 +147,6 @@ static NSString * const kNetworkTestURL = @"https://www.baidu.com";
     
     // 启动GrowingIO
     [Growing startWithAccountId:GROWINGIOID];
-    // 其他配置
-    // 开启Growing调试日志 可以开启日志
-    // [Growing setEnableLog:YES];
-    
-    //[WMUserAgentUtil loadUserAgentWithPayToken:@""];
     
     //个推
     [self GtPushWithOptions:launchOptions];
@@ -206,13 +193,11 @@ static NSString * const kNetworkTestURL = @"https://www.baidu.com";
                                                object:nil];
     self.manager = [AFNetworkReachabilityManager managerForDomain:kNetworkTestURL];
     [self.manager startMonitoring];
-//    __weak typeof(self) weakself = self;
     [self.manager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
         if (status==AFNetworkReachabilityStatusReachableViaWWAN||status==AFNetworkReachabilityStatusReachableViaWiFi) {
             //刷新需要刷新的页面和接口（启动页，版本升级）
         }
         NSLog(@"AFReachability.status=%zd",status);
-        //[weakself syncLoadUpgradeCheck:nil];
     }];
     
 }
@@ -372,11 +357,6 @@ static NSString * const kNetworkTestURL = @"https://www.baidu.com";
 {
     //应用在前台收到通知
     NSLog(@"========%@", notification);
-    //[UIApplication registerForRemoteNotifications]; //and UserNotifications Framework's -[UNUserNotificationCenter requestAuthorizationWithOptions:completionHandler:]")
-    
-    // 根据APP需要，判断是否要提示用户Badge、Sound、Alert
-    //completionHandler(UNNotificationPresentationOptionBadge | UNNotificationPresentationOptionSound | UNNotificationPresentationOptionAlert);
-    
 }
 
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler
@@ -393,10 +373,6 @@ static NSString * const kNetworkTestURL = @"https://www.baidu.com";
             [self rongCloudIMMessageJump:notification.request.content.userInfo];
         }
     });
-
-    
-    
-    NSLog(@"notification.request.content.userInfo=%@",notification.request.content.userInfo);
     
     if (!notification.request.content.userInfo[@"Content"]) {
         return;
@@ -406,10 +382,6 @@ static NSString * const kNetworkTestURL = @"https://www.baidu.com";
     _isLaunchByPushInfo = YES;
     NSData *data = [notification.request.content.userInfo[@"Content"] dataUsingEncoding:NSUTF8StringEncoding];
     NSDictionary *pushInfo = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-//    [self goListByPushInfo:pushInfo state:1];
-//    [PopUpUtil alertWithMessage:[pushInfo objectForKey:@"TITLE"] toViewController:nil withCompletionHandler:^{
-//        
-//    }];
 }
 
 /** SDK收到透传消息回调 (---消息内容---) 7月21日替换老版本个推 11月22删除代码*/
@@ -469,14 +441,6 @@ static NSString * const kNetworkTestURL = @"https://www.baidu.com";
     
     [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:WX_APPID appSecret:WX_AppSecret redirectURL:@"https://doctor.myweimai.com/"];
     
-    
-    
-//    //设置新浪的appKey和appSecret       //暂不用新浪微博，沉香表示不解
-//    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_Sina appKey:@"1434019602"  appSecret:@"34dfd3f9baee059223046ab0d7c25150" redirectURL:@"https://doctor.myweimai.com/"];
-    
-    //钉钉的appKey
-//    [[UMSocialManager defaultManager] setPlaform: UMSocialPlatformType_DingDing appKey:@"dingoalmlnohc0wggfedpk" appSecret:nil redirectURL:nil];
-    
     //正式库并且release模式开启
     
     
@@ -486,17 +450,9 @@ static NSString * const kNetworkTestURL = @"https://www.baidu.com";
     config.blockMonitorTimeout = 2.5;
     config.version = [[WMDevice currentDevice] appVersion];
     config.delegate = self;
-    //config.debugMode = YES;
-    //config.channel = @"Debug";
-
-    // Set the customizd tag thats config in your APP registerd on the  bugly.qq.com
-    // [Bugly setTag:1799];
-    
-    //[Bugly setUserValue:[NSProcessInfo processInfo].processName forKey:@"Process"];
     
 #if DEBUG
     
-    //[MobClick setCrashReportEnabled:NO];
     [MobClick setLogEnabled:YES];
     [[UMSocialManager defaultManager] openLog:YES];
     
@@ -510,7 +466,6 @@ static NSString * const kNetworkTestURL = @"https://www.baidu.com";
     
 #else
     
-    //[MobClick setCrashReportEnabled:YES];
     [MobClick setLogEnabled:NO];
     //关闭mock
     [WMMockHttpUtil setMockEnabled:NO];
@@ -545,14 +500,12 @@ void UncaughtExceptionHandler(NSException *exception){
     return result;
 }
 
-
 #endif
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
     [MWApi routeMLink:url];
 
-    
     BOOL result = [[UMSocialManager defaultManager] handleOpenURL:url];
     result = [Growing handleUrl:url];    // 请务必确保该函数被调用
     if (!result) {
@@ -573,9 +526,6 @@ void UncaughtExceptionHandler(NSException *exception){
     }];
     
     [MWApi registerMLinkHandlerWithKey:@"gobuy" handler:^(NSURL * _Nonnull url, NSDictionary * _Nullable params) {
-        //具体跳转业务 （暂时没有个这个需求）
-        //MPTabBarController * tabBarController = (MPTabBarController *)self.window.rootViewController;
-        //MPNavigationController * navController = (MPNavigationController*)tabBarController.viewControllers[tabBarController.selectedIndex];
         
     }];
 }
@@ -632,8 +582,6 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     // 注册APNS
     [self registerRemoteNotification];
     
-    //[self registerUserNotification];
-    
     // 处理远程通知启动APP
     [self receiveNotificationByLaunchingOptions:launchOptions];
 }
@@ -655,19 +603,8 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 
 
 - (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    // Saves changes in the application's managed object context before the application terminates.
     
     [MagicalRecord cleanUp];
-    
-//    //清除cookies
-//    NSHTTPCookie *cookie;
-//    NSHTTPCookieStorage *storage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
-//    for (cookie in [storage cookies]){
-//        [storage deleteCookie:cookie];
-//    }
-//    //清除UIWebView的缓存
-//    [[NSURLCache sharedURLCache] removeAllCachedResponses];
 
     //清除所有cache文件
     NSString *libraryPath = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory,NSUserDomainMask,YES) objectAtIndex:0];

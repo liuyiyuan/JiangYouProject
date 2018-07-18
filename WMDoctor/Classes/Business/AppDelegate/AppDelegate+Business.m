@@ -40,11 +40,6 @@ static NSTimeInterval const kSpaceInterval = 3*24*60*60;
         }
         [[NSUserDefaults standardUserDefaults] synchronize];
         
-        
-//        //目前接口请求不到数据，等接口请求数据后处理一下内容
-//        NSString * urlString = responseObject[@"ads"];
-        
-        
     } withFailure:^(ResponseResult *errorResult) {
         NSLog(@"error=%@",errorResult);
         [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:kUser_LaunchImage];
