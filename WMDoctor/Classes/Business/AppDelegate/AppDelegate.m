@@ -140,7 +140,9 @@ static NSString * const kNetworkTestURL = @"https://www.baidu.com";
     
     [self loadMainView];
     
-    [self initializeCoreData];
+    [self initializeNotification];
+    
+//    [self initializeCoreData];
     
     //第三方注册
     [self prepareThirdLibraryRegister];
@@ -193,13 +195,14 @@ static NSString * const kNetworkTestURL = @"https://www.baidu.com";
                                                object:nil];
     self.manager = [AFNetworkReachabilityManager managerForDomain:kNetworkTestURL];
     [self.manager startMonitoring];
+//    __weak typeof(self) weakself = self;
     [self.manager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
         if (status==AFNetworkReachabilityStatusReachableViaWWAN||status==AFNetworkReachabilityStatusReachableViaWiFi) {
             //刷新需要刷新的页面和接口（启动页，版本升级）
+//            [weakself syncLoadUpgradeCheck:nil];
         }
         NSLog(@"AFReachability.status=%zd",status);
     }];
-    
 }
 - (void)kLoginInSuccessAction:(NSNotification*)note
 

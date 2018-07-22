@@ -18,12 +18,16 @@
 #import <AFURLSessionManager.h>
 #import <AFHTTPSessionManager.h>
 #import <AFAutoPurgingImageCache.h>
+#import "SDCycleScrollView.h"
 
 
-@interface JYShoppingMallViewController ()<TopicScrollViewDelegate>{
+@interface JYShoppingMallViewController ()<TopicScrollViewDelegate, SDCycleScrollViewDelegate>{
     WYTopicScrollView *_topicScrollView;
     JYMenuSelectorView *_menuSelectorView;
 }
+
+@property(nonatomic, strong) SDCycleScrollView *cycleScrollView;        //轮播
+//@property(nonatomic, strong) WMHomeModuleView *homeModuleView;  //轮播下的横向滑动小模块
 
 @end
 
@@ -34,6 +38,7 @@
     // Do any additional setup after loading the view.
     [self initView];
     [self login];
+    [self initBannerView];
 }
 
 - (void)initView{
@@ -45,6 +50,42 @@
     _menuSelectorView = [[JYMenuSelectorView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 44)];
     [_menuSelectorView setMenuWithArr:@[@"精选", @"抢购", @"团购", @"福利", @"商城", @"贴吧"]];
     [self.view addSubview:_menuSelectorView];
+}
+
+- (void)initBannerView{
+    self.cycleScrollView.imageURLStringsGroup = @[];
+    self.cycleScrollView.frame = CGRectMake(0, 44, kScreen_width,kScreen_width*221/375.0);
+    self.cycleScrollView.delegate = self;
+    [self.view addSubview:self.cycleScrollView];
+}
+
+//- (void)initHomeModuleView{
+//    [self.homeModuleView setValueWithModelArray:@[]];
+//    self.homeModuleView.frame = CGRectMake(0, 44 + 98, kScreen_width, 98);
+//    [self.view addSubview:self.homeModuleView];
+//}
+//
+//- (WMHomeModuleView *)homeModuleView {
+//    if (!_homeModuleView) {
+//        _homeModuleView = [[WMHomeModuleView alloc] initWithFrame:CGRectMake(0, 155, kScreen_width, 98)];
+//        _homeModuleView.delegate = self;
+//    }
+//    return _homeModuleView;
+//}
+
+- (SDCycleScrollView *)cycleScrollView{
+    if (!_cycleScrollView) {
+        _cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectZero delegate:self placeholderImage:[UIImage imageNamed:@"img_default"]];
+        
+        _cycleScrollView.pageControlStyle = SDCycleScrollViewPageContolStyleAnimated;
+        _cycleScrollView.bannerImageViewContentMode = UIViewContentModeScaleAspectFill;
+        _cycleScrollView.autoScrollTimeInterval = 5;
+        _cycleScrollView.titleLabelTextColor = [UIColor clearColor];
+        _cycleScrollView.titleLabelBackgroundColor = [UIColor clearColor];
+        _cycleScrollView.currentPageDotImage = [UIImage imageNamed:@"ic_banner_point_select"];
+        _cycleScrollView.pageDotImage = [UIImage imageNamed:@"ic_banner_point_unselect"];
+    }
+    return _cycleScrollView;
 }
 
 - (void)login{
@@ -64,6 +105,11 @@
     }];
     
 }
+
+//WMHomeModuleDelegate
+//- (void)goModuleWith:(HomeAppModel *)appModel{
+//
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
