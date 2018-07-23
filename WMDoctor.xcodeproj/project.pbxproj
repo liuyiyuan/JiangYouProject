@@ -4922,7 +4922,7 @@
 				TargetAttributes = {
 					0C9817E61DFFBC070016AD20 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = K7X3HEFA45;
+						DevelopmentTeam = 93VVYXS8JB;
 						LastSwiftMigration = 0940;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -5842,7 +5842,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = WMDoctor/WMDoctor.entitlements;
-				DEVELOPMENT_TEAM = K7X3HEFA45;
+				DEVELOPMENT_TEAM = 93VVYXS8JB;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -5878,7 +5878,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = WMDoctor/WMDoctor.entitlements;
-				DEVELOPMENT_TEAM = K7X3HEFA45;
+				DEVELOPMENT_TEAM = 93VVYXS8JB;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -6013,7 +6013,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = WMDoctor/WMDoctor.entitlements;
-				DEVELOPMENT_TEAM = K7X3HEFA45;
+				DEVELOPMENT_TEAM = 93VVYXS8JB;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

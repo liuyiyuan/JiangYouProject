@@ -26,6 +26,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"首页";
+    self.navigationController.navigationBar.hidden = YES;
     [self initSubviews];
     [self loadData];
     //    [self addChildVCs];
@@ -52,12 +53,12 @@
     [button2 addTarget:self action:@selector(naviRightBarButtonAciton) forControlEvents:UIControlEventTouchUpInside];
     self.tabBarController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button2];
     
-    _newsScrollView = [[WYNewsScrollView alloc] initWithFrame:CGRectMake(0, kTopicHeaderHeight, kScreenWidth, kScreenHeight - kTopicHeaderHeight - kDockHeight - kNavigationBarHeight - kStatusBarHeight)];
+    _newsScrollView = [[WYNewsScrollView alloc] initWithFrame:CGRectMake(0, kTopicHeaderHeight, kScreenWidth, kScreenHeight - kTopicHeaderHeight - kDockHeight)];
     _newsScrollView.backgroundColor = [UIColor yellowColor];
     _newsScrollView.delegate = self;
     [self.view addSubview:_newsScrollView];
     
-    WYTopicHeader *header = [[WYTopicHeader alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kTopicHeaderHeight)];
+    WYTopicHeader *header = [[WYTopicHeader alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 66)];
     //    _header.backgroundColor = [UIColor blueColor];
     //    header.delegate = self;
     _topicScrollView = header.topicScrollView;

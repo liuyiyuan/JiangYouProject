@@ -13,10 +13,20 @@
 #define kWidthMargin        0
 @interface WYTopicScrollView ()
 @property (assign, nonatomic) NSInteger oldIndex;
+
+@property (nonatomic, strong) NSMutableArray *buttonArray;
+
 @end
 @implementation WYTopicScrollView
 {
     CGFloat _offsetX;
+}
+
+-(NSMutableArray *)buttonArray{
+    if(!_buttonArray){
+        _buttonArray = [[NSMutableArray alloc]init];
+    }
+    return _buttonArray;
 }
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -86,11 +96,13 @@
         [button setTitle:topic.tname forState:UIControlStateNormal];
         [button addTarget:self action:@selector(categoryButtonSelected:) forControlEvents:UIControlEventTouchUpInside];
         if (self.subviews.count == 0) {
-            button.frame = (CGRect){CGPointMake(kWidthMargin, 0), button.bounds.size};
+            button.frame = (CGRect){CGPointMake(kWidthMargin, 30), button.bounds.size};
         }else {
-            button.frame = (CGRect){CGPointMake(CGRectGetMaxX([self.subviews.lastObject frame]) + kWidthMargin, 0), button.bounds.size};
+            button.frame = (CGRect){CGPointMake(CGRectGetMaxX([self.subviews.lastObject frame]) + kWidthMargin, 30), button.bounds.size};
         }
         [self addSubview:button];
+        button.tag = i;
+        [self.buttonArray addObject:button];
     }
     self.contentSize = CGSizeMake(CGRectGetMaxX([self.subviews.lastObject frame]) + kWidthMargin, 0);
     self.offsetX = 0;
@@ -110,11 +122,20 @@
     float delta = abc_offsetX - index;
     WYCategoryButton *oldButton = self.subviews[index];
 //    NSLog(@"old is %d , new is %d+1\n, index is %d", _oldIndex, _oldIndex + 1, index);
-    oldButton.scale = 1 - delta;
+//    oldButton.scale = 1 - delta;
+    
+    for (WYCategoryButton *button in self.buttonArray) {
+        if(button.tag == index){
+            button.selected = YES;
+        }else{
+            button.selected = NO;
+        }
+    }
+    
     //最后一个
     if (index < _topicArray.count - 1) {
         WYCategoryButton *newbutton = self.subviews[index + 1];
-        newbutton.scale = delta;
+//        newbutton.scale = delta;
     }
     //整数才赋值
     if (index == abc_offsetX) {
@@ -158,9 +179,18 @@
     //可优化,实现新旧按钮的变化
     _offsetX = [self.subviews indexOfObject:sender];
     WYCategoryButton *oldButton = self.subviews[_oldIndex];
-    oldButton.scale = 0;
-    sender.scale = 0;
+//    oldButton.scale = 0;
+//    sender.scale = 0;
     self.oldIndex = _offsetX;
+    
+    for (WYCategoryButton *button in self.buttonArray) {
+        if(button.tag == sender.tag){
+            button.selected = YES;
+        }else{
+            button.selected = NO;
+        }
+    }
+    
     
     [self.topicDelegate topicScrollViewDidSelectButton:_offsetX];
 }

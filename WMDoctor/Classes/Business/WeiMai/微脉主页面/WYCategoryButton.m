@@ -8,13 +8,14 @@
 
 #import "WYCategoryButton.h"
 #define kLabelSideMargin        30
-#define kTopicLabelFont         14
+#define kTopicLabelFont         15
 @implementation WYCategoryButton
 - (instancetype)init
 {
     self = [super init];
     if (self) {
-        [self setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+        [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [self setTitleColor:[UIColor colorWithHexString:@"#044F80"] forState:UIControlStateSelected];
         self.titleLabel.font = [UIFont systemFontOfSize:kTopicLabelFont];
     }
     return self;
@@ -36,8 +37,8 @@
 {
     _scale = scale;
 //    NSLog(@"scale is %f", _scale);
-    [self setTitleColor:[UIColor colorWithRed:(scale * (221.0 - 104.0) + 104.0)/255 green:(scale * (50.0 - 104.0) + 104.0)/255 blue:(scale * (55.0 - 104.0) + 104.0)/255 alpha:1] forState:UIControlStateNormal];
+//    [self setTitleColor:[UIColor colorWithRed:(scale * (221.0 - 104.0) + 104.0)/255 green:(scale * (50.0 - 104.0) + 104.0)/255 blue:(scale * (55.0 - 104.0) + 104.0)/255 alpha:1] forState:UIControlStateNormal];
 //    NSLog(@"\ncolor is %@", self.titleLabel.textColor);
-    self.titleLabel.font = [UIFont systemFontOfSize:kTopicLabelFont * (1 + 0.3 * scale)];
+//    self.titleLabel.font = [UIFont systemFontOfSize:kTopicLabelFont * (1 + 0.3 * scale)];
 }
 @end

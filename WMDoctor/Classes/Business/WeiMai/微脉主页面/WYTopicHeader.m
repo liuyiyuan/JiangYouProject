@@ -24,7 +24,7 @@
 - (void)initSubviews
 {
 //    self.clipsToBounds = NO;
-    self.backgroundColor = [UIColor colorWithRed:246 / 255.0 green:246 / 255.0 blue:246 / 255.0 alpha:1];
+    self.backgroundColor = [UIColor colorWithHexString:@"#50B8FB"];
     CGRect frame = self.frame;
     _topicScrollView = [[WYTopicScrollView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width - kButtonW, frame.size.height)];
     [self addSubview:_topicScrollView];
@@ -37,7 +37,7 @@
     rightView.frame = (CGRect){CGPointMake(frame.size.width - rightView.bounds.size.width - kButtonW, 0), rightView.frame.size};
     [self addSubview:rightView];
     
-    UIButton *spreadButton = [[UIButton alloc] initWithFrame:CGRectMake(frame.size.width - kButtonW, 0, kButtonW, frame.size.height)];
+    UIButton *spreadButton = [[UIButton alloc] initWithFrame:CGRectMake(frame.size.width - kButtonW, 30, kButtonW, 36)];
     spreadButton.imageView.transform = CGAffineTransformMakeScale(1, -1);
     spreadButton.backgroundColor = [UIColor clearColor];
     [spreadButton setImage:[UIImage imageNamed:@"channel_nav_arrow"] forState:UIControlStateNormal];
