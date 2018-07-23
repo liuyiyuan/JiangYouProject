@@ -60,7 +60,7 @@
 #import "WMInformationModel.h"
 #import "WMStringUtil.h"
 #import "WMRCCommonUtil.h"
-
+#import <SobotKit/SobotKit.h>
 //圈子
 #import "WMPatientReportedModel.h"
 

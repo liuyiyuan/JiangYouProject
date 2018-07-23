@@ -155,6 +155,12 @@ static NSString * const kNetworkTestURL = @"https://www.baidu.com";
     
     NSSetUncaughtExceptionHandler(&UncaughtExceptionHandler);
    
+    // 错误日志收集
+    [ZCLibClient setZCLibUncaughtExceptionHandler];
+    // 添加用户画像
+    [[ZCLibClient getZCLibClient] initSobotSDK:@"af7f8ef937cc49de8eb9a603ea5a9bf4"];
+    
+    
     return YES;
 }
 - (void)initializeDiskData

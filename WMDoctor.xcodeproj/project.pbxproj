@@ -593,6 +593,9 @@
 		AD93FEB120DDE34B00C8EF83 /* WYButtonChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FEAF20DDE34B00C8EF83 /* WYButtonChooseView.m */; };
 		AD93FEB420DDE39200C8EF83 /* WYLabelButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FEB320DDE39200C8EF83 /* WYLabelButton.m */; };
 		AD93FEB720DDE55F00C8EF83 /* WYNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FEB620DDE55F00C8EF83 /* WYNetwork.m */; };
+		ADA232FD2106223100491D6F /* ZCEmojiExpression.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ADA232FA2106222F00491D6F /* ZCEmojiExpression.bundle */; };
+		ADA232FE2106223100491D6F /* SobotKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ADA232FB2106223000491D6F /* SobotKit.bundle */; };
+		ADA232FF2106223100491D6F /* SobotLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ADA232FC2106223100491D6F /* SobotLocalizable.strings */; };
 		ADA4A8DF20E71975006400F3 /* JYPersonEditInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA4A8DE20E71975006400F3 /* JYPersonEditInformationViewController.m */; };
 		ADA4A8E220E719EB006400F3 /* JYInformaitonHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA4A8E120E719EB006400F3 /* JYInformaitonHeaderView.m */; };
 		ADA4A8E520E71B7C006400F3 /* JYInformationNicknameView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA4A8E420E71B7C006400F3 /* JYInformationNicknameView.m */; };
@@ -1772,6 +1775,9 @@
 		AD93FEB520DDE55F00C8EF83 /* WYNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNetwork.h; sourceTree = "<group>"; };
 		AD93FEB620DDE55F00C8EF83 /* WYNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNetwork.m; sourceTree = "<group>"; };
 		AD93FEB820DDE66500C8EF83 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		ADA232FA2106222F00491D6F /* ZCEmojiExpression.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZCEmojiExpression.bundle; sourceTree = "<group>"; };
+		ADA232FB2106223000491D6F /* SobotKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SobotKit.bundle; sourceTree = "<group>"; };
+		ADA232FC2106223100491D6F /* SobotLocalizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = SobotLocalizable.strings; sourceTree = "<group>"; };
 		ADA4A8DD20E71975006400F3 /* JYPersonEditInformationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYPersonEditInformationViewController.h; sourceTree = "<group>"; };
 		ADA4A8DE20E71975006400F3 /* JYPersonEditInformationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYPersonEditInformationViewController.m; sourceTree = "<group>"; };
 		ADA4A8E020E719EB006400F3 /* JYInformaitonHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYInformaitonHeaderView.h; sourceTree = "<group>"; };
@@ -1996,6 +2002,9 @@
 		0C9817DE1DFFBC070016AD20 = {
 			isa = PBXGroup;
 			children = (
+				ADA232FB2106223000491D6F /* SobotKit.bundle */,
+				ADA232FC2106223100491D6F /* SobotLocalizable.strings */,
+				ADA232FA2106222F00491D6F /* ZCEmojiExpression.bundle */,
 				0C9817E91DFFBC070016AD20 /* WMDoctor */,
 				0C9818061DFFBC070016AD20 /* WMDoctorTests */,
 				0C9818111DFFBC070016AD20 /* WMDoctorUITests */,
@@ -4975,6 +4984,7 @@
 			files = (
 				0CAF8F691E0CEFDB0092E6A8 /* WMHealthRecordCell.xib in Resources */,
 				850142A91F3C0A0A000BA97F /* WMPatientDataCell.xib in Resources */,
+				ADA232FE2106223100491D6F /* SobotKit.bundle in Resources */,
 				1D3816621ECACF1400562FCA /* WMCertificationTextTableViewCell.xib in Resources */,
 				0C9817FD1DFFBC070016AD20 /* LaunchScreen.storyboard in Resources */,
 				854180C71FCBEB7E00EA4235 /* WMMyMicroBeanCell.xib in Resources */,
@@ -4998,6 +5008,7 @@
 				0C9817FA1DFFBC070016AD20 /* Assets.xcassets in Resources */,
 				1D6829251E7BD09700422732 /* WMDoctorFirendCell.xib in Resources */,
 				1890BA611FC8058A0009339C /* WMGuidanceCollectionViewCell.xib in Resources */,
+				ADA232FD2106223100491D6F /* ZCEmojiExpression.bundle in Resources */,
 				0CAF8EEB1E08CEF10092E6A8 /* WeiMai.storyboard in Resources */,
 				180756B8204EB135001EC512 /* WMIndexQuestionCell.xib in Resources */,
 				0C9817F51DFFBC070016AD20 /* Main.storyboard in Resources */,
@@ -5012,6 +5023,7 @@
 				1890BA701FC805BB0009339C /* WMAddPictureViewCell.xib in Resources */,
 				CC2DAF2020E0EABA008B630C /* DefaultNews.xib in Resources */,
 				854180D81FD6742700EA4235 /* WMOrderCell.xib in Resources */,
+				ADA232FF2106223100491D6F /* SobotLocalizable.strings in Resources */,
 				1D68291A1E7ABBCE00422732 /* WMVIPPatientTableViewCell.xib in Resources */,
 				0CEB2EB81E0CF81E0070119A /* WMNewPatienReportCell.xib in Resources */,
 				1D38166C1ECACF8100562FCA /* WMCertificationExampleCell.xib in Resources */,
@@ -5849,6 +5861,7 @@
 					"$(PROJECT_DIR)/WMDoctor/Classes/Librarys/Libs/UMSocial/SocialLibraries/QQ",
 					"$(PROJECT_DIR)/WMDoctor/Classes/Librarys/Libs/UMSocial/UMSocialSDK",
 					"$(PROJECT_DIR)/WMDoctor/Classes/Librarys/Libs/UMSocial/UMSocialUI",
+					"$(PROJECT_DIR)/SobotKit/Products",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WMDoctor/Classes/Frameworks/Macros/WMDoctor-Prefix.pch";
@@ -5861,6 +5874,7 @@
 					"$(PROJECT_DIR)/WMDoctor/Classes/Librarys/Libs/UMSocial/SocialLibraries/Sina",
 					"$(PROJECT_DIR)/WMDoctor/Classes/Librarys/Libs/UMSocial/SocialLibraries/WeChat",
 					"$(PROJECT_DIR)/WMDoctor/Classes/Librarys/Libs/CardiotocographyLibs",
+					"$(PROJECT_DIR)/SobotKit/SobotKit/SobotLib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = vip.dkgj.www;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -5885,6 +5899,7 @@
 					"$(PROJECT_DIR)/WMDoctor/Classes/Librarys/Libs/UMSocial/SocialLibraries/QQ",
 					"$(PROJECT_DIR)/WMDoctor/Classes/Librarys/Libs/UMSocial/UMSocialSDK",
 					"$(PROJECT_DIR)/WMDoctor/Classes/Librarys/Libs/UMSocial/UMSocialUI",
+					"$(PROJECT_DIR)/SobotKit/Products",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WMDoctor/Classes/Frameworks/Macros/WMDoctor-Prefix.pch";
@@ -5897,6 +5912,7 @@
 					"$(PROJECT_DIR)/WMDoctor/Classes/Librarys/Libs/UMSocial/SocialLibraries/Sina",
 					"$(PROJECT_DIR)/WMDoctor/Classes/Librarys/Libs/UMSocial/SocialLibraries/WeChat",
 					"$(PROJECT_DIR)/WMDoctor/Classes/Librarys/Libs/CardiotocographyLibs",
+					"$(PROJECT_DIR)/SobotKit/SobotKit/SobotLib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = vip.dkgj.www;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -6020,6 +6036,7 @@
 					"$(PROJECT_DIR)/WMDoctor/Classes/Librarys/Libs/UMSocial/SocialLibraries/QQ",
 					"$(PROJECT_DIR)/WMDoctor/Classes/Librarys/Libs/UMSocial/UMSocialSDK",
 					"$(PROJECT_DIR)/WMDoctor/Classes/Librarys/Libs/UMSocial/UMSocialUI",
+					"$(PROJECT_DIR)/SobotKit/Products",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WMDoctor/Classes/Frameworks/Macros/WMDoctor-Prefix.pch";
@@ -6032,6 +6049,7 @@
 					"$(PROJECT_DIR)/WMDoctor/Classes/Librarys/Libs/UMSocial/SocialLibraries/Sina",
 					"$(PROJECT_DIR)/WMDoctor/Classes/Librarys/Libs/UMSocial/SocialLibraries/WeChat",
 					"$(PROJECT_DIR)/WMDoctor/Classes/Librarys/Libs/CardiotocographyLibs",
+					"$(PROJECT_DIR)/SobotKit/SobotKit/SobotLib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = vip.dkgj.www;
 				PRODUCT_NAME = "$(TARGET_NAME)";

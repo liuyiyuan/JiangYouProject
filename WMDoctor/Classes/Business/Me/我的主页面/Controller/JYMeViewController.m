@@ -96,6 +96,12 @@
         }
             break;
          
+        case 3://客服
+        {
+            [self advisoryOnline];
+        }
+            break;
+            
         case 4://关于我们
         {
             JYAboutUsViewController *aboutUs = [JYAboutUsViewController new];
@@ -154,6 +160,52 @@
     [self.navigationController pushViewController:personalInformation animated:YES];
 }
 
+
+#pragma mark - 在线咨询
+-(void)advisoryOnline{
+    
+    ZCChatController *chat = [ZCChatController new];
+    if ([chat respondsToSelector:@selector(setEdgesForExtendedLayout:)]) {
+        chat.edgesForExtendedLayout = UIRectEdgeNone;
+    }
+    // 启动
+    ZCLibInitInfo *initInfo = [ZCLibInitInfo new];
+    initInfo.avatarUrl = @"avatar_loading";
+    // 企业编号 必填
+    initInfo.appKey = @"af7f8ef937cc49de8eb9a603ea5a9bf4";
+    // 用户id，用于标识用户，建议填写 (注意：userId不要写死，否则获取的历史记录相同)
+    initInfo.userId = @"";
+    
+    //配置UI
+    ZCKitInfo *uiInfo = [ZCKitInfo new];
+    uiInfo.customBannerColor = [UIColor colorWithHexString:@"#50B8FB"];
+    uiInfo.topViewTextColor = [UIColor whiteColor];
+    
+    // 是否显示转人工按钮
+    uiInfo.isShowTansfer = YES;
+    
+    //设置启动参数
+    [[ZCLibClient getZCLibClient] setLibInitInfo:initInfo];
+    // 智齿SDK初始化启动事例，
+    // 必须在之前调用[[ZCLibClient getZCLibClient] initSobotSDK:@"your appkey"];
+    
+    [ZCSobot startZCChatVC:uiInfo
+                      with:self
+                  loaction:CGRectMake(0, 0, 200, 200)
+                    target:nil
+                 pageBlock:^(ZCChatController *object,ZCPageBlockType type){
+                     // 点击返回
+                     if(type==ZCPageBlockGoBack){
+                         NSLog(@"点击了返回按钮");
+                         [ZCLibClient closeAndoutZCServer:YES];
+                     }
+                     // 页面UI初始化完成，可以获取UIView，自定义UI
+                     if(type == ZCPageBlockLoadFinish){
+                         
+                     }
+                 } messageLinkClick:nil];
+    
+}
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];

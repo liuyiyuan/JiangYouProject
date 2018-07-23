@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:SobotKit/SobotKit.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:WMDoctor.xcodeproj">
    </FileRef>
    <FileRef
