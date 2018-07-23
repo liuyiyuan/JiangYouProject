@@ -58,7 +58,7 @@
     _newsScrollView.delegate = self;
     [self.view addSubview:_newsScrollView];
     
-    WYTopicHeader *header = [[WYTopicHeader alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 66)];
+    WYTopicHeader *header = [[WYTopicHeader alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kTopicHeaderHeight)];
     //    _header.backgroundColor = [UIColor blueColor];
     //    header.delegate = self;
     _topicScrollView = header.topicScrollView;
