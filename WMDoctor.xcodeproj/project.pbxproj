@@ -576,6 +576,9 @@
 		AD526A1520E8C42D00D4BF85 /* UIButton+EWTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = AD526A1420E8C42D00D4BF85 /* UIButton+EWTimer.m */; };
 		AD526A1B20E8CB0800D4BF85 /* NSString+PPTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = AD526A1920E8CB0700D4BF85 /* NSString+PPTextField.m */; };
 		AD526A1C20E8CB0800D4BF85 /* PPTextfield.m in Sources */ = {isa = PBXBuildFile; fileRef = AD526A1A20E8CB0700D4BF85 /* PPTextfield.m */; };
+		AD7A06EE2108D62300D3AAB4 /* ZCEmojiExpression.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AD7A06EB2108D62100D3AAB4 /* ZCEmojiExpression.bundle */; };
+		AD7A06EF2108D62300D3AAB4 /* SobotKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AD7A06EC2108D62200D3AAB4 /* SobotKit.bundle */; };
+		AD7A06F02108D62300D3AAB4 /* SobotLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD7A06ED2108D62300D3AAB4 /* SobotLocalizable.strings */; };
 		AD93FE7E20DDDC8100C8EF83 /* JYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FE7D20DDDC8100C8EF83 /* JYHomeViewController.m */; };
 		AD93FE8120DDDE8C00C8EF83 /* WYTopicHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FE8020DDDE8C00C8EF83 /* WYTopicHeader.m */; };
 		AD93FE8420DDDEA800C8EF83 /* WYTopicScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FE8320DDDEA700C8EF83 /* WYTopicScrollView.m */; };
@@ -596,9 +599,6 @@
 		AD93FEB120DDE34B00C8EF83 /* WYButtonChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FEAF20DDE34B00C8EF83 /* WYButtonChooseView.m */; };
 		AD93FEB420DDE39200C8EF83 /* WYLabelButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FEB320DDE39200C8EF83 /* WYLabelButton.m */; };
 		AD93FEB720DDE55F00C8EF83 /* WYNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FEB620DDE55F00C8EF83 /* WYNetwork.m */; };
-		ADA232FD2106223100491D6F /* ZCEmojiExpression.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ADA232FA2106222F00491D6F /* ZCEmojiExpression.bundle */; };
-		ADA232FE2106223100491D6F /* SobotKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ADA232FB2106223000491D6F /* SobotKit.bundle */; };
-		ADA232FF2106223100491D6F /* SobotLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = ADA232FC2106223100491D6F /* SobotLocalizable.strings */; };
 		ADA4A8DF20E71975006400F3 /* JYPersonEditInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA4A8DE20E71975006400F3 /* JYPersonEditInformationViewController.m */; };
 		ADA4A8E220E719EB006400F3 /* JYInformaitonHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA4A8E120E719EB006400F3 /* JYInformaitonHeaderView.m */; };
 		ADA4A8E520E71B7C006400F3 /* JYInformationNicknameView.m in Sources */ = {isa = PBXBuildFile; fileRef = ADA4A8E420E71B7C006400F3 /* JYInformationNicknameView.m */; };
@@ -1743,6 +1743,9 @@
 		AD526A1820E8CB0700D4BF85 /* NSString+PPTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+PPTextField.h"; sourceTree = "<group>"; };
 		AD526A1920E8CB0700D4BF85 /* NSString+PPTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PPTextField.m"; sourceTree = "<group>"; };
 		AD526A1A20E8CB0700D4BF85 /* PPTextfield.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPTextfield.m; sourceTree = "<group>"; };
+		AD7A06EB2108D62100D3AAB4 /* ZCEmojiExpression.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZCEmojiExpression.bundle; sourceTree = "<group>"; };
+		AD7A06EC2108D62200D3AAB4 /* SobotKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SobotKit.bundle; sourceTree = "<group>"; };
+		AD7A06ED2108D62300D3AAB4 /* SobotLocalizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = SobotLocalizable.strings; sourceTree = "<group>"; };
 		AD93FE7C20DDDC8100C8EF83 /* JYHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYHomeViewController.h; sourceTree = "<group>"; };
 		AD93FE7D20DDDC8100C8EF83 /* JYHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYHomeViewController.m; sourceTree = "<group>"; };
 		AD93FE7F20DDDE8B00C8EF83 /* WYTopicHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYTopicHeader.h; sourceTree = "<group>"; };
@@ -1784,9 +1787,6 @@
 		AD93FEB520DDE55F00C8EF83 /* WYNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNetwork.h; sourceTree = "<group>"; };
 		AD93FEB620DDE55F00C8EF83 /* WYNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNetwork.m; sourceTree = "<group>"; };
 		AD93FEB820DDE66500C8EF83 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
-		ADA232FA2106222F00491D6F /* ZCEmojiExpression.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZCEmojiExpression.bundle; sourceTree = "<group>"; };
-		ADA232FB2106223000491D6F /* SobotKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SobotKit.bundle; sourceTree = "<group>"; };
-		ADA232FC2106223100491D6F /* SobotLocalizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = SobotLocalizable.strings; sourceTree = "<group>"; };
 		ADA4A8DD20E71975006400F3 /* JYPersonEditInformationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYPersonEditInformationViewController.h; sourceTree = "<group>"; };
 		ADA4A8DE20E71975006400F3 /* JYPersonEditInformationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYPersonEditInformationViewController.m; sourceTree = "<group>"; };
 		ADA4A8E020E719EB006400F3 /* JYInformaitonHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYInformaitonHeaderView.h; sourceTree = "<group>"; };
@@ -2011,9 +2011,9 @@
 		0C9817DE1DFFBC070016AD20 = {
 			isa = PBXGroup;
 			children = (
-				ADA232FB2106223000491D6F /* SobotKit.bundle */,
-				ADA232FC2106223100491D6F /* SobotLocalizable.strings */,
-				ADA232FA2106222F00491D6F /* ZCEmojiExpression.bundle */,
+				AD7A06EC2108D62200D3AAB4 /* SobotKit.bundle */,
+				AD7A06ED2108D62300D3AAB4 /* SobotLocalizable.strings */,
+				AD7A06EB2108D62100D3AAB4 /* ZCEmojiExpression.bundle */,
 				0C9817E91DFFBC070016AD20 /* WMDoctor */,
 				0C9818061DFFBC070016AD20 /* WMDoctorTests */,
 				0C9818111DFFBC070016AD20 /* WMDoctorUITests */,
@@ -5007,7 +5007,7 @@
 			files = (
 				0CAF8F691E0CEFDB0092E6A8 /* WMHealthRecordCell.xib in Resources */,
 				850142A91F3C0A0A000BA97F /* WMPatientDataCell.xib in Resources */,
-				ADA232FE2106223100491D6F /* SobotKit.bundle in Resources */,
+				AD7A06EF2108D62300D3AAB4 /* SobotKit.bundle in Resources */,
 				1D3816621ECACF1400562FCA /* WMCertificationTextTableViewCell.xib in Resources */,
 				0C9817FD1DFFBC070016AD20 /* LaunchScreen.storyboard in Resources */,
 				854180C71FCBEB7E00EA4235 /* WMMyMicroBeanCell.xib in Resources */,
@@ -5031,7 +5031,7 @@
 				0C9817FA1DFFBC070016AD20 /* Assets.xcassets in Resources */,
 				1D6829251E7BD09700422732 /* WMDoctorFirendCell.xib in Resources */,
 				1890BA611FC8058A0009339C /* WMGuidanceCollectionViewCell.xib in Resources */,
-				ADA232FD2106223100491D6F /* ZCEmojiExpression.bundle in Resources */,
+				AD7A06EE2108D62300D3AAB4 /* ZCEmojiExpression.bundle in Resources */,
 				0CAF8EEB1E08CEF10092E6A8 /* WeiMai.storyboard in Resources */,
 				180756B8204EB135001EC512 /* WMIndexQuestionCell.xib in Resources */,
 				0C9817F51DFFBC070016AD20 /* Main.storyboard in Resources */,
@@ -5046,7 +5046,7 @@
 				1890BA701FC805BB0009339C /* WMAddPictureViewCell.xib in Resources */,
 				CC2DAF2020E0EABA008B630C /* DefaultNews.xib in Resources */,
 				854180D81FD6742700EA4235 /* WMOrderCell.xib in Resources */,
-				ADA232FF2106223100491D6F /* SobotLocalizable.strings in Resources */,
+				AD7A06F02108D62300D3AAB4 /* SobotLocalizable.strings in Resources */,
 				1D68291A1E7ABBCE00422732 /* WMVIPPatientTableViewCell.xib in Resources */,
 				0CEB2EB81E0CF81E0070119A /* WMNewPatienReportCell.xib in Resources */,
 				1D38166C1ECACF8100562FCA /* WMCertificationExampleCell.xib in Resources */,
