@@ -11,6 +11,7 @@
 #import "JYFindPassWordViewController.h"//忘记密码
 #import "JYFastLogInViewController.h"//快捷登录
 #import "JYFirstLogInViewController.h"//首次登录
+#import <AFNetworking.h>
 @interface JYLoginViewController ()
 
 @property (nonatomic, strong) JYLoninView *loginView;
@@ -87,7 +88,21 @@
 
 #pragma mark - 登录点击
 -(void)click_loginButton{
-    
+    //13122221111
+//    NSDictionary *param = @{
+//                            @"tel" : @"13122221111",// _firstLogInView.phoneNumberLabel.text,
+//                            @"password" : self.loginView.passWordTextField.text
+//                            };
+//
+//    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+//    [manager GET:@"http://39.104.124.199:8080/jeecmsv9f/jyqss/mobile/user/loginOnByPwd" parameters:param progress:nil success:
+//     ^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//         NSLog(@"请求成功---%@---%@",responseObject,[responseObject class]);
+//         [self.navigationController popViewControllerAnimated:YES];
+//     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//         NSLog(@"请求失败--%@",error);
+//     }];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 #pragma mark - 微信登录按钮
 -(void)click_weChatButton{

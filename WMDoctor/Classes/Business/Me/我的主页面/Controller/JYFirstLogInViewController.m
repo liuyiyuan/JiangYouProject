@@ -9,6 +9,8 @@
 #import "JYFirstLogInViewController.h"
 #import "JYFirstLogInView.h"
 #import "UIButton+EWTimer.h"
+#import "JYSetPasswordAPIManager.h"
+
 @interface JYFirstLogInViewController ()
 
 @property(nonatomic,strong)JYFirstLogInView *firstLogInView;//找回密码
@@ -45,6 +47,18 @@
 
 #pragma mark - 登录
 -(void)click_loginBtn{
+    NSDictionary *param = @{
+                            @"tel" : @"13122221111",//_firstLogInView.phoneNumberLabel.text,
+                            @"password" : _firstLogInView.passWordTextField.text
+                            };
     
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    [manager GET:@"http://39.104.124.199:8080/jeecmsv9f/jyqss/mobile/user/setPassword" parameters:param progress:nil success:
+     ^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+         NSLog(@"请求成功---%@---%@",responseObject,[responseObject class]);
+         [self.navigationController popViewControllerAnimated:YES];
+     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+         NSLog(@"请求失败--%@",error);
+     }];
 }
 @end

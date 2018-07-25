@@ -73,7 +73,7 @@ static NSString * const kNetworkTestURL = @"https://www.baidu.com";
     if (self.window.rootViewController != nil) {
         self.window.rootViewController = nil;
     }
-    UITabBarController * tabBarController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"LaunchAdvertVC"];
+    UITabBarController * tabBarController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"WMNavgationController"];
     self.window.rootViewController = tabBarController;
 }
 

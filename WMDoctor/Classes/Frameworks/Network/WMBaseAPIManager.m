@@ -52,7 +52,7 @@ static NSTimeInterval const kRequestTimeoutInterval = 60;
 //        AFJSONResponseSerializer *responseSerializer = [AFJSONResponseSerializer serializer];
 //        responseSerializer.removesKeysWithNullValues = YES;
 //        responseSerializer.acceptableContentTypes = [NSSet setWithObjects: @"text/plain", nil];
-        _manager.responseSerializer = responseSerializer;
+//        _manager.responseSerializer = responseSerializer;
         
         if ([self conformsToProtocol:@protocol(WMAPIManager)]) {
             self.child = (NSObject<WMAPIManager>*)self;
@@ -236,33 +236,34 @@ static NSTimeInterval const kRequestTimeoutInterval = 60;
     
     if (!_myFormDataBlock) {
         
-        /*
+        
         dataTask = [self.manager dataTaskWithHTTPMethod:methodType URLString:urlStr parameters:param uploadProgress:^(NSProgress *uploadProgress) {
+            NSLog(@"upload progress : %@", uploadProgress);
             //上传进度
         } downloadProgress:^(NSProgress *downloadProgress) {
+            NSLog(@"download progress : %@", downloadProgress);
             //下载进度
         } success:^(NSURLSessionDataTask * _Nonnull task, id _Nonnull responseObject) {
-            
-            mySuccessBlock(task,responseObject);
-            
+            NSLog(@"upload success : %@", responseObject);
+//            mySuccessBlock(task,responseObject);
+
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            
-            myErrorBlock(task,error);
+            NSLog(@"upload error : %@", error);
+//            myErrorBlock(task,error);
         }];
         
-        */
         
         
-        [self.manager GET:urlStr parameters:param progress:nil success:
-         ^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-             NSString *tmpStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-             NSString *result = [FSAES128 AES128DecryptString:tmpStr];
-             NSDictionary *dic = [self dictionaryWithJsonString:result];
-             mySuccessBlock(task, dic);
-         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-             NSLog(@"请求失败--%@",error);
-             myErrorBlock([NSURLSessionDataTask alloc], error);
-         }];
+//        [self.manager GET:urlStr parameters:param progress:nil success:
+//         ^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//             NSString *tmpStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+//             NSString *result = [FSAES128 AES128DecryptString:tmpStr];
+//             NSDictionary *dic = [self dictionaryWithJsonString:result];
+//             mySuccessBlock(task, dic);
+//         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//             NSLog(@"请求失败--%@",error);
+//             myErrorBlock([NSURLSessionDataTask alloc], error);
+//         }];
         
     }else{
         dataTask = [self.manager POST:urlStr parameters:param constructingBodyWithBlock:_myFormDataBlock progress:^(NSProgress * _Nonnull uploadProgress) {

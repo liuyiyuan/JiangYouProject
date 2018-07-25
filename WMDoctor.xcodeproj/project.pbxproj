@@ -541,6 +541,9 @@
 		85A74BD01F9844B300F1453F /* WMIncomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85A74BCF1F9844B300F1453F /* WMIncomeCell.m */; };
 		85A74BD31F984C1700F1453F /* WMIncomeAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85A74BD21F984C1700F1453F /* WMIncomeAPIManager.m */; };
 		85AA97F81FD8E53600EAF5A4 /* WMFriendCircleSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85AA97F71FD8E53600EAF5A4 /* WMFriendCircleSetViewController.m */; };
+		85BE0CAB21075DFA002B964C /* JYLoginNewAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BE0CAA21075DFA002B964C /* JYLoginNewAPIManager.m */; };
+		85BE0CAE21077020002B964C /* JYGetVerificationCodeAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BE0CAD21077020002B964C /* JYGetVerificationCodeAPIManager.m */; };
+		85BE0CB121077518002B964C /* JYSetPasswordAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BE0CB021077518002B964C /* JYSetPasswordAPIManager.m */; };
 		85BF09851FEBA7ED003BB0FC /* WMQuestionsSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BF09841FEBA7ED003BB0FC /* WMQuestionsSettingViewController.m */; };
 		85C081DF20215D7B0095B224 /* WMDocChatCircleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C081DE20215D7B0095B224 /* WMDocChatCircleVC.m */; };
 		85CF6CCA20A599B900FCDD21 /* UISearchBar+WMLeftPlaceholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CF6CC920A599B900FCDD21 /* UISearchBar+WMLeftPlaceholder.m */; };
@@ -1670,6 +1673,12 @@
 		85A74BD21F984C1700F1453F /* WMIncomeAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMIncomeAPIManager.m; sourceTree = "<group>"; };
 		85AA97F61FD8E53600EAF5A4 /* WMFriendCircleSetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMFriendCircleSetViewController.h; sourceTree = "<group>"; };
 		85AA97F71FD8E53600EAF5A4 /* WMFriendCircleSetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMFriendCircleSetViewController.m; sourceTree = "<group>"; };
+		85BE0CA921075DFA002B964C /* JYLoginNewAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYLoginNewAPIManager.h; sourceTree = "<group>"; };
+		85BE0CAA21075DFA002B964C /* JYLoginNewAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYLoginNewAPIManager.m; sourceTree = "<group>"; };
+		85BE0CAC21077020002B964C /* JYGetVerificationCodeAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYGetVerificationCodeAPIManager.h; sourceTree = "<group>"; };
+		85BE0CAD21077020002B964C /* JYGetVerificationCodeAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYGetVerificationCodeAPIManager.m; sourceTree = "<group>"; };
+		85BE0CAF21077518002B964C /* JYSetPasswordAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYSetPasswordAPIManager.h; sourceTree = "<group>"; };
+		85BE0CB021077518002B964C /* JYSetPasswordAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYSetPasswordAPIManager.m; sourceTree = "<group>"; };
 		85BF09831FEBA7ED003BB0FC /* WMQuestionsSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMQuestionsSettingViewController.h; sourceTree = "<group>"; };
 		85BF09841FEBA7ED003BB0FC /* WMQuestionsSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMQuestionsSettingViewController.m; sourceTree = "<group>"; };
 		85C081DD20215D7B0095B224 /* WMDocChatCircleVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMDocChatCircleVC.h; sourceTree = "<group>"; };
@@ -4539,6 +4548,26 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		85BE0CA421075CA9002B964C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		85BE0CA521075CBE002B964C /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				85BE0CA921075DFA002B964C /* JYLoginNewAPIManager.h */,
+				85BE0CAA21075DFA002B964C /* JYLoginNewAPIManager.m */,
+				85BE0CAC21077020002B964C /* JYGetVerificationCodeAPIManager.h */,
+				85BE0CAD21077020002B964C /* JYGetVerificationCodeAPIManager.m */,
+				85BE0CAF21077518002B964C /* JYSetPasswordAPIManager.h */,
+				85BE0CB021077518002B964C /* JYSetPasswordAPIManager.m */,
+			);
+			path = APIManager;
+			sourceTree = "<group>";
+		};
 		85C081DB20215CF60095B224 /* 医聊圈 */ = {
 			isa = PBXGroup;
 			children = (
@@ -4775,18 +4804,12 @@
 		CCA4FC4E20E31CD8000A783A /* 我的主页面 */ = {
 			isa = PBXGroup;
 			children = (
+				85BE0CA521075CBE002B964C /* APIManager */,
+				85BE0CA421075CA9002B964C /* Model */,
 				CCA4FC5120E31CFC000A783A /* Controller */,
 				CCA4FC5020E31CEE000A783A /* View */,
-				CCA4FC4F20E31CE4000A783A /* Model */,
 			);
 			path = "我的主页面";
-			sourceTree = "<group>";
-		};
-		CCA4FC4F20E31CE4000A783A /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		CCA4FC5020E31CEE000A783A /* View */ = {
@@ -5247,6 +5270,7 @@
 				0C5CB0831E1DEBC1005AF239 /* WMDoctor.xcdatamodeld in Sources */,
 				18F5B6801E149E7D0051C60E /* WMAdvertModel.m in Sources */,
 				18237EE81EA78CE000C30F51 /* WMServiceUpdatePriceAPIManager.m in Sources */,
+				85BE0CB121077518002B964C /* JYSetPasswordAPIManager.m in Sources */,
 				854180BC1FCBE2DD00EA4235 /* WMMyMicroBeanViewController.m in Sources */,
 				18045B4D1E7B8BD60021D39A /* WMMyContactsViewController.m in Sources */,
 				ADA4A8EB20E89380006400F3 /* JYInformationButtonArrayView.m in Sources */,
@@ -5380,6 +5404,7 @@
 				18F73BDB20295684000A7D11 /* WMCardPopupView.m in Sources */,
 				0CB61DEB1E4D68660019AC2A /* UIImage+Generate.m in Sources */,
 				180A36B61E235F2A00124839 /* WMShareWebViewController.m in Sources */,
+				85BE0CAB21075DFA002B964C /* JYLoginNewAPIManager.m in Sources */,
 				ADA4A8DF20E71975006400F3 /* JYPersonEditInformationViewController.m in Sources */,
 				1D2734811E5EB4F600CBD97F /* WMAllPatientTableViewCell.m in Sources */,
 				1DE56A9A1E114D3200B93397 /* WMJSONModel.m in Sources */,
@@ -5405,6 +5430,7 @@
 				18328A2D1F1470F300F87E01 /* STKHTTPDataSource.m in Sources */,
 				186ADFE11ECADDEA0070288B /* WMGetPatientCommentsAPIManager.m in Sources */,
 				18FC06C91E1BB14900A59B4E /* WMOrderListModel.m in Sources */,
+				85BE0CAE21077020002B964C /* JYGetVerificationCodeAPIManager.m in Sources */,
 				18328A2E1F1470F300F87E01 /* STKLocalFileDataSource.m in Sources */,
 				1D2AEAD11E1E3EA10026DB19 /* WMPatientsHealthModel.m in Sources */,
 				1D68292B1E81263600422732 /* WMRecommendDocViewController.m in Sources */,
