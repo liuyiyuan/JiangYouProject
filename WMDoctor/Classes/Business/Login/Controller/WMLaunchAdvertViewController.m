@@ -114,6 +114,7 @@
     };
     
     
+    
     LoginModel * model = [WMLoginCache getDiskLoginModel];
     if (!model) {   //如果没有LoginModel，直接跳入登陆页面
         loginOutBlock();

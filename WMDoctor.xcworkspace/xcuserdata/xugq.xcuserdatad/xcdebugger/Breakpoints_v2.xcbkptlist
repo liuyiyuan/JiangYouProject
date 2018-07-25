@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WMDoctor/Classes/Business/AppDelegate/AppDelegate.m"
-            timestampString = "554220817.2555881"
+            timestampString = "554227538.20294"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "385"
-            endingLineNumber = "385"
+            startingLineNumber = "387"
+            endingLineNumber = "387"
             landmarkName = "-userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WMDoctor/Classes/Business/AppDelegate/AppDelegate.m"
-            timestampString = "554220817.255916"
+            timestampString = "554227538.203016"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "350"
-            endingLineNumber = "350"
+            startingLineNumber = "352"
+            endingLineNumber = "352"
             landmarkName = "-application:didReceiveRemoteNotification:fetchCompletionHandler:"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,29 +42,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WMDoctor/Classes/Business/AppDelegate/AppDelegate.m"
-            timestampString = "554220817.256124"
+            timestampString = "554227538.203072"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "396"
-            endingLineNumber = "396"
+            startingLineNumber = "398"
+            endingLineNumber = "398"
             landmarkName = "AppDelegate"
             landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WMDoctor/Classes/Business/AppDelegate/AppDelegate.m"
-            timestampString = "554220817.256341"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "221"
-            endingLineNumber = "221"
-            landmarkName = "-kLoginInSuccessAction:"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

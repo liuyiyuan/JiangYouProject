@@ -160,6 +160,8 @@ static NSString * const kNetworkTestURL = @"https://www.baidu.com";
     // 添加用户画像
     [[ZCLibClient getZCLibClient] initSobotSDK:@"af7f8ef937cc49de8eb9a603ea5a9bf4"];
     
+    [self loadLoginView];
+    
     
     return YES;
 }

@@ -89,12 +89,15 @@
 #pragma mark - 登录点击
 -(void)click_loginButton{
     //13122221111
-//    NSDictionary *param = @{
-//                            @"tel" : @"13122221111",// _firstLogInView.phoneNumberLabel.text,
-//                            @"password" : self.loginView.passWordTextField.text
-//                            };
-//
-//    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    AFHTTPResponseSerializer *responseSerializer = [AFHTTPResponseSerializer serializer];
+    responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
+    NSDictionary *param = @{
+                            @"tel" : @"13122221111",// _firstLogInView.phoneNumberLabel.text,
+                            @"password" : self.loginView.passWordTextField.text
+                            };
+    NSLog(@"password : %@", self.loginView.passWordTextField.text);
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+//    manager.responseSerializer = responseSerializer;
 //    [manager GET:@"http://39.104.124.199:8080/jeecmsv9f/jyqss/mobile/user/loginOnByPwd" parameters:param progress:nil success:
 //     ^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
 //         NSLog(@"请求成功---%@---%@",responseObject,[responseObject class]);
@@ -102,7 +105,31 @@
 //     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
 //         NSLog(@"请求失败--%@",error);
 //     }];
-    [self.navigationController popViewControllerAnimated:YES];
+    
+    
+//    [[NSNotificationCenter defaultCenter] postNotificationName:kLoginInSuccessNotification
+//                                                        object:nil
+//                                                      userInfo:nil];
+    
+    NSDictionary *dict = @{
+                           @"tel":@"15395713725",
+                           @"password":@"1"
+                           };
+    //第一个参数:请求路径(NSString) (URL地址后面无需添加参数)
+    //第二个参数:要发送给服务器的参数 (传NSDictionary)
+    //第三个参数:progress 进度回调
+    //第四个参数:success 成功的回调
+    //responseObject:响应体(内部默认已经做了JSON的反序列处理)
+    //第五个参数:failure 失败的回调
+    [manager POST:@"http://39.104.124.199:8080/jeecmsv9f/jyqss/mobile/user/setPassword" parameters:dict progress:nil success:
+     ^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+         NSLog(@"请求成功---%@---%@",responseObject,[responseObject class]);
+         
+     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+         
+         NSLog(@"请求失败--%@",error);
+     }];
+
 }
 #pragma mark - 微信登录按钮
 -(void)click_weChatButton{
