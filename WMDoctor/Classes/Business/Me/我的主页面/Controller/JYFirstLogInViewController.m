@@ -53,14 +53,6 @@
                             };
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-//    [manager GET:@"http://39.104.124.199:8080/jeecmsv9f/jyqss/mobile/user/setPassword" parameters:param progress:nil success:
-//     ^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//         NSLog(@"请求成功---%@---%@",responseObject,[responseObject class]);
-//         [self.navigationController popViewControllerAnimated:YES];
-//     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//         NSLog(@"请求失败--%@",error);
-//     }];
-    
     NSDictionary *dict = @{
                            @"tel":@"15395713725",
                            @"password":@"1"

@@ -12,6 +12,10 @@
 #import "JYFastLogInViewController.h"//快捷登录
 #import "JYFirstLogInViewController.h"//首次登录
 #import <AFNetworking.h>
+#import "JYLoginNewAPIManager.h"
+#import "FSAES128.h"
+//#import "JYLoginModel.h"
+#import "JYLoginNewModel.h"
 @interface JYLoginViewController ()
 
 @property (nonatomic, strong) JYLoninView *loginView;
@@ -88,48 +92,29 @@
 
 #pragma mark - 登录点击
 -(void)click_loginButton{
-    //13122221111
-    AFHTTPResponseSerializer *responseSerializer = [AFHTTPResponseSerializer serializer];
-    responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
-    NSDictionary *param = @{
-                            @"tel" : @"13122221111",// _firstLogInView.phoneNumberLabel.text,
-                            @"password" : self.loginView.passWordTextField.text
-                            };
-    NSLog(@"password : %@", self.loginView.passWordTextField.text);
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-//    manager.responseSerializer = responseSerializer;
-//    [manager GET:@"http://39.104.124.199:8080/jeecmsv9f/jyqss/mobile/user/loginOnByPwd" parameters:param progress:nil success:
-//     ^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//         NSLog(@"请求成功---%@---%@",responseObject,[responseObject class]);
-//         [self.navigationController popViewControllerAnimated:YES];
-//     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//         NSLog(@"请求失败--%@",error);
-//     }];
-    
-    
-//    [[NSNotificationCenter defaultCenter] postNotificationName:kLoginInSuccessNotification
-//                                                        object:nil
-//                                                      userInfo:nil];
-    
-    NSDictionary *dict = @{
+    NSDictionary *param = @{
                            @"tel":@"15395713725",
                            @"password":@"1"
                            };
-    //第一个参数:请求路径(NSString) (URL地址后面无需添加参数)
-    //第二个参数:要发送给服务器的参数 (传NSDictionary)
-    //第三个参数:progress 进度回调
-    //第四个参数:success 成功的回调
-    //responseObject:响应体(内部默认已经做了JSON的反序列处理)
-    //第五个参数:failure 失败的回调
-    [manager POST:@"http://39.104.124.199:8080/jeecmsv9f/jyqss/mobile/user/setPassword" parameters:dict progress:nil success:
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    [manager POST:@"http://39.104.124.199:8080/jeecmsv9f/jyqss/mobile/user/loginOnByPwd" parameters:param progress:nil success:
      ^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-         NSLog(@"请求成功---%@---%@",responseObject,[responseObject class]);
+         NSString *tmpStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+         NSString *result = [FSAES128 AES128DecryptString:tmpStr];
+         NSDictionary *dic = [self dictionaryWithJsonString:result];
+         NSLog(@"dic : %@", dic);
+         NSDictionary *body = [dic objectForKey:@"body"];
+//         JYLoginNewModel *login = [[JYLoginNewModel alloc] initWithDictionary:body error:nil];
+//         [[NSUserDefaults standardUserDefaults] setObject:login forKey:@"JYLoginUser"];
+//         [[NSNotificationCenter defaultCenter] postNotificationName:kLoginInSuccessNotification
+//                                                             object:nil
+//                                                           userInfo:nil];
          
      } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-         
+
          NSLog(@"请求失败--%@",error);
      }];
-
 }
 #pragma mark - 微信登录按钮
 -(void)click_weChatButton{
@@ -140,5 +125,25 @@
 -(void)click_sqqButton{
     
 }
+
+- (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString
+{
+    if (jsonString == nil) {
+        return nil;
+    }
+    
+    NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *err;
+    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData
+                                                        options:NSJSONReadingMutableContainers
+                                                          error:&err];
+    if(err)
+    {
+        NSLog(@"json解析失败：%@",err);
+        return nil;
+    }
+    return dic;
+}
+
 @end
 

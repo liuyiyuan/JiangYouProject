@@ -15,7 +15,7 @@
 }
 
 - (HTTPMethodType)requestType{
-    return Method_GET;
+    return Method_POST;
 }
 
 - (LoadingEffertType)loadingEffertType{

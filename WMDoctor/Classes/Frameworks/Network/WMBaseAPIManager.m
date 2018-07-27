@@ -78,7 +78,8 @@ static NSTimeInterval const kRequestTimeoutInterval = 60;
 - (NSInteger)loadDataWithParams:(NSDictionary *)param withSuccess:(void (^)(NSURLSessionDataTask *task, id responseObject))success withFailure:(void (^)(ResponseResult *errorResult))failure
 {
     NSString * urlStr = self.child.methodName;
-    _manager.requestSerializer = [_requestSerializerGenerate generateHeaderWithType:self.child.requestType withURL:urlStr withParam:param];
+//    _manager.requestSerializer = [_requestSerializerGenerate generateHeaderWithType:self.child.requestType withURL:urlStr withParam:param];
+    _manager.requestSerializer = [AFHTTPRequestSerializer serializer];
    
     if ([self.child respondsToSelector:@selector(requestTimeoutInterval)]) {
         _manager.requestSerializer.timeoutInterval = self.child.requestTimeoutInterval;
@@ -234,7 +235,7 @@ static NSTimeInterval const kRequestTimeoutInterval = 60;
     
     NSURLSessionDataTask *dataTask;
     
-    if (!_myFormDataBlock) {
+    if ([methodType isEqualToString:@"GET"]) {
         
         
         dataTask = [self.manager dataTaskWithHTTPMethod:methodType URLString:urlStr parameters:param uploadProgress:^(NSProgress *uploadProgress) {
@@ -254,28 +255,39 @@ static NSTimeInterval const kRequestTimeoutInterval = 60;
         
         
         
-//        [self.manager GET:urlStr parameters:param progress:nil success:
-//         ^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//             NSString *tmpStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-//             NSString *result = [FSAES128 AES128DecryptString:tmpStr];
-//             NSDictionary *dic = [self dictionaryWithJsonString:result];
-//             mySuccessBlock(task, dic);
-//         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//             NSLog(@"请求失败--%@",error);
-//             myErrorBlock([NSURLSessionDataTask alloc], error);
-//         }];
+        [self.manager GET:urlStr parameters:param progress:nil success:
+         ^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+             NSString *tmpStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+             NSString *result = [FSAES128 AES128DecryptString:tmpStr];
+             NSDictionary *dic = [self dictionaryWithJsonString:result];
+             mySuccessBlock(task, dic);
+         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+             NSLog(@"请求失败--%@",error);
+             myErrorBlock([NSURLSessionDataTask alloc], error);
+         }];
         
     }else{
-        dataTask = [self.manager POST:urlStr parameters:param constructingBodyWithBlock:_myFormDataBlock progress:^(NSProgress * _Nonnull uploadProgress) {
-            //上传进度
-        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            mySuccessBlock(task,responseObject);
+//        dataTask = [self.manager POST:urlStr parameters:param constructingBodyWithBlock:_myFormDataBlock progress:^(NSProgress * _Nonnull uploadProgress) {
+//            //上传进度
+//        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//            mySuccessBlock(task,responseObject);
+//        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//            myErrorBlock(task,error);
+//        }];
+        AFHTTPSessionManager *APIManager = [AFHTTPSessionManager manager];
+        APIManager.requestSerializer = [AFHTTPRequestSerializer serializer];
+        urlStr = [NSString stringWithFormat:@"http://39.104.124.199:8080%@", urlStr];
+        [APIManager POST:urlStr parameters:param progress:nil success:
+              ^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                  NSLog(@"task : %@", task);
+                  NSLog(@"请求成功---%@---%@",responseObject,[responseObject class]);
+
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            myErrorBlock(task,error);
+                  NSLog(@"请求失败--%@",error);
         }];
     }
     
-    [dataTask resume];
+//    [dataTask resume];
     
     return 0;
 }

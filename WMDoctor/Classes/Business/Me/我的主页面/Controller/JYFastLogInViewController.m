@@ -53,27 +53,7 @@
         [_fastLogInView.getCodeBtn setTitle:@"重新获取" forState:UIControlStateNormal];
         
     }];
-    NSLog(@"phonenumber : %@", _fastLogInView.phoneNumberTextField.text);
-    JYGetVerificationCodeAPIManager *getVerifCodeAPIManager = [[JYGetVerificationCodeAPIManager alloc] init];
-    NSDictionary *param = @{
-                            @"tel" : _fastLogInView.phoneNumberTextField.text
-                            };
-    [getVerifCodeAPIManager loadDataWithParams:param withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
-        NSLog(@"getVerifCode data : %@", responseObject);
-    } withFailure:^(ResponseResult *errorResult) {
-        NSLog(@"getVerifCode error : %@", errorResult);
-    }];
     
-    AFHTTPResponseSerializer *responseSerializer = [AFHTTPResponseSerializer serializer];
-    responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-        manager.responseSerializer = responseSerializer;
-    [manager GET:@"http://39.104.124.199:8080/jeecmsv9f/jyqss/mobile/user/loginOnByValidCode?tel=13122221111" parameters:@{} progress:nil success:
-     ^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-         NSLog(@"请求成功---%@---%@",responseObject,[responseObject class]);
-     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-         NSLog(@"请求失败--%@",error);
-     }];
     
 }
 #pragma mark - 登录

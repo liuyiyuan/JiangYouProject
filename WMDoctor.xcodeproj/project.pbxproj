@@ -546,6 +546,8 @@
 		85BE0CB121077518002B964C /* JYSetPasswordAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BE0CB021077518002B964C /* JYSetPasswordAPIManager.m */; };
 		85BF09851FEBA7ED003BB0FC /* WMQuestionsSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BF09841FEBA7ED003BB0FC /* WMQuestionsSettingViewController.m */; };
 		85C081DF20215D7B0095B224 /* WMDocChatCircleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C081DE20215D7B0095B224 /* WMDocChatCircleVC.m */; };
+		85CAB430210A030E00884A54 /* JYSameCityAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CAB42F210A030D00884A54 /* JYSameCityAPIManager.m */; };
+		85CAB439210A1EBF00884A54 /* JYLoginNewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CAB438210A1EBF00884A54 /* JYLoginNewModel.m */; };
 		85CF6CCA20A599B900FCDD21 /* UISearchBar+WMLeftPlaceholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CF6CC920A599B900FCDD21 /* UISearchBar+WMLeftPlaceholder.m */; };
 		85CF6D0020AE7A8F00FCDD21 /* WMMedicalCircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CF6CFF20AE7A8F00FCDD21 /* WMMedicalCircleViewController.m */; };
 		85CF6D0520AEA6E600FCDD21 /* WMMedicalCircleAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CF6D0420AEA6E600FCDD21 /* WMMedicalCircleAPIManager.m */; };
@@ -1683,6 +1685,10 @@
 		85BF09841FEBA7ED003BB0FC /* WMQuestionsSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMQuestionsSettingViewController.m; sourceTree = "<group>"; };
 		85C081DD20215D7B0095B224 /* WMDocChatCircleVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMDocChatCircleVC.h; sourceTree = "<group>"; };
 		85C081DE20215D7B0095B224 /* WMDocChatCircleVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMDocChatCircleVC.m; sourceTree = "<group>"; };
+		85CAB42E210A030D00884A54 /* JYSameCityAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYSameCityAPIManager.h; sourceTree = "<group>"; };
+		85CAB42F210A030D00884A54 /* JYSameCityAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYSameCityAPIManager.m; sourceTree = "<group>"; };
+		85CAB437210A1EBF00884A54 /* JYLoginNewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYLoginNewModel.h; sourceTree = "<group>"; };
+		85CAB438210A1EBF00884A54 /* JYLoginNewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYLoginNewModel.m; sourceTree = "<group>"; };
 		85CF6CC820A599B900FCDD21 /* UISearchBar+WMLeftPlaceholder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+WMLeftPlaceholder.h"; sourceTree = "<group>"; };
 		85CF6CC920A599B900FCDD21 /* UISearchBar+WMLeftPlaceholder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+WMLeftPlaceholder.m"; sourceTree = "<group>"; };
 		85CF6CFE20AE7A8F00FCDD21 /* WMMedicalCircleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMMedicalCircleViewController.h; sourceTree = "<group>"; };
@@ -2502,6 +2508,7 @@
 		0CD6E2571DFFCAD700E75DB5 /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				85CAB42C210A02DF00884A54 /* FirstPage */,
 				CC2B24F520EF10750050D5B2 /* JYCircle */,
 				858836C520E3DEDF00DE928F /* ShoppingMall */,
 				188ACA842044FCA200A54692 /* New */,
@@ -4551,6 +4558,8 @@
 		85BE0CA421075CA9002B964C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				85CAB437210A1EBF00884A54 /* JYLoginNewModel.h */,
+				85CAB438210A1EBF00884A54 /* JYLoginNewModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -4585,6 +4594,23 @@
 				85CF6CFF20AE7A8F00FCDD21 /* WMMedicalCircleViewController.m */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		85CAB42C210A02DF00884A54 /* FirstPage */ = {
+			isa = PBXGroup;
+			children = (
+				85CAB42D210A02EA00884A54 /* APIManager */,
+			);
+			path = FirstPage;
+			sourceTree = "<group>";
+		};
+		85CAB42D210A02EA00884A54 /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				85CAB42E210A030D00884A54 /* JYSameCityAPIManager.h */,
+				85CAB42F210A030D00884A54 /* JYSameCityAPIManager.m */,
+			);
+			path = APIManager;
 			sourceTree = "<group>";
 		};
 		85CF6CC720A5997F00FCDD21 /* UISearchBarCategories */ = {
@@ -5283,6 +5309,7 @@
 				1D3B765A1E1531DB0035EE65 /* WMRCChatListSystemCell.m in Sources */,
 				183287F81F12031300F87E01 /* XHSegmentViewController.m in Sources */,
 				1D29FAAC1E1D120100472F0E /* WMPatientStateModel.m in Sources */,
+				85CAB430210A030E00884A54 /* JYSameCityAPIManager.m in Sources */,
 				CC2B24F820EF10AA0050D5B2 /* JYCircleViewController.m in Sources */,
 				1D3B763C1E1393960035EE65 /* WMPatientReportedParamModel.m in Sources */,
 				AD526A1120E8BC7300D4BF85 /* JYFindPassWordView.m in Sources */,
@@ -5617,6 +5644,7 @@
 				1890BA751FC805D00009339C /* WMLeadPictureViewCell.m in Sources */,
 				1840A71C1E0CEF4400D8E677 /* WMGuidePageViewController.m in Sources */,
 				1890BA711FC805BB0009339C /* WMAddPictureViewCell.m in Sources */,
+				85CAB439210A1EBF00884A54 /* JYLoginNewModel.m in Sources */,
 				18F5B6891E14E3CC0051C60E /* WMChangleOnlineStatusAPIManager.m in Sources */,
 				183287E81F10CCFE00F87E01 /* WMAllReportListModel.m in Sources */,
 				183287D01F0E2B5D00F87E01 /* WMReportDetailModel.m in Sources */,
