@@ -10,6 +10,7 @@
 #import "JYFastLogInView.h"
 #import "UIButton+EWTimer.h"
 #import "JYGetVerificationCodeAPIManager.h"
+#import "JYVerificationCodeModel.h"
 @interface JYFastLogInViewController ()
 
 @property(nonatomic,strong)JYFastLogInView *fastLogInView;//找回密码
@@ -54,6 +55,16 @@
         
     }];
     
+    NSDictionary *param = @{
+                            @"tel":@"15395713725"
+                            };
+    JYGetVerificationCodeAPIManager *getVerCodeAPIManager = [[JYGetVerificationCodeAPIManager alloc] init];
+    [getVerCodeAPIManager loadDataWithParams:param withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
+        JYVerificationCodeModel *codeModel = [[JYVerificationCodeModel alloc] initWithDictionary:responseObject error:nil];
+        NSLog(@"codeModel : %@", codeModel);
+    } withFailure:^(ResponseResult *errorResult) {
+        NSLog(@"get ver code error : %@", errorResult);
+    }];
     
 }
 #pragma mark - 登录

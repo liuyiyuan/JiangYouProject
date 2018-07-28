@@ -114,6 +114,9 @@
      } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
 
          NSLog(@"请求失败--%@",error);
+         NSData *errorData = [error.userInfo objectForKey:@"com.alamofire.serialization.response.error.data"];
+         NSString * str  =[[NSString alloc] initWithData:errorData encoding:NSUTF8StringEncoding];
+         NSLog(@"error str : %@", str);
      }];
 }
 #pragma mark - 微信登录按钮
@@ -126,24 +129,7 @@
     
 }
 
-- (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString
-{
-    if (jsonString == nil) {
-        return nil;
-    }
-    
-    NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
-    NSError *err;
-    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData
-                                                        options:NSJSONReadingMutableContainers
-                                                          error:&err];
-    if(err)
-    {
-        NSLog(@"json解析失败：%@",err);
-        return nil;
-    }
-    return dic;
-}
+
 
 @end
 

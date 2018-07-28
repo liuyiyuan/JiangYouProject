@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FSAES128.h"
 
 @interface WMBaseViewController : UIViewController
 
@@ -37,5 +38,14 @@
  *
  */
 - (void)backButtonAction:(UIBarButtonItem*)item;
+
+
+/**
+ json字符串转字典
+
+ @param jsonString <#jsonString description#>
+ @return <#return value description#>
+ */
+- (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString;
 
 @end

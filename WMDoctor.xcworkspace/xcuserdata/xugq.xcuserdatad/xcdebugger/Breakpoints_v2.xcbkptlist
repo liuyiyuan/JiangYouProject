@@ -57,29 +57,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WMDoctor/Classes/Frameworks/Network/WMBaseAPIManager.m"
-            timestampString = "554312075.183019"
+            filePath = "Pods/AFNetworking/AFNetworking/AFHTTPSessionManager.m"
+            timestampString = "554444022.7451119"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "281"
-            endingLineNumber = "281"
-            landmarkName = "-loadDataWithParams:withSuccess:withFailure:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WMDoctor/Classes/Frameworks/Network/WMBaseAPIManager.m"
-            timestampString = "554312075.183135"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "280"
-            endingLineNumber = "280"
-            landmarkName = "-loadDataWithParams:withSuccess:withFailure:"
+            startingLineNumber = "321"
+            endingLineNumber = "321"
+            landmarkName = "-initWithCoder:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
