@@ -9,6 +9,8 @@
 #import "JYFindPassWordViewController.h"
 #import "JYFindPassWordView.h"
 #import "UIButton+EWTimer.h"
+#import "JYGetVerificationCodeAPIManager.h"
+#import "JYVerificationCodeModel.h"
 @interface JYFindPassWordViewController ()
 
 @property(nonatomic,strong)JYFindPassWordView *findPassWordView;//找回密码
@@ -51,6 +53,18 @@
         [_findPassWordView.getCodeBtn setTitle:@"重新获取" forState:UIControlStateNormal];
         
     }];
+    
+    NSDictionary *param = @{
+                            @"tel":@"15395713725"
+                            };
+    JYGetVerificationCodeAPIManager *getVerCodeAPIManager = [[JYGetVerificationCodeAPIManager alloc] init];
+    [getVerCodeAPIManager loadDataWithParams:param withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
+        JYVerificationCodeModel *codeModel = [[JYVerificationCodeModel alloc] initWithDictionary:responseObject error:nil];
+        NSLog(@"codeModel : %@", codeModel);
+    } withFailure:^(ResponseResult *errorResult) {
+        NSLog(@"get ver code error : %@", errorResult);
+    }];
+    
 }
 #pragma mark - 登录
 -(void)click_loginBtn{

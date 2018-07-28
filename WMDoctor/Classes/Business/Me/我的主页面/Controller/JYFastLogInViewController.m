@@ -11,6 +11,8 @@
 #import "UIButton+EWTimer.h"
 #import "JYGetVerificationCodeAPIManager.h"
 #import "JYVerificationCodeModel.h"
+#import "JYFastLoginAPIManager.h"
+#import "JYLoginNewModel.h"
 @interface JYFastLogInViewController ()
 
 @property(nonatomic,strong)JYFastLogInView *fastLogInView;//找回密码
@@ -69,6 +71,17 @@
 }
 #pragma mark - 登录
 -(void)click_loginBtn{
-    
+    JYFastLoginAPIManager *fastLoginAPIManager = [[JYFastLoginAPIManager alloc] init];
+    NSDictionary *param = @{
+                            @"tel" : @"15395713725",
+                            @"validCode" : @""
+                            };
+    [fastLoginAPIManager loadDataWithParams:param withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"fast login data : %@", responseObject);
+        JYLoginNewModel *loginedUser = [[JYLoginNewModel alloc] initWithDictionary:responseObject error:nil];
+        NSLog(@"logined User : %@", loginedUser);
+    } withFailure:^(ResponseResult *errorResult) {
+        NSLog(@"fast login error : %@", errorResult);
+    }];
 }
 @end

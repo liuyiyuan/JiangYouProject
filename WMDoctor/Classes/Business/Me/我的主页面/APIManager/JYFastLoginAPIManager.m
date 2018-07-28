@@ -1,17 +1,17 @@
 //
-//  JYSetPasswordAPIManager.m
+//  JYFastLoginAPIManager.m
 //  WMDoctor
 //
-//  Created by xugq on 2018/7/24.
+//  Created by xugq on 2018/7/28.
 //  Copyright © 2018年 Choice. All rights reserved.
 //
 
-#import "JYSetPasswordAPIManager.h"
+#import "JYFastLoginAPIManager.h"
 
-@implementation JYSetPasswordAPIManager
+@implementation JYFastLoginAPIManager
 
 - (NSString *)methodName{
-    return @"/jeecmsv9f/jyqss/mobile/user/setPassword";
+    return @"/jeecmsv9f/jyqss/mobile/user/loginOnByValidCode";
 }
 
 - (HTTPMethodType)requestType{
@@ -21,6 +21,5 @@
 - (LoadingEffertType)loadingEffertType{
     return LoadingEffertTypeNone;
 }
-
 
 @end

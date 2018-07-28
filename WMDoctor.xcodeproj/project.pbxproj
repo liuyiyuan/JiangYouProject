@@ -549,6 +549,7 @@
 		85CAB430210A030E00884A54 /* JYSameCityAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CAB42F210A030D00884A54 /* JYSameCityAPIManager.m */; };
 		85CAB439210A1EBF00884A54 /* JYLoginNewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CAB438210A1EBF00884A54 /* JYLoginNewModel.m */; };
 		85CAB445210C210400884A54 /* JYVerificationCodeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CAB444210C210400884A54 /* JYVerificationCodeModel.m */; };
+		85CAB448210C25B600884A54 /* JYFastLoginAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CAB447210C25B600884A54 /* JYFastLoginAPIManager.m */; };
 		85CF6CCA20A599B900FCDD21 /* UISearchBar+WMLeftPlaceholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CF6CC920A599B900FCDD21 /* UISearchBar+WMLeftPlaceholder.m */; };
 		85CF6D0020AE7A8F00FCDD21 /* WMMedicalCircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CF6CFF20AE7A8F00FCDD21 /* WMMedicalCircleViewController.m */; };
 		85CF6D0520AEA6E600FCDD21 /* WMMedicalCircleAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CF6D0420AEA6E600FCDD21 /* WMMedicalCircleAPIManager.m */; };
@@ -1692,6 +1693,8 @@
 		85CAB438210A1EBF00884A54 /* JYLoginNewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYLoginNewModel.m; sourceTree = "<group>"; };
 		85CAB443210C210400884A54 /* JYVerificationCodeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYVerificationCodeModel.h; sourceTree = "<group>"; };
 		85CAB444210C210400884A54 /* JYVerificationCodeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYVerificationCodeModel.m; sourceTree = "<group>"; };
+		85CAB446210C25B600884A54 /* JYFastLoginAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYFastLoginAPIManager.h; sourceTree = "<group>"; };
+		85CAB447210C25B600884A54 /* JYFastLoginAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYFastLoginAPIManager.m; sourceTree = "<group>"; };
 		85CF6CC820A599B900FCDD21 /* UISearchBar+WMLeftPlaceholder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+WMLeftPlaceholder.h"; sourceTree = "<group>"; };
 		85CF6CC920A599B900FCDD21 /* UISearchBar+WMLeftPlaceholder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+WMLeftPlaceholder.m"; sourceTree = "<group>"; };
 		85CF6CFE20AE7A8F00FCDD21 /* WMMedicalCircleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMMedicalCircleViewController.h; sourceTree = "<group>"; };
@@ -4578,6 +4581,8 @@
 				85BE0CAD21077020002B964C /* JYGetVerificationCodeAPIManager.m */,
 				85BE0CAF21077518002B964C /* JYSetPasswordAPIManager.h */,
 				85BE0CB021077518002B964C /* JYSetPasswordAPIManager.m */,
+				85CAB446210C25B600884A54 /* JYFastLoginAPIManager.h */,
+				85CAB447210C25B600884A54 /* JYFastLoginAPIManager.m */,
 			);
 			path = APIManager;
 			sourceTree = "<group>";
@@ -5369,6 +5374,7 @@
 				CC2B250120EF126E0050D5B2 /* HYBLoopScrollView.m in Sources */,
 				1D3816851ECC2AD300562FCA /* WMGetSectionAPIManager.m in Sources */,
 				0C46812B1E28819700BDE355 /* WMUpgradecheckModel.m in Sources */,
+				85CAB448210C25B600884A54 /* JYFastLoginAPIManager.m in Sources */,
 				181A03571FDE2A5200868821 /* WMServiceSetInfoModel.m in Sources */,
 				1D83CE351E8911C40057F1F1 /* WMRCBaseChatViewController.m in Sources */,
 				1814F1E81E9CCC3E005B4260 /* WMProvinceSelectViewController.m in Sources */,

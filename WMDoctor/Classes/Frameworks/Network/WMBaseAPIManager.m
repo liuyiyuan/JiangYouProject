@@ -294,11 +294,11 @@ static NSTimeInterval const kRequestTimeoutInterval = 60;
     NSString *requestUrl = [NSString stringWithFormat:@"%@%@", baseUrl, self.child.methodName];
     if ([methodType isEqualToString:@"POST"]) {
         AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-        NSDictionary *newParam = @{
-                                   @"tel":@"15395713725"
-                                   };
+//        NSDictionary *newParam = @{
+//                                   @"tel":@"15395713725"
+//                                   };
         manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-        [manager POST:requestUrl parameters:newParam progress:nil success:
+        [manager POST:requestUrl parameters:param progress:nil success:
          ^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
              NSString *tmpStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
              NSString *result = [FSAES128 AES128DecryptString:tmpStr];

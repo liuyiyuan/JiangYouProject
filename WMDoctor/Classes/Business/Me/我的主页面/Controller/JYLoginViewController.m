@@ -92,32 +92,22 @@
 
 #pragma mark - 登录点击
 -(void)click_loginButton{
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     NSDictionary *param = @{
                            @"tel":@"15395713725",
                            @"password":@"1"
                            };
-    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    [manager POST:@"http://39.104.124.199:8080/jeecmsv9f/jyqss/mobile/user/loginOnByPwd" parameters:param progress:nil success:
-     ^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-         NSString *tmpStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-         NSString *result = [FSAES128 AES128DecryptString:tmpStr];
-         NSDictionary *dic = [self dictionaryWithJsonString:result];
-         NSLog(@"dic : %@", dic);
-         NSDictionary *body = [dic objectForKey:@"body"];
-//         JYLoginNewModel *login = [[JYLoginNewModel alloc] initWithDictionary:body error:nil];
-//         [[NSUserDefaults standardUserDefaults] setObject:login forKey:@"JYLoginUser"];
-//         [[NSNotificationCenter defaultCenter] postNotificationName:kLoginInSuccessNotification
-//                                                             object:nil
-//                                                           userInfo:nil];
-         
-     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-
-         NSLog(@"请求失败--%@",error);
-         NSData *errorData = [error.userInfo objectForKey:@"com.alamofire.serialization.response.error.data"];
-         NSString * str  =[[NSString alloc] initWithData:errorData encoding:NSUTF8StringEncoding];
-         NSLog(@"error str : %@", str);
-     }];
+    
+    JYLoginNewAPIManager *loginAPIManager = [[JYLoginNewAPIManager alloc] init];
+    [loginAPIManager loadDataWithParams:param withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"login success data : %@", responseObject);
+        JYLoginNewModel *loginUser = [[JYLoginNewModel alloc] initWithDictionary:responseObject error:nil];
+        NSLog(@"login success model : %@", loginUser);
+        [[NSNotificationCenter defaultCenter] postNotificationName:kLoginInSuccessNotification
+                                                            object:nil
+                                                          userInfo:nil];
+    } withFailure:^(ResponseResult *errorResult) {
+        NSLog(@"login error : %@", errorResult);
+    }];
 }
 #pragma mark - 微信登录按钮
 -(void)click_weChatButton{
