@@ -19,8 +19,8 @@ static NSTimeInterval const kSpaceInterval = 3*24*60*60;
 @implementation AppDelegate (Business)
 
 - (void)loadBusinessNetwork{
-    [self loadLaunchImage];
-    [self syncLoadUpgradeCheck:nil];
+//    [self loadLaunchImage];
+//    [self syncLoadUpgradeCheck:nil];
 }
 
 - (void)loadLaunchImage{

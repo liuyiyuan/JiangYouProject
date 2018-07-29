@@ -32,6 +32,7 @@
 - (Class)classType;
 - (BOOL)isHideErrorTip;
 - (NSTimeInterval)requestTimeoutInterval;
+- (HTTPPortType)portType;
 @end
 
 @class WMBaseAPIManager;

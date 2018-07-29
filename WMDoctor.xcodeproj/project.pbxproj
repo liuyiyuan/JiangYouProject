@@ -536,7 +536,6 @@
 		8588374F20E8885400DE928F /* JYLoginAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8588374E20E8885400DE928F /* JYLoginAPIManager.m */; };
 		8598823420F333F500A5AC04 /* FSAES128.m in Sources */ = {isa = PBXBuildFile; fileRef = 8598823320F333F500A5AC04 /* FSAES128.m */; };
 		8598823720F3345B00A5AC04 /* NSData+FSAES128.m in Sources */ = {isa = PBXBuildFile; fileRef = 8598823620F3345B00A5AC04 /* NSData+FSAES128.m */; };
-		8598823A20F341E400A5AC04 /* JYLoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8598823920F341E400A5AC04 /* JYLoginModel.m */; };
 		85A74BC31F98418400F1453F /* WMDoctorIncomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85A74BC21F98418400F1453F /* WMDoctorIncomeViewController.m */; };
 		85A74BD01F9844B300F1453F /* WMIncomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85A74BCF1F9844B300F1453F /* WMIncomeCell.m */; };
 		85A74BD31F984C1700F1453F /* WMIncomeAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85A74BD21F984C1700F1453F /* WMIncomeAPIManager.m */; };
@@ -553,6 +552,8 @@
 		85CAB44D210D41D800884A54 /* JYMineAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CAB44C210D41D800884A54 /* JYMineAPIManager.m */; };
 		85CAB452210D43E900884A54 /* JYMineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CAB451210D43E900884A54 /* JYMineModel.m */; };
 		85CAB455210D472000884A54 /* JYEditUserInfoAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CAB454210D472000884A54 /* JYEditUserInfoAPIManager.m */; };
+		85CAB459210DD34300884A54 /* JYShoppingMallAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CAB458210DD34200884A54 /* JYShoppingMallAPIManager.m */; };
+		85CAB45C210DDEA300884A54 /* JYShoppingMallModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CAB45B210DDEA300884A54 /* JYShoppingMallModel.m */; };
 		85CF6CCA20A599B900FCDD21 /* UISearchBar+WMLeftPlaceholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CF6CC920A599B900FCDD21 /* UISearchBar+WMLeftPlaceholder.m */; };
 		85CF6D0020AE7A8F00FCDD21 /* WMMedicalCircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CF6CFF20AE7A8F00FCDD21 /* WMMedicalCircleViewController.m */; };
 		85CF6D0520AEA6E600FCDD21 /* WMMedicalCircleAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CF6D0420AEA6E600FCDD21 /* WMMedicalCircleAPIManager.m */; };
@@ -1670,8 +1671,6 @@
 		8598823320F333F500A5AC04 /* FSAES128.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FSAES128.m; sourceTree = "<group>"; };
 		8598823520F3345B00A5AC04 /* NSData+FSAES128.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+FSAES128.h"; sourceTree = "<group>"; };
 		8598823620F3345B00A5AC04 /* NSData+FSAES128.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+FSAES128.m"; sourceTree = "<group>"; };
-		8598823820F341E400A5AC04 /* JYLoginModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYLoginModel.h; sourceTree = "<group>"; };
-		8598823920F341E400A5AC04 /* JYLoginModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYLoginModel.m; sourceTree = "<group>"; };
 		85A74BC11F98418400F1453F /* WMDoctorIncomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMDoctorIncomeViewController.h; sourceTree = "<group>"; };
 		85A74BC21F98418400F1453F /* WMDoctorIncomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMDoctorIncomeViewController.m; sourceTree = "<group>"; };
 		85A74BCE1F9844B300F1453F /* WMIncomeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMIncomeCell.h; sourceTree = "<group>"; };
@@ -1704,6 +1703,10 @@
 		85CAB451210D43E900884A54 /* JYMineModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYMineModel.m; sourceTree = "<group>"; };
 		85CAB453210D472000884A54 /* JYEditUserInfoAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYEditUserInfoAPIManager.h; sourceTree = "<group>"; };
 		85CAB454210D472000884A54 /* JYEditUserInfoAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYEditUserInfoAPIManager.m; sourceTree = "<group>"; };
+		85CAB457210DD34200884A54 /* JYShoppingMallAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYShoppingMallAPIManager.h; sourceTree = "<group>"; };
+		85CAB458210DD34200884A54 /* JYShoppingMallAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYShoppingMallAPIManager.m; sourceTree = "<group>"; };
+		85CAB45A210DDEA300884A54 /* JYShoppingMallModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYShoppingMallModel.h; sourceTree = "<group>"; };
+		85CAB45B210DDEA300884A54 /* JYShoppingMallModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYShoppingMallModel.m; sourceTree = "<group>"; };
 		85CF6CC820A599B900FCDD21 /* UISearchBar+WMLeftPlaceholder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+WMLeftPlaceholder.h"; sourceTree = "<group>"; };
 		85CF6CC920A599B900FCDD21 /* UISearchBar+WMLeftPlaceholder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+WMLeftPlaceholder.m"; sourceTree = "<group>"; };
 		85CF6CFE20AE7A8F00FCDD21 /* WMMedicalCircleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMMedicalCircleViewController.h; sourceTree = "<group>"; };
@@ -4502,6 +4505,7 @@
 		858836C520E3DEDF00DE928F /* ShoppingMall */ = {
 			isa = PBXGroup;
 			children = (
+				85CAB456210DD30D00884A54 /* APIManager */,
 				858836C820E3DF0C00DE928F /* Model */,
 				858836C720E3DF0500DE928F /* View */,
 				858836C620E3DEFA00DE928F /* ViewController */,
@@ -4530,8 +4534,8 @@
 		858836C820E3DF0C00DE928F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8598823820F341E400A5AC04 /* JYLoginModel.h */,
-				8598823920F341E400A5AC04 /* JYLoginModel.m */,
+				85CAB45A210DDEA300884A54 /* JYShoppingMallModel.h */,
+				85CAB45B210DDEA300884A54 /* JYShoppingMallModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -4668,6 +4672,15 @@
 				85CAB451210D43E900884A54 /* JYMineModel.m */,
 			);
 			path = Mine;
+			sourceTree = "<group>";
+		};
+		85CAB456210DD30D00884A54 /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				85CAB457210DD34200884A54 /* JYShoppingMallAPIManager.h */,
+				85CAB458210DD34200884A54 /* JYShoppingMallAPIManager.m */,
+			);
+			path = APIManager;
 			sourceTree = "<group>";
 		};
 		85CF6CC720A5997F00FCDD21 /* UISearchBarCategories */ = {
@@ -5577,6 +5590,7 @@
 				0CED7DAD1E1E2EA800892555 /* WMNavigationBar.m in Sources */,
 				1814F1FA1E9E28EA005B4260 /* WMSearchSchoolViewController.m in Sources */,
 				85DBE7A81FC5130B00E821E4 /* WMIntegralDetailCell.m in Sources */,
+				85CAB459210DD34300884A54 /* JYShoppingMallAPIManager.m in Sources */,
 				1DE56A941E113E5000B93397 /* MJWeiMaiHeader.m in Sources */,
 				0CD6E2AC1DFFD08900E75DB5 /* AppDelegate.m in Sources */,
 				18FC06C31E1BAAD000A59B4E /* WMOrderCountCell.m in Sources */,
@@ -5742,7 +5756,6 @@
 				0C4650BC1E1CF8F80084053A /* WMCoreDataUtil.m in Sources */,
 				85C081DF20215D7B0095B224 /* WMDocChatCircleVC.m in Sources */,
 				18328A601F1503A200F87E01 /* ASFTableViewCell.m in Sources */,
-				8598823A20F341E400A5AC04 /* JYLoginModel.m in Sources */,
 				0C46812F1E28A19400BDE355 /* WMShareData.m in Sources */,
 				186AF2F11ED45A1F00F699C6 /* WMAvatarAPIManager.m in Sources */,
 				1D38166B1ECACF8100562FCA /* WMCertificationExampleCell.m in Sources */,
@@ -5780,6 +5793,7 @@
 				186AF2E81ECED44E00F699C6 /* WMGetStatusAPIManager.m in Sources */,
 				1D38167A1ECAEF4600562FCA /* BUIView.m in Sources */,
 				AD93FEB720DDE55F00C8EF83 /* WYNetwork.m in Sources */,
+				85CAB45C210DDEA300884A54 /* JYShoppingMallModel.m in Sources */,
 				855C9BD820C8C488007383EB /* WMPatientTagViewController.m in Sources */,
 				18237ECA1EA7375B00C30F51 /* WMDoctorServiceModel.m in Sources */,
 				1D2AEACB1E1E3DDE0026DB19 /* WMPatientsHealthAPIManager.m in Sources */,

@@ -1,17 +1,17 @@
 //
-//  JYMineAPIManager.m
+//  JYShoppingMallAPIManager.m
 //  WMDoctor
 //
 //  Created by xugq on 2018/7/29.
 //  Copyright © 2018年 Choice. All rights reserved.
 //
 
-#import "JYMineAPIManager.h"
+#import "JYShoppingMallAPIManager.h"
 
-@implementation JYMineAPIManager
+@implementation JYShoppingMallAPIManager
 
 - (NSString *)methodName{
-    return @"/mobile/user/showUserInfoUti";
+    return @"/shop/eventselection.jspx";
 }
 
 - (HTTPMethodType)requestType{
@@ -23,8 +23,7 @@
 }
 
 - (HTTPPortType)portType{
-    return Port_Jyqss;
+    return Port_Jeecmsv;
 }
-
 
 @end

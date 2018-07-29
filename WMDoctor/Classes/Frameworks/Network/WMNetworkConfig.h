@@ -23,6 +23,11 @@ typedef NS_ENUM(NSUInteger, HTTPMethodType) {
     Method_DELETE
 };
 
+typedef NS_ENUM(NSUInteger, HTTPPortType){
+    Port_Jyqss=1,//其他接口
+    Port_Jeecmsv//商城相关接口
+};
+
 typedef NS_ENUM(NSInteger, LoadingEffertType)
 {
     LoadingEffertTypeNone            = 1,//无加载动画

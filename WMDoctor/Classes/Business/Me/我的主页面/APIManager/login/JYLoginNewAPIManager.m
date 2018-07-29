@@ -11,7 +11,7 @@
 @implementation JYLoginNewAPIManager
 
 - (NSString *)methodName{
-    return @"/jeecmsv9f/jyqss/mobile/user/loginOnByPwd";
+    return @"/mobile/user/loginOnByPwd";
 }
 
 - (HTTPMethodType)requestType{
@@ -22,5 +22,8 @@
     return LoadingEffertTypeNone;
 }
 
+- (HTTPPortType)portType{
+    return Port_Jyqss;
+}
 
 @end

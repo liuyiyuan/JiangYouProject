@@ -11,7 +11,7 @@
 @implementation JYSetPasswordAPIManager
 
 - (NSString *)methodName{
-    return @"/jeecmsv9f/jyqss/mobile/user/setPassword";
+    return @"/mobile/user/setPassword";
 }
 
 - (HTTPMethodType)requestType{
@@ -22,5 +22,8 @@
     return LoadingEffertTypeNone;
 }
 
+- (HTTPPortType)portType{
+    return Port_Jyqss;
+}
 
 @end

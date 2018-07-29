@@ -290,21 +290,36 @@ static NSTimeInterval const kRequestTimeoutInterval = 60;
     
 //    [dataTask resume];
     
-    NSString *baseUrl = @"http://39.104.124.199:8080";
+    NSString *baseUrl = @"http://39.104.124.199:8080/jeecmsv9f/jyqss";
+    if (self.child.portType) {
+        switch (self.child.portType) {
+            case Port_Jyqss:
+                baseUrl = @"http://39.104.124.199:8080/jeecmsv9f/jyqss";
+                break;
+            case Port_Jeecmsv:
+                baseUrl = @"http://39.104.124.199:8080/jeecmsv9f";
+                break;
+            default:
+                break;
+        }
+    }
+    
     NSString *requestUrl = [NSString stringWithFormat:@"%@%@", baseUrl, self.child.methodName];
     if ([methodType isEqualToString:@"POST"]) {
         AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-//        NSDictionary *newParam = @{
-//                                   @"tel":@"15395713725"
-//                                   };
         manager.responseSerializer = [AFHTTPResponseSerializer serializer];
         [manager POST:requestUrl parameters:param progress:nil success:
          ^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
              NSString *tmpStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-             NSString *result = [FSAES128 AES128DecryptString:tmpStr];
-             NSDictionary *dic = [self dictionaryWithJsonString:result];
-             NSLog(@"request body : %@", dic);
-             mySuccessBlock(task,dic);
+             if (self.child.portType == Port_Jyqss) {
+                 NSString *result = [FSAES128 AES128DecryptString:tmpStr];
+                 NSDictionary *dic = [self dictionaryWithJsonString:result];
+                 mySuccessBlock(task,dic);
+             } else if(self.child.portType == Port_Jeecmsv){
+                 NSDictionary *dic = [self dictionaryWithJsonString:tmpStr];
+                 mySuccessBlock(task,dic);
+             }
+             
          } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
              
              NSLog(@"请求失败--%@",error);

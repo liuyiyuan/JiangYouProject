@@ -11,7 +11,7 @@
 @implementation JYFastLoginAPIManager
 
 - (NSString *)methodName{
-    return @"/jeecmsv9f/jyqss/mobile/user/loginOnByValidCode";
+    return @"/mobile/user/loginOnByValidCode";
 }
 
 - (HTTPMethodType)requestType{
@@ -20,6 +20,10 @@
 
 - (LoadingEffertType)loadingEffertType{
     return LoadingEffertTypeNone;
+}
+
+- (HTTPPortType)portType{
+    return Port_Jyqss;
 }
 
 @end

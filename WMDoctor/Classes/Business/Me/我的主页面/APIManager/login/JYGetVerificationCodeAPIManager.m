@@ -11,7 +11,7 @@
 @implementation JYGetVerificationCodeAPIManager
 
 - (NSString *)methodName{
-    return @"/jeecmsv9f/jyqss/mobile/user/getValidCode";
+    return @"/mobile/user/getValidCode";
 }
 
 - (HTTPMethodType)requestType{
@@ -22,5 +22,8 @@
     return LoadingEffertTypeNone;
 }
 
+- (HTTPPortType)portType{
+    return Port_Jyqss;
+}
 
 @end

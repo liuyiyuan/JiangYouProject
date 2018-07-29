@@ -11,7 +11,7 @@
 @implementation JYEditUserInfoAPIManager
 
 - (NSString *)methodName{
-    return @"/jeecmsv9f/jyqss/mobile/user/editUserInfo";
+    return @"/mobile/user/editUserInfo";
 }
 
 - (HTTPMethodType)requestType{
@@ -20,6 +20,10 @@
 
 - (LoadingEffertType)loadingEffertType{
     return LoadingEffertTypeNone;
+}
+
+- (HTTPPortType)portType{
+    return Port_Jyqss;
 }
 
 @end
