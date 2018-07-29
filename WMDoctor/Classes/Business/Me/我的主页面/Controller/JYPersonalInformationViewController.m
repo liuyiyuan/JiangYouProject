@@ -10,6 +10,7 @@
 #import "JYPersonalInformationHeaderView.h"
 #import "JYAboutUsTableViewCell.h"
 #import "SelectPhotoManager.h"
+#import "JYEditUserInfoAPIManager.h"
 @interface JYPersonalInformationViewController ()<UITableViewDelegate,UITableViewDataSource,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
 @property(nonatomic,strong)JYPersonalInformationHeaderView *headerView;
@@ -25,6 +26,7 @@
     [super viewDidLoad];
     self.title = @"个人资料";
     [self configUI];
+    [self loadEditUserInfoRequest];
 }
 
 
@@ -137,4 +139,27 @@
             [mySelf.headerView.imageButton setImage:img forState:UIControlStateNormal];
         }
 }
+
+- (void)loadEditUserInfoRequest{
+    
+    JYEditUserInfoAPIManager *editUserInfo = [[JYEditUserInfoAPIManager alloc] init];
+    NSDictionary *param = @{
+                            @"userId" : @"",
+                            @"nickName" : @"",
+                            @"sex" : @"",
+                            @"introduce" : @"",
+                            @"userName" : @"",
+                            @"card" : @"",
+                            @"workId" : @"",
+                            @"workName" : @"",
+                            @"annualIncomeId" : @"",
+                            @"annualIncomeNum" : @""
+                            };
+    [editUserInfo loadDataWithParams:param withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"edit userinfo request response data : %@", responseObject);
+    } withFailure:^(ResponseResult *errorResult) {
+        NSLog(@"edit userinfo request error : %@", errorResult);
+    }];
+}
+
 @end

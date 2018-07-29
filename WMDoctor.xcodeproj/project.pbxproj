@@ -552,6 +552,7 @@
 		85CAB448210C25B600884A54 /* JYFastLoginAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CAB447210C25B600884A54 /* JYFastLoginAPIManager.m */; };
 		85CAB44D210D41D800884A54 /* JYMineAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CAB44C210D41D800884A54 /* JYMineAPIManager.m */; };
 		85CAB452210D43E900884A54 /* JYMineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CAB451210D43E900884A54 /* JYMineModel.m */; };
+		85CAB455210D472000884A54 /* JYEditUserInfoAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CAB454210D472000884A54 /* JYEditUserInfoAPIManager.m */; };
 		85CF6CCA20A599B900FCDD21 /* UISearchBar+WMLeftPlaceholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CF6CC920A599B900FCDD21 /* UISearchBar+WMLeftPlaceholder.m */; };
 		85CF6D0020AE7A8F00FCDD21 /* WMMedicalCircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CF6CFF20AE7A8F00FCDD21 /* WMMedicalCircleViewController.m */; };
 		85CF6D0520AEA6E600FCDD21 /* WMMedicalCircleAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CF6D0420AEA6E600FCDD21 /* WMMedicalCircleAPIManager.m */; };
@@ -1701,6 +1702,8 @@
 		85CAB44C210D41D800884A54 /* JYMineAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYMineAPIManager.m; sourceTree = "<group>"; };
 		85CAB450210D43E900884A54 /* JYMineModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYMineModel.h; sourceTree = "<group>"; };
 		85CAB451210D43E900884A54 /* JYMineModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYMineModel.m; sourceTree = "<group>"; };
+		85CAB453210D472000884A54 /* JYEditUserInfoAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYEditUserInfoAPIManager.h; sourceTree = "<group>"; };
+		85CAB454210D472000884A54 /* JYEditUserInfoAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYEditUserInfoAPIManager.m; sourceTree = "<group>"; };
 		85CF6CC820A599B900FCDD21 /* UISearchBar+WMLeftPlaceholder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+WMLeftPlaceholder.h"; sourceTree = "<group>"; };
 		85CF6CC920A599B900FCDD21 /* UISearchBar+WMLeftPlaceholder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+WMLeftPlaceholder.m"; sourceTree = "<group>"; };
 		85CF6CFE20AE7A8F00FCDD21 /* WMMedicalCircleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMMedicalCircleViewController.h; sourceTree = "<group>"; };
@@ -4641,6 +4644,8 @@
 			children = (
 				85CAB44B210D41D800884A54 /* JYMineAPIManager.h */,
 				85CAB44C210D41D800884A54 /* JYMineAPIManager.m */,
+				85CAB453210D472000884A54 /* JYEditUserInfoAPIManager.h */,
+				85CAB454210D472000884A54 /* JYEditUserInfoAPIManager.m */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -5696,6 +5701,7 @@
 				850142871F3AB41F000BA97F /* WMStringUtil.m in Sources */,
 				1D68291D1E7B7C1A00422732 /* WMCricleFriendViewController.m in Sources */,
 				0CAF8F041E0A256F0092E6A8 /* WMCacheModel.m in Sources */,
+				85CAB455210D472000884A54 /* JYEditUserInfoAPIManager.m in Sources */,
 				85CF6CCA20A599B900FCDD21 /* UISearchBar+WMLeftPlaceholder.m in Sources */,
 				1890BA751FC805D00009339C /* WMLeadPictureViewCell.m in Sources */,
 				1840A71C1E0CEF4400D8E677 /* WMGuidePageViewController.m in Sources */,
