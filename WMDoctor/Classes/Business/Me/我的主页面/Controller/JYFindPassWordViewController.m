@@ -61,6 +61,7 @@
     [getVerCodeAPIManager loadDataWithParams:param withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
         JYVerificationCodeModel *codeModel = [[JYVerificationCodeModel alloc] initWithDictionary:responseObject error:nil];
         NSLog(@"codeModel : %@", codeModel);
+        
     } withFailure:^(ResponseResult *errorResult) {
         NSLog(@"get ver code error : %@", errorResult);
     }];

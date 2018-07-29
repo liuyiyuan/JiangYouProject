@@ -550,6 +550,8 @@
 		85CAB439210A1EBF00884A54 /* JYLoginNewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CAB438210A1EBF00884A54 /* JYLoginNewModel.m */; };
 		85CAB445210C210400884A54 /* JYVerificationCodeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CAB444210C210400884A54 /* JYVerificationCodeModel.m */; };
 		85CAB448210C25B600884A54 /* JYFastLoginAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CAB447210C25B600884A54 /* JYFastLoginAPIManager.m */; };
+		85CAB44D210D41D800884A54 /* JYMineAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CAB44C210D41D800884A54 /* JYMineAPIManager.m */; };
+		85CAB452210D43E900884A54 /* JYMineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CAB451210D43E900884A54 /* JYMineModel.m */; };
 		85CF6CCA20A599B900FCDD21 /* UISearchBar+WMLeftPlaceholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CF6CC920A599B900FCDD21 /* UISearchBar+WMLeftPlaceholder.m */; };
 		85CF6D0020AE7A8F00FCDD21 /* WMMedicalCircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CF6CFF20AE7A8F00FCDD21 /* WMMedicalCircleViewController.m */; };
 		85CF6D0520AEA6E600FCDD21 /* WMMedicalCircleAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CF6D0420AEA6E600FCDD21 /* WMMedicalCircleAPIManager.m */; };
@@ -1695,6 +1697,10 @@
 		85CAB444210C210400884A54 /* JYVerificationCodeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYVerificationCodeModel.m; sourceTree = "<group>"; };
 		85CAB446210C25B600884A54 /* JYFastLoginAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYFastLoginAPIManager.h; sourceTree = "<group>"; };
 		85CAB447210C25B600884A54 /* JYFastLoginAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYFastLoginAPIManager.m; sourceTree = "<group>"; };
+		85CAB44B210D41D800884A54 /* JYMineAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYMineAPIManager.h; sourceTree = "<group>"; };
+		85CAB44C210D41D800884A54 /* JYMineAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYMineAPIManager.m; sourceTree = "<group>"; };
+		85CAB450210D43E900884A54 /* JYMineModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYMineModel.h; sourceTree = "<group>"; };
+		85CAB451210D43E900884A54 /* JYMineModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYMineModel.m; sourceTree = "<group>"; };
 		85CF6CC820A599B900FCDD21 /* UISearchBar+WMLeftPlaceholder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+WMLeftPlaceholder.h"; sourceTree = "<group>"; };
 		85CF6CC920A599B900FCDD21 /* UISearchBar+WMLeftPlaceholder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+WMLeftPlaceholder.m"; sourceTree = "<group>"; };
 		85CF6CFE20AE7A8F00FCDD21 /* WMMedicalCircleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMMedicalCircleViewController.h; sourceTree = "<group>"; };
@@ -4564,10 +4570,8 @@
 		85BE0CA421075CA9002B964C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				85CAB437210A1EBF00884A54 /* JYLoginNewModel.h */,
-				85CAB438210A1EBF00884A54 /* JYLoginNewModel.m */,
-				85CAB443210C210400884A54 /* JYVerificationCodeModel.h */,
-				85CAB444210C210400884A54 /* JYVerificationCodeModel.m */,
+				85CAB44F210D43B500884A54 /* Mine */,
+				85CAB44E210D43A500884A54 /* login */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -4575,14 +4579,8 @@
 		85BE0CA521075CBE002B964C /* APIManager */ = {
 			isa = PBXGroup;
 			children = (
-				85BE0CA921075DFA002B964C /* JYLoginNewAPIManager.h */,
-				85BE0CAA21075DFA002B964C /* JYLoginNewAPIManager.m */,
-				85BE0CAC21077020002B964C /* JYGetVerificationCodeAPIManager.h */,
-				85BE0CAD21077020002B964C /* JYGetVerificationCodeAPIManager.m */,
-				85BE0CAF21077518002B964C /* JYSetPasswordAPIManager.h */,
-				85BE0CB021077518002B964C /* JYSetPasswordAPIManager.m */,
-				85CAB446210C25B600884A54 /* JYFastLoginAPIManager.h */,
-				85CAB447210C25B600884A54 /* JYFastLoginAPIManager.m */,
+				85CAB44A210D41AD00884A54 /* Mine */,
+				85CAB449210D419C00884A54 /* login */,
 			);
 			path = APIManager;
 			sourceTree = "<group>";
@@ -4621,6 +4619,50 @@
 				85CAB42F210A030D00884A54 /* JYSameCityAPIManager.m */,
 			);
 			path = APIManager;
+			sourceTree = "<group>";
+		};
+		85CAB449210D419C00884A54 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				85BE0CA921075DFA002B964C /* JYLoginNewAPIManager.h */,
+				85BE0CAA21075DFA002B964C /* JYLoginNewAPIManager.m */,
+				85BE0CAC21077020002B964C /* JYGetVerificationCodeAPIManager.h */,
+				85BE0CAD21077020002B964C /* JYGetVerificationCodeAPIManager.m */,
+				85BE0CAF21077518002B964C /* JYSetPasswordAPIManager.h */,
+				85BE0CB021077518002B964C /* JYSetPasswordAPIManager.m */,
+				85CAB446210C25B600884A54 /* JYFastLoginAPIManager.h */,
+				85CAB447210C25B600884A54 /* JYFastLoginAPIManager.m */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
+		85CAB44A210D41AD00884A54 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				85CAB44B210D41D800884A54 /* JYMineAPIManager.h */,
+				85CAB44C210D41D800884A54 /* JYMineAPIManager.m */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		85CAB44E210D43A500884A54 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				85CAB437210A1EBF00884A54 /* JYLoginNewModel.h */,
+				85CAB438210A1EBF00884A54 /* JYLoginNewModel.m */,
+				85CAB443210C210400884A54 /* JYVerificationCodeModel.h */,
+				85CAB444210C210400884A54 /* JYVerificationCodeModel.m */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
+		85CAB44F210D43B500884A54 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				85CAB450210D43E900884A54 /* JYMineModel.h */,
+				85CAB451210D43E900884A54 /* JYMineModel.m */,
+			);
+			path = Mine;
 			sourceTree = "<group>";
 		};
 		85CF6CC720A5997F00FCDD21 /* UISearchBarCategories */ = {
@@ -5299,10 +5341,12 @@
 				1D6829241E7BD09700422732 /* WMDoctorFirendCell.m in Sources */,
 				85E4B6061F2AD437005F6D21 /* WMGroupRCDataManager.m in Sources */,
 				0CEB2ED71E0CFDFD0070119A /* WMDoctorMainTableViewController.m in Sources */,
+				85CAB44D210D41D800884A54 /* JYMineAPIManager.m in Sources */,
 				1855DC4B1E83C3A3001B4DDD /* WMEducationCustomModel.m in Sources */,
 				1D3B76481E14AE470035EE65 /* WMMessageTypeModel.m in Sources */,
 				1D29FAA01E1CC65500472F0E /* WMPatientsInfoAPIManager.m in Sources */,
 				AD93FEB420DDE39200C8EF83 /* WYLabelButton.m in Sources */,
+				85CAB452210D43E900884A54 /* JYMineModel.m in Sources */,
 				0C5CB0831E1DEBC1005AF239 /* WMDoctor.xcdatamodeld in Sources */,
 				18F5B6801E149E7D0051C60E /* WMAdvertModel.m in Sources */,
 				18237EE81EA78CE000C30F51 /* WMServiceUpdatePriceAPIManager.m in Sources */,

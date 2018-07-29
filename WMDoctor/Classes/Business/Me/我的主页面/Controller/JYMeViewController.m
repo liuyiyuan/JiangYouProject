@@ -14,6 +14,7 @@
 #import "JYPersonalInformationViewController.h"//个人资料
 #import "JYPersonEditInformationViewController.h"//个人信息编辑页
 #import "JYLoginViewController.h"//登录页
+#import "JYMineAPIManager.h"
 @interface JYMeViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic,strong)UITableView *meTableView;
@@ -28,13 +29,20 @@
     [super viewDidLoad];
     self.title = @"我的";
     [self configUI];
+    [self loadMineData];
 }
 
 -(void)configUI{
     [self.view addSubview:self.headerView];
     [self.view addSubview:self.meTableView];
-    
-    
+}
+
+- (void)registerNoti{
+    //登陆相关通知注册
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(kLoginInSuccessAction:)
+                                                 name:kLoginInSuccessNotification
+                                               object:nil];
 }
 
 #pragma mark - UITableViewDelegate
@@ -211,6 +219,23 @@
     [super viewWillAppear:animated];
     NSIndexPath *selected = [self.meTableView indexPathForSelectedRow];
     if(selected) [self.meTableView deselectRowAtIndexPath:selected animated:NO];
+}
+
+- (void)kLoginInSuccessAction:(NSNotification*)note{
+    [self loadMineData];
+}
+
+- (void)loadMineData{
+    JYMineAPIManager *mineAPIManager = [[JYMineAPIManager alloc] init];
+    [mineAPIManager loadDataWithParams:@{} withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"mine request response data : %@", responseObject);
+    } withFailure:^(ResponseResult *errorResult) {
+        NSLog(@"mine request error : %@", errorResult);
+    }];
+}
+
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end

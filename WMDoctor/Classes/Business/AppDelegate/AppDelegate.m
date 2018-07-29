@@ -215,12 +215,12 @@ static NSString * const kNetworkTestURL = @"https://www.baidu.com";
 - (void)kLoginInSuccessAction:(NSNotification*)note
 
 {
-    LoginModel * loginModel = [WMLoginCache getMemoryLoginModel];
-    [self setupRongCloudMessageWithLoginModel:loginModel];
+//    LoginModel * loginModel = [WMLoginCache getMemoryLoginModel];
+//    [self setupRongCloudMessageWithLoginModel:loginModel];
     [self loadMainView];
     [self loadGuide];
     [WMUserAgentUtil loadUserAgentWithPayToken:@""];    //初始化UserAgent
-    [Bugly setUserIdentifier:[NSString stringWithFormat:@"User: %@", loginModel.phone]];
+//    [Bugly setUserIdentifier:[NSString stringWithFormat:@"User: %@", loginModel.phone]];
 
 
 }
