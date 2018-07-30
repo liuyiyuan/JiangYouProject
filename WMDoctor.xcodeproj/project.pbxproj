@@ -554,6 +554,7 @@
 		85CAB455210D472000884A54 /* JYEditUserInfoAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CAB454210D472000884A54 /* JYEditUserInfoAPIManager.m */; };
 		85CAB459210DD34300884A54 /* JYShoppingMallAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CAB458210DD34200884A54 /* JYShoppingMallAPIManager.m */; };
 		85CAB45C210DDEA300884A54 /* JYShoppingMallModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CAB45B210DDEA300884A54 /* JYShoppingMallModel.m */; };
+		85CAB462210DED8000884A54 /* JYStoreCarefullyChooseAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CAB461210DED7F00884A54 /* JYStoreCarefullyChooseAPIManager.m */; };
 		85CF6CCA20A599B900FCDD21 /* UISearchBar+WMLeftPlaceholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CF6CC920A599B900FCDD21 /* UISearchBar+WMLeftPlaceholder.m */; };
 		85CF6D0020AE7A8F00FCDD21 /* WMMedicalCircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CF6CFF20AE7A8F00FCDD21 /* WMMedicalCircleViewController.m */; };
 		85CF6D0520AEA6E600FCDD21 /* WMMedicalCircleAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CF6D0420AEA6E600FCDD21 /* WMMedicalCircleAPIManager.m */; };
@@ -1707,6 +1708,8 @@
 		85CAB458210DD34200884A54 /* JYShoppingMallAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYShoppingMallAPIManager.m; sourceTree = "<group>"; };
 		85CAB45A210DDEA300884A54 /* JYShoppingMallModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYShoppingMallModel.h; sourceTree = "<group>"; };
 		85CAB45B210DDEA300884A54 /* JYShoppingMallModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYShoppingMallModel.m; sourceTree = "<group>"; };
+		85CAB460210DED7F00884A54 /* JYStoreCarefullyChooseAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYStoreCarefullyChooseAPIManager.h; sourceTree = "<group>"; };
+		85CAB461210DED7F00884A54 /* JYStoreCarefullyChooseAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYStoreCarefullyChooseAPIManager.m; sourceTree = "<group>"; };
 		85CF6CC820A599B900FCDD21 /* UISearchBar+WMLeftPlaceholder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+WMLeftPlaceholder.h"; sourceTree = "<group>"; };
 		85CF6CC920A599B900FCDD21 /* UISearchBar+WMLeftPlaceholder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+WMLeftPlaceholder.m"; sourceTree = "<group>"; };
 		85CF6CFE20AE7A8F00FCDD21 /* WMMedicalCircleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMMedicalCircleViewController.h; sourceTree = "<group>"; };
@@ -4679,6 +4682,8 @@
 			children = (
 				85CAB457210DD34200884A54 /* JYShoppingMallAPIManager.h */,
 				85CAB458210DD34200884A54 /* JYShoppingMallAPIManager.m */,
+				85CAB460210DED7F00884A54 /* JYStoreCarefullyChooseAPIManager.h */,
+				85CAB461210DED7F00884A54 /* JYStoreCarefullyChooseAPIManager.m */,
 			);
 			path = APIManager;
 			sourceTree = "<group>";
@@ -5694,6 +5699,7 @@
 				0CB61DF71E4D6B3C0019AC2A /* NSNumber+Round.m in Sources */,
 				8542E0B42064EFD8001E8421 /* WMReplyAwokeView.m in Sources */,
 				188ACA8A2044FCF900A54692 /* WMNewIndexWebContorller.m in Sources */,
+				85CAB462210DED8000884A54 /* JYStoreCarefullyChooseAPIManager.m in Sources */,
 				0CAF8F7B1E0CF5E10092E6A8 /* WMCricleMainViewController.m in Sources */,
 				18328A221F1470F300F87E01 /* LKCPlayManager.m in Sources */,
 				18153C481E16368300956D2A /* WMCardInfoModel.m in Sources */,

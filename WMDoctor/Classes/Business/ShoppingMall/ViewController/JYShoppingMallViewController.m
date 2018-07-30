@@ -21,6 +21,7 @@
 #import "SDCycleScrollView.h"
 #import "JYShoppingMallAPIManager.h"
 #import "JYShoppingMallModel.h"
+#import "JYStoreCarefullyChooseAPIManager.h"
 
 
 @interface JYShoppingMallViewController ()<TopicScrollViewDelegate, SDCycleScrollViewDelegate>{
@@ -42,7 +43,8 @@
     [self initData];
     [self initView];
     [self initBannerView];
-    [self loadShoppingMallRequest];
+//    [self loadShoppingMallRequest];
+    [self loadStoreCarefullyChooseRquest];
 }
 
 - (void)initData{
@@ -113,27 +115,15 @@
     } withFailure:^(ResponseResult *errorResult) {
         NSLog(@"shoppingmall request error : %@", errorResult);
     }];
-    
-//    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-//    NSDictionary *dict = @{
-//                           };
-    //第一个参数:请求路径(NSString) (URL地址后面无需添加参数)
-    //第二个参数:要发送给服务器的参数 (传NSDictionary)
-    //第三个参数:progress 进度回调
-    //第四个参数:success 成功的回调
-    //第五个参数:failure 失败的回调
-    
-    //http://39.104.124.199:8080/jeecmsv9f
-    
-//    [manager GET:@"http://39.104.124.199:8080/jeecmsv9f/shop/eventselection" parameters:dict progress:nil success:
-//     ^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//         NSLog(@"请求成功---%@---%@",responseObject,[responseObject class]);
-//
-//     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//
-//         NSLog(@"请求失败--%@",error);
-//     }];
-    
+}
+
+- (void)loadStoreCarefullyChooseRquest{
+    JYStoreCarefullyChooseAPIManager *storeCarefullyChooseAPIManager = [[JYStoreCarefullyChooseAPIManager alloc] init];
+    [storeCarefullyChooseAPIManager loadDataWithParams:@{} withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"store carefullychoose request response : %@", responseObject);
+    } withFailure:^(ResponseResult *errorResult) {
+        NSLog(@"store carefullychoose request error : %@", errorResult);
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -105,6 +105,7 @@
         [[NSNotificationCenter defaultCenter] postNotificationName:kLoginInSuccessNotification
                                                             object:nil
                                                           userInfo:nil];
+        [[NSUserDefaults standardUserDefaults] setObject:loginUser.toDictionary forKey:@"JYLoginUserInfo"];
     } withFailure:^(ResponseResult *errorResult) {
         NSLog(@"login error : %@", errorResult);
     }];
