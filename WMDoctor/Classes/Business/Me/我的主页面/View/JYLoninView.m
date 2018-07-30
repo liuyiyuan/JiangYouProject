@@ -30,8 +30,8 @@
     [self addSubview:self.forgetPassWordButton];
     [self addSubview:self.firstLoginButton];
     [self addSubview:self.smsFastLoginButton];
-    [self addSubview:self.weChatButton];
-    [self addSubview:self.qqButton];
+//    [self addSubview:self.weChatButton];
+//    [self addSubview:self.qqButton];
     
     [self.iconImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.mas_equalTo(self.mas_centerX);
@@ -93,17 +93,17 @@
         make.height.mas_equalTo(self.firstLoginButton.mas_height);
     }];
     
-    [self.weChatButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(pixelValue(120));
-        make.bottom.mas_equalTo(self.mas_bottom).offset(-pixelValue(60));
-        make.height.mas_equalTo(pixelValue(100));
-    }];
-    
-    [self.qqButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.mas_equalTo(-pixelValue(120));
-        make.top.mas_equalTo(self.weChatButton.mas_top);
-        make.height.mas_equalTo(self.weChatButton.mas_height);
-    }];
+//    [self.weChatButton mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.mas_equalTo(pixelValue(120));
+//        make.bottom.mas_equalTo(self.mas_bottom).offset(-pixelValue(60));
+//        make.height.mas_equalTo(pixelValue(100));
+//    }];
+//    
+//    [self.qqButton mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.right.mas_equalTo(-pixelValue(120));
+//        make.top.mas_equalTo(self.weChatButton.mas_top);
+//        make.height.mas_equalTo(self.weChatButton.mas_height);
+//    }];
     
 }
 

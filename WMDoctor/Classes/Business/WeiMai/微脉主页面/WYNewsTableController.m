@@ -14,6 +14,7 @@
 #import "WYImagesNewsCell.h"
 #import "WYWideImageNewsCell.h"
 #import "WYNewsDetailVC.h"
+#import "JYHomeNewAPIManager.h"
 //#import "WYtool.h"
 @interface WYNewsTableController ()<UIScrollViewDelegate>
 
@@ -109,6 +110,25 @@
     //    }else [_footer endRefreshing];
 }
 
+
+-(void)test{
+    NSDictionary *param = @{
+                            @"tel":@"15395713725",
+                            @"password":@"1"
+                            };
+    
+    JYHomeNewAPIManager *homeNewsManager = [[JYHomeNewAPIManager alloc] init];
+    [homeNewsManager loadDataWithParams:param withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"login success data : %@", responseObject);
+//        JYLoginNewModel *loginUser = [[JYLoginNewModel alloc] initWithDictionary:responseObject error:nil];
+
+        
+    } withFailure:^(ResponseResult *errorResult) {
+        NSLog(@"login error : %@", errorResult);
+    }];
+}
+
+#pragma mark - 新闻刷新
 - (void)loadNewData
 {
     //    if (_header.state == MJRefreshHeaderStateIdle) {

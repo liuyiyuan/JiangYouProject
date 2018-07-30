@@ -13,6 +13,7 @@
 #import "WYNewsScrollView.h"
 #import "WYNewsTableController.h"
 #import "WYTopic.h"
+#import "JYHomeNewAPIManager.h"
 @interface JYHomeViewController () <UIScrollViewDelegate,TopicScrollViewDelegate>
 
 @end
@@ -29,7 +30,9 @@
     self.navigationController.navigationBar.hidden = YES;
     [self initSubviews];
     [self loadData];
-    //    [self addChildVCs];
+        [self addChildVCs];
+    
+    [self test];
 }
 - (void)initSubviews
 {
@@ -52,12 +55,12 @@
     //    [button2 setImage:[UIImage  imageNamed:@"top_navi_bell_highlight"] forState:UIControlStateHighlighted];
     [button2 addTarget:self action:@selector(naviRightBarButtonAciton) forControlEvents:UIControlEventTouchUpInside];
     self.tabBarController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button2];
-    
+    //下方滚动
     _newsScrollView = [[WYNewsScrollView alloc] initWithFrame:CGRectMake(0, kTopicHeaderHeight, kScreenWidth, kScreenHeight - kTopicHeaderHeight - kDockHeight)];
-    _newsScrollView.backgroundColor = [UIColor yellowColor];
+    _newsScrollView.backgroundColor = [UIColor redColor];
     _newsScrollView.delegate = self;
     [self.view addSubview:_newsScrollView];
-    
+    //头部视图
     WYTopicHeader *header = [[WYTopicHeader alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kTopicHeaderHeight)];
     //    _header.backgroundColor = [UIColor blueColor];
     //    header.delegate = self;
@@ -69,24 +72,24 @@
 {
     
 }
-//- (void)addChildVCs
-//{
-//    for (WYTopic *topic in _topicScrollView.topicArray) {
-//        WYNewsTableController *NewsTC = [[WYNewsTableController alloc] initWithStyle:UITableViewStylePlain];
+- (void)addChildVCs
+{
+    for (WYTopic *topic in _topicScrollView.topicArray) {
+        WYNewsTableController *NewsTC = [[WYNewsTableController alloc] initWithStyle:UITableViewStylePlain];
 //        NewsTC.url = [NSString stringWithFormat:@"/nc/article/list/%@/0-20.html",topic.tid];
-////         "tid":"T1370583240249"
-////        /nc/article/list/T1348649654285/0-20.html
-//        [self addChildViewController:NewsTC];
-//    }
-//
-//    for (int i = 0; i < self.childViewControllers.count; i++) {
-////        CGSize size = CGSizeMake(kScreenWidth, _newsScrollView.bounds.size.height);
-//        WYNewsTableController *newsTC = self.childViewControllers[i];
-//        newsTC.tableView.frame = (CGRect){CGPointMake(kScreenWidth * i, 0), _newsScrollView.bounds.size};
-//        [_newsScrollView addSubview:newsTC.tableView];
-//    }
-//    _newsScrollView.contentSize = CGSizeMake(kScreenWidth * _topicScrollView.topicArray.count, 0);
-//}
+//         "tid":"T1370583240249"
+//        /nc/article/list/T1348649654285/0-20.html
+        [self addChildViewController:NewsTC];
+    }
+
+    for (int i = 0; i < self.childViewControllers.count; i++) {
+//        CGSize size = CGSizeMake(kScreenWidth, _newsScrollView.bounds.size.height);
+        WYNewsTableController *newsTC = self.childViewControllers[i];
+        newsTC.tableView.frame = (CGRect){CGPointMake(kScreenWidth * i, 0), _newsScrollView.bounds.size};
+        [_newsScrollView addSubview:newsTC.tableView];
+    }
+    _newsScrollView.contentSize = CGSizeMake(kScreenWidth * _topicScrollView.topicArray.count, 0);
+}
 
 - (void)refreshChildVCs
 {
@@ -159,10 +162,28 @@
     [self refreshChildVCs];
     //    });
 }
-
+#pragma mark -  头部视图按钮点击
 - (void)topicScrollViewDidSelectButton:(NSInteger)selectedButtonIndex
 {
     [_newsScrollView setContentOffset:CGPointMake(_topicScrollView.offsetX * _newsScrollView.bounds.size.width, 0)
      ];
 }
+
+-(void)test{
+    NSDictionary *param = @{
+                            @"pageNo":@"1",
+                            @"pageSize":@"15"
+                            };
+    
+    JYHomeNewAPIManager *homeNewsManager = [[JYHomeNewAPIManager alloc] init];
+    [homeNewsManager loadDataWithParams:param withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"login success data : %@", responseObject);
+        //        JYLoginNewModel *loginUser = [[JYLoginNewModel alloc] initWithDictionary:responseObject error:nil];
+        
+        
+    } withFailure:^(ResponseResult *errorResult) {
+        NSLog(@"login error : %@", errorResult);
+    }];
+}
+
 @end

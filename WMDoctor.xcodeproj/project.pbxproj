@@ -588,6 +588,7 @@
 		AD7A06EE2108D62300D3AAB4 /* ZCEmojiExpression.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AD7A06EB2108D62100D3AAB4 /* ZCEmojiExpression.bundle */; };
 		AD7A06EF2108D62300D3AAB4 /* SobotKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AD7A06EC2108D62200D3AAB4 /* SobotKit.bundle */; };
 		AD7A06F02108D62300D3AAB4 /* SobotLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD7A06ED2108D62300D3AAB4 /* SobotLocalizable.strings */; };
+		AD7A06F4210F4E6800D3AAB4 /* JYHomeNewAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7A06F3210F4E6800D3AAB4 /* JYHomeNewAPIManager.m */; };
 		AD93FE7E20DDDC8100C8EF83 /* JYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FE7D20DDDC8100C8EF83 /* JYHomeViewController.m */; };
 		AD93FE8120DDDE8C00C8EF83 /* WYTopicHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FE8020DDDE8C00C8EF83 /* WYTopicHeader.m */; };
 		AD93FE8420DDDEA800C8EF83 /* WYTopicScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FE8320DDDEA700C8EF83 /* WYTopicScrollView.m */; };
@@ -1773,6 +1774,8 @@
 		AD7A06EB2108D62100D3AAB4 /* ZCEmojiExpression.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZCEmojiExpression.bundle; sourceTree = "<group>"; };
 		AD7A06EC2108D62200D3AAB4 /* SobotKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SobotKit.bundle; sourceTree = "<group>"; };
 		AD7A06ED2108D62300D3AAB4 /* SobotLocalizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = SobotLocalizable.strings; sourceTree = "<group>"; };
+		AD7A06F2210F4E6800D3AAB4 /* JYHomeNewAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYHomeNewAPIManager.h; sourceTree = "<group>"; };
+		AD7A06F3210F4E6800D3AAB4 /* JYHomeNewAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYHomeNewAPIManager.m; sourceTree = "<group>"; };
 		AD93FE7C20DDDC8100C8EF83 /* JYHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYHomeViewController.h; sourceTree = "<group>"; };
 		AD93FE7D20DDDC8100C8EF83 /* JYHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYHomeViewController.m; sourceTree = "<group>"; };
 		AD93FE7F20DDDE8B00C8EF83 /* WYTopicHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYTopicHeader.h; sourceTree = "<group>"; };
@@ -2216,6 +2219,7 @@
 		0CAF8F451E0CEEA80092E6A8 /* 微脉主页面 */ = {
 			isa = PBXGroup;
 			children = (
+				AD7A06F1210F4E2E00D3AAB4 /* APIManager */,
 				0CAF8F6A1E0CF05A0092E6A8 /* Actions */,
 				0CAF8F481E0CEEC30092E6A8 /* Controller */,
 				0CAF8F471E0CEEBD0092E6A8 /* View */,
@@ -4854,6 +4858,15 @@
 			path = PPTextField;
 			sourceTree = "<group>";
 		};
+		AD7A06F1210F4E2E00D3AAB4 /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				AD7A06F2210F4E6800D3AAB4 /* JYHomeNewAPIManager.h */,
+				AD7A06F3210F4E6800D3AAB4 /* JYHomeNewAPIManager.m */,
+			);
+			name = APIManager;
+			sourceTree = "<group>";
+		};
 		CC2B24F520EF10750050D5B2 /* JYCircle */ = {
 			isa = PBXGroup;
 			children = (
@@ -5419,6 +5432,7 @@
 				CCA4FC6F20E33A77000A783A /* JYPersonalInformationHeaderView.m in Sources */,
 				0CAF8F3B1E0CEDBE0092E6A8 /* WMServiceViewController.m in Sources */,
 				18237EDC1EA76E1500C30F51 /* WMServiceTitleCell.m in Sources */,
+				AD7A06F4210F4E6800D3AAB4 /* JYHomeNewAPIManager.m in Sources */,
 				183287FE1F1372C600F87E01 /* WMTaiXinTableViewCell.m in Sources */,
 				0CAF8F441E0CEE350092E6A8 /* WMRCInquiryMessageCell.m in Sources */,
 				1855DC451E83C264001B4DDD /* WMEntranceYearModel.m in Sources */,
