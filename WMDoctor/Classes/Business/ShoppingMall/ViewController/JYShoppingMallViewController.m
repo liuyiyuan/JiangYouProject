@@ -24,14 +24,16 @@
 #import "JYStoreCarefullyChooseAPIManager.h"
 
 
-@interface JYShoppingMallViewController ()<TopicScrollViewDelegate, SDCycleScrollViewDelegate>{
+@interface JYShoppingMallViewController ()<TopicScrollViewDelegate, SDCycleScrollViewDelegate, UIScrollViewDelegate>{
     WYTopicScrollView *_topicScrollView;
     JYMenuSelectorView *_menuSelectorView;
+    UIScrollView *_scrollView;
 }
 
 @property(nonatomic, strong) SDCycleScrollView *cycleScrollView;        //轮播
 //@property(nonatomic, strong) WMHomeModuleView *homeModuleView;  //轮播下的横向滑动小模块
 @property(nonatomic, strong) NSMutableArray *dataSource;
+
 
 @end
 
@@ -42,13 +44,22 @@
     // Do any additional setup after loading the view.
     [self initData];
     [self initView];
-    [self initBannerView];
+    [self setupView];
+//    [self initBannerView];
 //    [self loadShoppingMallRequest];
-    [self loadStoreCarefullyChooseRquest];
+//    [self loadStoreCarefullyChooseRquest];
 }
 
 - (void)initData{
     self.dataSource = [NSMutableArray array];
+}
+
+- (void)setupView{
+    _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
+    _scrollView.pagingEnabled = YES;
+    _scrollView.contentSize = CGSizeMake(kScreenWidth * 5, kScreenHeight);
+    _scrollView.delegate = self;
+    [self.view addSubview:_scrollView];
 }
 
 - (void)initView{

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "HomeAppModel.h"
+#import "WMIndexDataModel.h"
 
 @protocol WMHomeModuleDelegate <NSObject>
 

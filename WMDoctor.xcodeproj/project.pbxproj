@@ -531,6 +531,9 @@
 		856F6F061F41C65D001E73C3 /* BaseWebForH5ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 856F6F041F41C65D001E73C3 /* BaseWebForH5ViewController.m */; };
 		85752CAE201F01BE00E9E34D /* WMcounselingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 85752CAD201F01BE00E9E34D /* WMcounselingVC.m */; };
 		85752CB22020089700E9E34D /* WMNoCounselingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 85752CB12020089700E9E34D /* WMNoCounselingView.m */; };
+		858104A1210FFC3C00532B4D /* JYStoreCarefullyChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 858104A0210FFC3C00532B4D /* JYStoreCarefullyChooseView.m */; };
+		858104A7210FFFE400532B4D /* JYStoreBannerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 858104A6210FFFE400532B4D /* JYStoreBannerTableViewCell.m */; };
+		858104AD2110021500532B4D /* WMHomeModuleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 858104AB2110021400532B4D /* WMHomeModuleView.m */; };
 		858836CB20E3DF5A00DE928F /* JYShoppingMallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 858836CA20E3DF5A00DE928F /* JYShoppingMallViewController.m */; };
 		8588374B20E7181600DE928F /* JYMenuSelectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8588374A20E7181600DE928F /* JYMenuSelectorView.m */; };
 		8588374F20E8885400DE928F /* JYLoginAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8588374E20E8885400DE928F /* JYLoginAPIManager.m */; };
@@ -1663,6 +1666,12 @@
 		85752CAD201F01BE00E9E34D /* WMcounselingVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMcounselingVC.m; sourceTree = "<group>"; };
 		85752CB02020089700E9E34D /* WMNoCounselingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMNoCounselingView.h; sourceTree = "<group>"; };
 		85752CB12020089700E9E34D /* WMNoCounselingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMNoCounselingView.m; sourceTree = "<group>"; };
+		8581049F210FFC3C00532B4D /* JYStoreCarefullyChooseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYStoreCarefullyChooseView.h; sourceTree = "<group>"; };
+		858104A0210FFC3C00532B4D /* JYStoreCarefullyChooseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYStoreCarefullyChooseView.m; sourceTree = "<group>"; };
+		858104A5210FFFE400532B4D /* JYStoreBannerTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYStoreBannerTableViewCell.h; sourceTree = "<group>"; };
+		858104A6210FFFE400532B4D /* JYStoreBannerTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYStoreBannerTableViewCell.m; sourceTree = "<group>"; };
+		858104AB2110021400532B4D /* WMHomeModuleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMHomeModuleView.m; sourceTree = "<group>"; };
+		858104AC2110021400532B4D /* WMHomeModuleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMHomeModuleView.h; sourceTree = "<group>"; };
 		858836C920E3DF5A00DE928F /* JYShoppingMallViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYShoppingMallViewController.h; sourceTree = "<group>"; };
 		858836CA20E3DF5A00DE928F /* JYShoppingMallViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYShoppingMallViewController.m; sourceTree = "<group>"; };
 		8588374920E7181600DE928F /* JYMenuSelectorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYMenuSelectorView.h; sourceTree = "<group>"; };
@@ -4532,8 +4541,14 @@
 		858836C720E3DF0500DE928F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				858104AC2110021400532B4D /* WMHomeModuleView.h */,
+				858104AB2110021400532B4D /* WMHomeModuleView.m */,
 				8588374920E7181600DE928F /* JYMenuSelectorView.h */,
 				8588374A20E7181600DE928F /* JYMenuSelectorView.m */,
+				8581049F210FFC3C00532B4D /* JYStoreCarefullyChooseView.h */,
+				858104A0210FFC3C00532B4D /* JYStoreCarefullyChooseView.m */,
+				858104A5210FFFE400532B4D /* JYStoreBannerTableViewCell.h */,
+				858104A6210FFFE400532B4D /* JYStoreBannerTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -5481,6 +5496,7 @@
 				188F14CB1F29BA960058B4CB /* WMQuickReplyListCell.m in Sources */,
 				18153C451E16360B00956D2A /* WMMyNameCardViewController.m in Sources */,
 				1855DC2D1E83B622001B4DDD /* WMSchoolTypeModel.m in Sources */,
+				858104AD2110021500532B4D /* WMHomeModuleView.m in Sources */,
 				184AD56720B55F4200F973D3 /* WMTagSelectModel.m in Sources */,
 				1D38168B1ECC3F8900562FCA /* WMGetSectionModel.m in Sources */,
 				85E4B6051F2AD437005F6D21 /* RCIMGroupViewController.m in Sources */,
@@ -5531,6 +5547,7 @@
 				0CAF8F4E1E0CEEFE0092E6A8 /* WMImageView.m in Sources */,
 				1855DC391E83C020001B4DDD /* WMSchoolModel.m in Sources */,
 				0CAF8F5D1E0CEF7D0092E6A8 /* WMFasterReplyViewController.m in Sources */,
+				858104A7210FFFE400532B4D /* JYStoreBannerTableViewCell.m in Sources */,
 				186AF30E1ED51FD400F699C6 /* NSString+Valid.m in Sources */,
 				CC2B250020EF126E0050D5B2 /* HYBLoadImageView.m in Sources */,
 				188958E0201EF0190047BCC0 /* WMDoctorIndexViewController.m in Sources */,
@@ -5740,6 +5757,7 @@
 				1890BA751FC805D00009339C /* WMLeadPictureViewCell.m in Sources */,
 				1840A71C1E0CEF4400D8E677 /* WMGuidePageViewController.m in Sources */,
 				1890BA711FC805BB0009339C /* WMAddPictureViewCell.m in Sources */,
+				858104A1210FFC3C00532B4D /* JYStoreCarefullyChooseView.m in Sources */,
 				85CAB439210A1EBF00884A54 /* JYLoginNewModel.m in Sources */,
 				18F5B6891E14E3CC0051C60E /* WMChangleOnlineStatusAPIManager.m in Sources */,
 				183287E81F10CCFE00F87E01 /* WMAllReportListModel.m in Sources */,
