@@ -1,5 +1,5 @@
 //
-//  JYStoreBannerTableViewCell.h
+//  JYStoreModuleCell.h
 //  WMDoctor
 //
 //  Created by xugq on 2018/7/31.
@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JYStoreBannerTableViewCell : UITableViewCell
+@interface JYStoreModuleCell : UITableViewCell
 
+- (void)setValueWithModelArray:(NSArray *)modelArray;
 
 @end

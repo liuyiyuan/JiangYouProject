@@ -7,13 +7,12 @@
 //
 
 #import "JYStoreBannerTableViewCell.h"
-#import "WMHomeModuleView.h"
-//#import "SDCycleScrollView.h"
 
-@interface JYStoreBannerTableViewCell()<WMHomeModuleDelegate>
+#import <SDCycleScrollView/SDCycleScrollView.h>
 
-@property(nonatomic, strong) WMHomeModuleView *homeModuleView;  //轮播下的横向滑动小模块
-//@property(nonatomic, strong) SDCycleScrollView *cycleScrollView;
+@interface JYStoreBannerTableViewCell()<SDCycleScrollViewDelegate>
+
+@property(nonatomic, strong) SDCycleScrollView *cycleScrollView;
 
 @end
 
@@ -23,29 +22,46 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    [self setupCycleScrollView];
 }
 
-- (void)initHomeModuleView{
-    [self.homeModuleView setValueWithModelArray:@[]];
-    self.homeModuleView.frame = CGRectMake(0, 0, self.width, self.height);
-    [self.contentView addSubview:self.homeModuleView];
+
+
+
+
+- (void)setupCycleScrollView{
+    self.cycleScrollView.frame = CGRectMake(0, 0, self.width, self.height);
+    self.cycleScrollView.imageURLStringsGroup =@[];
+    self.cycleScrollView.titlesGroup = @[];//[NSArray arrayWithArray:titleArr];
+//    self.cycleScrollView.growingSDCycleBannerIds = [NSArray arrayWithArray:titleArr];
+    [self.contentView addSubview:self.cycleScrollView];
 }
 
-- (WMHomeModuleView *)homeModuleView {
-    if (!_homeModuleView) {
-        _homeModuleView = [[WMHomeModuleView alloc] initWithFrame:CGRectMake(0, 155, kScreen_width, 98)];
-        _homeModuleView.delegate = self;
+- (SDCycleScrollView *)cycleScrollView {
+    if (!_cycleScrollView) {
+        _cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectZero delegate:self placeholderImage:[UIImage imageNamed:@"img_default"]];
+        _cycleScrollView.frame = CGRectMake(0, 0, kScreen_width,kScreen_width*155.0/375.0);
+        _cycleScrollView.pageControlStyle = SDCycleScrollViewPageContolStyleAnimated;
+        _cycleScrollView.bannerImageViewContentMode = UIViewContentModeScaleAspectFill;
+        _cycleScrollView.autoScrollTimeInterval = 5;
+        _cycleScrollView.titleLabelTextColor = [UIColor clearColor];
+        _cycleScrollView.titleLabelBackgroundColor = [UIColor clearColor];
+        _cycleScrollView.currentPageDotImage = [UIImage imageNamed:@"ic_point_selected"];
+        _cycleScrollView.pageDotImage = [UIImage imageNamed:@"ic_point_normal"];
     }
-    return _homeModuleView;
-}
-// # WMHomeModuleDelegate
-- (void)goModuleWith:(HomeAppModel *)appModel{
-    
+    return _cycleScrollView;
 }
 
-- (void)setValueWithModelArray:(NSArray *)modelArray{
-    [_homeModuleView setValueWithModelArray:modelArray];
+//SDCycleScrollViewDelegate
+/** 点击图片回调 */
+- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index{
+    NSLog(@"index : %@", index);
 }
+
+
+
+
+
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

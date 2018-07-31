@@ -30,8 +30,6 @@
     UIScrollView *_scrollView;
 }
 
-@property(nonatomic, strong) SDCycleScrollView *cycleScrollView;        //轮播
-//@property(nonatomic, strong) WMHomeModuleView *homeModuleView;  //轮播下的横向滑动小模块
 @property(nonatomic, strong) NSMutableArray *dataSource;
 
 
@@ -45,7 +43,6 @@
     [self initData];
     [self initView];
     [self setupView];
-//    [self initBannerView];
 //    [self loadShoppingMallRequest];
 //    [self loadStoreCarefullyChooseRquest];
 }
@@ -73,46 +70,6 @@
     [self.view addSubview:_menuSelectorView];
 }
 
-- (void)initBannerView{
-    self.cycleScrollView.imageURLStringsGroup = @[];
-    self.cycleScrollView.frame = CGRectMake(0, 44, kScreen_width,kScreen_width*221/375.0);
-    self.cycleScrollView.delegate = self;
-    [self.view addSubview:self.cycleScrollView];
-}
-
-//- (void)initHomeModuleView{
-//    [self.homeModuleView setValueWithModelArray:@[]];
-//    self.homeModuleView.frame = CGRectMake(0, 44 + 98, kScreen_width, 98);
-//    [self.view addSubview:self.homeModuleView];
-//}
-//
-//- (WMHomeModuleView *)homeModuleView {
-//    if (!_homeModuleView) {
-//        _homeModuleView = [[WMHomeModuleView alloc] initWithFrame:CGRectMake(0, 155, kScreen_width, 98)];
-//        _homeModuleView.delegate = self;
-//    }
-//    return _homeModuleView;
-//}
-
-- (SDCycleScrollView *)cycleScrollView{
-    if (!_cycleScrollView) {
-        _cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectZero delegate:self placeholderImage:[UIImage imageNamed:@"img_default"]];
-        
-        _cycleScrollView.pageControlStyle = SDCycleScrollViewPageContolStyleAnimated;
-        _cycleScrollView.bannerImageViewContentMode = UIViewContentModeScaleAspectFill;
-        _cycleScrollView.autoScrollTimeInterval = 5;
-        _cycleScrollView.titleLabelTextColor = [UIColor clearColor];
-        _cycleScrollView.titleLabelBackgroundColor = [UIColor clearColor];
-        _cycleScrollView.currentPageDotImage = [UIImage imageNamed:@"ic_banner_point_select"];
-        _cycleScrollView.pageDotImage = [UIImage imageNamed:@"ic_banner_point_unselect"];
-    }
-    return _cycleScrollView;
-}
-
-//WMHomeModuleDelegate
-//- (void)goModuleWith:(HomeAppModel *)appModel{
-//
-//}
 
 - (void)loadShoppingMallRequest{
     JYShoppingMallAPIManager *shoppingMallAPIManager = [[JYShoppingMallAPIManager alloc] init];

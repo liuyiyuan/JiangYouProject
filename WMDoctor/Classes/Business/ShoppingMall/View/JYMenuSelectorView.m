@@ -10,7 +10,6 @@
 
 @interface JYMenuSelectorView(){
     UIScrollView *_menuScrollView;
-    UIButton *_addMenuBtn;
     UIButton *_selectedBtn;
 }
 
@@ -30,17 +29,7 @@
     self.backgroundColor = [UIColor colorWithHexString:@"#50B8FB"];
     _menuScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.width - 35, 44)];
     _menuScrollView.showsHorizontalScrollIndicator = NO;
-    _addMenuBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    _addMenuBtn.frame = CGRectMake(self.width - 35, 5, 35, 35);
-    //[_addMenuBtn setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
-    [_addMenuBtn setTitle:@".." forState:UIControlStateNormal];
-    [_addMenuBtn addTarget:self action:@selector(addMenuBtnClickAction:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_menuScrollView];
-    [self addSubview:_addMenuBtn];
-}
-
-- (void)addMenuBtnClickAction:(UIButton *)btn{
-    NSLog(@"自定义btn");
 }
 
 - (void)setMenuWithArr:(NSArray *)arr{

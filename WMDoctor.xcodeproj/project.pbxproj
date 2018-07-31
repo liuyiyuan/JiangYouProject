@@ -534,6 +534,10 @@
 		858104A1210FFC3C00532B4D /* JYStoreCarefullyChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 858104A0210FFC3C00532B4D /* JYStoreCarefullyChooseView.m */; };
 		858104A7210FFFE400532B4D /* JYStoreBannerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 858104A6210FFFE400532B4D /* JYStoreBannerTableViewCell.m */; };
 		858104AD2110021500532B4D /* WMHomeModuleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 858104AB2110021400532B4D /* WMHomeModuleView.m */; };
+		858104CE2110429600532B4D /* JYStoreModuleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 858104CD2110429600532B4D /* JYStoreModuleCell.m */; };
+		858104D1211044AA00532B4D /* WMNewHotQuestionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 858104D0211044AA00532B4D /* WMNewHotQuestionView.m */; };
+		858104D4211044DA00532B4D /* WMNewHotQuestionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 858104D3211044DA00532B4D /* WMNewHotQuestionModel.m */; };
+		858104D721104AFE00532B4D /* WMNewHotQuestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 858104D621104AFE00532B4D /* WMNewHotQuestionCell.m */; };
 		858836CB20E3DF5A00DE928F /* JYShoppingMallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 858836CA20E3DF5A00DE928F /* JYShoppingMallViewController.m */; };
 		8588374B20E7181600DE928F /* JYMenuSelectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8588374A20E7181600DE928F /* JYMenuSelectorView.m */; };
 		8588374F20E8885400DE928F /* JYLoginAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8588374E20E8885400DE928F /* JYLoginAPIManager.m */; };
@@ -1672,6 +1676,14 @@
 		858104A6210FFFE400532B4D /* JYStoreBannerTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYStoreBannerTableViewCell.m; sourceTree = "<group>"; };
 		858104AB2110021400532B4D /* WMHomeModuleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMHomeModuleView.m; sourceTree = "<group>"; };
 		858104AC2110021400532B4D /* WMHomeModuleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMHomeModuleView.h; sourceTree = "<group>"; };
+		858104CC2110429600532B4D /* JYStoreModuleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYStoreModuleCell.h; sourceTree = "<group>"; };
+		858104CD2110429600532B4D /* JYStoreModuleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYStoreModuleCell.m; sourceTree = "<group>"; };
+		858104CF211044AA00532B4D /* WMNewHotQuestionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMNewHotQuestionView.h; sourceTree = "<group>"; };
+		858104D0211044AA00532B4D /* WMNewHotQuestionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMNewHotQuestionView.m; sourceTree = "<group>"; };
+		858104D2211044DA00532B4D /* WMNewHotQuestionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMNewHotQuestionModel.h; sourceTree = "<group>"; };
+		858104D3211044DA00532B4D /* WMNewHotQuestionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMNewHotQuestionModel.m; sourceTree = "<group>"; };
+		858104D521104AFE00532B4D /* WMNewHotQuestionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMNewHotQuestionCell.h; sourceTree = "<group>"; };
+		858104D621104AFE00532B4D /* WMNewHotQuestionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMNewHotQuestionCell.m; sourceTree = "<group>"; };
 		858836C920E3DF5A00DE928F /* JYShoppingMallViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYShoppingMallViewController.h; sourceTree = "<group>"; };
 		858836CA20E3DF5A00DE928F /* JYShoppingMallViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYShoppingMallViewController.m; sourceTree = "<group>"; };
 		8588374920E7181600DE928F /* JYMenuSelectorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYMenuSelectorView.h; sourceTree = "<group>"; };
@@ -4541,6 +4553,10 @@
 		858836C720E3DF0500DE928F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				858104D521104AFE00532B4D /* WMNewHotQuestionCell.h */,
+				858104D621104AFE00532B4D /* WMNewHotQuestionCell.m */,
+				858104CF211044AA00532B4D /* WMNewHotQuestionView.h */,
+				858104D0211044AA00532B4D /* WMNewHotQuestionView.m */,
 				858104AC2110021400532B4D /* WMHomeModuleView.h */,
 				858104AB2110021400532B4D /* WMHomeModuleView.m */,
 				8588374920E7181600DE928F /* JYMenuSelectorView.h */,
@@ -4549,6 +4565,8 @@
 				858104A0210FFC3C00532B4D /* JYStoreCarefullyChooseView.m */,
 				858104A5210FFFE400532B4D /* JYStoreBannerTableViewCell.h */,
 				858104A6210FFFE400532B4D /* JYStoreBannerTableViewCell.m */,
+				858104CC2110429600532B4D /* JYStoreModuleCell.h */,
+				858104CD2110429600532B4D /* JYStoreModuleCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -4558,6 +4576,8 @@
 			children = (
 				85CAB45A210DDEA300884A54 /* JYShoppingMallModel.h */,
 				85CAB45B210DDEA300884A54 /* JYShoppingMallModel.m */,
+				858104D2211044DA00532B4D /* WMNewHotQuestionModel.h */,
+				858104D3211044DA00532B4D /* WMNewHotQuestionModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -5322,6 +5342,8 @@
 				0C4681281E28810C00BDE355 /* WMVersionUpgradeAPIManager.m in Sources */,
 				ADA4A8E520E71B7C006400F3 /* JYInformationNicknameView.m in Sources */,
 				18153C341E154A6C00956D2A /* WMEvaluateLabelView.m in Sources */,
+				858104D721104AFE00532B4D /* WMNewHotQuestionCell.m in Sources */,
+				858104D1211044AA00532B4D /* WMNewHotQuestionView.m in Sources */,
 				18777AA91E27219A000957D6 /* WMMyWalletViewController.m in Sources */,
 				854180C21FCBE6B300EA4235 /* WMMyMicroBeanModel.m in Sources */,
 				188F14BB1F2882F60058B4CB /* QuickEntity+CoreDataClass.m in Sources */,
@@ -5676,6 +5698,7 @@
 				1D6829281E810EFD00422732 /* WMRCChatListSayHelloCell.m in Sources */,
 				1890BA661FC8059B0009339C /* WMIMFirstCollectionViewCell.m in Sources */,
 				186AF2FA1ED4715500F699C6 /* WMMultilineTextViewController.m in Sources */,
+				858104CE2110429600532B4D /* JYStoreModuleCell.m in Sources */,
 				1DB877361E1B973700E2FAE7 /* WMPatientsStateAPIManager.m in Sources */,
 				18328A4C1F15012A00F87E01 /* ACOGModel.m in Sources */,
 				18777AAF1E27A044000957D6 /* WMTokenModel.m in Sources */,
@@ -5732,6 +5755,7 @@
 				188ACA8A2044FCF900A54692 /* WMNewIndexWebContorller.m in Sources */,
 				85CAB462210DED8000884A54 /* JYStoreCarefullyChooseAPIManager.m in Sources */,
 				0CAF8F7B1E0CF5E10092E6A8 /* WMCricleMainViewController.m in Sources */,
+				858104D4211044DA00532B4D /* WMNewHotQuestionModel.m in Sources */,
 				18328A221F1470F300F87E01 /* LKCPlayManager.m in Sources */,
 				18153C481E16368300956D2A /* WMCardInfoModel.m in Sources */,
 				1D68292F1E81268900422732 /* WMRecommendDocCell.m in Sources */,

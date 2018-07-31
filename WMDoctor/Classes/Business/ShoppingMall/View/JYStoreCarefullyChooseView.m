@@ -8,6 +8,7 @@
 
 #import "JYStoreCarefullyChooseView.h"
 #import "JYStoreBannerTableViewCell.h"
+#import "JYStoreCarefullyChooseAPIManager.h"
 
 @interface JYStoreCarefullyChooseView()<UITableViewDataSource, UITableViewDelegate>{
     UITableView *_tableView;
@@ -42,7 +43,7 @@
 
 #pragma mark - All Delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.dataSource count];
+    return 1;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
@@ -69,12 +70,29 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    
+    if (indexPath.row == 0) {
+        JYStoreBannerTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JYStoreBannerTableViewCell" forIndexPath:indexPath];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        return cell;
+    }
     return [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
+}
+
+- (void)loadStoreCarefullyChooseBannerRequest{
+    
+}
+
+- (void)loadStoreCarefullyChooseRquest{
+    JYStoreCarefullyChooseAPIManager *storeCarefullyChooseAPIManager = [[JYStoreCarefullyChooseAPIManager alloc] init];
+    [storeCarefullyChooseAPIManager loadDataWithParams:@{} withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"store carefullychoose request response : %@", responseObject);
+    } withFailure:^(ResponseResult *errorResult) {
+        NSLog(@"store carefullychoose request error : %@", errorResult);
+    }];
 }
 
 /*
