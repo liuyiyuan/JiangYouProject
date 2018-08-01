@@ -11,7 +11,7 @@
 @implementation JYHomeNewAPIManager
 
 - (NSString *)methodName{
-    return @"/mobile/recommend/msgList";
+    return @"/mobile/follow/list";
 }
 
 - (HTTPMethodType)requestType{

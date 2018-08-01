@@ -596,6 +596,7 @@
 		AD7A06EF2108D62300D3AAB4 /* SobotKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AD7A06EC2108D62200D3AAB4 /* SobotKit.bundle */; };
 		AD7A06F02108D62300D3AAB4 /* SobotLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD7A06ED2108D62300D3AAB4 /* SobotLocalizable.strings */; };
 		AD7A06F4210F4E6800D3AAB4 /* JYHomeNewAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7A06F3210F4E6800D3AAB4 /* JYHomeNewAPIManager.m */; };
+		AD7A06F72111F51100D3AAB4 /* JYHomeFocusTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7A06F62111F51100D3AAB4 /* JYHomeFocusTableViewCell.m */; };
 		AD93FE7E20DDDC8100C8EF83 /* JYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FE7D20DDDC8100C8EF83 /* JYHomeViewController.m */; };
 		AD93FE8120DDDE8C00C8EF83 /* WYTopicHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FE8020DDDE8C00C8EF83 /* WYTopicHeader.m */; };
 		AD93FE8420DDDEA800C8EF83 /* WYTopicScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FE8320DDDEA700C8EF83 /* WYTopicScrollView.m */; };
@@ -1797,6 +1798,8 @@
 		AD7A06ED2108D62300D3AAB4 /* SobotLocalizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = SobotLocalizable.strings; sourceTree = "<group>"; };
 		AD7A06F2210F4E6800D3AAB4 /* JYHomeNewAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYHomeNewAPIManager.h; sourceTree = "<group>"; };
 		AD7A06F3210F4E6800D3AAB4 /* JYHomeNewAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYHomeNewAPIManager.m; sourceTree = "<group>"; };
+		AD7A06F52111F51100D3AAB4 /* JYHomeFocusTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYHomeFocusTableViewCell.h; sourceTree = "<group>"; };
+		AD7A06F62111F51100D3AAB4 /* JYHomeFocusTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYHomeFocusTableViewCell.m; sourceTree = "<group>"; };
 		AD93FE7C20DDDC8100C8EF83 /* JYHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYHomeViewController.h; sourceTree = "<group>"; };
 		AD93FE7D20DDDC8100C8EF83 /* JYHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYHomeViewController.m; sourceTree = "<group>"; };
 		AD93FE7F20DDDE8B00C8EF83 /* WYTopicHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYTopicHeader.h; sourceTree = "<group>"; };
@@ -2361,6 +2364,8 @@
 				CC2DAF1F20E0EABA008B630C /* DefaultNews.xib */,
 				CC2DAF2120E0EB54008B630C /* ImagesNews.xib */,
 				CC2DAF2220E0EB55008B630C /* WideImageNews.xib */,
+				AD7A06F52111F51100D3AAB4 /* JYHomeFocusTableViewCell.h */,
+				AD7A06F62111F51100D3AAB4 /* JYHomeFocusTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -5828,6 +5833,7 @@
 				18237EE21EA778B300C30F51 /* WMServiceDescriptionCell.m in Sources */,
 				1829FAE81FF48784006815E2 /* WMQuestionExpiredAPIManager.m in Sources */,
 				188F14C81F29B95C0058B4CB /* WMQuickReplyListViewController.m in Sources */,
+				AD7A06F72111F51100D3AAB4 /* JYHomeFocusTableViewCell.m in Sources */,
 				181A034B1FD8E64E00868821 /* WMServiceListCell.m in Sources */,
 				85D2BAC91FC27F6500C67F98 /* WMQuestionsViewController.m in Sources */,
 				CCA4FC5A20E31D35000A783A /* JYMeHeaderView.m in Sources */,

@@ -143,7 +143,8 @@
 {
     NSString *pageString = [NSString stringWithFormat:@"%ld",(long)_page];
     
-    NSDictionary *param = @{
+    NSDictionary *param = @{@"searchKey":@"",
+                            @"userId":@"-1",
                             @"pageNo":pageString,
                             @"pageSize":@"15"
                             };
