@@ -84,76 +84,114 @@
 #pragma mark - Refresh
 - (void)loadMoreData
 {
-    //    if (_footer.state == MJRefreshFooterStateIdle) {
-    NSLog(@"loadmoreData");
-    NSMutableString *url = [NSMutableString stringWithString:kWYNetWorkNewsListBaseStr];
-    [url appendFormat:@"/%@/%ld-%d.html", _tid, kWYNetWorkNewsListFetchOnceCount * _page, kWYNetWorkNewsListFetchOnceCount];
-    [[WYNetwork sharedWYNetwork] HttpGetNews:url success:^(id responseObject) {
-        //            NSLog(@"abc");
-        if (![responseObject isKindOfClass:[NSDictionary class]]) {
-            return;
-        }
-        if (![[responseObject allObjects] isKindOfClass:[NSArray class]]) {
-            return;
-        }
-        for (NSDictionary *dic in [[responseObject allObjects] lastObject]) {
-            WYNews *news = [[WYNews alloc] initWithDic:dic];
-            [_dataArray addObject:news];
-        }
-        _page++;
-        [_footer endRefreshing];
-        [self.tableView reloadData];
-    } failure:^(NSError *error) {
-        NSLog(@"\nerror is %@", [error localizedDescription]);
-        [_footer endRefreshing];
-    }];
-    //    }else [_footer endRefreshing];
-}
-
-
--(void)test{
+    NSString *pageString = [NSString stringWithFormat:@"%ld",(long)_page];
+    
     NSDictionary *param = @{
-                            @"tel":@"15395713725",
-                            @"password":@"1"
+                            @"pageNo":pageString,
+                            @"pageSize":@"15"
                             };
     
     JYHomeNewAPIManager *homeNewsManager = [[JYHomeNewAPIManager alloc] init];
     [homeNewsManager loadDataWithParams:param withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
         NSLog(@"login success data : %@", responseObject);
-//        JYLoginNewModel *loginUser = [[JYLoginNewModel alloc] initWithDictionary:responseObject error:nil];
-
+        [_dataArray removeAllObjects];
+        for (NSDictionary *dic in [responseObject allObjects]) {
+            //            WYNews *news = [[WYNews alloc] initWithDic:dic];
+            [_dataArray addObject:dic];
+        }
+        _page++;
+        [_footer endRefreshing];
+        [self.tableView reloadData];
+        
         
     } withFailure:^(ResponseResult *errorResult) {
         NSLog(@"login error : %@", errorResult);
+        
+        [_footer endRefreshing];
     }];
+    
+//    //    if (_footer.state == MJRefreshFooterStateIdle) {
+//    NSLog(@"loadmoreData");
+//    NSMutableString *url = [NSMutableString stringWithString:kWYNetWorkNewsListBaseStr];
+//    [url appendFormat:@"/%@/%ld-%d.html", _tid, kWYNetWorkNewsListFetchOnceCount * _page, kWYNetWorkNewsListFetchOnceCount];
+//    [[WYNetwork sharedWYNetwork] HttpGetNews:url success:^(id responseObject) {
+//        //            NSLog(@"abc");
+//        if (![responseObject isKindOfClass:[NSDictionary class]]) {
+//            return;
+//        }
+//        if (![[responseObject allObjects] isKindOfClass:[NSArray class]]) {
+//            return;
+//        }
+//        for (NSDictionary *dic in [[responseObject allObjects] lastObject]) {
+//            WYNews *news = [[WYNews alloc] initWithDic:dic];
+//            [_dataArray addObject:news];
+//        }
+//        _page++;
+//        [_footer endRefreshing];
+//        [self.tableView reloadData];
+//    } failure:^(NSError *error) {
+//        NSLog(@"\nerror is %@", [error localizedDescription]);
+//        [_footer endRefreshing];
+//    }];
+//    //    }else [_footer endRefreshing];
 }
+
+
 
 #pragma mark - 新闻刷新
 - (void)loadNewData
 {
-    //    if (_header.state == MJRefreshHeaderStateIdle) {
-    NSMutableString *url = [NSMutableString stringWithString:kWYNetWorkNewsListBaseStr];
-    [url appendFormat:@"/%@/%d-%d.html", _tid, 0, kWYNetWorkNewsListFetchOnceCount];
-    [[WYNetwork sharedWYNetwork] HttpGetNews:url success:^(id responseObject) {
-        //            NSLog(@"abc");
-        if (![responseObject isKindOfClass:[NSDictionary class]]) {
-            return;
-        }
-        if (![[responseObject allObjects] isKindOfClass:[NSArray class]]) {
-            return;
-        }
+    NSString *pageString = [NSString stringWithFormat:@"%ld",(long)_page];
+    
+    NSDictionary *param = @{
+                            @"pageNo":pageString,
+                            @"pageSize":@"15"
+                            };
+    
+    JYHomeNewAPIManager *homeNewsManager = [[JYHomeNewAPIManager alloc] init];
+    [homeNewsManager loadDataWithParams:param withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"login success data : %@", responseObject);
         [_dataArray removeAllObjects];
-        for (NSDictionary *dic in [[responseObject allObjects] lastObject]) {
-            WYNews *news = [[WYNews alloc] initWithDic:dic];
-            [_dataArray addObject:news];
+        for (NSDictionary *dic in [responseObject allObjects]) {
+//            WYNews *news = [[WYNews alloc] initWithDic:dic];
+            [_dataArray addObject:dic];
         }
         _page = 1;
         [_header endRefreshing];
         [self.tableView reloadData];
-    } failure:^(NSError *error) {
-        NSLog(@"\nerror is %@", [error localizedDescription]);
+        
+        
+    } withFailure:^(ResponseResult *errorResult) {
+        NSLog(@"login error : %@", errorResult);
+        
         [_header endRefreshing];
     }];
+    
+    
+    
+    //    if (_header.state == MJRefreshHeaderStateIdle) {
+//    NSMutableString *url = [NSMutableString stringWithString:kWYNetWorkNewsListBaseStr];
+//    [url appendFormat:@"/%@/%d-%d.html", _tid, 0, kWYNetWorkNewsListFetchOnceCount];
+//    [[WYNetwork sharedWYNetwork] HttpGetNews:url success:^(id responseObject) {
+//        //            NSLog(@"abc");
+//        if (![responseObject isKindOfClass:[NSDictionary class]]) {
+//            return;
+//        }
+//        if (![[responseObject allObjects] isKindOfClass:[NSArray class]]) {
+//            return;
+//        }
+//        [_dataArray removeAllObjects];
+//        for (NSDictionary *dic in [[responseObject allObjects] lastObject]) {
+//            WYNews *news = [[WYNews alloc] initWithDic:dic];
+//            [_dataArray addObject:news];
+//        }
+//        _page = 1;
+//        [_header endRefreshing];
+//        [self.tableView reloadData];
+//    } failure:^(NSError *error) {
+//        NSLog(@"\nerror is %@", [error localizedDescription]);
+//        [_header endRefreshing];
+//    }];
     //    }else [_header endRefreshing];
 }
 
@@ -181,12 +219,12 @@
 #pragma mark - Table view data source
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    WYNews *news = _dataArray[indexPath.row];
-    if (news.imgextra) {
-        return 118;
-    }else if (news.imgType) {
-        return 178;
-    }
+//    WYNews *news = _dataArray[indexPath.row];
+//    if (news.imgextra) {
+//        return 118;
+//    }else if (news.imgType) {
+//        return 178;
+//    }
     return 80;
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -203,23 +241,27 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *reuseIdentifier;
-    WYNews *news = (WYNews *)_dataArray[indexPath.row];
-    if (news.imgextra) {
-        reuseIdentifier = @"ImagesNews";
-    }else if (news.imgType) {
-        reuseIdentifier = @"WideImageNews";
-    }else {
-        reuseIdentifier = @"DefaultNews";
-    }
-    //    NSClassFromString([NSString stringWithFormat:@"WY%@Cell", reuseIdentifier]);
-    WYBaseNewsCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
-    if (cell == nil) {
-        cell = [NSClassFromString([NSString stringWithFormat:@"WY%@Cell", reuseIdentifier]) cell];
-    }
-    // Configure the cell...
-    cell.news = news;
-    //    cell.textLabel.text = news.title;
+//    NSString *reuseIdentifier;
+//    WYNews *news = (WYNews *)_dataArray[indexPath.row];
+//    if (news.imgextra) {
+//        reuseIdentifier = @"ImagesNews";
+//    }else if (news.imgType) {
+//        reuseIdentifier = @"WideImageNews";
+//    }else {
+//        reuseIdentifier = @"DefaultNews";
+//    }
+//    //    NSClassFromString([NSString stringWithFormat:@"WY%@Cell", reuseIdentifier]);
+//    WYBaseNewsCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
+//    if (cell == nil) {
+//        cell = [NSClassFromString([NSString stringWithFormat:@"WY%@Cell", reuseIdentifier]) cell];
+//    }
+//    // Configure the cell...
+//    cell.news = news;
+//    //    cell.textLabel.text = news.title;
+    NSDictionary *dict = _dataArray[indexPath.row];
+    UITableViewCell *cell = [[UITableViewCell alloc]init];
+    cell.textLabel.text = dict[@"title"];
+    
     return cell;
 }
 
