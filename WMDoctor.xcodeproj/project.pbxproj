@@ -4572,6 +4572,20 @@
 		858104E92112B0E200532B4D /* 商城-精选 */ = {
 			isa = PBXGroup;
 			children = (
+				858104D521104AFE00532B4D /* WMNewHotQuestionCell.h */,
+				858104D621104AFE00532B4D /* WMNewHotQuestionCell.m */,
+				858104CF211044AA00532B4D /* WMNewHotQuestionView.h */,
+				858104D0211044AA00532B4D /* WMNewHotQuestionView.m */,
+				858104AC2110021400532B4D /* WMHomeModuleView.h */,
+				858104AB2110021400532B4D /* WMHomeModuleView.m */,
+				8588374920E7181600DE928F /* JYMenuSelectorView.h */,
+				8588374A20E7181600DE928F /* JYMenuSelectorView.m */,
+				8581049F210FFC3C00532B4D /* JYStoreCarefullyChooseView.h */,
+				858104A0210FFC3C00532B4D /* JYStoreCarefullyChooseView.m */,
+				858104A5210FFFE400532B4D /* JYStoreBannerTableViewCell.h */,
+				858104A6210FFFE400532B4D /* JYStoreBannerTableViewCell.m */,
+				858104CC2110429600532B4D /* JYStoreModuleCell.h */,
+				858104CD2110429600532B4D /* JYStoreModuleCell.m */,
 			);
 			path = "商城-精选";
 			sourceTree = "<group>";
@@ -4600,20 +4614,6 @@
 			isa = PBXGroup;
 			children = (
 				858104E92112B0E200532B4D /* 商城-精选 */,
-				858104D521104AFE00532B4D /* WMNewHotQuestionCell.h */,
-				858104D621104AFE00532B4D /* WMNewHotQuestionCell.m */,
-				858104CF211044AA00532B4D /* WMNewHotQuestionView.h */,
-				858104D0211044AA00532B4D /* WMNewHotQuestionView.m */,
-				858104AC2110021400532B4D /* WMHomeModuleView.h */,
-				858104AB2110021400532B4D /* WMHomeModuleView.m */,
-				8588374920E7181600DE928F /* JYMenuSelectorView.h */,
-				8588374A20E7181600DE928F /* JYMenuSelectorView.m */,
-				8581049F210FFC3C00532B4D /* JYStoreCarefullyChooseView.h */,
-				858104A0210FFC3C00532B4D /* JYStoreCarefullyChooseView.m */,
-				858104A5210FFFE400532B4D /* JYStoreBannerTableViewCell.h */,
-				858104A6210FFFE400532B4D /* JYStoreBannerTableViewCell.m */,
-				858104CC2110429600532B4D /* JYStoreModuleCell.h */,
-				858104CD2110429600532B4D /* JYStoreModuleCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
