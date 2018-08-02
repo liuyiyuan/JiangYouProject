@@ -15,6 +15,7 @@
 #import "WYWideImageNewsCell.h"
 #import "WYNewsDetailVC.h"
 #import "JYHomeNewAPIManager.h"
+#import "JYHomeFocusTableViewCell.h"
 //#import "WYtool.h"
 @interface WYNewsTableController ()<UIScrollViewDelegate>
 
@@ -60,7 +61,8 @@
     //    self.tableView.preservesSuperviewLayoutMargins = NO;
     //    self.tableView.separatorInset = UIEdgeInsetsZero;
     self.tableView.delegate = self;
-   
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = pixelValue(380);
     self.tableView.mj_header = [MJWeiMaiHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
     __weak typeof(self) weakSelf = self;
     MJWeiMaiFooter *footer = [MJWeiMaiFooter footerWithRefreshingBlock:^{
@@ -218,16 +220,16 @@
 //    NSLog(@"\ndid scroll contentoffset.y %f, contentsize.height %f", scrollView.contentOffset.y, scrollView.contentSize.height);
 //}
 #pragma mark - Table view data source
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
 //    WYNews *news = _dataArray[indexPath.row];
 //    if (news.imgextra) {
 //        return 118;
 //    }else if (news.imgType) {
 //        return 178;
 //    }
-    return 80;
-}
+//    return 80;
+//}
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
@@ -260,9 +262,16 @@
 //    cell.news = news;
 //    //    cell.textLabel.text = news.title;
     NSDictionary *dict = _dataArray[indexPath.row];
-    UITableViewCell *cell = [[UITableViewCell alloc]init];
-    cell.textLabel.text = dict[@"title"];
-    
+    static NSString *cellId = @"JYHomeFocusTableViewCell";
+    JYHomeFocusTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    if(!cell){
+        cell = [[JYHomeFocusTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
+    }
+    cell.contentLabel.text = dict[@"content"];
+    cell.timeLabel.text = [self timeWithTimeIntervalString:dict[@"createTime"]];
+    [cell.likedButton setTitle:[NSString stringWithFormat:@" 转帖%@次",dict[@"likeCount"]] forState:UIControlStateNormal];
+    [cell.forwardingButton setTitle:[NSString stringWithFormat:@" 热评%@条",dict[@"turnCount"]] forState:UIControlStateNormal];
+    [cell.commentsButton setTitle:[NSString stringWithFormat:@" 赞%@次",dict[@"commentCount"]] forState:UIControlStateNormal];
     return cell;
 }
 
@@ -293,48 +302,21 @@
     //    [self.navigationController pushViewController:vc animated:YES];
 //    [WYTool showMsg:@"why I can't get in?"];
 }
-/*
- // Override to support conditional editing of the table view.
- - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
- // Return NO if you do not want the specified item to be editable.
- return YES;
- }
- */
 
-/*
- // Override to support editing the table view.
- - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
- if (editingStyle == UITableViewCellEditingStyleDelete) {
- // Delete the row from the data source
- [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
- } else if (editingStyle == UITableViewCellEditingStyleInsert) {
- // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
- }
- }
- */
-
-/*
- // Override to support rearranging the table view.
- - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
- }
- */
-
-/*
- // Override to support conditional rearranging of the table view.
- - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
- // Return NO if you do not want the item to be re-orderable.
- return YES;
- }
- */
-
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
+#pragma mark - 时间戳转化为时间NSDate
+- (NSString *)timeWithTimeIntervalString:(NSString *)timeString
+{
+    // 格式化时间
+    NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
+    formatter.timeZone = [NSTimeZone timeZoneWithName:@"shanghai"];
+    [formatter setDateStyle:NSDateFormatterMediumStyle];
+    [formatter setTimeStyle:NSDateFormatterShortStyle];
+    [formatter setDateFormat:@"yyyy年MM月dd日 HH:mm"];
+    
+    // 毫秒值转化为秒
+    NSDate* date = [NSDate dateWithTimeIntervalSince1970:[timeString doubleValue]/ 1000.0];
+    NSString* dateString = [formatter stringFromDate:date];
+    return dateString;
+}
 
 @end
