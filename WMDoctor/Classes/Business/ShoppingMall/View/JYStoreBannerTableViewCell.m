@@ -19,21 +19,21 @@
 
 @implementation JYStoreBannerTableViewCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
-    [self setupCycleScrollView];
+
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        [self setupCycleScrollView];
+    }
+    return self;
 }
 
-
-
-
-
 - (void)setupCycleScrollView{
-    self.cycleScrollView.frame = CGRectMake(0, 0, self.width, self.height);
+    self.cycleScrollView.frame = CGRectMake(0, 0, 375, 147);
     self.cycleScrollView.imageURLStringsGroup =@[];
     self.cycleScrollView.titlesGroup = @[];//[NSArray arrayWithArray:titleArr];
 //    self.cycleScrollView.growingSDCycleBannerIds = [NSArray arrayWithArray:titleArr];
+    self.cycleScrollView.backgroundColor = [UIColor redColor];
     [self.contentView addSubview:self.cycleScrollView];
 }
 
@@ -58,10 +58,17 @@
     NSLog(@"index : %@", index);
 }
 
+- (void)setValueWithBannerModel:(JYBannerModel *)bannerModel{
+    self.cycleScrollView.imageURLStringsGroup = [self getImagesUrl:bannerModel];
+}
 
-
-
-
+- (NSArray *)getImagesUrl:(JYBannerModel *)bannerModel{
+    NSMutableArray *imagesUrl = [NSMutableArray array];
+    for (JYSomeOneBanner *oneBanner in bannerModel.sowingMapArray) {
+        [imagesUrl addObject:oneBanner.picUrl];
+    }
+    return imagesUrl;
+}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

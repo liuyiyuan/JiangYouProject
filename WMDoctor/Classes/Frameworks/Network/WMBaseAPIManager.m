@@ -311,14 +311,9 @@ static NSTimeInterval const kRequestTimeoutInterval = 60;
         [manager POST:requestUrl parameters:param progress:nil success:
          ^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
              NSString *tmpStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-             if (self.child.portType == Port_Jyqss) {
-                 NSString *result = [FSAES128 AES128DecryptString:tmpStr];
-                 NSDictionary *dic = [self dictionaryWithJsonString:result];
-                 mySuccessBlock(task,dic);
-             } else if(self.child.portType == Port_Jeecmsv){
-                 NSDictionary *dic = [self dictionaryWithJsonString:tmpStr];
-                 mySuccessBlock(task,dic);
-             }
+             NSString *result = [FSAES128 AES128DecryptString:tmpStr];
+             NSDictionary *dic = [self dictionaryWithJsonString:result];
+             mySuccessBlock(task,dic);
              
          } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
              

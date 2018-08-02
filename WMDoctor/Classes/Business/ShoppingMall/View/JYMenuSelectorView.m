@@ -8,6 +8,7 @@
 
 #import "JYMenuSelectorView.h"
 
+
 @interface JYMenuSelectorView(){
     UIScrollView *_menuScrollView;
     UIButton *_selectedBtn;
@@ -31,6 +32,8 @@
     _menuScrollView.showsHorizontalScrollIndicator = NO;
     [self addSubview:_menuScrollView];
 }
+
+
 
 - (void)setMenuWithArr:(NSArray *)arr{
     float menuViewContnetWith = [self getMenuScrollViewConstentSizeWidthWithMenuArr:arr];

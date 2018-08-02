@@ -538,6 +538,10 @@
 		858104D1211044AA00532B4D /* WMNewHotQuestionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 858104D0211044AA00532B4D /* WMNewHotQuestionView.m */; };
 		858104D4211044DA00532B4D /* WMNewHotQuestionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 858104D3211044DA00532B4D /* WMNewHotQuestionModel.m */; };
 		858104D721104AFE00532B4D /* WMNewHotQuestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 858104D621104AFE00532B4D /* WMNewHotQuestionCell.m */; };
+		858104DA2110BA9B00532B4D /* JYCarefullyChooseBannerAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 858104D92110BA9B00532B4D /* JYCarefullyChooseBannerAPIManager.m */; };
+		858104E02110BCF100532B4D /* JYBannerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 858104DF2110BCF100532B4D /* JYBannerModel.m */; };
+		858104E42112AC8700532B4D /* JYSCCHeadlineAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 858104E32112AC8700532B4D /* JYSCCHeadlineAPIManager.m */; };
+		858104E82112B05C00532B4D /* JYSCCHeadlineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 858104E72112B05C00532B4D /* JYSCCHeadlineModel.m */; };
 		858836CB20E3DF5A00DE928F /* JYShoppingMallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 858836CA20E3DF5A00DE928F /* JYShoppingMallViewController.m */; };
 		8588374B20E7181600DE928F /* JYMenuSelectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8588374A20E7181600DE928F /* JYMenuSelectorView.m */; };
 		8588374F20E8885400DE928F /* JYLoginAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8588374E20E8885400DE928F /* JYLoginAPIManager.m */; };
@@ -1685,6 +1689,14 @@
 		858104D3211044DA00532B4D /* WMNewHotQuestionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMNewHotQuestionModel.m; sourceTree = "<group>"; };
 		858104D521104AFE00532B4D /* WMNewHotQuestionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMNewHotQuestionCell.h; sourceTree = "<group>"; };
 		858104D621104AFE00532B4D /* WMNewHotQuestionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMNewHotQuestionCell.m; sourceTree = "<group>"; };
+		858104D82110BA9B00532B4D /* JYCarefullyChooseBannerAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYCarefullyChooseBannerAPIManager.h; sourceTree = "<group>"; };
+		858104D92110BA9B00532B4D /* JYCarefullyChooseBannerAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYCarefullyChooseBannerAPIManager.m; sourceTree = "<group>"; };
+		858104DE2110BCF100532B4D /* JYBannerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYBannerModel.h; sourceTree = "<group>"; };
+		858104DF2110BCF100532B4D /* JYBannerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYBannerModel.m; sourceTree = "<group>"; };
+		858104E22112AC8700532B4D /* JYSCCHeadlineAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYSCCHeadlineAPIManager.h; sourceTree = "<group>"; };
+		858104E32112AC8700532B4D /* JYSCCHeadlineAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYSCCHeadlineAPIManager.m; sourceTree = "<group>"; };
+		858104E62112B05C00532B4D /* JYSCCHeadlineModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYSCCHeadlineModel.h; sourceTree = "<group>"; };
+		858104E72112B05C00532B4D /* JYSCCHeadlineModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYSCCHeadlineModel.m; sourceTree = "<group>"; };
 		858836C920E3DF5A00DE928F /* JYShoppingMallViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYShoppingMallViewController.h; sourceTree = "<group>"; };
 		858836CA20E3DF5A00DE928F /* JYShoppingMallViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYShoppingMallViewController.m; sourceTree = "<group>"; };
 		8588374920E7181600DE928F /* JYMenuSelectorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYMenuSelectorView.h; sourceTree = "<group>"; };
@@ -4535,6 +4547,35 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		858104E12112ABFB00532B4D /* 商城-精选 */ = {
+			isa = PBXGroup;
+			children = (
+				858104E22112AC8700532B4D /* JYSCCHeadlineAPIManager.h */,
+				858104E32112AC8700532B4D /* JYSCCHeadlineAPIManager.m */,
+				858104D82110BA9B00532B4D /* JYCarefullyChooseBannerAPIManager.h */,
+				858104D92110BA9B00532B4D /* JYCarefullyChooseBannerAPIManager.m */,
+			);
+			path = "商城-精选";
+			sourceTree = "<group>";
+		};
+		858104E52112B03D00532B4D /* 商城-精选 */ = {
+			isa = PBXGroup;
+			children = (
+				858104E62112B05C00532B4D /* JYSCCHeadlineModel.h */,
+				858104E72112B05C00532B4D /* JYSCCHeadlineModel.m */,
+				858104DE2110BCF100532B4D /* JYBannerModel.h */,
+				858104DF2110BCF100532B4D /* JYBannerModel.m */,
+			);
+			path = "商城-精选";
+			sourceTree = "<group>";
+		};
+		858104E92112B0E200532B4D /* 商城-精选 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "商城-精选";
+			sourceTree = "<group>";
+		};
 		858836C520E3DEDF00DE928F /* ShoppingMall */ = {
 			isa = PBXGroup;
 			children = (
@@ -4558,6 +4599,7 @@
 		858836C720E3DF0500DE928F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				858104E92112B0E200532B4D /* 商城-精选 */,
 				858104D521104AFE00532B4D /* WMNewHotQuestionCell.h */,
 				858104D621104AFE00532B4D /* WMNewHotQuestionCell.m */,
 				858104CF211044AA00532B4D /* WMNewHotQuestionView.h */,
@@ -4579,6 +4621,7 @@
 		858836C820E3DF0C00DE928F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				858104E52112B03D00532B4D /* 商城-精选 */,
 				85CAB45A210DDEA300884A54 /* JYShoppingMallModel.h */,
 				85CAB45B210DDEA300884A54 /* JYShoppingMallModel.m */,
 				858104D2211044DA00532B4D /* WMNewHotQuestionModel.h */,
@@ -4724,6 +4767,7 @@
 		85CAB456210DD30D00884A54 /* APIManager */ = {
 			isa = PBXGroup;
 			children = (
+				858104E12112ABFB00532B4D /* 商城-精选 */,
 				85CAB457210DD34200884A54 /* JYShoppingMallAPIManager.h */,
 				85CAB458210DD34200884A54 /* JYShoppingMallAPIManager.m */,
 				85CAB460210DED7F00884A54 /* JYStoreCarefullyChooseAPIManager.h */,
@@ -5393,6 +5437,7 @@
 				8537E7A41F8DA9AF00F1429E /* WMDoctorVoiceView.m in Sources */,
 				854180BF1FCBE40700EA4235 /* WMMyMicroBeanAPIManager.m in Sources */,
 				186AF3041ED51D5100F699C6 /* HClTextView.m in Sources */,
+				858104E82112B05C00532B4D /* JYSCCHeadlineModel.m in Sources */,
 				1D27F8FE1E24AA1700DE9D68 /* WMRCAdvisoryEndView.m in Sources */,
 				186AF3141ED6AE7000F699C6 /* WMGetStatusLoadingAPIManager.m in Sources */,
 				18237ED61EA75A9800C30F51 /* WMGetServicePriceAPIManager.m in Sources */,
@@ -5426,6 +5471,7 @@
 				AD93FEB420DDE39200C8EF83 /* WYLabelButton.m in Sources */,
 				85CAB452210D43E900884A54 /* JYMineModel.m in Sources */,
 				0C5CB0831E1DEBC1005AF239 /* WMDoctor.xcdatamodeld in Sources */,
+				858104E42112AC8700532B4D /* JYSCCHeadlineAPIManager.m in Sources */,
 				18F5B6801E149E7D0051C60E /* WMAdvertModel.m in Sources */,
 				18237EE81EA78CE000C30F51 /* WMServiceUpdatePriceAPIManager.m in Sources */,
 				85BE0CB121077518002B964C /* JYSetPasswordAPIManager.m in Sources */,
@@ -5727,6 +5773,7 @@
 				0C77A04E1E2CA824005080FE /* WMLoginAPIManager.m in Sources */,
 				186AF3171EE6A86F00F699C6 /* WMMyNameStatusCardViewController.m in Sources */,
 				0CAF8F251E0CED2A0092E6A8 /* WMSystemMessageCell.m in Sources */,
+				858104E02110BCF100532B4D /* JYBannerModel.m in Sources */,
 				1D3816661ECACF4900562FCA /* WMCertificationPictureCell.m in Sources */,
 				0CED7DB31E235D6000892555 /* WMBaseUITextField.m in Sources */,
 				1D28B5511EC458B40014D859 /* WMDoctorCertificationResultView.m in Sources */,
@@ -5765,6 +5812,7 @@
 				18153C481E16368300956D2A /* WMCardInfoModel.m in Sources */,
 				1D68292F1E81268900422732 /* WMRecommendDocCell.m in Sources */,
 				1D38167F1ECC194200562FCA /* WMCertificationAPIManager.m in Sources */,
+				858104DA2110BA9B00532B4D /* JYCarefullyChooseBannerAPIManager.m in Sources */,
 				85D2BACD1FC2812D00C67F98 /* WMQuestionsAPIManager.m in Sources */,
 				0CEB2EB71E0CF81E0070119A /* WMNewPatienReportCell.m in Sources */,
 				0CEB2F031E13A6F40070119A /* WMLoginCheckAPIManager.m in Sources */,

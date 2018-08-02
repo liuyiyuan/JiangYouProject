@@ -22,6 +22,7 @@
 #import "JYShoppingMallAPIManager.h"
 #import "JYShoppingMallModel.h"
 #import "JYStoreCarefullyChooseAPIManager.h"
+#import "JYStoreCarefullyChooseView.h"
 
 
 @interface JYShoppingMallViewController ()<TopicScrollViewDelegate, SDCycleScrollViewDelegate, UIScrollViewDelegate>{
@@ -29,6 +30,8 @@
     JYMenuSelectorView *_menuSelectorView;
     UIScrollView *_scrollView;
 }
+
+@property(nonatomic, strong)JYStoreCarefullyChooseView *carefullyChooseView;
 
 @property(nonatomic, strong) NSMutableArray *dataSource;
 
@@ -45,6 +48,7 @@
     [self setupView];
 //    [self loadShoppingMallRequest];
 //    [self loadStoreCarefullyChooseRquest];
+    [self setupCarefullyChooseView];
 }
 
 - (void)initData{
@@ -70,6 +74,10 @@
     [self.view addSubview:_menuSelectorView];
 }
 
+- (void)setupCarefullyChooseView{
+    self.carefullyChooseView = [[JYStoreCarefullyChooseView alloc] initWithFrame:CGRectMake(0, 0, kScreen_width, kScreenHeight - 44)];
+    [self.view addSubview:self.carefullyChooseView];
+}
 
 - (void)loadShoppingMallRequest{
     JYShoppingMallAPIManager *shoppingMallAPIManager = [[JYShoppingMallAPIManager alloc] init];

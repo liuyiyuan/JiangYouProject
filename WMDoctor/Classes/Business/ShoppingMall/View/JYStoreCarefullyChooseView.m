@@ -9,12 +9,18 @@
 #import "JYStoreCarefullyChooseView.h"
 #import "JYStoreBannerTableViewCell.h"
 #import "JYStoreCarefullyChooseAPIManager.h"
+#import "JYCarefullyChooseBannerAPIManager.h"
+#import "JYBannerModel.h"
+#import "JYSCCHeadlineAPIManager.h"
+#import "JYSCCHeadlineModel.h"
 
 @interface JYStoreCarefullyChooseView()<UITableViewDataSource, UITableViewDelegate>{
     UITableView *_tableView;
 }
 
 @property(nonatomic, strong)NSMutableArray *dataSource;
+@property(nonatomic, strong)JYBannerModel *banner;
+@property(nonatomic, strong)JYSCCHeadlineModel *headlineModel;
 
 @end
 
@@ -23,7 +29,9 @@
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
-        
+        [self setupView];
+        [self loadBannerRequest];
+        [self loadHeadlineRequest];
     }
     return self;
 }
@@ -65,7 +73,7 @@
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 50.f;
+    return 147.f;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -73,6 +81,9 @@
     if (indexPath.row == 0) {
         JYStoreBannerTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JYStoreBannerTableViewCell" forIndexPath:indexPath];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        if (self.banner) {
+            [cell setValueWithBannerModel:self.banner];
+        }
         return cell;
     }
     return [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
@@ -92,6 +103,27 @@
         NSLog(@"store carefullychoose request response : %@", responseObject);
     } withFailure:^(ResponseResult *errorResult) {
         NSLog(@"store carefullychoose request error : %@", errorResult);
+    }];
+}
+
+- (void)loadBannerRequest{
+    JYCarefullyChooseBannerAPIManager *bannerAPIManager = [[JYCarefullyChooseBannerAPIManager alloc] init];
+    [bannerAPIManager loadDataWithParams:@{} withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
+        self.banner = [[JYBannerModel alloc] initWithDictionary:responseObject error:nil];
+        [_tableView reloadData];
+    } withFailure:^(ResponseResult *errorResult) {
+        NSLog(@"banner error : %@", errorResult);
+    }];
+}
+
+- (void)loadHeadlineRequest{
+    JYSCCHeadlineAPIManager *headlineAPIManager = [[JYSCCHeadlineAPIManager alloc] init];
+    [headlineAPIManager loadDataWithParams:@{} withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"headline : %@", responseObject);
+        JYSCCHeadlineModel *headlineModel = [[JYSCCHeadlineModel alloc] initWithDictionary:responseObject error:nil];
+        [_tableView reloadData];
+    } withFailure:^(ResponseResult *errorResult) {
+        NSLog(@"headline error : %@", errorResult);
     }];
 }
 
