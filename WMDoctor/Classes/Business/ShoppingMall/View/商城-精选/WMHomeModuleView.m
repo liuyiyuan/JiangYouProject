@@ -49,7 +49,7 @@
         
         _markimgs = [NSMutableArray array];
         
-        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 10, frame.size.width, 78)];
+        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, 46)];
         _scrollView.pagingEnabled = YES;
         _scrollView.delegate = self;
         _scrollView.showsHorizontalScrollIndicator = NO;
@@ -64,7 +64,7 @@
 
 - (void)setValueWithModelArray:(NSArray *)images andTitleArr:(NSArray *)titles {
     //页数
-    _pages = images.count/4 + (images.count%4?1:0);
+    _pages = images.count/5 + (images.count%5?1:0);
     _modelArray = [images mutableCopy];
     for (UIView *view in _scrollView.subviews) {
         [view removeFromSuperview];
@@ -76,7 +76,7 @@
         NSString *imageName = images[i];
         NSString *title = titles[i];
         
-        UIButton *bgButton = [[UIButton alloc] initWithFrame:CGRectMake(i*self.scrollView.width/4, 0, self.scrollView.width/4, self.scrollView.height)];
+        UIButton *bgButton = [[UIButton alloc] initWithFrame:CGRectMake(i*self.scrollView.width/5, 0, self.scrollView.width/5, self.scrollView.height)];
         bgButton.tag = i;
         [bgButton addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
         [_scrollView addSubview:bgButton];
@@ -90,15 +90,16 @@
             h = 3/375.0;
         }
         
-        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake((bgButton.width- 36/375.0 * kScreen_width)/2, h * kScreen_width, 36/375.0 * kScreen_width, 36/375.0 * kScreen_width)];
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake((bgButton.width- 16/375.0 * kScreen_width)/2, h * kScreen_width, 16, 16)];
         
         imageView.contentMode = UIViewContentModeScaleAspectFit;
         imageView.image = [UIImage imageNamed:imageName];
         [bgButton addSubview:imageView];
         
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, imageView.height+imageView.frame.origin.y+10, bgButton.width, 20)];
-        label.font = [UIFont systemFontOfSize:14];
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, imageView.height+imageView.frame.origin.y+4, bgButton.width, 10)];
+        label.font = [UIFont systemFontOfSize:9];
         label.textAlignment = NSTextAlignmentCenter;
+        label.textColor = [UIColor colorWithHexString:@"#8E8E8E"];
         label.text = title;
         [bgButton addSubview:label];
     }
@@ -111,15 +112,11 @@
 
     if (_pages > 1) {
         _pageView = [[UIView alloc] initWithFrame:CGRectMake(50, self.height - 10 , self.width - 100, 10)];
-//        _pageView.backgroundColor = [UIColor yellowColor];
         [self addSubview:_pageView];
-        
         _pageBgView = [[UIView alloc] initWithFrame:CGRectZero];
-//        _pageBgView.backgroundColor = [UIColor grayColor];
         [_pageView addSubview:_pageBgView];
         [self loadPageControlSubViews];
     }
-    
     //放地下很重要！！！
     _scrollView.contentSize = CGSizeMake(self.width*_pages, _scrollView.height);
 

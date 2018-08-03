@@ -57,6 +57,7 @@
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.showsVerticalScrollIndicator = NO;
+    _tableView.separatorStyle = UITableViewCellSelectionStyleNone;
     
     [_tableView registerClass:[JYStoreBannerTableViewCell class] forCellReuseIdentifier:@"JYStoreBannerTableViewCell"];
     [_tableView registerClass:[JYStoreModuleCell class] forCellReuseIdentifier:@"JYStoreModuleCell"];
@@ -102,7 +103,7 @@
     if (indexPath.section == 0) {
         return 147.f;
     } else if(indexPath.section == 1){
-        return 80.f;
+        return 46.f;
     } else if (indexPath.section == 2){
         return 80.f;
     } else{
