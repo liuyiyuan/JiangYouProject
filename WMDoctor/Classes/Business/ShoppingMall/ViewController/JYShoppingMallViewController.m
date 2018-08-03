@@ -11,31 +11,25 @@
 #import "WYTopicHeader.h"
 #import "WYTopic.h"
 #import "JYMenuSelectorView.h"
-#import "JYLoginAPIManager.h"
-#import <AFURLRequestSerialization.h>
-#import <AFNetworking.h>
-#import <AFSecurityPolicy.h>
-#import <AFURLSessionManager.h>
-#import <AFHTTPSessionManager.h>
-#import <AFAutoPurgingImageCache.h>
 #import "SDCycleScrollView.h"
-#import "JYShoppingMallAPIManager.h"
-#import "JYShoppingMallModel.h"
 #import "JYStoreCarefullyChooseAPIManager.h"
 #import "JYStoreCarefullyChooseView.h"
 #import "JYPanicBuyView.h"
+#import "JYGroupBuyView.h"
 
 
 @interface JYShoppingMallViewController ()<TopicScrollViewDelegate, SDCycleScrollViewDelegate, UIScrollViewDelegate>{
     WYTopicScrollView *_topicScrollView;
     JYMenuSelectorView *_menuSelectorView;
-    UIScrollView *_scrollView;
+    
 }
 
 @property(nonatomic, strong)JYStoreCarefullyChooseView *carefullyChooseView;
 @property(nonatomic, strong)JYPanicBuyView *panicBuyView;
+@property(nonatomic, strong)JYGroupBuyView *groupBuyView;
 
 @property(nonatomic, strong) NSMutableArray *dataSource;
+@property(nonatomic, strong) UIScrollView *scrollView;
 
 
 @end
@@ -50,6 +44,7 @@
     [self setupView];
     [self setupCarefullyChooseView];
     [self setupPanicBuyView];
+    [self setupGroupBuyView];
 }
 
 - (void)initData{
@@ -60,8 +55,10 @@
     _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
     _scrollView.pagingEnabled = YES;
     _scrollView.contentSize = CGSizeMake(kScreenWidth * 5, kScreenHeight);
+    _scrollView.scrollEnabled = YES;
     _scrollView.delegate = self;
     [self.view addSubview:_scrollView];
+    
 }
 
 - (void)initView{
@@ -73,16 +70,22 @@
     _menuSelectorView = [[JYMenuSelectorView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 44)];
     [_menuSelectorView setMenuWithArr:@[@"精选", @"抢购", @"团购", @"福利", @"商城", @"贴吧"]];
     [self.view addSubview:_menuSelectorView];
+    
 }
 
 - (void)setupCarefullyChooseView{
     self.carefullyChooseView = [[JYStoreCarefullyChooseView alloc] initWithFrame:CGRectMake(0, 0, kScreen_width, kScreenHeight - 44)];
-    [self.view addSubview:self.carefullyChooseView];
+    [self.scrollView addSubview:self.carefullyChooseView];
 }
 
 - (void)setupPanicBuyView{
     self.panicBuyView = [[JYPanicBuyView alloc] initWithFrame:CGRectMake(kScreenWidth, 0, kScreenWidth, kScreenHeight)];
-    [self.view addSubview:self.panicBuyView];
+    [self.scrollView addSubview:self.panicBuyView];
+}
+
+- (void)setupGroupBuyView{
+    self.groupBuyView = [[JYGroupBuyView alloc] initWithFrame:CGRectMake(kScreenWidth * 2, 0, kScreenWidth, kScreenHeight)];
+    [self.scrollView addSubview:self.groupBuyView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -96,6 +99,18 @@
 
 - (void)topicScrollViewDidSelectButton:(NSInteger)selectedButtonIndex{
     NSLog(@"selectedButtonIndex : %ld", selectedButtonIndex);
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    
+}
+
+- (void)scrollViewDidZoom:(UIScrollView *)scrollView{
+    NSLog(@"scrollview did zoom");
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+    NSLog(@"scrollview will begin dragging");
 }
 
 @end

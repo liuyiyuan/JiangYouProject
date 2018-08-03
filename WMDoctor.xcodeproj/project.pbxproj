@@ -528,6 +528,9 @@
 		855281012113E769006E4D07 /* JYPanicBuyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 855281002113E769006E4D07 /* JYPanicBuyView.m */; };
 		855281082113E8E6006E4D07 /* JYPanicBuyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 855281062113E8E6006E4D07 /* JYPanicBuyCell.m */; };
 		855281092113E8E6006E4D07 /* JYPanicBuyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 855281072113E8E6006E4D07 /* JYPanicBuyCell.xib */; };
+		855281102113F02C006E4D07 /* JYPanicBuyAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8552810F2113F02C006E4D07 /* JYPanicBuyAPIManager.m */; };
+		8552811421143057006E4D07 /* JYGroupBuyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8552811321143057006E4D07 /* JYGroupBuyView.m */; };
+		85528118211430FA006E4D07 /* JYGroupBuyAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85528117211430FA006E4D07 /* JYGroupBuyAPIManager.m */; };
 		855C9BD820C8C488007383EB /* WMPatientTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 855C9BD720C8C488007383EB /* WMPatientTagViewController.m */; };
 		855C9BDB20C8CBD1007383EB /* WMQAQuestionLabelsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 855C9BD920C8CBD0007383EB /* WMQAQuestionLabelsView.m */; };
 		855C9BDE20C8CD2E007383EB /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 855C9BDC20C8CD2D007383EB /* UIView+Extension.m */; };
@@ -1676,6 +1679,12 @@
 		855281052113E8E6006E4D07 /* JYPanicBuyCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYPanicBuyCell.h; sourceTree = "<group>"; };
 		855281062113E8E6006E4D07 /* JYPanicBuyCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYPanicBuyCell.m; sourceTree = "<group>"; };
 		855281072113E8E6006E4D07 /* JYPanicBuyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JYPanicBuyCell.xib; sourceTree = "<group>"; };
+		8552810E2113F02C006E4D07 /* JYPanicBuyAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYPanicBuyAPIManager.h; sourceTree = "<group>"; };
+		8552810F2113F02C006E4D07 /* JYPanicBuyAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYPanicBuyAPIManager.m; sourceTree = "<group>"; };
+		8552811221143057006E4D07 /* JYGroupBuyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYGroupBuyView.h; sourceTree = "<group>"; };
+		8552811321143057006E4D07 /* JYGroupBuyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYGroupBuyView.m; sourceTree = "<group>"; };
+		85528116211430FA006E4D07 /* JYGroupBuyAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYGroupBuyAPIManager.h; sourceTree = "<group>"; };
+		85528117211430FA006E4D07 /* JYGroupBuyAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYGroupBuyAPIManager.m; sourceTree = "<group>"; };
 		855C9BD620C8C488007383EB /* WMPatientTagViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMPatientTagViewController.h; sourceTree = "<group>"; };
 		855C9BD720C8C488007383EB /* WMPatientTagViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMPatientTagViewController.m; sourceTree = "<group>"; };
 		855C9BD920C8CBD0007383EB /* WMQAQuestionLabelsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMQAQuestionLabelsView.m; sourceTree = "<group>"; };
@@ -4514,8 +4523,35 @@
 		8552810A2113EF08006E4D07 /* 商城-抢购 */ = {
 			isa = PBXGroup;
 			children = (
+				8552810E2113F02C006E4D07 /* JYPanicBuyAPIManager.h */,
+				8552810F2113F02C006E4D07 /* JYPanicBuyAPIManager.m */,
 			);
 			path = "商城-抢购";
+			sourceTree = "<group>";
+		};
+		8552811121142FFE006E4D07 /* 商城-团购 */ = {
+			isa = PBXGroup;
+			children = (
+				8552811221143057006E4D07 /* JYGroupBuyView.h */,
+				8552811321143057006E4D07 /* JYGroupBuyView.m */,
+			);
+			path = "商城-团购";
+			sourceTree = "<group>";
+		};
+		85528115211430D9006E4D07 /* 商城-团购 */ = {
+			isa = PBXGroup;
+			children = (
+				85528116211430FA006E4D07 /* JYGroupBuyAPIManager.h */,
+				85528117211430FA006E4D07 /* JYGroupBuyAPIManager.m */,
+			);
+			path = "商城-团购";
+			sourceTree = "<group>";
+		};
+		8552811921143289006E4D07 /* 商城-福利 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "商城-福利";
 			sourceTree = "<group>";
 		};
 		856237321F7DE57F00451954 /* 今日医声展示页 */ = {
@@ -4666,6 +4702,8 @@
 		858836C720E3DF0500DE928F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8552811921143289006E4D07 /* 商城-福利 */,
+				8552811121142FFE006E4D07 /* 商城-团购 */,
 				855280FE2113E6FF006E4D07 /* 商城-抢购 */,
 				858104E92112B0E200532B4D /* 商城-精选 */,
 			);
@@ -4821,6 +4859,7 @@
 		85CAB456210DD30D00884A54 /* APIManager */ = {
 			isa = PBXGroup;
 			children = (
+				85528115211430D9006E4D07 /* 商城-团购 */,
 				8552810A2113EF08006E4D07 /* 商城-抢购 */,
 				858104E12112ABFB00532B4D /* 商城-精选 */,
 				85CAB457210DD34200884A54 /* JYShoppingMallAPIManager.h */,
@@ -5454,6 +5493,7 @@
 				18777AA91E27219A000957D6 /* WMMyWalletViewController.m in Sources */,
 				854180C21FCBE6B300EA4235 /* WMMyMicroBeanModel.m in Sources */,
 				188F14BB1F2882F60058B4CB /* QuickEntity+CoreDataClass.m in Sources */,
+				85528118211430FA006E4D07 /* JYGroupBuyAPIManager.m in Sources */,
 				CC2B24EA20EDF2940050D5B2 /* JYFirstLogInViewController.m in Sources */,
 				18153C371E16287900956D2A /* WMchangePriceAPIManager.m in Sources */,
 				1D3B76421E14A0320035EE65 /* WMMessageTypeAPIManager.m in Sources */,
@@ -5627,6 +5667,7 @@
 				85CF6D0520AEA6E600FCDD21 /* WMMedicalCircleAPIManager.m in Sources */,
 				18328A2F1F1470F300F87E01 /* STKQueueEntry.m in Sources */,
 				0C4004871E026C25003E1FC4 /* Encrypt.m in Sources */,
+				855281102113F02C006E4D07 /* JYPanicBuyAPIManager.m in Sources */,
 				188F14CB1F29BA960058B4CB /* WMQuickReplyListCell.m in Sources */,
 				18153C451E16360B00956D2A /* WMMyNameCardViewController.m in Sources */,
 				1855DC2D1E83B622001B4DDD /* WMSchoolTypeModel.m in Sources */,
@@ -5692,6 +5733,7 @@
 				1D6829151E7ABB6700422732 /* WMVIPPatientViewController.m in Sources */,
 				AD93FE8A20DDDEDF00C8EF83 /* WYNewsTableController.m in Sources */,
 				186ADFDE1ECAD98D0070288B /* WMPatientCommentsModel.m in Sources */,
+				8552811421143057006E4D07 /* JYGroupBuyView.m in Sources */,
 				186AF3111ED5258100F699C6 /* WMInfoTransitionViewController.m in Sources */,
 				AD526A1B20E8CB0800D4BF85 /* NSString+PPTextField.m in Sources */,
 				0CD6E2D91DFFF8A500E75DB5 /* AppConfig.m in Sources */,

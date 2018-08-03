@@ -1,28 +1,29 @@
 //
-//  JYPanicBuyView.m
+//  JYGroupBuyView.m
 //  WMDoctor
 //
 //  Created by xugq on 2018/8/3.
 //  Copyright © 2018年 Choice. All rights reserved.
 //
 
-#import "JYPanicBuyView.h"
+#import "JYGroupBuyView.h"
 #import "JYPanicBuyCell.h"
-#import "JYPanicBuyAPIManager.h"
+#import "JYGroupBuyAPIManager.h"
 
-@interface JYPanicBuyView()<UICollectionViewDataSource, UICollectionViewDelegate>
+@interface JYGroupBuyView()<UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property(nonatomic, strong)UICollectionView *collectionView;
 
+
 @end
 
-@implementation JYPanicBuyView
+@implementation JYGroupBuyView
 
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
         [self setupView];
-        [self loadPanicBuyAPIManager];
+        [self loadGroupBuyRequest];
     }
     return self;
 }
@@ -66,14 +67,16 @@
     return cell;
 }
 
-- (void)loadPanicBuyAPIManager{
-    JYPanicBuyAPIManager *spanicBuyAPIManager = [[JYPanicBuyAPIManager alloc] init];
-    [spanicBuyAPIManager loadDataWithParams:@{} withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
-        NSLog(@"panic : %@", responseObject);
+- (void)loadGroupBuyRequest{
+    JYGroupBuyAPIManager *groupBuyAPIManager = [[JYGroupBuyAPIManager alloc] init];
+    [groupBuyAPIManager loadDataWithParams:@{} withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"group buy : %@", responseObject);
     } withFailure:^(ResponseResult *errorResult) {
-        NSLog(@"panic error : %@", errorResult);
+        NSLog(@"group buy error : %@", errorResult);
     }];
 }
+
+
 
 /*
 // Only override drawRect: if you perform custom drawing.
