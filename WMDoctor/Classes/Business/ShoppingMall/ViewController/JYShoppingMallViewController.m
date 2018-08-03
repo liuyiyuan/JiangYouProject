@@ -23,6 +23,7 @@
 #import "JYShoppingMallModel.h"
 #import "JYStoreCarefullyChooseAPIManager.h"
 #import "JYStoreCarefullyChooseView.h"
+#import "JYPanicBuyView.h"
 
 
 @interface JYShoppingMallViewController ()<TopicScrollViewDelegate, SDCycleScrollViewDelegate, UIScrollViewDelegate>{
@@ -32,6 +33,7 @@
 }
 
 @property(nonatomic, strong)JYStoreCarefullyChooseView *carefullyChooseView;
+@property(nonatomic, strong)JYPanicBuyView *panicBuyView;
 
 @property(nonatomic, strong) NSMutableArray *dataSource;
 
@@ -46,9 +48,8 @@
     [self initData];
     [self initView];
     [self setupView];
-//    [self loadShoppingMallRequest];
-//    [self loadStoreCarefullyChooseRquest];
     [self setupCarefullyChooseView];
+    [self setupPanicBuyView];
 }
 
 - (void)initData{
@@ -79,27 +80,9 @@
     [self.view addSubview:self.carefullyChooseView];
 }
 
-- (void)loadShoppingMallRequest{
-    JYShoppingMallAPIManager *shoppingMallAPIManager = [[JYShoppingMallAPIManager alloc] init];
-    [shoppingMallAPIManager loadDataWithParams:@{} withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
-        NSLog(@"shoppingmall request response : %@", responseObject);
-        for (NSDictionary *dic in responseObject) {
-            JYShoppingMallModel *shopMall = [[JYShoppingMallModel alloc] initWithDictionary:dic error:nil];
-            [self.dataSource addObject:shopMall];
-        };
-        
-    } withFailure:^(ResponseResult *errorResult) {
-        NSLog(@"shoppingmall request error : %@", errorResult);
-    }];
-}
-
-- (void)loadStoreCarefullyChooseRquest{
-    JYStoreCarefullyChooseAPIManager *storeCarefullyChooseAPIManager = [[JYStoreCarefullyChooseAPIManager alloc] init];
-    [storeCarefullyChooseAPIManager loadDataWithParams:@{} withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
-        NSLog(@"store carefullychoose request response : %@", responseObject);
-    } withFailure:^(ResponseResult *errorResult) {
-        NSLog(@"store carefullychoose request error : %@", errorResult);
-    }];
+- (void)setupPanicBuyView{
+    self.panicBuyView = [[JYPanicBuyView alloc] initWithFrame:CGRectMake(kScreenWidth, 0, kScreenWidth, kScreenHeight)];
+    [self.view addSubview:self.panicBuyView];
 }
 
 - (void)didReceiveMemoryWarning {

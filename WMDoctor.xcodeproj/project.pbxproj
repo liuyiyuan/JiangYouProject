@@ -519,6 +519,15 @@
 		8552604D1F4138C500F16618 /* WMGroupMemberViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8552604A1F4138C500F16618 /* WMGroupMemberViewCell.xib */; };
 		8552604E1F4138C500F16618 /* WMGroupMemberViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8552604C1F4138C500F16618 /* WMGroupMemberViewCell.m */; };
 		855260511F419F3700F16618 /* WMActivityWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 855260501F419F3700F16618 /* WMActivityWebViewController.m */; };
+		855280EE2112E06B006E4D07 /* JYSCCHeadlineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 855280EC2112E06B006E4D07 /* JYSCCHeadlineCell.m */; };
+		855280EF2112E06B006E4D07 /* JYSCCHeadlineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 855280ED2112E06B006E4D07 /* JYSCCHeadlineCell.xib */; };
+		855280F32112EB47006E4D07 /* JYSCCGoodsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 855280F12112EB47006E4D07 /* JYSCCGoodsCell.m */; };
+		855280F42112EB47006E4D07 /* JYSCCGoodsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 855280F22112EB47006E4D07 /* JYSCCGoodsCell.xib */; };
+		855280FA2112ECD9006E4D07 /* JYSCCGoodsAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 855280F92112ECD9006E4D07 /* JYSCCGoodsAPIManager.m */; };
+		855280FD2112EEB6006E4D07 /* JYSCCGoodsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 855280FC2112EEB6006E4D07 /* JYSCCGoodsModel.m */; };
+		855281012113E769006E4D07 /* JYPanicBuyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 855281002113E769006E4D07 /* JYPanicBuyView.m */; };
+		855281082113E8E6006E4D07 /* JYPanicBuyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 855281062113E8E6006E4D07 /* JYPanicBuyCell.m */; };
+		855281092113E8E6006E4D07 /* JYPanicBuyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 855281072113E8E6006E4D07 /* JYPanicBuyCell.xib */; };
 		855C9BD820C8C488007383EB /* WMPatientTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 855C9BD720C8C488007383EB /* WMPatientTagViewController.m */; };
 		855C9BDB20C8CBD1007383EB /* WMQAQuestionLabelsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 855C9BD920C8CBD0007383EB /* WMQAQuestionLabelsView.m */; };
 		855C9BDE20C8CD2E007383EB /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 855C9BDC20C8CD2D007383EB /* UIView+Extension.m */; };
@@ -1652,6 +1661,21 @@
 		8552604C1F4138C500F16618 /* WMGroupMemberViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMGroupMemberViewCell.m; sourceTree = "<group>"; };
 		8552604F1F419F3700F16618 /* WMActivityWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMActivityWebViewController.h; sourceTree = "<group>"; };
 		855260501F419F3700F16618 /* WMActivityWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMActivityWebViewController.m; sourceTree = "<group>"; };
+		855280EB2112E06B006E4D07 /* JYSCCHeadlineCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYSCCHeadlineCell.h; sourceTree = "<group>"; };
+		855280EC2112E06B006E4D07 /* JYSCCHeadlineCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYSCCHeadlineCell.m; sourceTree = "<group>"; };
+		855280ED2112E06B006E4D07 /* JYSCCHeadlineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JYSCCHeadlineCell.xib; sourceTree = "<group>"; };
+		855280F02112EB47006E4D07 /* JYSCCGoodsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYSCCGoodsCell.h; sourceTree = "<group>"; };
+		855280F12112EB47006E4D07 /* JYSCCGoodsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYSCCGoodsCell.m; sourceTree = "<group>"; };
+		855280F22112EB47006E4D07 /* JYSCCGoodsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JYSCCGoodsCell.xib; sourceTree = "<group>"; };
+		855280F82112ECD9006E4D07 /* JYSCCGoodsAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYSCCGoodsAPIManager.h; sourceTree = "<group>"; };
+		855280F92112ECD9006E4D07 /* JYSCCGoodsAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYSCCGoodsAPIManager.m; sourceTree = "<group>"; };
+		855280FB2112EEB6006E4D07 /* JYSCCGoodsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYSCCGoodsModel.h; sourceTree = "<group>"; };
+		855280FC2112EEB6006E4D07 /* JYSCCGoodsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYSCCGoodsModel.m; sourceTree = "<group>"; };
+		855280FF2113E769006E4D07 /* JYPanicBuyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYPanicBuyView.h; sourceTree = "<group>"; };
+		855281002113E769006E4D07 /* JYPanicBuyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYPanicBuyView.m; sourceTree = "<group>"; };
+		855281052113E8E6006E4D07 /* JYPanicBuyCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYPanicBuyCell.h; sourceTree = "<group>"; };
+		855281062113E8E6006E4D07 /* JYPanicBuyCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYPanicBuyCell.m; sourceTree = "<group>"; };
+		855281072113E8E6006E4D07 /* JYPanicBuyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JYPanicBuyCell.xib; sourceTree = "<group>"; };
 		855C9BD620C8C488007383EB /* WMPatientTagViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMPatientTagViewController.h; sourceTree = "<group>"; };
 		855C9BD720C8C488007383EB /* WMPatientTagViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMPatientTagViewController.m; sourceTree = "<group>"; };
 		855C9BD920C8CBD0007383EB /* WMQAQuestionLabelsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMQAQuestionLabelsView.m; sourceTree = "<group>"; };
@@ -4475,6 +4499,25 @@
 			name = "群成员";
 			sourceTree = "<group>";
 		};
+		855280FE2113E6FF006E4D07 /* 商城-抢购 */ = {
+			isa = PBXGroup;
+			children = (
+				855280FF2113E769006E4D07 /* JYPanicBuyView.h */,
+				855281002113E769006E4D07 /* JYPanicBuyView.m */,
+				855281052113E8E6006E4D07 /* JYPanicBuyCell.h */,
+				855281062113E8E6006E4D07 /* JYPanicBuyCell.m */,
+				855281072113E8E6006E4D07 /* JYPanicBuyCell.xib */,
+			);
+			path = "商城-抢购";
+			sourceTree = "<group>";
+		};
+		8552810A2113EF08006E4D07 /* 商城-抢购 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "商城-抢购";
+			sourceTree = "<group>";
+		};
 		856237321F7DE57F00451954 /* 今日医声展示页 */ = {
 			isa = PBXGroup;
 			children = (
@@ -4554,6 +4597,8 @@
 				858104E32112AC8700532B4D /* JYSCCHeadlineAPIManager.m */,
 				858104D82110BA9B00532B4D /* JYCarefullyChooseBannerAPIManager.h */,
 				858104D92110BA9B00532B4D /* JYCarefullyChooseBannerAPIManager.m */,
+				855280F82112ECD9006E4D07 /* JYSCCGoodsAPIManager.h */,
+				855280F92112ECD9006E4D07 /* JYSCCGoodsAPIManager.m */,
 			);
 			path = "商城-精选";
 			sourceTree = "<group>";
@@ -4565,6 +4610,8 @@
 				858104E72112B05C00532B4D /* JYSCCHeadlineModel.m */,
 				858104DE2110BCF100532B4D /* JYBannerModel.h */,
 				858104DF2110BCF100532B4D /* JYBannerModel.m */,
+				855280FB2112EEB6006E4D07 /* JYSCCGoodsModel.h */,
+				855280FC2112EEB6006E4D07 /* JYSCCGoodsModel.m */,
 			);
 			path = "商城-精选";
 			sourceTree = "<group>";
@@ -4586,6 +4633,12 @@
 				858104A6210FFFE400532B4D /* JYStoreBannerTableViewCell.m */,
 				858104CC2110429600532B4D /* JYStoreModuleCell.h */,
 				858104CD2110429600532B4D /* JYStoreModuleCell.m */,
+				855280EB2112E06B006E4D07 /* JYSCCHeadlineCell.h */,
+				855280EC2112E06B006E4D07 /* JYSCCHeadlineCell.m */,
+				855280ED2112E06B006E4D07 /* JYSCCHeadlineCell.xib */,
+				855280F02112EB47006E4D07 /* JYSCCGoodsCell.h */,
+				855280F12112EB47006E4D07 /* JYSCCGoodsCell.m */,
+				855280F22112EB47006E4D07 /* JYSCCGoodsCell.xib */,
 			);
 			path = "商城-精选";
 			sourceTree = "<group>";
@@ -4613,6 +4666,7 @@
 		858836C720E3DF0500DE928F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				855280FE2113E6FF006E4D07 /* 商城-抢购 */,
 				858104E92112B0E200532B4D /* 商城-精选 */,
 			);
 			path = View;
@@ -4767,6 +4821,7 @@
 		85CAB456210DD30D00884A54 /* APIManager */ = {
 			isa = PBXGroup;
 			children = (
+				8552810A2113EF08006E4D07 /* 商城-抢购 */,
 				858104E12112ABFB00532B4D /* 商城-精选 */,
 				85CAB457210DD34200884A54 /* JYShoppingMallAPIManager.h */,
 				85CAB458210DD34200884A54 /* JYShoppingMallAPIManager.m */,
@@ -5219,8 +5274,10 @@
 				0CAF8EEF1E08CF0B0092E6A8 /* Me.storyboard in Resources */,
 				0CD6E2D01DFFF60300E75DB5 /* Localizable.strings in Resources */,
 				1890BA671FC8059B0009339C /* WMIMFirstCollectionViewCell.xib in Resources */,
+				855281092113E8E6006E4D07 /* JYPanicBuyCell.xib in Resources */,
 				18C9372A2072509300A3453E /* WMGroupInfoRemindCell.xib in Resources */,
 				1DA7E4FF1E5C5E1B00CDBEC5 /* WMAllPatienCell.xib in Resources */,
+				855280EF2112E06B006E4D07 /* JYSCCHeadlineCell.xib in Resources */,
 				1890BA6B1FC805AD0009339C /* WMIMComFirstCollectionViewCell.xib in Resources */,
 				18F73BDD2029569C000A7D11 /* WMCardPopupView.xib in Resources */,
 				0C4628C31E00ED5C0065395A /* .gitkeep in Resources */,
@@ -5261,6 +5318,7 @@
 				8562373E1F7E1F8000451954 /* WMDoctorVoiceCell.xib in Resources */,
 				1890BA5D1FC8056A0009339C /* WMPictureSelectViewCell.xib in Resources */,
 				0CEB2EB61E0CF81E0070119A /* WMCricleMainCell.xib in Resources */,
+				855280F42112EB47006E4D07 /* JYSCCGoodsCell.xib in Resources */,
 				18777AA01E266831000957D6 /* UMSocialSDKResources.bundle in Resources */,
 				18777A9C1E266831000957D6 /* read_me.txt in Resources */,
 				85DBE7A91FC5130B00E821E4 /* WMIntegralDetailCell.xib in Resources */,
@@ -5417,6 +5475,7 @@
 				854180D01FCD53A900EA4235 /* WMMicroExplainWebViewController.m in Sources */,
 				85DBE7A01FC3D3C700E821E4 /* WMQuestionModel.m in Sources */,
 				CC2B250520EF12A60050D5B2 /* UIView+HYBUIViewCommon.m in Sources */,
+				855280FA2112ECD9006E4D07 /* JYSCCGoodsAPIManager.m in Sources */,
 				8588374F20E8885400DE928F /* JYLoginAPIManager.m in Sources */,
 				0CAF8F4F1E0CEEFE0092E6A8 /* WMShowImageCollectionViewCell.m in Sources */,
 				1D38164E1EC9769B00562FCA /* WMPerfectPerInfoViewController.m in Sources */,
@@ -5425,6 +5484,7 @@
 				852473C11F345DF50049FB67 /* WMGroupMessageAPIManager.m in Sources */,
 				0CEB2EE61E0CFFE70070119A /* WMStarView.m in Sources */,
 				1D3296B71E2F5A3D002F11EF /* WMRCConversationHeaderView.m in Sources */,
+				855280FD2112EEB6006E4D07 /* JYSCCGoodsModel.m in Sources */,
 				85CF6D0820B26D4300FCDD21 /* WMTagPatientViewController.m in Sources */,
 				1D8203FC1E64013700494F1C /* WMFollowUpAPIManager.m in Sources */,
 				1D3B76451E14AE330035EE65 /* WMMessageTypeParamModel.m in Sources */,
@@ -5462,6 +5522,7 @@
 				1D6829191E7ABBCE00422732 /* WMVIPPatientTableViewCell.m in Sources */,
 				0CEB2EB91E0CF81E0070119A /* WMPatientReportedCell.m in Sources */,
 				1D6829241E7BD09700422732 /* WMDoctorFirendCell.m in Sources */,
+				855280F32112EB47006E4D07 /* JYSCCGoodsCell.m in Sources */,
 				85E4B6061F2AD437005F6D21 /* WMGroupRCDataManager.m in Sources */,
 				0CEB2ED71E0CFDFD0070119A /* WMDoctorMainTableViewController.m in Sources */,
 				85CAB44D210D41D800884A54 /* JYMineAPIManager.m in Sources */,
@@ -5653,6 +5714,7 @@
 				188F14BC1F2882F60058B4CB /* QuickEntity+CoreDataProperties.m in Sources */,
 				AD93FE9020DDDF2F00C8EF83 /* WYModel.m in Sources */,
 				1D2AEAE01E1FA7BE0026DB19 /* WMHealthRecordView.m in Sources */,
+				855281012113E769006E4D07 /* JYPanicBuyView.m in Sources */,
 				188F14CE1F29E1F10058B4CB /* WMQuickReplyEditViewController.m in Sources */,
 				18328A4F1F15012A00F87E01 /* ACOGTwoCollectionViewCell.m in Sources */,
 				181C6CA41E88BA9800CD0119 /* WMVillagesAPIManager.m in Sources */,
@@ -5670,6 +5732,7 @@
 				18328A1A1F1470F300F87E01 /* AZSoundItem.m in Sources */,
 				85A74BC31F98418400F1453F /* WMDoctorIncomeViewController.m in Sources */,
 				85BF09851FEBA7ED003BB0FC /* WMQuestionsSettingViewController.m in Sources */,
+				855280EE2112E06B006E4D07 /* JYSCCHeadlineCell.m in Sources */,
 				85CF6D1F20BD3D3E00FCDD21 /* WMDoctorInformationAPIManager.m in Sources */,
 				854180C61FCBEB7E00EA4235 /* WMMyMicroBeanCell.m in Sources */,
 				186E78642021AF5B0058743A /* WMDynamicModuleView.m in Sources */,
@@ -5679,6 +5742,7 @@
 				8552604E1F4138C500F16618 /* WMGroupMemberViewCell.m in Sources */,
 				184AD57F20BBF73E00F973D3 /* WMRCUserInfoEntitys+CoreDataProperties.m in Sources */,
 				18328A261F1470F300F87E01 /* NSMutableArray+STKAudioPlayer.m in Sources */,
+				855281082113E8E6006E4D07 /* JYPanicBuyCell.m in Sources */,
 				0C4650AC1E1B9ED10084053A /* WMBaseUIWebController.m in Sources */,
 				18237ECD1EA73ABC00C30F51 /* WMGetDoctorServiceAPIManager.m in Sources */,
 				0CAF8F061E0A256F0092E6A8 /* WMNetworkLoadingEffect.m in Sources */,

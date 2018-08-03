@@ -23,9 +23,17 @@
     // Initialization code
 }
 
-- (void)stupModuleView{
-    [self.homeModuleView setValueWithModelArray:@[]];
-    self.homeModuleView.frame = CGRectMake(0, 0, self.width, self.height);
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        [self setupModuleView];
+    }
+    return self;
+}
+
+- (void)setupModuleView{
+    self.homeModuleView.frame = CGRectMake(0, 0, kScreenWidth, 80);
+    [self setValue];
     [self.contentView addSubview:self.homeModuleView];
 }
 
@@ -37,8 +45,10 @@
     return _homeModuleView;
 }
 
-- (void)setValueWithModelArray:(NSArray *)modelArray{
-    [_homeModuleView setValueWithModelArray:modelArray];
+- (void)setValue{
+    NSArray *images = @[@"robShopping", @"vipMember", @"coupons", @"merchants", @"tenants"];
+    NSArray *titles = @[@"大牌抢购", @"会员", @"优惠券", @"商家", @"商家入驻"];
+    [_homeModuleView setValueWithModelArray:images andTitleArr:titles];
 }
 
 

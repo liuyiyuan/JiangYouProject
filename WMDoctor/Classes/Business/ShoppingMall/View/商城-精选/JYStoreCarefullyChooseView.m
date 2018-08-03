@@ -13,6 +13,12 @@
 #import "JYBannerModel.h"
 #import "JYSCCHeadlineAPIManager.h"
 #import "JYSCCHeadlineModel.h"
+#import "JYStoreModuleCell.h"
+#import "WMNewHotQuestionCell.h"
+#import "JYSCCHeadlineCell.h"
+#import "JYSCCGoodsCell.h"
+#import "JYSCCGoodsAPIManager.h"
+#import "JYSCCGoodsModel.h"
 
 @interface JYStoreCarefullyChooseView()<UITableViewDataSource, UITableViewDelegate>{
     UITableView *_tableView;
@@ -21,6 +27,7 @@
 @property(nonatomic, strong)NSMutableArray *dataSource;
 @property(nonatomic, strong)JYBannerModel *banner;
 @property(nonatomic, strong)JYSCCHeadlineModel *headlineModel;
+@property(nonatomic, assign)NSInteger pageNo;
 
 @end
 
@@ -29,11 +36,18 @@
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
+        [self setupData];
         [self setupView];
         [self loadBannerRequest];
         [self loadHeadlineRequest];
+        [self loadGoodsRequest];
     }
     return self;
+}
+
+- (void)setupData{
+    self.pageNo = 1;
+    self.dataSource = [NSMutableArray array];
 }
 
 - (void)setupView{
@@ -45,13 +59,25 @@
     _tableView.showsVerticalScrollIndicator = NO;
     
     [_tableView registerClass:[JYStoreBannerTableViewCell class] forCellReuseIdentifier:@"JYStoreBannerTableViewCell"];
+    [_tableView registerClass:[JYStoreModuleCell class] forCellReuseIdentifier:@"JYStoreModuleCell"];
+    [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([JYSCCHeadlineCell class]) bundle:nil] forCellReuseIdentifier:@"JYSCCHeadlineCell"];
+    [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([JYSCCGoodsCell class]) bundle:nil] forCellReuseIdentifier:@"JYSCCGoodsCell"];
+    
     
     [self addSubview:_tableView];
 }
 
 #pragma mark - All Delegate
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 4;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    if (section < 3) {
+        return 1;
+    } else{
+        return self.dataSource.count;
+    }
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
@@ -73,17 +99,41 @@
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 147.f;
+    if (indexPath.section == 0) {
+        return 147.f;
+    } else if(indexPath.section == 1){
+        return 80.f;
+    } else if (indexPath.section == 2){
+        return 80.f;
+    } else{
+        return 150;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    if (indexPath.row == 0) {
+    if (indexPath.section == 0) {
         JYStoreBannerTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JYStoreBannerTableViewCell" forIndexPath:indexPath];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         if (self.banner) {
             [cell setValueWithBannerModel:self.banner];
         }
+        return cell;
+    } else if (indexPath.section == 1){
+        JYStoreModuleCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JYStoreModuleCell" forIndexPath:indexPath];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        return cell;
+    } else if (indexPath.section == 2){
+        JYSCCHeadlineCell * cell = [tableView dequeueReusableCellWithIdentifier:@"JYSCCHeadlineCell" forIndexPath:indexPath];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        if (self.headlineModel) {
+            
+        }
+        return cell;
+    } else if (indexPath.section == 3){
+        JYSCCGoodsModel *goods = self.dataSource[indexPath.row];
+        JYSCCGoodsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JYSCCGoodsCell" forIndexPath:indexPath];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     }
     return [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
@@ -120,10 +170,28 @@
     JYSCCHeadlineAPIManager *headlineAPIManager = [[JYSCCHeadlineAPIManager alloc] init];
     [headlineAPIManager loadDataWithParams:@{} withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
         NSLog(@"headline : %@", responseObject);
-        JYSCCHeadlineModel *headlineModel = [[JYSCCHeadlineModel alloc] initWithDictionary:responseObject error:nil];
+        self.headlineModel = [[JYSCCHeadlineModel alloc] initWithDictionary:responseObject error:nil];
         [_tableView reloadData];
     } withFailure:^(ResponseResult *errorResult) {
         NSLog(@"headline error : %@", errorResult);
+    }];
+}
+
+- (void)loadGoodsRequest{
+    JYSCCGoodsAPIManager *goodsAPIManager = [[JYSCCGoodsAPIManager alloc] init];
+    NSDictionary *param = @{
+                            @"nowpagenum" : [NSString stringWithFormat:@"%ld", self.pageNo],
+                            @"pagelimit" : @"10"
+                            };
+    [goodsAPIManager loadDataWithParams:param withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"goods : %@", responseObject);
+        for (NSDictionary *dic in responseObject) {
+            JYSCCGoodsModel *goods = [[JYSCCGoodsModel alloc] initWithDictionary:dic error:nil];
+            [self.dataSource addObject:goods];
+        }
+        [_tableView reloadData];
+    } withFailure:^(ResponseResult *errorResult) {
+        NSLog(@"goods error : %@", errorResult);
     }];
 }
 

@@ -20,6 +20,6 @@
 
 @property(nonatomic, weak) id<WMHomeModuleDelegate> delegate;
 
-- (void)setValueWithModelArray:(NSArray *)modelArray;
+- (void)setValueWithModelArray:(NSArray *)images andTitleArr:(NSArray *)titles;
 
 @end

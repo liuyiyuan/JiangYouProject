@@ -8,6 +8,10 @@
 
 #import "WMJSONModel.h"
 
+
+/**
+ 商家-精选-头条model
+ */
 @interface JYSCCHeadlineModel : WMJSONModel
 
 @property(nonatomic, strong)NSString *image_info;

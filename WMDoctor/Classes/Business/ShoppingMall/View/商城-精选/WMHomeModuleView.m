@@ -8,6 +8,7 @@
 
 #import "WMHomeModuleView.h"
 #import "UIImageView+WebCache.h"
+#import "JYSCCHeadlineModel.h"
 
 #define PAGE_SPACE 5
 
@@ -61,17 +62,19 @@
 }
 
 
-- (void)setValueWithModelArray:(NSArray *)modelArray {
+- (void)setValueWithModelArray:(NSArray *)images andTitleArr:(NSArray *)titles {
     //页数
-    _pages = modelArray.count/4 + (modelArray.count%4?1:0);
-    _modelArray = [modelArray mutableCopy];
+    _pages = images.count/4 + (images.count%4?1:0);
+    _modelArray = [images mutableCopy];
     for (UIView *view in _scrollView.subviews) {
         [view removeFromSuperview];
     }
     
-    for (int i = 0 ; i < modelArray.count ;i++) {
+    for (int i = 0 ; i < images.count ;i++) {
         
-        HomeAppModel *appModel = modelArray[i];
+//        JYSCCHeadlineModel *appModel = images[i];
+        NSString *imageName = images[i];
+        NSString *title = titles[i];
         
         UIButton *bgButton = [[UIButton alloc] initWithFrame:CGRectMake(i*self.scrollView.width/4, 0, self.scrollView.width/4, self.scrollView.height)];
         bgButton.tag = i;
@@ -90,13 +93,13 @@
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake((bgButton.width- 36/375.0 * kScreen_width)/2, h * kScreen_width, 36/375.0 * kScreen_width, 36/375.0 * kScreen_width)];
         
         imageView.contentMode = UIViewContentModeScaleAspectFit;
-        [imageView sd_setImageWithURL:[NSURL URLWithString:appModel.image] placeholderImage:[UIImage imageNamed:@"weimaidefault"]];
+        imageView.image = [UIImage imageNamed:imageName];
         [bgButton addSubview:imageView];
         
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, imageView.height+imageView.frame.origin.y+10, bgButton.width, 20)];
         label.font = [UIFont systemFontOfSize:14];
         label.textAlignment = NSTextAlignmentCenter;
-        label.text = appModel.name;
+        label.text = title;
         [bgButton addSubview:label];
     }
     

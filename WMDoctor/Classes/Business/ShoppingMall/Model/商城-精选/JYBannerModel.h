@@ -18,6 +18,10 @@
 
 
 @protocol JYSomeOneBanner;
+
+/**
+ 商家-精选-轮播图model
+ */
 @interface JYBannerModel : WMJSONModel
 
 @property(nonatomic, strong)NSArray<JYSomeOneBanner> *sowingMapArray;
