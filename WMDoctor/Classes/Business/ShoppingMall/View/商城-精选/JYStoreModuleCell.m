@@ -32,14 +32,14 @@
 }
 
 - (void)setupModuleView{
-    self.homeModuleView.frame = CGRectMake(0, 0, kScreenWidth, 46);
+    self.homeModuleView.frame = CGRectMake(0, 0, kScreenWidth, 69);
     [self setValue];
     [self.contentView addSubview:self.homeModuleView];
 }
 
 - (WMHomeModuleView *)homeModuleView {
     if (!_homeModuleView) {
-        _homeModuleView = [[WMHomeModuleView alloc] initWithFrame:CGRectMake(0, 155, kScreen_width, 46)];
+        _homeModuleView = [[WMHomeModuleView alloc] initWithFrame:CGRectMake(0, 155, kScreen_width, 69)];
         _homeModuleView.backgroundColor = [UIColor colorWithHexString:@"#F2F2F2"];
         _homeModuleView.delegate = self;
     }

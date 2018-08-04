@@ -49,11 +49,10 @@
         
         _markimgs = [NSMutableArray array];
         
-        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, 46)];
+        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, 69)];
         _scrollView.pagingEnabled = YES;
         _scrollView.delegate = self;
         _scrollView.showsHorizontalScrollIndicator = NO;
-//        _scrollView.backgroundColor = [UIColor yellowColor];
         _scrollView.contentSize = _scrollView.size;
         [self addSubview:_scrollView];
         
@@ -90,14 +89,14 @@
             h = 3/375.0;
         }
         
-        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake((bgButton.width- 16/375.0 * kScreen_width)/2, h * kScreen_width, 16, 16)];
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake((bgButton.width- 16/375.0 * kScreen_width)/2, h * kScreen_width + 12, 24, 24)];
         
         imageView.contentMode = UIViewContentModeScaleAspectFit;
         imageView.image = [UIImage imageNamed:imageName];
         [bgButton addSubview:imageView];
         
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, imageView.height+imageView.frame.origin.y+4, bgButton.width, 10)];
-        label.font = [UIFont systemFontOfSize:9];
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, imageView.height+imageView.frame.origin.y+7, bgButton.width, 13)];
+        label.font = [UIFont systemFontOfSize:13];
         label.textAlignment = NSTextAlignmentCenter;
         label.textColor = [UIColor colorWithHexString:@"#8E8E8E"];
         label.text = title;

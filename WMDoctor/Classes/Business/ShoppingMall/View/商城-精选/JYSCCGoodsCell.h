@@ -13,10 +13,11 @@
 @property (weak, nonatomic) IBOutlet UIImageView *storeImageView;
 @property (weak, nonatomic) IBOutlet UIScrollView *goodsScrollView;
 
+
 /**
  根据商品model设置商家推荐商品value
 
- @return <#return value description#>
+ @return
  */
 - (void)setValueWithGoodsModel:(JYSCCGoodsModel *)goods;
 

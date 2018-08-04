@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface JYSCCHeadlineCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *title;
+@property (weak, nonatomic) IBOutlet UIImageView *headlineImageView;
+
 
 @end

@@ -52,7 +52,7 @@
 
 - (void)setupView{
     self.backgroundColor = [UIColor whiteColor];
-    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.width, self.height) style:UITableViewStyleGrouped];
+    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 44, self.width, self.height - 44) style:UITableViewStyleGrouped];
     _tableView.backgroundColor = [UIColor colorWithHexString:@"f4f4f4"];
     _tableView.delegate = self;
     _tableView.dataSource = self;
@@ -103,11 +103,11 @@
     if (indexPath.section == 0) {
         return 147.f;
     } else if(indexPath.section == 1){
-        return 46.f;
+        return 69.f;
     } else if (indexPath.section == 2){
-        return 80.f;
+        return 46.f;
     } else{
-        return 150;
+        return 259.f;
     }
 }
 
@@ -125,7 +125,8 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     } else if (indexPath.section == 2){
-        JYSCCHeadlineCell * cell = [tableView dequeueReusableCellWithIdentifier:@"JYSCCHeadlineCell" forIndexPath:indexPath];
+        JYSCCHeadlineCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JYSCCHeadlineCell" forIndexPath:indexPath];
+        
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         if (self.headlineModel) {
             
@@ -134,6 +135,7 @@
     } else if (indexPath.section == 3){
         JYSCCGoodsModel *goods = self.dataSource[indexPath.row];
         JYSCCGoodsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JYSCCGoodsCell" forIndexPath:indexPath];
+        [cell setValueWithGoodsModel:goods];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     }
