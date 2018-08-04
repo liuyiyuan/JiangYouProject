@@ -33,22 +33,21 @@
     UICollectionViewFlowLayout *flowlayout = [[UICollectionViewFlowLayout alloc] init];
     
     //设置每个item的大小
-    flowlayout.itemSize = CGSizeMake(120, 60);
+    flowlayout.itemSize = CGSizeMake((kScreenWidth - 3) / 2, 295);
     //设置列的最小间距
-    flowlayout.minimumInteritemSpacing = 10;
+    flowlayout.minimumInteritemSpacing = 3;
     //设置最小行间距
-    flowlayout.minimumLineSpacing = 15;
+    flowlayout.minimumLineSpacing = 5;
     //设置布局的内边距
-    flowlayout.sectionInset = UIEdgeInsetsMake(15, 15, 15, 15);
+//    flowlayout.sectionInset = UIEdgeInsetsMake(5, 0, 0, 0);
     //滚动方向
-    flowlayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    flowlayout.scrollDirection = UICollectionViewScrollDirectionVertical;
     
     self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.width, self.height) collectionViewLayout:flowlayout];
-    self.collectionView.backgroundColor = [UIColor redColor];
+    self.collectionView.backgroundColor = [UIColor colorWithHexString:@"E7E7E7"];
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([JYPanicBuyCell class]) bundle:nil] forCellWithReuseIdentifier:@"JYPanicBuyCell"];
-    
     [self addSubview:self.collectionView];
 }
 
@@ -63,8 +62,10 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     JYPanicBuyCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"JYPanicBuyCell" forIndexPath:indexPath];
+    [cell setValueWithModel];
     return cell;
 }
+
 
 - (void)loadPanicBuyAPIManager{
     JYPanicBuyAPIManager *spanicBuyAPIManager = [[JYPanicBuyAPIManager alloc] init];

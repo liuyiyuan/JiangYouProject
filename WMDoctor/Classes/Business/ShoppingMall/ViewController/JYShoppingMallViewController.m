@@ -52,7 +52,7 @@
 }
 
 - (void)setupView{
-    _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
+    _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 44, kScreenWidth, kScreenHeight - 44)];
     _scrollView.pagingEnabled = YES;
     _scrollView.contentSize = CGSizeMake(kScreenWidth * 5, kScreenHeight);
     _scrollView.scrollEnabled = YES;
@@ -79,12 +79,12 @@
 }
 
 - (void)setupPanicBuyView{
-    self.panicBuyView = [[JYPanicBuyView alloc] initWithFrame:CGRectMake(kScreenWidth, 0, kScreenWidth, kScreenHeight)];
+    self.panicBuyView = [[JYPanicBuyView alloc] initWithFrame:CGRectMake(kScreenWidth, 0, kScreenWidth, kScreenHeight - 44 - 49)];
     [self.scrollView addSubview:self.panicBuyView];
 }
 
 - (void)setupGroupBuyView{
-    self.groupBuyView = [[JYGroupBuyView alloc] initWithFrame:CGRectMake(kScreenWidth * 2, 0, kScreenWidth, kScreenHeight)];
+    self.groupBuyView = [[JYGroupBuyView alloc] initWithFrame:CGRectMake(kScreenWidth * 2, 0, kScreenWidth, kScreenHeight - 44 - 49)];
     [self.scrollView addSubview:self.groupBuyView];
 }
 

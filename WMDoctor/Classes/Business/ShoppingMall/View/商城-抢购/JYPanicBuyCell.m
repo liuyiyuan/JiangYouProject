@@ -13,6 +13,10 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    self.contentView.backgroundColor = [UIColor whiteColor];
+}
+
+- (void)setValueWithModel{
 }
 
 @end

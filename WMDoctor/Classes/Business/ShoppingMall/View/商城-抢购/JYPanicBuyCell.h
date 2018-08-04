@@ -10,4 +10,6 @@
 
 @interface JYPanicBuyCell : UICollectionViewCell
 
+- (void)setValueWithModel;
+
 @end

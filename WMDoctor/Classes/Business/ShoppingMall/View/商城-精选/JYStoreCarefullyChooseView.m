@@ -52,7 +52,7 @@
 
 - (void)setupView{
     self.backgroundColor = [UIColor whiteColor];
-    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 44, self.width, self.height - 44) style:UITableViewStyleGrouped];
+    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.width, self.height) style:UITableViewStyleGrouped];
     _tableView.backgroundColor = [UIColor colorWithHexString:@"f4f4f4"];
     _tableView.delegate = self;
     _tableView.dataSource = self;
