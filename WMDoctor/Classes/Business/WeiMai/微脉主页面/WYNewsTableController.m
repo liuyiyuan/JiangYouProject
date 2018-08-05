@@ -328,20 +328,23 @@
 
 #pragma amrk - 删除按钮点击
 -(void)click_deleteButton:(UIButton *)button{
+
     NSDictionary *dict = _dataArray[button.tag];
     NSDictionary *param = @{@"userId":@"",
                             @"followId":dict[@"id"]
                             };
-    
+
     JYHomeDeletedManager *homeNewsManager = [[JYHomeDeletedManager alloc] init];
     [homeNewsManager loadDataWithParams:param withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
         NSLog(@"%@",responseObject);
+        //删除数据源  刷新列表
+        [_dataArray removeObjectAtIndex:button.tag];
+        [self.tableView reloadData];
         
-        
-        
+
     } withFailure:^(ResponseResult *errorResult) {
         NSLog(@"login error : %@", errorResult);
-        
+
     }];
 }
 
