@@ -32,7 +32,6 @@
     [self loadData];
         [self addChildVCs];
     
-    [self test];
 }
 - (void)initSubviews
 {
@@ -169,21 +168,5 @@
      ];
 }
 
--(void)test{
-    NSDictionary *param = @{
-                            @"pageNo":@"1",
-                            @"pageSize":@"15"
-                            };
-    
-    JYHomeNewAPIManager *homeNewsManager = [[JYHomeNewAPIManager alloc] init];
-    [homeNewsManager loadDataWithParams:param withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
-        NSLog(@"login success data : %@", responseObject);
-        //        JYLoginNewModel *loginUser = [[JYLoginNewModel alloc] initWithDictionary:responseObject error:nil];
-        
-        
-    } withFailure:^(ResponseResult *errorResult) {
-        NSLog(@"login error : %@", errorResult);
-    }];
-}
 
 @end

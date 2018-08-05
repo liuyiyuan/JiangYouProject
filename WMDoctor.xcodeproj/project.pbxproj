@@ -613,6 +613,9 @@
 		AD7A06F02108D62300D3AAB4 /* SobotLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD7A06ED2108D62300D3AAB4 /* SobotLocalizable.strings */; };
 		AD7A06F4210F4E6800D3AAB4 /* JYHomeNewAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7A06F3210F4E6800D3AAB4 /* JYHomeNewAPIManager.m */; };
 		AD7A06F72111F51100D3AAB4 /* JYHomeFocusTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7A06F62111F51100D3AAB4 /* JYHomeFocusTableViewCell.m */; };
+		AD7A0707211711C900D3AAB4 /* JYHomeDeletedManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7A0702211711C700D3AAB4 /* JYHomeDeletedManager.m */; };
+		AD7A0708211711C900D3AAB4 /* JYHomeCancleFocusManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7A0704211711C800D3AAB4 /* JYHomeCancleFocusManager.m */; };
+		AD7A0709211711C900D3AAB4 /* JYHomeFocusManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7A0706211711C900D3AAB4 /* JYHomeFocusManager.m */; };
 		AD93FE7E20DDDC8100C8EF83 /* JYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FE7D20DDDC8100C8EF83 /* JYHomeViewController.m */; };
 		AD93FE8120DDDE8C00C8EF83 /* WYTopicHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FE8020DDDE8C00C8EF83 /* WYTopicHeader.m */; };
 		AD93FE8420DDDEA800C8EF83 /* WYTopicScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD93FE8320DDDEA700C8EF83 /* WYTopicScrollView.m */; };
@@ -1845,6 +1848,12 @@
 		AD7A06F3210F4E6800D3AAB4 /* JYHomeNewAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYHomeNewAPIManager.m; sourceTree = "<group>"; };
 		AD7A06F52111F51100D3AAB4 /* JYHomeFocusTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYHomeFocusTableViewCell.h; sourceTree = "<group>"; };
 		AD7A06F62111F51100D3AAB4 /* JYHomeFocusTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYHomeFocusTableViewCell.m; sourceTree = "<group>"; };
+		AD7A0701211711C700D3AAB4 /* JYHomeDeletedManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYHomeDeletedManager.h; sourceTree = "<group>"; };
+		AD7A0702211711C700D3AAB4 /* JYHomeDeletedManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYHomeDeletedManager.m; sourceTree = "<group>"; };
+		AD7A0703211711C800D3AAB4 /* JYHomeFocusManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYHomeFocusManager.h; sourceTree = "<group>"; };
+		AD7A0704211711C800D3AAB4 /* JYHomeCancleFocusManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYHomeCancleFocusManager.m; sourceTree = "<group>"; };
+		AD7A0705211711C800D3AAB4 /* JYHomeCancleFocusManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYHomeCancleFocusManager.h; sourceTree = "<group>"; };
+		AD7A0706211711C900D3AAB4 /* JYHomeFocusManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYHomeFocusManager.m; sourceTree = "<group>"; };
 		AD93FE7C20DDDC8100C8EF83 /* JYHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYHomeViewController.h; sourceTree = "<group>"; };
 		AD93FE7D20DDDC8100C8EF83 /* JYHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYHomeViewController.m; sourceTree = "<group>"; };
 		AD93FE7F20DDDE8B00C8EF83 /* WYTopicHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYTopicHeader.h; sourceTree = "<group>"; };
@@ -5039,6 +5048,12 @@
 		AD7A06F1210F4E2E00D3AAB4 /* APIManager */ = {
 			isa = PBXGroup;
 			children = (
+				AD7A0705211711C800D3AAB4 /* JYHomeCancleFocusManager.h */,
+				AD7A0704211711C800D3AAB4 /* JYHomeCancleFocusManager.m */,
+				AD7A0701211711C700D3AAB4 /* JYHomeDeletedManager.h */,
+				AD7A0702211711C700D3AAB4 /* JYHomeDeletedManager.m */,
+				AD7A0703211711C800D3AAB4 /* JYHomeFocusManager.h */,
+				AD7A0706211711C900D3AAB4 /* JYHomeFocusManager.m */,
 				AD7A06F2210F4E6800D3AAB4 /* JYHomeNewAPIManager.h */,
 				AD7A06F3210F4E6800D3AAB4 /* JYHomeNewAPIManager.m */,
 			);
@@ -5476,6 +5491,7 @@
 				8501428B1F3AB6B0000BA97F /* WMArrayUtil.m in Sources */,
 				856237381F7DF42500451954 /* WMDoctorVoiceModel.m in Sources */,
 				1890BA831FCCF2450009339C /* WMQuestionAnswerSendAPIManager.m in Sources */,
+				AD7A0708211711C900D3AAB4 /* JYHomeCancleFocusManager.m in Sources */,
 				181A034E1FDE232F00868821 /* WMMyServiceSetViewController.m in Sources */,
 				1855DC3C1E83C0CE001B4DDD /* WMSchoolListAPIManager.m in Sources */,
 				183287CA1F0CC9CF00F87E01 /* WMReportListModel.m in Sources */,
@@ -5875,6 +5891,7 @@
 				1DE56A971E113E6D00B93397 /* MJWeiMaiFooter.m in Sources */,
 				1D3816911ECD37A000562FCA /* WMGetJobAPIManager.m in Sources */,
 				1D83CE2E1E84FEE80057F1F1 /* WMDoctorCardSaveAPIManager.m in Sources */,
+				AD7A0707211711C900D3AAB4 /* JYHomeDeletedManager.m in Sources */,
 				1890BA971FCD5EB00009339C /* WMGetTaskListAPIManager.m in Sources */,
 				0C77A04E1E2CA824005080FE /* WMLoginAPIManager.m in Sources */,
 				186AF3171EE6A86F00F699C6 /* WMMyNameStatusCardViewController.m in Sources */,
@@ -5966,6 +5983,7 @@
 				1890BA551FC7EF9B0009339C /* WMQuestionDetailModel.m in Sources */,
 				1D2AEAD41E1F36230026DB19 /* RCUserInfo+WMAddition.m in Sources */,
 				18237ED31EA7592500C30F51 /* WMServicePriceModel.m in Sources */,
+				AD7A0709211711C900D3AAB4 /* JYHomeFocusManager.m in Sources */,
 				18328A5E1F1503A200F87E01 /* ASFLabel.m in Sources */,
 				0CB61DEE1E4D6A4B0019AC2A /* NSDictionary+Merge.m in Sources */,
 				850142951F3B0CE7000BA97F /* AppDelegate+GeTui.m in Sources */,

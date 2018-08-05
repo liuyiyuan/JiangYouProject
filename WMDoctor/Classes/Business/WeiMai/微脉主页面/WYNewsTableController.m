@@ -16,6 +16,9 @@
 #import "WYNewsDetailVC.h"
 #import "JYHomeNewAPIManager.h"
 #import "JYHomeFocusTableViewCell.h"
+#import "JYHomeDeletedManager.h"//删除
+#import "JYHomeCancleFocusManager.h"//取消关注
+#import "JYHomeFocusManager.h"//关注
 //#import "WYtool.h"
 @interface WYNewsTableController ()<UIScrollViewDelegate>
 
@@ -69,8 +72,8 @@
         [weakSelf loadMoreData];
     }];
     self.tableView.mj_footer = footer;
-//    _header = [self.tableView addLegendHeaderWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
-//    _footer = [self.tableView addLegendFooterWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
+    //    _header = [self.tableView addLegendHeaderWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
+    //    _footer = [self.tableView addLegendFooterWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -112,30 +115,30 @@
         [_footer endRefreshing];
     }];
     
-//    //    if (_footer.state == MJRefreshFooterStateIdle) {
-//    NSLog(@"loadmoreData");
-//    NSMutableString *url = [NSMutableString stringWithString:kWYNetWorkNewsListBaseStr];
-//    [url appendFormat:@"/%@/%ld-%d.html", _tid, kWYNetWorkNewsListFetchOnceCount * _page, kWYNetWorkNewsListFetchOnceCount];
-//    [[WYNetwork sharedWYNetwork] HttpGetNews:url success:^(id responseObject) {
-//        //            NSLog(@"abc");
-//        if (![responseObject isKindOfClass:[NSDictionary class]]) {
-//            return;
-//        }
-//        if (![[responseObject allObjects] isKindOfClass:[NSArray class]]) {
-//            return;
-//        }
-//        for (NSDictionary *dic in [[responseObject allObjects] lastObject]) {
-//            WYNews *news = [[WYNews alloc] initWithDic:dic];
-//            [_dataArray addObject:news];
-//        }
-//        _page++;
-//        [_footer endRefreshing];
-//        [self.tableView reloadData];
-//    } failure:^(NSError *error) {
-//        NSLog(@"\nerror is %@", [error localizedDescription]);
-//        [_footer endRefreshing];
-//    }];
-//    //    }else [_footer endRefreshing];
+    //    //    if (_footer.state == MJRefreshFooterStateIdle) {
+    //    NSLog(@"loadmoreData");
+    //    NSMutableString *url = [NSMutableString stringWithString:kWYNetWorkNewsListBaseStr];
+    //    [url appendFormat:@"/%@/%ld-%d.html", _tid, kWYNetWorkNewsListFetchOnceCount * _page, kWYNetWorkNewsListFetchOnceCount];
+    //    [[WYNetwork sharedWYNetwork] HttpGetNews:url success:^(id responseObject) {
+    //        //            NSLog(@"abc");
+    //        if (![responseObject isKindOfClass:[NSDictionary class]]) {
+    //            return;
+    //        }
+    //        if (![[responseObject allObjects] isKindOfClass:[NSArray class]]) {
+    //            return;
+    //        }
+    //        for (NSDictionary *dic in [[responseObject allObjects] lastObject]) {
+    //            WYNews *news = [[WYNews alloc] initWithDic:dic];
+    //            [_dataArray addObject:news];
+    //        }
+    //        _page++;
+    //        [_footer endRefreshing];
+    //        [self.tableView reloadData];
+    //    } failure:^(NSError *error) {
+    //        NSLog(@"\nerror is %@", [error localizedDescription]);
+    //        [_footer endRefreshing];
+    //    }];
+    //    //    }else [_footer endRefreshing];
 }
 
 
@@ -153,10 +156,11 @@
     
     JYHomeNewAPIManager *homeNewsManager = [[JYHomeNewAPIManager alloc] init];
     [homeNewsManager loadDataWithParams:param withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
-        NSLog(@"login success data : %@", responseObject);
+        NSLog(@"%@",responseObject);
+        //        NSLog(@"login success data : %@", responseObject);
         [_dataArray removeAllObjects];
         for (NSDictionary *dic in [responseObject allObjects]) {
-//            WYNews *news = [[WYNews alloc] initWithDic:dic];
+            //            WYNews *news = [[WYNews alloc] initWithDic:dic];
             [_dataArray addObject:dic];
         }
         _page = 1;
@@ -173,28 +177,28 @@
     
     
     //    if (_header.state == MJRefreshHeaderStateIdle) {
-//    NSMutableString *url = [NSMutableString stringWithString:kWYNetWorkNewsListBaseStr];
-//    [url appendFormat:@"/%@/%d-%d.html", _tid, 0, kWYNetWorkNewsListFetchOnceCount];
-//    [[WYNetwork sharedWYNetwork] HttpGetNews:url success:^(id responseObject) {
-//        //            NSLog(@"abc");
-//        if (![responseObject isKindOfClass:[NSDictionary class]]) {
-//            return;
-//        }
-//        if (![[responseObject allObjects] isKindOfClass:[NSArray class]]) {
-//            return;
-//        }
-//        [_dataArray removeAllObjects];
-//        for (NSDictionary *dic in [[responseObject allObjects] lastObject]) {
-//            WYNews *news = [[WYNews alloc] initWithDic:dic];
-//            [_dataArray addObject:news];
-//        }
-//        _page = 1;
-//        [_header endRefreshing];
-//        [self.tableView reloadData];
-//    } failure:^(NSError *error) {
-//        NSLog(@"\nerror is %@", [error localizedDescription]);
-//        [_header endRefreshing];
-//    }];
+    //    NSMutableString *url = [NSMutableString stringWithString:kWYNetWorkNewsListBaseStr];
+    //    [url appendFormat:@"/%@/%d-%d.html", _tid, 0, kWYNetWorkNewsListFetchOnceCount];
+    //    [[WYNetwork sharedWYNetwork] HttpGetNews:url success:^(id responseObject) {
+    //        //            NSLog(@"abc");
+    //        if (![responseObject isKindOfClass:[NSDictionary class]]) {
+    //            return;
+    //        }
+    //        if (![[responseObject allObjects] isKindOfClass:[NSArray class]]) {
+    //            return;
+    //        }
+    //        [_dataArray removeAllObjects];
+    //        for (NSDictionary *dic in [[responseObject allObjects] lastObject]) {
+    //            WYNews *news = [[WYNews alloc] initWithDic:dic];
+    //            [_dataArray addObject:news];
+    //        }
+    //        _page = 1;
+    //        [_header endRefreshing];
+    //        [self.tableView reloadData];
+    //    } failure:^(NSError *error) {
+    //        NSLog(@"\nerror is %@", [error localizedDescription]);
+    //        [_header endRefreshing];
+    //    }];
     //    }else [_header endRefreshing];
 }
 
@@ -244,34 +248,52 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    NSString *reuseIdentifier;
-//    WYNews *news = (WYNews *)_dataArray[indexPath.row];
-//    if (news.imgextra) {
-//        reuseIdentifier = @"ImagesNews";
-//    }else if (news.imgType) {
-//        reuseIdentifier = @"WideImageNews";
-//    }else {
-//        reuseIdentifier = @"DefaultNews";
-//    }
-//    //    NSClassFromString([NSString stringWithFormat:@"WY%@Cell", reuseIdentifier]);
-//    WYBaseNewsCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
-//    if (cell == nil) {
-//        cell = [NSClassFromString([NSString stringWithFormat:@"WY%@Cell", reuseIdentifier]) cell];
-//    }
-//    // Configure the cell...
-//    cell.news = news;
-//    //    cell.textLabel.text = news.title;
+    //    NSString *reuseIdentifier;
+    //    WYNews *news = (WYNews *)_dataArray[indexPath.row];
+    //    if (news.imgextra) {
+    //        reuseIdentifier = @"ImagesNews";
+    //    }else if (news.imgType) {
+    //        reuseIdentifier = @"WideImageNews";
+    //    }else {
+    //        reuseIdentifier = @"DefaultNews";
+    //    }
+    //    //    NSClassFromString([NSString stringWithFormat:@"WY%@Cell", reuseIdentifier]);
+    //    WYBaseNewsCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
+    //    if (cell == nil) {
+    //        cell = [NSClassFromString([NSString stringWithFormat:@"WY%@Cell", reuseIdentifier]) cell];
+    //    }
+    //    // Configure the cell...
+    //    cell.news = news;
+    //    //    cell.textLabel.text = news.title;
     NSDictionary *dict = _dataArray[indexPath.row];
     static NSString *cellId = @"JYHomeFocusTableViewCell";
     JYHomeFocusTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     if(!cell){
         cell = [[JYHomeFocusTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
     }
+    //关注按钮
+    cell.focusButton.tag = indexPath.row;
+    BOOL isFollowed = [dict[@"isFollow"] boolValue];
+    if(isFollowed){
+        [cell.focusButton setTitle:@"取消关注" forState:UIControlStateNormal];
+        [cell.focusButton addTarget:self action:@selector(cancle_focusButton:) forControlEvents:UIControlEventTouchUpInside];
+    }else{
+        [cell.focusButton setTitle:@"关注" forState:UIControlStateNormal];
+        [cell.focusButton addTarget:self action:@selector(click_focusButton:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    //删除按钮
+    cell.deleteButton.tag = indexPath.row;
+    [cell.deleteButton addTarget:self action:@selector(click_deleteButton:) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    //内容详情
     cell.contentLabel.text = dict[@"content"];
+    //时间
     cell.timeLabel.text = [self timeWithTimeIntervalString:dict[@"createTime"]];
-    [cell.likedButton setTitle:[NSString stringWithFormat:@" 转帖%@次",dict[@"likeCount"]] forState:UIControlStateNormal];
+    
+    [cell.likedButton setTitle:[NSString stringWithFormat:@" 赞%@次",dict[@"likeCount"]] forState:UIControlStateNormal];
     [cell.forwardingButton setTitle:[NSString stringWithFormat:@" 热评%@条",dict[@"turnCount"]] forState:UIControlStateNormal];
-    [cell.commentsButton setTitle:[NSString stringWithFormat:@" 赞%@次",dict[@"commentCount"]] forState:UIControlStateNormal];
+    [cell.commentsButton setTitle:[NSString stringWithFormat:@" 转帖%@次",dict[@"commentCount"]] forState:UIControlStateNormal];
     return cell;
 }
 
@@ -300,9 +322,67 @@
     //    vc.docid = news.docid;
     //    vc.news = news;
     //    [self.navigationController pushViewController:vc animated:YES];
-//    [WYTool showMsg:@"why I can't get in?"];
+    //    [WYTool showMsg:@"why I can't get in?"];
 }
 
+
+#pragma amrk - 删除按钮点击
+-(void)click_deleteButton:(UIButton *)button{
+    NSDictionary *dict = _dataArray[button.tag];
+    NSDictionary *param = @{@"userId":@"",
+                            @"followId":dict[@"id"]
+                            };
+    
+    JYHomeDeletedManager *homeNewsManager = [[JYHomeDeletedManager alloc] init];
+    [homeNewsManager loadDataWithParams:param withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"%@",responseObject);
+        
+        
+        
+    } withFailure:^(ResponseResult *errorResult) {
+        NSLog(@"login error : %@", errorResult);
+        
+    }];
+}
+
+
+#pragma mark - 关注按钮点击
+-(void)click_focusButton:(UIButton *)button{
+    NSDictionary *dict = _dataArray[button.tag];
+    NSDictionary *param = @{@"userId":@"",
+                            @"followId":dict[@"id"]
+                            };
+    
+    JYHomeFocusManager *homeNewsManager = [[JYHomeFocusManager alloc] init];
+    [homeNewsManager loadDataWithParams:param withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"%@",responseObject);
+        
+        
+        
+    } withFailure:^(ResponseResult *errorResult) {
+        NSLog(@"login error : %@", errorResult);
+        
+    }];
+}
+
+#pragma mark - 取消关注按钮点击
+-(void)cancle_focusButton:(UIButton *)button{
+    NSDictionary *dict = _dataArray[button.tag];
+    NSDictionary *param = @{@"userId":@"",
+                            @"followId":dict[@"id"]
+                            };
+    
+    JYHomeCancleFocusManager *homeNewsManager = [[JYHomeCancleFocusManager alloc] init];
+    [homeNewsManager loadDataWithParams:param withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"%@",responseObject);
+        
+        
+        
+    } withFailure:^(ResponseResult *errorResult) {
+        NSLog(@"login error : %@", errorResult);
+        
+    }];
+}
 #pragma mark - 时间戳转化为时间NSDate
 - (NSString *)timeWithTimeIntervalString:(NSString *)timeString
 {

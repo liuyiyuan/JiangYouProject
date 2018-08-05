@@ -63,7 +63,6 @@
     [self.focusButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.mas_equalTo(self.deleteButton.mas_centerY);
         make.right.mas_equalTo(self.deleteButton.mas_left).offset(-pixelValue(30));
-        make.width.mas_equalTo(pixelValue(80));
         make.height.mas_equalTo(pixelValue(40));
     }];
     
@@ -166,6 +165,7 @@
         _focusButton = [[UIButton alloc]init];
         [_focusButton setTitle:@"关注" forState:UIControlStateNormal];
         [_focusButton setTitleColor:[UIColor colorWithHexString:@"#50B8FB"] forState:UIControlStateNormal];
+        _focusButton.titleLabel.font = [UIFont systemFontOfSize:pixelValue(26)];
     }
     return _focusButton;
 }
