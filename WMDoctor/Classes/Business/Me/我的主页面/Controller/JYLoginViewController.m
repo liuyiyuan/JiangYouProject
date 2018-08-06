@@ -16,6 +16,7 @@
 #import "FSAES128.h"
 //#import "JYLoginModel.h"
 #import "JYLoginNewModel.h"
+#import "NSString+Additions.h"
 @interface JYLoginViewController ()
 
 @property (nonatomic, strong) JYLoninView *loginView;
@@ -94,14 +95,12 @@
 -(void)click_loginButton{
     NSDictionary *param = @{
                            @"tel":@"15395713725",
-                           @"password":@"1"
+                           @"password":[@"1" md5_32]
                            };
     
     JYLoginNewAPIManager *loginAPIManager = [[JYLoginNewAPIManager alloc] init];
     [loginAPIManager loadDataWithParams:param withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
-        NSLog(@"login success data : %@", responseObject);
         JYLoginNewModel *loginUser = [[JYLoginNewModel alloc] initWithDictionary:responseObject error:nil];
-        NSLog(@"login success model : %@", loginUser);
         [[NSNotificationCenter defaultCenter] postNotificationName:kLoginInSuccessNotification
                                                             object:nil
                                                           userInfo:nil];
