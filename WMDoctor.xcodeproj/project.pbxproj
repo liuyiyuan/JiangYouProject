@@ -662,6 +662,17 @@
 		CC2DAF2020E0EABA008B630C /* DefaultNews.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC2DAF1F20E0EABA008B630C /* DefaultNews.xib */; };
 		CC2DAF2320E0EB55008B630C /* ImagesNews.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC2DAF2120E0EB54008B630C /* ImagesNews.xib */; };
 		CC2DAF2420E0EB55008B630C /* WideImageNews.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC2DAF2220E0EB55008B630C /* WideImageNews.xib */; };
+		CC7E087B21193318007B14C6 /* JYHomePictureTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7E087A21193318007B14C6 /* JYHomePictureTableViewCell.m */; };
+		CC7E087E2119382E007B14C6 /* JYHomeBeautyPictureLIstManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7E087D2119382E007B14C6 /* JYHomeBeautyPictureLIstManager.m */; };
+		CC7E089121194F95007B14C6 /* ZJScrollPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7E088421194F93007B14C6 /* ZJScrollPageView.m */; };
+		CC7E089221194F95007B14C6 /* ZJCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7E088521194F93007B14C6 /* ZJCollectionView.m */; };
+		CC7E089321194F95007B14C6 /* ZJContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7E088621194F93007B14C6 /* ZJContentView.m */; };
+		CC7E089421194F95007B14C6 /* ZJTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7E088821194F94007B14C6 /* ZJTitleView.m */; };
+		CC7E089521194F95007B14C6 /* ZJSegmentStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7E088921194F94007B14C6 /* ZJSegmentStyle.m */; };
+		CC7E089621194F95007B14C6 /* UIView+ZJFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7E088D21194F95007B14C6 /* UIView+ZJFrame.m */; };
+		CC7E089721194F95007B14C6 /* ZJScrollSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7E088F21194F95007B14C6 /* ZJScrollSegmentView.m */; };
+		CC7E089821194F95007B14C6 /* UIViewController+ZJScrollPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7E089021194F95007B14C6 /* UIViewController+ZJScrollPageController.m */; };
+		CC7E089B211968D5007B14C6 /* JYNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7E089A211968D5007B14C6 /* JYNewsViewController.m */; };
 		CCA4FC5420E31D23000A783A /* JYMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA4FC5320E31D23000A783A /* JYMeViewController.m */; };
 		CCA4FC5920E31D35000A783A /* JYMeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA4FC5620E31D35000A783A /* JYMeTableViewCell.m */; };
 		CCA4FC5A20E31D35000A783A /* JYMeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA4FC5720E31D35000A783A /* JYMeHeaderView.m */; };
@@ -673,6 +684,7 @@
 		CCA4FC6C20E33A32000A783A /* JYPersonalInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA4FC6B20E33A32000A783A /* JYPersonalInformationViewController.m */; };
 		CCA4FC6F20E33A77000A783A /* JYPersonalInformationHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA4FC6E20E33A77000A783A /* JYPersonalInformationHeaderView.m */; };
 		CCA4FC7420E341B3000A783A /* SelectPhotoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA4FC7220E341B2000A783A /* SelectPhotoManager.m */; };
+		CCF8608C2119762500C4957E /* JYHomeBeautyPittureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF8608B2119762500C4957E /* JYHomeBeautyPittureViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1948,6 +1960,29 @@
 		CC2DAF1F20E0EABA008B630C /* DefaultNews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DefaultNews.xib; sourceTree = "<group>"; };
 		CC2DAF2120E0EB54008B630C /* ImagesNews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImagesNews.xib; sourceTree = "<group>"; };
 		CC2DAF2220E0EB55008B630C /* WideImageNews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WideImageNews.xib; sourceTree = "<group>"; };
+		CC7E087921193318007B14C6 /* JYHomePictureTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYHomePictureTableViewCell.h; sourceTree = "<group>"; };
+		CC7E087A21193318007B14C6 /* JYHomePictureTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYHomePictureTableViewCell.m; sourceTree = "<group>"; };
+		CC7E087C2119382E007B14C6 /* JYHomeBeautyPictureLIstManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYHomeBeautyPictureLIstManager.h; sourceTree = "<group>"; };
+		CC7E087D2119382E007B14C6 /* JYHomeBeautyPictureLIstManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYHomeBeautyPictureLIstManager.m; sourceTree = "<group>"; };
+		CC7E088021194F92007B14C6 /* UIViewController+ZJScrollPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ZJScrollPageController.h"; sourceTree = "<group>"; };
+		CC7E088121194F93007B14C6 /* ZJScrollSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJScrollSegmentView.h; sourceTree = "<group>"; };
+		CC7E088221194F93007B14C6 /* ZJContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJContentView.h; sourceTree = "<group>"; };
+		CC7E088321194F93007B14C6 /* ZJScrollPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJScrollPageView.h; sourceTree = "<group>"; };
+		CC7E088421194F93007B14C6 /* ZJScrollPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJScrollPageView.m; sourceTree = "<group>"; };
+		CC7E088521194F93007B14C6 /* ZJCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJCollectionView.m; sourceTree = "<group>"; };
+		CC7E088621194F93007B14C6 /* ZJContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJContentView.m; sourceTree = "<group>"; };
+		CC7E088721194F94007B14C6 /* ZJTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJTitleView.h; sourceTree = "<group>"; };
+		CC7E088821194F94007B14C6 /* ZJTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJTitleView.m; sourceTree = "<group>"; };
+		CC7E088921194F94007B14C6 /* ZJSegmentStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJSegmentStyle.m; sourceTree = "<group>"; };
+		CC7E088A21194F94007B14C6 /* ZJCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJCollectionView.h; sourceTree = "<group>"; };
+		CC7E088B21194F94007B14C6 /* ZJScrollPageViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJScrollPageViewDelegate.h; sourceTree = "<group>"; };
+		CC7E088C21194F94007B14C6 /* UIView+ZJFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ZJFrame.h"; sourceTree = "<group>"; };
+		CC7E088D21194F95007B14C6 /* UIView+ZJFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZJFrame.m"; sourceTree = "<group>"; };
+		CC7E088E21194F95007B14C6 /* ZJSegmentStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJSegmentStyle.h; sourceTree = "<group>"; };
+		CC7E088F21194F95007B14C6 /* ZJScrollSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJScrollSegmentView.m; sourceTree = "<group>"; };
+		CC7E089021194F95007B14C6 /* UIViewController+ZJScrollPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ZJScrollPageController.m"; sourceTree = "<group>"; };
+		CC7E0899211968D5007B14C6 /* JYNewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYNewsViewController.h; sourceTree = "<group>"; };
+		CC7E089A211968D5007B14C6 /* JYNewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYNewsViewController.m; sourceTree = "<group>"; };
 		CCA4FC5220E31D22000A783A /* JYMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYMeViewController.h; sourceTree = "<group>"; };
 		CCA4FC5320E31D23000A783A /* JYMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYMeViewController.m; sourceTree = "<group>"; };
 		CCA4FC5520E31D35000A783A /* JYMeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYMeTableViewCell.h; sourceTree = "<group>"; };
@@ -1970,6 +2005,8 @@
 		CCA4FC6E20E33A77000A783A /* JYPersonalInformationHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYPersonalInformationHeaderView.m; sourceTree = "<group>"; };
 		CCA4FC7220E341B2000A783A /* SelectPhotoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectPhotoManager.m; sourceTree = "<group>"; };
 		CCA4FC7320E341B3000A783A /* SelectPhotoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectPhotoManager.h; sourceTree = "<group>"; };
+		CCF8608A2119762500C4957E /* JYHomeBeautyPittureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYHomeBeautyPittureViewController.h; sourceTree = "<group>"; };
+		CCF8608B2119762500C4957E /* JYHomeBeautyPittureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYHomeBeautyPittureViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2436,6 +2473,8 @@
 				CC2DAF2220E0EB55008B630C /* WideImageNews.xib */,
 				AD7A06F52111F51100D3AAB4 /* JYHomeFocusTableViewCell.h */,
 				AD7A06F62111F51100D3AAB4 /* JYHomeFocusTableViewCell.m */,
+				CC7E087921193318007B14C6 /* JYHomePictureTableViewCell.h */,
+				CC7E087A21193318007B14C6 /* JYHomePictureTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -2463,6 +2502,10 @@
 				188ACA902045310200A54692 /* WMOutLinkWebViewController.m */,
 				AD93FE7C20DDDC8100C8EF83 /* JYHomeViewController.h */,
 				AD93FE7D20DDDC8100C8EF83 /* JYHomeViewController.m */,
+				CC7E0899211968D5007B14C6 /* JYNewsViewController.h */,
+				CC7E089A211968D5007B14C6 /* JYNewsViewController.m */,
+				CCF8608A2119762500C4957E /* JYHomeBeautyPittureViewController.h */,
+				CCF8608B2119762500C4957E /* JYHomeBeautyPittureViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -4492,6 +4535,7 @@
 		85475943207F631D00A29175 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				CC7E087F21194F4A007B14C6 /* newsController */,
 				CC2B24F920EF12430050D5B2 /* JYLoopScrollView */,
 				AD526A1620E8CADE00D4BF85 /* PPTextField */,
 				AD526A1220E8C40400D4BF85 /* Button+EWTime */,
@@ -5082,6 +5126,8 @@
 				AD7A0706211711C900D3AAB4 /* JYHomeFocusManager.m */,
 				AD7A06F2210F4E6800D3AAB4 /* JYHomeNewAPIManager.h */,
 				AD7A06F3210F4E6800D3AAB4 /* JYHomeNewAPIManager.m */,
+				CC7E087C2119382E007B14C6 /* JYHomeBeautyPictureLIstManager.h */,
+				CC7E087D2119382E007B14C6 /* JYHomeBeautyPictureLIstManager.m */,
 			);
 			name = APIManager;
 			sourceTree = "<group>";
@@ -5132,6 +5178,30 @@
 				CC2B24F720EF10AA0050D5B2 /* JYCircleViewController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		CC7E087F21194F4A007B14C6 /* newsController */ = {
+			isa = PBXGroup;
+			children = (
+				CC7E088C21194F94007B14C6 /* UIView+ZJFrame.h */,
+				CC7E088D21194F95007B14C6 /* UIView+ZJFrame.m */,
+				CC7E088021194F92007B14C6 /* UIViewController+ZJScrollPageController.h */,
+				CC7E089021194F95007B14C6 /* UIViewController+ZJScrollPageController.m */,
+				CC7E088A21194F94007B14C6 /* ZJCollectionView.h */,
+				CC7E088521194F93007B14C6 /* ZJCollectionView.m */,
+				CC7E088221194F93007B14C6 /* ZJContentView.h */,
+				CC7E088621194F93007B14C6 /* ZJContentView.m */,
+				CC7E088321194F93007B14C6 /* ZJScrollPageView.h */,
+				CC7E088421194F93007B14C6 /* ZJScrollPageView.m */,
+				CC7E088B21194F94007B14C6 /* ZJScrollPageViewDelegate.h */,
+				CC7E088121194F93007B14C6 /* ZJScrollSegmentView.h */,
+				CC7E088F21194F95007B14C6 /* ZJScrollSegmentView.m */,
+				CC7E088E21194F95007B14C6 /* ZJSegmentStyle.h */,
+				CC7E088921194F94007B14C6 /* ZJSegmentStyle.m */,
+				CC7E088721194F94007B14C6 /* ZJTitleView.h */,
+				CC7E088821194F94007B14C6 /* ZJTitleView.m */,
+			);
+			path = newsController;
 			sourceTree = "<group>";
 		};
 		CCA4FC4E20E31CD8000A783A /* 我的主页面 */ = {
@@ -5287,7 +5357,7 @@
 				TargetAttributes = {
 					0C9817E61DFFBC070016AD20 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 93VVYXS8JB;
+						DevelopmentTeam = XBW6S23R84;
 						LastSwiftMigration = 0940;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -5515,6 +5585,7 @@
 				18328A5F1F1503A200F87E01 /* ASFTableView.m in Sources */,
 				18E6CC0C1E2DB441001FEACF /* WMVerifyCodeParam.m in Sources */,
 				1855DC4E1E83C45A001B4DDD /* WMEducationSaveAPIManager.m in Sources */,
+				CC7E089621194F95007B14C6 /* UIView+ZJFrame.m in Sources */,
 				183287E21F10CB9D00F87E01 /* WMUNReadReportTableViewCell.m in Sources */,
 				8501428B1F3AB6B0000BA97F /* WMArrayUtil.m in Sources */,
 				856237381F7DF42500451954 /* WMDoctorVoiceModel.m in Sources */,
@@ -5562,6 +5633,7 @@
 				CC2B250520EF12A60050D5B2 /* UIView+HYBUIViewCommon.m in Sources */,
 				855280FA2112ECD9006E4D07 /* JYSCCGoodsAPIManager.m in Sources */,
 				8588374F20E8885400DE928F /* JYLoginAPIManager.m in Sources */,
+				CC7E089221194F95007B14C6 /* ZJCollectionView.m in Sources */,
 				0CAF8F4F1E0CEEFE0092E6A8 /* WMShowImageCollectionViewCell.m in Sources */,
 				1D38164E1EC9769B00562FCA /* WMPerfectPerInfoViewController.m in Sources */,
 				8588374B20E7181600DE928F /* JYMenuSelectorView.m in Sources */,
@@ -5644,6 +5716,7 @@
 				183287DF1F10C3FB00F87E01 /* WMUNReadReportViewController.m in Sources */,
 				858836CB20E3DF5A00DE928F /* JYShoppingMallViewController.m in Sources */,
 				184AD57A20BBF52C00F973D3 /* WMRemarkUpdateAPIManager.m in Sources */,
+				CC7E089121194F95007B14C6 /* ZJScrollPageView.m in Sources */,
 				0C4650A61E1B45F20084053A /* WMBaseWKWebController.m in Sources */,
 				ADA4A8EE20E8995A006400F3 /* JYInformationInComeView.m in Sources */,
 				856237351F7DE5B600451954 /* WMDoctorVoiceAPIManager.m in Sources */,
@@ -5742,6 +5815,7 @@
 				184AD57720BBF3CF00F973D3 /* WMPatientRemarkViewController.m in Sources */,
 				85DBE7B21FC66DB200E821E4 /* WMIntegralDetailModel.m in Sources */,
 				AD93FE7E20DDDC8100C8EF83 /* JYHomeViewController.m in Sources */,
+				CC7E089821194F95007B14C6 /* UIViewController+ZJScrollPageController.m in Sources */,
 				0C40048F1E026D79003E1FC4 /* WMDevice.m in Sources */,
 				186E786A2023FECB0058743A /* WMSixFunctionView.m in Sources */,
 				AD93FEB120DDE34B00C8EF83 /* WYButtonChooseView.m in Sources */,
@@ -5791,6 +5865,7 @@
 				18FC06C91E1BB14900A59B4E /* WMOrderListModel.m in Sources */,
 				85BE0CAE21077020002B964C /* JYGetVerificationCodeAPIManager.m in Sources */,
 				18328A2E1F1470F300F87E01 /* STKLocalFileDataSource.m in Sources */,
+				CC7E089B211968D5007B14C6 /* JYNewsViewController.m in Sources */,
 				1D2AEAD11E1E3EA10026DB19 /* WMPatientsHealthModel.m in Sources */,
 				1D68292B1E81263600422732 /* WMRecommendDocViewController.m in Sources */,
 				854180D31FD5390500EA4235 /* WMTodayFirstSpeakAPIManager.m in Sources */,
@@ -5807,6 +5882,7 @@
 				18328A4F1F15012A00F87E01 /* ACOGTwoCollectionViewCell.m in Sources */,
 				181C6CA41E88BA9800CD0119 /* WMVillagesAPIManager.m in Sources */,
 				1814F1EB1E9DF690005B4260 /* WMCitySelectViewController.m in Sources */,
+				CC7E087E2119382E007B14C6 /* JYHomeBeautyPictureLIstManager.m in Sources */,
 				18C93721206DD90000A3453E /* WMGroupInfoViewController.m in Sources */,
 				0CEB2EE41E0CFFE70070119A /* WMRateTableViewCell.m in Sources */,
 				1D2AEADD1E1FA72D0026DB19 /* WMRCConversationViewController.m in Sources */,
@@ -5816,6 +5892,7 @@
 				0CEB2EB51E0CF81E0070119A /* WMCricleMainCell.m in Sources */,
 				18FC06BD1E1BA8DD00A59B4E /* WMMyOrderTableViewController.m in Sources */,
 				18328A2B1F1470F300F87E01 /* STKDataSource.m in Sources */,
+				CC7E089321194F95007B14C6 /* ZJContentView.m in Sources */,
 				1D38165A1EC9C9C100562FCA /* WMInformationModel.m in Sources */,
 				18328A1A1F1470F300F87E01 /* AZSoundItem.m in Sources */,
 				853D5D0E211891C0001DE70A /* JYWelfareView.m in Sources */,
@@ -5877,6 +5954,7 @@
 				188ACA912045310200A54692 /* WMOutLinkWebViewController.m in Sources */,
 				184AD56420B55E7700F973D3 /* WMTagGroupGetAPIManager.m in Sources */,
 				AD93FEA220DDE02A00C8EF83 /* WYDefaultNewsCell.m in Sources */,
+				CCF8608C2119762500C4957E /* JYHomeBeautyPittureViewController.m in Sources */,
 				1814F1EE1E9DF8A3005B4260 /* WMSchoolSelectViewController.m in Sources */,
 				CCA4FC6620E32B40000A783A /* JYAboutUsHeaderView.m in Sources */,
 				1D8203F91E63C09D00494F1C /* WMTotalPatientsDataModel.m in Sources */,
@@ -5910,6 +5988,7 @@
 				189215581E01457E006CD295 /* WMLoginMainViewController.m in Sources */,
 				1890BA5C1FC8056A0009339C /* WMPictureSelectViewCell.m in Sources */,
 				18F5B6981E150A8E0051C60E /* WMPublicPageParamModel.m in Sources */,
+				CC7E087B21193318007B14C6 /* JYHomePictureTableViewCell.m in Sources */,
 				18237EDF1EA7767E00C30F51 /* WMServiceCustomPriceCell.m in Sources */,
 				18328A681F150B0D00F87E01 /* WMCostomAdviceModel.m in Sources */,
 				18328A521F15014C00F87E01 /* LKCResultFormVC.m in Sources */,
@@ -5959,6 +6038,7 @@
 				0CB61DF71E4D6B3C0019AC2A /* NSNumber+Round.m in Sources */,
 				8542E0B42064EFD8001E8421 /* WMReplyAwokeView.m in Sources */,
 				188ACA8A2044FCF900A54692 /* WMNewIndexWebContorller.m in Sources */,
+				CC7E089721194F95007B14C6 /* ZJScrollSegmentView.m in Sources */,
 				85CAB462210DED8000884A54 /* JYStoreCarefullyChooseAPIManager.m in Sources */,
 				0CAF8F7B1E0CF5E10092E6A8 /* WMCricleMainViewController.m in Sources */,
 				858104D4211044DA00532B4D /* WMNewHotQuestionModel.m in Sources */,
@@ -5985,6 +6065,7 @@
 				0CAF8F041E0A256F0092E6A8 /* WMCacheModel.m in Sources */,
 				85CAB455210D472000884A54 /* JYEditUserInfoAPIManager.m in Sources */,
 				85CF6CCA20A599B900FCDD21 /* UISearchBar+WMLeftPlaceholder.m in Sources */,
+				CC7E089521194F95007B14C6 /* ZJSegmentStyle.m in Sources */,
 				1890BA751FC805D00009339C /* WMLeadPictureViewCell.m in Sources */,
 				1840A71C1E0CEF4400D8E677 /* WMGuidePageViewController.m in Sources */,
 				1890BA711FC805BB0009339C /* WMAddPictureViewCell.m in Sources */,
@@ -6003,6 +6084,7 @@
 				AD93FE9520DDDF6400C8EF83 /* WYBaseScrollView.m in Sources */,
 				18237EEB1EA78D6D00C30F51 /* WMServiceUpdatePriceModel.m in Sources */,
 				186E7867202308AD0058743A /* WMIndexQuestionsCell.m in Sources */,
+				CC7E089421194F95007B14C6 /* ZJTitleView.m in Sources */,
 				AD93FEA520DDE04400C8EF83 /* WYImagesNewsCell.m in Sources */,
 				1814F1FD1E9E5B06005B4260 /* WMSearchWordAPIManager.m in Sources */,
 				1890BA801FCCE3D00009339C /* WMQuestionDetailAnswerCell.m in Sources */,
@@ -6256,7 +6338,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = WMDoctor/WMDoctor.entitlements;
-				DEVELOPMENT_TEAM = 93VVYXS8JB;
+				DEVELOPMENT_TEAM = XBW6S23R84;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -6278,7 +6360,7 @@
 					"$(PROJECT_DIR)/WMDoctor/Classes/Librarys/Libs/CardiotocographyLibs",
 					"$(PROJECT_DIR)/SobotKit/SobotKit/SobotLib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = vip.dkgj.www;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sy.wyhh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -6294,7 +6376,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = WMDoctor/WMDoctor.entitlements;
-				DEVELOPMENT_TEAM = 93VVYXS8JB;
+				DEVELOPMENT_TEAM = XBW6S23R84;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -6316,7 +6398,7 @@
 					"$(PROJECT_DIR)/WMDoctor/Classes/Librarys/Libs/CardiotocographyLibs",
 					"$(PROJECT_DIR)/SobotKit/SobotKit/SobotLib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = vip.dkgj.www;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sy.wyhh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -6431,7 +6513,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = WMDoctor/WMDoctor.entitlements;
-				DEVELOPMENT_TEAM = 93VVYXS8JB;
+				DEVELOPMENT_TEAM = XBW6S23R84;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -6453,7 +6535,7 @@
 					"$(PROJECT_DIR)/WMDoctor/Classes/Librarys/Libs/CardiotocographyLibs",
 					"$(PROJECT_DIR)/SobotKit/SobotKit/SobotLib",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = vip.dkgj.www;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sy.wyhh;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;

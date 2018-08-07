@@ -81,6 +81,13 @@
 #define iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
 #define pixelValue(number) (iPhoneX ? (number) / 750.0 * [[UIScreen mainScreen] bounds].size.width : (number) / 1334.0 * [[UIScreen mainScreen] bounds].size.height)
 #define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+
+#define navHeight (iPhoneX ? 88.f : 64.f)
+#define tarBarHeight (iPhoneX ? (49.f+34.f) : 49.f)
+#define iPhoneXFluityHeight (iPhoneX ? 34.f : 0)
+// 状态栏高度
+#define STATUS_BAR_HEIGHT (iPhoneX ? 44.f : 20.f)
+
 //dock
 #define kDockBgColor                [UIColor colorWithRed:133.0/255 green:133.0/255 blue:133.0/255 alpha:1]
 //Network

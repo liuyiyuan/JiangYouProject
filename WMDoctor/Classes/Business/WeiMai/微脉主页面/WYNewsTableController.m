@@ -19,8 +19,12 @@
 #import "JYHomeDeletedManager.h"//删除
 #import "JYHomeCancleFocusManager.h"//取消关注
 #import "JYHomeFocusManager.h"//关注
+#import "JYHomePictureTableViewCell.h"//美图cell
+#import "JYHomeBeautyPictureLIstManager.h"//美图接口
 //#import "WYtool.h"
 @interface WYNewsTableController ()<UIScrollViewDelegate>
+
+@property (nonatomic, strong) NSMutableArray *bigArray;
 
 @end
 //typedef enum {
@@ -44,10 +48,19 @@
 //static NSString *reuseDefaultNewsIdentifier = @"DefaultNews";
 //static NSString *reuseImagesNewsIdentifier = @"ImagesNews";
 //static NSString *reuseAdvertisementIdentifier = @"Advertisement";
+-(NSMutableArray *)bigArray{
+    if(!_bigArray){
+        _bigArray = [[NSMutableArray alloc]init];
+    }
+    return _bigArray;
+}
+
 - (instancetype)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
+        NSArray *tempArray = @[@"0",@"0",@"0",@"0",@"0",@"0",@"0",@"0",@"0",@"0",@"0",@"0",@"0",@"0",@"0",@"0"];//装入空数据以免越界
+        [self.bigArray addObjectsFromArray:tempArray];
         _dataArray = [NSMutableArray array];
         _userDict = [[NSUserDefaults standardUserDefaults]objectForKey:@"JYLoginUserInfo"];
     }
@@ -81,6 +94,12 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+//    [self loadNewData];
+}
+
+-(void)setPid:(int)pid{
+    _pid = pid;
+    
     [self loadNewData];
 }
 
@@ -112,6 +131,9 @@
             //            WYNews *news = [[WYNews alloc] initWithDic:dic];
             [_dataArray addObject:dic];
         }
+        
+        
+        
         _page++;
         [_footer endRefreshing];
         [self.tableView reloadData];
@@ -154,38 +176,46 @@
 #pragma mark - 新闻刷新
 - (void)loadNewData
 {
-    NSString *pageString = [NSString stringWithFormat:@"%ld",(long)_page];
     
-//    NSDictionary *param = @{@"searchKey":@"",
-//                            @"userId":_userDict[@"userId"] ? _userDict[@"userId"] : @"-1",
-//                            @"pageNo":pageString,
-//                            @"pageSize":@"15"
-//                            };
-    NSDictionary *param = @{@"searchKey":@"",
-                            @"userId":@"-1",
-                            @"pageNo":pageString,
-                            @"pageSize":@"15"
-                            };
-    JYHomeNewAPIManager *homeNewsManager = [[JYHomeNewAPIManager alloc] init];
-    [homeNewsManager loadDataWithParams:param withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
-        NSLog(@"%@",responseObject);
-        //        NSLog(@"login success data : %@", responseObject);
-        [_dataArray removeAllObjects];
-        for (NSDictionary *dic in [responseObject allObjects]) {
-            //            WYNews *news = [[WYNews alloc] initWithDic:dic];
-            [_dataArray addObject:dic];
-        }
-        _page = 1;
-        [_header endRefreshing];
-        [self.tableView reloadData];
+    if(self.pid == 5){
+        [self getBeautyPictureLIst];
+    }else{
+        NSString *pageString = [NSString stringWithFormat:@"%ld",(long)_page];
         
+        //    NSDictionary *param = @{@"searchKey":@"",
+        //                            @"userId":_userDict[@"userId"] ? _userDict[@"userId"] : @"-1",
+        //                            @"pageNo":pageString,
+        //                            @"pageSize":@"15"
+        //                            };
+        NSDictionary *param = @{@"searchKey":@"",
+                                @"userId":@"-1",
+                                @"pageNo":pageString,
+                                @"pageSize":@"15"
+                                };
+        JYHomeNewAPIManager *homeNewsManager = [[JYHomeNewAPIManager alloc] init];
+        [homeNewsManager loadDataWithParams:param withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
+            NSLog(@"%@",responseObject);
+            NSMutableArray *array = [[NSMutableArray alloc]init];
+            [array removeAllObjects];
+            for (NSDictionary *dic in [responseObject allObjects]) {
+                //            WYNews *news = [[WYNews alloc] initWithDic:dic];
+                [array addObject:dic];
+            }
+            [self.bigArray replaceObjectAtIndex:self.pid withObject:array];
+            _page = 1;
+            [_header endRefreshing];
+//            [self.tableView reloadData];
+            
+            
+        } withFailure:^(ResponseResult *errorResult) {
+            NSLog(@"login error : %@", errorResult);
+            
+            [_header endRefreshing];
+        }];
         
-    } withFailure:^(ResponseResult *errorResult) {
-        NSLog(@"login error : %@", errorResult);
-        
-        [_header endRefreshing];
-    }];
+    }
     
+   
     
     
     //    if (_header.state == MJRefreshHeaderStateIdle) {
@@ -254,8 +284,16 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-    return _dataArray ?  _dataArray.count : 0;
+    
+    if(self.pid == 0){
+        return 15;
+    }else if(self.pid == 5){
+        return 2;
+    }else{
+        return 0;
+    }
+    return 0;
+    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -277,36 +315,52 @@
     //    // Configure the cell...
     //    cell.news = news;
     //    //    cell.textLabel.text = news.title;
-    NSDictionary *dict = _dataArray[indexPath.row];
-    static NSString *cellId = @"JYHomeFocusTableViewCell";
-    JYHomeFocusTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
-    if(!cell){
-        cell = [[JYHomeFocusTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
+    if(self.pid == 0){
+        NSMutableArray *array = self.bigArray[self.pid];
+        NSDictionary *dict = array[indexPath.row];
+        static NSString *cellId = @"JYHomeFocusTableViewCell";
+        JYHomeFocusTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+        if(!cell){
+            cell = [[JYHomeFocusTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
+        }
+        //关注按钮
+        cell.focusButton.tag = indexPath.row;
+        BOOL isFollowed = [dict[@"isFollow"] boolValue];
+        if(isFollowed){
+            [cell.focusButton setTitle:@"取消关注" forState:UIControlStateNormal];
+            [cell.focusButton addTarget:self action:@selector(cancle_focusButton:) forControlEvents:UIControlEventTouchUpInside];
+        }else{
+            [cell.focusButton setTitle:@"关注" forState:UIControlStateNormal];
+            [cell.focusButton addTarget:self action:@selector(click_focusButton:) forControlEvents:UIControlEventTouchUpInside];
+        }
+        //删除按钮
+        cell.deleteButton.tag = indexPath.row;
+        [cell.deleteButton addTarget:self action:@selector(click_deleteButton:) forControlEvents:UIControlEventTouchUpInside];
+        
+        
+        //内容详情
+        cell.contentLabel.text = dict[@"content"];
+        //时间
+        cell.timeLabel.text = [self timeWithTimeIntervalString:dict[@"createTime"]];
+        
+        [cell.likedButton setTitle:[NSString stringWithFormat:@" 赞%@次",dict[@"likeCount"]] forState:UIControlStateNormal];
+        [cell.forwardingButton setTitle:[NSString stringWithFormat:@" 热评%@条",dict[@"turnCount"]] forState:UIControlStateNormal];
+        [cell.commentsButton setTitle:[NSString stringWithFormat:@" 转帖%@次",dict[@"commentCount"]] forState:UIControlStateNormal];
+        return cell;
+    }else if(self.pid == 5){
+        NSMutableArray *array = self.bigArray[self.pid];
+        NSDictionary *dict = array[indexPath.row];
+        static NSString *cellId = @"JYHomePictureTableViewCell";
+        JYHomePictureTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+        if(!cell){
+            cell = [[JYHomePictureTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
+        }
+        cell.titleLabel.text = dict[@"title"];
+        cell.myImageView.image = [UIImage imageNamed:@"news_placed"];
+        return cell;
     }
-    //关注按钮
-    cell.focusButton.tag = indexPath.row;
-    BOOL isFollowed = [dict[@"isFollow"] boolValue];
-    if(isFollowed){
-        [cell.focusButton setTitle:@"取消关注" forState:UIControlStateNormal];
-        [cell.focusButton addTarget:self action:@selector(cancle_focusButton:) forControlEvents:UIControlEventTouchUpInside];
-    }else{
-        [cell.focusButton setTitle:@"关注" forState:UIControlStateNormal];
-        [cell.focusButton addTarget:self action:@selector(click_focusButton:) forControlEvents:UIControlEventTouchUpInside];
-    }
-    //删除按钮
-    cell.deleteButton.tag = indexPath.row;
-    [cell.deleteButton addTarget:self action:@selector(click_deleteButton:) forControlEvents:UIControlEventTouchUpInside];
     
-    
-    //内容详情
-    cell.contentLabel.text = dict[@"content"];
-    //时间
-    cell.timeLabel.text = [self timeWithTimeIntervalString:dict[@"createTime"]];
-    
-    [cell.likedButton setTitle:[NSString stringWithFormat:@" 赞%@次",dict[@"likeCount"]] forState:UIControlStateNormal];
-    [cell.forwardingButton setTitle:[NSString stringWithFormat:@" 热评%@条",dict[@"turnCount"]] forState:UIControlStateNormal];
-    [cell.commentsButton setTitle:[NSString stringWithFormat:@" 转帖%@次",dict[@"commentCount"]] forState:UIControlStateNormal];
-    return cell;
+    return nil;
 }
 
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -398,6 +452,37 @@
         
     }];
 }
+
+#pragma mark - 获取美图列表
+-(void)getBeautyPictureLIst{
+    NSDictionary *param = @{@"userId":@"1",
+                            @"tagId":@"3",
+                            @"pageNo":@"1",
+                            @"pageSize":@"15"
+                            };
+    
+    JYHomeBeautyPictureLIstManager *beautyPictureLIs = [[JYHomeBeautyPictureLIstManager alloc] init];
+    [beautyPictureLIs loadDataWithParams:param withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"%@",responseObject);
+        NSMutableArray *array = [[NSMutableArray alloc]init];
+        [array removeAllObjects];
+        for (NSDictionary *dic in [responseObject allObjects]) {
+            //            WYNews *news = [[WYNews alloc] initWithDic:dic];
+            [array addObject:dic];
+        }
+        
+        [self.bigArray replaceObjectAtIndex:self.pid withObject:array];
+        
+        _page++;
+        [_footer endRefreshing];
+        [self.tableView reloadData];
+        
+    } withFailure:^(ResponseResult *errorResult) {
+        NSLog(@"login error : %@", errorResult);
+        
+    }];
+}
+
 #pragma mark - 时间戳转化为时间NSDate
 - (NSString *)timeWithTimeIntervalString:(NSString *)timeString
 {

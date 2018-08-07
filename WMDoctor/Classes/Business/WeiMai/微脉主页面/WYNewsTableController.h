@@ -10,4 +10,7 @@
 
 @interface WYNewsTableController : UITableViewController
 @property (copy, nonatomic) NSString *tid;
+
+@property (nonatomic, assign) int pid;//位置
+
 @end
