@@ -612,6 +612,9 @@
 		85F2F92221196D570062A8A1 /* JYStoresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F2F92121196D570062A8A1 /* JYStoresViewController.m */; };
 		85F2F927211972690062A8A1 /* JYStoresActivitesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F2F925211972690062A8A1 /* JYStoresActivitesCell.m */; };
 		85F2F928211972690062A8A1 /* JYStoresActivitesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85F2F926211972690062A8A1 /* JYStoresActivitesCell.xib */; };
+		AD0E11532119ED9500C3E98B /* JYHomeBeautyPictureHotManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E11522119ED9500C3E98B /* JYHomeBeautyPictureHotManager.m */; };
+		AD0E11562119F01B00C3E98B /* JYHomeBeautyPictureHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E11552119F01B00C3E98B /* JYHomeBeautyPictureHeaderView.m */; };
+		AD0E11592119F1E900C3E98B /* JYHomeBeautyPictureHeaderCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E11582119F1E900C3E98B /* JYHomeBeautyPictureHeaderCollectionViewCell.m */; };
 		AD526A0E20E8BC4700D4BF85 /* JYFindPassWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD526A0D20E8BC4700D4BF85 /* JYFindPassWordViewController.m */; };
 		AD526A1120E8BC7300D4BF85 /* JYFindPassWordView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD526A1020E8BC7300D4BF85 /* JYFindPassWordView.m */; };
 		AD526A1520E8C42D00D4BF85 /* UIButton+EWTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = AD526A1420E8C42D00D4BF85 /* UIButton+EWTimer.m */; };
@@ -1867,6 +1870,12 @@
 		85F2F926211972690062A8A1 /* JYStoresActivitesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JYStoresActivitesCell.xib; sourceTree = "<group>"; };
 		9DA11EC04838AD96A5B81976 /* Pods-WMDoctor.prerelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WMDoctor.prerelease.xcconfig"; path = "Pods/Target Support Files/Pods-WMDoctor/Pods-WMDoctor.prerelease.xcconfig"; sourceTree = "<group>"; };
 		A38FA6E6C5C6E86F870A04C5 /* Pods-WMDoctor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WMDoctor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WMDoctor/Pods-WMDoctor.debug.xcconfig"; sourceTree = "<group>"; };
+		AD0E11512119ED9500C3E98B /* JYHomeBeautyPictureHotManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYHomeBeautyPictureHotManager.h; sourceTree = "<group>"; };
+		AD0E11522119ED9500C3E98B /* JYHomeBeautyPictureHotManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYHomeBeautyPictureHotManager.m; sourceTree = "<group>"; };
+		AD0E11542119F01B00C3E98B /* JYHomeBeautyPictureHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYHomeBeautyPictureHeaderView.h; sourceTree = "<group>"; };
+		AD0E11552119F01B00C3E98B /* JYHomeBeautyPictureHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYHomeBeautyPictureHeaderView.m; sourceTree = "<group>"; };
+		AD0E11572119F1E900C3E98B /* JYHomeBeautyPictureHeaderCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYHomeBeautyPictureHeaderCollectionViewCell.h; sourceTree = "<group>"; };
+		AD0E11582119F1E900C3E98B /* JYHomeBeautyPictureHeaderCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYHomeBeautyPictureHeaderCollectionViewCell.m; sourceTree = "<group>"; };
 		AD526A0C20E8BC4700D4BF85 /* JYFindPassWordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYFindPassWordViewController.h; sourceTree = "<group>"; };
 		AD526A0D20E8BC4700D4BF85 /* JYFindPassWordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYFindPassWordViewController.m; sourceTree = "<group>"; };
 		AD526A0F20E8BC7300D4BF85 /* JYFindPassWordView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYFindPassWordView.h; sourceTree = "<group>"; };
@@ -2483,6 +2492,10 @@
 				AD7A06F62111F51100D3AAB4 /* JYHomeFocusTableViewCell.m */,
 				CC7E087921193318007B14C6 /* JYHomePictureTableViewCell.h */,
 				CC7E087A21193318007B14C6 /* JYHomePictureTableViewCell.m */,
+				AD0E11542119F01B00C3E98B /* JYHomeBeautyPictureHeaderView.h */,
+				AD0E11552119F01B00C3E98B /* JYHomeBeautyPictureHeaderView.m */,
+				AD0E11572119F1E900C3E98B /* JYHomeBeautyPictureHeaderCollectionViewCell.h */,
+				AD0E11582119F1E900C3E98B /* JYHomeBeautyPictureHeaderCollectionViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -5165,6 +5178,8 @@
 				AD7A06F3210F4E6800D3AAB4 /* JYHomeNewAPIManager.m */,
 				CC7E087C2119382E007B14C6 /* JYHomeBeautyPictureLIstManager.h */,
 				CC7E087D2119382E007B14C6 /* JYHomeBeautyPictureLIstManager.m */,
+				AD0E11512119ED9500C3E98B /* JYHomeBeautyPictureHotManager.h */,
+				AD0E11522119ED9500C3E98B /* JYHomeBeautyPictureHotManager.m */,
 			);
 			name = APIManager;
 			sourceTree = "<group>";
@@ -5757,6 +5772,7 @@
 				CC7E089121194F95007B14C6 /* ZJScrollPageView.m in Sources */,
 				0C4650A61E1B45F20084053A /* WMBaseWKWebController.m in Sources */,
 				ADA4A8EE20E8995A006400F3 /* JYInformationInComeView.m in Sources */,
+				AD0E11592119F1E900C3E98B /* JYHomeBeautyPictureHeaderCollectionViewCell.m in Sources */,
 				856237351F7DE5B600451954 /* WMDoctorVoiceAPIManager.m in Sources */,
 				85DBE7A41FC5121C00E821E4 /* WMIntegralDetailViewController.m in Sources */,
 				1D29FAA91E1D11EF00472F0E /* WMPatientStateParamModel.m in Sources */,
@@ -5997,6 +6013,7 @@
 				1814F1EE1E9DF8A3005B4260 /* WMSchoolSelectViewController.m in Sources */,
 				CCA4FC6620E32B40000A783A /* JYAboutUsHeaderView.m in Sources */,
 				1D8203F91E63C09D00494F1C /* WMTotalPatientsDataModel.m in Sources */,
+				AD0E11532119ED9500C3E98B /* JYHomeBeautyPictureHotManager.m in Sources */,
 				1D34F8061E9F9FE000B3D539 /* WMVPIPatientsModel.m in Sources */,
 				0CEB2ECC1E0CFD040070119A /* WMMyServiceTableViewController.m in Sources */,
 				1DA7E4FA1E5C3F9800CDBEC5 /* WMAllPatientViewController.m in Sources */,
@@ -6124,6 +6141,7 @@
 				18237EEB1EA78D6D00C30F51 /* WMServiceUpdatePriceModel.m in Sources */,
 				186E7867202308AD0058743A /* WMIndexQuestionsCell.m in Sources */,
 				CC7E089421194F95007B14C6 /* ZJTitleView.m in Sources */,
+				AD0E11562119F01B00C3E98B /* JYHomeBeautyPictureHeaderView.m in Sources */,
 				AD93FEA520DDE04400C8EF83 /* WYImagesNewsCell.m in Sources */,
 				1814F1FD1E9E5B06005B4260 /* WMSearchWordAPIManager.m in Sources */,
 				1890BA801FCCE3D00009339C /* WMQuestionDetailAnswerCell.m in Sources */,

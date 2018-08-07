@@ -10,9 +10,11 @@
 #import "UIViewController+ZJScrollPageController.h"
 #import "JYHomePictureTableViewCell.h"//美图cell
 #import "JYHomeBeautyPictureLIstManager.h"//美图接口
-@interface JYHomeBeautyPittureViewController ()<UITableViewDataSource,UITableViewDelegate>
+#import "JYHomeBeautyPictureHeaderView.h"
+@interface JYHomeBeautyPittureViewController ()<UITableViewDataSource,UITableViewDelegate,JYPictureHotDelegate>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *dataArray;
+@property (nonatomic, strong) JYHomeBeautyPictureHeaderView *headerView;
 @end
 
 @implementation JYHomeBeautyPittureViewController
@@ -29,6 +31,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self loadNewData];
+    
 }
 
 - (void)zj_viewDidLoadForIndex:(NSInteger)index {
@@ -48,14 +51,26 @@
         cell = [[JYHomePictureTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
     }
     cell.titleLabel.text = dict[@"title"];
-    cell.myImageView.image = [UIImage imageNamed:@"news_placed"];
+    if(indexPath.row == 0){
+        cell.myImageView.image = [UIImage imageNamed:@"矩形 21"];
+    }else{
+        cell.myImageView.image = [UIImage imageNamed:@"矩形 211"];
+    }
     return cell;
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    return self.headerView;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return pixelValue(414);
 }
 
 -(UITableView *)tableView{
     if(!_tableView){
-        _tableView = [[UITableView alloc]init];
-        _tableView.frame = CGRectMake(0, 0, UI_SCREEN_WIDTH,self.view.frame.size.height);
+        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, UI_SCREEN_WIDTH,self.view.frame.size.height) style:UITableViewStyleGrouped];
+//        _tableView.frame = CGRectMake(0, 0, UI_SCREEN_WIDTH,self.view.frame.size.height);
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -70,6 +85,13 @@
         _tableView.mj_footer = footer;
         }
         return _tableView;
+}
+
+-(JYHomeBeautyPictureHeaderView *)headerView{
+    if(!_headerView){
+        _headerView = [[JYHomeBeautyPictureHeaderView alloc]init];
+    }
+    return _headerView;
 }
 
 #pragma mark - 新闻刷新
@@ -137,7 +159,12 @@
                                   
                                   
 }
-                                  
+
+#pragma mark - JYPictureHotDelegate
+- (void)clickHotViewIndex:(NSIndexPath *)indexPath{
+    
+}
+
 // 使用系统的生命周期方法
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
