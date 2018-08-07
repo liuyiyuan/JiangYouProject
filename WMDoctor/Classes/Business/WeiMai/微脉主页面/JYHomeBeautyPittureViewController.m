@@ -64,15 +64,16 @@
         __weak typeof(self) weakSelf = self;
         MJWeiMaiFooter *footer = [MJWeiMaiFooter footerWithRefreshingBlock:^{
             [weakSelf loadMoreData];
-        _tableView.mj_footer = footer;
+        
         }];
-
+        _tableView.mj_footer = footer;
         }
         return _tableView;
 }
 
 #pragma mark - 新闻刷新
 - (void)loadNewData{
+    _page = 1;
     NSString *pageString = [NSString stringWithFormat:@"%ld",(long)_page];
     NSDictionary *param = @{@"userId":@"1",
                             @"tagId":@"3",
@@ -87,7 +88,7 @@
             [self.dataArray addObject:dic];
         }
         
-        _page = 1;
+        _page++;
         [self.tableView.mj_header endRefreshing];
         [self.tableView reloadData];
         
@@ -117,12 +118,20 @@
             [self.dataArray addObject:dic];
         }
         _page++;
-        [self.tableView.mj_footer endRefreshing];
+        if ([self.tableView.mj_footer isRefreshing]) {
+            
+            [self.tableView.mj_footer endRefreshing];
+            
+        }
         [self.tableView reloadData];
         
     } withFailure:^(ResponseResult *errorResult) {
         NSLog(@"login error : %@", errorResult);
-        
+        if ([self.tableView.mj_footer isRefreshing]) {
+            
+            [self.tableView.mj_footer endRefreshing];
+            
+        }
     }];
                                   
                                   

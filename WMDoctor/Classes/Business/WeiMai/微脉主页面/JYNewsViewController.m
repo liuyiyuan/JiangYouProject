@@ -89,8 +89,9 @@
         __weak typeof(self) weakSelf = self;
         MJWeiMaiFooter *footer = [MJWeiMaiFooter footerWithRefreshingBlock:^{
             [weakSelf loadMoreData];
-            _tableView.mj_footer = footer;
+            
         }];
+        _tableView.mj_footer = footer;
         
     }
     return _tableView;
@@ -99,6 +100,7 @@
 
 #pragma mark - 新闻刷新
 - (void)loadNewData{
+    _page = 1;
     NSString *pageString = [NSString stringWithFormat:@"%ld",(long)_page];
     
     //    NSDictionary *param = @{@"searchKey":@"",
@@ -121,7 +123,7 @@
             [self.dataArray addObject:dic];
         }
         
-        _page = 1;
+        _page++;
         [self.tableView.mj_header endRefreshing];
         [self.tableView reloadData];
         
@@ -153,23 +155,26 @@
     JYHomeNewAPIManager *homeNewsManager = [[JYHomeNewAPIManager alloc] init];
     [homeNewsManager loadDataWithParams:param withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
         NSLog(@"login success data : %@", responseObject);
-        [self.dataArray removeAllObjects];
         for (NSDictionary *dic in [responseObject allObjects]) {
-            //            WYNews *news = [[WYNews alloc] initWithDic:dic];
             [self.dataArray addObject:dic];
         }
-        
-        
-        
         _page++;
-        [self.tableView.mj_footer endRefreshing];
+        if ([self.tableView.mj_footer isRefreshing]) {
+            
+            [self.tableView.mj_footer endRefreshing];
+            
+        }
         [self.tableView reloadData];
         
         
     } withFailure:^(ResponseResult *errorResult) {
         NSLog(@"login error : %@", errorResult);
         
-        [self.tableView.mj_footer endRefreshing];
+        if ([self.tableView.mj_footer isRefreshing]) {
+            
+            [self.tableView.mj_footer endRefreshing];
+            
+        }
     }];
     
 }
