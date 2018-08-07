@@ -19,6 +19,7 @@
 #import "JYWelfareView.h"
 
 
+
 @interface JYShoppingMallViewController ()<TopicScrollViewDelegate, SDCycleScrollViewDelegate, UIScrollViewDelegate>{
     WYTopicScrollView *_topicScrollView;
     JYMenuSelectorView *_menuSelectorView;
