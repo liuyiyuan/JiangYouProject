@@ -135,30 +135,30 @@ static NSString * const kNetworkTestURL = @"https://www.baidu.com";
     NSLog(@"remoteNotificationUserInfo==%@",remoteNotificationUserInfo);
     //注册通知
     [self registerRemoteNotification];
-    [[RCIM sharedRCIM] initWithAppKey:RONGCLOUNDAPP_KEY];
+//    [[RCIM sharedRCIM] initWithAppKey:RONGCLOUNDAPP_KEY];
     [self initializeDiskData];
     
-    [self loadMainView];
+//    [self loadMainView];
     
-    [self initializeNotification];
+//    [self initializeNotification];
     
 //    [self initializeCoreData];
     
     //第三方注册
-    [self prepareThirdLibraryRegister];
+//    [self prepareThirdLibraryRegister];
     
     // 启动GrowingIO
-    [Growing startWithAccountId:GROWINGIOID];
+//    [Growing startWithAccountId:GROWINGIOID];
     
     //个推
-    [self GtPushWithOptions:launchOptions];
+//    [self GtPushWithOptions:launchOptions];
     
     NSSetUncaughtExceptionHandler(&UncaughtExceptionHandler);
    
     // 错误日志收集
-    [ZCLibClient setZCLibUncaughtExceptionHandler];
+//    [ZCLibClient setZCLibUncaughtExceptionHandler];
     // 添加用户画像
-    [[ZCLibClient getZCLibClient] initSobotSDK:@"af7f8ef937cc49de8eb9a603ea5a9bf4"];
+//    [[ZCLibClient getZCLibClient] initSobotSDK:@"af7f8ef937cc49de8eb9a603ea5a9bf4"];
     
     if ([[NSUserDefaults standardUserDefaults] objectForKey:@"JYLoginUserInfo"]) {
         [self loadMainView];
@@ -447,14 +447,14 @@ static NSString * const kNetworkTestURL = @"https://www.baidu.com";
     [MobClick setAppVersion:[[WMDevice currentDevice] appVersion]];
     
     //友盟社会化分享注册
-    [[UMSocialManager defaultManager] setUmSocialAppkey:UMENG_APPKEY];
+//    [[UMSocialManager defaultManager] setUmSocialAppkey:UMENG_APPKEY];
     
     //设置分享到QQ互联的appKey和appSecret
     // U-Share SDK为了兼容大部分平台命名，统一用appKey和appSecret进行参数设置，而QQ平台仅需将appID作为U-Share的appKey参数传进即可。
-    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_QQ appKey:QQ_APPID  appSecret:nil redirectURL:@"https://doctor.myweimai.com"];
+//    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_QQ appKey:QQ_APPID  appSecret:nil redirectURL:@"https://doctor.myweimai.com"];
     
     
-    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:WX_APPID appSecret:WX_AppSecret redirectURL:@"https://doctor.myweimai.com/"];
+//    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:WX_APPID appSecret:WX_AppSecret redirectURL:@"https://doctor.myweimai.com/"];
     
     //正式库并且release模式开启
     

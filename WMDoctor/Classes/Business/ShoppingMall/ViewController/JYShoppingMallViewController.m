@@ -16,6 +16,7 @@
 #import "JYStoreCarefullyChooseView.h"
 #import "JYPanicBuyView.h"
 #import "JYGroupBuyView.h"
+#import "JYWelfareView.h"
 
 
 @interface JYShoppingMallViewController ()<TopicScrollViewDelegate, SDCycleScrollViewDelegate, UIScrollViewDelegate>{
@@ -27,6 +28,7 @@
 @property(nonatomic, strong)JYStoreCarefullyChooseView *carefullyChooseView;
 @property(nonatomic, strong)JYPanicBuyView *panicBuyView;
 @property(nonatomic, strong)JYGroupBuyView *groupBuyView;
+@property(nonatomic, strong)JYWelfareView *welfareView;
 
 @property(nonatomic, strong) NSMutableArray *dataSource;
 @property(nonatomic, strong) UIScrollView *scrollView;
@@ -45,6 +47,7 @@
     [self setupCarefullyChooseView];
     [self setupPanicBuyView];
     [self setupGroupBuyView];
+    [self setupWelfareView];
 }
 
 - (void)initData{
@@ -86,6 +89,11 @@
 - (void)setupGroupBuyView{
     self.groupBuyView = [[JYGroupBuyView alloc] initWithFrame:CGRectMake(kScreenWidth * 2, 0, kScreenWidth, kScreenHeight - 44 - 49)];
     [self.scrollView addSubview:self.groupBuyView];
+}
+
+- (void)setupWelfareView{
+    self.welfareView = [[JYWelfareView alloc] initWithFrame:CGRectMake(kScreenWidth * 3, 0, kScreenWidth, kScreenHeight - 44 - 49)];
+    [self.scrollView addSubview:self.welfareView];
 }
 
 - (void)didReceiveMemoryWarning {
