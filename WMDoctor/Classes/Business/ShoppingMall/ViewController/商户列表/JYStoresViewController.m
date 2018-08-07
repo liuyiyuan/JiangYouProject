@@ -36,6 +36,7 @@
     self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
     [_tableView registerClass:[JYStoreModuleCell class] forCellReuseIdentifier:@"JYStoreModuleCell"];
     [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([JYStoresActivitesCell class]) bundle:nil] forCellReuseIdentifier:@"JYStoresActivitesCell"];
+    [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([JYSCCGoodsCell class]) bundle:nil] forCellReuseIdentifier:@"JYSCCGoodsCell"];
     [self.view addSubview:self.tableView];
     
 }
@@ -66,7 +67,6 @@
         return cell;
     } else if (indexPath.section == 2){
         JYSCCGoodsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JYSCCGoodsCell" forIndexPath:indexPath];
-//        [cell setValueWithGoodsModel:goods];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     }
@@ -114,7 +114,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    if (section == 1) {
+    if (section == 1 || section == 2) {
         return 44.f;
     }
     return 0.1;
