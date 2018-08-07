@@ -72,10 +72,12 @@
     if (indexPath.section == 0) {
         JYSearchCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JYSearchCell" forIndexPath:indexPath];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        return cell;
     } else if (indexPath.section == 1){
         
         JYWelfareCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JYWelfareCell" forIndexPath:indexPath];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        return cell;
     } else if (indexPath.section == 2){
         JYStoreBannerTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JYStoreBannerTableViewCell" forIndexPath:indexPath];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;

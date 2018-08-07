@@ -8,6 +8,7 @@
 
 #import "JYStoresViewController.h"
 #import "JYStoreModuleCell.h"
+#import "JYStoresActivitesCell.h"
 
 @interface JYStoresViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -33,7 +34,9 @@
     self.tableView.showsVerticalScrollIndicator = NO;
     self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
     [_tableView registerClass:[JYStoreModuleCell class] forCellReuseIdentifier:@"JYStoreModuleCell"];
+    [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([JYStoresActivitesCell class]) bundle:nil] forCellReuseIdentifier:@"JYStoresActivitesCell"];
     [self.view addSubview:self.tableView];
+    
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -51,6 +54,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
+        JYStoreModuleCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JYStoreModuleCell" forIndexPath:indexPath];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        return cell;
+    } else if (indexPath.section == 1){
         JYStoreModuleCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JYStoreModuleCell" forIndexPath:indexPath];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
