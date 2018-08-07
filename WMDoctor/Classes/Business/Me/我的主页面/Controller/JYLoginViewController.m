@@ -105,6 +105,7 @@
                                                             object:nil
                                                           userInfo:nil];
         [[NSUserDefaults standardUserDefaults] setObject:loginUser.toDictionary forKey:@"JYLoginUserInfo"];
+        [[NSUserDefaults standardUserDefaults]synchronize];
     } withFailure:^(ResponseResult *errorResult) {
         NSLog(@"login error : %@", errorResult);
     }];

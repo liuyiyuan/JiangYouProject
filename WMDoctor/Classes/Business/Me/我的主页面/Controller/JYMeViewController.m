@@ -21,6 +21,8 @@
 
 @property(nonatomic,strong)JYMeHeaderView *headerView;
 
+@property (nonatomic, strong) NSDictionary *userDcit;
+
 @end
 
 @implementation JYMeViewController
@@ -28,6 +30,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"我的";
+    self.userDcit = [[NSUserDefaults standardUserDefaults]objectForKey:@"JYLoginUserInfo"];
     [self configUI];
     [self loadMineData];
 }
@@ -182,7 +185,7 @@
     // 企业编号 必填
     initInfo.appKey = @"af7f8ef937cc49de8eb9a603ea5a9bf4";
     // 用户id，用于标识用户，建议填写 (注意：userId不要写死，否则获取的历史记录相同)
-    initInfo.userId = @"";
+    initInfo.userId = self.userDcit[@"userId"];
     
     //配置UI
     ZCKitInfo *uiInfo = [ZCKitInfo new];

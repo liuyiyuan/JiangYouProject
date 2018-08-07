@@ -31,6 +31,7 @@
 @implementation WYNewsTableController
 {
     NSMutableArray *_dataArray;
+    NSDictionary *_userDict;
     NSInteger _page;
     MJRefreshHeader *_header;
     MJRefreshFooter *_footer;
@@ -48,6 +49,7 @@
     self = [super initWithStyle:style];
     if (self) {
         _dataArray = [NSMutableArray array];
+        _userDict = [[NSUserDefaults standardUserDefaults]objectForKey:@"JYLoginUserInfo"];
     }
     return self;
 }
@@ -91,11 +93,17 @@
 {
     NSString *pageString = [NSString stringWithFormat:@"%ld",(long)_page];
     
-    NSDictionary *param = @{
+//    NSDictionary *param = @{@"searchKey":@"",
+//                            @"userId":_userDict[@"userId"] ? _userDict[@"userId"] : @"-1",
+//                            @"pageNo":pageString,
+//                            @"pageSize":@"15"
+//                            };
+    
+    NSDictionary *param = @{@"searchKey":@"",
+                            @"userId":@"-1",
                             @"pageNo":pageString,
                             @"pageSize":@"15"
                             };
-    
     JYHomeNewAPIManager *homeNewsManager = [[JYHomeNewAPIManager alloc] init];
     [homeNewsManager loadDataWithParams:param withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
         NSLog(@"login success data : %@", responseObject);
@@ -148,12 +156,16 @@
 {
     NSString *pageString = [NSString stringWithFormat:@"%ld",(long)_page];
     
+//    NSDictionary *param = @{@"searchKey":@"",
+//                            @"userId":_userDict[@"userId"] ? _userDict[@"userId"] : @"-1",
+//                            @"pageNo":pageString,
+//                            @"pageSize":@"15"
+//                            };
     NSDictionary *param = @{@"searchKey":@"",
                             @"userId":@"-1",
                             @"pageNo":pageString,
                             @"pageSize":@"15"
                             };
-    
     JYHomeNewAPIManager *homeNewsManager = [[JYHomeNewAPIManager alloc] init];
     [homeNewsManager loadDataWithParams:param withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
         NSLog(@"%@",responseObject);
@@ -330,7 +342,7 @@
 -(void)click_deleteButton:(UIButton *)button{
 
     NSDictionary *dict = _dataArray[button.tag];
-    NSDictionary *param = @{@"userId":@"",
+    NSDictionary *param = @{@"userId":_userDict[@"userId"],
                             @"followId":dict[@"id"]
                             };
 
@@ -352,7 +364,7 @@
 #pragma mark - 关注按钮点击
 -(void)click_focusButton:(UIButton *)button{
     NSDictionary *dict = _dataArray[button.tag];
-    NSDictionary *param = @{@"userId":@"",
+    NSDictionary *param = @{@"userId":_userDict[@"userId"],
                             @"followId":dict[@"id"]
                             };
     
@@ -371,7 +383,7 @@
 #pragma mark - 取消关注按钮点击
 -(void)cancle_focusButton:(UIButton *)button{
     NSDictionary *dict = _dataArray[button.tag];
-    NSDictionary *param = @{@"userId":@"",
+    NSDictionary *param = @{@"userId":_userDict[@"userId"],
                             @"followId":dict[@"id"]
                             };
     
