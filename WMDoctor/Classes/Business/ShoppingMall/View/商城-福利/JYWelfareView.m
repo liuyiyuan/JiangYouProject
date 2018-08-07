@@ -89,10 +89,9 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     } else if (indexPath.section == 5){
-        
         JYWelfareListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JYWelfareListCell" forIndexPath:indexPath];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        return cell;
     }
     
     return [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
@@ -110,7 +109,7 @@
     } else if (indexPath.section == 4){
         return 60.f;
     } else if (indexPath.section == 5){
-        return 94.f;
+        return 98.f;
     }
     return 0.1;
 }

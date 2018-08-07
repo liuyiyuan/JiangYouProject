@@ -609,6 +609,9 @@
 		85E4B60F1F2AD502005F6D21 /* WMRCGroupNewsMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E4B60E1F2AD502005F6D21 /* WMRCGroupNewsMessageCell.m */; };
 		85F2F91C2119347D0062A8A1 /* JYWelfareListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85F2F9192119347C0062A8A1 /* JYWelfareListCell.xib */; };
 		85F2F91D2119347D0062A8A1 /* JYWelfareListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F2F91A2119347D0062A8A1 /* JYWelfareListCell.m */; };
+		85F2F92221196D570062A8A1 /* JYStoresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F2F92121196D570062A8A1 /* JYStoresViewController.m */; };
+		85F2F927211972690062A8A1 /* JYStoresActivitesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F2F925211972690062A8A1 /* JYStoresActivitesCell.m */; };
+		85F2F928211972690062A8A1 /* JYStoresActivitesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85F2F926211972690062A8A1 /* JYStoresActivitesCell.xib */; };
 		AD526A0E20E8BC4700D4BF85 /* JYFindPassWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD526A0D20E8BC4700D4BF85 /* JYFindPassWordViewController.m */; };
 		AD526A1120E8BC7300D4BF85 /* JYFindPassWordView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD526A1020E8BC7300D4BF85 /* JYFindPassWordView.m */; };
 		AD526A1520E8C42D00D4BF85 /* UIButton+EWTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = AD526A1420E8C42D00D4BF85 /* UIButton+EWTimer.m */; };
@@ -1857,6 +1860,11 @@
 		85F2F9192119347C0062A8A1 /* JYWelfareListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JYWelfareListCell.xib; sourceTree = "<group>"; };
 		85F2F91A2119347D0062A8A1 /* JYWelfareListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYWelfareListCell.m; sourceTree = "<group>"; };
 		85F2F91B2119347D0062A8A1 /* JYWelfareListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYWelfareListCell.h; sourceTree = "<group>"; };
+		85F2F92021196D570062A8A1 /* JYStoresViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYStoresViewController.h; sourceTree = "<group>"; };
+		85F2F92121196D570062A8A1 /* JYStoresViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYStoresViewController.m; sourceTree = "<group>"; };
+		85F2F924211972690062A8A1 /* JYStoresActivitesCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYStoresActivitesCell.h; sourceTree = "<group>"; };
+		85F2F925211972690062A8A1 /* JYStoresActivitesCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYStoresActivitesCell.m; sourceTree = "<group>"; };
+		85F2F926211972690062A8A1 /* JYStoresActivitesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JYStoresActivitesCell.xib; sourceTree = "<group>"; };
 		9DA11EC04838AD96A5B81976 /* Pods-WMDoctor.prerelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WMDoctor.prerelease.xcconfig"; path = "Pods/Target Support Files/Pods-WMDoctor/Pods-WMDoctor.prerelease.xcconfig"; sourceTree = "<group>"; };
 		A38FA6E6C5C6E86F870A04C5 /* Pods-WMDoctor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WMDoctor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WMDoctor/Pods-WMDoctor.debug.xcconfig"; sourceTree = "<group>"; };
 		AD526A0C20E8BC4700D4BF85 /* JYFindPassWordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYFindPassWordViewController.h; sourceTree = "<group>"; };
@@ -4772,8 +4780,8 @@
 		858836C620E3DEFA00DE928F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				858836C920E3DF5A00DE928F /* JYShoppingMallViewController.h */,
-				858836CA20E3DF5A00DE928F /* JYShoppingMallViewController.m */,
+				85F2F91E21196D250062A8A1 /* 商城首页 */,
+				85F2F91F21196D340062A8A1 /* 商户列表 */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -4781,6 +4789,7 @@
 		858836C720E3DF0500DE928F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				85F2F923211972380062A8A1 /* 商户列表-活动 */,
 				8552811921143289006E4D07 /* 商城-福利 */,
 				8552811121142FFE006E4D07 /* 商城-团购 */,
 				855280FE2113E6FF006E4D07 /* 商城-抢购 */,
@@ -5093,6 +5102,34 @@
 				854180D21FD5390300EA4235 /* WMTodayFirstSpeakAPIManager.m */,
 			);
 			path = "积分明细";
+			sourceTree = "<group>";
+		};
+		85F2F91E21196D250062A8A1 /* 商城首页 */ = {
+			isa = PBXGroup;
+			children = (
+				858836C920E3DF5A00DE928F /* JYShoppingMallViewController.h */,
+				858836CA20E3DF5A00DE928F /* JYShoppingMallViewController.m */,
+			);
+			path = "商城首页";
+			sourceTree = "<group>";
+		};
+		85F2F91F21196D340062A8A1 /* 商户列表 */ = {
+			isa = PBXGroup;
+			children = (
+				85F2F92021196D570062A8A1 /* JYStoresViewController.h */,
+				85F2F92121196D570062A8A1 /* JYStoresViewController.m */,
+			);
+			path = "商户列表";
+			sourceTree = "<group>";
+		};
+		85F2F923211972380062A8A1 /* 商户列表-活动 */ = {
+			isa = PBXGroup;
+			children = (
+				85F2F924211972690062A8A1 /* JYStoresActivitesCell.h */,
+				85F2F925211972690062A8A1 /* JYStoresActivitesCell.m */,
+				85F2F926211972690062A8A1 /* JYStoresActivitesCell.xib */,
+			);
+			path = "商户列表-活动";
 			sourceTree = "<group>";
 		};
 		AD526A1220E8C40400D4BF85 /* Button+EWTime */ = {
@@ -5469,6 +5506,7 @@
 				1D6829301E81268900422732 /* WMRecommendDocCell.xib in Resources */,
 				8562373E1F7E1F8000451954 /* WMDoctorVoiceCell.xib in Resources */,
 				1890BA5D1FC8056A0009339C /* WMPictureSelectViewCell.xib in Resources */,
+				85F2F928211972690062A8A1 /* JYStoresActivitesCell.xib in Resources */,
 				0CEB2EB61E0CF81E0070119A /* WMCricleMainCell.xib in Resources */,
 				855280F42112EB47006E4D07 /* JYSCCGoodsCell.xib in Resources */,
 				18777AA01E266831000957D6 /* UMSocialSDKResources.bundle in Resources */,
@@ -5817,6 +5855,7 @@
 				AD93FE7E20DDDC8100C8EF83 /* JYHomeViewController.m in Sources */,
 				CC7E089821194F95007B14C6 /* UIViewController+ZJScrollPageController.m in Sources */,
 				0C40048F1E026D79003E1FC4 /* WMDevice.m in Sources */,
+				85F2F92221196D570062A8A1 /* JYStoresViewController.m in Sources */,
 				186E786A2023FECB0058743A /* WMSixFunctionView.m in Sources */,
 				AD93FEB120DDE34B00C8EF83 /* WYButtonChooseView.m in Sources */,
 				1818DE751E811F73009767A2 /* WMSelectorTableViewController.m in Sources */,
@@ -6115,6 +6154,7 @@
 				18C937292072509300A3453E /* WMGroupInfoRemindCell.m in Sources */,
 				181C6C9B1E88AFC300CD0119 /* WMDoctorInformationCustomModel.m in Sources */,
 				1890BA4C1FC66E870009339C /* WMQuestionDetailTopCell.m in Sources */,
+				85F2F927211972690062A8A1 /* JYStoresActivitesCell.m in Sources */,
 				0CAF8F121E0CC7700092E6A8 /* TextLimit.m in Sources */,
 				18237EE21EA778B300C30F51 /* WMServiceDescriptionCell.m in Sources */,
 				1829FAE81FF48784006815E2 /* WMQuestionExpiredAPIManager.m in Sources */,

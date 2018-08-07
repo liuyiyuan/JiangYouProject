@@ -8,6 +8,9 @@
 
 #import "JYStoreModuleCell.h"
 #import "WMHomeModuleView.h"
+#import "JYStoresViewController.h"
+#import "WMTabBarController.h"
+#import "WMNavgationController.h"
 
 
 @interface JYStoreModuleCell()<WMHomeModuleDelegate>
@@ -56,6 +59,10 @@
 //WMHomeModuleDelegate
 - (void)goModuleWith:(HomeAppModel *)appModel{
     
+    WMTabBarController * tabBarController = (WMTabBarController *)self.window.rootViewController;
+    WMNavgationController * navController = (WMNavgationController*)tabBarController.viewControllers[tabBarController.selectedIndex];
+    JYStoresViewController *storesViewController = [[JYStoresViewController alloc] init];
+    [navController pushViewController:storesViewController animated:YES];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
