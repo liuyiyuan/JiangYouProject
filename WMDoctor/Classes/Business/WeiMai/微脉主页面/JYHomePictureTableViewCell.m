@@ -26,7 +26,7 @@
     [self.contentView addSubview:self.commentsButton];
     [self.contentView addSubview:self.starButton];
     [self.contentView addSubview:self.shareButton];
-    
+    [self.contentView addSubview:self.lineView];
     
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.contentView.mas_top).offset(pixelValue(30));
@@ -45,7 +45,6 @@
         make.left.mas_equalTo(pixelValue(0));
         make.width.mas_equalTo(UI_SCREEN_WIDTH / 5);
         make.height.mas_equalTo(pixelValue(60));
-        make.bottom.mas_equalTo(self.contentView.mas_bottom);
     }];
     
     [self.unLikeButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -76,6 +75,14 @@
         make.left.mas_equalTo(self.starButton.mas_right);
     }];
 
+    
+    [self.lineView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.starButton.mas_bottom).offset(pixelValue(10));
+        make.left.mas_equalTo(pixelValue(0));
+        make.right.mas_equalTo(pixelValue(0));
+        make.height.mas_equalTo(pixelValue(1));
+        make.bottom.mas_equalTo(self.contentView.mas_bottom);
+    }];
 }
 //标题
 -(UILabel *)titleLabel{
@@ -133,5 +140,13 @@
         [_shareButton setImage:[UIImage imageNamed:@"picture_share"] forState:UIControlStateNormal];
     }
     return _shareButton;
+}
+
+-(UIView *)lineView{
+    if(!_lineView){
+        _lineView = [[UIView alloc]init];
+        _lineView.backgroundColor = [UIColor colorWithHexString:@"#DCDCDC"];
+    }
+    return _lineView;
 }
 @end

@@ -38,5 +38,6 @@
 
 @property(nonatomic,strong)UIButton *likedButton;//赞
 
+@property (nonatomic, strong) UIView *lineView;
 
 @end

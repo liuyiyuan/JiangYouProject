@@ -24,4 +24,6 @@
 
 @property (nonatomic, strong) UIButton *shareButton;//分享按钮
 
+@property (nonatomic, strong) UIView *lineView;//线
+
 @end

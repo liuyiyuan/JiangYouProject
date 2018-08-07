@@ -33,7 +33,7 @@
     [self.contentView addSubview:self.forwardingButton];
     [self.contentView addSubview:self.commentsButton];
     [self.contentView addSubview:self.likedButton];
-    
+    [self.contentView addSubview:self.lineView];
     
     [self.headerImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.contentView.mas_top).offset(pixelValue(30));
@@ -107,7 +107,7 @@
     [self.forwardingButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.addressButton.mas_bottom).offset(pixelValue(20));
         make.left.mas_equalTo(self.contentView.mas_left);
-        make.bottom.mas_equalTo(self.contentView.mas_bottom);
+        make.bottom.mas_equalTo(self.contentView.mas_bottom).offset(-pixelValue(2));
         make.width.mas_equalTo(UI_SCREEN_WIDTH / 3);
         make.height.mas_equalTo(pixelValue(60));
     }];
@@ -129,7 +129,12 @@
     }];
     
     
-    
+    [self.lineView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.mas_equalTo(self.contentView.mas_bottom);
+        make.height.mas_equalTo(pixelValue(1));
+        make.left.mas_equalTo(pixelValue(0));
+        make.right.mas_equalTo(pixelValue(0));
+    }];
     
     
     
@@ -261,4 +266,12 @@
     return _likedButton;
 }
 
+
+-(UIView *)lineView{
+    if(!_lineView){
+        _lineView = [[UIView alloc]init];
+        _lineView.backgroundColor = [UIColor colorWithHexString:@"#DCDCDC"];
+    }
+    return _lineView;
+}
 @end
