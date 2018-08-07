@@ -9,6 +9,7 @@
 #import "JYStoresViewController.h"
 #import "JYStoreModuleCell.h"
 #import "JYStoresActivitesCell.h"
+#import "JYSCCGoodsCell.h"
 
 @interface JYStoresViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -40,7 +41,7 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 2;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -48,6 +49,8 @@
         return 1;
     } else if (section == 1){
         return 1;
+    } else if (section == 2){
+        return 5;
     }
     return 1;
 }
@@ -58,7 +61,12 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     } else if (indexPath.section == 1){
-        JYStoreModuleCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JYStoreModuleCell" forIndexPath:indexPath];
+        JYStoresActivitesCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JYStoresActivitesCell" forIndexPath:indexPath];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        return cell;
+    } else if (indexPath.section == 2){
+        JYSCCGoodsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JYSCCGoodsCell" forIndexPath:indexPath];
+//        [cell setValueWithGoodsModel:goods];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     }
@@ -68,16 +76,37 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
         return 80.f;
+    } else if (indexPath.section == 1){
+        return 253.f;
+    } else if (indexPath.section == 2){
+        return 260.f;
     }
     return 0.1;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     if (section == 1) {
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 44)];
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 44)];
+        
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, kScreenWidth, 44)];
         label.text = @"活动精彩";
         label.font = [UIFont systemFontOfSize:15];
-        return label;
+        [view addSubview:label];
+        return view;
+    } else if (section == 2){
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 44)];
+        
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, 65, 44)];
+        label.text = @"便利生活";
+        label.font = [UIFont systemFontOfSize:15];
+        [view addSubview:label];
+        
+        UILabel *characterLabel = [[UILabel alloc] initWithFrame:CGRectMake(label.right + 6, 0, 45, 10)];
+        characterLabel.text = @"品质美味";
+        characterLabel.font = [UIFont systemFontOfSize:10];
+        characterLabel.textColor = [UIColor colorWithHexString:@"#7E7D7D"];
+        [view addSubview:characterLabel];
+        return view;
     }
     
     return [[UIView alloc] init];
