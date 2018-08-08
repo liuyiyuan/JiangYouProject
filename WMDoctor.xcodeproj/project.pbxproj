@@ -612,11 +612,6 @@
 		85F2F92221196D570062A8A1 /* JYStoresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F2F92121196D570062A8A1 /* JYStoresViewController.m */; };
 		85F2F927211972690062A8A1 /* JYStoresActivitesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F2F925211972690062A8A1 /* JYStoresActivitesCell.m */; };
 		85F2F928211972690062A8A1 /* JYStoresActivitesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85F2F926211972690062A8A1 /* JYStoresActivitesCell.xib */; };
-
-		AD0E11532119ED9500C3E98B /* JYHomeBeautyPictureHotManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E11522119ED9500C3E98B /* JYHomeBeautyPictureHotManager.m */; };
-		AD0E11562119F01B00C3E98B /* JYHomeBeautyPictureHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E11552119F01B00C3E98B /* JYHomeBeautyPictureHeaderView.m */; };
-		AD0E11592119F1E900C3E98B /* JYHomeBeautyPictureHeaderCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E11582119F1E900C3E98B /* JYHomeBeautyPictureHeaderCollectionViewCell.m */; };
-
 		85F2F92C2119ED390062A8A1 /* JYStoreDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F2F92B2119ED390062A8A1 /* JYStoreDetailViewController.m */; };
 		85F2F9312119EDE00062A8A1 /* JYStoreInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F2F92F2119EDE00062A8A1 /* JYStoreInfoCell.m */; };
 		85F2F9322119EDE00062A8A1 /* JYStoreInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85F2F9302119EDE00062A8A1 /* JYStoreInfoCell.xib */; };
@@ -626,7 +621,15 @@
 		85F2F93C2119F8A50062A8A1 /* JYStoreCouponCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85F2F93A2119F8A50062A8A1 /* JYStoreCouponCell.xib */; };
 		85F2F9402119FBF40062A8A1 /* JYSetMealCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F2F93E2119FBF40062A8A1 /* JYSetMealCell.m */; };
 		85F2F9412119FBF40062A8A1 /* JYSetMealCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85F2F93F2119FBF40062A8A1 /* JYSetMealCell.xib */; };
-
+		85F2F94A211B36FC0062A8A1 /* JYRedpacketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F2F949211B36FC0062A8A1 /* JYRedpacketViewController.m */; };
+		85F2F94F211B37BD0062A8A1 /* JYRedpacketBGCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F2F94D211B37BD0062A8A1 /* JYRedpacketBGCell.m */; };
+		85F2F950211B37BD0062A8A1 /* JYRedpacketBGCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85F2F94E211B37BD0062A8A1 /* JYRedpacketBGCell.xib */; };
+		85F2F954211B3B050062A8A1 /* JYRedpacketItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F2F952211B3B050062A8A1 /* JYRedpacketItemCell.m */; };
+		85F2F955211B3B050062A8A1 /* JYRedpacketItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85F2F953211B3B050062A8A1 /* JYRedpacketItemCell.xib */; };
+		85F2F959211B3D900062A8A1 /* JYRedpacketItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F2F958211B3D900062A8A1 /* JYRedpacketItemViewController.m */; };
+		AD0E11532119ED9500C3E98B /* JYHomeBeautyPictureHotManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E11522119ED9500C3E98B /* JYHomeBeautyPictureHotManager.m */; };
+		AD0E11562119F01B00C3E98B /* JYHomeBeautyPictureHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E11552119F01B00C3E98B /* JYHomeBeautyPictureHeaderView.m */; };
+		AD0E11592119F1E900C3E98B /* JYHomeBeautyPictureHeaderCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E11582119F1E900C3E98B /* JYHomeBeautyPictureHeaderCollectionViewCell.m */; };
 		AD526A0E20E8BC4700D4BF85 /* JYFindPassWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD526A0D20E8BC4700D4BF85 /* JYFindPassWordViewController.m */; };
 		AD526A1120E8BC7300D4BF85 /* JYFindPassWordView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD526A1020E8BC7300D4BF85 /* JYFindPassWordView.m */; };
 		AD526A1520E8C42D00D4BF85 /* UIButton+EWTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = AD526A1420E8C42D00D4BF85 /* UIButton+EWTimer.m */; };
@@ -1894,6 +1897,16 @@
 		85F2F93D2119FBF40062A8A1 /* JYSetMealCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYSetMealCell.h; sourceTree = "<group>"; };
 		85F2F93E2119FBF40062A8A1 /* JYSetMealCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYSetMealCell.m; sourceTree = "<group>"; };
 		85F2F93F2119FBF40062A8A1 /* JYSetMealCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JYSetMealCell.xib; sourceTree = "<group>"; };
+		85F2F948211B36FC0062A8A1 /* JYRedpacketViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYRedpacketViewController.h; sourceTree = "<group>"; };
+		85F2F949211B36FC0062A8A1 /* JYRedpacketViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYRedpacketViewController.m; sourceTree = "<group>"; };
+		85F2F94C211B37BD0062A8A1 /* JYRedpacketBGCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYRedpacketBGCell.h; sourceTree = "<group>"; };
+		85F2F94D211B37BD0062A8A1 /* JYRedpacketBGCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYRedpacketBGCell.m; sourceTree = "<group>"; };
+		85F2F94E211B37BD0062A8A1 /* JYRedpacketBGCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JYRedpacketBGCell.xib; sourceTree = "<group>"; };
+		85F2F951211B3B050062A8A1 /* JYRedpacketItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYRedpacketItemCell.h; sourceTree = "<group>"; };
+		85F2F952211B3B050062A8A1 /* JYRedpacketItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYRedpacketItemCell.m; sourceTree = "<group>"; };
+		85F2F953211B3B050062A8A1 /* JYRedpacketItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JYRedpacketItemCell.xib; sourceTree = "<group>"; };
+		85F2F957211B3D900062A8A1 /* JYRedpacketItemViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYRedpacketItemViewController.h; sourceTree = "<group>"; };
+		85F2F958211B3D900062A8A1 /* JYRedpacketItemViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYRedpacketItemViewController.m; sourceTree = "<group>"; };
 		9DA11EC04838AD96A5B81976 /* Pods-WMDoctor.prerelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WMDoctor.prerelease.xcconfig"; path = "Pods/Target Support Files/Pods-WMDoctor/Pods-WMDoctor.prerelease.xcconfig"; sourceTree = "<group>"; };
 		A38FA6E6C5C6E86F870A04C5 /* Pods-WMDoctor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WMDoctor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WMDoctor/Pods-WMDoctor.debug.xcconfig"; sourceTree = "<group>"; };
 		AD0E11512119ED9500C3E98B /* JYHomeBeautyPictureHotManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYHomeBeautyPictureHotManager.h; sourceTree = "<group>"; };
@@ -4822,6 +4835,8 @@
 				85F2F91E21196D250062A8A1 /* 商城首页 */,
 				85F2F91F21196D340062A8A1 /* 商户列表 */,
 				85F2F9292119ED0D0062A8A1 /* 商户详情 */,
+				85F2F947211B36C20062A8A1 /* 商城-领红包 */,
+				85F2F956211B3D600062A8A1 /* 商城-红包分类 */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -4829,12 +4844,13 @@
 		858836C720E3DF0500DE928F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				85F2F92D2119EDA90062A8A1 /* 商户详情-店铺信息 */,
-				85F2F923211972380062A8A1 /* 商户列表-活动 */,
-				8552811921143289006E4D07 /* 商城-福利 */,
-				8552811121142FFE006E4D07 /* 商城-团购 */,
-				855280FE2113E6FF006E4D07 /* 商城-抢购 */,
 				858104E92112B0E200532B4D /* 商城-精选 */,
+				855280FE2113E6FF006E4D07 /* 商城-抢购 */,
+				8552811121142FFE006E4D07 /* 商城-团购 */,
+				8552811921143289006E4D07 /* 商城-福利 */,
+				85F2F923211972380062A8A1 /* 商户列表-活动 */,
+				85F2F92D2119EDA90062A8A1 /* 商户详情-店铺信息 */,
+				85F2F94B211B37050062A8A1 /* 商城-领红包 */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -5201,6 +5217,37 @@
 			path = "商户详情-店铺信息";
 			sourceTree = "<group>";
 		};
+		85F2F947211B36C20062A8A1 /* 商城-领红包 */ = {
+			isa = PBXGroup;
+			children = (
+				85F2F948211B36FC0062A8A1 /* JYRedpacketViewController.h */,
+				85F2F949211B36FC0062A8A1 /* JYRedpacketViewController.m */,
+			);
+			path = "商城-领红包";
+			sourceTree = "<group>";
+		};
+		85F2F94B211B37050062A8A1 /* 商城-领红包 */ = {
+			isa = PBXGroup;
+			children = (
+				85F2F94C211B37BD0062A8A1 /* JYRedpacketBGCell.h */,
+				85F2F94D211B37BD0062A8A1 /* JYRedpacketBGCell.m */,
+				85F2F94E211B37BD0062A8A1 /* JYRedpacketBGCell.xib */,
+				85F2F951211B3B050062A8A1 /* JYRedpacketItemCell.h */,
+				85F2F952211B3B050062A8A1 /* JYRedpacketItemCell.m */,
+				85F2F953211B3B050062A8A1 /* JYRedpacketItemCell.xib */,
+			);
+			path = "商城-领红包";
+			sourceTree = "<group>";
+		};
+		85F2F956211B3D600062A8A1 /* 商城-红包分类 */ = {
+			isa = PBXGroup;
+			children = (
+				85F2F957211B3D900062A8A1 /* JYRedpacketItemViewController.h */,
+				85F2F958211B3D900062A8A1 /* JYRedpacketItemViewController.m */,
+			);
+			path = "商城-红包分类";
+			sourceTree = "<group>";
+		};
 		AD526A1220E8C40400D4BF85 /* Button+EWTime */ = {
 			isa = PBXGroup;
 			children = (
@@ -5533,6 +5580,7 @@
 				1890BA761FC805D00009339C /* WMLeadPictureViewCell.xib in Resources */,
 				0CAF8EEF1E08CF0B0092E6A8 /* Me.storyboard in Resources */,
 				0CD6E2D01DFFF60300E75DB5 /* Localizable.strings in Resources */,
+				85F2F950211B37BD0062A8A1 /* JYRedpacketBGCell.xib in Resources */,
 				1890BA671FC8059B0009339C /* WMIMFirstCollectionViewCell.xib in Resources */,
 				855281092113E8E6006E4D07 /* JYPanicBuyCell.xib in Resources */,
 				18C9372A2072509300A3453E /* WMGroupInfoRemindCell.xib in Resources */,
@@ -5552,6 +5600,7 @@
 				0C9817F51DFFBC070016AD20 /* Main.storyboard in Resources */,
 				0CAF8F501E0CEEFE0092E6A8 /* WMShowImageCollectionViewCell.xib in Resources */,
 				18777A991E266831000957D6 /* WeiboSDK.bundle in Resources */,
+				85F2F955211B3B050062A8A1 /* JYRedpacketItemCell.xib in Resources */,
 				853D5D1621189292001DE70A /* JYSearchCell.xib in Resources */,
 				1D3816671ECACF4900562FCA /* WMCertificationPictureCell.xib in Resources */,
 				18777A9D1E266831000957D6 /* README.txt in Resources */,
@@ -5772,6 +5821,7 @@
 				186AF3141ED6AE7000F699C6 /* WMGetStatusLoadingAPIManager.m in Sources */,
 				18237ED61EA75A9800C30F51 /* WMGetServicePriceAPIManager.m in Sources */,
 				18237ED91EA76ACD00C30F51 /* WMOpenServiceCell.m in Sources */,
+				85F2F954211B3B050062A8A1 /* JYRedpacketItemCell.m in Sources */,
 				850142A21F3C04FD000BA97F /* WMPatientDataHeaderView.m in Sources */,
 				AD93FE9620DDDF6400C8EF83 /* WYBaseNewsCell.m in Sources */,
 				0CAF8F321E0CED5D0092E6A8 /* WMTradeMessageViewController.m in Sources */,
@@ -5853,6 +5903,7 @@
 				0CEB2EDD1E0CFE6A0070119A /* WMSettingTableViewController.m in Sources */,
 				0CAF8F2F1E0CED5D0092E6A8 /* WMNotificationMessageViewController.m in Sources */,
 				1D38168E1ECC73AA00562FCA /* WMCertificationSucViewController.m in Sources */,
+				85F2F94F211B37BD0062A8A1 /* JYRedpacketBGCell.m in Sources */,
 				CCA4FC6F20E33A77000A783A /* JYPersonalInformationHeaderView.m in Sources */,
 				0CAF8F3B1E0CEDBE0092E6A8 /* WMServiceViewController.m in Sources */,
 				18237EDC1EA76E1500C30F51 /* WMServiceTitleCell.m in Sources */,
@@ -6110,6 +6161,7 @@
 				1890BA5C1FC8056A0009339C /* WMPictureSelectViewCell.m in Sources */,
 				18F5B6981E150A8E0051C60E /* WMPublicPageParamModel.m in Sources */,
 				CC7E087B21193318007B14C6 /* JYHomePictureTableViewCell.m in Sources */,
+				85F2F959211B3D900062A8A1 /* JYRedpacketItemViewController.m in Sources */,
 				18237EDF1EA7767E00C30F51 /* WMServiceCustomPriceCell.m in Sources */,
 				18328A681F150B0D00F87E01 /* WMCostomAdviceModel.m in Sources */,
 				18328A521F15014C00F87E01 /* LKCResultFormVC.m in Sources */,
@@ -6260,6 +6312,7 @@
 				CC2B24ED20EDF3840050D5B2 /* JYFirstLogInView.m in Sources */,
 				85752CB22020089700E9E34D /* WMNoCounselingView.m in Sources */,
 				1D3B764B1E14DAE80035EE65 /* WMMessageListAPIManager.m in Sources */,
+				85F2F94A211B36FC0062A8A1 /* JYRedpacketViewController.m in Sources */,
 				1D3B764E1E14DB8E0035EE65 /* WMMessageLisParamModel.m in Sources */,
 				1DA7E5081E5C6F6800CDBEC5 /* WMAllPatienAcceptCell.m in Sources */,
 				18999EC9202050CA0090C893 /* WMIndexDataModel.m in Sources */,

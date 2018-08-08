@@ -1,24 +1,22 @@
 //
-//  JYStoreDetailViewController.m
+//  JYRedpacketViewController.m
 //  WMDoctor
 //
-//  Created by xugq on 2018/8/7.
+//  Created by xugq on 2018/8/8.
 //  Copyright © 2018年 Choice. All rights reserved.
 //
 
-#import "JYStoreDetailViewController.h"
-#import "JYStoreInfoCell.h"
-#import "JYStoreStatusCell.h"
-#import "JYStoreCouponCell.h"
-#import "JYSetMealCell.h"
+#import "JYRedpacketViewController.h"
+#import "JYRedpacketBGCell.h"
+#import "JYRedpacketItemCell.h"
 
-@interface JYStoreDetailViewController ()<UITableViewDataSource, UITableViewDelegate>
+@interface JYRedpacketViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property(nonatomic, strong)UITableView *tableView;
 
 @end
 
-@implementation JYStoreDetailViewController
+@implementation JYRedpacketViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -35,23 +33,23 @@
     self.tableView.dataSource = self;
     self.tableView.showsVerticalScrollIndicator = NO;
     self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
-    [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([JYStoreInfoCell class]) bundle:nil] forCellReuseIdentifier:@"JYStoreInfoCell"];
-    [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([JYStoreStatusCell class]) bundle:nil] forCellReuseIdentifier:@"JYStoreStatusCell"];
-    [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([JYStoreCouponCell class]) bundle:nil] forCellReuseIdentifier:@"JYStoreCouponCell"];
-    [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([JYSetMealCell class]) bundle:nil] forCellReuseIdentifier:@"JYSetMealCell"];
+    [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([JYRedpacketBGCell class]) bundle:nil] forCellReuseIdentifier:@"JYRedpacketBGCell"];
+    [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([JYRedpacketItemCell class]) bundle:nil] forCellReuseIdentifier:@"JYRedpacketItemCell"];
+//    [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([JYStoreCouponCell class]) bundle:nil] forCellReuseIdentifier:@"JYStoreCouponCell"];
+//    [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([JYSetMealCell class]) bundle:nil] forCellReuseIdentifier:@"JYSetMealCell"];
     [self.view addSubview:self.tableView];
     
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 4;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if (section == 0) {
         return 1;
     } else if (section == 1){
-        return 1;
+        return 5;
     } else if (section == 2){
         return 1;
     } else if (section == 3){
@@ -62,22 +60,24 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
-        JYStoreInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JYStoreInfoCell" forIndexPath:indexPath];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        return cell;
-    } else if (indexPath.section == 1){
-        JYStoreStatusCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JYStoreStatusCell" forIndexPath:indexPath];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        return cell;
-    } else if (indexPath.section == 2){
-        JYStoreCouponCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JYStoreCouponCell" forIndexPath:indexPath];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        return cell;
-    } else if (indexPath.section == 3){
-        JYSetMealCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JYSetMealCell" forIndexPath:indexPath];
+        JYRedpacketBGCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JYRedpacketBGCell" forIndexPath:indexPath];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     }
+    else if (indexPath.section == 1){
+        JYRedpacketItemCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JYRedpacketItemCell" forIndexPath:indexPath];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        return cell;
+    }
+//    else if (indexPath.section == 2){
+//        JYStoreCouponCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JYStoreCouponCell" forIndexPath:indexPath];
+//        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+//        return cell;
+//    } else if (indexPath.section == 3){
+//        JYSetMealCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JYSetMealCell" forIndexPath:indexPath];
+//        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+//        return cell;
+//    }
     
     
     return [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
@@ -85,9 +85,9 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
-        return 154.f;
+        return 566.f;
     } else if (indexPath.section == 1){
-        return 73.f;
+        return 156.f;
     } else if (indexPath.section == 2){
         return 91.f;
     } else if (indexPath.section == 3){
@@ -111,7 +111,6 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     return 0.1;
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
