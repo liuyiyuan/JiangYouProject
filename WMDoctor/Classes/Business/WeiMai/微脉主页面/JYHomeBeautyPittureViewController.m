@@ -20,6 +20,7 @@
 @implementation JYHomeBeautyPittureViewController
 {
     NSInteger _page;
+    
 }
 -(NSMutableArray *)dataArray{
     if(!_dataArray){
@@ -39,6 +40,8 @@
     [self.view addSubview:self.tableView];
 }
 
+
+#pragma mark - UITableViewDelegate
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.dataArray.count;
 }

@@ -15,8 +15,9 @@
 #import "WYTopic.h"
 #import "JYHomeNewAPIManager.h"
 #import "ZJScrollPageView.h"
-#import "JYNewsViewController.h"
-#import "JYHomeBeautyPittureViewController.h"
+#import "JYNewsViewController.h"//关注
+#import "JYHomeBeautyPittureViewController.h"//美图
+#import "JYHomeVideoViewController.h"//视频
 @interface JYHomeViewController () <ZJScrollPageViewDelegate>
 
 @property(strong, nonatomic)NSArray<NSString *> *titles;
@@ -81,9 +82,12 @@
     
     if (!childVc) {
         if(index == 0){
-            childVc = [[JYNewsViewController alloc] init];
+            childVc = [[JYNewsViewController alloc] init];//关注
+        }else if(index == 1){
+            childVc = [[JYHomeBeautyPittureViewController alloc] init];//美图
         }else{
-            childVc = [[JYHomeBeautyPittureViewController alloc] init];
+            childVc = [[JYHomeVideoViewController alloc] init];//视频
+            
         }
         
     }

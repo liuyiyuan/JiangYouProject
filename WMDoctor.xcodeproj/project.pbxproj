@@ -615,6 +615,10 @@
 		AD0E11532119ED9500C3E98B /* JYHomeBeautyPictureHotManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E11522119ED9500C3E98B /* JYHomeBeautyPictureHotManager.m */; };
 		AD0E11562119F01B00C3E98B /* JYHomeBeautyPictureHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E11552119F01B00C3E98B /* JYHomeBeautyPictureHeaderView.m */; };
 		AD0E11592119F1E900C3E98B /* JYHomeBeautyPictureHeaderCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E11582119F1E900C3E98B /* JYHomeBeautyPictureHeaderCollectionViewCell.m */; };
+		AD0E1169211B25C000C3E98B /* JYHomeVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E1168211B25C000C3E98B /* JYHomeVideoViewController.m */; };
+		AD0E116C211B275100C3E98B /* JYHomeVideoHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E116B211B275100C3E98B /* JYHomeVideoHeaderView.m */; };
+		AD0E116F211B296600C3E98B /* JYHomeVideoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E116E211B296600C3E98B /* JYHomeVideoManager.m */; };
+		AD0E1172211B2A6500C3E98B /* JYHomeVideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E1171211B2A6500C3E98B /* JYHomeVideoTableViewCell.m */; };
 		AD526A0E20E8BC4700D4BF85 /* JYFindPassWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD526A0D20E8BC4700D4BF85 /* JYFindPassWordViewController.m */; };
 		AD526A1120E8BC7300D4BF85 /* JYFindPassWordView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD526A1020E8BC7300D4BF85 /* JYFindPassWordView.m */; };
 		AD526A1520E8C42D00D4BF85 /* UIButton+EWTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = AD526A1420E8C42D00D4BF85 /* UIButton+EWTimer.m */; };
@@ -1876,6 +1880,14 @@
 		AD0E11552119F01B00C3E98B /* JYHomeBeautyPictureHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYHomeBeautyPictureHeaderView.m; sourceTree = "<group>"; };
 		AD0E11572119F1E900C3E98B /* JYHomeBeautyPictureHeaderCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYHomeBeautyPictureHeaderCollectionViewCell.h; sourceTree = "<group>"; };
 		AD0E11582119F1E900C3E98B /* JYHomeBeautyPictureHeaderCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYHomeBeautyPictureHeaderCollectionViewCell.m; sourceTree = "<group>"; };
+		AD0E1167211B25C000C3E98B /* JYHomeVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYHomeVideoViewController.h; sourceTree = "<group>"; };
+		AD0E1168211B25C000C3E98B /* JYHomeVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYHomeVideoViewController.m; sourceTree = "<group>"; };
+		AD0E116A211B275100C3E98B /* JYHomeVideoHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYHomeVideoHeaderView.h; sourceTree = "<group>"; };
+		AD0E116B211B275100C3E98B /* JYHomeVideoHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYHomeVideoHeaderView.m; sourceTree = "<group>"; };
+		AD0E116D211B296600C3E98B /* JYHomeVideoManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYHomeVideoManager.h; sourceTree = "<group>"; };
+		AD0E116E211B296600C3E98B /* JYHomeVideoManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYHomeVideoManager.m; sourceTree = "<group>"; };
+		AD0E1170211B2A6500C3E98B /* JYHomeVideoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYHomeVideoTableViewCell.h; sourceTree = "<group>"; };
+		AD0E1171211B2A6500C3E98B /* JYHomeVideoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYHomeVideoTableViewCell.m; sourceTree = "<group>"; };
 		AD526A0C20E8BC4700D4BF85 /* JYFindPassWordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYFindPassWordViewController.h; sourceTree = "<group>"; };
 		AD526A0D20E8BC4700D4BF85 /* JYFindPassWordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYFindPassWordViewController.m; sourceTree = "<group>"; };
 		AD526A0F20E8BC7300D4BF85 /* JYFindPassWordView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYFindPassWordView.h; sourceTree = "<group>"; };
@@ -2496,6 +2508,10 @@
 				AD0E11552119F01B00C3E98B /* JYHomeBeautyPictureHeaderView.m */,
 				AD0E11572119F1E900C3E98B /* JYHomeBeautyPictureHeaderCollectionViewCell.h */,
 				AD0E11582119F1E900C3E98B /* JYHomeBeautyPictureHeaderCollectionViewCell.m */,
+				AD0E116A211B275100C3E98B /* JYHomeVideoHeaderView.h */,
+				AD0E116B211B275100C3E98B /* JYHomeVideoHeaderView.m */,
+				AD0E1170211B2A6500C3E98B /* JYHomeVideoTableViewCell.h */,
+				AD0E1171211B2A6500C3E98B /* JYHomeVideoTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -2527,6 +2543,8 @@
 				CC7E089A211968D5007B14C6 /* JYNewsViewController.m */,
 				CCF8608A2119762500C4957E /* JYHomeBeautyPittureViewController.h */,
 				CCF8608B2119762500C4957E /* JYHomeBeautyPittureViewController.m */,
+				AD0E1167211B25C000C3E98B /* JYHomeVideoViewController.h */,
+				AD0E1168211B25C000C3E98B /* JYHomeVideoViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -5180,6 +5198,8 @@
 				CC7E087D2119382E007B14C6 /* JYHomeBeautyPictureLIstManager.m */,
 				AD0E11512119ED9500C3E98B /* JYHomeBeautyPictureHotManager.h */,
 				AD0E11522119ED9500C3E98B /* JYHomeBeautyPictureHotManager.m */,
+				AD0E116D211B296600C3E98B /* JYHomeVideoManager.h */,
+				AD0E116E211B296600C3E98B /* JYHomeVideoManager.m */,
 			);
 			name = APIManager;
 			sourceTree = "<group>";
@@ -5642,6 +5662,7 @@
 				183287E21F10CB9D00F87E01 /* WMUNReadReportTableViewCell.m in Sources */,
 				8501428B1F3AB6B0000BA97F /* WMArrayUtil.m in Sources */,
 				856237381F7DF42500451954 /* WMDoctorVoiceModel.m in Sources */,
+				AD0E1172211B2A6500C3E98B /* JYHomeVideoTableViewCell.m in Sources */,
 				1890BA831FCCF2450009339C /* WMQuestionAnswerSendAPIManager.m in Sources */,
 				AD7A0708211711C900D3AAB4 /* JYHomeCancleFocusManager.m in Sources */,
 				181A034E1FDE232F00868821 /* WMMyServiceSetViewController.m in Sources */,
@@ -5904,6 +5925,7 @@
 				8504858F20A531D00070D264 /* WMSearchPatientCell.m in Sources */,
 				183110991FF37E8A002B8DB7 /* QuestionEntity+CoreDataProperties.m in Sources */,
 				18328A1E1F1470F300F87E01 /* LKCHeart.m in Sources */,
+				AD0E116F211B296600C3E98B /* JYHomeVideoManager.m in Sources */,
 				18328A291F1470F300F87E01 /* STKAutoRecoveringHTTPDataSource.m in Sources */,
 				1D6829151E7ABB6700422732 /* WMVIPPatientViewController.m in Sources */,
 				AD93FE8A20DDDEDF00C8EF83 /* WYNewsTableController.m in Sources */,
@@ -5927,6 +5949,7 @@
 				1D3816941ECD39C300562FCA /* WMGetJobModel.m in Sources */,
 				181A035D1FDE4B6900868821 /* WMServicePriceCollectionViewCell.m in Sources */,
 				1D3B76511E14DBAB0035EE65 /* WMMessageListModel.m in Sources */,
+				AD0E1169211B25C000C3E98B /* JYHomeVideoViewController.m in Sources */,
 				1D3816541EC98E8F00562FCA /* WMHospitalChooseViewController.m in Sources */,
 				1D34F8031E9F9E3A00B3D539 /* WMCricleVIPPatientAPIManager.m in Sources */,
 				188F14BC1F2882F60058B4CB /* QuickEntity+CoreDataProperties.m in Sources */,
@@ -5953,6 +5976,7 @@
 				853D5D0E211891C0001DE70A /* JYWelfareView.m in Sources */,
 				85A74BC31F98418400F1453F /* WMDoctorIncomeViewController.m in Sources */,
 				85BF09851FEBA7ED003BB0FC /* WMQuestionsSettingViewController.m in Sources */,
+				AD0E116C211B275100C3E98B /* JYHomeVideoHeaderView.m in Sources */,
 				855280EE2112E06B006E4D07 /* JYSCCHeadlineCell.m in Sources */,
 				85CF6D1F20BD3D3E00FCDD21 /* WMDoctorInformationAPIManager.m in Sources */,
 				854180C61FCBEB7E00EA4235 /* WMMyMicroBeanCell.m in Sources */,
