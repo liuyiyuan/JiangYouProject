@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="82" id="KGk-i7-Jjw" customClass="JYRedpacketItemDetailCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="82"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="81.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redpacketImg" translatesAutoresizingMaskIntoConstraints="NO" id="Fn5-7C-BME">
+                        <rect key="frame" x="7" y="7" width="97" height="63"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="63" id="39F-75-xJ2"/>
+                            <constraint firstAttribute="width" constant="97" id="nbt-Ye-w5a"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lR7-rk-85f">
+                        <rect key="frame" x="243" y="27" width="61" height="28"/>
+                        <color key="backgroundColor" red="0.99607843137254903" green="0.27843137254901962" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="61" id="8UU-Dy-mYD"/>
+                            <constraint firstAttribute="height" constant="28" id="oPd-Pe-G4X"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <state key="normal" title="领取">
+                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="加油更实惠" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZw-R6-dFi">
+                        <rect key="frame" x="114" y="23" width="119" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="e7t-Ly-xvS"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.043137254901960784" green="0.011764705882352941" blue="0.011764705882352941" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="高阳加油会员卡" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1z2-gy-dzr">
+                        <rect key="frame" x="114" y="48" width="119" height="9"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="9" id="2RD-O2-adt"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                        <color key="textColor" red="0.41568627450980389" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nab-DD-F7f">
+                        <rect key="frame" x="0.0" y="76.5" width="320" height="5"/>
+                        <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="5" id="KUG-Px-DLO"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="lR7-rk-85f" firstAttribute="leading" secondItem="1z2-gy-dzr" secondAttribute="trailing" constant="10" id="56x-yI-AyZ"/>
+                    <constraint firstItem="lR7-rk-85f" firstAttribute="leading" secondItem="yZw-R6-dFi" secondAttribute="trailing" constant="10" id="5Od-vp-7L7"/>
+                    <constraint firstAttribute="trailing" secondItem="nab-DD-F7f" secondAttribute="trailing" id="9rB-ZD-A0g"/>
+                    <constraint firstItem="nab-DD-F7f" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="KyW-0e-Jh8"/>
+                    <constraint firstItem="Fn5-7C-BME" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="OBs-AE-0Yh"/>
+                    <constraint firstItem="1z2-gy-dzr" firstAttribute="top" secondItem="yZw-R6-dFi" secondAttribute="bottom" constant="10" id="Pns-RT-cyZ"/>
+                    <constraint firstItem="lR7-rk-85f" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="TOz-ti-w3L"/>
+                    <constraint firstItem="Fn5-7C-BME" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="7" id="WnM-0K-uMB"/>
+                    <constraint firstAttribute="bottom" secondItem="nab-DD-F7f" secondAttribute="bottom" id="aSv-QJ-y1h"/>
+                    <constraint firstItem="1z2-gy-dzr" firstAttribute="leading" secondItem="Fn5-7C-BME" secondAttribute="trailing" constant="10" id="f4P-J8-ZkW"/>
+                    <constraint firstItem="yZw-R6-dFi" firstAttribute="leading" secondItem="Fn5-7C-BME" secondAttribute="trailing" constant="10" id="gNH-W1-r4S"/>
+                    <constraint firstItem="lR7-rk-85f" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="ryq-Di-V1K"/>
+                    <constraint firstItem="yZw-R6-dFi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="12" id="yX2-Jc-OaN"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="19" y="71"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="redpacketImg" width="63" height="41"/>
+    </resources>
+</document>

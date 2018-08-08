@@ -627,6 +627,8 @@
 		85F2F954211B3B050062A8A1 /* JYRedpacketItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F2F952211B3B050062A8A1 /* JYRedpacketItemCell.m */; };
 		85F2F955211B3B050062A8A1 /* JYRedpacketItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85F2F953211B3B050062A8A1 /* JYRedpacketItemCell.xib */; };
 		85F2F959211B3D900062A8A1 /* JYRedpacketItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F2F958211B3D900062A8A1 /* JYRedpacketItemViewController.m */; };
+		85F2F95E211B3E310062A8A1 /* JYRedpacketItemDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F2F95C211B3E310062A8A1 /* JYRedpacketItemDetailCell.m */; };
+		85F2F95F211B3E310062A8A1 /* JYRedpacketItemDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85F2F95D211B3E310062A8A1 /* JYRedpacketItemDetailCell.xib */; };
 		AD0E11532119ED9500C3E98B /* JYHomeBeautyPictureHotManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E11522119ED9500C3E98B /* JYHomeBeautyPictureHotManager.m */; };
 		AD0E11562119F01B00C3E98B /* JYHomeBeautyPictureHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E11552119F01B00C3E98B /* JYHomeBeautyPictureHeaderView.m */; };
 		AD0E11592119F1E900C3E98B /* JYHomeBeautyPictureHeaderCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E11582119F1E900C3E98B /* JYHomeBeautyPictureHeaderCollectionViewCell.m */; };
@@ -1907,6 +1909,9 @@
 		85F2F953211B3B050062A8A1 /* JYRedpacketItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JYRedpacketItemCell.xib; sourceTree = "<group>"; };
 		85F2F957211B3D900062A8A1 /* JYRedpacketItemViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYRedpacketItemViewController.h; sourceTree = "<group>"; };
 		85F2F958211B3D900062A8A1 /* JYRedpacketItemViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYRedpacketItemViewController.m; sourceTree = "<group>"; };
+		85F2F95B211B3E310062A8A1 /* JYRedpacketItemDetailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYRedpacketItemDetailCell.h; sourceTree = "<group>"; };
+		85F2F95C211B3E310062A8A1 /* JYRedpacketItemDetailCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYRedpacketItemDetailCell.m; sourceTree = "<group>"; };
+		85F2F95D211B3E310062A8A1 /* JYRedpacketItemDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JYRedpacketItemDetailCell.xib; sourceTree = "<group>"; };
 		9DA11EC04838AD96A5B81976 /* Pods-WMDoctor.prerelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WMDoctor.prerelease.xcconfig"; path = "Pods/Target Support Files/Pods-WMDoctor/Pods-WMDoctor.prerelease.xcconfig"; sourceTree = "<group>"; };
 		A38FA6E6C5C6E86F870A04C5 /* Pods-WMDoctor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WMDoctor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WMDoctor/Pods-WMDoctor.debug.xcconfig"; sourceTree = "<group>"; };
 		AD0E11512119ED9500C3E98B /* JYHomeBeautyPictureHotManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYHomeBeautyPictureHotManager.h; sourceTree = "<group>"; };
@@ -4851,6 +4856,7 @@
 				85F2F923211972380062A8A1 /* 商户列表-活动 */,
 				85F2F92D2119EDA90062A8A1 /* 商户详情-店铺信息 */,
 				85F2F94B211B37050062A8A1 /* 商城-领红包 */,
+				85F2F95A211B3DF80062A8A1 /* 商城-红包分类 */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -5248,6 +5254,16 @@
 			path = "商城-红包分类";
 			sourceTree = "<group>";
 		};
+		85F2F95A211B3DF80062A8A1 /* 商城-红包分类 */ = {
+			isa = PBXGroup;
+			children = (
+				85F2F95B211B3E310062A8A1 /* JYRedpacketItemDetailCell.h */,
+				85F2F95C211B3E310062A8A1 /* JYRedpacketItemDetailCell.m */,
+				85F2F95D211B3E310062A8A1 /* JYRedpacketItemDetailCell.xib */,
+			);
+			path = "商城-红包分类";
+			sourceTree = "<group>";
+		};
 		AD526A1220E8C40400D4BF85 /* Button+EWTime */ = {
 			isa = PBXGroup;
 			children = (
@@ -5574,6 +5590,7 @@
 				0CD6E2D51DFFF81500E75DB5 /* ConstantConfig.plist in Resources */,
 				8552604D1F4138C500F16618 /* WMGroupMemberViewCell.xib in Resources */,
 				85F2F9372119F5B60062A8A1 /* JYStoreStatusCell.xib in Resources */,
+				85F2F95F211B3E310062A8A1 /* JYRedpacketItemDetailCell.xib in Resources */,
 				0CAF8EED1E08CF010092E6A8 /* Circle.storyboard in Resources */,
 				0CEB2EBA1E0CF81E0070119A /* WMPatientReportedCell.xib in Resources */,
 				85F2F91C2119347D0062A8A1 /* JYWelfareListCell.xib in Resources */,
@@ -6115,6 +6132,7 @@
 				1814F1E51E9CC905005B4260 /* WMEducationSelectViewController.m in Sources */,
 				AD93FEAE20DDE23B00C8EF83 /* WYCategoryButton.m in Sources */,
 				0C9817EC1DFFBC070016AD20 /* main.m in Sources */,
+				85F2F95E211B3E310062A8A1 /* JYRedpacketItemDetailCell.m in Sources */,
 				850142A81F3C0A0A000BA97F /* WMPatientDataCell.m in Sources */,
 				85D2BAD11FC2A00B00C67F98 /* WMQuestionsCell.m in Sources */,
 				854180D71FD6742700EA4235 /* WMOrderCell.m in Sources */,

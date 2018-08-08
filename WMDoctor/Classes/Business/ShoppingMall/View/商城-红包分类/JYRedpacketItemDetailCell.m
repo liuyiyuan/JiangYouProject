@@ -1,19 +1,18 @@
 //
-//  JYRedpacketItemCell.m
+//  JYRedpacketItemDetailCell.m
 //  WMDoctor
 //
 //  Created by xugq on 2018/8/8.
 //  Copyright © 2018年 Choice. All rights reserved.
 //
 
-#import "JYRedpacketItemCell.h"
+#import "JYRedpacketItemDetailCell.h"
 
-@implementation JYRedpacketItemCell
+@implementation JYRedpacketItemDetailCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
-    self.redpacketItemScrollView.userInteractionEnabled = YES;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

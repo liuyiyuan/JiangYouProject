@@ -64,6 +64,9 @@
                     <constraint firstItem="BdY-GA-TuE" firstAttribute="top" secondItem="0vz-jU-imc" secondAttribute="bottom" constant="5" id="yDe-gE-u6U"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="redpacketItemScrollView" destination="BdY-GA-TuE" id="124-Fo-N0K"/>
+            </connections>
             <point key="canvasLocation" x="43" y="131"/>
         </tableViewCell>
     </objects>

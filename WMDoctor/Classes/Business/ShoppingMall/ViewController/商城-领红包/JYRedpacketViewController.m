@@ -9,6 +9,7 @@
 #import "JYRedpacketViewController.h"
 #import "JYRedpacketBGCell.h"
 #import "JYRedpacketItemCell.h"
+#import "JYRedpacketItemViewController.h"
 
 @interface JYRedpacketViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -50,10 +51,6 @@
         return 1;
     } else if (section == 1){
         return 5;
-    } else if (section == 2){
-        return 1;
-    } else if (section == 3){
-        return 3;
     }
     return 1;
 }
@@ -69,16 +66,6 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     }
-//    else if (indexPath.section == 2){
-//        JYStoreCouponCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JYStoreCouponCell" forIndexPath:indexPath];
-//        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-//        return cell;
-//    } else if (indexPath.section == 3){
-//        JYSetMealCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JYSetMealCell" forIndexPath:indexPath];
-//        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-//        return cell;
-//    }
-    
     
     return [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
 }
@@ -88,10 +75,6 @@
         return 566.f;
     } else if (indexPath.section == 1){
         return 156.f;
-    } else if (indexPath.section == 2){
-        return 91.f;
-    } else if (indexPath.section == 3){
-        return 141.f;
     }
     return 0.1;
 }
@@ -110,6 +93,11 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     return 0.1;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    JYRedpacketItemViewController *redpacketItemViewController = [[JYRedpacketItemViewController alloc] init];
+    [self.navigationController pushViewController:redpacketItemViewController animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
