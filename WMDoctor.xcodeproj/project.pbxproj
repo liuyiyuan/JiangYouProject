@@ -612,11 +612,11 @@
 		85F2F92221196D570062A8A1 /* JYStoresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F2F92121196D570062A8A1 /* JYStoresViewController.m */; };
 		85F2F927211972690062A8A1 /* JYStoresActivitesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F2F925211972690062A8A1 /* JYStoresActivitesCell.m */; };
 		85F2F928211972690062A8A1 /* JYStoresActivitesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85F2F926211972690062A8A1 /* JYStoresActivitesCell.xib */; };
-<<<<<<< HEAD
+
 		AD0E11532119ED9500C3E98B /* JYHomeBeautyPictureHotManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E11522119ED9500C3E98B /* JYHomeBeautyPictureHotManager.m */; };
 		AD0E11562119F01B00C3E98B /* JYHomeBeautyPictureHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E11552119F01B00C3E98B /* JYHomeBeautyPictureHeaderView.m */; };
 		AD0E11592119F1E900C3E98B /* JYHomeBeautyPictureHeaderCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E11582119F1E900C3E98B /* JYHomeBeautyPictureHeaderCollectionViewCell.m */; };
-=======
+
 		85F2F92C2119ED390062A8A1 /* JYStoreDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F2F92B2119ED390062A8A1 /* JYStoreDetailViewController.m */; };
 		85F2F9312119EDE00062A8A1 /* JYStoreInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F2F92F2119EDE00062A8A1 /* JYStoreInfoCell.m */; };
 		85F2F9322119EDE00062A8A1 /* JYStoreInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85F2F9302119EDE00062A8A1 /* JYStoreInfoCell.xib */; };
@@ -626,7 +626,7 @@
 		85F2F93C2119F8A50062A8A1 /* JYStoreCouponCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85F2F93A2119F8A50062A8A1 /* JYStoreCouponCell.xib */; };
 		85F2F9402119FBF40062A8A1 /* JYSetMealCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F2F93E2119FBF40062A8A1 /* JYSetMealCell.m */; };
 		85F2F9412119FBF40062A8A1 /* JYSetMealCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85F2F93F2119FBF40062A8A1 /* JYSetMealCell.xib */; };
->>>>>>> 商户详情
+
 		AD526A0E20E8BC4700D4BF85 /* JYFindPassWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD526A0D20E8BC4700D4BF85 /* JYFindPassWordViewController.m */; };
 		AD526A1120E8BC7300D4BF85 /* JYFindPassWordView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD526A1020E8BC7300D4BF85 /* JYFindPassWordView.m */; };
 		AD526A1520E8C42D00D4BF85 /* UIButton+EWTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = AD526A1420E8C42D00D4BF85 /* UIButton+EWTimer.m */; };
