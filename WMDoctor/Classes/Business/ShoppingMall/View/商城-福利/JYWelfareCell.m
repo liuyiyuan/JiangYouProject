@@ -7,6 +7,9 @@
 //
 
 #import "JYWelfareCell.h"
+#import "JYRedpacketViewController.h"
+#import "WMTabBarController.h"
+#import "WMNavgationController.h"
 
 @implementation JYWelfareCell
 
@@ -67,6 +70,10 @@
 
 - (void)redPacketBtnClickAction:(UIButton *)button{
     NSLog(@"redpacket");
+    WMTabBarController * tabBarController = (WMTabBarController *)self.window.rootViewController;
+    WMNavgationController * navController = (WMNavgationController*)tabBarController.viewControllers[tabBarController.selectedIndex];
+    JYRedpacketViewController *redpacketViewController = [[JYRedpacketViewController alloc] init];
+    [navController pushViewController:redpacketViewController animated:YES];
 }
 
 - (void)couponsBtnClickAction:(UIButton *)button{

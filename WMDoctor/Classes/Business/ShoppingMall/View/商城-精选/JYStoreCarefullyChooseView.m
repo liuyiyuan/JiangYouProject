@@ -19,6 +19,9 @@
 #import "JYSCCGoodsCell.h"
 #import "JYSCCGoodsAPIManager.h"
 #import "JYSCCGoodsModel.h"
+#import "JYStoreDetailViewController.h"
+#import "WMTabBarController.h"
+#import "WMNavgationController.h"
 
 @interface JYStoreCarefullyChooseView()<UITableViewDataSource, UITableViewDelegate>{
     UITableView *_tableView;
@@ -143,7 +146,12 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    if (indexPath.section == 3) {
+        WMTabBarController * tabBarController = (WMTabBarController *)self.window.rootViewController;
+        WMNavgationController * navController = (WMNavgationController*)tabBarController.viewControllers[tabBarController.selectedIndex];
+        JYStoreDetailViewController *storeDetailViewController = [[JYStoreDetailViewController alloc] init];
+        [navController pushViewController:storeDetailViewController animated:YES];
+    }
 }
 
 - (void)loadStoreCarefullyChooseBannerRequest{
