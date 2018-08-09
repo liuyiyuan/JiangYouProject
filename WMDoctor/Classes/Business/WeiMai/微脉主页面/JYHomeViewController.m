@@ -18,6 +18,7 @@
 #import "JYNewsViewController.h"//关注
 #import "JYHomeBeautyPittureViewController.h"//美图
 #import "JYHomeVideoViewController.h"//视频
+#import "JYHomeBBSViewController.h"//论坛
 @interface JYHomeViewController () <ZJScrollPageViewDelegate>
 
 @property(strong, nonatomic)NSArray<NSString *> *titles;
@@ -85,6 +86,8 @@
             childVc = [[JYNewsViewController alloc] init];//关注
         }else if(index == 1){
             childVc = [[JYHomeBeautyPittureViewController alloc] init];//美图
+        }else if(index == 2){
+            childVc = [[JYHomeBBSViewController alloc] init];//视频
         }else{
             childVc = [[JYHomeVideoViewController alloc] init];//视频
             
