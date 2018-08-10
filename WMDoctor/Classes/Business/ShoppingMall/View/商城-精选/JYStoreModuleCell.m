@@ -65,6 +65,10 @@
     [navController pushViewController:storesViewController animated:YES];
 }
 
+- (void)clickModule:(NSInteger)index{
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"JYStoreModuleClickPanicBuy" object:nil];
+}
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 

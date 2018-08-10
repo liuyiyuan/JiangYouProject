@@ -53,6 +53,12 @@
 
 - (void)initData{
     self.dataSource = [NSMutableArray array];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(JYStoreModuleNoti) name:@"JYStoreModuleClickPanicBuy" object:nil];
+}
+
+- (void)JYStoreModuleNoti{
+    NSLog(@"1");
+    [self.scrollView setContentOffset:CGPointMake(kScreenWidth, 0) animated:YES];
 }
 
 - (void)setupView{

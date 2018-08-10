@@ -229,9 +229,8 @@
 
 - (void)clickButton:(UIButton *)button{
     
-    HomeAppModel *model = _modelArray[button.tag];
-    if (_delegate && [_delegate respondsToSelector:@selector(goModuleWith:)]) {
-        [self.delegate goModuleWith:model];
+    if (_delegate && [_delegate respondsToSelector:@selector(clickModule:)]) {
+        [self.delegate clickModule:button.tag];
     }
 }
 

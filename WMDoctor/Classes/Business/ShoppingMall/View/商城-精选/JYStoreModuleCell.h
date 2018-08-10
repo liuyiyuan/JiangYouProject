@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WMIndexDataModel.h"
+
 
 @interface JYStoreModuleCell : UITableViewCell
 

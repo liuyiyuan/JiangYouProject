@@ -11,8 +11,8 @@
 
 @protocol WMHomeModuleDelegate <NSObject>
 
-@required
-- (void)goModuleWith:(HomeAppModel *)appModel;
+@optional
+- (void)clickModule:(NSInteger)index;
 
 @end
 
