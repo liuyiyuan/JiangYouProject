@@ -640,6 +640,12 @@
 		AD0E1178211C862800C3E98B /* JYHomeBBSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E1177211C862800C3E98B /* JYHomeBBSViewController.m */; };
 		AD0E117B211C87AD00C3E98B /* JYHomeBBSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E117A211C87AD00C3E98B /* JYHomeBBSTableViewCell.m */; };
 		AD0E117E211C975200C3E98B /* JYHomeBBSFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E117D211C975200C3E98B /* JYHomeBBSFooterView.m */; };
+		AD0E1181211DCA6200C3E98B /* JYHomeSameCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E1180211DCA6200C3E98B /* JYHomeSameCityViewController.m */; };
+		AD0E1184211DCAC800C3E98B /* JYHomeSameCItyHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E1183211DCAC800C3E98B /* JYHomeSameCItyHeaderView.m */; };
+		AD0E1187211DD0E300C3E98B /* JYHomeSameCityHeaderCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E1186211DD0E300C3E98B /* JYHomeSameCityHeaderCollectionViewCell.m */; };
+		AD0E118A211DD7E000C3E98B /* JYHomeSameCityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E1189211DD7E000C3E98B /* JYHomeSameCityTableViewCell.m */; };
+		AD0E118D211DD7F800C3E98B /* JYHomeSameCityCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E118C211DD7F800C3E98B /* JYHomeSameCityCollectionViewCell.m */; };
+		AD0E1190211DE6A100C3E98B /* JYHomeSameCitySecondHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E118F211DE6A100C3E98B /* JYHomeSameCitySecondHeaderView.m */; };
 		AD526A0E20E8BC4700D4BF85 /* JYFindPassWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD526A0D20E8BC4700D4BF85 /* JYFindPassWordViewController.m */; };
 		AD526A1120E8BC7300D4BF85 /* JYFindPassWordView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD526A1020E8BC7300D4BF85 /* JYFindPassWordView.m */; };
 		AD526A1520E8C42D00D4BF85 /* UIButton+EWTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = AD526A1420E8C42D00D4BF85 /* UIButton+EWTimer.m */; };
@@ -1944,6 +1950,18 @@
 		AD0E117A211C87AD00C3E98B /* JYHomeBBSTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYHomeBBSTableViewCell.m; sourceTree = "<group>"; };
 		AD0E117C211C975200C3E98B /* JYHomeBBSFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYHomeBBSFooterView.h; sourceTree = "<group>"; };
 		AD0E117D211C975200C3E98B /* JYHomeBBSFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYHomeBBSFooterView.m; sourceTree = "<group>"; };
+		AD0E117F211DCA6200C3E98B /* JYHomeSameCityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYHomeSameCityViewController.h; sourceTree = "<group>"; };
+		AD0E1180211DCA6200C3E98B /* JYHomeSameCityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYHomeSameCityViewController.m; sourceTree = "<group>"; };
+		AD0E1182211DCAC800C3E98B /* JYHomeSameCItyHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYHomeSameCItyHeaderView.h; sourceTree = "<group>"; };
+		AD0E1183211DCAC800C3E98B /* JYHomeSameCItyHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYHomeSameCItyHeaderView.m; sourceTree = "<group>"; };
+		AD0E1185211DD0E300C3E98B /* JYHomeSameCityHeaderCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYHomeSameCityHeaderCollectionViewCell.h; sourceTree = "<group>"; };
+		AD0E1186211DD0E300C3E98B /* JYHomeSameCityHeaderCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYHomeSameCityHeaderCollectionViewCell.m; sourceTree = "<group>"; };
+		AD0E1188211DD7E000C3E98B /* JYHomeSameCityTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYHomeSameCityTableViewCell.h; sourceTree = "<group>"; };
+		AD0E1189211DD7E000C3E98B /* JYHomeSameCityTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYHomeSameCityTableViewCell.m; sourceTree = "<group>"; };
+		AD0E118B211DD7F800C3E98B /* JYHomeSameCityCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYHomeSameCityCollectionViewCell.h; sourceTree = "<group>"; };
+		AD0E118C211DD7F800C3E98B /* JYHomeSameCityCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYHomeSameCityCollectionViewCell.m; sourceTree = "<group>"; };
+		AD0E118E211DE6A000C3E98B /* JYHomeSameCitySecondHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYHomeSameCitySecondHeaderView.h; sourceTree = "<group>"; };
+		AD0E118F211DE6A100C3E98B /* JYHomeSameCitySecondHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYHomeSameCitySecondHeaderView.m; sourceTree = "<group>"; };
 		AD526A0C20E8BC4700D4BF85 /* JYFindPassWordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYFindPassWordViewController.h; sourceTree = "<group>"; };
 		AD526A0D20E8BC4700D4BF85 /* JYFindPassWordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYFindPassWordViewController.m; sourceTree = "<group>"; };
 		AD526A0F20E8BC7300D4BF85 /* JYFindPassWordView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYFindPassWordView.h; sourceTree = "<group>"; };
@@ -2574,6 +2592,16 @@
 				AD0E117A211C87AD00C3E98B /* JYHomeBBSTableViewCell.m */,
 				AD0E117C211C975200C3E98B /* JYHomeBBSFooterView.h */,
 				AD0E117D211C975200C3E98B /* JYHomeBBSFooterView.m */,
+				AD0E1182211DCAC800C3E98B /* JYHomeSameCItyHeaderView.h */,
+				AD0E1183211DCAC800C3E98B /* JYHomeSameCItyHeaderView.m */,
+				AD0E1185211DD0E300C3E98B /* JYHomeSameCityHeaderCollectionViewCell.h */,
+				AD0E1186211DD0E300C3E98B /* JYHomeSameCityHeaderCollectionViewCell.m */,
+				AD0E1188211DD7E000C3E98B /* JYHomeSameCityTableViewCell.h */,
+				AD0E1189211DD7E000C3E98B /* JYHomeSameCityTableViewCell.m */,
+				AD0E118B211DD7F800C3E98B /* JYHomeSameCityCollectionViewCell.h */,
+				AD0E118C211DD7F800C3E98B /* JYHomeSameCityCollectionViewCell.m */,
+				AD0E118E211DE6A000C3E98B /* JYHomeSameCitySecondHeaderView.h */,
+				AD0E118F211DE6A100C3E98B /* JYHomeSameCitySecondHeaderView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -2609,6 +2637,8 @@
 				AD0E1168211B25C000C3E98B /* JYHomeVideoViewController.m */,
 				AD0E1176211C862800C3E98B /* JYHomeBBSViewController.h */,
 				AD0E1177211C862800C3E98B /* JYHomeBBSViewController.m */,
+				AD0E117F211DCA6200C3E98B /* JYHomeSameCityViewController.h */,
+				AD0E1180211DCA6200C3E98B /* JYHomeSameCityViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -5954,9 +5984,11 @@
 				1D2AEAC51E1E294E0026DB19 /* WMPatientsUpHuifuParamModel.m in Sources */,
 				AD526A1C20E8CB0800D4BF85 /* PPTextfield.m in Sources */,
 				1855DC481E83C30F001B4DDD /* WMEntranceYearListAPIManager.m in Sources */,
+				AD0E1184211DCAC800C3E98B /* JYHomeSameCItyHeaderView.m in Sources */,
 				0CB61DF41E4D6A880019AC2A /* NSFileManager+Paths.m in Sources */,
 				CCA4FC5920E31D35000A783A /* JYMeTableViewCell.m in Sources */,
 				186AF30B1ED51FBF00F699C6 /* UIColor+Additions.m in Sources */,
+				AD0E1181211DCA6200C3E98B /* JYHomeSameCityViewController.m in Sources */,
 				850142AE1F3C2E6B000BA97F /* WMPatientDataAPIManager.m in Sources */,
 				0CEB2EDD1E0CFE6A0070119A /* WMSettingTableViewController.m in Sources */,
 				0CAF8F2F1E0CED5D0092E6A8 /* WMNotificationMessageViewController.m in Sources */,
@@ -6163,6 +6195,7 @@
 				1814F1FA1E9E28EA005B4260 /* WMSearchSchoolViewController.m in Sources */,
 				85DBE7A81FC5130B00E821E4 /* WMIntegralDetailCell.m in Sources */,
 				85CAB459210DD34300884A54 /* JYShoppingMallAPIManager.m in Sources */,
+				AD0E118D211DD7F800C3E98B /* JYHomeSameCityCollectionViewCell.m in Sources */,
 				1DE56A941E113E5000B93397 /* MJWeiMaiHeader.m in Sources */,
 				0CD6E2AC1DFFD08900E75DB5 /* AppDelegate.m in Sources */,
 				18FC06C31E1BAAD000A59B4E /* WMOrderCountCell.m in Sources */,
@@ -6190,6 +6223,7 @@
 				AD93FEA220DDE02A00C8EF83 /* WYDefaultNewsCell.m in Sources */,
 				CCF8608C2119762500C4957E /* JYHomeBeautyPittureViewController.m in Sources */,
 				1814F1EE1E9DF8A3005B4260 /* WMSchoolSelectViewController.m in Sources */,
+				AD0E1187211DD0E300C3E98B /* JYHomeSameCityHeaderCollectionViewCell.m in Sources */,
 				CCA4FC6620E32B40000A783A /* JYAboutUsHeaderView.m in Sources */,
 				1D8203F91E63C09D00494F1C /* WMTotalPatientsDataModel.m in Sources */,
 				AD0E11532119ED9500C3E98B /* JYHomeBeautyPictureHotManager.m in Sources */,
@@ -6319,6 +6353,7 @@
 				85A74BD31F984C1700F1453F /* WMIncomeAPIManager.m in Sources */,
 				184C603D1E11FD5200A2E477 /* WMLoginParam.m in Sources */,
 				AD93FE9C20DDDF8B00C8EF83 /* WYNews.m in Sources */,
+				AD0E1190211DE6A100C3E98B /* JYHomeSameCitySecondHeaderView.m in Sources */,
 				CCA4FC6920E32FBF000A783A /* JYAboutUsTableViewCell.m in Sources */,
 				AD93FE9520DDDF6400C8EF83 /* WYBaseScrollView.m in Sources */,
 				18237EEB1EA78D6D00C30F51 /* WMServiceUpdatePriceModel.m in Sources */,
@@ -6392,6 +6427,7 @@
 				85CAB45C210DDEA300884A54 /* JYShoppingMallModel.m in Sources */,
 				855C9BD820C8C488007383EB /* WMPatientTagViewController.m in Sources */,
 				18237ECA1EA7375B00C30F51 /* WMDoctorServiceModel.m in Sources */,
+				AD0E118A211DD7E000C3E98B /* JYHomeSameCityTableViewCell.m in Sources */,
 				1D2AEACB1E1E3DDE0026DB19 /* WMPatientsHealthAPIManager.m in Sources */,
 				1855DC421E83C1F7001B4DDD /* WMSpecialtieListAPIManager.m in Sources */,
 				AD93FE9F20DDDFB900C8EF83 /* WYButtonChooseViewController.m in Sources */,
