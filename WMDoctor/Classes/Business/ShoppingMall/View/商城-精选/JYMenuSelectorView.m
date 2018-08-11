@@ -67,6 +67,9 @@
     [_selectedBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [btn setTitleColor:[UIColor colorWithHexString:@"#044F80"] forState:UIControlStateNormal];
     _selectedBtn = btn;
+    if (self.delegate && [self.delegate respondsToSelector:@selector(menuSelectorViewClick:)]) {
+        [self.delegate menuSelectorViewClick:btn.tag];
+    }
 }
 
 
