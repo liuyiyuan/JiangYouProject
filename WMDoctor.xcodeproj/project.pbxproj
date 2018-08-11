@@ -491,6 +491,7 @@
 		8504858F20A531D00070D264 /* WMSearchPatientCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8504858D20A531D00070D264 /* WMSearchPatientCell.m */; };
 		8504859020A531D00070D264 /* WMSearchPatientCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8504858E20A531D00070D264 /* WMSearchPatientCell.xib */; };
 		850F173A1F3D548E0057FF86 /* WMGroupNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 850F17391F3D548E0057FF86 /* WMGroupNewsModel.m */; };
+		851187AC211E94D200F4D549 /* JYPanicBuyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 851187AB211E94D200F4D549 /* JYPanicBuyModel.m */; };
 		8512521E20BD475400685E7A /* WMDoctorInfoNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512521D20BD475400685E7A /* WMDoctorInfoNewsModel.m */; };
 		852473B41F32B63E0049FB67 /* WMCricleHomeAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 852473B31F32B63E0049FB67 /* WMCricleHomeAPIManager.m */; };
 		852473BD1F344A060049FB67 /* WMRCIMGroupDataEntity+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 852473BA1F344A060049FB67 /* WMRCIMGroupDataEntity+CoreDataClass.m */; };
@@ -1663,6 +1664,8 @@
 		8504858E20A531D00070D264 /* WMSearchPatientCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WMSearchPatientCell.xib; sourceTree = "<group>"; };
 		850F17381F3D548E0057FF86 /* WMGroupNewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMGroupNewsModel.h; sourceTree = "<group>"; };
 		850F17391F3D548E0057FF86 /* WMGroupNewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMGroupNewsModel.m; sourceTree = "<group>"; };
+		851187AA211E94D200F4D549 /* JYPanicBuyModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYPanicBuyModel.h; sourceTree = "<group>"; };
+		851187AB211E94D200F4D549 /* JYPanicBuyModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYPanicBuyModel.m; sourceTree = "<group>"; };
 		8512521C20BD475400685E7A /* WMDoctorInfoNewsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMDoctorInfoNewsModel.h; sourceTree = "<group>"; };
 		8512521D20BD475400685E7A /* WMDoctorInfoNewsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMDoctorInfoNewsModel.m; sourceTree = "<group>"; };
 		852473B21F32B63E0049FB67 /* WMCricleHomeAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCricleHomeAPIManager.h; sourceTree = "<group>"; };
@@ -4602,6 +4605,15 @@
 			name = "搜索列表cell";
 			sourceTree = "<group>";
 		};
+		851187A9211E94A300F4D549 /* 精选-抢购 */ = {
+			isa = PBXGroup;
+			children = (
+				851187AA211E94D200F4D549 /* JYPanicBuyModel.h */,
+				851187AB211E94D200F4D549 /* JYPanicBuyModel.m */,
+			);
+			path = "精选-抢购";
+			sourceTree = "<group>";
+		};
 		854180B91FCBE1AE00EA4235 /* 我的微豆 */ = {
 			isa = PBXGroup;
 			children = (
@@ -4903,6 +4915,7 @@
 			isa = PBXGroup;
 			children = (
 				858104E52112B03D00532B4D /* 商城-精选 */,
+				851187A9211E94A300F4D549 /* 精选-抢购 */,
 				85CAB45A210DDEA300884A54 /* JYShoppingMallModel.h */,
 				85CAB45B210DDEA300884A54 /* JYShoppingMallModel.m */,
 				858104D2211044DA00532B4D /* WMNewHotQuestionModel.h */,
@@ -6357,6 +6370,7 @@
 				1890BA4C1FC66E870009339C /* WMQuestionDetailTopCell.m in Sources */,
 				85F2F927211972690062A8A1 /* JYStoresActivitesCell.m in Sources */,
 				0CAF8F121E0CC7700092E6A8 /* TextLimit.m in Sources */,
+				851187AC211E94D200F4D549 /* JYPanicBuyModel.m in Sources */,
 				18237EE21EA778B300C30F51 /* WMServiceDescriptionCell.m in Sources */,
 				1829FAE81FF48784006815E2 /* WMQuestionExpiredAPIManager.m in Sources */,
 				188F14C81F29B95C0058B4CB /* WMQuickReplyListViewController.m in Sources */,

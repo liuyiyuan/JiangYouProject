@@ -105,6 +105,15 @@
                 <constraint firstAttribute="trailing" secondItem="JvO-Ut-cet" secondAttribute="trailing" constant="12" id="uTN-b2-7QV"/>
             </constraints>
             <size key="customSize" width="195" height="295"/>
+            <connections>
+                <outlet property="goodsActiveTime" destination="3aQ-Ko-t5U" id="o99-np-egq"/>
+                <outlet property="goodsCouponPrice" destination="hMV-yx-IJo" id="U0b-3O-S1A"/>
+                <outlet property="goodsImageView" destination="Nab-tq-38T" id="BXP-Dh-VGf"/>
+                <outlet property="goodsInfo" destination="JvO-Ut-cet" id="n3K-SU-46E"/>
+                <outlet property="goodsName" destination="A7b-T6-kHf" id="dys-ON-AZc"/>
+                <outlet property="goodsPrice" destination="kqH-Zu-xSO" id="LgR-rI-a2H"/>
+                <outlet property="goodsStatusBtn" destination="a26-K1-nc4" id="1X8-hg-WrK"/>
+            </connections>
             <point key="canvasLocation" x="-173.5" y="108.5"/>
         </collectionViewCell>
     </objects>
