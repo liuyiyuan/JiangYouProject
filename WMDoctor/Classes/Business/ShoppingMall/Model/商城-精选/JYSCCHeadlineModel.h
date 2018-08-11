@@ -14,8 +14,8 @@
  */
 @interface JYSCCHeadlineModel : WMJSONModel
 
-@property(nonatomic, strong)NSString *image_info;
-@property(nonatomic, strong)NSString *image_infoId;
-@property(nonatomic, strong)NSString *image_url;
+@property(nonatomic, strong)NSString *imageinfo;
+@property(nonatomic, strong)NSString *imageinfoId;
+@property(nonatomic, strong)NSString *imageurl;
 
 @end
