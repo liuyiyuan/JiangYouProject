@@ -13,10 +13,16 @@
 #import "JYStoreModuleCell.h"
 #import "JYSCCHeadlineCell.h"
 #import "JYWelfareListCell.h"
+#import "JYWelfareBannerAPIManager.h"
+#import "JYBannerModel.h"
+#import "JYWelfareItemListAPIManager.h"
+#import "JYWelfareItemModel.h"
 
 @interface JYWelfareView()<UITableViewDataSource, UITableViewDelegate>
 
 @property(nonatomic, strong)UITableView *tableView;
+@property(nonatomic, strong)JYBannerModel *banner;
+@property(nonatomic, strong)JYWelfareItemModel *welfareItem;
 
 @end
 
@@ -26,6 +32,8 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self setupView];
+        [self loadWelfareBannerRequest];
+        [self loadWelfareItemListRequest];
     }
     return self;
 }
@@ -80,6 +88,10 @@
         return cell;
     } else if (indexPath.section == 2){
         JYStoreBannerTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JYStoreBannerTableViewCell" forIndexPath:indexPath];
+        if (self.banner) {
+            [cell setValueWithBannerModel:self.banner];
+        }
+        cell.backgroundColor = [UIColor redColor];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     } else if (indexPath.section == 3){
@@ -105,7 +117,7 @@
     } else if (indexPath.section == 1){
         return 60.f;
     } else if (indexPath.section == 2){
-        return 211.f;
+        return 147.f;
     } else if (indexPath.section == 3){
         return 88.f;
     } else if (indexPath.section == 4){
@@ -130,6 +142,27 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     return 0.1;
+}
+
+- (void)loadWelfareBannerRequest{
+    JYWelfareBannerAPIManager *welfareBannerAPIManager = [[JYWelfareBannerAPIManager alloc] init];
+    [welfareBannerAPIManager loadDataWithParams:@{} withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"welfare banner : %@", responseObject);
+        self.banner = [[JYBannerModel alloc] initWithDictionary:responseObject error:nil];
+        [self.tableView reloadData];
+    } withFailure:^(ResponseResult *errorResult) {
+        NSLog(@"welfare banner error : %@", errorResult);
+    }];
+}
+
+- (void)loadWelfareItemListRequest{
+    JYWelfareItemListAPIManager *welfareItemListAPIManager = [[JYWelfareItemListAPIManager alloc] init];
+    [welfareItemListAPIManager loadDataWithParams:@{} withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
+        self.welfareItem = [[JYWelfareItemModel alloc] initWithDictionary:responseObject error:nil];
+        NSLog(@"welfare item : %@", self.welfareItem);
+    } withFailure:^(ResponseResult *errorResult) {
+        NSLog(@"welfare item list error : %@", errorResult);
+    }];
 }
 
 /*

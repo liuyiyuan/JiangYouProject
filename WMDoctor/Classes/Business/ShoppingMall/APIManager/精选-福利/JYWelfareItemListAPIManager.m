@@ -1,17 +1,17 @@
 //
-//  JYShoppingMallAPIManager.m
+//  JYWelfareItemListAPIManager.m
 //  WMDoctor
 //
-//  Created by xugq on 2018/7/29.
+//  Created by xugq on 2018/8/12.
 //  Copyright © 2018年 Choice. All rights reserved.
 //
 
-#import "JYShoppingMallAPIManager.h"
+#import "JYWelfareItemListAPIManager.h"
 
-@implementation JYShoppingMallAPIManager
+@implementation JYWelfareItemListAPIManager
 
 - (NSString *)methodName{
-    return @"/shop/eventselection.jspx";
+    return @"/merc/getMerchantClass.jspx";
 }
 
 - (HTTPMethodType)requestType{
@@ -19,7 +19,7 @@
 }
 
 - (LoadingEffertType)loadingEffertType{
-    return LoadingEffertTypeNone;
+    return LoadingEffertTypeDefault;
 }
 
 - (HTTPPortType)portType{

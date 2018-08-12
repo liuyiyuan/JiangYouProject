@@ -14,7 +14,6 @@
 #import "JYSCCHeadlineAPIManager.h"
 #import "JYSCCHeadlineModel.h"
 #import "JYStoreModuleCell.h"
-#import "WMNewHotQuestionCell.h"
 #import "JYSCCHeadlineCell.h"
 #import "JYSCCGoodsCell.h"
 #import "JYSCCGoodsAPIManager.h"

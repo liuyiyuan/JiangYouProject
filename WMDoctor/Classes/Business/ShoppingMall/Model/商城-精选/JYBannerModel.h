@@ -13,6 +13,9 @@
 @property (nonatomic,copy) NSString <Optional> *linkParam;//参数（id）
 @property (nonatomic,copy) NSString <Optional> *linkType;//链接类型
 @property (nonatomic,copy) NSString <Optional> *picUrl;//图片路径
+@property (nonatomic,copy) NSString <Optional> *merchantId;
+@property (nonatomic,copy) NSString <Optional> *productId;
+@property (nonatomic,copy) NSString <Optional> *typeId;
 
 @end
 
