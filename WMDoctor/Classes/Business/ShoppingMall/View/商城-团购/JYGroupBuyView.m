@@ -9,11 +9,13 @@
 #import "JYGroupBuyView.h"
 #import "JYPanicBuyCell.h"
 #import "JYGroupBuyAPIManager.h"
+#import "JYLoginNewModel.h"
+#import "JYGroupBuyModel.h"
 
 @interface JYGroupBuyView()<UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property(nonatomic, strong)UICollectionView *collectionView;
-
+@property(nonatomic, strong)NSMutableArray *dataSource;
 
 @end
 
@@ -22,10 +24,15 @@
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
+        [self setupData];
         [self setupView];
         [self loadGroupBuyRequest];
     }
     return self;
+}
+
+- (void)setupData{
+    self.dataSource = [NSMutableArray array];
 }
 
 - (void)setupView{
@@ -58,19 +65,33 @@
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 10;
+    return [self.dataSource count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
+    JYGroupBuyOneGoodsModel *groupBuyGoods = [self.dataSource objectAtIndex:indexPath.row];
     JYPanicBuyCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"JYPanicBuyCell" forIndexPath:indexPath];
+    [cell setValueWithGroupBuyGoodsModel:groupBuyGoods];
     return cell;
 }
 
 - (void)loadGroupBuyRequest{
+    
+    NSDictionary *dic = [[NSUserDefaults standardUserDefaults] objectForKey:@"JYLoginUserInfo"];
+    JYLoginNewModel *loginUser = [[JYLoginNewModel alloc] initWithDictionary:dic error:nil];
+    NSDictionary *param = @{
+                            @"userId" : loginUser.userId,
+                            @"typeId" : @"0",
+                            @"pageNow" : @"1",
+                            @"pageLimit" : @"10"
+                            };
     JYGroupBuyAPIManager *groupBuyAPIManager = [[JYGroupBuyAPIManager alloc] init];
-    [groupBuyAPIManager loadDataWithParams:@{} withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
+    [groupBuyAPIManager loadDataWithParams:param withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
         NSLog(@"group buy : %@", responseObject);
+        JYGroupBuyModel *groupBuyModel = [[JYGroupBuyModel alloc] initWithDictionary:responseObject error:nil];
+        [self.dataSource addObjectsFromArray:groupBuyModel.GroupArray];
+        [self.collectionView reloadData];
     } withFailure:^(ResponseResult *errorResult) {
         NSLog(@"group buy error : %@", errorResult);
     }];

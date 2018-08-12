@@ -1,14 +1,14 @@
 //
-//  JYPanicBuyModel.h
+//  JYGroupBuyModel.h
 //  WMDoctor
 //
-//  Created by xugq on 2018/8/11.
+//  Created by xugq on 2018/8/12.
 //  Copyright © 2018年 Choice. All rights reserved.
 //
 
 #import "WMJSONModel.h"
 
-@interface JYPanicBuyGoodsModel : WMJSONModel
+@interface JYGroupBuyOneGoodsModel : WMJSONModel
 
 @property(nonatomic, strong)NSString *finTime;
 @property(nonatomic, strong)NSString *imageUrl;
@@ -20,9 +20,9 @@
 
 @end
 
-@protocol JYPanicBuyGoodsModel;
-@interface JYPanicBuyModel : WMJSONModel
+@protocol JYGroupBuyOneGoodsModel;
+@interface JYGroupBuyModel : WMJSONModel
 
-@property(nonatomic, strong)NSArray<JYPanicBuyGoodsModel> *RushArray;
+@property(nonatomic, strong)NSArray<JYGroupBuyOneGoodsModel> *GroupArray;
 
 @end
