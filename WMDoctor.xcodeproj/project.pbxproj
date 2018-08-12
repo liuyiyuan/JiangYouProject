@@ -496,6 +496,8 @@
 		851187B421207F7500F4D549 /* JYWelfareBannerAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 851187B321207F7500F4D549 /* JYWelfareBannerAPIManager.m */; };
 		851187B7212081FA00F4D549 /* JYWelfareItemListAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 851187B6212081FA00F4D549 /* JYWelfareItemListAPIManager.m */; };
 		851187BB212083B700F4D549 /* JYWelfareItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 851187BA212083B700F4D549 /* JYWelfareItemModel.m */; };
+		851187C12120862100F4D549 /* JYNewestStoreAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 851187C02120862100F4D549 /* JYNewestStoreAPIManager.m */; };
+		851187C42120871600F4D549 /* JYNewestStoreModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 851187C32120871600F4D549 /* JYNewestStoreModel.m */; };
 		8512521E20BD475400685E7A /* WMDoctorInfoNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512521D20BD475400685E7A /* WMDoctorInfoNewsModel.m */; };
 		852473B41F32B63E0049FB67 /* WMCricleHomeAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 852473B31F32B63E0049FB67 /* WMCricleHomeAPIManager.m */; };
 		852473BD1F344A060049FB67 /* WMRCIMGroupDataEntity+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 852473BA1F344A060049FB67 /* WMRCIMGroupDataEntity+CoreDataClass.m */; };
@@ -1679,6 +1681,10 @@
 		851187B6212081FA00F4D549 /* JYWelfareItemListAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYWelfareItemListAPIManager.m; sourceTree = "<group>"; };
 		851187B9212083B700F4D549 /* JYWelfareItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYWelfareItemModel.h; sourceTree = "<group>"; };
 		851187BA212083B700F4D549 /* JYWelfareItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYWelfareItemModel.m; sourceTree = "<group>"; };
+		851187BF2120862100F4D549 /* JYNewestStoreAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYNewestStoreAPIManager.h; sourceTree = "<group>"; };
+		851187C02120862100F4D549 /* JYNewestStoreAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYNewestStoreAPIManager.m; sourceTree = "<group>"; };
+		851187C22120871600F4D549 /* JYNewestStoreModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYNewestStoreModel.h; sourceTree = "<group>"; };
+		851187C32120871600F4D549 /* JYNewestStoreModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYNewestStoreModel.m; sourceTree = "<group>"; };
 		8512521C20BD475400685E7A /* WMDoctorInfoNewsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMDoctorInfoNewsModel.h; sourceTree = "<group>"; };
 		8512521D20BD475400685E7A /* WMDoctorInfoNewsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMDoctorInfoNewsModel.m; sourceTree = "<group>"; };
 		852473B21F32B63E0049FB67 /* WMCricleHomeAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCricleHomeAPIManager.h; sourceTree = "<group>"; };
@@ -4657,6 +4663,8 @@
 				851187B321207F7500F4D549 /* JYWelfareBannerAPIManager.m */,
 				851187B5212081F900F4D549 /* JYWelfareItemListAPIManager.h */,
 				851187B6212081FA00F4D549 /* JYWelfareItemListAPIManager.m */,
+				851187BF2120862100F4D549 /* JYNewestStoreAPIManager.h */,
+				851187C02120862100F4D549 /* JYNewestStoreAPIManager.m */,
 			);
 			path = "精选-福利";
 			sourceTree = "<group>";
@@ -4666,6 +4674,8 @@
 			children = (
 				851187B9212083B700F4D549 /* JYWelfareItemModel.h */,
 				851187BA212083B700F4D549 /* JYWelfareItemModel.m */,
+				851187C22120871600F4D549 /* JYNewestStoreModel.h */,
+				851187C32120871600F4D549 /* JYNewestStoreModel.m */,
 			);
 			path = "精选-福利";
 			sourceTree = "<group>";
@@ -5871,6 +5881,7 @@
 				8501428B1F3AB6B0000BA97F /* WMArrayUtil.m in Sources */,
 				856237381F7DF42500451954 /* WMDoctorVoiceModel.m in Sources */,
 				AD0E1172211B2A6500C3E98B /* JYHomeVideoTableViewCell.m in Sources */,
+				851187C12120862100F4D549 /* JYNewestStoreAPIManager.m in Sources */,
 				1890BA831FCCF2450009339C /* WMQuestionAnswerSendAPIManager.m in Sources */,
 				AD7A0708211711C900D3AAB4 /* JYHomeCancleFocusManager.m in Sources */,
 				181A034E1FDE232F00868821 /* WMMyServiceSetViewController.m in Sources */,
@@ -6003,6 +6014,7 @@
 				CC7E089121194F95007B14C6 /* ZJScrollPageView.m in Sources */,
 				0C4650A61E1B45F20084053A /* WMBaseWKWebController.m in Sources */,
 				ADA4A8EE20E8995A006400F3 /* JYInformationInComeView.m in Sources */,
+				851187C42120871600F4D549 /* JYNewestStoreModel.m in Sources */,
 				AD0E11592119F1E900C3E98B /* JYHomeBeautyPictureHeaderCollectionViewCell.m in Sources */,
 				856237351F7DE5B600451954 /* WMDoctorVoiceAPIManager.m in Sources */,
 				85DBE7A41FC5121C00E821E4 /* WMIntegralDetailViewController.m in Sources */,

@@ -17,12 +17,15 @@
 #import "JYBannerModel.h"
 #import "JYWelfareItemListAPIManager.h"
 #import "JYWelfareItemModel.h"
+#import "JYNewestStoreAPIManager.h"
+#import "JYNewestStoreModel.h"
 
 @interface JYWelfareView()<UITableViewDataSource, UITableViewDelegate>
 
 @property(nonatomic, strong)UITableView *tableView;
 @property(nonatomic, strong)JYBannerModel *banner;
 @property(nonatomic, strong)JYWelfareItemModel *welfareItem;
+@property(nonatomic, strong)JYNewestStoreModel *newestStore;
 
 @end
 
@@ -34,6 +37,7 @@
         [self setupView];
         [self loadWelfareBannerRequest];
         [self loadWelfareItemListRequest];
+        [self loadNewestStoreRequest];
     }
     return self;
 }
@@ -100,6 +104,9 @@
         return cell;
     } else if (indexPath.section == 4){
         JYSCCHeadlineCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JYSCCHeadlineCell" forIndexPath:indexPath];
+        if (self.newestStore) {
+            [cell setValueWithNewestStoreModel:self.newestStore];
+        }
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     } else if (indexPath.section == 5){
@@ -162,6 +169,17 @@
         NSLog(@"welfare item : %@", self.welfareItem);
     } withFailure:^(ResponseResult *errorResult) {
         NSLog(@"welfare item list error : %@", errorResult);
+    }];
+}
+
+- (void)loadNewestStoreRequest{
+    JYNewestStoreAPIManager *newestStoreAPIManager = [[JYNewestStoreAPIManager alloc] init];
+    [newestStoreAPIManager loadDataWithParams:@{} withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
+        self.newestStore = [[JYNewestStoreModel alloc] initWithDictionary:responseObject error:nil];
+        NSLog(@"newest store : %@", self.newestStore);
+        [self.tableView reloadData];
+    } withFailure:^(ResponseResult *errorResult) {
+        NSLog(@"newest store error : %@", errorResult);
     }];
 }
 

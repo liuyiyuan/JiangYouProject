@@ -20,6 +20,10 @@
     [self.headlineImageView sd_setImageWithURL:[NSURL URLWithString:headlineModel.imageurl]];
 }
 
+- (void)setValueWithNewestStoreModel:(JYNewestStoreModel *)newestStoreModel{
+    self.title.text = newestStoreModel.merchant.merName;
+}
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
