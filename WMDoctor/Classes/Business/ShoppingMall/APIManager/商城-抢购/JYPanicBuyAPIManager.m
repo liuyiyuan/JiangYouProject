@@ -11,7 +11,7 @@
 @implementation JYPanicBuyAPIManager
 
 - (NSString *)methodName{
-    return @"pro/getRushList.jspx";
+    return @"/pro/getRushList.jspx";
 }
 
 - (HTTPMethodType)requestType{

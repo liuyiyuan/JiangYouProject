@@ -129,10 +129,9 @@
         return cell;
     } else if (indexPath.section == 2){
         JYSCCHeadlineCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JYSCCHeadlineCell" forIndexPath:indexPath];
-        
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         if (self.headlineModel) {
-            
+            [cell setValueWithJYSCCHeadlineModel:self.headlineModel];
         }
         return cell;
     } else if (indexPath.section == 3){

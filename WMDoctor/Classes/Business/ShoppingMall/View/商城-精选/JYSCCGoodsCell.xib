@@ -25,13 +25,13 @@
                         </constraints>
                     </imageView>
                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zps-gg-ZUT">
-                        <rect key="frame" x="7" y="97" width="284" height="162.5"/>
+                        <rect key="frame" x="10" y="97" width="278" height="162.5"/>
                     </scrollView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="Zps-gg-ZUT" secondAttribute="trailing" constant="7" id="5l0-ST-JD7"/>
+                    <constraint firstAttribute="trailing" secondItem="Zps-gg-ZUT" secondAttribute="trailing" constant="10" id="5l0-ST-JD7"/>
                     <constraint firstItem="3fl-cm-46K" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="7" id="9uY-P4-0mC"/>
-                    <constraint firstItem="Zps-gg-ZUT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="7" id="G5x-2D-KPp"/>
+                    <constraint firstItem="Zps-gg-ZUT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="G5x-2D-KPp"/>
                     <constraint firstItem="3fl-cm-46K" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="Ng9-gA-xgd"/>
                     <constraint firstItem="Zps-gg-ZUT" firstAttribute="top" secondItem="3fl-cm-46K" secondAttribute="bottom" id="XbX-gY-dSO"/>
                     <constraint firstAttribute="trailing" secondItem="3fl-cm-46K" secondAttribute="trailing" constant="7" id="oId-9g-28v"/>

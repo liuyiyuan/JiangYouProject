@@ -16,7 +16,13 @@
     self.contentView.backgroundColor = [UIColor whiteColor];
 }
 
-- (void)setValueWithModel{
+- (void)setValueWithPanicBuyGoodsModel:(JYPanicBuyGoodsModel *)panicBuyGoods{
+//    [self.goodsImageView sd_setImageWithURL:[NSURL URLWithString:panicBuyGoods.imageUrl]];
+//    self.goodsName.text = panicBuyGoods.name;
+//    self.goodsInfo.text = panicBuyGoods.pdesc;
+//    self.goodsActiveTime.text = panicBuyGoods.finTime;
+//    self.goodsCouponPrice.text = panicBuyGoods.oriPrice;
+//    self.goodsPrice.text = panicBuyGoods.price;
 }
 
 @end

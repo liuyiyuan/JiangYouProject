@@ -8,8 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol JYMenuSelectorViewDelegate <NSObject>
+
+@optional
+- (void)menuSelectorViewClick:(NSInteger)index;
+
+@end
+
 @interface JYMenuSelectorView : UIView
 
+@property(nonatomic, assign)id<JYMenuSelectorViewDelegate> delegate;
 - (void)setMenuWithArr:(NSArray *)arr;
 
 @end

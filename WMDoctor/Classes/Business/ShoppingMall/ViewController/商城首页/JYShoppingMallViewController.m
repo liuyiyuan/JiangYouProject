@@ -64,7 +64,7 @@
 - (void)setupView{
     _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 44, kScreenWidth, kScreenHeight - 44)];
     _scrollView.pagingEnabled = YES;
-    _scrollView.contentSize = CGSizeMake(kScreenWidth * 5, kScreenHeight);
+    _scrollView.contentSize = CGSizeMake(kScreenWidth * 4, kScreenHeight);
     _scrollView.scrollEnabled = YES;
     _scrollView.delegate = self;
     [self.view addSubview:_scrollView];

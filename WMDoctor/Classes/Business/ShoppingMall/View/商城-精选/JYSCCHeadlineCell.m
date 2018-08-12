@@ -15,6 +15,11 @@
     // Initialization code
 }
 
+- (void)setValueWithJYSCCHeadlineModel:(JYSCCHeadlineModel *)headlineModel{
+    self.title.text = headlineModel.imageinfo;
+    [self.headlineImageView sd_setImageWithURL:[NSURL URLWithString:headlineModel.imageurl]];
+}
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 

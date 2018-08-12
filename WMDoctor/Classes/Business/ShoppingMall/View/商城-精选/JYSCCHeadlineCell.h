@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JYSCCHeadlineModel.h"
 
 @interface JYSCCHeadlineCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *title;
 @property (weak, nonatomic) IBOutlet UIImageView *headlineImageView;
 
+
+- (void)setValueWithJYSCCHeadlineModel:(JYSCCHeadlineModel *)headlineModel;
 
 @end
