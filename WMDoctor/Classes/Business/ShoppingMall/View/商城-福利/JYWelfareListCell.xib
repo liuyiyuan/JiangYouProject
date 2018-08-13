@@ -100,6 +100,13 @@
                     <constraint firstItem="W5W-s9-YrJ" firstAttribute="leading" secondItem="wbE-FT-8r9" secondAttribute="trailing" constant="10" id="w4E-xr-zqT"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="restaurantDistance" destination="9EP-eB-kXv" id="Bh9-zA-rew"/>
+                <outlet property="restaurantFoods" destination="W5W-s9-YrJ" id="xBj-MV-XWH"/>
+                <outlet property="restaurantImgView" destination="OWp-ID-jGA" id="6qU-ZV-Sot"/>
+                <outlet property="restaurantName" destination="wbE-FT-8r9" id="Kdn-9Y-xLz"/>
+                <outlet property="restaurantPopular" destination="I3q-Cy-bLI" id="f5D-RE-6yb"/>
+            </connections>
             <point key="canvasLocation" x="12" y="47"/>
         </tableViewCell>
     </objects>

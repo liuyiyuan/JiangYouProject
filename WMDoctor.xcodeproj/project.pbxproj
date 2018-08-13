@@ -498,6 +498,8 @@
 		851187BB212083B700F4D549 /* JYWelfareItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 851187BA212083B700F4D549 /* JYWelfareItemModel.m */; };
 		851187C12120862100F4D549 /* JYNewestStoreAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 851187C02120862100F4D549 /* JYNewestStoreAPIManager.m */; };
 		851187C42120871600F4D549 /* JYNewestStoreModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 851187C32120871600F4D549 /* JYNewestStoreModel.m */; };
+		851187CA212089F500F4D549 /* JYWelfareGoodsListAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 851187C9212089F500F4D549 /* JYWelfareGoodsListAPIManager.m */; };
+		851187CD21208B3D00F4D549 /* JYWelfareGoodsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 851187CC21208B3D00F4D549 /* JYWelfareGoodsModel.m */; };
 		8512521E20BD475400685E7A /* WMDoctorInfoNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512521D20BD475400685E7A /* WMDoctorInfoNewsModel.m */; };
 		852473B41F32B63E0049FB67 /* WMCricleHomeAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 852473B31F32B63E0049FB67 /* WMCricleHomeAPIManager.m */; };
 		852473BD1F344A060049FB67 /* WMRCIMGroupDataEntity+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 852473BA1F344A060049FB67 /* WMRCIMGroupDataEntity+CoreDataClass.m */; };
@@ -1685,6 +1687,10 @@
 		851187C02120862100F4D549 /* JYNewestStoreAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYNewestStoreAPIManager.m; sourceTree = "<group>"; };
 		851187C22120871600F4D549 /* JYNewestStoreModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYNewestStoreModel.h; sourceTree = "<group>"; };
 		851187C32120871600F4D549 /* JYNewestStoreModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYNewestStoreModel.m; sourceTree = "<group>"; };
+		851187C8212089F500F4D549 /* JYWelfareGoodsListAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYWelfareGoodsListAPIManager.h; sourceTree = "<group>"; };
+		851187C9212089F500F4D549 /* JYWelfareGoodsListAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYWelfareGoodsListAPIManager.m; sourceTree = "<group>"; };
+		851187CB21208B3D00F4D549 /* JYWelfareGoodsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYWelfareGoodsModel.h; sourceTree = "<group>"; };
+		851187CC21208B3D00F4D549 /* JYWelfareGoodsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYWelfareGoodsModel.m; sourceTree = "<group>"; };
 		8512521C20BD475400685E7A /* WMDoctorInfoNewsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMDoctorInfoNewsModel.h; sourceTree = "<group>"; };
 		8512521D20BD475400685E7A /* WMDoctorInfoNewsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMDoctorInfoNewsModel.m; sourceTree = "<group>"; };
 		852473B21F32B63E0049FB67 /* WMCricleHomeAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCricleHomeAPIManager.h; sourceTree = "<group>"; };
@@ -4665,6 +4671,8 @@
 				851187B6212081FA00F4D549 /* JYWelfareItemListAPIManager.m */,
 				851187BF2120862100F4D549 /* JYNewestStoreAPIManager.h */,
 				851187C02120862100F4D549 /* JYNewestStoreAPIManager.m */,
+				851187C8212089F500F4D549 /* JYWelfareGoodsListAPIManager.h */,
+				851187C9212089F500F4D549 /* JYWelfareGoodsListAPIManager.m */,
 			);
 			path = "精选-福利";
 			sourceTree = "<group>";
@@ -4676,6 +4684,8 @@
 				851187BA212083B700F4D549 /* JYWelfareItemModel.m */,
 				851187C22120871600F4D549 /* JYNewestStoreModel.h */,
 				851187C32120871600F4D549 /* JYNewestStoreModel.m */,
+				851187CB21208B3D00F4D549 /* JYWelfareGoodsModel.h */,
+				851187CC21208B3D00F4D549 /* JYWelfareGoodsModel.m */,
 			);
 			path = "精选-福利";
 			sourceTree = "<group>";
@@ -5997,6 +6007,7 @@
 				855260441F41343100F16618 /* WMGroupMemberViewController.m in Sources */,
 				1814F1F11E9DF9D5005B4260 /* WMProSelectViewController.m in Sources */,
 				0CAF8F3E1E0CEDF60092E6A8 /* WMRCInquiryMessage.m in Sources */,
+				851187CA212089F500F4D549 /* JYWelfareGoodsListAPIManager.m in Sources */,
 				1D3B765A1E1531DB0035EE65 /* WMRCChatListSystemCell.m in Sources */,
 				183287F81F12031300F87E01 /* XHSegmentViewController.m in Sources */,
 				1D29FAAC1E1D120100472F0E /* WMPatientStateModel.m in Sources */,
@@ -6180,6 +6191,7 @@
 				181A035D1FDE4B6900868821 /* WMServicePriceCollectionViewCell.m in Sources */,
 				1D3B76511E14DBAB0035EE65 /* WMMessageListModel.m in Sources */,
 				AD0E1169211B25C000C3E98B /* JYHomeVideoViewController.m in Sources */,
+				851187CD21208B3D00F4D549 /* JYWelfareGoodsModel.m in Sources */,
 				1D3816541EC98E8F00562FCA /* WMHospitalChooseViewController.m in Sources */,
 				1D34F8031E9F9E3A00B3D539 /* WMCricleVIPPatientAPIManager.m in Sources */,
 				188F14BC1F2882F60058B4CB /* QuickEntity+CoreDataProperties.m in Sources */,

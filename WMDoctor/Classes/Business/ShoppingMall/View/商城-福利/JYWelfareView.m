@@ -19,6 +19,8 @@
 #import "JYWelfareItemModel.h"
 #import "JYNewestStoreAPIManager.h"
 #import "JYNewestStoreModel.h"
+#import "JYWelfareGoodsListAPIManager.h"
+#import "JYWelfareGoodsModel.h"
 
 @interface JYWelfareView()<UITableViewDataSource, UITableViewDelegate>
 
@@ -26,6 +28,7 @@
 @property(nonatomic, strong)JYBannerModel *banner;
 @property(nonatomic, strong)JYWelfareItemModel *welfareItem;
 @property(nonatomic, strong)JYNewestStoreModel *newestStore;
+@property(nonatomic, strong)NSMutableArray *dataSource;
 
 @end
 
@@ -34,12 +37,18 @@
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
+        [self setupData];
         [self setupView];
         [self loadWelfareBannerRequest];
         [self loadWelfareItemListRequest];
         [self loadNewestStoreRequest];
+        [self loadWelfareGoodsListRequest];
     }
     return self;
+}
+
+- (void)setupData{
+    self.dataSource = [NSMutableArray array];
 }
 
 - (void)setupView{
@@ -75,7 +84,7 @@
     } else if (section == 4){
         return 1;
     } else if (section == 5){
-        return 10;
+        return [self.dataSource count];
     }
     return 1;
 }
@@ -110,7 +119,9 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     } else if (indexPath.section == 5){
+        JYWelfareOneGoodsModel *welfareOneGoods = [self.dataSource objectAtIndex:indexPath.row];
         JYWelfareListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JYWelfareListCell" forIndexPath:indexPath];
+        [cell setValueWithWelfareOneGoodsModel:welfareOneGoods];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     }
@@ -180,6 +191,25 @@
         [self.tableView reloadData];
     } withFailure:^(ResponseResult *errorResult) {
         NSLog(@"newest store error : %@", errorResult);
+    }];
+}
+
+- (void)loadWelfareGoodsListRequest{
+    JYWelfareGoodsListAPIManager *welfareGoodsListAPIManager = [[JYWelfareGoodsListAPIManager alloc] init];
+    NSDictionary *param = @{
+                            @"mtype" : @"1",
+                            @"longitude" : @"",
+                            @"latitude" : @"",
+                            @"pageNow" : @"1",
+                            @"pageLimit" : @"10"
+                            };
+    [welfareGoodsListAPIManager loadDataWithParams:param withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"welfare goods list : %@", responseObject);
+        JYWelfareGoodsModel *welfareGoods = [[JYWelfareGoodsModel alloc] initWithDictionary:responseObject error:nil];
+        [self.dataSource addObjectsFromArray:welfareGoods.merfl];
+        [self.tableView reloadData];
+    } withFailure:^(ResponseResult *errorResult) {
+        NSLog(@"welfare goods error : %@", errorResult);
     }];
 }
 
