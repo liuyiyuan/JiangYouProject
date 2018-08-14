@@ -10,10 +10,13 @@
 #import "JYStoreModuleCell.h"
 #import "JYStoresActivitesCell.h"
 #import "JYSCCGoodsCell.h"
+#import "JYStoreActiveCarefullyChooseaAPIManager.h"
+#import "JYStoreActiveCarefullyChooseModel.h"
 
 @interface JYStoresViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property(nonatomic, strong)UITableView *tableView;
+@property(nonatomic, strong)NSMutableArray *actives;
 
 @end
 
@@ -22,7 +25,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self setupData];
     [self setupView];
+    [self loadActiveCarefullyChooseRequest];
+}
+
+- (void)setupData{
+    self.actives = [NSMutableArray array];
 }
 
 - (void)setupView{
@@ -64,6 +73,9 @@
     } else if (indexPath.section == 1){
         JYStoresActivitesCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JYStoresActivitesCell" forIndexPath:indexPath];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        if (self.actives.count > 0) {
+            [cell setValueWithActives:self.actives];
+        }
         return cell;
     } else if (indexPath.section == 2){
         JYSCCGoodsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JYSCCGoodsCell" forIndexPath:indexPath];
@@ -126,6 +138,20 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     return 0.1;
+}
+
+- (void)loadActiveCarefullyChooseRequest{
+    JYStoreActiveCarefullyChooseaAPIManager *activeCarefullyChooseAPIManager = [[JYStoreActiveCarefullyChooseaAPIManager alloc] init];
+    [activeCarefullyChooseAPIManager loadDataWithParams:@{} withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"activeCarefullyChoose data : %@", responseObject);
+        for (NSDictionary *dic in responseObject) {
+            JYStoreActiveCarefullyChooseModel *active = [[JYStoreActiveCarefullyChooseModel alloc] initWithDictionary:dic error:nil];
+            [self.actives addObject:active];
+        }
+        [self.tableView reloadData];
+    } withFailure:^(ResponseResult *errorResult) {
+        NSLog(@"activeCarefullyChoose error : %@", errorResult);
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

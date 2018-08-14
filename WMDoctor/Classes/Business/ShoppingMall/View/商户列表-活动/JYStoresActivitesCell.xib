@@ -53,6 +53,11 @@
                     <constraint firstItem="yYf-wr-pHG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="ziU-Hh-Fgm"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="activeImageViewOne" destination="yYf-wr-pHG" id="lNe-2H-uZH"/>
+                <outlet property="activeImageViewThree" destination="p2E-r1-23Q" id="383-05-Kk4"/>
+                <outlet property="activeImageViewTwo" destination="6OQ-qb-HnE" id="ULN-Nf-DvR"/>
+            </connections>
             <point key="canvasLocation" x="-31" y="99"/>
         </tableViewCell>
     </objects>

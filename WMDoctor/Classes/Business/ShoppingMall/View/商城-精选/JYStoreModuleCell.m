@@ -57,16 +57,15 @@
 
 
 //WMHomeModuleDelegate
-- (void)goModuleWith:(HomeAppModel *)appModel{
-    
-    WMTabBarController * tabBarController = (WMTabBarController *)self.window.rootViewController;
-    WMNavgationController * navController = (WMNavgationController*)tabBarController.viewControllers[tabBarController.selectedIndex];
-    JYStoresViewController *storesViewController = [[JYStoresViewController alloc] init];
-    [navController pushViewController:storesViewController animated:YES];
-}
-
 - (void)clickModule:(NSInteger)index{
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"JYStoreModuleClickPanicBuy" object:nil];
+    if (index == 0) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"JYStoreModuleClickPanicBuy" object:nil];
+    } else if (index == 3){
+        WMTabBarController * tabBarController = (WMTabBarController *)self.window.rootViewController;
+        WMNavgationController * navController = (WMNavgationController*)tabBarController.viewControllers[tabBarController.selectedIndex];
+        JYStoresViewController *storesViewController = [[JYStoresViewController alloc] init];
+        [navController pushViewController:storesViewController animated:YES];
+    }
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
