@@ -12,11 +12,14 @@
 #import "JYSCCGoodsCell.h"
 #import "JYStoreActiveCarefullyChooseaAPIManager.h"
 #import "JYStoreActiveCarefullyChooseModel.h"
+#import "JYSCCStoreAPIManager.h"
+#import "JYSCCStoreModel.h"
 
 @interface JYStoresViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property(nonatomic, strong)UITableView *tableView;
 @property(nonatomic, strong)NSMutableArray *actives;
+@property(nonatomic, strong)NSMutableArray *dataSource;
 
 @end
 
@@ -28,10 +31,12 @@
     [self setupData];
     [self setupView];
     [self loadActiveCarefullyChooseRequest];
+    [self loadCarefullyChooseStoresRequest];
 }
 
 - (void)setupData{
     self.actives = [NSMutableArray array];
+    self.dataSource = [NSMutableArray array];
 }
 
 - (void)setupView{
@@ -151,6 +156,18 @@
         [self.tableView reloadData];
     } withFailure:^(ResponseResult *errorResult) {
         NSLog(@"activeCarefullyChoose error : %@", errorResult);
+    }];
+}
+
+- (void)loadCarefullyChooseStoresRequest{
+    JYSCCStoreAPIManager *sccStoreAPIManager = [[JYSCCStoreAPIManager alloc] init];
+    [sccStoreAPIManager loadDataWithParams:@{} withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"sccStore : %@", responseObject);
+        JYSCCStoreModel *sccStoreModel = [[JYSCCStoreModel alloc] initWithDictionary:responseObject error:nil];
+        [self.dataSource addObjectsFromArray:sccStoreModel.selectedArray];
+        [self.tableView reloadData];
+    } withFailure:^(ResponseResult *errorResult) {
+        NSLog(@"sccStore error : %@", errorResult);
     }];
 }
 
