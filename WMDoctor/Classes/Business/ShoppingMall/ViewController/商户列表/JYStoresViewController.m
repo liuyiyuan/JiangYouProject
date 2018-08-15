@@ -14,6 +14,7 @@
 #import "JYStoreActiveCarefullyChooseModel.h"
 #import "JYSCCStoreAPIManager.h"
 #import "JYSCCStoreModel.h"
+#import "JYStoreDetailViewController.h"
 
 @interface JYStoresViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -90,6 +91,15 @@
     return [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 2) {
+        JYSomeOneStoreModel *store = [self.dataSource objectAtIndex:indexPath.row];
+        JYStoreDetailViewController *storeDetailViewController = [[JYStoreDetailViewController alloc] init];
+        storeDetailViewController.storeId = store.merchantId;
+        [self.navigationController pushViewController:storeDetailViewController animated:YES];
+    }
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
         return 80.f;
@@ -125,9 +135,7 @@
         [view addSubview:characterLabel];
         return view;
     }
-    
     return [[UIView alloc] init];
-    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{

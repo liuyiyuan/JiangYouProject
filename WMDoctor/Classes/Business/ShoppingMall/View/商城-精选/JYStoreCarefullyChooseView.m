@@ -149,7 +149,7 @@
         WMTabBarController * tabBarController = (WMTabBarController *)self.window.rootViewController;
         WMNavgationController * navController = (WMNavgationController*)tabBarController.viewControllers[tabBarController.selectedIndex];
         JYStoreDetailViewController *storeDetailViewController = [[JYStoreDetailViewController alloc] init];
-        storeDetailViewController.store = store;
+        storeDetailViewController.storeId = store.merchantid;
         [navController pushViewController:storeDetailViewController animated:YES];
     }
 }

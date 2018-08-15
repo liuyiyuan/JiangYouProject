@@ -12,6 +12,7 @@
 #import "JYStoreCouponCell.h"
 #import "JYSetMealCell.h"
 #import "JYStoreDetailAPIManager.h"
+#import "JYStoreEvaluatesAPIManager.h"
 
 @interface JYStoreDetailViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -26,6 +27,7 @@
     // Do any additional setup after loading the view.
     [self setupView];
     [self loadStoreDetailRequest];
+    [self loadStoreEvaluatesRequest];
 }
 
 - (void)setupView{
@@ -114,15 +116,29 @@
     return 0.1;
 }
 
+//商家信息
 - (void)loadStoreDetailRequest{
     JYStoreDetailAPIManager *storeDetailAPIManager = [[JYStoreDetailAPIManager alloc] init];
     NSDictionary *param = @{
-                            @"merchantid" : self.store.merchantid
+                            @"merchantid" : self.storeId
                             };
     [storeDetailAPIManager loadDataWithParams:param withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
         NSLog(@"store detail : %@", responseObject);
     } withFailure:^(ResponseResult *errorResult) {
         NSLog(@"store detail error : %@", errorResult);
+    }];
+}
+
+//评价列表
+- (void)loadStoreEvaluatesRequest{
+    JYStoreEvaluatesAPIManager *storeEvaluatesAPIManager = [[JYStoreEvaluatesAPIManager alloc] init];
+    NSDictionary *param = @{
+                            @"merchantid" : self.storeId
+                            };
+    [storeEvaluatesAPIManager loadDataWithParams:param withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"store evaluates : %@", responseObject);
+    } withFailure:^(ResponseResult *errorResult) {
+        NSLog(@"store evaluates error : %@", errorResult);
     }];
 }
 

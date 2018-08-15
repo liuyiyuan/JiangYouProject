@@ -11,6 +11,6 @@
 
 @interface JYStoreDetailViewController : WMBaseViewController
 
-@property(nonatomic, strong)JYSCCGoodsModel *store;
+@property(nonatomic, strong)NSString *storeId;
 
 @end
