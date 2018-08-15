@@ -122,7 +122,7 @@
 - (void)loadStoreDetailRequest{
     JYStoreDetailAPIManager *storeDetailAPIManager = [[JYStoreDetailAPIManager alloc] init];
     NSDictionary *param = @{
-                            @"merchantid" : self.storeId
+                            @"merchantId" : self.storeId
                             };
     [storeDetailAPIManager loadDataWithParams:param withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
         NSLog(@"store detail : %@", responseObject);
