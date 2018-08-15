@@ -10,10 +10,13 @@
 #import "JYRedpacketBGCell.h"
 #import "JYRedpacketItemCell.h"
 #import "JYRedpacketItemViewController.h"
+#import "JYRedpacketAPIManager.h"
+#import "JYRedpacketModel.h"
 
 @interface JYRedpacketViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property(nonatomic, strong)UITableView *tableView;
+@property(nonatomic, strong)JYRedpacketModel *redpacketModel;
 
 @end
 
@@ -23,6 +26,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self setupView];
+    [self loadRedpacketRequest];
 }
 
 - (void)setupView{
@@ -36,8 +40,6 @@
     self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
     [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([JYRedpacketBGCell class]) bundle:nil] forCellReuseIdentifier:@"JYRedpacketBGCell"];
     [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([JYRedpacketItemCell class]) bundle:nil] forCellReuseIdentifier:@"JYRedpacketItemCell"];
-//    [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([JYStoreCouponCell class]) bundle:nil] forCellReuseIdentifier:@"JYStoreCouponCell"];
-//    [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([JYSetMealCell class]) bundle:nil] forCellReuseIdentifier:@"JYSetMealCell"];
     [self.view addSubview:self.tableView];
     
 }
@@ -98,6 +100,17 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     JYRedpacketItemViewController *redpacketItemViewController = [[JYRedpacketItemViewController alloc] init];
     [self.navigationController pushViewController:redpacketItemViewController animated:YES];
+}
+
+- (void)loadRedpacketRequest{
+    JYRedpacketAPIManager *redpacketAPIManager = [[JYRedpacketAPIManager alloc] init];
+    [redpacketAPIManager loadDataWithParams:@{} withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
+        self.redpacketModel = [[JYRedpacketModel alloc] initWithDictionary:responseObject error:nil];
+        NSLog(@"redpacket : %@", self.redpacketModel);
+        [self.tableView reloadData];
+    } withFailure:^(ResponseResult *errorResult) {
+        NSLog(@"redpacket error : %@", errorResult);
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
