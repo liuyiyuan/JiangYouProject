@@ -13,10 +13,12 @@
 #import "JYSetMealCell.h"
 #import "JYStoreDetailAPIManager.h"
 #import "JYStoreEvaluatesAPIManager.h"
+#import "JYStoreEvaluatesModel.h"
 
 @interface JYStoreDetailViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property(nonatomic, strong)UITableView *tableView;
+@property(nonatomic, strong)JYStoreEvaluatesModel *storeEvaluate;
 
 @end
 
@@ -133,10 +135,12 @@
 - (void)loadStoreEvaluatesRequest{
     JYStoreEvaluatesAPIManager *storeEvaluatesAPIManager = [[JYStoreEvaluatesAPIManager alloc] init];
     NSDictionary *param = @{
-                            @"merchantid" : self.storeId
+                            @"merchantId" : self.storeId
                             };
     [storeEvaluatesAPIManager loadDataWithParams:param withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
-        NSLog(@"store evaluates : %@", responseObject);
+        self.storeEvaluate = [[JYStoreEvaluatesModel alloc] initWithDictionary:responseObject error:nil];
+        NSLog(@"store evaluates : %@", self.storeEvaluate);
+        [self.tableView reloadData];
     } withFailure:^(ResponseResult *errorResult) {
         NSLog(@"store evaluates error : %@", errorResult);
     }];
