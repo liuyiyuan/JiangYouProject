@@ -145,9 +145,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 3) {
+        JYSCCGoodsModel *store = [self.dataSource objectAtIndex:indexPath.row];
         WMTabBarController * tabBarController = (WMTabBarController *)self.window.rootViewController;
         WMNavgationController * navController = (WMNavgationController*)tabBarController.viewControllers[tabBarController.selectedIndex];
         JYStoreDetailViewController *storeDetailViewController = [[JYStoreDetailViewController alloc] init];
+        storeDetailViewController.store = store;
         [navController pushViewController:storeDetailViewController animated:YES];
     }
 }

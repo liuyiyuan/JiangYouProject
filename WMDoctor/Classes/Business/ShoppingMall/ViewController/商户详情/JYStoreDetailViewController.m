@@ -11,6 +11,7 @@
 #import "JYStoreStatusCell.h"
 #import "JYStoreCouponCell.h"
 #import "JYSetMealCell.h"
+#import "JYStoreDetailAPIManager.h"
 
 @interface JYStoreDetailViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -24,6 +25,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self setupView];
+    [self loadStoreDetailRequest];
 }
 
 - (void)setupView{
@@ -112,6 +114,17 @@
     return 0.1;
 }
 
+- (void)loadStoreDetailRequest{
+    JYStoreDetailAPIManager *storeDetailAPIManager = [[JYStoreDetailAPIManager alloc] init];
+    NSDictionary *param = @{
+                            @"merchantid" : self.store.merchantid
+                            };
+    [storeDetailAPIManager loadDataWithParams:param withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"store detail : %@", responseObject);
+    } withFailure:^(ResponseResult *errorResult) {
+        NSLog(@"store detail error : %@", errorResult);
+    }];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
