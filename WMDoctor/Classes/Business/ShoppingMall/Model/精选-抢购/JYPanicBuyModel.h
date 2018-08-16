@@ -23,6 +23,6 @@
 @protocol JYPanicBuyGoodsModel;
 @interface JYPanicBuyModel : WMJSONModel
 
-@property(nonatomic, strong)NSArray *RushArray;
+@property(nonatomic, strong)NSArray<JYPanicBuyGoodsModel> *RushArray;
 
 @end

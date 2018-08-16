@@ -11,7 +11,7 @@
 @implementation JYGroupBuyAPIManager
 
 - (NSString *)methodName{
-    return @"pro/getGroupList.jspx";
+    return @"/pro/getGroupList.jspx";
 }
 
 - (HTTPMethodType)requestType{

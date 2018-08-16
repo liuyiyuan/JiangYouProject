@@ -14,7 +14,6 @@
 #import "JYSCCHeadlineAPIManager.h"
 #import "JYSCCHeadlineModel.h"
 #import "JYStoreModuleCell.h"
-#import "WMNewHotQuestionCell.h"
 #import "JYSCCHeadlineCell.h"
 #import "JYSCCGoodsCell.h"
 #import "JYSCCGoodsAPIManager.h"
@@ -146,9 +145,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 3) {
+        JYSCCGoodsModel *store = [self.dataSource objectAtIndex:indexPath.row];
         WMTabBarController * tabBarController = (WMTabBarController *)self.window.rootViewController;
         WMNavgationController * navController = (WMNavgationController*)tabBarController.viewControllers[tabBarController.selectedIndex];
         JYStoreDetailViewController *storeDetailViewController = [[JYStoreDetailViewController alloc] init];
+        storeDetailViewController.storeId = store.merchantid;
         [navController pushViewController:storeDetailViewController animated:YES];
     }
 }

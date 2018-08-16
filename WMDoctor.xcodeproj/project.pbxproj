@@ -492,6 +492,27 @@
 		8504859020A531D00070D264 /* WMSearchPatientCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8504858E20A531D00070D264 /* WMSearchPatientCell.xib */; };
 		850F173A1F3D548E0057FF86 /* WMGroupNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 850F17391F3D548E0057FF86 /* WMGroupNewsModel.m */; };
 		851187AC211E94D200F4D549 /* JYPanicBuyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 851187AB211E94D200F4D549 /* JYPanicBuyModel.m */; };
+		851187B02120751E00F4D549 /* JYGroupBuyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 851187AF2120751E00F4D549 /* JYGroupBuyModel.m */; };
+		851187B421207F7500F4D549 /* JYWelfareBannerAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 851187B321207F7500F4D549 /* JYWelfareBannerAPIManager.m */; };
+		851187B7212081FA00F4D549 /* JYWelfareItemListAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 851187B6212081FA00F4D549 /* JYWelfareItemListAPIManager.m */; };
+		851187BB212083B700F4D549 /* JYWelfareItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 851187BA212083B700F4D549 /* JYWelfareItemModel.m */; };
+		851187C12120862100F4D549 /* JYNewestStoreAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 851187C02120862100F4D549 /* JYNewestStoreAPIManager.m */; };
+		851187C42120871600F4D549 /* JYNewestStoreModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 851187C32120871600F4D549 /* JYNewestStoreModel.m */; };
+		851187CA212089F500F4D549 /* JYWelfareGoodsListAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 851187C9212089F500F4D549 /* JYWelfareGoodsListAPIManager.m */; };
+		851187CD21208B3D00F4D549 /* JYWelfareGoodsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 851187CC21208B3D00F4D549 /* JYWelfareGoodsModel.m */; };
+		851187E42122C9AD00F4D549 /* JYStoreActiveCarefullyChooseaAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 851187E32122C9AD00F4D549 /* JYStoreActiveCarefullyChooseaAPIManager.m */; };
+		851187E92122D16C00F4D549 /* JYStoreActiveCarefullyChooseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 851187E82122D16C00F4D549 /* JYStoreActiveCarefullyChooseModel.m */; };
+		851187EC2122F17E00F4D549 /* JYSCCStoreAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 851187EB2122F17E00F4D549 /* JYSCCStoreAPIManager.m */; };
+		851187EF2122F34B00F4D549 /* JYSCCStoreModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 851187EE2122F34B00F4D549 /* JYSCCStoreModel.m */; };
+		851187F32123B09600F4D549 /* JYStoreDetailAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 851187F22123B09600F4D549 /* JYStoreDetailAPIManager.m */; };
+		851187F62123B2E200F4D549 /* JYStoreEvaluatesAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 851187F52123B2E200F4D549 /* JYStoreEvaluatesAPIManager.m */; };
+		851187FA2123B68000F4D549 /* JYRedpacketAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 851187F92123B68000F4D549 /* JYRedpacketAPIManager.m */; };
+		851187FE2123B78500F4D549 /* JYRedpacketModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 851187FD2123B78500F4D549 /* JYRedpacketModel.m */; };
+		851188042123BCD100F4D549 /* JYStoreEvaluatesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 851188032123BCD100F4D549 /* JYStoreEvaluatesModel.m */; };
+		851188412125215F00F4D549 /* JYRedpacketItemsAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 851188402125215F00F4D549 /* JYRedpacketItemsAPIManager.m */; };
+		85118845212555C700F4D549 /* JYRedpacketItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 85118844212555C700F4D549 /* JYRedpacketItemModel.m */; };
+		8511884A212558CC00F4D549 /* JYRedpacketDetailAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85118849212558CC00F4D549 /* JYRedpacketDetailAPIManager.m */; };
+		8511884D2125595C00F4D549 /* JYRedpacketDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8511884C2125595C00F4D549 /* JYRedpacketDetailModel.m */; };
 		8512521E20BD475400685E7A /* WMDoctorInfoNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512521D20BD475400685E7A /* WMDoctorInfoNewsModel.m */; };
 		852473B41F32B63E0049FB67 /* WMCricleHomeAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 852473B31F32B63E0049FB67 /* WMCricleHomeAPIManager.m */; };
 		852473BD1F344A060049FB67 /* WMRCIMGroupDataEntity+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 852473BA1F344A060049FB67 /* WMRCIMGroupDataEntity+CoreDataClass.m */; };
@@ -552,9 +573,6 @@
 		858104A7210FFFE400532B4D /* JYStoreBannerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 858104A6210FFFE400532B4D /* JYStoreBannerTableViewCell.m */; };
 		858104AD2110021500532B4D /* WMHomeModuleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 858104AB2110021400532B4D /* WMHomeModuleView.m */; };
 		858104CE2110429600532B4D /* JYStoreModuleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 858104CD2110429600532B4D /* JYStoreModuleCell.m */; };
-		858104D1211044AA00532B4D /* WMNewHotQuestionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 858104D0211044AA00532B4D /* WMNewHotQuestionView.m */; };
-		858104D4211044DA00532B4D /* WMNewHotQuestionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 858104D3211044DA00532B4D /* WMNewHotQuestionModel.m */; };
-		858104D721104AFE00532B4D /* WMNewHotQuestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 858104D621104AFE00532B4D /* WMNewHotQuestionCell.m */; };
 		858104DA2110BA9B00532B4D /* JYCarefullyChooseBannerAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 858104D92110BA9B00532B4D /* JYCarefullyChooseBannerAPIManager.m */; };
 		858104E02110BCF100532B4D /* JYBannerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 858104DF2110BCF100532B4D /* JYBannerModel.m */; };
 		858104E42112AC8700532B4D /* JYSCCHeadlineAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 858104E32112AC8700532B4D /* JYSCCHeadlineAPIManager.m */; };
@@ -580,8 +598,6 @@
 		85CAB44D210D41D800884A54 /* JYMineAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CAB44C210D41D800884A54 /* JYMineAPIManager.m */; };
 		85CAB452210D43E900884A54 /* JYMineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CAB451210D43E900884A54 /* JYMineModel.m */; };
 		85CAB455210D472000884A54 /* JYEditUserInfoAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CAB454210D472000884A54 /* JYEditUserInfoAPIManager.m */; };
-		85CAB459210DD34300884A54 /* JYShoppingMallAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CAB458210DD34200884A54 /* JYShoppingMallAPIManager.m */; };
-		85CAB45C210DDEA300884A54 /* JYShoppingMallModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CAB45B210DDEA300884A54 /* JYShoppingMallModel.m */; };
 		85CAB462210DED8000884A54 /* JYStoreCarefullyChooseAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CAB461210DED7F00884A54 /* JYStoreCarefullyChooseAPIManager.m */; };
 		85CF6CCA20A599B900FCDD21 /* UISearchBar+WMLeftPlaceholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CF6CC920A599B900FCDD21 /* UISearchBar+WMLeftPlaceholder.m */; };
 		85CF6D0020AE7A8F00FCDD21 /* WMMedicalCircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85CF6CFF20AE7A8F00FCDD21 /* WMMedicalCircleViewController.m */; };
@@ -1677,6 +1693,48 @@
 		850F17391F3D548E0057FF86 /* WMGroupNewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMGroupNewsModel.m; sourceTree = "<group>"; };
 		851187AA211E94D200F4D549 /* JYPanicBuyModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYPanicBuyModel.h; sourceTree = "<group>"; };
 		851187AB211E94D200F4D549 /* JYPanicBuyModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYPanicBuyModel.m; sourceTree = "<group>"; };
+		851187AE2120751E00F4D549 /* JYGroupBuyModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYGroupBuyModel.h; sourceTree = "<group>"; };
+		851187AF2120751E00F4D549 /* JYGroupBuyModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYGroupBuyModel.m; sourceTree = "<group>"; };
+		851187B221207F7500F4D549 /* JYWelfareBannerAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYWelfareBannerAPIManager.h; sourceTree = "<group>"; };
+		851187B321207F7500F4D549 /* JYWelfareBannerAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYWelfareBannerAPIManager.m; sourceTree = "<group>"; };
+		851187B5212081F900F4D549 /* JYWelfareItemListAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYWelfareItemListAPIManager.h; sourceTree = "<group>"; };
+		851187B6212081FA00F4D549 /* JYWelfareItemListAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYWelfareItemListAPIManager.m; sourceTree = "<group>"; };
+		851187B9212083B700F4D549 /* JYWelfareItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYWelfareItemModel.h; sourceTree = "<group>"; };
+		851187BA212083B700F4D549 /* JYWelfareItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYWelfareItemModel.m; sourceTree = "<group>"; };
+		851187BF2120862100F4D549 /* JYNewestStoreAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYNewestStoreAPIManager.h; sourceTree = "<group>"; };
+		851187C02120862100F4D549 /* JYNewestStoreAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYNewestStoreAPIManager.m; sourceTree = "<group>"; };
+		851187C22120871600F4D549 /* JYNewestStoreModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYNewestStoreModel.h; sourceTree = "<group>"; };
+		851187C32120871600F4D549 /* JYNewestStoreModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYNewestStoreModel.m; sourceTree = "<group>"; };
+		851187C8212089F500F4D549 /* JYWelfareGoodsListAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYWelfareGoodsListAPIManager.h; sourceTree = "<group>"; };
+		851187C9212089F500F4D549 /* JYWelfareGoodsListAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYWelfareGoodsListAPIManager.m; sourceTree = "<group>"; };
+		851187CB21208B3D00F4D549 /* JYWelfareGoodsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYWelfareGoodsModel.h; sourceTree = "<group>"; };
+		851187CC21208B3D00F4D549 /* JYWelfareGoodsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYWelfareGoodsModel.m; sourceTree = "<group>"; };
+		851187E22122C9AD00F4D549 /* JYStoreActiveCarefullyChooseaAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYStoreActiveCarefullyChooseaAPIManager.h; sourceTree = "<group>"; };
+		851187E32122C9AD00F4D549 /* JYStoreActiveCarefullyChooseaAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYStoreActiveCarefullyChooseaAPIManager.m; sourceTree = "<group>"; };
+		851187E72122D16C00F4D549 /* JYStoreActiveCarefullyChooseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYStoreActiveCarefullyChooseModel.h; sourceTree = "<group>"; };
+		851187E82122D16C00F4D549 /* JYStoreActiveCarefullyChooseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYStoreActiveCarefullyChooseModel.m; sourceTree = "<group>"; };
+		851187EA2122F17E00F4D549 /* JYSCCStoreAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYSCCStoreAPIManager.h; sourceTree = "<group>"; };
+		851187EB2122F17E00F4D549 /* JYSCCStoreAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYSCCStoreAPIManager.m; sourceTree = "<group>"; };
+		851187ED2122F34B00F4D549 /* JYSCCStoreModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYSCCStoreModel.h; sourceTree = "<group>"; };
+		851187EE2122F34B00F4D549 /* JYSCCStoreModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYSCCStoreModel.m; sourceTree = "<group>"; };
+		851187F12123B09600F4D549 /* JYStoreDetailAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYStoreDetailAPIManager.h; sourceTree = "<group>"; };
+		851187F22123B09600F4D549 /* JYStoreDetailAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYStoreDetailAPIManager.m; sourceTree = "<group>"; };
+		851187F42123B2E200F4D549 /* JYStoreEvaluatesAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYStoreEvaluatesAPIManager.h; sourceTree = "<group>"; };
+		851187F52123B2E200F4D549 /* JYStoreEvaluatesAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYStoreEvaluatesAPIManager.m; sourceTree = "<group>"; };
+		851187F82123B68000F4D549 /* JYRedpacketAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYRedpacketAPIManager.h; sourceTree = "<group>"; };
+		851187F92123B68000F4D549 /* JYRedpacketAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYRedpacketAPIManager.m; sourceTree = "<group>"; };
+		851187FC2123B78500F4D549 /* JYRedpacketModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYRedpacketModel.h; sourceTree = "<group>"; };
+		851187FD2123B78500F4D549 /* JYRedpacketModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYRedpacketModel.m; sourceTree = "<group>"; };
+		851188022123BCD100F4D549 /* JYStoreEvaluatesModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYStoreEvaluatesModel.h; sourceTree = "<group>"; };
+		851188032123BCD100F4D549 /* JYStoreEvaluatesModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYStoreEvaluatesModel.m; sourceTree = "<group>"; };
+		8511883F2125215F00F4D549 /* JYRedpacketItemsAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYRedpacketItemsAPIManager.h; sourceTree = "<group>"; };
+		851188402125215F00F4D549 /* JYRedpacketItemsAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYRedpacketItemsAPIManager.m; sourceTree = "<group>"; };
+		85118843212555C700F4D549 /* JYRedpacketItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYRedpacketItemModel.h; sourceTree = "<group>"; };
+		85118844212555C700F4D549 /* JYRedpacketItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYRedpacketItemModel.m; sourceTree = "<group>"; };
+		85118848212558CC00F4D549 /* JYRedpacketDetailAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYRedpacketDetailAPIManager.h; sourceTree = "<group>"; };
+		85118849212558CC00F4D549 /* JYRedpacketDetailAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYRedpacketDetailAPIManager.m; sourceTree = "<group>"; };
+		8511884B2125595C00F4D549 /* JYRedpacketDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYRedpacketDetailModel.h; sourceTree = "<group>"; };
+		8511884C2125595C00F4D549 /* JYRedpacketDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYRedpacketDetailModel.m; sourceTree = "<group>"; };
 		8512521C20BD475400685E7A /* WMDoctorInfoNewsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMDoctorInfoNewsModel.h; sourceTree = "<group>"; };
 		8512521D20BD475400685E7A /* WMDoctorInfoNewsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMDoctorInfoNewsModel.m; sourceTree = "<group>"; };
 		852473B21F32B63E0049FB67 /* WMCricleHomeAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCricleHomeAPIManager.h; sourceTree = "<group>"; };
@@ -1789,12 +1847,6 @@
 		858104AC2110021400532B4D /* WMHomeModuleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMHomeModuleView.h; sourceTree = "<group>"; };
 		858104CC2110429600532B4D /* JYStoreModuleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYStoreModuleCell.h; sourceTree = "<group>"; };
 		858104CD2110429600532B4D /* JYStoreModuleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYStoreModuleCell.m; sourceTree = "<group>"; };
-		858104CF211044AA00532B4D /* WMNewHotQuestionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMNewHotQuestionView.h; sourceTree = "<group>"; };
-		858104D0211044AA00532B4D /* WMNewHotQuestionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMNewHotQuestionView.m; sourceTree = "<group>"; };
-		858104D2211044DA00532B4D /* WMNewHotQuestionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMNewHotQuestionModel.h; sourceTree = "<group>"; };
-		858104D3211044DA00532B4D /* WMNewHotQuestionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMNewHotQuestionModel.m; sourceTree = "<group>"; };
-		858104D521104AFE00532B4D /* WMNewHotQuestionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMNewHotQuestionCell.h; sourceTree = "<group>"; };
-		858104D621104AFE00532B4D /* WMNewHotQuestionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMNewHotQuestionCell.m; sourceTree = "<group>"; };
 		858104D82110BA9B00532B4D /* JYCarefullyChooseBannerAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYCarefullyChooseBannerAPIManager.h; sourceTree = "<group>"; };
 		858104D92110BA9B00532B4D /* JYCarefullyChooseBannerAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYCarefullyChooseBannerAPIManager.m; sourceTree = "<group>"; };
 		858104DE2110BCF100532B4D /* JYBannerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYBannerModel.h; sourceTree = "<group>"; };
@@ -1845,10 +1897,6 @@
 		85CAB451210D43E900884A54 /* JYMineModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYMineModel.m; sourceTree = "<group>"; };
 		85CAB453210D472000884A54 /* JYEditUserInfoAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYEditUserInfoAPIManager.h; sourceTree = "<group>"; };
 		85CAB454210D472000884A54 /* JYEditUserInfoAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYEditUserInfoAPIManager.m; sourceTree = "<group>"; };
-		85CAB457210DD34200884A54 /* JYShoppingMallAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYShoppingMallAPIManager.h; sourceTree = "<group>"; };
-		85CAB458210DD34200884A54 /* JYShoppingMallAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYShoppingMallAPIManager.m; sourceTree = "<group>"; };
-		85CAB45A210DDEA300884A54 /* JYShoppingMallModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYShoppingMallModel.h; sourceTree = "<group>"; };
-		85CAB45B210DDEA300884A54 /* JYShoppingMallModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYShoppingMallModel.m; sourceTree = "<group>"; };
 		85CAB460210DED7F00884A54 /* JYStoreCarefullyChooseAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYStoreCarefullyChooseAPIManager.h; sourceTree = "<group>"; };
 		85CAB461210DED7F00884A54 /* JYStoreCarefullyChooseAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYStoreCarefullyChooseAPIManager.m; sourceTree = "<group>"; };
 		85CF6CC820A599B900FCDD21 /* UISearchBar+WMLeftPlaceholder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+WMLeftPlaceholder.h"; sourceTree = "<group>"; };
@@ -4669,6 +4717,132 @@
 			path = "精选-抢购";
 			sourceTree = "<group>";
 		};
+		851187AD212074FC00F4D549 /* 精选-团购 */ = {
+			isa = PBXGroup;
+			children = (
+				851187AE2120751E00F4D549 /* JYGroupBuyModel.h */,
+				851187AF2120751E00F4D549 /* JYGroupBuyModel.m */,
+			);
+			path = "精选-团购";
+			sourceTree = "<group>";
+		};
+		851187B121207F3D00F4D549 /* 精选-福利 */ = {
+			isa = PBXGroup;
+			children = (
+				851187B221207F7500F4D549 /* JYWelfareBannerAPIManager.h */,
+				851187B321207F7500F4D549 /* JYWelfareBannerAPIManager.m */,
+				851187B5212081F900F4D549 /* JYWelfareItemListAPIManager.h */,
+				851187B6212081FA00F4D549 /* JYWelfareItemListAPIManager.m */,
+				851187BF2120862100F4D549 /* JYNewestStoreAPIManager.h */,
+				851187C02120862100F4D549 /* JYNewestStoreAPIManager.m */,
+				851187C8212089F500F4D549 /* JYWelfareGoodsListAPIManager.h */,
+				851187C9212089F500F4D549 /* JYWelfareGoodsListAPIManager.m */,
+			);
+			path = "精选-福利";
+			sourceTree = "<group>";
+		};
+		851187B82120831F00F4D549 /* 精选-福利 */ = {
+			isa = PBXGroup;
+			children = (
+				851187B9212083B700F4D549 /* JYWelfareItemModel.h */,
+				851187BA212083B700F4D549 /* JYWelfareItemModel.m */,
+				851187C22120871600F4D549 /* JYNewestStoreModel.h */,
+				851187C32120871600F4D549 /* JYNewestStoreModel.m */,
+				851187CB21208B3D00F4D549 /* JYWelfareGoodsModel.h */,
+				851187CC21208B3D00F4D549 /* JYWelfareGoodsModel.m */,
+			);
+			path = "精选-福利";
+			sourceTree = "<group>";
+		};
+		851187E12122C96E00F4D549 /* 商户列表 */ = {
+			isa = PBXGroup;
+			children = (
+				851187E22122C9AD00F4D549 /* JYStoreActiveCarefullyChooseaAPIManager.h */,
+				851187E32122C9AD00F4D549 /* JYStoreActiveCarefullyChooseaAPIManager.m */,
+				851187EA2122F17E00F4D549 /* JYSCCStoreAPIManager.h */,
+				851187EB2122F17E00F4D549 /* JYSCCStoreAPIManager.m */,
+			);
+			path = "商户列表";
+			sourceTree = "<group>";
+		};
+		851187E62122D12F00F4D549 /* 商户列表 */ = {
+			isa = PBXGroup;
+			children = (
+				851187E72122D16C00F4D549 /* JYStoreActiveCarefullyChooseModel.h */,
+				851187E82122D16C00F4D549 /* JYStoreActiveCarefullyChooseModel.m */,
+				851187ED2122F34B00F4D549 /* JYSCCStoreModel.h */,
+				851187EE2122F34B00F4D549 /* JYSCCStoreModel.m */,
+				851188022123BCD100F4D549 /* JYStoreEvaluatesModel.h */,
+				851188032123BCD100F4D549 /* JYStoreEvaluatesModel.m */,
+			);
+			path = "商户列表";
+			sourceTree = "<group>";
+		};
+		851187F02123B07400F4D549 /* 商户详情 */ = {
+			isa = PBXGroup;
+			children = (
+				851187F12123B09600F4D549 /* JYStoreDetailAPIManager.h */,
+				851187F22123B09600F4D549 /* JYStoreDetailAPIManager.m */,
+				851187F42123B2E200F4D549 /* JYStoreEvaluatesAPIManager.h */,
+				851187F52123B2E200F4D549 /* JYStoreEvaluatesAPIManager.m */,
+			);
+			path = "商户详情";
+			sourceTree = "<group>";
+		};
+		851187F72123B64F00F4D549 /* 商城-领红包 */ = {
+			isa = PBXGroup;
+			children = (
+				851187F82123B68000F4D549 /* JYRedpacketAPIManager.h */,
+				851187F92123B68000F4D549 /* JYRedpacketAPIManager.m */,
+			);
+			path = "商城-领红包";
+			sourceTree = "<group>";
+		};
+		851187FB2123B75E00F4D549 /* 商城-领红包 */ = {
+			isa = PBXGroup;
+			children = (
+				851187FC2123B78500F4D549 /* JYRedpacketModel.h */,
+				851187FD2123B78500F4D549 /* JYRedpacketModel.m */,
+			);
+			path = "商城-领红包";
+			sourceTree = "<group>";
+		};
+		8511883B212520CD00F4D549 /* 商城-红包分类 */ = {
+			isa = PBXGroup;
+			children = (
+				8511883F2125215F00F4D549 /* JYRedpacketItemsAPIManager.h */,
+				851188402125215F00F4D549 /* JYRedpacketItemsAPIManager.m */,
+			);
+			path = "商城-红包分类";
+			sourceTree = "<group>";
+		};
+		851188422125559A00F4D549 /* 商城-红包分类 */ = {
+			isa = PBXGroup;
+			children = (
+				85118843212555C700F4D549 /* JYRedpacketItemModel.h */,
+				85118844212555C700F4D549 /* JYRedpacketItemModel.m */,
+			);
+			path = "商城-红包分类";
+			sourceTree = "<group>";
+		};
+		851188462125589200F4D549 /* 商城-红包详情 */ = {
+			isa = PBXGroup;
+			children = (
+				85118848212558CC00F4D549 /* JYRedpacketDetailAPIManager.h */,
+				85118849212558CC00F4D549 /* JYRedpacketDetailAPIManager.m */,
+			);
+			path = "商城-红包详情";
+			sourceTree = "<group>";
+		};
+		85118847212558A700F4D549 /* 商城-红包详情 */ = {
+			isa = PBXGroup;
+			children = (
+				8511884B2125595C00F4D549 /* JYRedpacketDetailModel.h */,
+				8511884C2125595C00F4D549 /* JYRedpacketDetailModel.m */,
+			);
+			path = "商城-红包详情";
+			sourceTree = "<group>";
+		};
 		854180B91FCBE1AE00EA4235 /* 我的微豆 */ = {
 			isa = PBXGroup;
 			children = (
@@ -4884,6 +5058,8 @@
 				858104D92110BA9B00532B4D /* JYCarefullyChooseBannerAPIManager.m */,
 				855280F82112ECD9006E4D07 /* JYSCCGoodsAPIManager.h */,
 				855280F92112ECD9006E4D07 /* JYSCCGoodsAPIManager.m */,
+				85CAB460210DED7F00884A54 /* JYStoreCarefullyChooseAPIManager.h */,
+				85CAB461210DED7F00884A54 /* JYStoreCarefullyChooseAPIManager.m */,
 			);
 			path = "商城-精选";
 			sourceTree = "<group>";
@@ -4904,10 +5080,6 @@
 		858104E92112B0E200532B4D /* 商城-精选 */ = {
 			isa = PBXGroup;
 			children = (
-				858104D521104AFE00532B4D /* WMNewHotQuestionCell.h */,
-				858104D621104AFE00532B4D /* WMNewHotQuestionCell.m */,
-				858104CF211044AA00532B4D /* WMNewHotQuestionView.h */,
-				858104D0211044AA00532B4D /* WMNewHotQuestionView.m */,
 				858104AC2110021400532B4D /* WMHomeModuleView.h */,
 				858104AB2110021400532B4D /* WMHomeModuleView.m */,
 				8588374920E7181600DE928F /* JYMenuSelectorView.h */,
@@ -4971,10 +5143,12 @@
 			children = (
 				858104E52112B03D00532B4D /* 商城-精选 */,
 				851187A9211E94A300F4D549 /* 精选-抢购 */,
-				85CAB45A210DDEA300884A54 /* JYShoppingMallModel.h */,
-				85CAB45B210DDEA300884A54 /* JYShoppingMallModel.m */,
-				858104D2211044DA00532B4D /* WMNewHotQuestionModel.h */,
-				858104D3211044DA00532B4D /* WMNewHotQuestionModel.m */,
+				851187AD212074FC00F4D549 /* 精选-团购 */,
+				851187B82120831F00F4D549 /* 精选-福利 */,
+				851187E62122D12F00F4D549 /* 商户列表 */,
+				851187FB2123B75E00F4D549 /* 商城-领红包 */,
+				851188422125559A00F4D549 /* 商城-红包分类 */,
+				85118847212558A700F4D549 /* 商城-红包详情 */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -5116,13 +5290,15 @@
 		85CAB456210DD30D00884A54 /* APIManager */ = {
 			isa = PBXGroup;
 			children = (
+				858104E12112ABFB00532B4D /* 商城-精选 */,
 				85528115211430D9006E4D07 /* 商城-团购 */,
 				8552810A2113EF08006E4D07 /* 商城-抢购 */,
-				858104E12112ABFB00532B4D /* 商城-精选 */,
-				85CAB457210DD34200884A54 /* JYShoppingMallAPIManager.h */,
-				85CAB458210DD34200884A54 /* JYShoppingMallAPIManager.m */,
-				85CAB460210DED7F00884A54 /* JYStoreCarefullyChooseAPIManager.h */,
-				85CAB461210DED7F00884A54 /* JYStoreCarefullyChooseAPIManager.m */,
+				851187B121207F3D00F4D549 /* 精选-福利 */,
+				851187E12122C96E00F4D549 /* 商户列表 */,
+				851187F02123B07400F4D549 /* 商户详情 */,
+				851187F72123B64F00F4D549 /* 商城-领红包 */,
+				8511883B212520CD00F4D549 /* 商城-红包分类 */,
+				851188462125589200F4D549 /* 商城-红包详情 */,
 			);
 			path = APIManager;
 			sourceTree = "<group>";
@@ -5877,8 +6053,10 @@
 				8501428B1F3AB6B0000BA97F /* WMArrayUtil.m in Sources */,
 				856237381F7DF42500451954 /* WMDoctorVoiceModel.m in Sources */,
 				AD0E1172211B2A6500C3E98B /* JYHomeVideoTableViewCell.m in Sources */,
+				851187C12120862100F4D549 /* JYNewestStoreAPIManager.m in Sources */,
 				1890BA831FCCF2450009339C /* WMQuestionAnswerSendAPIManager.m in Sources */,
 				AD7A0708211711C900D3AAB4 /* JYHomeCancleFocusManager.m in Sources */,
+				851187E42122C9AD00F4D549 /* JYStoreActiveCarefullyChooseaAPIManager.m in Sources */,
 				181A034E1FDE232F00868821 /* WMMyServiceSetViewController.m in Sources */,
 				1855DC3C1E83C0CE001B4DDD /* WMSchoolListAPIManager.m in Sources */,
 				183287CA1F0CC9CF00F87E01 /* WMReportListModel.m in Sources */,
@@ -5891,8 +6069,6 @@
 				0C4681281E28810C00BDE355 /* WMVersionUpgradeAPIManager.m in Sources */,
 				ADA4A8E520E71B7C006400F3 /* JYInformationNicknameView.m in Sources */,
 				18153C341E154A6C00956D2A /* WMEvaluateLabelView.m in Sources */,
-				858104D721104AFE00532B4D /* WMNewHotQuestionCell.m in Sources */,
-				858104D1211044AA00532B4D /* WMNewHotQuestionView.m in Sources */,
 				18777AA91E27219A000957D6 /* WMMyWalletViewController.m in Sources */,
 				854180C21FCBE6B300EA4235 /* WMMyMicroBeanModel.m in Sources */,
 				188F14BB1F2882F60058B4CB /* QuickEntity+CoreDataClass.m in Sources */,
@@ -5901,6 +6077,7 @@
 				18153C371E16287900956D2A /* WMchangePriceAPIManager.m in Sources */,
 				1D3B76421E14A0320035EE65 /* WMMessageTypeAPIManager.m in Sources */,
 				184AD55E20A968C500F973D3 /* WMTagGroupCollectionViewCell.m in Sources */,
+				851187EF2122F34B00F4D549 /* JYSCCStoreModel.m in Sources */,
 				1890BA4F1FC7EE700009339C /* WMQuestionDetailViewController.m in Sources */,
 				AD93FEAB20DDE08F00C8EF83 /* WYNewsDetailVC.m in Sources */,
 				183287E51F10CBB600F87E01 /* WMReadReportTableViewCell.m in Sources */,
@@ -5920,6 +6097,7 @@
 				85DBE7A01FC3D3C700E821E4 /* WMQuestionModel.m in Sources */,
 				CC2B250520EF12A60050D5B2 /* UIView+HYBUIViewCommon.m in Sources */,
 				855280FA2112ECD9006E4D07 /* JYSCCGoodsAPIManager.m in Sources */,
+				8511884A212558CC00F4D549 /* JYRedpacketDetailAPIManager.m in Sources */,
 				8588374F20E8885400DE928F /* JYLoginAPIManager.m in Sources */,
 				CC7E089221194F95007B14C6 /* ZJCollectionView.m in Sources */,
 				0CAF8F4F1E0CEEFE0092E6A8 /* WMShowImageCollectionViewCell.m in Sources */,
@@ -5934,11 +6112,13 @@
 				1D8203FC1E64013700494F1C /* WMFollowUpAPIManager.m in Sources */,
 				1D3B76451E14AE330035EE65 /* WMMessageTypeParamModel.m in Sources */,
 				0C40047F1E026632003E1FC4 /* PopUpUtil.m in Sources */,
+				851188042123BCD100F4D549 /* JYStoreEvaluatesModel.m in Sources */,
 				181C6CA71E88D89C00CD0119 /* NSString+IDCardVerify.m in Sources */,
 				8598823420F333F500A5AC04 /* FSAES128.m in Sources */,
 				1D3708BB1E83C5DC00974C73 /* WMDoctorCardModel.m in Sources */,
 				183287D91F10BE1C00F87E01 /* WMAllReportListViewController.m in Sources */,
 				188ACA8E2045010500A54692 /* WMNewDetailWebViewController.m in Sources */,
+				85118845212555C700F4D549 /* JYRedpacketItemModel.m in Sources */,
 				8537E7A41F8DA9AF00F1429E /* WMDoctorVoiceView.m in Sources */,
 				854180BF1FCBE40700EA4235 /* WMMyMicroBeanAPIManager.m in Sources */,
 				186AF3041ED51D5100F699C6 /* HClTextView.m in Sources */,
@@ -5971,6 +6151,7 @@
 				1D6829241E7BD09700422732 /* WMDoctorFirendCell.m in Sources */,
 				855280F32112EB47006E4D07 /* JYSCCGoodsCell.m in Sources */,
 				85E4B6061F2AD437005F6D21 /* WMGroupRCDataManager.m in Sources */,
+				851187F32123B09600F4D549 /* JYStoreDetailAPIManager.m in Sources */,
 				0CEB2ED71E0CFDFD0070119A /* WMDoctorMainTableViewController.m in Sources */,
 				85CAB44D210D41D800884A54 /* JYMineAPIManager.m in Sources */,
 				1855DC4B1E83C3A3001B4DDD /* WMEducationCustomModel.m in Sources */,
@@ -5980,6 +6161,7 @@
 				85CAB452210D43E900884A54 /* JYMineModel.m in Sources */,
 				0C5CB0831E1DEBC1005AF239 /* WMDoctor.xcdatamodeld in Sources */,
 				858104E42112AC8700532B4D /* JYSCCHeadlineAPIManager.m in Sources */,
+				8511884D2125595C00F4D549 /* JYRedpacketDetailModel.m in Sources */,
 				18F5B6801E149E7D0051C60E /* WMAdvertModel.m in Sources */,
 				18237EE81EA78CE000C30F51 /* WMServiceUpdatePriceAPIManager.m in Sources */,
 				85BE0CB121077518002B964C /* JYSetPasswordAPIManager.m in Sources */,
@@ -5994,12 +6176,14 @@
 				855260441F41343100F16618 /* WMGroupMemberViewController.m in Sources */,
 				1814F1F11E9DF9D5005B4260 /* WMProSelectViewController.m in Sources */,
 				0CAF8F3E1E0CEDF60092E6A8 /* WMRCInquiryMessage.m in Sources */,
+				851187CA212089F500F4D549 /* JYWelfareGoodsListAPIManager.m in Sources */,
 				1D3B765A1E1531DB0035EE65 /* WMRCChatListSystemCell.m in Sources */,
 				183287F81F12031300F87E01 /* XHSegmentViewController.m in Sources */,
 				1D29FAAC1E1D120100472F0E /* WMPatientStateModel.m in Sources */,
 				85CAB430210A030E00884A54 /* JYSameCityAPIManager.m in Sources */,
 				CC2B24F820EF10AA0050D5B2 /* JYCircleViewController.m in Sources */,
 				1D3B763C1E1393960035EE65 /* WMPatientReportedParamModel.m in Sources */,
+				851187FA2123B68000F4D549 /* JYRedpacketAPIManager.m in Sources */,
 				AD526A1120E8BC7300D4BF85 /* JYFindPassWordView.m in Sources */,
 				8542E0B72068D997001E8421 /* WMReplyMessage.m in Sources */,
 				0CAF8F211E0CED2A0092E6A8 /* WMNewInfoMessageCell.m in Sources */,
@@ -6011,6 +6195,7 @@
 				CC7E089121194F95007B14C6 /* ZJScrollPageView.m in Sources */,
 				0C4650A61E1B45F20084053A /* WMBaseWKWebController.m in Sources */,
 				ADA4A8EE20E8995A006400F3 /* JYInformationInComeView.m in Sources */,
+				851187C42120871600F4D549 /* JYNewestStoreModel.m in Sources */,
 				AD0E11592119F1E900C3E98B /* JYHomeBeautyPictureHeaderCollectionViewCell.m in Sources */,
 				856237351F7DE5B600451954 /* WMDoctorVoiceAPIManager.m in Sources */,
 				85DBE7A41FC5121C00E821E4 /* WMIntegralDetailViewController.m in Sources */,
@@ -6032,6 +6217,7 @@
 				0CAF8F2F1E0CED5D0092E6A8 /* WMNotificationMessageViewController.m in Sources */,
 				1D38168E1ECC73AA00562FCA /* WMCertificationSucViewController.m in Sources */,
 				85F2F94F211B37BD0062A8A1 /* JYRedpacketBGCell.m in Sources */,
+				851187B421207F7500F4D549 /* JYWelfareBannerAPIManager.m in Sources */,
 				CCA4FC6F20E33A77000A783A /* JYPersonalInformationHeaderView.m in Sources */,
 				0CAF8F3B1E0CEDBE0092E6A8 /* WMServiceViewController.m in Sources */,
 				18237EDC1EA76E1500C30F51 /* WMServiceTitleCell.m in Sources */,
@@ -6049,6 +6235,7 @@
 				183287DC1F10C3E600F87E01 /* WMReadReportViewController.m in Sources */,
 				AD0E119C21206B6E00C3E98B /* JYHomeRecommendedUnPictureTableViewCell.m in Sources */,
 				0C4004831E026B84003E1FC4 /* DateTimeUtil.m in Sources */,
+				851187E92122D16C00F4D549 /* JYStoreActiveCarefullyChooseModel.m in Sources */,
 				1890BA581FC804F10009339C /* WMNewPictureSelectView.m in Sources */,
 				AD0E119921205E7D00C3E98B /* JYHomeRecommendedSinglePictureTableViewCell.m in Sources */,
 				ADA4A8E220E719EB006400F3 /* JYInformaitonHeaderView.m in Sources */,
@@ -6115,6 +6302,7 @@
 				85DBE7B21FC66DB200E821E4 /* WMIntegralDetailModel.m in Sources */,
 				AD93FE7E20DDDC8100C8EF83 /* JYHomeViewController.m in Sources */,
 				AD0E1175211C7F5700C3E98B /* JYHomeBBSHeader.m in Sources */,
+				851187EC2122F17E00F4D549 /* JYSCCStoreAPIManager.m in Sources */,
 				CC7E089821194F95007B14C6 /* UIViewController+ZJScrollPageController.m in Sources */,
 				0C40048F1E026D79003E1FC4 /* WMDevice.m in Sources */,
 				85F2F92221196D570062A8A1 /* JYStoresViewController.m in Sources */,
@@ -6159,6 +6347,7 @@
 				8552811421143057006E4D07 /* JYGroupBuyView.m in Sources */,
 				186AF3111ED5258100F699C6 /* WMInfoTransitionViewController.m in Sources */,
 				AD526A1B20E8CB0800D4BF85 /* NSString+PPTextField.m in Sources */,
+				851187BB212083B700F4D549 /* JYWelfareItemModel.m in Sources */,
 				0CD6E2D91DFFF8A500E75DB5 /* AppConfig.m in Sources */,
 				1814F1F41E9DFBD0005B4260 /* WMTimeSelectViewController.m in Sources */,
 				CCA4FC6020E323DB000A783A /* JYMyWalletCollectionViewCell.m in Sources */,
@@ -6176,6 +6365,7 @@
 				181A035D1FDE4B6900868821 /* WMServicePriceCollectionViewCell.m in Sources */,
 				1D3B76511E14DBAB0035EE65 /* WMMessageListModel.m in Sources */,
 				AD0E1169211B25C000C3E98B /* JYHomeVideoViewController.m in Sources */,
+				851187CD21208B3D00F4D549 /* JYWelfareGoodsModel.m in Sources */,
 				1D3816541EC98E8F00562FCA /* WMHospitalChooseViewController.m in Sources */,
 				1D34F8031E9F9E3A00B3D539 /* WMCricleVIPPatientAPIManager.m in Sources */,
 				188F14BC1F2882F60058B4CB /* QuickEntity+CoreDataProperties.m in Sources */,
@@ -6235,7 +6425,6 @@
 				0CED7DAD1E1E2EA800892555 /* WMNavigationBar.m in Sources */,
 				1814F1FA1E9E28EA005B4260 /* WMSearchSchoolViewController.m in Sources */,
 				85DBE7A81FC5130B00E821E4 /* WMIntegralDetailCell.m in Sources */,
-				85CAB459210DD34300884A54 /* JYShoppingMallAPIManager.m in Sources */,
 				AD0E118D211DD7F800C3E98B /* JYHomeSameCityCollectionViewCell.m in Sources */,
 				1DE56A941E113E5000B93397 /* MJWeiMaiHeader.m in Sources */,
 				0CD6E2AC1DFFD08900E75DB5 /* AppDelegate.m in Sources */,
@@ -6247,6 +6436,7 @@
 				1D3816821ECC2A7400562FCA /* WMGetHospitalAPIManager.m in Sources */,
 				0CAF8F0B1E0A25840092E6A8 /* AFHTTPSessionManager+MultipleRequest.m in Sources */,
 				184AD55B20A9685F00F973D3 /* WMTagGroupViewController.m in Sources */,
+				851187F62123B2E200F4D549 /* JYStoreEvaluatesAPIManager.m in Sources */,
 				850142801F39ADB1000BA97F /* WMGroupActivityAPIManager.m in Sources */,
 				1814F1E51E9CC905005B4260 /* WMEducationSelectViewController.m in Sources */,
 				AD93FEAE20DDE23B00C8EF83 /* WYCategoryButton.m in Sources */,
@@ -6336,6 +6526,7 @@
 				0C77A04B1E2CA741005080FE /* WMVerifyCodeAPIManager.m in Sources */,
 				1855DC241E836794001B4DDD /* WMDoctorInfoAPIManager.m in Sources */,
 				18045B571E7BCA6E0021D39A /* ContactsCell.m in Sources */,
+				851188412125215F00F4D549 /* JYRedpacketItemsAPIManager.m in Sources */,
 				18328A301F1470F300F87E01 /* TOCOTimeBgImg.m in Sources */,
 				1815B23C1E10E77E00EB990A /* WMLaunchAdvertViewController.m in Sources */,
 				1D87CE241E271F6A00CF5406 /* WMMessageNewDetailViewController.m in Sources */,
@@ -6355,7 +6546,6 @@
 				AD0E117E211C975200C3E98B /* JYHomeBBSFooterView.m in Sources */,
 				85CAB462210DED8000884A54 /* JYStoreCarefullyChooseAPIManager.m in Sources */,
 				0CAF8F7B1E0CF5E10092E6A8 /* WMCricleMainViewController.m in Sources */,
-				858104D4211044DA00532B4D /* WMNewHotQuestionModel.m in Sources */,
 				18328A221F1470F300F87E01 /* LKCPlayManager.m in Sources */,
 				18153C481E16368300956D2A /* WMCardInfoModel.m in Sources */,
 				1D68292F1E81268900422732 /* WMRecommendDocCell.m in Sources */,
@@ -6365,6 +6555,7 @@
 				0CEB2EB71E0CF81E0070119A /* WMNewPatienReportCell.m in Sources */,
 				0CEB2F031E13A6F40070119A /* WMLoginCheckAPIManager.m in Sources */,
 				1D3816511EC9806600562FCA /* WMNamePerfectViewController.m in Sources */,
+				851187B02120751E00F4D549 /* JYGroupBuyModel.m in Sources */,
 				856237411F7F779300451954 /* WMListeningNotesAPIManager.m in Sources */,
 				854887921F6F66A100F1A9C7 /* WMRCCommonUtil.m in Sources */,
 				AD526A1520E8C42D00D4BF85 /* UIButton+EWTimer.m in Sources */,
@@ -6430,7 +6621,11 @@
 				186AF2F11ED45A1F00F699C6 /* WMAvatarAPIManager.m in Sources */,
 				1D38166B1ECACF8100562FCA /* WMCertificationExampleCell.m in Sources */,
 				18C937292072509300A3453E /* WMGroupInfoRemindCell.m in Sources */,
+<<<<<<< HEAD
 				AD0E119F2120734B00C3E98B /* JYHomeRecommendedThreePictureTableViewCell.m in Sources */,
+=======
+				851187B7212081FA00F4D549 /* JYWelfareItemListAPIManager.m in Sources */,
+>>>>>>> 7ffc3ede930df031156f99e818b0bd6fb9386cdb
 				181C6C9B1E88AFC300CD0119 /* WMDoctorInformationCustomModel.m in Sources */,
 				1890BA4C1FC66E870009339C /* WMQuestionDetailTopCell.m in Sources */,
 				85F2F927211972690062A8A1 /* JYStoresActivitesCell.m in Sources */,
@@ -6448,6 +6643,7 @@
 				0CAF8F7C1E0CF5E10092E6A8 /* WMPatientReportedViewController.m in Sources */,
 				1D3816971ECD4B2F00562FCA /* WMSectionChooseViewController.m in Sources */,
 				1890BA7D1FCC563D0009339C /* WMQuestionDetailBottomCell.m in Sources */,
+				851187FE2123B78500F4D549 /* JYRedpacketModel.m in Sources */,
 				854180CD1FCD331200EA4235 /* WMMyMicroBeanFooterView.m in Sources */,
 				1855DC211E836688001B4DDD /* WMDoctorInformationModel.m in Sources */,
 				CC2B24F320EE08D40050D5B2 /* JYLoninView.m in Sources */,
@@ -6468,7 +6664,6 @@
 				186AF2E81ECED44E00F699C6 /* WMGetStatusAPIManager.m in Sources */,
 				1D38167A1ECAEF4600562FCA /* BUIView.m in Sources */,
 				AD93FEB720DDE55F00C8EF83 /* WYNetwork.m in Sources */,
-				85CAB45C210DDEA300884A54 /* JYShoppingMallModel.m in Sources */,
 				855C9BD820C8C488007383EB /* WMPatientTagViewController.m in Sources */,
 				18237ECA1EA7375B00C30F51 /* WMDoctorServiceModel.m in Sources */,
 				AD0E118A211DD7E000C3E98B /* JYHomeSameCityTableViewCell.m in Sources */,

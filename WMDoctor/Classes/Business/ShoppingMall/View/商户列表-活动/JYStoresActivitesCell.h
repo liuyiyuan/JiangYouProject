@@ -9,5 +9,16 @@
 #import <UIKit/UIKit.h>
 
 @interface JYStoresActivitesCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIButton *activeImageViewOne;
+@property (weak, nonatomic) IBOutlet UIButton *activeImageViewTwo;
+@property (weak, nonatomic) IBOutlet UIButton *activeImageViewThree;
+
+
+/**
+ 商户列表-活动设置数据
+
+ @param actives <#actives description#>
+ */
+- (void)setValueWithActives:(NSArray *)actives;
 
 @end

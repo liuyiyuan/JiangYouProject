@@ -10,7 +10,7 @@
 
 @implementation JYPanicBuyGoodsModel
 
-+ (BOOL)JYPanicBuyGoodsModel:(NSString*)propertyName
++ (BOOL)propertyIsOptional:(NSString*)propertyName
 {
     return YES;
 }

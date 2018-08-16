@@ -10,10 +10,17 @@
 #import "JYStoreModuleCell.h"
 #import "JYStoresActivitesCell.h"
 #import "JYSCCGoodsCell.h"
+#import "JYStoreActiveCarefullyChooseaAPIManager.h"
+#import "JYStoreActiveCarefullyChooseModel.h"
+#import "JYSCCStoreAPIManager.h"
+#import "JYSCCStoreModel.h"
+#import "JYStoreDetailViewController.h"
 
 @interface JYStoresViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property(nonatomic, strong)UITableView *tableView;
+@property(nonatomic, strong)NSMutableArray *actives;
+@property(nonatomic, strong)NSMutableArray *dataSource;
 
 @end
 
@@ -22,7 +29,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self setupData];
     [self setupView];
+    [self loadActiveCarefullyChooseRequest];
+    [self loadCarefullyChooseStoresRequest];
+}
+
+- (void)setupData{
+    self.actives = [NSMutableArray array];
+    self.dataSource = [NSMutableArray array];
 }
 
 - (void)setupView{
@@ -64,6 +79,9 @@
     } else if (indexPath.section == 1){
         JYStoresActivitesCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JYStoresActivitesCell" forIndexPath:indexPath];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        if (self.actives.count > 0) {
+            [cell setValueWithActives:self.actives];
+        }
         return cell;
     } else if (indexPath.section == 2){
         JYSCCGoodsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"JYSCCGoodsCell" forIndexPath:indexPath];
@@ -71,6 +89,15 @@
         return cell;
     }
     return [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 2) {
+        JYSomeOneStoreModel *store = [self.dataSource objectAtIndex:indexPath.row];
+        JYStoreDetailViewController *storeDetailViewController = [[JYStoreDetailViewController alloc] init];
+        storeDetailViewController.storeId = store.merchantId;
+        [self.navigationController pushViewController:storeDetailViewController animated:YES];
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -108,9 +135,7 @@
         [view addSubview:characterLabel];
         return view;
     }
-    
     return [[UIView alloc] init];
-    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
@@ -126,6 +151,32 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     return 0.1;
+}
+
+- (void)loadActiveCarefullyChooseRequest{
+    JYStoreActiveCarefullyChooseaAPIManager *activeCarefullyChooseAPIManager = [[JYStoreActiveCarefullyChooseaAPIManager alloc] init];
+    [activeCarefullyChooseAPIManager loadDataWithParams:@{} withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"activeCarefullyChoose data : %@", responseObject);
+        for (NSDictionary *dic in responseObject) {
+            JYStoreActiveCarefullyChooseModel *active = [[JYStoreActiveCarefullyChooseModel alloc] initWithDictionary:dic error:nil];
+            [self.actives addObject:active];
+        }
+        [self.tableView reloadData];
+    } withFailure:^(ResponseResult *errorResult) {
+        NSLog(@"activeCarefullyChoose error : %@", errorResult);
+    }];
+}
+
+- (void)loadCarefullyChooseStoresRequest{
+    JYSCCStoreAPIManager *sccStoreAPIManager = [[JYSCCStoreAPIManager alloc] init];
+    [sccStoreAPIManager loadDataWithParams:@{} withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"sccStore : %@", responseObject);
+        JYSCCStoreModel *sccStoreModel = [[JYSCCStoreModel alloc] initWithDictionary:responseObject error:nil];
+        [self.dataSource addObjectsFromArray:sccStoreModel.selectedArray];
+        [self.tableView reloadData];
+    } withFailure:^(ResponseResult *errorResult) {
+        NSLog(@"sccStore error : %@", errorResult);
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -88,7 +88,7 @@
     [spanicBuyAPIManager loadDataWithParams:param withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
         NSLog(@"panic : %@", responseObject);
         JYPanicBuyModel *panicBuyModel = [[JYPanicBuyModel alloc] initWithDictionary:responseObject error:nil];
-        [self.dataSource addObject:panicBuyModel.RushArray];
+        [self.dataSource addObjectsFromArray:panicBuyModel.RushArray];
         [self.collectionView reloadData];
     } withFailure:^(ResponseResult *errorResult) {
         NSLog(@"panic error : %@", errorResult);

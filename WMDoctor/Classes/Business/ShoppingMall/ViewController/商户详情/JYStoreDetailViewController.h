@@ -7,7 +7,10 @@
 //
 
 #import "WMBaseViewController.h"
+#import "JYSCCGoodsModel.h"
 
 @interface JYStoreDetailViewController : WMBaseViewController
+
+@property(nonatomic, strong)NSString *storeId;
 
 @end
