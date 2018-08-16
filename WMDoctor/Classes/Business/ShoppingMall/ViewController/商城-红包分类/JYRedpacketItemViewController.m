@@ -9,10 +9,12 @@
 #import "JYRedpacketItemViewController.h"
 #import "JYRedpacketItemDetailCell.h"
 #import "JYRedpacketItemsAPIManager.h"
+#import "JYRedpacketItemModel.h"
 
 @interface JYRedpacketItemViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property(nonatomic, strong)UITableView *tableView;
+@property(nonatomic, strong)JYRedpacketItemModel *redpacketItemModel;
 
 @end
 
@@ -97,6 +99,8 @@
                             };
     [redpacketItemsAPIManager loadDataWithParams:param withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
         NSLog(@"redpacket items : %@", responseObject);
+        self.redpacketItemModel = [[JYRedpacketItemModel alloc] initWithDictionary:responseObject error:nil];
+        [self.tableView reloadData];
     } withFailure:^(ResponseResult *errorResult) {
         NSLog(@"redpacket error : %@", errorResult);
     }];

@@ -510,6 +510,7 @@
 		851187FE2123B78500F4D549 /* JYRedpacketModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 851187FD2123B78500F4D549 /* JYRedpacketModel.m */; };
 		851188042123BCD100F4D549 /* JYStoreEvaluatesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 851188032123BCD100F4D549 /* JYStoreEvaluatesModel.m */; };
 		851188412125215F00F4D549 /* JYRedpacketItemsAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 851188402125215F00F4D549 /* JYRedpacketItemsAPIManager.m */; };
+		85118845212555C700F4D549 /* JYRedpacketItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 85118844212555C700F4D549 /* JYRedpacketItemModel.m */; };
 		8512521E20BD475400685E7A /* WMDoctorInfoNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512521D20BD475400685E7A /* WMDoctorInfoNewsModel.m */; };
 		852473B41F32B63E0049FB67 /* WMCricleHomeAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 852473B31F32B63E0049FB67 /* WMCricleHomeAPIManager.m */; };
 		852473BD1F344A060049FB67 /* WMRCIMGroupDataEntity+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 852473BA1F344A060049FB67 /* WMRCIMGroupDataEntity+CoreDataClass.m */; };
@@ -1721,6 +1722,8 @@
 		851188032123BCD100F4D549 /* JYStoreEvaluatesModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYStoreEvaluatesModel.m; sourceTree = "<group>"; };
 		8511883F2125215F00F4D549 /* JYRedpacketItemsAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYRedpacketItemsAPIManager.h; sourceTree = "<group>"; };
 		851188402125215F00F4D549 /* JYRedpacketItemsAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYRedpacketItemsAPIManager.m; sourceTree = "<group>"; };
+		85118843212555C700F4D549 /* JYRedpacketItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYRedpacketItemModel.h; sourceTree = "<group>"; };
+		85118844212555C700F4D549 /* JYRedpacketItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYRedpacketItemModel.m; sourceTree = "<group>"; };
 		8512521C20BD475400685E7A /* WMDoctorInfoNewsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMDoctorInfoNewsModel.h; sourceTree = "<group>"; };
 		8512521D20BD475400685E7A /* WMDoctorInfoNewsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMDoctorInfoNewsModel.m; sourceTree = "<group>"; };
 		852473B21F32B63E0049FB67 /* WMCricleHomeAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCricleHomeAPIManager.h; sourceTree = "<group>"; };
@@ -4782,6 +4785,15 @@
 			path = "商城-红包分类";
 			sourceTree = "<group>";
 		};
+		851188422125559A00F4D549 /* 商城-红包分类 */ = {
+			isa = PBXGroup;
+			children = (
+				85118843212555C700F4D549 /* JYRedpacketItemModel.h */,
+				85118844212555C700F4D549 /* JYRedpacketItemModel.m */,
+			);
+			path = "商城-红包分类";
+			sourceTree = "<group>";
+		};
 		854180B91FCBE1AE00EA4235 /* 我的微豆 */ = {
 			isa = PBXGroup;
 			children = (
@@ -5086,6 +5098,7 @@
 				851187B82120831F00F4D549 /* 精选-福利 */,
 				851187E62122D12F00F4D549 /* 商户列表 */,
 				851187FB2123B75E00F4D549 /* 商城-领红包 */,
+				851188422125559A00F4D549 /* 商城-红包分类 */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -6053,6 +6066,7 @@
 				1D3708BB1E83C5DC00974C73 /* WMDoctorCardModel.m in Sources */,
 				183287D91F10BE1C00F87E01 /* WMAllReportListViewController.m in Sources */,
 				188ACA8E2045010500A54692 /* WMNewDetailWebViewController.m in Sources */,
+				85118845212555C700F4D549 /* JYRedpacketItemModel.m in Sources */,
 				8537E7A41F8DA9AF00F1429E /* WMDoctorVoiceView.m in Sources */,
 				854180BF1FCBE40700EA4235 /* WMMyMicroBeanAPIManager.m in Sources */,
 				186AF3041ED51D5100F699C6 /* HClTextView.m in Sources */,
