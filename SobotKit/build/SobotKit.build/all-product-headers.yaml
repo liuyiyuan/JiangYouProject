@@ -1,0 +1,93 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/zhenyan/Desktop/JiangYouProject/SobotKit/build/Release-iphoneos/SobotKit.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "SobotKit-Swift.h",
+          'external-contents': "/Users/zhenyan/Desktop/JiangYouProject/SobotKit/build/Release-iphoneos/SobotKit.framework/Headers/SobotKit-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "SobotKit.h",
+          'external-contents': "/Users/zhenyan/Desktop/JiangYouProject/SobotKit/SobotKit/SobotKit.h"
+        },
+        {
+          'type': 'file',
+          'name': "ZCChatController.h",
+          'external-contents': "/Users/zhenyan/Desktop/JiangYouProject/SobotKit/SobotKit/ZCShowLibrary/UI/VC/Chat/ZCChatController.h"
+        },
+        {
+          'type': 'file',
+          'name': "ZCChatView.h",
+          'external-contents': "/Users/zhenyan/Desktop/JiangYouProject/SobotKit/SobotKit/ZCShowLibrary/UI/ZCChatView.h"
+        },
+        {
+          'type': 'file',
+          'name': "ZCKitInfo.h",
+          'external-contents': "/Users/zhenyan/Desktop/JiangYouProject/SobotKit/SobotKit/Entity/ZCKitInfo.h"
+        },
+        {
+          'type': 'file',
+          'name': "ZCLibClient.h",
+          'external-contents': "/Users/zhenyan/Desktop/JiangYouProject/SobotKit/SobotKit/SobotLib/include/ZCLibClient.h"
+        },
+        {
+          'type': 'file',
+          'name': "ZCLibInitInfo.h",
+          'external-contents': "/Users/zhenyan/Desktop/JiangYouProject/SobotKit/SobotKit/SobotLib/include/ZCLibInitInfo.h"
+        },
+        {
+          'type': 'file',
+          'name': "ZCProductInfo.h",
+          'external-contents': "/Users/zhenyan/Desktop/JiangYouProject/SobotKit/SobotKit/Entity/ZCProductInfo.h"
+        },
+        {
+          'type': 'file',
+          'name': "ZCSobot.h",
+          'external-contents': "/Users/zhenyan/Desktop/JiangYouProject/SobotKit/SobotKit/ZCSobot.h"
+        },
+        {
+          'type': 'file',
+          'name': "ZCTopView.h",
+          'external-contents': "/Users/zhenyan/Desktop/JiangYouProject/SobotKit/SobotKit/ZCShowLibrary/UI/ZCTopView/ZCTopView.h"
+        },
+        {
+          'type': 'file',
+          'name': "ZCUIBaseController.h",
+          'external-contents': "/Users/zhenyan/Desktop/JiangYouProject/SobotKit/SobotKit/UI/ZCUIBaseController.h"
+        },
+        {
+          'type': 'file',
+          'name': "ZCUIChatController.h",
+          'external-contents': "/Users/zhenyan/Desktop/JiangYouProject/SobotKit/SobotKit/UI/ZCUIChatController.h"
+        },
+        {
+          'type': 'file',
+          'name': "ZCUIChatListController.h",
+          'external-contents': "/Users/zhenyan/Desktop/JiangYouProject/SobotKit/SobotKit/UI/ZCUIChatListController.h"
+        },
+        {
+          'type': 'file',
+          'name': "ZCUILeaveMessageController.h",
+          'external-contents': "/Users/zhenyan/Desktop/JiangYouProject/SobotKit/SobotKit/UI/LeaveMessage/ZCUILeaveMessageController.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/zhenyan/Desktop/JiangYouProject/SobotKit/build/Release-iphoneos/SobotKit.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/zhenyan/Desktop/JiangYouProject/SobotKit/build/SobotKit.build/Release-iphoneos/SobotKit.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}

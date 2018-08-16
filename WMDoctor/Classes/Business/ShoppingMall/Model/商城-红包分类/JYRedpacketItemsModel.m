@@ -6,7 +6,7 @@
 //  Copyright © 2018年 Choice. All rights reserved.
 //
 
-#import "JYRedpacketItemModel.h"
+#import "JYRedpacketItemsModel.h"
 
 @implementation JYRedpacketGoodsModel
 
@@ -17,7 +17,7 @@
 
 @end
 
-@implementation JYRedpacketItemModel
+@implementation JYRedpacketItemsModel
 
 + (BOOL)propertyIsOptional:(NSString*)propertyName
 {

@@ -510,7 +510,6 @@
 		851187FE2123B78500F4D549 /* JYRedpacketModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 851187FD2123B78500F4D549 /* JYRedpacketModel.m */; };
 		851188042123BCD100F4D549 /* JYStoreEvaluatesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 851188032123BCD100F4D549 /* JYStoreEvaluatesModel.m */; };
 		851188412125215F00F4D549 /* JYRedpacketItemsAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 851188402125215F00F4D549 /* JYRedpacketItemsAPIManager.m */; };
-		85118845212555C700F4D549 /* JYRedpacketItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 85118844212555C700F4D549 /* JYRedpacketItemModel.m */; };
 		8511884A212558CC00F4D549 /* JYRedpacketDetailAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 85118849212558CC00F4D549 /* JYRedpacketDetailAPIManager.m */; };
 		8511884D2125595C00F4D549 /* JYRedpacketDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8511884C2125595C00F4D549 /* JYRedpacketDetailModel.m */; };
 		8512521E20BD475400685E7A /* WMDoctorInfoNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8512521D20BD475400685E7A /* WMDoctorInfoNewsModel.m */; };
@@ -673,6 +672,7 @@
 		AD526A1520E8C42D00D4BF85 /* UIButton+EWTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = AD526A1420E8C42D00D4BF85 /* UIButton+EWTimer.m */; };
 		AD526A1B20E8CB0800D4BF85 /* NSString+PPTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = AD526A1920E8CB0700D4BF85 /* NSString+PPTextField.m */; };
 		AD526A1C20E8CB0800D4BF85 /* PPTextfield.m in Sources */ = {isa = PBXBuildFile; fileRef = AD526A1A20E8CB0700D4BF85 /* PPTextfield.m */; };
+		AD6237E42125BF1E00923DD2 /* JYRedpacketItemsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6237E32125BF1E00923DD2 /* JYRedpacketItemsModel.m */; };
 		AD7A06EE2108D62300D3AAB4 /* ZCEmojiExpression.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AD7A06EB2108D62100D3AAB4 /* ZCEmojiExpression.bundle */; };
 		AD7A06EF2108D62300D3AAB4 /* SobotKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AD7A06EC2108D62200D3AAB4 /* SobotKit.bundle */; };
 		AD7A06F02108D62300D3AAB4 /* SobotLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD7A06ED2108D62300D3AAB4 /* SobotLocalizable.strings */; };
@@ -1729,8 +1729,6 @@
 		851188032123BCD100F4D549 /* JYStoreEvaluatesModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYStoreEvaluatesModel.m; sourceTree = "<group>"; };
 		8511883F2125215F00F4D549 /* JYRedpacketItemsAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYRedpacketItemsAPIManager.h; sourceTree = "<group>"; };
 		851188402125215F00F4D549 /* JYRedpacketItemsAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYRedpacketItemsAPIManager.m; sourceTree = "<group>"; };
-		85118843212555C700F4D549 /* JYRedpacketItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYRedpacketItemModel.h; sourceTree = "<group>"; };
-		85118844212555C700F4D549 /* JYRedpacketItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYRedpacketItemModel.m; sourceTree = "<group>"; };
 		85118848212558CC00F4D549 /* JYRedpacketDetailAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYRedpacketDetailAPIManager.h; sourceTree = "<group>"; };
 		85118849212558CC00F4D549 /* JYRedpacketDetailAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYRedpacketDetailAPIManager.m; sourceTree = "<group>"; };
 		8511884B2125595C00F4D549 /* JYRedpacketDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYRedpacketDetailModel.h; sourceTree = "<group>"; };
@@ -2038,6 +2036,8 @@
 		AD526A1820E8CB0700D4BF85 /* NSString+PPTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+PPTextField.h"; sourceTree = "<group>"; };
 		AD526A1920E8CB0700D4BF85 /* NSString+PPTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PPTextField.m"; sourceTree = "<group>"; };
 		AD526A1A20E8CB0700D4BF85 /* PPTextfield.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPTextfield.m; sourceTree = "<group>"; };
+		AD6237E22125BF1E00923DD2 /* JYRedpacketItemsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYRedpacketItemsModel.h; sourceTree = "<group>"; };
+		AD6237E32125BF1E00923DD2 /* JYRedpacketItemsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYRedpacketItemsModel.m; sourceTree = "<group>"; };
 		AD7A06EB2108D62100D3AAB4 /* ZCEmojiExpression.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZCEmojiExpression.bundle; sourceTree = "<group>"; };
 		AD7A06EC2108D62200D3AAB4 /* SobotKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SobotKit.bundle; sourceTree = "<group>"; };
 		AD7A06ED2108D62300D3AAB4 /* SobotLocalizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = SobotLocalizable.strings; sourceTree = "<group>"; };
@@ -4819,8 +4819,8 @@
 		851188422125559A00F4D549 /* 商城-红包分类 */ = {
 			isa = PBXGroup;
 			children = (
-				85118843212555C700F4D549 /* JYRedpacketItemModel.h */,
-				85118844212555C700F4D549 /* JYRedpacketItemModel.m */,
+				AD6237E22125BF1E00923DD2 /* JYRedpacketItemsModel.h */,
+				AD6237E32125BF1E00923DD2 /* JYRedpacketItemsModel.m */,
 			);
 			path = "商城-红包分类";
 			sourceTree = "<group>";
@@ -6118,7 +6118,6 @@
 				1D3708BB1E83C5DC00974C73 /* WMDoctorCardModel.m in Sources */,
 				183287D91F10BE1C00F87E01 /* WMAllReportListViewController.m in Sources */,
 				188ACA8E2045010500A54692 /* WMNewDetailWebViewController.m in Sources */,
-				85118845212555C700F4D549 /* JYRedpacketItemModel.m in Sources */,
 				8537E7A41F8DA9AF00F1429E /* WMDoctorVoiceView.m in Sources */,
 				854180BF1FCBE40700EA4235 /* WMMyMicroBeanAPIManager.m in Sources */,
 				186AF3041ED51D5100F699C6 /* HClTextView.m in Sources */,
@@ -6142,6 +6141,7 @@
 				186AF2FF1ED51D4600F699C6 /* PlaceholderTextView.m in Sources */,
 				18328A491F15012A00F87E01 /* ACOGCollectionViewCell.m in Sources */,
 				18328A2C1F1470F300F87E01 /* STKDataSourceWrapper.m in Sources */,
+				AD6237E42125BF1E00923DD2 /* JYRedpacketItemsModel.m in Sources */,
 				18328A241F1470F300F87E01 /* LKCWrapper.m in Sources */,
 				85CF6D0D20B26E7600FCDD21 /* WMTagPatientAPIManager.m in Sources */,
 				1877F9BC1FCEAF7200CAD8D2 /* WMDaySignAPIManager.m in Sources */,
@@ -6621,11 +6621,8 @@
 				186AF2F11ED45A1F00F699C6 /* WMAvatarAPIManager.m in Sources */,
 				1D38166B1ECACF8100562FCA /* WMCertificationExampleCell.m in Sources */,
 				18C937292072509300A3453E /* WMGroupInfoRemindCell.m in Sources */,
-<<<<<<< HEAD
 				AD0E119F2120734B00C3E98B /* JYHomeRecommendedThreePictureTableViewCell.m in Sources */,
-=======
 				851187B7212081FA00F4D549 /* JYWelfareItemListAPIManager.m in Sources */,
->>>>>>> 7ffc3ede930df031156f99e818b0bd6fb9386cdb
 				181C6C9B1E88AFC300CD0119 /* WMDoctorInformationCustomModel.m in Sources */,
 				1890BA4C1FC66E870009339C /* WMQuestionDetailTopCell.m in Sources */,
 				85F2F927211972690062A8A1 /* JYStoresActivitesCell.m in Sources */,

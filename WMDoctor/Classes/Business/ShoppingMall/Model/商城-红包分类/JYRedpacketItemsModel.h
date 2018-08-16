@@ -18,7 +18,7 @@
 @end
 
 @protocol JYRedpacketGoodsModel;
-@interface JYRedpacketItemModel : WMJSONModel
+@interface JYRedpacketItemsModel : WMJSONModel
 
 @property(nonatomic, strong)NSString *ptypeId;
 @property(nonatomic, strong)NSString *name;
