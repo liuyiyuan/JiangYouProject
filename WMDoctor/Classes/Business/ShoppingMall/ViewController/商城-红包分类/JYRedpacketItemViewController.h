@@ -10,4 +10,6 @@
 
 @interface JYRedpacketItemViewController : WMBaseViewController
 
+@property(nonatomic, strong)NSString *productId;
+
 @end

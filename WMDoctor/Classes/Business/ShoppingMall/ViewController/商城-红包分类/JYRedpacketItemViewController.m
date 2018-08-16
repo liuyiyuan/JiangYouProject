@@ -8,6 +8,7 @@
 
 #import "JYRedpacketItemViewController.h"
 #import "JYRedpacketItemDetailCell.h"
+#import "JYRedpacketItemsAPIManager.h"
 
 @interface JYRedpacketItemViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -87,6 +88,18 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     return 0.1;
+}
+
+- (void)loadRedpacketItemsRequest{
+    JYRedpacketItemsAPIManager *redpacketItemsAPIManager = [[JYRedpacketItemsAPIManager alloc] init];
+    NSDictionary *param = @{
+                            @"productId" : self.productId
+                            };
+    [redpacketItemsAPIManager loadDataWithParams:param withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"redpacket items : %@", responseObject);
+    } withFailure:^(ResponseResult *errorResult) {
+        NSLog(@"redpacket error : %@", errorResult);
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
