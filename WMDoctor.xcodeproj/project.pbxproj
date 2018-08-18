@@ -673,6 +673,7 @@
 		AD526A1B20E8CB0800D4BF85 /* NSString+PPTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = AD526A1920E8CB0700D4BF85 /* NSString+PPTextField.m */; };
 		AD526A1C20E8CB0800D4BF85 /* PPTextfield.m in Sources */ = {isa = PBXBuildFile; fileRef = AD526A1A20E8CB0700D4BF85 /* PPTextfield.m */; };
 		AD6237E42125BF1E00923DD2 /* JYRedpacketItemsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6237E32125BF1E00923DD2 /* JYRedpacketItemsModel.m */; };
+		AD6237E72127C2A300923DD2 /* JYHomeRecommendedBigPictureTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6237E62127C2A300923DD2 /* JYHomeRecommendedBigPictureTableViewCell.m */; };
 		AD7A06EE2108D62300D3AAB4 /* ZCEmojiExpression.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AD7A06EB2108D62100D3AAB4 /* ZCEmojiExpression.bundle */; };
 		AD7A06EF2108D62300D3AAB4 /* SobotKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AD7A06EC2108D62200D3AAB4 /* SobotKit.bundle */; };
 		AD7A06F02108D62300D3AAB4 /* SobotLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD7A06ED2108D62300D3AAB4 /* SobotLocalizable.strings */; };
@@ -2038,6 +2039,8 @@
 		AD526A1A20E8CB0700D4BF85 /* PPTextfield.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPTextfield.m; sourceTree = "<group>"; };
 		AD6237E22125BF1E00923DD2 /* JYRedpacketItemsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYRedpacketItemsModel.h; sourceTree = "<group>"; };
 		AD6237E32125BF1E00923DD2 /* JYRedpacketItemsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYRedpacketItemsModel.m; sourceTree = "<group>"; };
+		AD6237E52127C2A300923DD2 /* JYHomeRecommendedBigPictureTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYHomeRecommendedBigPictureTableViewCell.h; sourceTree = "<group>"; };
+		AD6237E62127C2A300923DD2 /* JYHomeRecommendedBigPictureTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYHomeRecommendedBigPictureTableViewCell.m; sourceTree = "<group>"; };
 		AD7A06EB2108D62100D3AAB4 /* ZCEmojiExpression.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZCEmojiExpression.bundle; sourceTree = "<group>"; };
 		AD7A06EC2108D62200D3AAB4 /* SobotKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SobotKit.bundle; sourceTree = "<group>"; };
 		AD7A06ED2108D62300D3AAB4 /* SobotLocalizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = SobotLocalizable.strings; sourceTree = "<group>"; };
@@ -2676,6 +2679,8 @@
 				AD0E119B21206B6E00C3E98B /* JYHomeRecommendedUnPictureTableViewCell.m */,
 				AD0E119D2120734B00C3E98B /* JYHomeRecommendedThreePictureTableViewCell.h */,
 				AD0E119E2120734B00C3E98B /* JYHomeRecommendedThreePictureTableViewCell.m */,
+				AD6237E52127C2A300923DD2 /* JYHomeRecommendedBigPictureTableViewCell.h */,
+				AD6237E62127C2A300923DD2 /* JYHomeRecommendedBigPictureTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -6363,6 +6368,7 @@
 				854180D31FD5390500EA4235 /* WMTodayFirstSpeakAPIManager.m in Sources */,
 				1D3816941ECD39C300562FCA /* WMGetJobModel.m in Sources */,
 				181A035D1FDE4B6900868821 /* WMServicePriceCollectionViewCell.m in Sources */,
+				AD6237E72127C2A300923DD2 /* JYHomeRecommendedBigPictureTableViewCell.m in Sources */,
 				1D3B76511E14DBAB0035EE65 /* WMMessageListModel.m in Sources */,
 				AD0E1169211B25C000C3E98B /* JYHomeVideoViewController.m in Sources */,
 				851187CD21208B3D00F4D549 /* JYWelfareGoodsModel.m in Sources */,

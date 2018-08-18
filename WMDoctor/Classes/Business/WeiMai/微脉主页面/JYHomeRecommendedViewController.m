@@ -11,6 +11,7 @@
 #import "JYHomeRecommendedSinglePictureTableViewCell.h"//左侧单图
 #import "JYHomeRecommendedUnPictureTableViewCell.h"//无图
 #import "JYHomeRecommendedThreePictureTableViewCell.h"//三图
+#import "JYHomeRecommendedBigPictureTableViewCell.h"//大图
 @interface JYHomeRecommendedViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
 
@@ -38,10 +39,14 @@
     JYHomeRecommendedSinglePictureTableViewCell *cell = [[JYHomeRecommendedSinglePictureTableViewCell alloc]init];
     JYHomeRecommendedUnPictureTableViewCell *unPictureCell = [[JYHomeRecommendedUnPictureTableViewCell alloc]init];
     JYHomeRecommendedThreePictureTableViewCell *threePictureCell = [[JYHomeRecommendedThreePictureTableViewCell alloc]init];
+    JYHomeRecommendedBigPictureTableViewCell *bigPictureCell = [[JYHomeRecommendedBigPictureTableViewCell alloc]init];
+    
     if(indexPath.row == 0){
         return cell;
     }else if(indexPath.row == 1){
         return threePictureCell;
+    }else if(indexPath.row == 2){
+        return bigPictureCell;
     }else{
         return unPictureCell;
     }
