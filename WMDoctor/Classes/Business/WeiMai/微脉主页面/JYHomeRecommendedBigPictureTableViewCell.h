@@ -16,7 +16,7 @@
 
 @property (nonatomic, strong) UIImageView *myImageView;//图片
 
-@property (nonatomic, strong) UILabel *advertisingLabel;//广告
+@property (nonatomic, strong) UILabel *guangGaoLabel;//广告
 
 @property (nonatomic, strong) UIButton *deleteButton;//删除按钮
 

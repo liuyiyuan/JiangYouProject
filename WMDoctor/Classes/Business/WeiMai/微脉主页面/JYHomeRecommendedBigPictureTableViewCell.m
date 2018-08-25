@@ -22,8 +22,8 @@
     [self.contentView addSubview:self.titleLabel];
     [self.contentView addSubview:self.fromLabel];
     [self.contentView addSubview:self.myImageView];
-//    [self.contentView addSubview:self.advertisingLabel];
     [self.contentView addSubview:self.deleteButton];
+    [self.contentView addSubview:self.guangGaoLabel];
     [self.contentView addSubview:self.lineView];
     
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -43,19 +43,19 @@
         make.right.mas_equalTo(self.contentView.mas_right).offset(-pixelValue(20));
         make.height.mas_equalTo(pixelValue(370));
     }];
-    
-//    [self.advertisingLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.mas_equalTo(self.myImageView.mas_left);
-//        make.top.mas_equalTo(self.myImageView.mas_bottom).offset(pixelValue(20));
-//        make.height.mas_equalTo(pixelValue(20));
-//
-//    }];
+
     
     [self.deleteButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.myImageView.mas_bottom).offset(pixelValue(20));
         make.right.mas_equalTo(self.contentView.mas_right).offset(-pixelValue(20));
         make.width.height.mas_equalTo(pixelValue(40));
         make.bottom.mas_equalTo(self.contentView.mas_bottom).offset(-pixelValue(20));
+    }];
+    
+    [self.guangGaoLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.myImageView.mas_left);
+        make.top.mas_equalTo(self.deleteButton.mas_top);
+        make.height.mas_equalTo(pixelValue(40));
     }];
     
     [self.lineView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -98,15 +98,16 @@
     return _myImageView;
 }
 //广告
--(UILabel *)advertisingLabel{
-    if(!_advertisingLabel){
-        _advertisingLabel = [UILabel alloc];
-        _advertisingLabel.text = @"广告";
-        _advertisingLabel.textColor = [UIColor colorWithHexString:@"#909090"];
-        _advertisingLabel.font = [UIFont systemFontOfSize:pixelValue(26)];
+-(UILabel *)guangGaoLabel{
+    if(!_guangGaoLabel){
+        _guangGaoLabel = [[UILabel alloc]init];
+        _guangGaoLabel.text = @"广告";
+        _guangGaoLabel.textColor = [UIColor colorWithHexString:@"#909090"];
+        _guangGaoLabel.font = [UIFont systemFontOfSize:pixelValue(24)];
     }
-    return _advertisingLabel;
+    return _guangGaoLabel;
 }
+
 //删除按钮
 -(UIButton *)deleteButton{
     if(!_deleteButton){
