@@ -108,18 +108,19 @@
     return childVc;
 }
 
-- (void)scrollPageController:(UIViewController *)scrollPageController childViewControllWillAppear:(UIViewController *)childViewController forIndex:(NSInteger)index{
+- (void)scrollPageController:(UIViewController *)scrollPageController childViewControllDidAppear:(UIViewController *)childViewController forIndex:(NSInteger)index{
     if(index == 2){
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [UIView animateWithDuration:0.3 animations:^{
                 self.headerView.frame = CGRectMake(0, 0, UI_SCREEN_WIDTH, pixelValue(632));
                 self.scrollPageView.frame = CGRectMake(0, CGRectGetMaxY(self.headerView.frame) + pixelValue(10), UI_SCREEN_WIDTH, UI_SCREEN_HEIGHT - tarBarHeight - STATUS_BAR_HEIGHT);
             }];
         });
-       
+        
     }
-    
 }
+
+
 
 - (BOOL)shouldAutomaticallyForwardAppearanceMethods {
     return NO;
