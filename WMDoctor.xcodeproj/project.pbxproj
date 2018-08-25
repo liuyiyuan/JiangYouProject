@@ -674,6 +674,10 @@
 		AD526A1C20E8CB0800D4BF85 /* PPTextfield.m in Sources */ = {isa = PBXBuildFile; fileRef = AD526A1A20E8CB0700D4BF85 /* PPTextfield.m */; };
 		AD6237E42125BF1E00923DD2 /* JYRedpacketItemsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6237E32125BF1E00923DD2 /* JYRedpacketItemsModel.m */; };
 		AD6237E72127C2A300923DD2 /* JYHomeRecommendedBigPictureTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6237E62127C2A300923DD2 /* JYHomeRecommendedBigPictureTableViewCell.m */; };
+		AD6237EB21316EE800923DD2 /* JYCircleHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6237EA21316EE800923DD2 /* JYCircleHeaderView.m */; };
+		AD6237EE21317E4B00923DD2 /* JYCircleDynamicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6237ED21317E4B00923DD2 /* JYCircleDynamicViewController.m */; };
+		AD6237F12131828200923DD2 /* JYCircleCircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6237F02131828200923DD2 /* JYCircleCircleViewController.m */; };
+		AD6237F4213182B900923DD2 /* JYCircleMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6237F3213182B900923DD2 /* JYCircleMessageViewController.m */; };
 		AD7A06EE2108D62300D3AAB4 /* ZCEmojiExpression.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AD7A06EB2108D62100D3AAB4 /* ZCEmojiExpression.bundle */; };
 		AD7A06EF2108D62300D3AAB4 /* SobotKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AD7A06EC2108D62200D3AAB4 /* SobotKit.bundle */; };
 		AD7A06F02108D62300D3AAB4 /* SobotLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD7A06ED2108D62300D3AAB4 /* SobotLocalizable.strings */; };
@@ -2041,6 +2045,14 @@
 		AD6237E32125BF1E00923DD2 /* JYRedpacketItemsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYRedpacketItemsModel.m; sourceTree = "<group>"; };
 		AD6237E52127C2A300923DD2 /* JYHomeRecommendedBigPictureTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYHomeRecommendedBigPictureTableViewCell.h; sourceTree = "<group>"; };
 		AD6237E62127C2A300923DD2 /* JYHomeRecommendedBigPictureTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYHomeRecommendedBigPictureTableViewCell.m; sourceTree = "<group>"; };
+		AD6237E921316EE800923DD2 /* JYCircleHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYCircleHeaderView.h; sourceTree = "<group>"; };
+		AD6237EA21316EE800923DD2 /* JYCircleHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYCircleHeaderView.m; sourceTree = "<group>"; };
+		AD6237EC21317E4B00923DD2 /* JYCircleDynamicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYCircleDynamicViewController.h; sourceTree = "<group>"; };
+		AD6237ED21317E4B00923DD2 /* JYCircleDynamicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYCircleDynamicViewController.m; sourceTree = "<group>"; };
+		AD6237EF2131828200923DD2 /* JYCircleCircleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYCircleCircleViewController.h; sourceTree = "<group>"; };
+		AD6237F02131828200923DD2 /* JYCircleCircleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYCircleCircleViewController.m; sourceTree = "<group>"; };
+		AD6237F2213182B900923DD2 /* JYCircleMessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYCircleMessageViewController.h; sourceTree = "<group>"; };
+		AD6237F3213182B900923DD2 /* JYCircleMessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYCircleMessageViewController.m; sourceTree = "<group>"; };
 		AD7A06EB2108D62100D3AAB4 /* ZCEmojiExpression.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZCEmojiExpression.bundle; sourceTree = "<group>"; };
 		AD7A06EC2108D62200D3AAB4 /* SobotKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SobotKit.bundle; sourceTree = "<group>"; };
 		AD7A06ED2108D62300D3AAB4 /* SobotLocalizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = SobotLocalizable.strings; sourceTree = "<group>"; };
@@ -5571,6 +5583,15 @@
 			path = PPTextField;
 			sourceTree = "<group>";
 		};
+		AD6237E821316ECD00923DD2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AD6237E921316EE800923DD2 /* JYCircleHeaderView.h */,
+				AD6237EA21316EE800923DD2 /* JYCircleHeaderView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		AD7A06F1210F4E2E00D3AAB4 /* APIManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -5595,9 +5616,8 @@
 		CC2B24F520EF10750050D5B2 /* JYCircle */ = {
 			isa = PBXGroup;
 			children = (
+				AD6237E821316ECD00923DD2 /* View */,
 				CC2B250820EF13B40050D5B2 /* Controller */,
-				CC2B250720EF13AF0050D5B2 /* View */,
-				CC2B250620EF13A20050D5B2 /* Model */,
 			);
 			path = JYCircle;
 			sourceTree = "<group>";
@@ -5617,25 +5637,17 @@
 			path = JYLoopScrollView;
 			sourceTree = "<group>";
 		};
-		CC2B250620EF13A20050D5B2 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		CC2B250720EF13AF0050D5B2 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		CC2B250820EF13B40050D5B2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				CC2B24F620EF10AA0050D5B2 /* JYCircleViewController.h */,
 				CC2B24F720EF10AA0050D5B2 /* JYCircleViewController.m */,
+				AD6237EC21317E4B00923DD2 /* JYCircleDynamicViewController.h */,
+				AD6237ED21317E4B00923DD2 /* JYCircleDynamicViewController.m */,
+				AD6237EF2131828200923DD2 /* JYCircleCircleViewController.h */,
+				AD6237F02131828200923DD2 /* JYCircleCircleViewController.m */,
+				AD6237F2213182B900923DD2 /* JYCircleMessageViewController.h */,
+				AD6237F3213182B900923DD2 /* JYCircleMessageViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -6044,6 +6056,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				850142831F3AA55C000BA97F /* WMGroupActivityModel.m in Sources */,
+				AD6237EE21317E4B00923DD2 /* JYCircleDynamicViewController.m in Sources */,
 				1877F9BF1FD7EF5700CAD8D2 /* WMMyNewServiceViewController.m in Sources */,
 				1D3816571EC9937300562FCA /* WMJobsChooseViewController.m in Sources */,
 				1855DC2A1E83AE50001B4DDD /* WMDoctorEducationListAPIManager.m in Sources */,
@@ -6057,6 +6070,7 @@
 				183287E21F10CB9D00F87E01 /* WMUNReadReportTableViewCell.m in Sources */,
 				8501428B1F3AB6B0000BA97F /* WMArrayUtil.m in Sources */,
 				856237381F7DF42500451954 /* WMDoctorVoiceModel.m in Sources */,
+				AD6237F4213182B900923DD2 /* JYCircleMessageViewController.m in Sources */,
 				AD0E1172211B2A6500C3E98B /* JYHomeVideoTableViewCell.m in Sources */,
 				851187C12120862100F4D549 /* JYNewestStoreAPIManager.m in Sources */,
 				1890BA831FCCF2450009339C /* WMQuestionAnswerSendAPIManager.m in Sources */,
@@ -6388,6 +6402,7 @@
 				1D2AEADD1E1FA72D0026DB19 /* WMRCConversationViewController.m in Sources */,
 				1831109A1FF37E8A002B8DB7 /* QuestionEntity+CoreDataClass.m in Sources */,
 				18328A1B1F1470F300F87E01 /* AZSoundManager.m in Sources */,
+				AD6237EB21316EE800923DD2 /* JYCircleHeaderView.m in Sources */,
 				183287D31F10AAEC00F87E01 /* WMReportDetailManager.m in Sources */,
 				0CEB2EB51E0CF81E0070119A /* WMCricleMainCell.m in Sources */,
 				18FC06BD1E1BA8DD00A59B4E /* WMMyOrderTableViewController.m in Sources */,
@@ -6541,6 +6556,7 @@
 				1855DC331E83B9B5001B4DDD /* WMAreaModel.m in Sources */,
 				18237ED01EA74C6D00C30F51 /* WMOpenServiceAPIManager.m in Sources */,
 				183287F71F12031300F87E01 /* XHSegmentItem.m in Sources */,
+				AD6237F12131828200923DD2 /* JYCircleCircleViewController.m in Sources */,
 				189215671E03BC2C006CD295 /* WMVerificationCodeViewController.m in Sources */,
 				18F5B68C1E14F6040051C60E /* WMDoctorInfoCell.m in Sources */,
 				AD0E11932120556100C3E98B /* JYHomeRecommendedHeaderView.m in Sources */,
