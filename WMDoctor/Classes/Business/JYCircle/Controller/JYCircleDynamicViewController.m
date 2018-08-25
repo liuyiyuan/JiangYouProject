@@ -53,7 +53,7 @@
 }
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    if(scrollView.contentOffset.y < 0){
+    if(scrollView.contentOffset.y < -60){
         NSLog(@"top*****");
         [[NSNotificationCenter defaultCenter]postNotificationName:@"CircleDynamicTop" object:nil];
     }else if(scrollView.contentOffset.y > 0){

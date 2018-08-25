@@ -7,7 +7,7 @@
 //
 
 #import "JYCircleCircleViewController.h"
-
+#import "JYCircleCircleTableViewCell.h"
 @interface JYCircleCircleViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -37,6 +37,9 @@
         _tableView = [[UITableView alloc]init];
         _tableView.delegate = self;
         _tableView.dataSource = self;
+        _tableView.rowHeight = UITableViewAutomaticDimension;
+        _tableView.estimatedRowHeight = pixelValue(380);
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     }
     return _tableView;
 }
@@ -47,13 +50,18 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [[UITableViewCell alloc]init];
-    cell.textLabel.text = @"test";
+    JYCircleCircleTableViewCell *cell = [[JYCircleCircleTableViewCell alloc]init];
+    cell.focusButton.tag = indexPath.row;
+    [cell.focusButton addTarget:self action:@selector(click_focusButton:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
 }
 
+#pragma mark - 关注按钮点击
+-(void)click_focusButton:(UIButton*)button{
+    
+}
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    if(scrollView.contentOffset.y < 0){
+    if(scrollView.contentOffset.y < -60){
         NSLog(@"top*****");
         [[NSNotificationCenter defaultCenter]postNotificationName:@"CircleDynamicTop" object:nil];
     }else if(scrollView.contentOffset.y > 0){
