@@ -110,10 +110,13 @@
 
 - (void)scrollPageController:(UIViewController *)scrollPageController childViewControllWillAppear:(UIViewController *)childViewController forIndex:(NSInteger)index{
     if(index == 2){
-        [UIView animateWithDuration:0.15 animations:^{
-            self.headerView.frame = CGRectMake(0, 0, UI_SCREEN_WIDTH, pixelValue(632));
-            self.scrollPageView.frame = CGRectMake(0, CGRectGetMaxY(self.headerView.frame) + pixelValue(10), UI_SCREEN_WIDTH, UI_SCREEN_HEIGHT - tarBarHeight - STATUS_BAR_HEIGHT);
-        }];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [UIView animateWithDuration:0.3 animations:^{
+                self.headerView.frame = CGRectMake(0, 0, UI_SCREEN_WIDTH, pixelValue(632));
+                self.scrollPageView.frame = CGRectMake(0, CGRectGetMaxY(self.headerView.frame) + pixelValue(10), UI_SCREEN_WIDTH, UI_SCREEN_HEIGHT - tarBarHeight - STATUS_BAR_HEIGHT);
+            }];
+        });
+       
     }
     
 }
@@ -124,14 +127,14 @@
 
 #pragma mark - tableView滑动到顶部
 -(void)CircleDynamicTop{
-    [UIView animateWithDuration:0.15 animations:^{
+    [UIView animateWithDuration:0.3 animations:^{
         self.headerView.frame = CGRectMake(0, 0, UI_SCREEN_WIDTH, pixelValue(632));
         self.scrollPageView.frame = CGRectMake(0, CGRectGetMaxY(self.headerView.frame) + pixelValue(10), UI_SCREEN_WIDTH, UI_SCREEN_HEIGHT - tarBarHeight - STATUS_BAR_HEIGHT);
     }];
 }
 #pragma mark - tableView滑动到非顶部
 -(void)CircleDynamicUnTop{
-    [UIView animateWithDuration:0.15 animations:^{
+    [UIView animateWithDuration:0.3 animations:^{
         self.headerView.frame = CGRectMake(0, 0, UI_SCREEN_WIDTH, 0);
         self.scrollPageView.frame = CGRectMake(0, 0, UI_SCREEN_WIDTH, UI_SCREEN_HEIGHT - tarBarHeight - STATUS_BAR_HEIGHT);
         
