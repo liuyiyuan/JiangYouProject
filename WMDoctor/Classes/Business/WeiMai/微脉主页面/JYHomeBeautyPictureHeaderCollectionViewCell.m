@@ -33,7 +33,7 @@
 -(UIImageView *)myImageView{
     if(!_myImageView){
         _myImageView = [[UIImageView alloc]init];
-        _myImageView.image = [UIImage imageNamed:@"圆角矩形 9"];
+//        _myImageView.image = [UIImage imageNamed:@"圆角矩形 9"];
     }
     return _myImageView;
 }

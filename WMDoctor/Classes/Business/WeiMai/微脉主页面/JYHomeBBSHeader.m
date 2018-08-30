@@ -18,7 +18,7 @@
     self = [super initWithFrame:frame];
     if(self){
         self.backgroundColor = [UIColor colorWithHexString:@"#F5F5F5"];
-        [self configUI];
+//        [self configUI];
     }
     return self;
 }
@@ -81,7 +81,7 @@
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 5;
+    return self.dataArray.count;
 }
 
 //每个UICollectionView展示的内容
@@ -89,7 +89,7 @@
     static NSString * CellIdentifier = @"JYHomeBeautyPictureHeaderCollectionViewCell";
     JYHomeBeautyPictureHeaderCollectionViewCell * cell = (JYHomeBeautyPictureHeaderCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
     cell.backgroundColor = [UIColor whiteColor];
-    
+    [cell.myImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",self.dataArray[indexPath.row]]] placeholderImage:nil];
     
     return cell;
 }
@@ -185,6 +185,14 @@
         _recommendedLabel.backgroundColor = [UIColor whiteColor];
     }
     return _recommendedLabel;
+}
+
+
+
+-(void)setDataArray:(NSMutableArray *)dataArray{
+    _dataArray = dataArray;
+    [self configUI];
+    [self.collectionView reloadData];
 }
 
 @end

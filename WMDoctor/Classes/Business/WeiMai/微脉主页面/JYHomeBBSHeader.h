@@ -28,7 +28,7 @@
 
 @property (nonatomic, strong) UILabel *recommendedLabel;//精选推荐
 
-
+@property (nonatomic, strong) NSArray *dataArray;//数据数组
 
 @property (nonatomic, weak  ) id<JYBBSHotDelegate> delegate;
 

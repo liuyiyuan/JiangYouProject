@@ -10,6 +10,8 @@
 #import "JYHomeBBSHeader.h"
 #import "JYHomeBBSTableViewCell.h"
 #import "JYHomeBBSFooterView.h"
+#import "JYHomeBBSHotManager.h"
+
 @interface JYHomeBBSViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -18,9 +20,18 @@
 
 @property (nonatomic, strong) JYHomeBBSFooterView *footerView;
 
+@property (nonatomic, strong) NSMutableArray *dataArray;
+
 @end
 
 @implementation JYHomeBBSViewController
+
+-(NSMutableArray *)dataArray{
+    if(!_dataArray){
+        _dataArray = [[NSMutableArray alloc]init];
+    }
+    return _dataArray;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -28,7 +39,7 @@
 }
 
 - (void)zj_viewDidLoadForIndex:(NSInteger)index {
-    
+    [self getBBSHot];
     [self.view addSubview:self.tableView];
 }
 
@@ -73,6 +84,7 @@
 }
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    self.headerView.dataArray = self.dataArray;
     return self.headerView;
 }
 
@@ -88,6 +100,25 @@
     return pixelValue(100);
 }
 
+
+
+-(void)getBBSHot{
+    JYHomeBBSHotManager *BBSHot = [[JYHomeBBSHotManager alloc] init];
+    [BBSHot loadDataWithParams:nil withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"%@",responseObject);
+    
+        
+        for (NSDictionary *dic in [responseObject allObjects]) {
+            [self.dataArray addObject:dic[@"img"]];
+        }
+        
+        [self.tableView reloadData];
+        
+    } withFailure:^(ResponseResult *errorResult) {
+        NSLog(@"login error : %@", errorResult);
+        
+    }];
+}
 
 #pragma mark - 发现更多点击
 -(void)click_findMoreButton{
