@@ -8,7 +8,7 @@
 
 #import "JYHomeBeautyPictureHeaderView.h"
 #import "JYHomeBeautyPictureHeaderCollectionViewCell.h"
-#import "JYHomeBeautyPictureHotManager.h"
+
 @interface JYHomeBeautyPictureHeaderView()<UICollectionViewDataSource,UICollectionViewDelegate>
 
 @end
@@ -19,7 +19,7 @@
     self = [super initWithFrame:frame];
     if(self){
         self.backgroundColor = [UIColor colorWithHexString:@"#F5F5F5"];
-        [self getBeautyPictureHot];
+        
         [self configUI];
     }
     return self;
@@ -130,7 +130,7 @@
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 5;
+    return self.hotDataArray.count;
 }
 
 //每个UICollectionView展示的内容
@@ -138,7 +138,7 @@
     static NSString * CellIdentifier = @"JYHomeBeautyPictureHeaderCollectionViewCell";
     JYHomeBeautyPictureHeaderCollectionViewCell * cell = (JYHomeBeautyPictureHeaderCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
     cell.backgroundColor = [UIColor whiteColor];
-
+    [cell.myImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",self.hotDataArray[indexPath.row]]] placeholderImage:nil];
     
     return cell;
 }
@@ -168,18 +168,9 @@
     return YES;
 }
 
-#pragma mark - 获取热门推荐
--(void)getBeautyPictureHot{
-    
-    JYHomeBeautyPictureHotManager *beautyPictureHot = [[JYHomeBeautyPictureHotManager alloc] init];
-    [beautyPictureHot loadDataWithParams:nil withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
-        NSLog(@"%@",responseObject);
-        
-        
-    } withFailure:^(ResponseResult *errorResult) {
-        NSLog(@"login error : %@", errorResult);
-        
-    }];
+-(void)setHotDataArray:(NSArray *)hotDataArray{
+    _hotDataArray = hotDataArray;
+    [self.collection reloadData];
 }
 
 @end

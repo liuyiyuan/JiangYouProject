@@ -28,4 +28,6 @@
 
 @property (nonatomic, weak  ) id<JYPictureHotDelegate> delegate;
 
+@property (nonatomic, strong) NSArray *hotDataArray;
+
 @end

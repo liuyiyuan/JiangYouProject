@@ -11,10 +11,14 @@
 #import "JYHomePictureTableViewCell.h"//美图cell
 #import "JYHomeBeautyPictureLIstManager.h"//美图接口
 #import "JYHomeBeautyPictureHeaderView.h"
+#import "JYHomeBeautyPictureHotManager.h"
 @interface JYHomeBeautyPittureViewController ()<UITableViewDataSource,UITableViewDelegate,JYPictureHotDelegate>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *dataArray;
 @property (nonatomic, strong) JYHomeBeautyPictureHeaderView *headerView;
+
+@property (nonatomic, strong) NSMutableArray *hotDataArray;
+
 @end
 
 @implementation JYHomeBeautyPittureViewController
@@ -22,6 +26,13 @@
     NSInteger _page;
     
 }
+-(NSMutableArray *)hotDataArray{
+    if(!_hotDataArray){
+        _hotDataArray = [[NSMutableArray alloc]init];
+    }
+    return _hotDataArray;
+}
+
 -(NSMutableArray *)dataArray{
     if(!_dataArray){
         _dataArray = [[NSMutableArray alloc]init];
@@ -36,7 +47,7 @@
 }
 
 - (void)zj_viewDidLoadForIndex:(NSInteger)index {
-
+    [self getBeautyPictureHot];
     [self.view addSubview:self.tableView];
 }
 
@@ -63,6 +74,7 @@
 }
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    self.headerView.hotDataArray = self.hotDataArray;
     return self.headerView;
 }
 
@@ -70,32 +82,7 @@
     return pixelValue(414);
 }
 
--(UITableView *)tableView{
-    if(!_tableView){
-        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, UI_SCREEN_WIDTH,self.view.frame.size.height) style:UITableViewStyleGrouped];
-//        _tableView.frame = CGRectMake(0, 0, UI_SCREEN_WIDTH,self.view.frame.size.height);
-        _tableView.delegate = self;
-        _tableView.dataSource = self;
-        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        _tableView.rowHeight = UITableViewAutomaticDimension;
-        _tableView.estimatedRowHeight = pixelValue(380);
-        _tableView.mj_header = [MJWeiMaiHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
-        __weak typeof(self) weakSelf = self;
-        MJWeiMaiFooter *footer = [MJWeiMaiFooter footerWithRefreshingBlock:^{
-            [weakSelf loadMoreData];
-        
-        }];
-        _tableView.mj_footer = footer;
-        }
-        return _tableView;
-}
 
--(JYHomeBeautyPictureHeaderView *)headerView{
-    if(!_headerView){
-        _headerView = [[JYHomeBeautyPictureHeaderView alloc]init];
-    }
-    return _headerView;
-}
 
 #pragma mark - 新闻刷新
 - (void)loadNewData{
@@ -163,9 +150,55 @@
                                   
 }
 
+#pragma mark - 获取热门推荐
+-(void)getBeautyPictureHot{
+    
+    JYHomeBeautyPictureHotManager *beautyPictureHot = [[JYHomeBeautyPictureHotManager alloc] init];
+    [beautyPictureHot loadDataWithParams:nil withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"%@",responseObject);
+        for (NSDictionary *dic in [responseObject allObjects]) {
+            [self.hotDataArray addObject:dic[@"msgImg"]];
+        }
+        
+        [self.tableView reloadData];
+        
+    } withFailure:^(ResponseResult *errorResult) {
+        NSLog(@"login error : %@", errorResult);
+        
+    }];
+}
+
 #pragma mark - JYPictureHotDelegate
 - (void)clickHotViewIndex:(NSIndexPath *)indexPath{
     
+}
+
+
+-(UITableView *)tableView{
+    if(!_tableView){
+        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, UI_SCREEN_WIDTH,self.view.frame.size.height) style:UITableViewStyleGrouped];
+        //        _tableView.frame = CGRectMake(0, 0, UI_SCREEN_WIDTH,self.view.frame.size.height);
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        _tableView.rowHeight = UITableViewAutomaticDimension;
+        _tableView.estimatedRowHeight = pixelValue(380);
+        _tableView.mj_header = [MJWeiMaiHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
+        __weak typeof(self) weakSelf = self;
+        MJWeiMaiFooter *footer = [MJWeiMaiFooter footerWithRefreshingBlock:^{
+            [weakSelf loadMoreData];
+            
+        }];
+        _tableView.mj_footer = footer;
+    }
+    return _tableView;
+}
+
+-(JYHomeBeautyPictureHeaderView *)headerView{
+    if(!_headerView){
+        _headerView = [[JYHomeBeautyPictureHeaderView alloc]init];
+    }
+    return _headerView;
 }
 
 // 使用系统的生命周期方法
