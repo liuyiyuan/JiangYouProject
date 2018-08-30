@@ -23,6 +23,7 @@
     [self.contentView addSubview:self.backView];
     [self.backView addSubview:self.backImageView];
     [self.backImageView addSubview:self.contentLabel];
+    [self.backView addSubview:self.playButton];
     [self.backView addSubview:self.fromButton];
     [self.backView addSubview:self.commentsButton];
     [self.backView addSubview:self.starButton];
@@ -48,6 +49,13 @@
         make.top.mas_equalTo(self.backImageView.mas_top).offset(pixelValue(20));
         make.left.mas_equalTo(self.backImageView.mas_left).offset(pixelValue(20));
         make.right.mas_equalTo(self.backImageView.mas_right).offset(-pixelValue(20));
+    }];
+    
+    [self.playButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.mas_equalTo(self.backImageView.mas_centerX);
+        make.centerY.mas_equalTo(self.backImageView.mas_centerY);
+        make.width.mas_equalTo(pixelValue(91));
+        make.height.mas_equalTo(pixelValue(89));
     }];
     
     [self.fromButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -103,6 +111,7 @@
     if(!_backImageView){
         _backImageView = [[UIImageView alloc]init];
         _backImageView.image = [UIImage imageNamed:@"矩形 15"];
+        _backImageView.userInteractionEnabled = YES;
     }
     return _backImageView;
 }
@@ -122,7 +131,7 @@
     if(!_fromButton){
         _fromButton = [[UIButton alloc]init];
         [_fromButton setImage:[UIImage imageNamed:@"椭圆 4"] forState:UIControlStateNormal];
-        [_fromButton setTitle:@"某某日报社" forState:UIControlStateNormal];
+//        [_fromButton setTitle:@"某某日报社" forState:UIControlStateNormal];
         [_fromButton setTitleColor:[UIColor colorWithHexString:@"#909090"] forState:UIControlStateNormal];
     }
     return _fromButton;
@@ -164,5 +173,13 @@
     return _deletedButton;
 }
 
+//播放按钮
+-(UIButton *)playButton{
+    if(!_playButton){
+        _playButton = [[UIButton alloc]init];
+        [_playButton setBackgroundImage:[UIImage imageNamed:@"button_play"] forState:UIControlStateNormal];
+    }
+    return _playButton;
+}
 
 @end

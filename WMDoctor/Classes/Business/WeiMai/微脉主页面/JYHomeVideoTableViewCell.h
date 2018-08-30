@@ -25,4 +25,6 @@
 @property (nonatomic, strong) UIButton *shareButton;//分享按钮
 
 @property (nonatomic, strong) UIButton *deletedButton;//删除按钮
+
+@property (nonatomic, strong) UIButton *playButton;//播放按钮
 @end

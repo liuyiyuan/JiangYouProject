@@ -11,6 +11,8 @@
 #import "JYHomeVideoManager.h"
 #import "JYHomeVideoTableViewCell.h"
 #import "JYHomeVideoLunBoManager.h"
+#import <AVKit/AVKit.h>
+#import <AVFoundation/AVFoundation.h>
 @interface JYHomeVideoViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -56,18 +58,22 @@
 
 #pragma mark - UITableViewDelegate
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 5;
+    return self.dataArray.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    NSDictionary *dict = self.dataArray[indexPath.row];
+    NSDictionary *dict = self.dataArray[indexPath.row];
+    
     static NSString *cellId = @"JYHomeVideoTableViewCell";
     JYHomeVideoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     if(!cell){
         cell = [[JYHomeVideoTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
     }
-    
-    
+    [cell.backImageView sd_setImageWithURL:[NSURL URLWithString:dict[@"msgImg"]] placeholderImage:nil];
+    cell.fromButton.titleLabel.text = dict[@"whereFrom"];
+    cell.playButton.tag = indexPath.row;
+    [cell.playButton addTarget:self action:@selector(click_playButton:) forControlEvents:UIControlEventTouchUpInside];
     
     return cell;
 }
@@ -82,12 +88,13 @@
 }
 
 
+
 #pragma mark - 获取视频列表
 - (void)loadNewData{
     _page = 1;
     NSString *pageString = [NSString stringWithFormat:@"%ld",(long)_page];
     NSDictionary *param = @{@"userId":@"18",
-                            @"tagId":@322,
+                            @"tagId":@121,
                             @"pageNo":pageString,
                             @"pageSize":@"15"
                             };
@@ -167,6 +174,44 @@
     }];
 }
 
+
+-(void)click_playButton :(UIButton *)button{
+    NSDictionary *dict = self.dataArray[button.tag];
+    NSString *urlString = dict[@"shareUrl"];
+    AVPlayerViewController *play = [[AVPlayerViewController alloc] init];
+    
+    play.player = [[AVPlayer alloc] initWithURL:[NSURL URLWithString:urlString]];
+    
+    // 是否显示视频播放控制控件默认YES
+    play.showsPlaybackControls = YES;
+    
+    // 设置视频播放界面的尺寸播放选项
+    // AVLayerVideoGravityResizeAspect   默认 不进行比例缩放 以宽高中长的一边充满为基准
+    // AVLayerVideoGravityResizeAspectFill 不进行比例缩放 以宽高中短的一边充满为基准
+    // AVLayerVideoGravityResize     进行缩放充满屏幕
+    play.videoGravity = @"AVLayerVideoGravityResizeAspect";
+    
+    // 获取是否已经准备好开始播放
+    //    play.isReadyForDisplay
+    
+    // 获取视频播放界面的尺寸
+    //    play.videoBounds
+    
+    // 视频播放器的视图 自定义的控件可以添加在其上
+    //    play.contentOverlayView
+    
+    // 画中画代理iOS9后可用
+//    play.delegate = self;
+    
+    // 是否支持画中画 默认YES
+//    play.allowsPictureInPicturePlayback = YES;
+    
+    
+    //    [play.player play];
+    
+    [self presentViewController:play animated:YES completion:nil];
+
+}
 
 -(UITableView *)tableView{
     if(!_tableView){
