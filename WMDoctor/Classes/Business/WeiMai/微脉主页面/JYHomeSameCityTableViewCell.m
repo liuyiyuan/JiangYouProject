@@ -44,8 +44,8 @@
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     static NSString * CellIdentifier = @"JYHomeSameCityCollectionViewCell";
     JYHomeSameCityCollectionViewCell * cell = (JYHomeSameCityCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
-   
-    cell.myLabel.text = [NSString stringWithFormat:@"%@",self.titleArray[indexPath.row]];
+    NSDictionary *dict = self.titleArray[indexPath.row];
+    cell.myLabel.text = [NSString stringWithFormat:@"%@",dict[@"smallModuleTitle"]];
     
     return cell;
 }

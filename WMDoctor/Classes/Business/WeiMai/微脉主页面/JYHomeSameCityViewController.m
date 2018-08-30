@@ -27,10 +27,18 @@
 
 @property (nonatomic, strong) NSMutableArray *photoNavListArray;//三图数组
 
+@property (nonatomic, strong) NSMutableArray *bigModuleListArray;//家庭服务和热门服务总数组
 
 @end
 
 @implementation JYHomeSameCityViewController
+
+-(NSMutableArray *)bigModuleListArray{
+    if(!_bigModuleListArray){
+        _bigModuleListArray = [[NSMutableArray alloc]init];
+    }
+    return _bigModuleListArray;
+}
 
 -(NSMutableArray *)photoNavListArray{
     if(!_photoNavListArray){
@@ -52,9 +60,12 @@
 }
 
 - (void)zj_viewDidLoadForIndex:(NSInteger)index {
-    self.hotArray = @[@"急开锁",@"搬家",@"家政",@"管道梳理",@"快递",@"家政服务",@"家教",@"婚庆"];
-    self.homeArray = @[@"家政",@"搬家",@"家政",@"管道梳理",@"快递",@"电脑",@"生活配送",@"家电维修",@"家装服务",@"房屋维修",@"公装",@"建房",@"宠物服务"];
+   
     [self getSameCityList];
+    
+}
+
+-(void)configUI{
     [self.view addSubview:self.tableView];
 }
 
@@ -70,18 +81,30 @@
     JYHomeSameCityTableViewCell *cell = [[JYHomeSameCityTableViewCell alloc]init];
     
     if(indexPath.section == 0){
-        cell.titleArray = self.hotArray;
+        NSArray *firstArray = self.bigModuleListArray[0][@"containModuleList"];
+        cell.titleArray = firstArray;
     }else if(indexPath.section == 1){
-        cell.titleArray = self.homeArray;
+        NSArray *secondArray = self.bigModuleListArray[1][@"containModuleList"];
+        cell.titleArray = secondArray;
     }
     return cell;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if(indexPath.section == 0){
-        return pixelValue(140);
+        NSArray *firstArray = self.bigModuleListArray[0][@"containModuleList"];
+        CGFloat height = firstArray.count / 4;
+        if(firstArray.count % 4 > 0){
+            height += 1;
+        }
+        return height * pixelValue(70);
     }else if(indexPath.section == 1){
-        return pixelValue(280);
+        NSArray *secondArray = self.bigModuleListArray[1][@"containModuleList"];
+        CGFloat height = secondArray.count / 4;
+        if(secondArray.count % 4 > 0){
+            height += 1;
+        }
+        return height * pixelValue(70);
     }
     return 0;
 }
@@ -92,6 +115,13 @@
         self.headerView.photoNavListArray = self.photoNavListArray;
         return self.headerView;
     }else if(section == 1){
+        if(section == 0){
+            NSString *titleString = self.bigModuleListArray[0][@"bigModuleTitle"];
+            self.secondHeaderView.hotLabel.text = titleString;
+        }else if(section == 1){
+            NSString *titleString = self.bigModuleListArray[1][@"bigModuleTitle"];
+            self.secondHeaderView.hotLabel.text = titleString;
+        }
         return self.secondHeaderView;
     }
     return nil;
@@ -121,7 +151,8 @@
         
             self.fastListArray = [NSMutableArray arrayWithArray:responseObject[@"fastList"]];
             self.photoNavListArray = [NSMutableArray arrayWithArray:responseObject[@"photoNavList"]];
-
+            self.bigModuleListArray = [NSMutableArray arrayWithArray:responseObject[@"bigModuleList"]];
+        [self configUI];
         [self.tableView reloadData];
         
     } withFailure:^(ResponseResult *errorResult) {

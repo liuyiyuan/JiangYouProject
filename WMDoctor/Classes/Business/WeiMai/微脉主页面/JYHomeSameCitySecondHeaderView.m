@@ -77,7 +77,7 @@
         _hotLabel = [[UILabel alloc]init];
         _hotLabel.font = [UIFont systemFontOfSize:pixelValue(32)];
         _hotLabel.textColor = [UIColor colorWithHexString:@"#1A80CC"];
-        _hotLabel.text = @"家庭服务";
+//        _hotLabel.text = @"家庭服务";
     }
     return _hotLabel;
 }
