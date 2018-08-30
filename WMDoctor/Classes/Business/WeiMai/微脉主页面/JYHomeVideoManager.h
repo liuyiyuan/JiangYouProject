@@ -8,6 +8,6 @@
 
 #import "WMBaseAPIManager.h"
 
-@interface JYHomeVideoManager : WMBaseAPIManager
+@interface JYHomeVideoManager : WMBaseAPIManager<WMAPIManager>
 
 @end

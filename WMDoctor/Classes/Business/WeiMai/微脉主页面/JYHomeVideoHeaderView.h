@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "HYBLoopScrollView.h"
 @interface JYHomeVideoHeaderView : UIView
 
 @property (nonatomic, strong) UIImageView *myStyle;//我型我秀
@@ -21,5 +21,9 @@
 @property (nonatomic, strong) UIImageView *live;//直播
 
 @property (nonatomic, strong) UILabel *liveLaebl;//直播label
+
+@property (nonatomic, strong) NSArray *imageUrls;//轮播图图片地址
+
+@property (nonatomic, strong) HYBLoopScrollView *loop;//轮播图
 
 @end

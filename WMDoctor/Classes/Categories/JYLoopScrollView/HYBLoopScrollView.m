@@ -146,9 +146,9 @@ NSString * const kCellIdentifier = @"ReuseCellIdentifier";
   self.layout .minimumLineSpacing = 0;
   self.layout .scrollDirection = UICollectionViewScrollDirectionHorizontal;
   
-  self.collectionView = [[UICollectionView alloc] initWithFrame:self.frame
+  self.collectionView = [[UICollectionView alloc] initWithFrame:self.bounds
                                            collectionViewLayout:self.layout];
-  self.collectionView.backgroundColor = [UIColor lightGrayColor];
+  self.collectionView.backgroundColor = [UIColor clearColor];
   self.collectionView.pagingEnabled = YES;
   self.collectionView.showsHorizontalScrollIndicator = NO;
   self.collectionView.showsVerticalScrollIndicator = NO;

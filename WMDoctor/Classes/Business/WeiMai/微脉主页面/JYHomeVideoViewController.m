@@ -10,17 +10,26 @@
 #import "JYHomeVideoHeaderView.h"
 #import "JYHomeVideoManager.h"
 #import "JYHomeVideoTableViewCell.h"
+#import "JYHomeVideoLunBoManager.h"
 @interface JYHomeVideoViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *dataArray;
 @property (nonatomic, strong) JYHomeVideoHeaderView *headerView;
+@property (nonatomic, strong) NSMutableArray *imageUrls;
 @end
 
 @implementation JYHomeVideoViewController
 {
     NSInteger _page;
     NSDictionary *_userDict;
+}
+
+-(NSMutableArray *)imageUrls{
+    if(!_imageUrls){
+        _imageUrls = [[NSMutableArray alloc]init];
+    }
+    return _imageUrls;
 }
 
 -(NSMutableArray *)dataArray{
@@ -34,6 +43,7 @@
     [super viewDidLoad];
     _userDict = [[NSUserDefaults standardUserDefaults]objectForKey:@"JYLoginUserInfo"];
     [self loadNewData];
+    [self getVideoLunBo];
     
 }
 
@@ -63,6 +73,7 @@
 }
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    self.headerView.imageUrls = self.imageUrls;
     return self.headerView;
 }
 
@@ -138,6 +149,24 @@
 }
 
 
+-(void)getVideoLunBo{
+    JYHomeVideoLunBoManager *videoLunBo = [[JYHomeVideoLunBoManager alloc] init];
+    [videoLunBo loadDataWithParams:nil withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"%@",responseObject);
+        
+        
+        for (NSDictionary *dic in [responseObject allObjects]) {
+            [self.imageUrls addObject:dic[@"msgImg"]];
+        }
+        
+        [self.tableView reloadData];
+        
+    } withFailure:^(ResponseResult *errorResult) {
+        NSLog(@"login error : %@", errorResult);
+        
+    }];
+}
+
 
 -(UITableView *)tableView{
     if(!_tableView){
@@ -163,6 +192,7 @@
 -(JYHomeVideoHeaderView *)headerView{
     if(!_headerView){
         _headerView = [[JYHomeVideoHeaderView alloc]init];
+        
     }
     return _headerView;
 }

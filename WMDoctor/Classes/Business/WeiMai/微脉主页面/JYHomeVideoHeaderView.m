@@ -7,14 +7,14 @@
 //
 
 #import "JYHomeVideoHeaderView.h"
-#import "HYBLoopScrollView.h"
+
 @implementation JYHomeVideoHeaderView
 
 
 -(instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if(self){
-        [self configUI];
+//        [self configUI];
     }
     return self;
 }
@@ -40,16 +40,16 @@
     self.live.frame = CGRectMake(CGRectGetMaxX(self.airPicture.frame) + pixelValue(20), self.airPicture.frame.origin.y, self.myStyle.frame.size.width, self.myStyle.frame.size.height);
     self.liveLaebl.frame = CGRectMake(0, 0, self.myStyle.frame.size.width, self.myStyle.frame.size.height);
     
-    NSArray *imageArray = @[@"矩形 13",@"矩形 13",@"矩形 13",@"矩形 13"];
+//    NSArray *imageArray = @[@"矩形 13",@"矩形 13",@"矩形 13",@"矩形 13"];
     //轮播图
-    HYBLoopScrollView *loop = [HYBLoopScrollView loopScrollViewWithFrame:CGRectMake(0, CGRectGetMaxY(self.myStyle.frame) + pixelValue(20), UI_SCREEN_WIDTH, pixelValue(360)) imageUrls:imageArray timeInterval:5 didSelect:^(NSInteger atIndex) {
+    self.loop = [HYBLoopScrollView loopScrollViewWithFrame:CGRectMake(0, CGRectGetMaxY(self.myStyle.frame) + pixelValue(20), UI_SCREEN_WIDTH, pixelValue(360)) imageUrls:self.imageUrls timeInterval:5 didSelect:^(NSInteger atIndex) {
         
         
     } didScroll:^(NSInteger toIndex) {
         
     }];
     
-    [self addSubview:loop];
+    [self addSubview:self.loop];
 }
 //我型我秀
 -(UIImageView *)myStyle{
@@ -110,5 +110,9 @@
     return _liveLaebl;
 }
 
+-(void)setImageUrls:(NSArray *)imageUrls{
+    _imageUrls = imageUrls;
+    [self configUI];
+}
 
 @end
