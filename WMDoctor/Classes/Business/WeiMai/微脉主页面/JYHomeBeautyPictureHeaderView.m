@@ -173,4 +173,15 @@
     [self.collection reloadData];
 }
 
+-(void)setPictureTagArray:(NSArray *)PictureTagArray{
+    _PictureTagArray = PictureTagArray;
+    if(PictureTagArray.count == 3){
+        [self.oldPicture sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",PictureTagArray[0]]] placeholderImage:nil];
+        [self.bigBeautyJy sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",PictureTagArray[1]]] placeholderImage:nil];
+        [self.BTW sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",PictureTagArray[2]]] placeholderImage:nil];
+    }
+
+    
+}
+
 @end

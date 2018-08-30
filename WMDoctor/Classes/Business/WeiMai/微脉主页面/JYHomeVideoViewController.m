@@ -86,7 +86,7 @@
 - (void)loadNewData{
     _page = 1;
     NSString *pageString = [NSString stringWithFormat:@"%ld",(long)_page];
-    NSDictionary *param = @{@"userId":_userDict[@"userId"],
+    NSDictionary *param = @{@"userId":@"18",
                             @"tagId":@322,
                             @"pageNo":pageString,
                             @"pageSize":@"15"

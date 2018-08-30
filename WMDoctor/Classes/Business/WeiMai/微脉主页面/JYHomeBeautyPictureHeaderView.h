@@ -30,4 +30,6 @@
 
 @property (nonatomic, strong) NSArray *hotDataArray;
 
+@property (nonatomic, strong) NSArray *PictureTagArray;
+
 @end

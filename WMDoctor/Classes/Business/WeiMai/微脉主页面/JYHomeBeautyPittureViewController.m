@@ -12,12 +12,15 @@
 #import "JYHomeBeautyPictureLIstManager.h"//美图接口
 #import "JYHomeBeautyPictureHeaderView.h"
 #import "JYHomeBeautyPictureHotManager.h"
+#import "JYHomeBeautyPictureTagManager.h"
 @interface JYHomeBeautyPittureViewController ()<UITableViewDataSource,UITableViewDelegate,JYPictureHotDelegate>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *dataArray;
 @property (nonatomic, strong) JYHomeBeautyPictureHeaderView *headerView;
 
-@property (nonatomic, strong) NSMutableArray *hotDataArray;
+@property (nonatomic, strong) NSMutableArray *hotDataArray;//热门推荐数组
+
+@property (nonatomic, strong) NSMutableArray *PictureTagArray;//标签介绍(固定三个)
 
 @end
 
@@ -26,6 +29,13 @@
     NSInteger _page;
     
 }
+-(NSMutableArray *)PictureTagArray{
+    if(!_PictureTagArray){
+        _PictureTagArray = [[NSMutableArray alloc]init];
+    }
+    return _PictureTagArray;
+}
+
 -(NSMutableArray *)hotDataArray{
     if(!_hotDataArray){
         _hotDataArray = [[NSMutableArray alloc]init];
@@ -47,7 +57,8 @@
 }
 
 - (void)zj_viewDidLoadForIndex:(NSInteger)index {
-    [self getBeautyPictureHot];
+    [self getBeautyPictureHot];//热门推荐
+    [self getTag];//固定三标签
     [self.view addSubview:self.tableView];
 }
 
@@ -75,6 +86,7 @@
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     self.headerView.hotDataArray = self.hotDataArray;
+    self.headerView.PictureTagArray = self.PictureTagArray;
     return self.headerView;
 }
 
@@ -158,6 +170,26 @@
         NSLog(@"%@",responseObject);
         for (NSDictionary *dic in [responseObject allObjects]) {
             [self.hotDataArray addObject:dic[@"msgImg"]];
+        }
+        
+        [self.tableView reloadData];
+        
+    } withFailure:^(ResponseResult *errorResult) {
+        NSLog(@"login error : %@", errorResult);
+        
+    }];
+}
+
+
+#pragma mark - 标签介绍
+-(void)getTag{
+    JYHomeBeautyPictureTagManager *PictureTag = [[JYHomeBeautyPictureTagManager alloc] init];
+    [PictureTag loadDataWithParams:@{@"userId":@"18"} withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"%@",responseObject);
+        
+        
+        for (NSDictionary *dic in [responseObject allObjects]) {
+            [self.PictureTagArray addObject:dic[@"channelImg"]];
         }
         
         [self.tableView reloadData];
