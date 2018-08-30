@@ -100,7 +100,7 @@
 - (void)loadNewData{
     _page = 1;
     NSString *pageString = [NSString stringWithFormat:@"%ld",(long)_page];
-    NSDictionary *param = @{@"userId":@"1",
+    NSDictionary *param = @{@"userId":@"18",
                             @"tagId":@"3",
                             @"pageNo":pageString,
                             @"pageSize":@"15"
@@ -130,7 +130,7 @@
 #pragma mark - Refresh
 - (void)loadMoreData{
     NSString *pageString = [NSString stringWithFormat:@"%ld",(long)_page];
-    NSDictionary *param = @{@"userId":@"1",
+    NSDictionary *param = @{@"userId":@"18",
                             @"tagId":@"3",
                             @"pageNo":pageString,
                             @"pageSize":@"15"

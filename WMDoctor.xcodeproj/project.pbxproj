@@ -731,6 +731,7 @@
 		CC2E1EEA21378446000FD879 /* JYHomeBBSHotManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2E1EE921378446000FD879 /* JYHomeBBSHotManager.m */; };
 		CC2E1EED21378DB1000FD879 /* JYHomeBBSChooseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2E1EEC21378DB1000FD879 /* JYHomeBBSChooseManager.m */; };
 		CC2E1EF021379212000FD879 /* JYHomeBeautyPictureTagManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2E1EEF21379212000FD879 /* JYHomeBeautyPictureTagManager.m */; };
+		CC2E1EF3213799B1000FD879 /* JYHomeSameCityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2E1EF2213799B1000FD879 /* JYHomeSameCityManager.m */; };
 		CC7E087B21193318007B14C6 /* JYHomePictureTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7E087A21193318007B14C6 /* JYHomePictureTableViewCell.m */; };
 		CC7E087E2119382E007B14C6 /* JYHomeBeautyPictureLIstManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7E087D2119382E007B14C6 /* JYHomeBeautyPictureLIstManager.m */; };
 		CC7E089121194F95007B14C6 /* ZJScrollPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7E088421194F93007B14C6 /* ZJScrollPageView.m */; };
@@ -2159,6 +2160,8 @@
 		CC2E1EEC21378DB1000FD879 /* JYHomeBBSChooseManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYHomeBBSChooseManager.m; sourceTree = "<group>"; };
 		CC2E1EEE21379212000FD879 /* JYHomeBeautyPictureTagManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYHomeBeautyPictureTagManager.h; sourceTree = "<group>"; };
 		CC2E1EEF21379212000FD879 /* JYHomeBeautyPictureTagManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYHomeBeautyPictureTagManager.m; sourceTree = "<group>"; };
+		CC2E1EF1213799B1000FD879 /* JYHomeSameCityManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYHomeSameCityManager.h; sourceTree = "<group>"; };
+		CC2E1EF2213799B1000FD879 /* JYHomeSameCityManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYHomeSameCityManager.m; sourceTree = "<group>"; };
 		CC7E087921193318007B14C6 /* JYHomePictureTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYHomePictureTableViewCell.h; sourceTree = "<group>"; };
 		CC7E087A21193318007B14C6 /* JYHomePictureTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYHomePictureTableViewCell.m; sourceTree = "<group>"; };
 		CC7E087C2119382E007B14C6 /* JYHomeBeautyPictureLIstManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYHomeBeautyPictureLIstManager.h; sourceTree = "<group>"; };
@@ -5634,6 +5637,8 @@
 				CC2E1EEC21378DB1000FD879 /* JYHomeBBSChooseManager.m */,
 				CC2E1EEE21379212000FD879 /* JYHomeBeautyPictureTagManager.h */,
 				CC2E1EEF21379212000FD879 /* JYHomeBeautyPictureTagManager.m */,
+				CC2E1EF1213799B1000FD879 /* JYHomeSameCityManager.h */,
+				CC2E1EF2213799B1000FD879 /* JYHomeSameCityManager.m */,
 			);
 			name = APIManager;
 			sourceTree = "<group>";
@@ -6522,6 +6527,7 @@
 				1DE56A911E113AD800B93397 /* WMPatientReportedAPIManager.m in Sources */,
 				1844EE251F7B3F2B00EAF6FC /* WMDoctorRecordViewController.m in Sources */,
 				183287C41F0B724C00F87E01 /* WMCardiotocographyReportCell.m in Sources */,
+				CC2E1EF3213799B1000FD879 /* JYHomeSameCityManager.m in Sources */,
 				1814F2061E9F7153005B4260 /* WMCountrySelectViewController.m in Sources */,
 				1D38169A1ECD7A6000562FCA /* WMPerfectPerInfoAPIManager.m in Sources */,
 				CC2B24E420EDEA750050D5B2 /* JYFastLogInViewController.m in Sources */,

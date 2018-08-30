@@ -10,6 +10,7 @@
 #import "JYHomeSameCItyHeaderView.h"
 #import "JYHomeSameCityTableViewCell.h"
 #import "JYHomeSameCitySecondHeaderView.h"
+#import "JYHomeSameCityManager.h"
 @interface JYHomeSameCityViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -21,9 +22,29 @@
 @property (nonatomic, strong) NSArray *hotArray;
 
 @property (nonatomic, strong) NSArray *homeArray;
+
+@property (nonatomic, strong) NSMutableArray *fastListArray;//头部快捷数组
+
+@property (nonatomic, strong) NSMutableArray *photoNavListArray;//三图数组
+
+
 @end
 
 @implementation JYHomeSameCityViewController
+
+-(NSMutableArray *)photoNavListArray{
+    if(!_photoNavListArray){
+        _photoNavListArray = [[NSMutableArray alloc]init];
+    }
+    return _photoNavListArray;
+}
+
+-(NSMutableArray *)fastListArray{
+    if(!_fastListArray){
+        _fastListArray = [[NSMutableArray alloc]init];
+    }
+    return _fastListArray;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -33,7 +54,7 @@
 - (void)zj_viewDidLoadForIndex:(NSInteger)index {
     self.hotArray = @[@"急开锁",@"搬家",@"家政",@"管道梳理",@"快递",@"家政服务",@"家教",@"婚庆"];
     self.homeArray = @[@"家政",@"搬家",@"家政",@"管道梳理",@"快递",@"电脑",@"生活配送",@"家电维修",@"家装服务",@"房屋维修",@"公装",@"建房",@"宠物服务"];
-    
+    [self getSameCityList];
     [self.view addSubview:self.tableView];
 }
 
@@ -67,6 +88,8 @@
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     if(section == 0){
+        self.headerView.fastListArray = self.fastListArray;
+        self.headerView.photoNavListArray = self.photoNavListArray;
         return self.headerView;
     }else if(section == 1){
         return self.secondHeaderView;
@@ -87,6 +110,24 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     return pixelValue(1);
+}
+
+
+#pragma mark - 精选推荐
+-(void)getSameCityList{
+    JYHomeSameCityManager *sameCityManager = [[JYHomeSameCityManager alloc] init];
+    [sameCityManager loadDataWithParams:nil withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"%@",responseObject);
+        
+            self.fastListArray = [NSMutableArray arrayWithArray:responseObject[@"fastList"]];
+            self.photoNavListArray = [NSMutableArray arrayWithArray:responseObject[@"photoNavList"]];
+
+        [self.tableView reloadData];
+        
+    } withFailure:^(ResponseResult *errorResult) {
+        NSLog(@"login error : %@", errorResult);
+        
+    }];
 }
 
 #pragma mark - get方法

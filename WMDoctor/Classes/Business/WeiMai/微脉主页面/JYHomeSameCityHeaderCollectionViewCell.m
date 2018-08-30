@@ -49,7 +49,7 @@
         _myLabel = [[UILabel alloc]init];
         _myLabel.textColor = [UIColor blackColor];
         _myLabel.textAlignment = NSTextAlignmentCenter;
-        _myLabel.font = [UIFont systemFontOfSize:pixelValue(28)];
+        _myLabel.font = [UIFont systemFontOfSize:pixelValue(24)];
     }
     return _myLabel;
 }

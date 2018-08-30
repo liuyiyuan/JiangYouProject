@@ -91,43 +91,17 @@
 
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 6;
+    return self.fastListArray.count;
 }
 
 //每个UICollectionView展示的内容
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     static NSString * CellIdentifier = @"JYHomeSameCityHeaderCollectionViewCell";
     JYHomeSameCityHeaderCollectionViewCell * cell = (JYHomeSameCityHeaderCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
-    switch (indexPath.row) {
-        case 0:
-            cell.myImageView.image = [UIImage imageNamed:@"JY_sameCity_car"];
-            cell.myLabel.text = @"车市";
-            break;
-        case 1:
-            cell.myImageView.image = [UIImage imageNamed:@"JY_sameCity_bulid"];
-            cell.myLabel.text = @"楼市";
-            break;
-        case 2:
-            cell.myImageView.image = [UIImage imageNamed:@"JY_sameCity_drink"];
-            cell.myLabel.text = @"吃喝玩乐";
-            break;
-        case 3:
-            cell.myImageView.image = [UIImage imageNamed:@"JY_sameCity_travel"];
-            cell.myLabel.text = @"旅游";
-            break;
-        case 4:
-            cell.myImageView.image = [UIImage imageNamed:@"JY_sameCity_foods"];
-            cell.myLabel.text = @"美食";
-            break;
-        case 5:
-            cell.myImageView.image = [UIImage imageNamed:@"JY_sameCity_party"];
-            cell.myLabel.text = @"政务";
-            break;
-            
-            
-        default:
-            break;
-    }
+    NSDictionary *dict = self.fastListArray[indexPath.row];
+    [cell.myImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",dict[@"channelIcon"]]] placeholderImage:nil];
+    cell.myLabel.text = dict[@"title"];
+    
     
     
     return cell;
@@ -171,6 +145,7 @@
         _collectionView.showsVerticalScrollIndicator = NO;
         _collectionView.showsHorizontalScrollIndicator = NO;
         _collectionView.scrollEnabled = YES;
+        _collectionView.backgroundColor = [UIColor colorWithHexString:@"#F5F5F5"];
         [_collectionView registerClass:[JYHomeSameCityHeaderCollectionViewCell class] forCellWithReuseIdentifier:@"JYHomeSameCityHeaderCollectionViewCell"];
     }
     return _collectionView;
@@ -179,7 +154,7 @@
 -(UIImageView *)goodWorkImageView{
     if(!_goodWorkImageView){
         _goodWorkImageView = [[UIImageView alloc]init];
-        _goodWorkImageView.image = [UIImage imageNamed:@"JY_sameCity_goodWork"];
+//        _goodWorkImageView.image = [UIImage imageNamed:@"JY_sameCity_goodWork"];
     }
     return _goodWorkImageView;
 }
@@ -187,7 +162,7 @@
 -(UIImageView *)secondhandImageImage{
     if(!_secondhandImageImage){
         _secondhandImageImage = [[UIImageView alloc]init];
-        _secondhandImageImage.image = [UIImage imageNamed:@"JY_sameCity_secondHand"];
+//        _secondhandImageImage.image = [UIImage imageNamed:@"JY_sameCity_secondHand"];
     }
     return _secondhandImageImage;
 }
@@ -195,7 +170,7 @@
 -(UIImageView *)strategyImage{
     if(!_strategyImage){
         _strategyImage = [[UIImageView alloc]init];
-        _strategyImage.image = [UIImage imageNamed:@"JY_sameCity_strategyImage"];
+//        _strategyImage.image = [UIImage imageNamed:@"JY_sameCity_strategyImage"];
     }
     return _strategyImage;
 }
@@ -234,5 +209,22 @@
     return _lineView;
 }
 
+-(void)setFastListArray:(NSArray *)fastListArray{
+    _fastListArray = fastListArray;
+    [self.collectionView reloadData];
+}
+
+-(void)setPhotoNavListArray:(NSArray *)photoNavListArray{
+    _photoNavListArray = photoNavListArray;
+    if(photoNavListArray.count == 3){
+        NSDictionary *dict0 = photoNavListArray[0];
+        NSDictionary *dict1 = photoNavListArray[1];
+        NSDictionary *dict2 = photoNavListArray[2];
+        [self.goodWorkImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",dict0[@"photoLink"]]] placeholderImage:nil];
+        [self.secondhandImageImage sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",dict1[@"photoLink"]]] placeholderImage:nil];
+        [self.strategyImage sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",dict2[@"photoLink"]]] placeholderImage:nil];
+    }
+
+}
 
 @end

@@ -34,6 +34,8 @@
 
 @property (nonatomic, weak  ) id<SameCItyHeaderViewDelegate> delegate;
 
+@property (nonatomic, strong) NSArray *fastListArray;
 
+@property (nonatomic, strong) NSArray *photoNavListArray;//三图数组
 
 @end
