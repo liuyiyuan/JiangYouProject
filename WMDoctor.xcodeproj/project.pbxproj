@@ -680,6 +680,7 @@
 		AD6237F4213182B900923DD2 /* JYCircleMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6237F3213182B900923DD2 /* JYCircleMessageViewController.m */; };
 		AD6237F721318DAC00923DD2 /* JYCircleCircleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6237F621318DAC00923DD2 /* JYCircleCircleTableViewCell.m */; };
 		AD6237FA213977AE00923DD2 /* JYGetPersonalInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6237F9213977AE00923DD2 /* JYGetPersonalInfoManager.m */; };
+		AD6237FD213983EC00923DD2 /* JYHomeNewsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6237FC213983EC00923DD2 /* JYHomeNewsCollectionViewCell.m */; };
 		AD7A06EE2108D62300D3AAB4 /* ZCEmojiExpression.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AD7A06EB2108D62100D3AAB4 /* ZCEmojiExpression.bundle */; };
 		AD7A06EF2108D62300D3AAB4 /* SobotKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AD7A06EC2108D62200D3AAB4 /* SobotKit.bundle */; };
 		AD7A06F02108D62300D3AAB4 /* SobotLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD7A06ED2108D62300D3AAB4 /* SobotLocalizable.strings */; };
@@ -2065,6 +2066,8 @@
 		AD6237F621318DAC00923DD2 /* JYCircleCircleTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYCircleCircleTableViewCell.m; sourceTree = "<group>"; };
 		AD6237F8213977AE00923DD2 /* JYGetPersonalInfoManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYGetPersonalInfoManager.h; sourceTree = "<group>"; };
 		AD6237F9213977AE00923DD2 /* JYGetPersonalInfoManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYGetPersonalInfoManager.m; sourceTree = "<group>"; };
+		AD6237FB213983EC00923DD2 /* JYHomeNewsCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYHomeNewsCollectionViewCell.h; sourceTree = "<group>"; };
+		AD6237FC213983EC00923DD2 /* JYHomeNewsCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYHomeNewsCollectionViewCell.m; sourceTree = "<group>"; };
 		AD7A06EB2108D62100D3AAB4 /* ZCEmojiExpression.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZCEmojiExpression.bundle; sourceTree = "<group>"; };
 		AD7A06EC2108D62200D3AAB4 /* SobotKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SobotKit.bundle; sourceTree = "<group>"; };
 		AD7A06ED2108D62300D3AAB4 /* SobotLocalizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = SobotLocalizable.strings; sourceTree = "<group>"; };
@@ -2717,6 +2720,8 @@
 				AD0E119E2120734B00C3E98B /* JYHomeRecommendedThreePictureTableViewCell.m */,
 				AD6237E52127C2A300923DD2 /* JYHomeRecommendedBigPictureTableViewCell.h */,
 				AD6237E62127C2A300923DD2 /* JYHomeRecommendedBigPictureTableViewCell.m */,
+				AD6237FB213983EC00923DD2 /* JYHomeNewsCollectionViewCell.h */,
+				AD6237FC213983EC00923DD2 /* JYHomeNewsCollectionViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -6692,6 +6697,7 @@
 				18C937292072509300A3453E /* WMGroupInfoRemindCell.m in Sources */,
 				AD0E119F2120734B00C3E98B /* JYHomeRecommendedThreePictureTableViewCell.m in Sources */,
 				851187B7212081FA00F4D549 /* JYWelfareItemListAPIManager.m in Sources */,
+				AD6237FD213983EC00923DD2 /* JYHomeNewsCollectionViewCell.m in Sources */,
 				181C6C9B1E88AFC300CD0119 /* WMDoctorInformationCustomModel.m in Sources */,
 				1890BA4C1FC66E870009339C /* WMQuestionDetailTopCell.m in Sources */,
 				85F2F927211972690062A8A1 /* JYStoresActivitesCell.m in Sources */,

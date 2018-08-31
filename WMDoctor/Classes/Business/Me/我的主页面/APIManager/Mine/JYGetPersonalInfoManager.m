@@ -10,4 +10,20 @@
 
 @implementation JYGetPersonalInfoManager
 
+- (NSString *)methodName{
+    return @"/per/getPersonalInfo.jspx";
+}
+
+- (HTTPMethodType)requestType{
+    return Method_GET;
+}
+
+- (LoadingEffertType)loadingEffertType{
+    return LoadingEffertTypeNone;
+}
+
+- (HTTPPortType)portType{
+    return Port_Jeecmsv;
+}
+
 @end

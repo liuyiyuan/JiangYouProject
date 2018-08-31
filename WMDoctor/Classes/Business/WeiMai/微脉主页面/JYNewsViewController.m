@@ -16,6 +16,7 @@
 @interface JYNewsViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *dataArray;
+
 @end
 
 @implementation JYNewsViewController
@@ -24,6 +25,7 @@
     NSDictionary *_userDict;
 
 }
+
 -(NSMutableArray *)dataArray{
     if(!_dataArray){
         _dataArray = [[NSMutableArray alloc]init];
@@ -46,11 +48,14 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSDictionary *dict = self.dataArray[indexPath.row];
-    static NSString *cellId = @"JYHomeFocusTableViewCell";
+    NSArray *imageArray = dict[@"imgList"];
+    NSString *cellId = [NSString stringWithFormat:@"JYHomeFocusTableViewCell%lu",(unsigned long)imageArray.count];
     JYHomeFocusTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    
     if(!cell){
         cell = [[JYHomeFocusTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
     }
+    cell.dict = dict;
     //关注按钮
     cell.focusButton.tag = indexPath.row;
     BOOL isFollowed = [dict[@"isFollow"] boolValue];
@@ -64,12 +69,15 @@
     //删除按钮
     cell.deleteButton.tag = indexPath.row;
     [cell.deleteButton addTarget:self action:@selector(click_deleteButton:) forControlEvents:UIControlEventTouchUpInside];
-    
-    
+    //头像
+    [cell.headerImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",dict[@"imgPath"]]] placeholderImage:nil];
+    //姓名
+    cell.nameLabel.text = dict[@"title"];
     //内容详情
     cell.contentLabel.text = dict[@"content"];
     //时间
     cell.timeLabel.text = [self timeWithTimeIntervalString:dict[@"createTime"]];
+    cell.readCountLabel.text = [NSString stringWithFormat:@"%@阅读",dict[@"readCount"]];
     
     [cell.likedButton setTitle:[NSString stringWithFormat:@" 赞%@次",dict[@"likeCount"]] forState:UIControlStateNormal];
     [cell.forwardingButton setTitle:[NSString stringWithFormat:@" 热评%@条",dict[@"turnCount"]] forState:UIControlStateNormal];

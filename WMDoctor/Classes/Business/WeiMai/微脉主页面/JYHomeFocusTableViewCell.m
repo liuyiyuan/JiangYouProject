@@ -7,13 +7,18 @@
 //
 //首页  关注
 #import "JYHomeFocusTableViewCell.h"
+#import "JYHomeNewsCollectionViewCell.h"
+
+@interface JYHomeFocusTableViewCell()<UICollectionViewDataSource,UICollectionViewDelegate>
+
+@end
 
 @implementation JYHomeFocusTableViewCell
 
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if(self){
-        [self configUI];
+        
     }
     return self;
 }
@@ -25,14 +30,13 @@
     [self.contentView addSubview:self.focusButton];
     [self.contentView addSubview:self.deleteButton];
     [self.contentView addSubview:self.contentLabel];
-    [self.contentView addSubview:self.firstImageView];
-    [self.contentView addSubview:self.secondImageView];
-    [self.contentView addSubview:self.thirdImageView];
+    [self.contentView addSubview:self.collection];
     [self.contentView addSubview:self.addressButton];
     [self.contentView addSubview:self.readCountLabel];
     [self.contentView addSubview:self.forwardingButton];
     [self.contentView addSubview:self.commentsButton];
     [self.contentView addSubview:self.likedButton];
+    [self.contentView addSubview:self.firstLine];
     [self.contentView addSubview:self.lineView];
     
     [self.headerImageView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -74,64 +78,77 @@
         make.right.mas_equalTo(-pixelValue(30));
     }];
     
-    [self.firstImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.collection mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.contentLabel.mas_bottom).offset(pixelValue(20));
-        make.left.mas_equalTo(pixelValue(30));
-        make.width.height.mas_equalTo((UI_SCREEN_WIDTH - pixelValue(100)) / 3);
+        make.left.mas_equalTo(pixelValue(10));
+        make.right.mas_equalTo(-pixelValue(10));
+        if(self.imageArrays.count == 0){
+            make.height.mas_equalTo(pixelValue(0));
+        }else if(self.imageArrays.count <= 3){
+            make.height.mas_equalTo((UI_SCREEN_WIDTH - pixelValue(20)) / 3);
+        }else if(self.imageArrays.count > 3 && self.imageArrays.count <= 6){
+            make.height.mas_equalTo((UI_SCREEN_WIDTH - pixelValue(20)) / 3 * 2);
+        }else if(self.imageArrays.count > 6 && self.imageArrays.count <= 9){
+            make.height.mas_equalTo((UI_SCREEN_WIDTH - pixelValue(20)) / 3 * 3);
+        }
+        
     }];
-    
-    [self.secondImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.firstImageView.mas_top);
-        make.left.mas_equalTo(self.firstImageView.mas_right).offset(pixelValue(20));
-        make.width.height.mas_equalTo((UI_SCREEN_WIDTH - pixelValue(100)) / 3);
-    }];
-    
-    [self.thirdImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.secondImageView.mas_top);
-        make.left.mas_equalTo(self.secondImageView.mas_right).offset(pixelValue(20));
-        make.width.height.mas_equalTo((UI_SCREEN_WIDTH - pixelValue(100)) / 3);
-    }];
+
     
     [self.addressButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.firstImageView.mas_bottom).offset(pixelValue(20));
-        make.left.mas_equalTo(self.firstImageView.mas_left);
-        make.height.mas_equalTo(pixelValue(30));
+        make.top.mas_equalTo(self.collection.mas_bottom).offset(pixelValue(20));
+        
+        if(self.isLocation){
+            make.left.mas_equalTo(pixelValue(30));
+            make.height.mas_equalTo(pixelValue(30));
+        }else{
+            make.left.mas_equalTo(pixelValue(0));
+            make.height.mas_equalTo(pixelValue(0));
+        }
+        
     }];
     
     [self.readCountLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.addressButton.mas_top);
+        make.top.mas_equalTo(self.collection.mas_bottom).offset(pixelValue(20));
         make.left.mas_equalTo(self.addressButton.mas_right).offset(pixelValue(20));
         make.height.mas_equalTo(pixelValue(30));
     }];
     
     [self.forwardingButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.addressButton.mas_bottom).offset(pixelValue(20));
+        make.top.mas_equalTo(self.readCountLabel.mas_bottom).offset(pixelValue(20));
         make.left.mas_equalTo(self.contentView.mas_left);
-        make.bottom.mas_equalTo(self.contentView.mas_bottom).offset(-pixelValue(2));
+//        make.bottom.mas_equalTo(self.contentView.mas_bottom).offset(-pixelValue(2));
         make.width.mas_equalTo(UI_SCREEN_WIDTH / 3);
-        make.height.mas_equalTo(pixelValue(60));
+        make.height.mas_equalTo(pixelValue(70));
     }];
     
     [self.commentsButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.forwardingButton.mas_top);
         make.left.mas_equalTo(self.forwardingButton.mas_right);
-        make.bottom.mas_equalTo(self.contentView.mas_bottom);
+//        make.bottom.mas_equalTo(self.contentView.mas_bottom);
         make.width.mas_equalTo(self.forwardingButton.mas_width);
-        make.height.mas_equalTo(pixelValue(60));
+        make.height.mas_equalTo(pixelValue(70));
     }];
     
     [self.likedButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.forwardingButton.mas_top);
         make.left.mas_equalTo(self.commentsButton.mas_right);
-        make.bottom.mas_equalTo(self.contentView.mas_bottom);
         make.width.mas_equalTo(self.forwardingButton.mas_width);
-        make.height.mas_equalTo(pixelValue(60));
+        make.height.mas_equalTo(pixelValue(70));
     }];
     
     
+    [self.firstLine mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(pixelValue(20));
+        make.right.mas_equalTo(-pixelValue(20));
+        make.height.mas_equalTo(pixelValue(2));
+        make.bottom.mas_equalTo(self.likedButton.mas_top);
+    }];
+    
     [self.lineView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.likedButton.mas_bottom);
         make.bottom.mas_equalTo(self.contentView.mas_bottom);
-        make.height.mas_equalTo(pixelValue(1));
+        make.height.mas_equalTo(pixelValue(15));
         make.left.mas_equalTo(pixelValue(0));
         make.right.mas_equalTo(pixelValue(0));
     }];
@@ -140,10 +157,60 @@
     
 }
 
+
+
+//定义展示的Section的个数
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 1;
+}
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return self.imageArrays.count;
+}
+
+//每个UICollectionView展示的内容
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString * CellIdentifier = @"JYHomeNewsCollectionViewCell";
+    JYHomeNewsCollectionViewCell * cell = (JYHomeNewsCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
+    cell.backgroundColor = [UIColor colorWithHexString:@"#F5F5F5"];
+    [cell.myImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",self.imageArrays[indexPath.row]]] placeholderImage:nil];
+    
+    return cell;
+}
+#pragma mark --UICollectionViewDelegateFlowLayout
+//定义每个UICollectionView 的大小
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return CGSizeMake((UI_SCREEN_WIDTH - pixelValue(40)) / 3, (UI_SCREEN_WIDTH - pixelValue(40)) / 3);
+}
+-(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+    
+    return UIEdgeInsetsMake(pixelValue(0), pixelValue(0), pixelValue(0), pixelValue(0));
+}
+//行间距
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
+    return pixelValue(10);
+}
+
+
+
+#pragma mark --UICollectionViewDelegate
+//UICollectionView被选中时调用的方法
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    if ([self.delegate respondsToSelector:@selector(clickFocusIndex:)]) {
+        [self.delegate clickFocusIndex:indexPath];
+    }
+}
+//返回这个UICollectionView是否可以被选择
+-(BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+
+
 -(UIImageView *)headerImageView{
     if(!_headerImageView){
         _headerImageView = [[UIImageView alloc]init];
-        _headerImageView.image = [UIImage imageNamed:@"news_placed"];
+//        _headerImageView.image = [UIImage imageNamed:@"news_placed"];
     }
     return _headerImageView;
 }
@@ -151,7 +218,7 @@
 -(UILabel *)nameLabel{
     if(!_nameLabel){
         _nameLabel = [[UILabel alloc]init];
-        _nameLabel.text = @"放屁的怪咖";
+//        _nameLabel.text = @"放屁的怪咖";
     }
     return _nameLabel;
 }
@@ -192,34 +259,12 @@
     return _contentLabel;
 }
 
--(UIImageView *)firstImageView{
-    if(!_firstImageView){
-        _firstImageView = [[UIImageView alloc]init];
-        _firstImageView.image = [UIImage imageNamed:@"news_placed"];
-    }
-    return _firstImageView;
-}
 
--(UIImageView *)secondImageView{
-    if(!_secondImageView){
-        _secondImageView = [[UIImageView alloc]init];
-        _secondImageView.image = [UIImage imageNamed:@"news_placed"];
-    }
-    return _secondImageView;
-}
-
--(UIImageView *)thirdImageView{
-    if(!_thirdImageView){
-        _thirdImageView = [[UIImageView alloc]init];
-        _thirdImageView.image = [UIImage imageNamed:@"news_placed"];
-    }
-    return _thirdImageView;
-}
 
 -(UIButton *)addressButton{
     if(!_addressButton){
         _addressButton = [[UIButton alloc]init];
-        [_addressButton setTitle:@"  黑龙江省 哈尔滨市" forState:UIControlStateNormal];
+//        [_addressButton setTitle:@"  黑龙江省 哈尔滨市" forState:UIControlStateNormal];
         [_addressButton setTitleColor:[UIColor colorWithHexString:@"#ABA9A9"] forState:UIControlStateNormal];
         [_addressButton setImage:[UIImage imageNamed:@"news_address"] forState:UIControlStateNormal];
     }
@@ -265,13 +310,54 @@
     }
     return _likedButton;
 }
+//图片collection
+-(UICollectionView *)collection{
+    if(!_collection){
+        UICollectionViewFlowLayout *flowLayout=[[UICollectionViewFlowLayout alloc] init];
+        [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];//确定是水平滚动，还是垂直滚动
+        flowLayout.minimumLineSpacing = pixelValue(0);
+        flowLayout.minimumInteritemSpacing = pixelValue(0);
+        _collection = [[UICollectionView alloc]initWithFrame:CGRectZero collectionViewLayout:flowLayout];
+        _collection.delegate = self;
+        _collection.dataSource = self;
+        _collection.backgroundColor = [UIColor whiteColor];
+        _collection.showsVerticalScrollIndicator = NO;
+        _collection.showsHorizontalScrollIndicator = NO;
+        _collection.scrollEnabled = NO;
+        [_collection registerClass:[JYHomeNewsCollectionViewCell class] forCellWithReuseIdentifier:@"JYHomeNewsCollectionViewCell"];
+    }
+    return _collection;
+}
+//细线
+-(UIView *)firstLine{
+    if(!_firstLine){
+        _firstLine = [[UIView alloc]init];
+        _firstLine.backgroundColor = [UIColor colorWithHexString:@"#F9F9F9"];
+    }
+    return _firstLine;
+}
 
 
 -(UIView *)lineView{
     if(!_lineView){
         _lineView = [[UIView alloc]init];
-        _lineView.backgroundColor = [UIColor colorWithHexString:@"#DCDCDC"];
+        _lineView.backgroundColor = [UIColor colorWithHexString:@"#F9F9F9"];
     }
     return _lineView;
+}
+
+//-(void)setImageArrays:(NSArray *)imageArrays{
+//    _imageArrays = imageArrays;
+//    [self configUI];
+//    [self.collection reloadData];
+//}
+
+-(void)setDict:(NSDictionary *)dict{
+    _dict = dict;
+    _imageArrays = dict[@"imgList"];
+    _isLocation = [dict[@"isLocation"] boolValue];
+    [self configUI];
+    [self.collection reloadData];
+    
 }
 @end

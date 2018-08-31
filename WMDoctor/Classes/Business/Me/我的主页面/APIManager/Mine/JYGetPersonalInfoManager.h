@@ -6,8 +6,8 @@
 //  Copyright © 2018年 Choice. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "WMBaseAPIManager.h"
 
-@interface JYGetPersonalInfoManager : NSObject
+@interface JYGetPersonalInfoManager : WMBaseAPIManager<WMAPIManager>
 
 @end

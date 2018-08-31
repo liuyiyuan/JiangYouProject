@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@protocol HomeFocusDelegate <NSObject>
 
+- (void)clickFocusIndex:(NSIndexPath *)indexPath;
+
+@end
 @interface JYHomeFocusTableViewCell : UITableViewCell
 
 @property(nonatomic,strong)UIImageView *headerImageView;//头像
@@ -21,6 +25,8 @@
 @property(nonatomic,strong)UIButton *deleteButton;//删除按钮
 
 @property(nonatomic,strong)UILabel *contentLabel;//内容label
+
+@property (nonatomic, strong) UICollectionView *collection;//图片collection
 
 @property(nonatomic,strong)UIImageView *firstImageView;//第一张图
 
@@ -38,6 +44,18 @@
 
 @property(nonatomic,strong)UIButton *likedButton;//赞
 
+@property (nonatomic, strong) UIView *firstLine;//细线
+
 @property (nonatomic, strong) UIView *lineView;
+
+@property (nonatomic, strong) NSArray *imageArrays;//图片数组
+
+@property (nonatomic, assign) BOOL isLocation;//是否定位
+
+@property (nonatomic, strong) NSDictionary *dict;//字典
+
+@property (nonatomic, weak  ) id<HomeFocusDelegate> delegate;
+
+
 
 @end
