@@ -15,6 +15,7 @@
 #import "JYPersonEditInformationViewController.h"//个人信息编辑页
 #import "JYLoginViewController.h"//登录页
 #import "JYMineAPIManager.h"
+#import "JYGetPersonalInfoManager.h"
 @interface JYMeViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic,strong)UITableView *meTableView;
@@ -144,6 +145,27 @@
     }
 }
 
+
+#pragma mark - 获取标签
+-(void)GetPersonalInfo{
+    JYGetPersonalInfoManager *getPersonalInfo = [[JYGetPersonalInfoManager alloc] init];
+    [getPersonalInfo loadDataWithParams:@{@"userId":@18} withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"%@",responseObject);
+        
+        
+//        for (NSDictionary *dic in [responseObject allObjects]) {
+//            [self.tagArrays addObject:dic];
+//        }
+        
+        
+        
+    } withFailure:^(ResponseResult *errorResult) {
+        NSLog(@"login error : %@", errorResult);
+        
+    }];
+}
+
+
 -(JYMeHeaderView *)headerView{
     if(!_headerView){
         _headerView = [[JYMeHeaderView alloc]initWithFrame:CGRectMake(0, 0, UI_SCREEN_WIDTH, 120)];
@@ -222,6 +244,8 @@
     [super viewWillAppear:animated];
     NSIndexPath *selected = [self.meTableView indexPathForSelectedRow];
     if(selected) [self.meTableView deselectRowAtIndexPath:selected animated:NO];
+    
+    [self GetPersonalInfo];
 }
 
 - (void)kLoginInSuccessAction:(NSNotification*)note{

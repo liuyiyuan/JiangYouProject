@@ -679,6 +679,7 @@
 		AD6237F12131828200923DD2 /* JYCircleCircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6237F02131828200923DD2 /* JYCircleCircleViewController.m */; };
 		AD6237F4213182B900923DD2 /* JYCircleMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6237F3213182B900923DD2 /* JYCircleMessageViewController.m */; };
 		AD6237F721318DAC00923DD2 /* JYCircleCircleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6237F621318DAC00923DD2 /* JYCircleCircleTableViewCell.m */; };
+		AD6237FA213977AE00923DD2 /* JYGetPersonalInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6237F9213977AE00923DD2 /* JYGetPersonalInfoManager.m */; };
 		AD7A06EE2108D62300D3AAB4 /* ZCEmojiExpression.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AD7A06EB2108D62100D3AAB4 /* ZCEmojiExpression.bundle */; };
 		AD7A06EF2108D62300D3AAB4 /* SobotKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AD7A06EC2108D62200D3AAB4 /* SobotKit.bundle */; };
 		AD7A06F02108D62300D3AAB4 /* SobotLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD7A06ED2108D62300D3AAB4 /* SobotLocalizable.strings */; };
@@ -2062,6 +2063,8 @@
 		AD6237F3213182B900923DD2 /* JYCircleMessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYCircleMessageViewController.m; sourceTree = "<group>"; };
 		AD6237F521318DAB00923DD2 /* JYCircleCircleTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYCircleCircleTableViewCell.h; sourceTree = "<group>"; };
 		AD6237F621318DAC00923DD2 /* JYCircleCircleTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYCircleCircleTableViewCell.m; sourceTree = "<group>"; };
+		AD6237F8213977AE00923DD2 /* JYGetPersonalInfoManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYGetPersonalInfoManager.h; sourceTree = "<group>"; };
+		AD6237F9213977AE00923DD2 /* JYGetPersonalInfoManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYGetPersonalInfoManager.m; sourceTree = "<group>"; };
 		AD7A06EB2108D62100D3AAB4 /* ZCEmojiExpression.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZCEmojiExpression.bundle; sourceTree = "<group>"; };
 		AD7A06EC2108D62200D3AAB4 /* SobotKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SobotKit.bundle; sourceTree = "<group>"; };
 		AD7A06ED2108D62300D3AAB4 /* SobotLocalizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = SobotLocalizable.strings; sourceTree = "<group>"; };
@@ -5301,6 +5304,8 @@
 				85CAB44C210D41D800884A54 /* JYMineAPIManager.m */,
 				85CAB453210D472000884A54 /* JYEditUserInfoAPIManager.h */,
 				85CAB454210D472000884A54 /* JYEditUserInfoAPIManager.m */,
+				AD6237F8213977AE00923DD2 /* JYGetPersonalInfoManager.h */,
+				AD6237F9213977AE00923DD2 /* JYGetPersonalInfoManager.m */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -6385,6 +6390,7 @@
 				85BE0CAB21075DFA002B964C /* JYLoginNewAPIManager.m in Sources */,
 				ADA4A8DF20E71975006400F3 /* JYPersonEditInformationViewController.m in Sources */,
 				1D2734811E5EB4F600CBD97F /* WMAllPatientTableViewCell.m in Sources */,
+				AD6237FA213977AE00923DD2 /* JYGetPersonalInfoManager.m in Sources */,
 				1DE56A9A1E114D3200B93397 /* WMJSONModel.m in Sources */,
 				85F2F9402119FBF40062A8A1 /* JYSetMealCell.m in Sources */,
 				0CAF8F4E1E0CEEFE0092E6A8 /* WMImageView.m in Sources */,

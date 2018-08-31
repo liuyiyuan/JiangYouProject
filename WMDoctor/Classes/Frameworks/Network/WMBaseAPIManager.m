@@ -320,6 +320,22 @@ static NSTimeInterval const kRequestTimeoutInterval = 60;
              NSLog(@"请求失败--%@",error);
              myErrorBlock([NSURLSessionDataTask alloc], error);
          }];
+    }else if([methodType isEqualToString:@"GET"]){
+        AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+        manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+        [manager GET:requestUrl parameters:param progress:^(NSProgress * _Nonnull downloadProgress) {
+            
+        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            NSString *tmpStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+            NSString *result = [FSAES128 AES128DecryptString:tmpStr];
+            NSDictionary *dic = [self dictionaryWithJsonString:result];
+            mySuccessBlock(task,dic);
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            NSLog(@"请求失败--%@",error);
+            myErrorBlock([NSURLSessionDataTask alloc], error);
+        }];
+
+        
     }
     
     return 0;
