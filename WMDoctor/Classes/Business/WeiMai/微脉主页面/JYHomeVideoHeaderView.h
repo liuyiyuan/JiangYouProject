@@ -24,6 +24,8 @@
 
 @property (nonatomic, strong) NSArray *imageUrls;//轮播图图片地址
 
+@property (nonatomic, strong) NSArray *tagArray;//标签数组
+
 @property (nonatomic, strong) HYBLoopScrollView *loop;//轮播图
 
 @end

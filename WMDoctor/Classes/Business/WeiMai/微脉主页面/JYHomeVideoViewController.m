@@ -11,20 +11,30 @@
 #import "JYHomeVideoManager.h"
 #import "JYHomeVideoTableViewCell.h"
 #import "JYHomeVideoLunBoManager.h"
+#import "JYHomeVideoTagManager.h"
 #import <AVKit/AVKit.h>
 #import <AVFoundation/AVFoundation.h>
 @interface JYHomeVideoViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) NSMutableArray *dataArray;
+@property (nonatomic, strong) NSMutableArray *dataArray;//数据数组
 @property (nonatomic, strong) JYHomeVideoHeaderView *headerView;
-@property (nonatomic, strong) NSMutableArray *imageUrls;
+@property (nonatomic, strong) NSMutableArray *imageUrls;//轮播图数组
+
+@property (nonatomic, strong) NSMutableArray *tagArrays;//标签数组
 @end
 
 @implementation JYHomeVideoViewController
 {
     NSInteger _page;
     NSDictionary *_userDict;
+}
+
+-(NSMutableArray *)tagArrays{
+    if(!_tagArrays){
+        _tagArrays = [[NSMutableArray alloc]init];
+    }
+    return _tagArrays;
 }
 
 -(NSMutableArray *)imageUrls{
@@ -80,6 +90,7 @@
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     self.headerView.imageUrls = self.imageUrls;
+    self.headerView.tagArray = self.tagArrays;
     return self.headerView;
 }
 
@@ -155,15 +166,32 @@
     
 }
 
-
+#pragma mark - 获取轮播图
 -(void)getVideoLunBo{
     JYHomeVideoLunBoManager *videoLunBo = [[JYHomeVideoLunBoManager alloc] init];
     [videoLunBo loadDataWithParams:nil withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
         NSLog(@"%@",responseObject);
+        for (NSDictionary *dic in [responseObject allObjects]) {
+            [self.imageUrls addObject:dic[@"msgImg"]];
+        }
+        [self getvideoTag];
+        
+    } withFailure:^(ResponseResult *errorResult) {
+        NSLog(@"login error : %@", errorResult);
+        
+    }];
+}
+
+
+#pragma mark - 获取标签
+-(void)getvideoTag{
+    JYHomeVideoTagManager *videoTag = [[JYHomeVideoTagManager alloc] init];
+    [videoTag loadDataWithParams:nil withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"%@",responseObject);
         
         
         for (NSDictionary *dic in [responseObject allObjects]) {
-            [self.imageUrls addObject:dic[@"msgImg"]];
+            [self.tagArrays addObject:dic];
         }
         
         [self.tableView reloadData];
@@ -181,7 +209,8 @@
     AVPlayerViewController *play = [[AVPlayerViewController alloc] init];
     
     play.player = [[AVPlayer alloc] initWithURL:[NSURL URLWithString:urlString]];
-    
+
+//       play.player = [[AVPlayer alloc] initWithURL:[NSURL URLWithString:@"https://api.huoshan.com/hotsoon/item/video/_playback/?video_id=v0200c760000be48s3km7fi3tanp6ce0&line=0&app_id=1115&vquality=normal&watermark=0&long_video=0&sf=1&ts=1535679141"]];
     // 是否显示视频播放控制控件默认YES
     play.showsPlaybackControls = YES;
     
@@ -206,8 +235,7 @@
     // 是否支持画中画 默认YES
 //    play.allowsPictureInPicturePlayback = YES;
     
-    
-    //    [play.player play];
+    [play.player play];
     
     [self presentViewController:play animated:YES completion:nil];
 

@@ -55,7 +55,6 @@
 -(UIImageView *)myStyle{
     if(!_myStyle){
         _myStyle = [[UIImageView alloc]init];
-        _myStyle.image = [UIImage imageNamed:@"圆角矩形 4-1"];
     }
     return _myStyle;
 }
@@ -63,7 +62,6 @@
 -(UILabel *)myStyleLaebl{
     if(!_myStyleLaebl){
         _myStyleLaebl = [[UILabel alloc]init];
-        _myStyleLaebl.text = @"我型我秀";
         _myStyleLaebl.textColor = [UIColor whiteColor];
         _myStyleLaebl.font = [UIFont systemFontOfSize:pixelValue(26)];
         _myStyleLaebl.textAlignment = NSTextAlignmentCenter;
@@ -74,7 +72,6 @@
 -(UIImageView *)airPicture{
     if(!_airPicture){
         _airPicture = [[UIImageView alloc]init];
-        _airPicture.image = [UIImage imageNamed:@"圆角矩形 4 拷贝"];
     }
     return _airPicture;
 }
@@ -82,7 +79,6 @@
 -(UILabel *)airPictureLaebl{
     if(!_airPictureLaebl){
         _airPictureLaebl = [[UILabel alloc]init];
-        _airPictureLaebl.text = @"航拍江油";
         _airPictureLaebl.textColor = [UIColor whiteColor];
         _airPictureLaebl.font = [UIFont systemFontOfSize:pixelValue(26)];
         _airPictureLaebl.textAlignment = NSTextAlignmentCenter;
@@ -93,7 +89,6 @@
 -(UIImageView *)live{
     if(!_live){
         _live = [[UIImageView alloc]init];
-        _live.image = [UIImage imageNamed:@"圆角矩形 4"];
     }
     return _live;
 }
@@ -102,7 +97,6 @@
 -(UILabel *)liveLaebl{
     if(!_liveLaebl){
         _liveLaebl = [[UILabel alloc]init];
-        _liveLaebl.text = @"现场直播";
         _liveLaebl.textColor = [UIColor whiteColor];
         _liveLaebl.font = [UIFont systemFontOfSize:pixelValue(26)];
         _liveLaebl.textAlignment = NSTextAlignmentCenter;
@@ -113,6 +107,21 @@
 -(void)setImageUrls:(NSArray *)imageUrls{
     _imageUrls = imageUrls;
     [self configUI];
+}
+
+-(void)setTagArray:(NSArray *)tagArray{
+    _tagArray = tagArray;
+    if(tagArray.count == 3){
+        NSDictionary *dict0 = tagArray[0];
+        NSDictionary *dict1 = tagArray[1];
+        NSDictionary *dict2 = tagArray[2];
+        [self.myStyle sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",dict0[@"tagImg"]]] placeholderImage:nil];
+        self.myStyleLaebl.text = dict0[@"captions"];
+        [self.airPicture sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",dict1[@"tagImg"]]] placeholderImage:nil];
+        self.airPictureLaebl.text = dict1[@"captions"];
+        [self.live sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",dict2[@"tagImg"]]] placeholderImage:nil];
+        self.liveLaebl.text = dict2[@"captions"];
+    }
 }
 
 @end
