@@ -85,7 +85,7 @@
     }
     [cell.backImageView sd_setImageWithURL:[NSURL URLWithString:dict[@"msgImg"]] placeholderImage:nil];
     cell.contentLabel.text = dict[@"captions"];
-    cell.fromButton.titleLabel.text = dict[@"whereFrom"];
+    [cell.fromButton setTitle:dict[@"whereFrom"] forState:UIControlStateNormal];
     cell.playButton.tag = indexPath.row;
     [cell.playButton addTarget:self action:@selector(click_playButton:) forControlEvents:UIControlEventTouchUpInside];
     

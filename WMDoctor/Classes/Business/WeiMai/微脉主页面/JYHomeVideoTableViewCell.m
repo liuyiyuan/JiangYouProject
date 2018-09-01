@@ -130,9 +130,9 @@
 -(UIButton *)fromButton{
     if(!_fromButton){
         _fromButton = [[UIButton alloc]init];
-        [_fromButton setImage:[UIImage imageNamed:@"椭圆 4"] forState:UIControlStateNormal];
-//        [_fromButton setTitle:@"某某日报社" forState:UIControlStateNormal];
+//        [_fromButton setImage:[UIImage imageNamed:@"椭圆 4"] forState:UIControlStateNormal];
         [_fromButton setTitleColor:[UIColor colorWithHexString:@"#909090"] forState:UIControlStateNormal];
+        _fromButton.titleLabel.font = [UIFont systemFontOfSize:pixelValue(24)];
     }
     return _fromButton;
 }
