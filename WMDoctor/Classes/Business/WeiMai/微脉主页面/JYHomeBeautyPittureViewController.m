@@ -22,6 +22,8 @@
 
 @property (nonatomic, strong) NSMutableArray *PictureTagArray;//标签介绍(固定三个)
 
+@property (nonatomic, strong) NSString *tagId;//标签
+
 @end
 
 @implementation JYHomeBeautyPittureViewController
@@ -52,13 +54,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self loadNewData];
+    
     
 }
 
 - (void)zj_viewDidLoadForIndex:(NSInteger)index {
+    self.tagId = @"124";
+    [self loadNewData:self.tagId];
     [self getBeautyPictureHot];//热门推荐
-    [self getTag];//固定三标签
     [self.view addSubview:self.tableView];
 }
 
@@ -72,15 +75,17 @@
     NSDictionary *dict = self.dataArray[indexPath.row];
     static NSString *cellId = @"JYHomePictureTableViewCell";
     JYHomePictureTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     if(!cell){
         cell = [[JYHomePictureTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
     }
     cell.titleLabel.text = dict[@"title"];
-    if(indexPath.row == 0){
-        cell.myImageView.image = [UIImage imageNamed:@"矩形 21"];
-    }else{
-        cell.myImageView.image = [UIImage imageNamed:@"矩形 211"];
-    }
+    cell.imageUrl = dict[@"msgImg"];
+    [cell.likeButton setTitle:[NSString stringWithFormat:@" %@",dict[@"likeCount"]] forState:UIControlStateNormal];
+    [cell.unLikeButton setTitle:[NSString stringWithFormat:@" %@",dict[@"unLikeCount"]] forState:UIControlStateNormal];
+    [cell.commentsButton setTitle:[NSString stringWithFormat:@" %@",dict[@"commentCount"]] forState:UIControlStateNormal];
+    [cell.starButton setTitle:[NSString stringWithFormat:@" %@",dict[@"collectCount"]] forState:UIControlStateNormal];
+    
     return cell;
 }
 
@@ -97,11 +102,11 @@
 
 
 #pragma mark - 新闻刷新
-- (void)loadNewData{
+- (void)loadNewData :(NSString *)tagId{
     _page = 1;
     NSString *pageString = [NSString stringWithFormat:@"%ld",(long)_page];
     NSDictionary *param = @{@"userId":@"18",
-                            @"tagId":@"3",
+                            @"tagId":tagId,
                             @"pageNo":pageString,
                             @"pageSize":@"15"
                             };
@@ -131,7 +136,7 @@
 - (void)loadMoreData{
     NSString *pageString = [NSString stringWithFormat:@"%ld",(long)_page];
     NSDictionary *param = @{@"userId":@"18",
-                            @"tagId":@"3",
+                            @"tagId":self.tagId,
                             @"pageNo":pageString,
                             @"pageSize":@"15"
                             };
@@ -172,7 +177,7 @@
             [self.hotDataArray addObject:dic[@"msgImg"]];
         }
         
-        [self.tableView reloadData];
+        [self getTag];
         
     } withFailure:^(ResponseResult *errorResult) {
         NSLog(@"login error : %@", errorResult);
@@ -189,7 +194,7 @@
         
         
         for (NSDictionary *dic in [responseObject allObjects]) {
-            [self.PictureTagArray addObject:dic[@"channelImg"]];
+            [self.PictureTagArray addObject:dic];
         }
         
         [self.tableView reloadData];
@@ -204,6 +209,21 @@
 - (void)clickHotViewIndex:(NSIndexPath *)indexPath{
     
 }
+#pragma mark -  老照片
+-(void)click_oldPictureTap{
+    self.tagId = @"124";
+    [self loadNewData:self.tagId];
+}
+#pragma mark -  大美江油
+-(void)click_bigBeautyJyTap{
+    self.tagId = @"125";
+    [self loadNewData:self.tagId];
+}
+#pragma mark -  随手拍
+-(void)click_BTWTap{
+    self.tagId = @"126";
+    [self loadNewData:self.tagId];
+}
 
 
 -(UITableView *)tableView{
@@ -215,7 +235,7 @@
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.rowHeight = UITableViewAutomaticDimension;
         _tableView.estimatedRowHeight = pixelValue(380);
-        _tableView.mj_header = [MJWeiMaiHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
+        _tableView.mj_header = [MJWeiMaiHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData:)];
         __weak typeof(self) weakSelf = self;
         MJWeiMaiFooter *footer = [MJWeiMaiFooter footerWithRefreshingBlock:^{
             [weakSelf loadMoreData];
@@ -229,6 +249,15 @@
 -(JYHomeBeautyPictureHeaderView *)headerView{
     if(!_headerView){
         _headerView = [[JYHomeBeautyPictureHeaderView alloc]init];
+        //老照片
+        UITapGestureRecognizer *oldPictureTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(click_oldPictureTap)];
+        [_headerView.oldPicture addGestureRecognizer:oldPictureTap];
+        //大美江油
+        UITapGestureRecognizer *bigBeautyJyTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(click_bigBeautyJyTap)];
+        [_headerView.bigBeautyJy addGestureRecognizer:bigBeautyJyTap];
+        //随手拍
+        UITapGestureRecognizer *BTWTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(click_BTWTap)];
+        [_headerView.BTW addGestureRecognizer:BTWTap];
     }
     return _headerView;
 }

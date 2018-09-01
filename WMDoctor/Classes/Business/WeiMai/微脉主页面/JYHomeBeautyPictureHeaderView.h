@@ -18,9 +18,15 @@
 
 @property (nonatomic, strong) UIImageView *oldPicture;//老照片
 
+@property (nonatomic, strong) UILabel *oldPictureLabel;//老照片label
+
 @property (nonatomic, strong) UIImageView *bigBeautyJy;//大美江油
 
+@property (nonatomic, strong) UILabel *bigBeautyJyLabel;//大美江油label
+
 @property (nonatomic, strong) UIImageView *BTW;//随手拍
+
+@property (nonatomic, strong) UILabel *BTWLabel;//随手拍label
 
 @property (nonatomic, strong) UILabel *hotLabel;//热门推荐
 

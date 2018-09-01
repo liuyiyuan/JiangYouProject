@@ -20,7 +20,7 @@
     if(self){
         self.backgroundColor = [UIColor colorWithHexString:@"#F5F5F5"];
         
-        [self configUI];
+//        [self configUI];
     }
     return self;
 }
@@ -28,8 +28,11 @@
 -(void)configUI{
     
     [self addSubview:self.oldPicture];
+    [self.oldPicture addSubview:self.oldPictureLabel];
     [self addSubview:self.bigBeautyJy];
+    [self.bigBeautyJy addSubview:self.bigBeautyJyLabel];
     [self addSubview:self.BTW];
+    [self.BTW addSubview:self.BTWLabel];
     [self addSubview:self.hotLabel];
     [self addSubview:self.collection];
     
@@ -40,6 +43,13 @@
         make.width.mas_equalTo((UI_SCREEN_WIDTH - pixelValue(80)) / 3);
     }];
     
+    [self.oldPictureLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(pixelValue(0));
+        make.left.mas_equalTo(pixelValue(0));
+        make.right.mas_equalTo(pixelValue(0));
+        make.bottom.mas_equalTo(pixelValue(0));
+    }];
+    
     [self.bigBeautyJy mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.oldPicture.mas_top);
         make.width.mas_equalTo(self.oldPicture.mas_width);
@@ -47,11 +57,25 @@
         make.left.mas_equalTo(self.oldPicture.mas_right).offset(pixelValue(20));
     }];
     
+    [self.bigBeautyJyLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(pixelValue(0));
+        make.left.mas_equalTo(pixelValue(0));
+        make.right.mas_equalTo(pixelValue(0));
+        make.bottom.mas_equalTo(pixelValue(0));
+    }];
+    
     [self.BTW mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.oldPicture.mas_top);
         make.width.mas_equalTo(self.oldPicture.mas_width);
         make.height.mas_equalTo(self.oldPicture.mas_height);
         make.left.mas_equalTo(self.bigBeautyJy.mas_right).offset(pixelValue(20));
+    }];
+    
+    [self.BTWLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(pixelValue(0));
+        make.left.mas_equalTo(pixelValue(0));
+        make.right.mas_equalTo(pixelValue(0));
+        make.bottom.mas_equalTo(pixelValue(0));
     }];
     
     [self.hotLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -74,24 +98,60 @@
     if(!_oldPicture){
         _oldPicture = [[UIImageView alloc]init];
         _oldPicture.image = [UIImage imageNamed:@"圆角矩形 4"];
+        _oldPicture.userInteractionEnabled = YES;
     }
     return _oldPicture;
 }
+//老照片label
+-(UILabel *)oldPictureLabel{
+    if(!_oldPictureLabel){
+        _oldPictureLabel = [[UILabel alloc]init];
+        _oldPictureLabel.textColor = [UIColor whiteColor];
+        _oldPictureLabel.font = [UIFont systemFontOfSize:pixelValue(26)];
+        _oldPictureLabel.textAlignment = NSTextAlignmentCenter;
+    }
+    return _oldPictureLabel;
+}
+
+
+
 //大美江油
 -(UIImageView *)bigBeautyJy{
     if(!_bigBeautyJy){
         _bigBeautyJy = [[UIImageView alloc]init];
         _bigBeautyJy.image = [UIImage imageNamed:@"圆角矩形 4"];
+        _bigBeautyJy.userInteractionEnabled = YES;
     }
     return _bigBeautyJy;
+}
+//大美江油label
+-(UILabel *)bigBeautyJyLabel{
+    if(!_bigBeautyJyLabel){
+        _bigBeautyJyLabel = [[UILabel alloc]init];
+        _bigBeautyJyLabel.textColor = [UIColor whiteColor];
+        _bigBeautyJyLabel.font = [UIFont systemFontOfSize:pixelValue(26)];
+        _bigBeautyJyLabel.textAlignment = NSTextAlignmentCenter;
+    }
+    return _bigBeautyJyLabel;
 }
 //随手拍
 -(UIImageView *)BTW{
     if(!_BTW){
         _BTW = [[UIImageView alloc]init];
         _BTW.image = [UIImage imageNamed:@"圆角矩形 4"];
+        _BTW.userInteractionEnabled = YES;
     }
     return _BTW;
+}
+//随手拍label
+-(UILabel *)BTWLabel{
+    if(!_BTWLabel){
+        _BTWLabel = [[UILabel alloc]init];
+        _BTWLabel.textColor = [UIColor whiteColor];
+        _BTWLabel.font = [UIFont systemFontOfSize:pixelValue(26)];
+        _BTWLabel.textAlignment = NSTextAlignmentCenter;
+    }
+    return _BTWLabel;
 }
 //热门推荐
 -(UILabel *)hotLabel{
@@ -170,16 +230,24 @@
 
 -(void)setHotDataArray:(NSArray *)hotDataArray{
     _hotDataArray = hotDataArray;
+    [self configUI];
     [self.collection reloadData];
 }
 
 -(void)setPictureTagArray:(NSArray *)PictureTagArray{
     _PictureTagArray = PictureTagArray;
     if(PictureTagArray.count == 3){
-        [self.oldPicture sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",PictureTagArray[0]]] placeholderImage:nil];
-        [self.bigBeautyJy sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",PictureTagArray[1]]] placeholderImage:nil];
-        [self.BTW sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",PictureTagArray[2]]] placeholderImage:nil];
+        NSDictionary *dict0 = PictureTagArray[0];
+        NSDictionary *dict1 = PictureTagArray[1];
+        NSDictionary *dict2 = PictureTagArray[2];
+        [self.oldPicture sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",dict0[@"channelImg"]]] placeholderImage:nil];
+        self.oldPictureLabel.text = dict0[@"captions"];
+        [self.bigBeautyJy sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",dict1[@"channelImg"]]] placeholderImage:nil];
+        self.bigBeautyJyLabel.text = dict1[@"captions"];
+        [self.BTW sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",dict2[@"channelImg"]]] placeholderImage:nil];
+        self.BTWLabel.text = dict2[@"captions"];
     }
+
 
     
 }

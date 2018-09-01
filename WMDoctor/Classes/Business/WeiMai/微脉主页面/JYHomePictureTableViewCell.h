@@ -26,4 +26,8 @@
 
 @property (nonatomic, strong) UIView *lineView;//线
 
+@property (nonatomic, strong) NSString *imageUrl;//图片地址
+
+@property (nonatomic, assign) CGFloat itemH;
+
 @end

@@ -13,7 +13,7 @@
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if(self){
-        [self configUI];
+//        [self configUI];
     }
     return self;
 }
@@ -38,6 +38,7 @@
         make.top.mas_equalTo(self.titleLabel.mas_bottom).offset(pixelValue(20));
         make.left.mas_equalTo(self.titleLabel.mas_left);
         make.right.mas_equalTo(self.titleLabel.mas_right);
+        make.height.mas_equalTo(_itemH);
     }];
     
     [self.likeButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -97,7 +98,7 @@
 -(UIImageView *)myImageView{
     if(!_myImageView){
         _myImageView = [[UIImageView alloc]init];
-        _myImageView.contentMode = UIViewContentModeScaleAspectFit;
+        _myImageView.contentMode = UIViewContentModeRedraw;
     }
     return _myImageView;
 }
@@ -106,6 +107,8 @@
     if(!_likeButton){
         _likeButton = [[UIButton alloc]init];
         [_likeButton setImage:[UIImage imageNamed:@"picture_like"] forState:UIControlStateNormal];
+        [_likeButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        _likeButton.titleLabel.font = [UIFont systemFontOfSize:pixelValue(24)];
     }
     return _likeButton;
 }
@@ -114,6 +117,8 @@
     if(!_unLikeButton){
         _unLikeButton = [[UIButton alloc]init];
         [_unLikeButton setImage:[UIImage imageNamed:@"picture_unlike"] forState:UIControlStateNormal];
+        [_unLikeButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        _unLikeButton.titleLabel.font = [UIFont systemFontOfSize:pixelValue(24)];
     }
     return _unLikeButton;
 }
@@ -122,6 +127,8 @@
     if(!_commentsButton){
         _commentsButton = [[UIButton alloc]init];
         [_commentsButton setImage:[UIImage imageNamed:@"picture_comments"] forState:UIControlStateNormal];
+        [_commentsButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        _commentsButton.titleLabel.font = [UIFont systemFontOfSize:pixelValue(24)];
     }
     return _commentsButton;
 }
@@ -130,6 +137,8 @@
     if(!_starButton){
         _starButton = [[UIButton alloc]init];
         [_starButton setImage:[UIImage imageNamed:@"picture_star"] forState:UIControlStateNormal];
+        [_starButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        _starButton.titleLabel.font = [UIFont systemFontOfSize:pixelValue(24)];
     }
     return _starButton;
 }
@@ -148,5 +157,32 @@
         _lineView.backgroundColor = [UIColor colorWithHexString:@"#DCDCDC"];
     }
     return _lineView;
+}
+
+-(void)setImageUrl:(NSString *)imageUrl{
+    _imageUrl = imageUrl;
+    CGFloat itemW = UI_SCREEN_WIDTH - pixelValue(40);
+    _itemH = 0;
+    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageUrl]];
+    UIImage *image = [UIImage imageWithData:data];
+    [self.myImageView sd_setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:[UIImage imageNamed:@"placeHolder.jpg"]];
+    SDWebImageManager *manager = [SDWebImageManager sharedManager];
+    BOOL existBool = [manager diskImageExistsForURL:[NSURL URLWithString:imageUrl]];//判断是否有缓存
+    if (existBool) {
+        image = [[manager imageCache] imageFromDiskCacheForKey:[NSURL URLWithString:imageUrl].absoluteString];
+    }else{
+        NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageUrl]];
+        image = [UIImage imageWithData:data];
+    }
+    //根据image的比例来设置高度
+    if (image.size.height) {
+        _itemH = image.size.height / image.size.width * itemW;
+        if (_itemH >= itemW) {
+            itemW = 200;
+            _itemH = image.size.height / image.size.width * itemW;
+        }
+    }
+    
+    [self configUI];
 }
 @end
