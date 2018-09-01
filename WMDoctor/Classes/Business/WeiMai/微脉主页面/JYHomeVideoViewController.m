@@ -269,7 +269,7 @@
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.rowHeight = UITableViewAutomaticDimension;
         _tableView.estimatedRowHeight = pixelValue(380);
-        _tableView.mj_header = [MJWeiMaiHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
+        _tableView.mj_header = [MJWeiMaiHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData:)];
         __weak typeof(self) weakSelf = self;
         MJWeiMaiFooter *footer = [MJWeiMaiFooter footerWithRefreshingBlock:^{
             [weakSelf loadMoreData];
