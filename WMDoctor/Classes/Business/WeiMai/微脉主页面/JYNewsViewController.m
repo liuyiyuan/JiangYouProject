@@ -13,8 +13,11 @@
 #import "JYHomeDeletedManager.h"//删除
 #import "JYHomeCancleFocusManager.h"//取消关注
 #import "JYHomeFocusManager.h"//关注
+#import "JYHomeNewsHeaderView.h"
 @interface JYNewsViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
+
+@property (nonatomic, strong) JYHomeNewsHeaderView *headerView;
 @property (nonatomic, strong) NSMutableArray *dataArray;
 
 @end
@@ -38,13 +41,22 @@
     [self loadNewData];
 }
 - (void)zj_viewDidLoadForIndex:(NSInteger)index {
-
+    [self.view addSubview:self.headerView];
     [self.view addSubview:self.tableView];
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.dataArray.count;
 }
+
+
+//-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+//    return self.headerView;
+//}
+//
+//-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+//    return pixelValue(80);
+//}
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSDictionary *dict = self.dataArray[indexPath.row];
@@ -83,27 +95,6 @@
     [cell.forwardingButton setTitle:[NSString stringWithFormat:@" 热评%@条",dict[@"turnCount"]] forState:UIControlStateNormal];
     [cell.commentsButton setTitle:[NSString stringWithFormat:@" 转帖%@次",dict[@"commentCount"]] forState:UIControlStateNormal];
     return cell;
-}
-
--(UITableView *)tableView{
-    if(!_tableView){
-        _tableView = [[UITableView alloc]init];
-        _tableView.frame = CGRectMake(0, 0, UI_SCREEN_WIDTH,self.view.frame.size.height);
-        _tableView.delegate = self;
-        _tableView.dataSource = self;
-        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        _tableView.rowHeight = UITableViewAutomaticDimension;
-        _tableView.estimatedRowHeight = pixelValue(380);
-        _tableView.mj_header = [MJWeiMaiHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
-        __weak typeof(self) weakSelf = self;
-        MJWeiMaiFooter *footer = [MJWeiMaiFooter footerWithRefreshingBlock:^{
-            [weakSelf loadMoreData];
-            
-        }];
-        _tableView.mj_footer = footer;
-        
-    }
-    return _tableView;
 }
 
 
@@ -266,6 +257,76 @@
     NSString* dateString = [formatter stringFromDate:date];
     return dateString;
 }
+
+#pragma mark - 搜索按钮点击
+-(void)click_searchButton{
+    _page = 1;
+    NSString *pageString = [NSString stringWithFormat:@"%ld",(long)_page];
+    
+    //    NSDictionary *param = @{@"searchKey":@"",
+    //                            @"userId":_userDict[@"userId"] ? _userDict[@"userId"] : @"-1",
+    //                            @"pageNo":pageString,
+    //                            @"pageSize":@"15"
+    //                            };
+    NSDictionary *param = @{@"searchKey":self.headerView.textField.text ? self.headerView.textField.text : @"",
+                            @"userId":@"-1",
+                            @"pageNo":pageString,
+                            @"pageSize":@"15"
+                            };
+    JYHomeNewAPIManager *homeNewsManager = [[JYHomeNewAPIManager alloc] init];
+    [homeNewsManager loadDataWithParams:param withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"%@",responseObject);
+        
+        [self.dataArray removeAllObjects];
+        for (NSDictionary *dic in [responseObject allObjects]) {
+            //            WYNews *news = [[WYNews alloc] initWithDic:dic];
+            [self.dataArray addObject:dic];
+        }
+        
+        _page++;
+        [self.tableView.mj_header endRefreshing];
+        [self.tableView reloadData];
+        
+        
+    } withFailure:^(ResponseResult *errorResult) {
+        NSLog(@"login error : %@", errorResult);
+        
+        [self.tableView.mj_header endRefreshing];
+    }];
+    
+}
+
+-(UITableView *)tableView{
+    if(!_tableView){
+        _tableView = [[UITableView alloc]init];
+        _tableView.frame = CGRectMake(0, CGRectGetMaxY(self.headerView.frame), UI_SCREEN_WIDTH,self.view.frame.size.height - pixelValue(80));
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        _tableView.rowHeight = UITableViewAutomaticDimension;
+        _tableView.estimatedRowHeight = pixelValue(380);
+        _tableView.mj_header = [MJWeiMaiHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
+        __weak typeof(self) weakSelf = self;
+        MJWeiMaiFooter *footer = [MJWeiMaiFooter footerWithRefreshingBlock:^{
+            [weakSelf loadMoreData];
+            
+        }];
+        _tableView.mj_footer = footer;
+        
+    }
+    return _tableView;
+}
+
+
+-(JYHomeNewsHeaderView *)headerView{
+    if(!_headerView){
+        _headerView = [[JYHomeNewsHeaderView alloc]init];
+        _headerView.frame = CGRectMake(0, 0, UI_SCREEN_WIDTH, pixelValue(80));
+        [_headerView.searchButton addTarget:self action:@selector(click_searchButton) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _headerView;
+}
+
 
 // 使用系统的生命周期方法
 - (void)viewWillAppear:(BOOL)animated {

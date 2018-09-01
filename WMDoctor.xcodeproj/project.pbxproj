@@ -645,6 +645,8 @@
 		85F2F959211B3D900062A8A1 /* JYRedpacketItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F2F958211B3D900062A8A1 /* JYRedpacketItemViewController.m */; };
 		85F2F95E211B3E310062A8A1 /* JYRedpacketItemDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F2F95C211B3E310062A8A1 /* JYRedpacketItemDetailCell.m */; };
 		85F2F95F211B3E310062A8A1 /* JYRedpacketItemDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85F2F95D211B3E310062A8A1 /* JYRedpacketItemDetailCell.xib */; };
+		AD05559F213AC1C60076F86F /* JYHomeNewsHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD05559E213AC1C60076F86F /* JYHomeNewsHeaderView.m */; };
+		AD0555A2213ACF2E0076F86F /* JYMeAboutUsContentCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0555A1213ACF2E0076F86F /* JYMeAboutUsContentCollectionViewController.m */; };
 		AD0E11532119ED9500C3E98B /* JYHomeBeautyPictureHotManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E11522119ED9500C3E98B /* JYHomeBeautyPictureHotManager.m */; };
 		AD0E11562119F01B00C3E98B /* JYHomeBeautyPictureHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E11552119F01B00C3E98B /* JYHomeBeautyPictureHeaderView.m */; };
 		AD0E11592119F1E900C3E98B /* JYHomeBeautyPictureHeaderCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0E11582119F1E900C3E98B /* JYHomeBeautyPictureHeaderCollectionViewCell.m */; };
@@ -1996,6 +1998,10 @@
 		85F2F95D211B3E310062A8A1 /* JYRedpacketItemDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JYRedpacketItemDetailCell.xib; sourceTree = "<group>"; };
 		9DA11EC04838AD96A5B81976 /* Pods-WMDoctor.prerelease.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WMDoctor.prerelease.xcconfig"; path = "Pods/Target Support Files/Pods-WMDoctor/Pods-WMDoctor.prerelease.xcconfig"; sourceTree = "<group>"; };
 		A38FA6E6C5C6E86F870A04C5 /* Pods-WMDoctor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WMDoctor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WMDoctor/Pods-WMDoctor.debug.xcconfig"; sourceTree = "<group>"; };
+		AD05559D213AC1C60076F86F /* JYHomeNewsHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYHomeNewsHeaderView.h; sourceTree = "<group>"; };
+		AD05559E213AC1C60076F86F /* JYHomeNewsHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYHomeNewsHeaderView.m; sourceTree = "<group>"; };
+		AD0555A0213ACF2E0076F86F /* JYMeAboutUsContentCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYMeAboutUsContentCollectionViewController.h; sourceTree = "<group>"; };
+		AD0555A1213ACF2E0076F86F /* JYMeAboutUsContentCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYMeAboutUsContentCollectionViewController.m; sourceTree = "<group>"; };
 		AD0E11512119ED9500C3E98B /* JYHomeBeautyPictureHotManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYHomeBeautyPictureHotManager.h; sourceTree = "<group>"; };
 		AD0E11522119ED9500C3E98B /* JYHomeBeautyPictureHotManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYHomeBeautyPictureHotManager.m; sourceTree = "<group>"; };
 		AD0E11542119F01B00C3E98B /* JYHomeBeautyPictureHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYHomeBeautyPictureHeaderView.h; sourceTree = "<group>"; };
@@ -2722,6 +2728,8 @@
 				AD6237E62127C2A300923DD2 /* JYHomeRecommendedBigPictureTableViewCell.m */,
 				AD6237FB213983EC00923DD2 /* JYHomeNewsCollectionViewCell.h */,
 				AD6237FC213983EC00923DD2 /* JYHomeNewsCollectionViewCell.m */,
+				AD05559D213AC1C60076F86F /* JYHomeNewsHeaderView.h */,
+				AD05559E213AC1C60076F86F /* JYHomeNewsHeaderView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -5790,6 +5798,8 @@
 				CC2B24E920EDF2940050D5B2 /* JYFirstLogInViewController.m */,
 				CC2B24EE20EE08C00050D5B2 /* JYLoginViewController.h */,
 				CC2B24EF20EE08C00050D5B2 /* JYLoginViewController.m */,
+				AD0555A0213ACF2E0076F86F /* JYMeAboutUsContentCollectionViewController.h */,
+				AD0555A1213ACF2E0076F86F /* JYMeAboutUsContentCollectionViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -6248,6 +6258,7 @@
 				85CAB430210A030E00884A54 /* JYSameCityAPIManager.m in Sources */,
 				CC2B24F820EF10AA0050D5B2 /* JYCircleViewController.m in Sources */,
 				1D3B763C1E1393960035EE65 /* WMPatientReportedParamModel.m in Sources */,
+				AD05559F213AC1C60076F86F /* JYHomeNewsHeaderView.m in Sources */,
 				851187FA2123B68000F4D549 /* JYRedpacketAPIManager.m in Sources */,
 				AD526A1120E8BC7300D4BF85 /* JYFindPassWordView.m in Sources */,
 				8542E0B72068D997001E8421 /* WMReplyMessage.m in Sources */,
@@ -6614,6 +6625,7 @@
 				AD0E11932120556100C3E98B /* JYHomeRecommendedHeaderView.m in Sources */,
 				1D3B76391E13628F0035EE65 /* WMCricleGroupModel.m in Sources */,
 				0CB61DF71E4D6B3C0019AC2A /* NSNumber+Round.m in Sources */,
+				AD0555A2213ACF2E0076F86F /* JYMeAboutUsContentCollectionViewController.m in Sources */,
 				8542E0B42064EFD8001E8421 /* WMReplyAwokeView.m in Sources */,
 				188ACA8A2044FCF900A54692 /* WMNewIndexWebContorller.m in Sources */,
 				CC7E089721194F95007B14C6 /* ZJScrollSegmentView.m in Sources */,

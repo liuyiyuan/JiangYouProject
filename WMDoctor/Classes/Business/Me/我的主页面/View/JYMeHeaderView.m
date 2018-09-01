@@ -13,19 +13,26 @@
 -(instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if(self){
-        self.backgroundColor = [UIColor lightGrayColor];
         [self configUI];
     }
     return self;
 }
 
 - (void)configUI {
-    [self addSubview:self.headerImageView];
-    [self addSubview:self.nameLabel];
-    [self addSubview:self.ageLabel];
-    [self addSubview:self.phoneLabel];
-    [self addSubview:self.moneyLabel];
-    [self addSubview:self.arrowButton];
+    [self addSubview:self.backImageView];
+    [self.backImageView addSubview:self.headerImageView];
+    [self.backImageView addSubview:self.nameLabel];
+    [self.backImageView addSubview:self.ageLabel];
+    [self.backImageView addSubview:self.phoneLabel];
+    [self.backImageView addSubview:self.moneyLabel];
+    [self.backImageView addSubview:self.arrowButton];
+    
+    [self.backImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(pixelValue(0));
+        make.left.mas_equalTo(pixelValue(0));
+        make.right.mas_equalTo(pixelValue(0));
+        make.bottom.mas_equalTo(pixelValue(0));
+    }];
     
     [self.headerImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(20);
@@ -63,6 +70,15 @@
         make.top.mas_equalTo(self.mas_top).offset(10);
     }];
     
+}
+//背景图
+-(UIImageView *)backImageView{
+    if(!_backImageView){
+        _backImageView = [[UIImageView alloc]init];
+        _backImageView.image = [UIImage imageNamed:@"矩形 10 副本"];
+        _backImageView.userInteractionEnabled = YES;
+    }
+    return _backImageView;
 }
 //头像
 -(UIImageView *)headerImageView{

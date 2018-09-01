@@ -10,6 +10,8 @@
 
 @interface JYMeHeaderView : UIView
 
+@property (nonatomic, strong) UIImageView *backImageView;//背景图
+
 @property(nonatomic,strong)UIImageView *headerImageView;//头像
 
 @property(nonatomic,strong)UILabel     *nameLabel;//姓名

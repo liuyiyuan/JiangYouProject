@@ -9,6 +9,7 @@
 #import "JYAboutUsViewController.h"
 #import "JYAboutUsHeaderView.h"
 #import "JYAboutUsTableViewCell.h"
+#import "JYMeAboutUsContentCollectionViewController.h"
 @interface JYAboutUsViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic,strong)JYAboutUsHeaderView *headerView;
@@ -76,6 +77,13 @@
     backView.backgroundColor = [UIColor colorWithHexString:@"#E4E5E6"];
     cell.selectedBackgroundView = backView;
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if(indexPath.row == 0){
+        JYMeAboutUsContentCollectionViewController *AboutUsContent = [JYMeAboutUsContentCollectionViewController new];
+        [self.navigationController pushViewController:AboutUsContent animated:YES];
+    }
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

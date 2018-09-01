@@ -55,6 +55,7 @@
 -(UIImageView *)myStyle{
     if(!_myStyle){
         _myStyle = [[UIImageView alloc]init];
+        _myStyle.userInteractionEnabled = YES;
     }
     return _myStyle;
 }
@@ -72,6 +73,7 @@
 -(UIImageView *)airPicture{
     if(!_airPicture){
         _airPicture = [[UIImageView alloc]init];
+        _airPicture.userInteractionEnabled = YES;
     }
     return _airPicture;
 }
@@ -89,6 +91,7 @@
 -(UIImageView *)live{
     if(!_live){
         _live = [[UIImageView alloc]init];
+        _live.userInteractionEnabled = YES;
     }
     return _live;
 }

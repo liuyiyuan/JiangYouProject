@@ -22,6 +22,8 @@
 @property (nonatomic, strong) NSMutableArray *imageUrls;//轮播图数组
 
 @property (nonatomic, strong) NSMutableArray *tagArrays;//标签数组
+
+@property (nonatomic, assign) NSString *tagId;//记录标签
 @end
 
 @implementation JYHomeVideoViewController
@@ -54,7 +56,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _userDict = [[NSUserDefaults standardUserDefaults]objectForKey:@"JYLoginUserInfo"];
-    [self loadNewData];
+    self.tagId = @"121";
+    [self loadNewData:self.tagId];
     [self getVideoLunBo];
     
 }
@@ -81,6 +84,7 @@
         cell = [[JYHomeVideoTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
     }
     [cell.backImageView sd_setImageWithURL:[NSURL URLWithString:dict[@"msgImg"]] placeholderImage:nil];
+    cell.contentLabel.text = dict[@"captions"];
     cell.fromButton.titleLabel.text = dict[@"whereFrom"];
     cell.playButton.tag = indexPath.row;
     [cell.playButton addTarget:self action:@selector(click_playButton:) forControlEvents:UIControlEventTouchUpInside];
@@ -101,11 +105,11 @@
 
 
 #pragma mark - 获取视频列表
-- (void)loadNewData{
+- (void)loadNewData :(NSString *)tagId{
     _page = 1;
     NSString *pageString = [NSString stringWithFormat:@"%ld",(long)_page];
     NSDictionary *param = @{@"userId":@"18",
-                            @"tagId":@121,
+                            @"tagId":tagId,
                             @"pageNo":pageString,
                             @"pageSize":@"15"
                             };
@@ -240,7 +244,21 @@
     [self presentViewController:play animated:YES completion:nil];
 
 }
-
+#pragma mark -  我型我秀
+-(void)click_myStyleTap{
+    self.tagId = @"121";
+    [self loadNewData:self.tagId];
+}
+#pragma mark -  航拍江油
+-(void)click_airPictureTap{
+    self.tagId = @"122";
+    [self loadNewData:self.tagId];
+}
+#pragma mark -  现场直播
+-(void)click_liveTap{
+    self.tagId = @"123";
+    [self loadNewData:self.tagId];
+}
 -(UITableView *)tableView{
     if(!_tableView){
         _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, UI_SCREEN_WIDTH,self.view.frame.size.height) style:UITableViewStyleGrouped];
@@ -265,6 +283,16 @@
 -(JYHomeVideoHeaderView *)headerView{
     if(!_headerView){
         _headerView = [[JYHomeVideoHeaderView alloc]init];
+        //我型我秀
+        UITapGestureRecognizer *myStyleTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(click_myStyleTap)];
+        [_headerView.myStyle addGestureRecognizer:myStyleTap];
+        //航拍江油
+        UITapGestureRecognizer *airPictureTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(click_airPictureTap)];
+        [_headerView.airPicture addGestureRecognizer:airPictureTap];
+        //现场直播
+        UITapGestureRecognizer *liveTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(click_liveTap)];
+        [_headerView.live addGestureRecognizer:liveTap];
+        
         
     }
     return _headerView;

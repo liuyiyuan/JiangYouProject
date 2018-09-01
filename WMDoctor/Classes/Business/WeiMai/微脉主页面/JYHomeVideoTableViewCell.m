@@ -119,7 +119,7 @@
 -(UILabel *)contentLabel{
     if(!_contentLabel){
         _contentLabel = [[UILabel alloc]init];
-        _contentLabel.text =@"阿克苏的减肥啦会计师的福利卡机；都是离开房间啊；领导说会计法拉克就是打飞机啊";
+//        _contentLabel.text =@"阿克苏的减肥啦会计师的福利卡机；都是离开房间啊；领导说会计法拉克就是打飞机啊";
         _contentLabel.font = [UIFont systemFontOfSize:pixelValue(26)];
         _contentLabel.textColor = [UIColor whiteColor];
         _contentLabel.numberOfLines = 0;

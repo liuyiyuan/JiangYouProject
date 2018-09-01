@@ -44,6 +44,7 @@
     style.showLine = YES;
     // 颜色渐变
     style.gradualChangeTitleColor = YES;
+    style.autoAdjustTitlesWidth = YES;
     // 滚动条的颜色
     style.scrollLineColor = [UIColor colorWithRed:4 / 255.0 green:79 / 255.0 blue:128 / 255.0 alpha:1];
     // 标题一般状态的颜色
@@ -56,12 +57,8 @@
                     @"同城",
                     @"视频",
                     @"美图",
-                    @"情感",
-                    @"视频",
-                    @"无厘头",
-                    @"美女图片",
-                    @"今日房价",
-                    @"头像",
+                    @"新闻",
+                    @"招聘",
                     ];
     // 初始化
     _scrollPageView = [[ZJScrollPageView alloc] initWithFrame:CGRectMake(0, STATUS_BAR_HEIGHT, UI_SCREEN_WIDTH, UI_SCREEN_HEIGHT - tarBarHeight - STATUS_BAR_HEIGHT) segmentStyle:style titles:self.titles parentViewController:self delegate:self];

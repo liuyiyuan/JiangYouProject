@@ -124,9 +124,9 @@
     
         case 5://个人资料编辑
         {
-            JYPersonEditInformationViewController *aboutUs = [JYPersonEditInformationViewController new];
-            aboutUs.hidesBottomBarWhenPushed = YES;
-            [self.navigationController pushViewController:aboutUs animated:YES];
+//            JYPersonEditInformationViewController *aboutUs = [JYPersonEditInformationViewController new];
+//            aboutUs.hidesBottomBarWhenPushed = YES;
+//            [self.navigationController pushViewController:aboutUs animated:YES];
         }
             
             break;
@@ -134,9 +134,9 @@
             
         case 2://首次登录
         {
-            JYLoginViewController *aboutUs = [JYLoginViewController new];
-            aboutUs.hidesBottomBarWhenPushed = YES;
-            [self.navigationController pushViewController:aboutUs animated:YES];
+//            JYLoginViewController *aboutUs = [JYLoginViewController new];
+//            aboutUs.hidesBottomBarWhenPushed = YES;
+//            [self.navigationController pushViewController:aboutUs animated:YES];
         }
             
             break;
@@ -188,9 +188,13 @@
 
 #pragma mark - 跳转个人资料
 -(void)click_arrowButton{
-    JYPersonalInformationViewController *personalInformation = [JYPersonalInformationViewController new];
-    personalInformation.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:personalInformation animated:YES];
+                JYPersonEditInformationViewController *aboutUs = [JYPersonEditInformationViewController new];
+                aboutUs.hidesBottomBarWhenPushed = YES;
+                [self.navigationController pushViewController:aboutUs animated:YES];
+    
+//    JYPersonalInformationViewController *personalInformation = [JYPersonalInformationViewController new];
+//    personalInformation.hidesBottomBarWhenPushed = YES;
+//    [self.navigationController pushViewController:personalInformation animated:YES];
 }
 
 
@@ -207,8 +211,9 @@
     // 企业编号 必填
     initInfo.appKey = @"af7f8ef937cc49de8eb9a603ea5a9bf4";
     // 用户id，用于标识用户，建议填写 (注意：userId不要写死，否则获取的历史记录相同)
-    initInfo.userId = self.userDcit[@"userId"];
-    
+//    initInfo.userId = self.userDcit[@"userId"];
+
+    initInfo.userId = @"18";
     //配置UI
     ZCKitInfo *uiInfo = [ZCKitInfo new];
     uiInfo.customBannerColor = [UIColor colorWithHexString:@"#50B8FB"];
@@ -223,7 +228,7 @@
     // 必须在之前调用[[ZCLibClient getZCLibClient] initSobotSDK:@"your appkey"];
     
     [ZCSobot startZCChatVC:uiInfo
-                      with:self
+                      with:self.navigationController
                   loaction:CGRectMake(0, 0, 200, 200)
                     target:nil
                  pageBlock:^(ZCChatController *object,ZCPageBlockType type){
