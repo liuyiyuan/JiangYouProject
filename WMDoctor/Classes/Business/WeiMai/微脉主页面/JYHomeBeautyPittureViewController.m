@@ -60,7 +60,7 @@
 
 - (void)zj_viewDidLoadForIndex:(NSInteger)index {
     self.tagId = @"124";
-    [self loadNewData:self.tagId];
+    [self loadNewData];
     [self getBeautyPictureHot];//热门推荐
     [self.view addSubview:self.tableView];
 }
@@ -102,11 +102,11 @@
 
 
 #pragma mark - 新闻刷新
-- (void)loadNewData :(NSString *)tagId{
+- (void)loadNewData{
     _page = 1;
     NSString *pageString = [NSString stringWithFormat:@"%ld",(long)_page];
     NSDictionary *param = @{@"userId":@"18",
-                            @"tagId":tagId,
+                            @"tagId":self.tagId,
                             @"pageNo":pageString,
                             @"pageSize":@"15"
                             };
@@ -212,17 +212,17 @@
 #pragma mark -  老照片
 -(void)click_oldPictureTap{
     self.tagId = @"124";
-    [self loadNewData:self.tagId];
+    [self loadNewData];
 }
 #pragma mark -  大美江油
 -(void)click_bigBeautyJyTap{
     self.tagId = @"125";
-    [self loadNewData:self.tagId];
+    [self loadNewData];
 }
 #pragma mark -  随手拍
 -(void)click_BTWTap{
     self.tagId = @"126";
-    [self loadNewData:self.tagId];
+    [self loadNewData];
 }
 
 
@@ -235,7 +235,7 @@
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.rowHeight = UITableViewAutomaticDimension;
         _tableView.estimatedRowHeight = pixelValue(380);
-        _tableView.mj_header = [MJWeiMaiHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData:)];
+        _tableView.mj_header = [MJWeiMaiHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
         __weak typeof(self) weakSelf = self;
         MJWeiMaiFooter *footer = [MJWeiMaiFooter footerWithRefreshingBlock:^{
             [weakSelf loadMoreData];

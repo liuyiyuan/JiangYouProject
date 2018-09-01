@@ -55,15 +55,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _userDict = [[NSUserDefaults standardUserDefaults]objectForKey:@"JYLoginUserInfo"];
-    self.tagId = @"121";
-    [self loadNewData:self.tagId];
-    [self getVideoLunBo];
+
     
 }
 
 - (void)zj_viewDidLoadForIndex:(NSInteger)index {
-    
+    _userDict = [[NSUserDefaults standardUserDefaults]objectForKey:@"JYLoginUserInfo"];
+    self.tagId = @"121";
+    [self loadNewData];
+    [self getVideoLunBo];
     [self.view addSubview:self.tableView];
 }
 
@@ -103,13 +103,12 @@
 }
 
 
-
 #pragma mark - 获取视频列表
-- (void)loadNewData :(NSString *)tagId{
+- (void)loadNewData{
     _page = 1;
     NSString *pageString = [NSString stringWithFormat:@"%ld",(long)_page];
     NSDictionary *param = @{@"userId":@"18",
-                            @"tagId":tagId,
+                            @"tagId":self.tagId,
                             @"pageNo":pageString,
                             @"pageSize":@"15"
                             };
@@ -139,7 +138,7 @@
 - (void)loadMoreData{
     NSString *pageString = [NSString stringWithFormat:@"%ld",(long)_page];
     NSDictionary *param = @{@"userId":_userDict[@"userId"],
-                            @"tagId":@322,
+                            @"tagId":self.tagId,
                             @"pageNo":pageString,
                             @"pageSize":@"15"
                             };
@@ -247,17 +246,17 @@
 #pragma mark -  我型我秀
 -(void)click_myStyleTap{
     self.tagId = @"121";
-    [self loadNewData:self.tagId];
+    [self loadNewData];
 }
 #pragma mark -  航拍江油
 -(void)click_airPictureTap{
     self.tagId = @"122";
-    [self loadNewData:self.tagId];
+    [self loadNewData];
 }
 #pragma mark -  现场直播
 -(void)click_liveTap{
     self.tagId = @"123";
-    [self loadNewData:self.tagId];
+    [self loadNewData];
 }
 -(UITableView *)tableView{
     if(!_tableView){
@@ -269,7 +268,7 @@
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.rowHeight = UITableViewAutomaticDimension;
         _tableView.estimatedRowHeight = pixelValue(380);
-        _tableView.mj_header = [MJWeiMaiHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData:)];
+        _tableView.mj_header = [MJWeiMaiHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
         __weak typeof(self) weakSelf = self;
         MJWeiMaiFooter *footer = [MJWeiMaiFooter footerWithRefreshingBlock:^{
             [weakSelf loadMoreData];
