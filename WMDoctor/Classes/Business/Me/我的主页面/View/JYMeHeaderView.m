@@ -85,7 +85,7 @@
     if(!_headerImageView){
         _headerImageView = [[UIImageView alloc]init];
         _headerImageView.image = [UIImage imageNamed:@"ic_gouxuan"];
-        _headerImageView.layer.cornerRadius = 20;
+        _headerImageView.layer.cornerRadius = 40;
         _headerImageView.layer.masksToBounds = YES;
     }
     return _headerImageView;
@@ -94,7 +94,7 @@
 -(UILabel *)nameLabel{
     if(!_nameLabel){
         _nameLabel = [[UILabel alloc]init];
-        _nameLabel.text = @"昵称:放屁的怪咖";
+//        _nameLabel.text = @"昵称:放屁的怪咖";
         _nameLabel.textColor = [UIColor whiteColor];
        _nameLabel.font = [UIFont fontWithName:@"MicrosoftYaHei" size:10];
     }

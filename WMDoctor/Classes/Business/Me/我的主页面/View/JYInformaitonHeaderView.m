@@ -57,7 +57,7 @@
     if(!_headerImageView){
         _headerImageView = [[UIImageView alloc]init];
         _headerImageView.image = [UIImage imageNamed:@"ic_gouxuan"];
-        _headerImageView.layer.cornerRadius = 20;
+        _headerImageView.layer.cornerRadius = 40;
         _headerImageView.layer.masksToBounds = YES;
     }
     return _headerImageView;
@@ -66,7 +66,7 @@
 -(UILabel *)nameLabel{
     if(!_nameLabel){
         _nameLabel = [[UILabel alloc]init];
-        _nameLabel.text = @"昵称:放屁的怪咖";
+        _nameLabel.text = @"昵称:";
         _nameLabel.textColor = [UIColor blackColor];
         _nameLabel.font = [UIFont fontWithName:@"MicrosoftYaHei" size:10];
     }
@@ -77,7 +77,7 @@
     if(!_ageLabel){
         _ageLabel = [[UILabel alloc]init];
         _ageLabel.textColor = [UIColor blackColor];
-        _ageLabel.text = @"年龄:30岁";
+        _ageLabel.text = @"年龄:";
         
     }
     return _ageLabel;
@@ -86,7 +86,7 @@
 -(UILabel *)phoneLabel{
     if(!_phoneLabel){
         _phoneLabel = [[UILabel alloc]init];
-        _phoneLabel.text = @"151 9999 9999";
+        _phoneLabel.text = @"";
         _phoneLabel.textColor = [UIColor blackColor];
     }
     return _phoneLabel;

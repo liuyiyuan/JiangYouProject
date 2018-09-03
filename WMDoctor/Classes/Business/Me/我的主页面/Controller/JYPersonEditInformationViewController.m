@@ -65,6 +65,7 @@
 -(JYInformaitonHeaderView *)headerView{
     if(!_headerView){
         _headerView = [[JYInformaitonHeaderView alloc]init];
+        _headerView.headerImageView.image = [UIImage imageNamed:@"avatar_loading"];
         _headerView.frame = CGRectMake(0, 0, UI_SCREEN_WIDTH, pixelValue(240));
         
     }

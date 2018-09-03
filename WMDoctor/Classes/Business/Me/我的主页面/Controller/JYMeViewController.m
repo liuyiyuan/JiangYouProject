@@ -154,29 +154,17 @@
 }
 
 
-#pragma mark - 获取标签
--(void)GetPersonalInfo{
-    JYGetPersonalInfoManager *getPersonalInfo = [[JYGetPersonalInfoManager alloc] init];
-    [getPersonalInfo loadDataWithParams:@{@"userId":@18} withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
-        NSLog(@"%@",responseObject);
-        
-        
-//        for (NSDictionary *dic in [responseObject allObjects]) {
-//            [self.tagArrays addObject:dic];
-//        }
-        
-        
-        
-    } withFailure:^(ResponseResult *errorResult) {
-        NSLog(@"login error : %@", errorResult);
-        
-    }];
-}
+
 
 
 -(JYMeHeaderView *)headerView{
     if(!_headerView){
         _headerView = [[JYMeHeaderView alloc]initWithFrame:CGRectMake(0, 0, UI_SCREEN_WIDTH, 120)];
+        _headerView.nameLabel.text = [NSString stringWithFormat:@"昵称:%@",self.userDcit[@"nickName"]];
+        _headerView.ageLabel.text = @"年龄:";
+        _headerView.phoneLabel.text = [NSString stringWithFormat:@"%@",self.userDcit[@"tel"]];
+        _headerView.moneyLabel.text = @"金币:";
+        _headerView.headerImageView.image = [UIImage imageNamed:@"avatar_loading"];
         [_headerView.arrowButton addTarget:self action:@selector(click_arrowButton) forControlEvents:UIControlEventTouchUpInside];
     }
     return _headerView;
@@ -215,13 +203,11 @@
     }
     // 启动
     ZCLibInitInfo *initInfo = [ZCLibInitInfo new];
-    initInfo.avatarUrl = @"avatar_loading";
+//    initInfo.avatarUrl = @"avatar_loading";
     // 企业编号 必填
     initInfo.appKey = @"af7f8ef937cc49de8eb9a603ea5a9bf4";
     // 用户id，用于标识用户，建议填写 (注意：userId不要写死，否则获取的历史记录相同)
-//    initInfo.userId = self.userDcit[@"userId"];
-
-    initInfo.userId = @"18";
+    initInfo.userId = self.userDcit[@"userId"];
     //配置UI
     ZCKitInfo *uiInfo = [ZCKitInfo new];
     uiInfo.customBannerColor = [UIColor colorWithHexString:@"#50B8FB"];
@@ -257,8 +243,6 @@
     [super viewWillAppear:animated];
     NSIndexPath *selected = [self.meTableView indexPathForSelectedRow];
     if(selected) [self.meTableView deselectRowAtIndexPath:selected animated:NO];
-    
-    [self GetPersonalInfo];
 }
 
 - (void)kLoginInSuccessAction:(NSNotification*)note{
@@ -267,7 +251,7 @@
 
 - (void)loadMineData{
     JYMineAPIManager *mineAPIManager = [[JYMineAPIManager alloc] init];
-    [mineAPIManager loadDataWithParams:@{} withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
+    [mineAPIManager loadDataWithParams:nil withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
         NSLog(@"mine request response data : %@", responseObject);
     } withFailure:^(ResponseResult *errorResult) {
         NSLog(@"mine request error : %@", errorResult);
