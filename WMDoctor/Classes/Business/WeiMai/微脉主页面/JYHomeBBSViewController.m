@@ -66,7 +66,7 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     JYHomeBBSTableViewCell *cell = [[JYHomeBBSTableViewCell alloc]init];
     NSDictionary *dict = self.tableArray[indexPath.row];
-    [cell.myImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",dict[@"tagIcon"]]] placeholderImage:nil];
+    [cell.myImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",dict[@"tagIcon"]]] placeholderImage:[UIImage imageNamed:@"placeHolder_image"]];
     cell.titleLabel.text = dict[@"title"];
     cell.contentLabel.text = dict[@"introduction"];
     BOOL isFollow = [dict[@"isFollow"] boolValue];

@@ -89,7 +89,7 @@
     static NSString * CellIdentifier = @"JYHomeBeautyPictureHeaderCollectionViewCell";
     JYHomeBeautyPictureHeaderCollectionViewCell * cell = (JYHomeBeautyPictureHeaderCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
     cell.backgroundColor = [UIColor whiteColor];
-    [cell.myImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",self.dataArray[indexPath.row]]] placeholderImage:nil];
+    [cell.myImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",self.dataArray[indexPath.row]]] placeholderImage:[UIImage imageNamed:@"placeHolder_image"]];
     
     return cell;
 }

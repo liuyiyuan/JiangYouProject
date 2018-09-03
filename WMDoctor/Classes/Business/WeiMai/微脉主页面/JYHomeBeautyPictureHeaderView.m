@@ -198,7 +198,7 @@
     static NSString * CellIdentifier = @"JYHomeBeautyPictureHeaderCollectionViewCell";
     JYHomeBeautyPictureHeaderCollectionViewCell * cell = (JYHomeBeautyPictureHeaderCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
     cell.backgroundColor = [UIColor whiteColor];
-    [cell.myImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",self.hotDataArray[indexPath.row]]] placeholderImage:nil];
+    [cell.myImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",self.hotDataArray[indexPath.row]]] placeholderImage:[UIImage imageNamed:@"placeHolder_image"]];
     
     return cell;
 }
@@ -240,11 +240,11 @@
         NSDictionary *dict0 = PictureTagArray[0];
         NSDictionary *dict1 = PictureTagArray[1];
         NSDictionary *dict2 = PictureTagArray[2];
-        [self.oldPicture sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",dict0[@"channelImg"]]] placeholderImage:nil];
+        [self.oldPicture sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",dict0[@"channelImg"]]] placeholderImage:[UIImage imageNamed:@"placeHolder_image"]];
         self.oldPictureLabel.text = dict0[@"captions"];
-        [self.bigBeautyJy sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",dict1[@"channelImg"]]] placeholderImage:nil];
+        [self.bigBeautyJy sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",dict1[@"channelImg"]]] placeholderImage:[UIImage imageNamed:@"placeHolder_image"]];
         self.bigBeautyJyLabel.text = dict1[@"captions"];
-        [self.BTW sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",dict2[@"channelImg"]]] placeholderImage:nil];
+        [self.BTW sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",dict2[@"channelImg"]]] placeholderImage:[UIImage imageNamed:@"placeHolder_image"]];
         self.BTWLabel.text = dict2[@"captions"];
     }
 

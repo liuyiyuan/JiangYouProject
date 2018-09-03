@@ -83,7 +83,7 @@
     if(!cell){
         cell = [[JYHomeVideoTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
     }
-    [cell.backImageView sd_setImageWithURL:[NSURL URLWithString:dict[@"msgImg"]] placeholderImage:nil];
+    [cell.backImageView sd_setImageWithURL:[NSURL URLWithString:dict[@"msgImg"]] placeholderImage:[UIImage imageNamed:@"placeHolder_image"]];
     cell.contentLabel.text = dict[@"captions"];
     [cell.fromButton setTitle:dict[@"whereFrom"] forState:UIControlStateNormal];
     cell.playButton.tag = indexPath.row;

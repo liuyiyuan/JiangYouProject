@@ -85,7 +85,7 @@
 //    }
     cell.titleLabel.text = dict[@"title"];
 
-    [cell.myImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",dict[@"msgImg"]]] placeholderImage:nil];
+    [cell.myImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",dict[@"msgImg"]]] placeholderImage:[UIImage imageNamed:@"placeHolder_image"]];
     [cell.likeButton setTitle:[NSString stringWithFormat:@" %@",dict[@"likeCount"]] forState:UIControlStateNormal];
     [cell.unLikeButton setTitle:[NSString stringWithFormat:@" %@",dict[@"unLikeCount"]] forState:UIControlStateNormal];
     [cell.commentsButton setTitle:[NSString stringWithFormat:@" %@",dict[@"commentCount"]] forState:UIControlStateNormal];

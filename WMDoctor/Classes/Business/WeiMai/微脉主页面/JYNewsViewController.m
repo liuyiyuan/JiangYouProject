@@ -83,7 +83,7 @@
     cell.deleteButton.tag = indexPath.row;
     [cell.deleteButton addTarget:self action:@selector(click_deleteButton:) forControlEvents:UIControlEventTouchUpInside];
     //头像
-    [cell.headerImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",dict[@"imgPath"]]] placeholderImage:nil];
+    [cell.headerImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",dict[@"imgPath"]]] placeholderImage:[UIImage imageNamed:@"placeHolder_image"]];
     //姓名
     cell.nameLabel.text = dict[@"title"];
     //内容详情

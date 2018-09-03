@@ -99,7 +99,7 @@
     static NSString * CellIdentifier = @"JYHomeSameCityHeaderCollectionViewCell";
     JYHomeSameCityHeaderCollectionViewCell * cell = (JYHomeSameCityHeaderCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
     NSDictionary *dict = self.fastListArray[indexPath.row];
-    [cell.myImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",dict[@"channelIcon"]]] placeholderImage:nil];
+    [cell.myImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",dict[@"channelIcon"]]] placeholderImage:[UIImage imageNamed:@"placeHolder_image"]];
     cell.myLabel.text = dict[@"title"];
     
     
@@ -220,9 +220,9 @@
         NSDictionary *dict0 = photoNavListArray[0];
         NSDictionary *dict1 = photoNavListArray[1];
         NSDictionary *dict2 = photoNavListArray[2];
-        [self.goodWorkImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",dict0[@"photoLink"]]] placeholderImage:nil];
-        [self.secondhandImageImage sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",dict1[@"photoLink"]]] placeholderImage:nil];
-        [self.strategyImage sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",dict2[@"photoLink"]]] placeholderImage:nil];
+        [self.goodWorkImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",dict0[@"photoLink"]]] placeholderImage:[UIImage imageNamed:@"placeHolder_image"]];
+        [self.secondhandImageImage sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",dict1[@"photoLink"]]] placeholderImage:[UIImage imageNamed:@"placeHolder_image"]];
+        [self.strategyImage sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",dict2[@"photoLink"]]] placeholderImage:[UIImage imageNamed:@"placeHolder_image"]];
     }
 
 }

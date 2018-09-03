@@ -173,7 +173,7 @@
     static NSString * CellIdentifier = @"JYHomeNewsCollectionViewCell";
     JYHomeNewsCollectionViewCell * cell = (JYHomeNewsCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
     cell.backgroundColor = [UIColor colorWithHexString:@"#F5F5F5"];
-    [cell.myImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",self.imageArrays[indexPath.row]]] placeholderImage:nil];
+    [cell.myImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",self.imageArrays[indexPath.row]]] placeholderImage:[UIImage imageNamed:@"placeHolder_image"]];
     
     return cell;
 }

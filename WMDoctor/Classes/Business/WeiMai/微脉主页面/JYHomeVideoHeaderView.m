@@ -118,11 +118,11 @@
         NSDictionary *dict0 = tagArray[0];
         NSDictionary *dict1 = tagArray[1];
         NSDictionary *dict2 = tagArray[2];
-        [self.myStyle sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",dict0[@"tagImg"]]] placeholderImage:nil];
+        [self.myStyle sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",dict0[@"tagImg"]]] placeholderImage:[UIImage imageNamed:@"placeHolder_image"]];
         self.myStyleLaebl.text = dict0[@"captions"];
-        [self.airPicture sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",dict1[@"tagImg"]]] placeholderImage:nil];
+        [self.airPicture sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",dict1[@"tagImg"]]] placeholderImage:[UIImage imageNamed:@"placeHolder_image"]];
         self.airPictureLaebl.text = dict1[@"captions"];
-        [self.live sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",dict2[@"tagImg"]]] placeholderImage:nil];
+        [self.live sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",dict2[@"tagImg"]]] placeholderImage:[UIImage imageNamed:@"placeHolder_image"]];
         self.liveLaebl.text = dict2[@"captions"];
     }
 }
