@@ -27,7 +27,11 @@
 @end
 
 @implementation JYHomeBBSViewController
-
+{
+    NSInteger _page;
+    NSDictionary *_userDict;
+    
+}
 -(NSMutableArray *)tableArray{
     if(!_tableArray){
         _tableArray = [[NSMutableArray alloc]init];
@@ -48,6 +52,7 @@
 }
 
 - (void)zj_viewDidLoadForIndex:(NSInteger)index {
+    _userDict = [[NSUserDefaults standardUserDefaults]objectForKey:@"JYLoginUserInfo"];
     [self getBBSHot];
     [self BBSChoose];
     [self.view addSubview:self.tableView];
@@ -121,7 +126,7 @@
 #pragma mark - 精选推荐
 -(void)BBSChoose{
     JYHomeBBSChooseManager *BBSChoose = [[JYHomeBBSChooseManager alloc] init];
-    [BBSChoose loadDataWithParams:@{@"userId":@"18"} withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
+    [BBSChoose loadDataWithParams:@{@"userId":_userDict[@"userId"]} withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
         NSLog(@"%@",responseObject);
         
         

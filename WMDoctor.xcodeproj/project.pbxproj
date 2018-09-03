@@ -748,6 +748,8 @@
 		CC7E089821194F95007B14C6 /* UIViewController+ZJScrollPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7E089021194F95007B14C6 /* UIViewController+ZJScrollPageController.m */; };
 		CC7E089B211968D5007B14C6 /* JYNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7E089A211968D5007B14C6 /* JYNewsViewController.m */; };
 		CC922AFD2138DF700056280D /* JYHomeVideoTagManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CC922AFC2138DF700056280D /* JYHomeVideoTagManager.m */; };
+		CC922B0D213D12C80056280D /* JYLoginCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC922B0C213D12C80056280D /* JYLoginCodeView.m */; };
+		CC922B10213D1DC20056280D /* JYCompareValidCodeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CC922B0F213D1DC20056280D /* JYCompareValidCodeManager.m */; };
 		CCA4FC5420E31D23000A783A /* JYMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA4FC5320E31D23000A783A /* JYMeViewController.m */; };
 		CCA4FC5920E31D35000A783A /* JYMeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA4FC5620E31D35000A783A /* JYMeTableViewCell.m */; };
 		CCA4FC5A20E31D35000A783A /* JYMeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA4FC5720E31D35000A783A /* JYMeHeaderView.m */; };
@@ -2200,6 +2202,10 @@
 		CC7E089A211968D5007B14C6 /* JYNewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYNewsViewController.m; sourceTree = "<group>"; };
 		CC922AFB2138DF700056280D /* JYHomeVideoTagManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYHomeVideoTagManager.h; sourceTree = "<group>"; };
 		CC922AFC2138DF700056280D /* JYHomeVideoTagManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYHomeVideoTagManager.m; sourceTree = "<group>"; };
+		CC922B0B213D12C80056280D /* JYLoginCodeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYLoginCodeView.h; sourceTree = "<group>"; };
+		CC922B0C213D12C80056280D /* JYLoginCodeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYLoginCodeView.m; sourceTree = "<group>"; };
+		CC922B0E213D1DC20056280D /* JYCompareValidCodeManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYCompareValidCodeManager.h; sourceTree = "<group>"; };
+		CC922B0F213D1DC20056280D /* JYCompareValidCodeManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JYCompareValidCodeManager.m; sourceTree = "<group>"; };
 		CCA4FC5220E31D22000A783A /* JYMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYMeViewController.h; sourceTree = "<group>"; };
 		CCA4FC5320E31D23000A783A /* JYMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYMeViewController.m; sourceTree = "<group>"; };
 		CCA4FC5520E31D35000A783A /* JYMeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYMeTableViewCell.h; sourceTree = "<group>"; };
@@ -5302,6 +5308,8 @@
 				85BE0CAA21075DFA002B964C /* JYLoginNewAPIManager.m */,
 				85BE0CAC21077020002B964C /* JYGetVerificationCodeAPIManager.h */,
 				85BE0CAD21077020002B964C /* JYGetVerificationCodeAPIManager.m */,
+				CC922B0E213D1DC20056280D /* JYCompareValidCodeManager.h */,
+				CC922B0F213D1DC20056280D /* JYCompareValidCodeManager.m */,
 				85BE0CAF21077518002B964C /* JYSetPasswordAPIManager.h */,
 				85BE0CB021077518002B964C /* JYSetPasswordAPIManager.m */,
 				85CAB446210C25B600884A54 /* JYFastLoginAPIManager.h */,
@@ -5773,6 +5781,8 @@
 				CC2B24EC20EDF3840050D5B2 /* JYFirstLogInView.m */,
 				CC2B24F120EE08D40050D5B2 /* JYLoninView.h */,
 				CC2B24F220EE08D40050D5B2 /* JYLoninView.m */,
+				CC922B0B213D12C80056280D /* JYLoginCodeView.h */,
+				CC922B0C213D12C80056280D /* JYLoginCodeView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -6524,6 +6534,7 @@
 				AD93FEAE20DDE23B00C8EF83 /* WYCategoryButton.m in Sources */,
 				0C9817EC1DFFBC070016AD20 /* main.m in Sources */,
 				85F2F95E211B3E310062A8A1 /* JYRedpacketItemDetailCell.m in Sources */,
+				CC922B0D213D12C80056280D /* JYLoginCodeView.m in Sources */,
 				850142A81F3C0A0A000BA97F /* WMPatientDataCell.m in Sources */,
 				85D2BAD11FC2A00B00C67F98 /* WMQuestionsCell.m in Sources */,
 				854180D71FD6742700EA4235 /* WMOrderCell.m in Sources */,
@@ -6741,6 +6752,7 @@
 				1D3B764E1E14DB8E0035EE65 /* WMMessageLisParamModel.m in Sources */,
 				1DA7E5081E5C6F6800CDBEC5 /* WMAllPatienAcceptCell.m in Sources */,
 				18999EC9202050CA0090C893 /* WMIndexDataModel.m in Sources */,
+				CC922B10213D1DC20056280D /* JYCompareValidCodeManager.m in Sources */,
 				18328A271F1470F300F87E01 /* NSString+LKC.m in Sources */,
 				0C4004931E026F0D003E1FC4 /* WMJSONUtil.m in Sources */,
 				18328A311F1470F300F87E01 /* UIAlertView+Blocks.m in Sources */,

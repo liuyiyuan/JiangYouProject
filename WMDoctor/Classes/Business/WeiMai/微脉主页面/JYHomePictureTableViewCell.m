@@ -98,7 +98,7 @@
 -(UIImageView *)myImageView{
     if(!_myImageView){
         _myImageView = [[UIImageView alloc]init];
-        _myImageView.contentMode = UIViewContentModeRedraw;
+        _myImageView.contentMode = UIViewContentModeScaleToFill;
     }
     return _myImageView;
 }
@@ -159,30 +159,10 @@
     return _lineView;
 }
 
--(void)setImageUrl:(NSString *)imageUrl{
-    _imageUrl = imageUrl;
-    CGFloat itemW = UI_SCREEN_WIDTH - pixelValue(40);
-    _itemH = 0;
-    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageUrl]];
-    UIImage *image = [UIImage imageWithData:data];
-    [self.myImageView sd_setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:[UIImage imageNamed:@"placeHolder.jpg"]];
-    SDWebImageManager *manager = [SDWebImageManager sharedManager];
-    BOOL existBool = [manager diskImageExistsForURL:[NSURL URLWithString:imageUrl]];//判断是否有缓存
-    if (existBool) {
-        image = [[manager imageCache] imageFromDiskCacheForKey:[NSURL URLWithString:imageUrl].absoluteString];
-    }else{
-        NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageUrl]];
-        image = [UIImage imageWithData:data];
-    }
-    //根据image的比例来设置高度
-    if (image.size.height) {
-        _itemH = image.size.height / image.size.width * itemW;
-        if (_itemH >= itemW) {
-            itemW = 200;
-            _itemH = image.size.height / image.size.width * itemW;
-        }
-    }
+-(void)setItemH:(CGFloat)itemH{
+    _itemH = itemH;
     
     [self configUI];
 }
+
 @end

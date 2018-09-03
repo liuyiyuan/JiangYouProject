@@ -11,7 +11,6 @@
 #import "WYTopicHeader.h"
 #import "WYTopicScrollView.h"
 #import "WYNewsScrollView.h"
-#import "WYNewsTableController.h"
 #import "WYTopic.h"
 #import "JYHomeNewAPIManager.h"
 #import "ZJScrollPageView.h"

@@ -24,12 +24,21 @@
 
 @property (nonatomic, strong) NSString *tagId;//标签
 
+@property (nonatomic, strong) NSMutableArray *imageHeightArray;//图片高度数组
+
 @end
 
 @implementation JYHomeBeautyPittureViewController
 {
     NSInteger _page;
-    
+    NSDictionary *_userDict;
+}
+
+-(NSMutableArray *)imageHeightArray{
+    if(!_imageHeightArray){
+        _imageHeightArray = [[NSMutableArray alloc]init];
+    }
+    return _imageHeightArray;
 }
 -(NSMutableArray *)PictureTagArray{
     if(!_PictureTagArray){
@@ -59,6 +68,7 @@
 }
 
 - (void)zj_viewDidLoadForIndex:(NSInteger)index {
+    _userDict = [[NSUserDefaults standardUserDefaults]objectForKey:@"JYLoginUserInfo"];
     self.tagId = @"124";
     [self loadNewData];
     [self getBeautyPictureHot];//热门推荐
@@ -73,14 +83,16 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSDictionary *dict = self.dataArray[indexPath.row];
-    static NSString *cellId = @"JYHomePictureTableViewCell";
-    JYHomePictureTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+//    static NSString *cellId = @"JYHomePictureTableViewCell";
+    JYHomePictureTableViewCell *cell = [[JYHomePictureTableViewCell alloc]init];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    if(!cell){
-        cell = [[JYHomePictureTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
-    }
+    cell.itemH = [self.imageHeightArray[indexPath.row] floatValue];
+//    if(!cell){
+//        cell = [[JYHomePictureTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
+//    }
     cell.titleLabel.text = dict[@"title"];
-    cell.imageUrl = dict[@"msgImg"];
+
+    [cell.myImageView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",dict[@"msgImg"]]] placeholderImage:nil];
     [cell.likeButton setTitle:[NSString stringWithFormat:@" %@",dict[@"likeCount"]] forState:UIControlStateNormal];
     [cell.unLikeButton setTitle:[NSString stringWithFormat:@" %@",dict[@"unLikeCount"]] forState:UIControlStateNormal];
     [cell.commentsButton setTitle:[NSString stringWithFormat:@" %@",dict[@"commentCount"]] forState:UIControlStateNormal];
@@ -105,7 +117,7 @@
 - (void)loadNewData{
     _page = 1;
     NSString *pageString = [NSString stringWithFormat:@"%ld",(long)_page];
-    NSDictionary *param = @{@"userId":@"18",
+    NSDictionary *param = @{@"userId":_userDict[@"userId"],
                             @"tagId":self.tagId,
                             @"pageNo":pageString,
                             @"pageSize":@"15"
@@ -113,9 +125,24 @@
     JYHomeBeautyPictureLIstManager *beautyPictureLIs = [[JYHomeBeautyPictureLIstManager alloc] init];
     [beautyPictureLIs loadDataWithParams:param withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
         NSLog(@"%@",responseObject);
+        [self.imageHeightArray removeAllObjects];
         [self.dataArray removeAllObjects];
+        CGFloat itemW = UI_SCREEN_WIDTH - pixelValue(40);
+        CGFloat itemH = 0;
         for (NSDictionary *dic in [responseObject allObjects]) {
             [self.dataArray addObject:dic];
+            
+            NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",dic[@"msgImg"]]]];
+            UIImage *image = [UIImage imageWithData:data];
+            
+            if (image.size.height) {
+                itemH = image.size.height / image.size.width * itemW;
+                if (itemH >= itemW) {
+                    itemH = 200;
+                    itemH = image.size.height / image.size.width * itemW;
+                }
+            }
+            [self.imageHeightArray addObject:@(itemH)];
         }
         
         _page++;
@@ -135,7 +162,7 @@
 #pragma mark - Refresh
 - (void)loadMoreData{
     NSString *pageString = [NSString stringWithFormat:@"%ld",(long)_page];
-    NSDictionary *param = @{@"userId":@"18",
+    NSDictionary *param = @{@"userId":_userDict[@"userId"],
                             @"tagId":self.tagId,
                             @"pageNo":pageString,
                             @"pageSize":@"15"
@@ -144,8 +171,22 @@
     JYHomeBeautyPictureLIstManager *beautyPictureLIs = [[JYHomeBeautyPictureLIstManager alloc] init];
     [beautyPictureLIs loadDataWithParams:param withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
         NSLog(@"%@",responseObject);
+        CGFloat itemW = UI_SCREEN_WIDTH - pixelValue(40);
+        CGFloat itemH = 0;
         for (NSDictionary *dic in [responseObject allObjects]) {
             [self.dataArray addObject:dic];
+            
+            NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",dic[@"msgImg"]]]];
+            UIImage *image = [UIImage imageWithData:data];
+            
+            if (image.size.height) {
+                itemH = image.size.height / image.size.width * itemW;
+                if (itemH >= itemW) {
+                    itemH = 200;
+                    itemH = image.size.height / image.size.width * itemW;
+                }
+            }
+            [self.imageHeightArray addObject:@(itemH)];
         }
         _page++;
         if ([self.tableView.mj_footer isRefreshing]) {

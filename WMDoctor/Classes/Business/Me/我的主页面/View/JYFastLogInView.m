@@ -110,13 +110,11 @@
     return _codeImageView;
 }
 //验证码输入框
--(PPTextfield *)codeTextField{
+-(UITextField *)codeTextField{
     if(!_codeTextField){
-        _codeTextField = [[PPTextfield alloc]init];
+        _codeTextField = [[UITextField alloc]init];
         _codeTextField.backgroundColor = [UIColor whiteColor];
         _codeTextField.placeholder = @"  验证码";
-        _codeTextField.isOnlyNumber = YES;
-        _codeTextField.maxNumberCount = 6;
     }
     return _codeTextField;
 }

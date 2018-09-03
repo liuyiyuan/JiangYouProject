@@ -122,11 +122,19 @@
         }
             break;
     
-        case 5://个人资料编辑
+        case 5://退出登录
         {
-//            JYPersonEditInformationViewController *aboutUs = [JYPersonEditInformationViewController new];
-//            aboutUs.hidesBottomBarWhenPushed = YES;
-//            [self.navigationController pushViewController:aboutUs animated:YES];
+
+            [[NSUserDefaults standardUserDefaults]removeObjectForKey:@"JYLoginUserInfo"];
+            [[NSUserDefaults standardUserDefaults]synchronize];
+            
+            if ([UIApplication sharedApplication].delegate.window.rootViewController != nil) {
+                [UIApplication sharedApplication].delegate.window.rootViewController = nil;
+            }
+            UINavigationController * loginNavController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"LoginNavgationController"];
+            
+            [UIApplication sharedApplication].delegate.window.rootViewController = loginNavController;
+            
         }
             
             break;

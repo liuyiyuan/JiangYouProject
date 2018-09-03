@@ -37,12 +37,13 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _userDict = [[NSUserDefaults standardUserDefaults]objectForKey:@"JYLoginUserInfo"];
-    [self loadNewData];
+  
 }
 - (void)zj_viewDidLoadForIndex:(NSInteger)index {
     [self.view addSubview:self.headerView];
     [self.view addSubview:self.tableView];
+    _userDict = [[NSUserDefaults standardUserDefaults]objectForKey:@"JYLoginUserInfo"];
+    [self loadNewData];
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

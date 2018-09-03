@@ -16,7 +16,7 @@
 
 @property(nonatomic,strong)UIImageView *codeImageView;//验证码图片
 
-@property(nonatomic,strong)PPTextfield *codeTextField;//验证码输入框
+@property(nonatomic,strong)UITextField *codeTextField;//验证码输入框
 
 @property(nonatomic,strong)UIButton *getCodeBtn;//获取验证码按钮
 
