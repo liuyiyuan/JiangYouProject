@@ -36,7 +36,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WMDoctor/Classes/Business/Me/&#x6211;&#x7684;&#x4e3b;&#x9875;&#x9762;/Controller/JYLoginViewController.m"
-            timestampString = "557654659.0639009"
+            timestampString = "557658143.471264"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "103"
@@ -68,44 +68,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WMDoctor/Classes/Business/WeiMai/&#x5fae;&#x8109;&#x4e3b;&#x9875;&#x9762;/JYHomeVideoViewController.m"
-            timestampString = "557654968.035687"
+            timestampString = "557658143.4713629"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "209"
-            endingLineNumber = "209"
-            landmarkName = "-click_playButton:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WMDoctor/Classes/Business/WeiMai/&#x5fae;&#x8109;&#x4e3b;&#x9875;&#x9762;/JYHomeBeautyPittureViewController.m"
-            timestampString = "557654968.0357521"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
-            landmarkName = "-loadNewData"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WMDoctor/Classes/Business/WeiMai/&#x5fae;&#x8109;&#x4e3b;&#x9875;&#x9762;/JYHomeBeautyPittureViewController.m"
-            timestampString = "557654968.0358"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "149"
-            endingLineNumber = "149"
-            landmarkName = "-loadNewData"
+            startingLineNumber = "214"
+            endingLineNumber = "214"
+            landmarkName = "-getvideoTag"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -116,7 +84,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WMDoctor/Classes/Business/Me/&#x6211;&#x7684;&#x4e3b;&#x9875;&#x9762;/Controller/JYFastLogInViewController.m"
-            timestampString = "557654968.0358469"
+            timestampString = "557658143.47142"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "80"
@@ -132,7 +100,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WMDoctor/Classes/Business/Me/&#x6211;&#x7684;&#x4e3b;&#x9875;&#x9762;/Controller/JYFastLogInViewController.m"
-            timestampString = "557654968.035894"
+            timestampString = "557658143.471469"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "127"
@@ -148,7 +116,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WMDoctor/Classes/Business/Me/&#x6211;&#x7684;&#x4e3b;&#x9875;&#x9762;/Controller/JYFastLogInViewController.m"
-            timestampString = "557654968.035936"
+            timestampString = "557658143.471514"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "133"
@@ -164,13 +132,122 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WMDoctor/Classes/Business/AppDelegate/AppDelegate.m"
-            timestampString = "557654968.035982"
+            timestampString = "557658143.471559"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "224"
             endingLineNumber = "224"
             landmarkName = "-kLoginInSuccessAction:"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WMDoctor/Classes/Business/WeiMai/&#x5fae;&#x8109;&#x4e3b;&#x9875;&#x9762;/JYHomeBeautyPittureViewController.m"
+            timestampString = "557658143.471602"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
+            landmarkName = "-loadMoreData"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WMDoctor/Classes/Business/WeiMai/&#x5fae;&#x8109;&#x4e3b;&#x9875;&#x9762;/JYHomeBeautyPittureViewController.m"
+            timestampString = "557658143.471653"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "166"
+            endingLineNumber = "166"
+            landmarkName = "-loadMoreData"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[JYHomeBeautyPittureViewController loadMoreData]"
+                  moduleName = "WMDoctor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jiangqi/JiangYouProject/WMDoctor/Classes/Business/WeiMai/%E5%BE%AE%E8%84%89%E4%B8%BB%E9%A1%B5%E9%9D%A2/JYHomeBeautyPittureViewController.m"
+                  timestampString = "557657223.49178"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "168"
+                  endingLineNumber = "168"
+                  offsetFromSymbolStart = "584">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__49-[JYHomeBeautyPittureViewController loadMoreData]_block_invoke"
+                  moduleName = "WMDoctor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jiangqi/JiangYouProject/WMDoctor/Classes/Business/WeiMai/%E5%BE%AE%E8%84%89%E4%B8%BB%E9%A1%B5%E9%9D%A2/JYHomeBeautyPittureViewController.m"
+                  timestampString = "557657223.4936709"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "168"
+                  endingLineNumber = "168"
+                  offsetFromSymbolStart = "1052">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__copy_helper_block_.144"
+                  moduleName = "WMDoctor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jiangqi/JiangYouProject/WMDoctor/Classes/Business/WeiMai/%E5%BE%AE%E8%84%89%E4%B8%BB%E9%A1%B5%E9%9D%A2/JYHomeBeautyPittureViewController.m"
+                  timestampString = "557657223.495623"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "149"
+                  endingLineNumber = "149"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__49-[JYHomeBeautyPittureViewController loadMoreData]_block_invoke.147"
+                  moduleName = "WMDoctor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jiangqi/JiangYouProject/WMDoctor/Classes/Business/WeiMai/%E5%BE%AE%E8%84%89%E4%B8%BB%E9%A1%B5%E9%9D%A2/JYHomeBeautyPittureViewController.m"
+                  timestampString = "557657223.4974771"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "168"
+                  endingLineNumber = "168"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__destroy_helper_block_.149"
+                  moduleName = "WMDoctor"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jiangqi/JiangYouProject/WMDoctor/Classes/Business/WeiMai/%E5%BE%AE%E8%84%89%E4%B8%BB%E9%A1%B5%E9%9D%A2/JYHomeBeautyPittureViewController.m"
+                  timestampString = "557657223.499332"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "168"
+                  endingLineNumber = "168"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

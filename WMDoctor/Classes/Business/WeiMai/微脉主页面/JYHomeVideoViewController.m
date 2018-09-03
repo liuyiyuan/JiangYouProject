@@ -146,16 +146,21 @@
     JYHomeVideoManager *video = [[JYHomeVideoManager alloc] init];
     [video loadDataWithParams:param withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
         NSLog(@"%@",responseObject);
-        for (NSDictionary *dic in [responseObject allObjects]) {
-            [self.dataArray addObject:dic];
+        NSArray *array = responseObject;
+        if(array.count == 0){
+            [self.tableView.mj_footer endRefreshingWithState:MJRefreshStateNoMoreData];
+        }else{
+            for (NSDictionary *dic in [responseObject allObjects]) {
+                [self.dataArray addObject:dic];
+            }
+            _page++;
+            if ([self.tableView.mj_footer isRefreshing]) {
+                
+                [self.tableView.mj_footer endRefreshing];
+                
+            }
+            [self.tableView reloadData];
         }
-        _page++;
-        if ([self.tableView.mj_footer isRefreshing]) {
-            
-            [self.tableView.mj_footer endRefreshing];
-            
-        }
-        [self.tableView reloadData];
         
     } withFailure:^(ResponseResult *errorResult) {
         NSLog(@"login error : %@", errorResult);
@@ -269,12 +274,13 @@
         _tableView.rowHeight = UITableViewAutomaticDimension;
         _tableView.estimatedRowHeight = pixelValue(380);
         _tableView.mj_header = [MJWeiMaiHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
-        __weak typeof(self) weakSelf = self;
-        MJWeiMaiFooter *footer = [MJWeiMaiFooter footerWithRefreshingBlock:^{
-            [weakSelf loadMoreData];
-            
-        }];
-        _tableView.mj_footer = footer;
+//        __weak typeof(self) weakSelf = self;
+//        MJWeiMaiFooter *footer = [MJWeiMaiFooter footerWithRefreshingBlock:^{
+//            [weakSelf loadMoreData];
+//
+//        }];
+//        _tableView.mj_footer = footer;
+        _tableView.mj_footer = [MJWeiMaiFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
     }
     return _tableView;
 }

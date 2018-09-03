@@ -49,19 +49,18 @@
 
 #pragma mark - 获取验证码
 -(void)click_getCodeBtn{
-    [_findPassWordView.getCodeBtn startCountDownTime:60 withCountDownBlock:^{
-        [_findPassWordView.getCodeBtn setTitle:@"重新获取" forState:UIControlStateNormal];
-        
-    }];
     
     NSDictionary *param = @{
-                            @"tel":@"15395713725"
+                            @"tel":self.findPassWordView.phoneNumberTextField.text
                             };
     JYGetVerificationCodeAPIManager *getVerCodeAPIManager = [[JYGetVerificationCodeAPIManager alloc] init];
     [getVerCodeAPIManager loadDataWithParams:param withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
         JYVerificationCodeModel *codeModel = [[JYVerificationCodeModel alloc] initWithDictionary:responseObject error:nil];
         NSLog(@"codeModel : %@", codeModel);
-        
+        [_findPassWordView.getCodeBtn startCountDownTime:60 withCountDownBlock:^{
+            [_findPassWordView.getCodeBtn setTitle:@"重新获取" forState:UIControlStateNormal];
+            
+        }];
     } withFailure:^(ResponseResult *errorResult) {
         NSLog(@"get ver code error : %@", errorResult);
     }];

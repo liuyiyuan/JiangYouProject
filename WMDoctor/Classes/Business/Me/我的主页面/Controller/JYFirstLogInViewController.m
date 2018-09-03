@@ -48,7 +48,7 @@
 #pragma mark - 登录
 -(void)click_loginBtn{
     NSDictionary *param = @{
-                            @"tel" : @"13122221111",//_firstLogInView.phoneNumberLabel.text,
+                            @"tel" :_firstLogInView.phoneNumberLabel.text,
                             @"password" : _firstLogInView.passWordTextField.text
                             };
     

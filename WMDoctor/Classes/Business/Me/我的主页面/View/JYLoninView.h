@@ -26,7 +26,7 @@
 
 @property (nonatomic, strong) UIButton *forgetPassWordButton;//忘记密码按钮
 
-@property (nonatomic, strong) UIButton *firstLoginButton;//首次登录按钮
+//@property (nonatomic, strong) UIButton *firstLoginButton;//首次登录按钮
 
 @property (nonatomic, strong) UIButton *smsFastLoginButton;//短信快捷登录按钮
 

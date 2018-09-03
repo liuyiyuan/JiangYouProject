@@ -24,7 +24,6 @@
 
 @property (nonatomic, strong) NSString *tagId;//标签
 
-@property (nonatomic, strong) NSMutableArray *imageHeightArray;//图片高度数组
 
 @end
 
@@ -34,12 +33,6 @@
     NSDictionary *_userDict;
 }
 
--(NSMutableArray *)imageHeightArray{
-    if(!_imageHeightArray){
-        _imageHeightArray = [[NSMutableArray alloc]init];
-    }
-    return _imageHeightArray;
-}
 -(NSMutableArray *)PictureTagArray{
     if(!_PictureTagArray){
         _PictureTagArray = [[NSMutableArray alloc]init];
@@ -86,7 +79,7 @@
 //    static NSString *cellId = @"JYHomePictureTableViewCell";
     JYHomePictureTableViewCell *cell = [[JYHomePictureTableViewCell alloc]init];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    cell.itemH = [self.imageHeightArray[indexPath.row] floatValue];
+//    cell.itemH = [self.imageHeightArray[indexPath.row] floatValue];
 //    if(!cell){
 //        cell = [[JYHomePictureTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
 //    }
@@ -125,26 +118,10 @@
     JYHomeBeautyPictureLIstManager *beautyPictureLIs = [[JYHomeBeautyPictureLIstManager alloc] init];
     [beautyPictureLIs loadDataWithParams:param withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
         NSLog(@"%@",responseObject);
-        [self.imageHeightArray removeAllObjects];
         [self.dataArray removeAllObjects];
-        CGFloat itemW = UI_SCREEN_WIDTH - pixelValue(40);
-        CGFloat itemH = 0;
         for (NSDictionary *dic in [responseObject allObjects]) {
             [self.dataArray addObject:dic];
-            
-            NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",dic[@"msgImg"]]]];
-            UIImage *image = [UIImage imageWithData:data];
-            
-            if (image.size.height) {
-                itemH = image.size.height / image.size.width * itemW;
-                if (itemH >= itemW) {
-                    itemH = 200;
-                    itemH = image.size.height / image.size.width * itemW;
-                }
-            }
-            [self.imageHeightArray addObject:@(itemH)];
         }
-        
         _page++;
         [self.tableView.mj_header endRefreshing];
         [self.tableView reloadData];
@@ -171,30 +148,22 @@
     JYHomeBeautyPictureLIstManager *beautyPictureLIs = [[JYHomeBeautyPictureLIstManager alloc] init];
     [beautyPictureLIs loadDataWithParams:param withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
         NSLog(@"%@",responseObject);
-        CGFloat itemW = UI_SCREEN_WIDTH - pixelValue(40);
-        CGFloat itemH = 0;
-        for (NSDictionary *dic in [responseObject allObjects]) {
-            [self.dataArray addObject:dic];
-            
-            NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@",dic[@"msgImg"]]]];
-            UIImage *image = [UIImage imageWithData:data];
-            
-            if (image.size.height) {
-                itemH = image.size.height / image.size.width * itemW;
-                if (itemH >= itemW) {
-                    itemH = 200;
-                    itemH = image.size.height / image.size.width * itemW;
-                }
+        NSArray *array = responseObject;
+        if(array.count == 0){
+            [self.tableView.mj_footer endRefreshingWithState:MJRefreshStateNoMoreData];
+        }else{
+            for (NSDictionary *dic in [responseObject allObjects]) {
+                [self.dataArray addObject:dic];
             }
-            [self.imageHeightArray addObject:@(itemH)];
+            _page++;
+            if ([self.tableView.mj_footer isRefreshing]) {
+                
+                [self.tableView.mj_footer endRefreshing];
+                
+            }
+            [self.tableView reloadData];
         }
-        _page++;
-        if ([self.tableView.mj_footer isRefreshing]) {
-            
-            [self.tableView.mj_footer endRefreshing];
-            
-        }
-        [self.tableView reloadData];
+       
         
     } withFailure:^(ResponseResult *errorResult) {
         NSLog(@"login error : %@", errorResult);
@@ -277,12 +246,13 @@
         _tableView.rowHeight = UITableViewAutomaticDimension;
         _tableView.estimatedRowHeight = pixelValue(380);
         _tableView.mj_header = [MJWeiMaiHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
-        __weak typeof(self) weakSelf = self;
-        MJWeiMaiFooter *footer = [MJWeiMaiFooter footerWithRefreshingBlock:^{
-            [weakSelf loadMoreData];
-            
-        }];
-        _tableView.mj_footer = footer;
+//        __weak typeof(self) weakSelf = self;
+//        MJWeiMaiFooter *footer = [MJWeiMaiFooter footerWithRefreshingBlock:^{
+//            [weakSelf loadMoreData];
+//
+//        }];
+//        _tableView.mj_footer = footer;
+        _tableView.mj_footer = [MJWeiMaiFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreData)];
     }
     return _tableView;
 }

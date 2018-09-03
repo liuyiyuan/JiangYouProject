@@ -13,7 +13,7 @@
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if(self){
-//        [self configUI];
+        [self configUI];
     }
     return self;
 }
@@ -37,8 +37,7 @@
     [self.myImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.titleLabel.mas_bottom).offset(pixelValue(20));
         make.left.mas_equalTo(self.titleLabel.mas_left);
-        make.right.mas_equalTo(self.titleLabel.mas_right);
-        make.height.mas_equalTo(_itemH);
+        make.width.height.mas_equalTo(UI_SCREEN_WIDTH - pixelValue(60));
     }];
     
     [self.likeButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -98,7 +97,8 @@
 -(UIImageView *)myImageView{
     if(!_myImageView){
         _myImageView = [[UIImageView alloc]init];
-        _myImageView.contentMode = UIViewContentModeScaleToFill;
+        _myImageView.contentMode = UIViewContentModeScaleAspectFill;
+        _myImageView.layer.masksToBounds = YES;
     }
     return _myImageView;
 }
@@ -159,10 +159,6 @@
     return _lineView;
 }
 
--(void)setItemH:(CGFloat)itemH{
-    _itemH = itemH;
-    
-    [self configUI];
-}
+
 
 @end

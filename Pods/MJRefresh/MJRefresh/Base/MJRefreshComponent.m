@@ -168,6 +168,13 @@
     [self beginRefreshing];
 }
 
+#pragma mark - 带状态的刷新状态
+- (void)endRefreshingWithState:(MJRefreshState)state{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.state = state;
+    });
+}
+
 #pragma mark 结束刷新状态
 - (void)endRefreshing
 {

@@ -50,7 +50,7 @@
         [_loginView.eyeButton addTarget:self action:@selector(click_eyeButton:) forControlEvents:UIControlEventTouchUpInside];
         [_loginView.loginButton addTarget:self action:@selector(click_loginButton) forControlEvents:UIControlEventTouchUpInside];
         [_loginView.forgetPassWordButton addTarget:self action:@selector(click_forgetPassWordButton) forControlEvents:UIControlEventTouchUpInside];
-        [_loginView.firstLoginButton addTarget:self action:@selector(click_firstLoginButton) forControlEvents:UIControlEventTouchUpInside];
+//        [_loginView.firstLoginButton addTarget:self action:@selector(click_firstLoginButton) forControlEvents:UIControlEventTouchUpInside];
         [_loginView.smsFastLoginButton addTarget:self action:@selector(click_smsFastLoginButton) forControlEvents:UIControlEventTouchUpInside];
         [_loginView.weChatButton addTarget:self action:@selector(click_weChatButton) forControlEvents:UIControlEventTouchUpInside];
         [_loginView.qqButton addTarget:self action:@selector(click_sqqButton) forControlEvents:UIControlEventTouchUpInside];
@@ -80,10 +80,10 @@
     [self.navigationController pushViewController:[JYFindPassWordViewController new] animated:YES];
 }
 
-#pragma mark - 首次登录
--(void)click_firstLoginButton{
-    [self.navigationController pushViewController:[JYFirstLogInViewController new] animated:YES];
-}
+//#pragma mark - 首次登录
+//-(void)click_firstLoginButton{
+//    [self.navigationController pushViewController:[JYFirstLogInViewController new] animated:YES];
+//}
 
 #pragma mark - 首次登录
 -(void)click_smsFastLoginButton{
@@ -94,18 +94,22 @@
 #pragma mark - 登录点击
 -(void)click_loginButton{
     NSDictionary *param = @{
-                           @"tel":@"15395713725",
-                           @"password":[@"1" md5_32]
+                           @"tel":self.loginView.phoneNumberTextField.text,
+                           @"password":[self.loginView.passWordTextField.text md5_32]
                            };
     
     JYLoginNewAPIManager *loginAPIManager = [[JYLoginNewAPIManager alloc] init];
     [loginAPIManager loadDataWithParams:param withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
         JYLoginNewModel *loginUser = [[JYLoginNewModel alloc] initWithDictionary:responseObject error:nil];
-        [[NSNotificationCenter defaultCenter] postNotificationName:kLoginInSuccessNotification
-                                                            object:nil
-                                                          userInfo:nil];
+        if ([UIApplication sharedApplication].delegate.window.rootViewController != nil) {
+            [UIApplication sharedApplication].delegate.window.rootViewController = nil;
+        }
+        UITabBarController * tabBarController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"WMTabBarController"];
+        [UIApplication sharedApplication].delegate.window.rootViewController = tabBarController;
+        //        [[NSNotificationCenter defaultCenter] postNotificationName:kLoginInSuccessNotification
+        //                                                            object:nil
+        //                                                          userInfo:nil];
         [[NSUserDefaults standardUserDefaults] setObject:loginUser.toDictionary forKey:@"JYLoginUserInfo"];
-        [[NSUserDefaults standardUserDefaults]synchronize];
     } withFailure:^(ResponseResult *errorResult) {
         NSLog(@"login error : %@", errorResult);
     }];

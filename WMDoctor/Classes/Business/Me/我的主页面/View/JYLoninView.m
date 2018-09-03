@@ -28,7 +28,7 @@
     [self addSubview:self.passWordTextField];
     [self addSubview:self.loginButton];
     [self addSubview:self.forgetPassWordButton];
-    [self addSubview:self.firstLoginButton];
+//    [self addSubview:self.firstLoginButton];
     [self addSubview:self.smsFastLoginButton];
 //    [self addSubview:self.weChatButton];
 //    [self addSubview:self.qqButton];
@@ -81,16 +81,16 @@
         make.height.mas_equalTo(pixelValue(60));
     }];
     
-    [self.firstLoginButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.mas_equalTo(self.mas_centerX);
-        make.top.mas_equalTo(self.forgetPassWordButton.mas_top);
-        make.height.mas_equalTo(self.forgetPassWordButton.mas_height);
-    }];
+//    [self.firstLoginButton mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.centerX.mas_equalTo(self.mas_centerX);
+//        make.top.mas_equalTo(self.forgetPassWordButton.mas_top);
+//        make.height.mas_equalTo(self.forgetPassWordButton.mas_height);
+//    }];
     
     [self.smsFastLoginButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.mas_equalTo(self.loginButton.mas_right);
-        make.top.mas_equalTo(self.firstLoginButton.mas_top);
-        make.height.mas_equalTo(self.firstLoginButton.mas_height);
+        make.top.mas_equalTo(self.forgetPassWordButton.mas_top);
+        make.height.mas_equalTo(self.forgetPassWordButton.mas_height);
     }];
     
 //    [self.weChatButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -177,16 +177,16 @@
     }
     return _forgetPassWordButton;
 }
-//首次登录按钮
--(UIButton *)firstLoginButton{
-    if(!_firstLoginButton){
-        _firstLoginButton = [[UIButton alloc]init];
-        [_firstLoginButton setTitle:@"首次登录" forState:UIControlStateNormal];
-        [_firstLoginButton setTitleColor:[UIColor colorWithHexString:@"#138CFF"] forState:UIControlStateNormal];
-        _smsFastLoginButton.titleLabel.font = [UIFont systemFontOfSize:pixelValue(28)];
-    }
-    return _firstLoginButton;
-}
+////首次登录按钮
+//-(UIButton *)firstLoginButton{
+//    if(!_firstLoginButton){
+//        _firstLoginButton = [[UIButton alloc]init];
+//        [_firstLoginButton setTitle:@"首次登录" forState:UIControlStateNormal];
+//        [_firstLoginButton setTitleColor:[UIColor colorWithHexString:@"#138CFF"] forState:UIControlStateNormal];
+//        _smsFastLoginButton.titleLabel.font = [UIFont systemFontOfSize:pixelValue(28)];
+//    }
+//    return _firstLoginButton;
+//}
 //短信快捷登录按钮
 -(UIButton *)smsFastLoginButton{
     if(!_smsFastLoginButton){
