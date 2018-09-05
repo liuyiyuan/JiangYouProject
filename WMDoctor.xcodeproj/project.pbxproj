@@ -34,7 +34,6 @@
 		0C9817EC1DFFBC070016AD20 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9817EB1DFFBC070016AD20 /* main.m */; };
 		0C9817F51DFFBC070016AD20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9817F31DFFBC070016AD20 /* Main.storyboard */; };
 		0C9817FA1DFFBC070016AD20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C9817F91DFFBC070016AD20 /* Assets.xcassets */; };
-		0C9817FD1DFFBC070016AD20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9817FB1DFFBC070016AD20 /* LaunchScreen.storyboard */; };
 		0C9818081DFFBC070016AD20 /* WMDoctorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9818071DFFBC070016AD20 /* WMDoctorTests.m */; };
 		0C9818131DFFBC070016AD20 /* WMDoctorUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9818121DFFBC070016AD20 /* WMDoctorUITests.m */; };
 		0CAF8EEB1E08CEF10092E6A8 /* WeiMai.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CAF8EEA1E08CEF10092E6A8 /* WeiMai.storyboard */; };
@@ -832,7 +831,6 @@
 		0C9817EB1DFFBC070016AD20 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0C9817F41DFFBC070016AD20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0C9817F91DFFBC070016AD20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0C9817FC1DFFBC070016AD20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C9817FE1DFFBC070016AD20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C9818031DFFBC070016AD20 /* WMDoctorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WMDoctorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C9818071DFFBC070016AD20 /* WMDoctorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMDoctorTests.m; sourceTree = "<group>"; };
@@ -2439,7 +2437,6 @@
 				0CD6E2D21DFFF60300E75DB5 /* Localizable.strings */,
 				0CD6E2D41DFFF81500E75DB5 /* ConstantConfig.plist */,
 				0C896FBC1E022DDF00A57DC6 /* WMDoctor.entitlements */,
-				0C9817FB1DFFBC070016AD20 /* LaunchScreen.storyboard */,
 				0C5CB0811E1DEBC1005AF239 /* WMDoctor.xcdatamodeld */,
 			);
 			name = "Supporting Files";
@@ -5949,7 +5946,6 @@
 				850142A91F3C0A0A000BA97F /* WMPatientDataCell.xib in Resources */,
 				AD7A06EF2108D62300D3AAB4 /* SobotKit.bundle in Resources */,
 				1D3816621ECACF1400562FCA /* WMCertificationTextTableViewCell.xib in Resources */,
-				0C9817FD1DFFBC070016AD20 /* LaunchScreen.storyboard in Resources */,
 				854180C71FCBEB7E00EA4235 /* WMMyMicroBeanCell.xib in Resources */,
 				0CEB2EE51E0CFFE70070119A /* WMRateTableViewCell.xib in Resources */,
 				CC2DAF2420E0EB55008B630C /* WideImageNews.xib in Resources */,
@@ -6820,14 +6816,6 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		0C9817FB1DFFBC070016AD20 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0C9817FC1DFFBC070016AD20 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 		0CD6E2D21DFFF60300E75DB5 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -6950,6 +6938,7 @@
 			buildSettings = {
 				APP_DISPLAY_NAME = "医生test版";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = WMDoctor/WMDoctor.entitlements;
 				DEVELOPMENT_TEAM = XBW6S23R84;
@@ -6988,6 +6977,7 @@
 			buildSettings = {
 				APP_DISPLAY_NAME = "微脉医生";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = WMDoctor/WMDoctor.entitlements;
 				DEVELOPMENT_TEAM = XBW6S23R84;
@@ -7125,6 +7115,7 @@
 			buildSettings = {
 				APP_DISPLAY_NAME = "医生beta版";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = WMDoctor/WMDoctor.entitlements;
 				DEVELOPMENT_TEAM = XBW6S23R84;
