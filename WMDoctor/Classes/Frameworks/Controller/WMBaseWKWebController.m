@@ -8,8 +8,6 @@
 
 #import "WMBaseWKWebController.h"
 
-#import "WMGetStatusAPIManager.h"
-#import "WMStatusModel.h"
 
 #import "AppConfig.h"
 
@@ -173,21 +171,7 @@ static void *KINContext = &KINContext;
         if ([loginModel.certStatus isEqualToString:@"2"]) { //先判断内存中的状态，如果已认证通过就直接进去不请求接口了
             
         }else{
-            WMGetStatusAPIManager * apiManager = [WMGetStatusAPIManager new];
-            [apiManager loadDataWithParams:nil withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
-                WMStatusModel * statusModel = (WMStatusModel *)responseObject;
-                loginModel.certStatus = statusModel.status;
-                [WMLoginCache setDiskLoginModel:loginModel];
-                [WMLoginCache setMemoryLoginModel:loginModel];
-                if ([statusModel.status isEqualToString:@"2"]) {
-                    UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Me" bundle:nil];
-                    
-                }else{
-                   
-                }
-            } withFailure:^(ResponseResult *errorResult) {
-                
-            }];
+            
         }
     }];
     

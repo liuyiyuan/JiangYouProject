@@ -7,8 +7,6 @@
 //
 
 #import "WMBaseUIWebController.h"
-#import "WMGetTokenAPIManager.h"
-#import "WMTokenModel.h"
 #import "WMHUDUntil.h"
 
 @interface WMBaseUIWebController ()<UIWebViewDelegate>
@@ -195,25 +193,7 @@
  金融token获取  大渺
  */
 - (void)getToken{
-    WMGetTokenAPIManager * manager = [[WMGetTokenAPIManager alloc]init];
-//    _model = [[WMTokenModel alloc]init];
-    [manager loadDataWithParams:nil withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
-        NSLog(@"%@",responseObject);
-        WMTokenModel * tokenModel = (WMTokenModel *)responseObject;
-        
-        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        [defaults setObject:tokenModel.weimaipayToken forKey:@"jrtoken"];
-        [defaults setObject:tokenModel.expiredDateTime forKey:@"jrtokentime"];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-        
-        NSMutableURLRequest * mutableURLRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:self.urlString] cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:60];
-        
-        [mutableURLRequest setValue:tokenModel.weimaipayToken forHTTPHeaderField:@"token"];
-        [self.webView loadRequest:mutableURLRequest];
-        
-    } withFailure:^(ResponseResult *errorResult) {
-        
-    }];
+   
 }
 
 

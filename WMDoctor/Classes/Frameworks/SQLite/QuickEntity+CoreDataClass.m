@@ -10,37 +10,9 @@
 
 @implementation QuickEntity
 
-//获取某条快捷回复
-+ (WMQuickReplyModel *)getQuickEntity:(NSString *)userId andTheType:(NSString *)type{
-    
-    NSPredicate * predicate = [NSPredicate predicateWithFormat:@" userId = %@ and theType = %@ ",userId,type];
-    
-    QuickEntity * quick = [QuickEntity MR_findFirstWithPredicate:predicate sortedBy:@"order" ascending:NO];
-    
-    WMQuickReplyModel * model = [[WMQuickReplyModel alloc]init];
-    model.contentText = quick.contentText;
-    model.userId = quick.contentText;
-    model.order = quick.order;
-    model.theType = quick.theType;
-    
-    return model;
-}
 
-//保存一条快捷回复
-+ (void)saveQuickEntity:(WMQuickReplyModel *)model{
-    NSManagedObjectContext * context = [NSManagedObjectContext MR_defaultContext];
-    
-    QuickEntity * quick = [QuickEntity MR_createEntityInContext:context];
-    quick.contentText = model.contentText;
-    quick.userId = model.userId;
-    quick.order = model.order;
-    quick.theType = model.theType;
-    
-    
-    
-    [context MR_saveToPersistentStoreAndWait];
-    
-}
+
+
 
 //删除某条快捷回复
 + (void)deleteQuickEntity:(NSString *)userId andTheType:(NSString *)type andTheText:(NSString *)text{
@@ -87,14 +59,6 @@
     NSMutableArray * arrList = [NSMutableArray arrayWithCapacity:patientEntitys.count];
     
     for (int i = 0; i<patientEntitys.count; i++) {
-        WMQuickReplyModel * model = [WMQuickReplyModel new];
-        QuickEntity * quick = patientEntitys[i];
-        model.contentText = quick.contentText;
-        model.userId = quick.userId;
-        model.order = quick.order;
-        model.theType = quick.theType;
-        
-        [arrList addObject:model];
         
     }
     
