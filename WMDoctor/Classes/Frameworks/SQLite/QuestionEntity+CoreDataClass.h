@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
-#import "WMQuestionDraftModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -16,7 +15,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (QuestionEntity *)getQuestionEntityWith:(NSString *)userId andQuestionId:(NSString *)questionId;
 
-+ (void)saveQuestionEntity:(WMQuestionDraftModel *)entity;
 
 @end
 

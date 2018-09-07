@@ -48,7 +48,6 @@
 #import "WMJSONModel.h"
 #import "WMLoginCache.h"
 #import "WMDoctorVoiceModel.h"
-#import "WMQuestionModel.h"
 
 #import "PopUpUtil.h"
 
@@ -58,8 +57,6 @@
 #import "WMStringUtil.h"
 #import "WMRCCommonUtil.h"
 #import <SobotKit/SobotKit.h>
-//圈子
-#import "WMPatientReportedModel.h"
 
 
 //胎心

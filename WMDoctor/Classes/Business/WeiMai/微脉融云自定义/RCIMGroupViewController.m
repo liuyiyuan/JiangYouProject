@@ -12,7 +12,6 @@
 #import "WMGroupActivityAPIManager.h"
 #import "WMRCDataManager.h"
 #import "WMBaseWKWebController.h"
-#import "WMGroupMemberAPIManager.h"
 #import "WMPatientsInfoAPIManager.h"
 #import "WMPatientsInfoParamModel.h"
 #import "WMPatientsInfoModel.h"
@@ -340,30 +339,7 @@
 
 //获取群成员
 - (void)loadGroupMembersRequest{
-    WMGroupMemberAPIManager *groupMemberAPIManager=[[WMGroupMemberAPIManager alloc] init];
-    NSDictionary *param = @{
-                            @"qunbianhao" : self.targetId
-                            };
-    [groupMemberAPIManager loadDataWithParams:param withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
-        WMGroupMemberModel *groupMembers = [[WMGroupMemberModel alloc] initWithDictionary:responseObject error:nil];
-        [_groupMembers removeAllObjects];
-        [_groupMembers addObjectsFromArray: groupMembers.result];
-        for (WMOneMemberModel *member in _groupMembers) {
-            if ([member.userType intValue] == 1 || [member.userType intValue] == 2) {
-                RCUserInfo *userInfo=[WMRCUserInfoEntitys getPatientEntity:member.rongcloudId];
-                userInfo.type = member.userType;
-                [WMRCUserInfoEntitys savePatientEntity:userInfo];
-            }
-        }
-        if (_groupMembers.count > 0) {
-           
-        }
-        if ([groupMembers.currentUserType isEqualToString:@"2"]) {
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"DoctorVoiceChangeFrame" object:nil userInfo:nil];
-        }
-    } withFailure:^(ResponseResult *errorResult) {
-        NSLog(@"群成员error = %@", errorResult);
-    }];
+    
 }
 
 - (void)dealloc{

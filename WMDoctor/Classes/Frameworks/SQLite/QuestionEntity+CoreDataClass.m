@@ -21,20 +21,5 @@
     
 }
 
-//保存一条回复草稿
-+ (void)saveQuestionEntity:(WMQuestionDraftModel *)entity{
-    
-    
-    
-    NSManagedObjectContext * context = [NSManagedObjectContext MR_defaultContext];
-    
-    QuestionEntity * question = [QuestionEntity MR_createEntityInContext:context];
-    question.questionId = entity.questionId;
-    question.userId = entity.userId;
-    question.context = entity.context;
-    question.theTime = entity.theTime;
-    
-    [context MR_saveToPersistentStoreAndWait];
-}
 
 @end

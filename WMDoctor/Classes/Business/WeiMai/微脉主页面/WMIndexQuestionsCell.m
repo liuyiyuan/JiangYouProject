@@ -30,46 +30,7 @@
     // Configure the view for the selected state
 }
 
-- (void)setValueWithIndexQuestion:(WMQuestionModel *)question{
-    self.titleLabel.text = question.content;
-    self.timeLabel.text = question.askTime;
-    self.priceLabel.text = [NSString stringWithFormat:@"￥ %@",question.price];
-    
-    NSDictionary *stateDic = @{@"2" : @"被抢答",
-                               @"3" : @"已解答",
-                               @"4" : @"已关闭",
-                               @"5" : @"解答中"
-                               };
-    NSDictionary *stateColorDic = @{
-                                    @"2" : @"999999",
-                                    @"3" : @"333333",
-                                    @"4" : @"999999",
-                                    @"5" : @"333333"
-                                    };
-    NSDictionary *titleColorDic = @{
-                                    @"2" : @"999999",
-                                    @"3" : @"333333",
-                                    @"4" : @"B2B2B2",
-                                    @"5" : @"333333"
-                                    };
-    
-    self.answer.hidden = YES;
-    self.state.hidden = YES;
-    if ([question.state intValue] == 1) {
-        self.answer.hidden = NO;
-    } else {
-        self.state.hidden = NO;
-        if ([stateDic.allKeys containsObject:question.state]) {
-            self.state.text = [stateDic objectForKey:question.state];
-        }
-        if ([stateColorDic.allKeys containsObject:question.state]) {
-            self.state.textColor = [UIColor colorWithHexString:[stateColorDic objectForKey:question.state]];
-        }
-        if ([titleColorDic.allKeys containsObject:question.state]) {
-            self.titleLabel.textColor = [UIColor colorWithHexString:[titleColorDic objectForKey:question.state]];
-        }
-    }
-}
+
 
 - (IBAction)anwerBtn:(id)sender {
     

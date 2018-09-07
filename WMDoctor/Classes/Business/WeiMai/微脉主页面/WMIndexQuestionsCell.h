@@ -16,6 +16,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *state;
 @property (weak, nonatomic) IBOutlet UIView *theView;
 
-- (void)setValueWithIndexQuestion:(WMQuestionModel *)question;
 
 @end

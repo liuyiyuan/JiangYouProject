@@ -29,9 +29,7 @@
 
 + (NSMutableArray *)getTagNames:(NSMutableArray *)tags{
     NSMutableArray *tagNames = [NSMutableArray new];
-    for (WMPatientTagModel *tag in tags) {
-        [tagNames addObject:tag.tagName];
-    }
+   
     return tagNames;
 }
 

@@ -858,13 +858,7 @@
 //从标签数据中取出所有标签拼成字符串
 + (NSString *)getTagStrWithTagGroups:(NSArray *)tagGroup{
     NSString *tagStr = @"";
-    for (WMPatientTagModel *objTag in tagGroup) {
-        tagStr = [tagStr stringByAppendingString:objTag.tagName];
-        tagStr = [tagStr stringByAppendingString:@","];
-    }
-    if (tagStr.length > 1) {
-        tagStr = [tagStr substringToIndex:tagStr.length - 1];
-    }
+    
     return tagStr;
 }
 
