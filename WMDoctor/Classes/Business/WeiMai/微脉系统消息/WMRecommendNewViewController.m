@@ -14,7 +14,6 @@
 #import "WMMessageNewDetailViewController.h"
 #import "AppConfig.h"
 #import "WMDoctorInformationAPIManager.h"
-#import "WMDoctorInfoModel.h"
 #import "WMDoctorInfoNewsModel.h"
 
 

@@ -7,7 +7,6 @@
 //
 
 #import "WMAskADoctorAwokeView.h"
-#import "WMQuestionsViewController.h"
 #import "WMTabBarController.h"
 #import "WMNavgationController.h"
 
@@ -50,12 +49,7 @@
 - (void)imageViewDismiss
 {
     if ([self.window.rootViewController isKindOfClass:[WMTabBarController class]]){
-        WMTabBarController * tabBarController = (WMTabBarController *)self.window.rootViewController;
-        WMNavgationController * navController = (WMNavgationController*)tabBarController.viewControllers[tabBarController.selectedIndex];
-        WMQuestionsViewController *questionsViewController = [[WMQuestionsViewController alloc] init];
-        questionsViewController.hidesBottomBarWhenPushed = YES;
-        questionsViewController.backTitle = @"";
-        [navController pushViewController:questionsViewController animated:YES];
+        
     }
     [self removeFromSuperview];
     if (self.topView) {

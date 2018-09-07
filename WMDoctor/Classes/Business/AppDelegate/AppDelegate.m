@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "AppDelegate+Business.h"
-#import "WMGuidePageViewController.h"
 #import <UMMobClick/MobClick.h>
 #import "AppConfig.h"
 #import "WMMockHttpUtil.h"
@@ -43,7 +42,7 @@ static NSString * const kLaunchStoreName = @"wmdoctor.sqlite";
 static NSString * const kNetworkTestURL = @"https://www.baidu.com";
 
 
-@interface AppDelegate ()<selectDelegate,BuglyDelegate,UIApplicationDelegate>{
+@interface AppDelegate ()<BuglyDelegate,UIApplicationDelegate>{
     BOOL _isLaunchByPushInfo;
 }
 
@@ -96,31 +95,9 @@ static NSString * const kNetworkTestURL = @"https://www.baidu.com";
     NSString *appVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
     if (launchVersion==nil || ![launchVersion isEqualToString:appVersion]) {//版本为空或者版本不一致
         
-        NSArray *images = @[@"bg_yindao1", @"bg_yindao2", @"bg_yindao3"];
-        UIViewController * viewVC = self.window.rootViewController;
-        WMGuidePageViewController * guideVC = [[WMGuidePageViewController alloc]init];
-        guideVC.images = images;
-        guideVC.delegate = self;
-        [viewVC presentViewController:guideVC animated:NO completion:nil];
-        [[NSUserDefaults standardUserDefaults] setObject:appVersion forKey:@"launchVersion"];
-        
-        //升级版本之后，清除缓存 2018年05月31日19:48:23
-        [self cleanWebViewCache];
     }
 }
 
-- (void)guideDoneClick:(WMGuidePageViewController *)selfVC
-{
-    NSLog(@"gogogo");
-    selfVC.navigationController.navigationBarHidden = NO;
-    [UIApplication sharedApplication].statusBarHidden = NO;
-    [selfVC dismissViewControllerAnimated:NO completion:^{
-
-    }];
-    [[NSUserDefaults standardUserDefaults] setObject:@"1" forKey:@"yindaoEnd"];
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"yindaoEnd" object:nil];
-    
-}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.

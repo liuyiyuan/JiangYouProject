@@ -11,20 +11,13 @@
 #import "WMRCGroupNewsMessageCell.h"
 #import "WMGroupActivityAPIManager.h"
 #import "WMRCDataManager.h"
-#import "WMPatientDataViewController.h"
-#import "WMActivityWebViewController.h"
 #import "WMBaseWKWebController.h"
-#import "WMGroupMemberViewController.h"
 #import "WMGroupMemberAPIManager.h"
-#import "WMFasterReplyViewController.h"
-#import "WMQuickReplyListViewController.h"
 #import "WMPatientsInfoAPIManager.h"
 #import "WMPatientsInfoParamModel.h"
 #import "WMPatientsInfoModel.h"
 #import "WMRCConversationHeaderView.h"
 #import "WMDoctorVoiceView.h"
-#import "WMTodayFirstSpeakAPIManager.h"
-#import "WMGroupInfoViewController.h"
 #import "WMReplyAwokeView.h"
 #import "WMReplyMessage.h"
 #import "WMReplyMessageCell.h"
@@ -91,10 +84,8 @@
 }
 
 - (void)showActionSheet:(id)sender{
-    WMGroupInfoViewController *groupMembersViewController = [[WMGroupInfoViewController alloc] init];
-    groupMembersViewController.groupMembers = _groupMembers;
-    groupMembersViewController.groupID = self.targetId;
-    [self.navigationController pushViewController:groupMembersViewController animated:YES];
+   
+    
 }
 
 - (RCMessageContent *)willSendMessage:(RCMessageContent *)messageContent{
@@ -104,15 +95,7 @@
     LoginModel * loginModel = [WMLoginCache getMemoryLoginModel];
     NSString * todayString = [NSString stringWithFormat:@"%@,%@", [[date description] substringToIndex:10], loginModel.phone];
     if (![[[NSUserDefaults standardUserDefaults] objectForKey:@"todayFirstSpeak"] isEqualToString:todayString]) {
-        WMTodayFirstSpeakAPIManager *todayFirstSpeakAPIManager = [[WMTodayFirstSpeakAPIManager alloc] init];
-        [todayFirstSpeakAPIManager loadDataWithParams:@{} withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
-            [[NSUserDefaults standardUserDefaults] setObject:todayString forKey:@"todayFirstSpeak"];
-            [[NSUserDefaults standardUserDefaults] synchronize];
-        } withFailure:^(ResponseResult *errorResult) {
-            NSLog(@"首次发言error : %@", errorResult);
-            [[NSUserDefaults standardUserDefaults] setObject:todayString forKey:@"todayFirstSpeak"];
-            [[NSUserDefaults standardUserDefaults] synchronize];
-        }];
+        
     }
     //注意加一个 判断
     if ([messageContent isKindOfClass:[RCTextMessage class]]) {
@@ -244,7 +227,6 @@
 }
 
 - (void)backButtonAction:(UIBarButtonItem*)item{
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didTapUrlInMessageCell:(NSString *)url
@@ -257,20 +239,11 @@
     
     [[WMRCDataManager shareManager] getUserInfoWithUserId:userId completion:^(RCUserInfo *userInfo) {
         if ([userInfo.type isEqualToString:@"3"]) {
-            //跳转到患者资料页
-            WMPatientDataViewController *patientDataViewController = [[WMPatientDataViewController alloc] init];
-            patientDataViewController.userId = userId;
-            patientDataViewController.groupId = self.targetId;
-            [self.navigationController pushViewController:patientDataViewController animated:YES];
+           
         }
         
         //检查更新用户头像
-        [WMRCCommonUtil getPatientsInfoWithUserId:userId loadSuccessed:^{
-            __weak RCIMGroupViewController *weakSelf = self;
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [weakSelf.conversationMessageCollectionView reloadData];
-            });
-        }];
+        
     }];
 }
 
@@ -357,11 +330,7 @@
     switch (tag) {
         case 201: {
             //新版快捷回复
-            UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"WeiMai" bundle:nil];
-            WMQuickReplyListViewController * quickVC = [storyboard instantiateViewControllerWithIdentifier:@"WMQuickReplyListViewController"];
-            quickVC.typeStr = @"talk";
-            [self.navigationController pushViewController:quickVC animated:YES];
-            [self.chatSessionInputBarControl resetToDefaultStatus];
+            
         } break;
         default:
             [super pluginBoardView:pluginBoardView clickedItemWithTag:tag];
@@ -387,12 +356,7 @@
             }
         }
         if (_groupMembers.count > 0) {
-            __weak RCIMGroupViewController *weakSelf = self;
-            dispatch_async(dispatch_get_main_queue(), ^{
-                self.title = [NSString stringWithFormat:@"%@(%ld)",self.groupName, [_groupMembers count]];
-                _title = self.title;
-                [weakSelf.conversationMessageCollectionView reloadData];
-            });
+           
         }
         if ([groupMembers.currentUserType isEqualToString:@"2"]) {
             [[NSNotificationCenter defaultCenter] postNotificationName:@"DoctorVoiceChangeFrame" object:nil userInfo:nil];
@@ -435,17 +399,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark--是否禁止健康档案点击
-- (void)isClosePatientsHealth:(WMPatientStateModel *)patientStateModel{
-    
-    if ([patientStateModel.chakanjkdaqbz intValue]==0) {
-        self.conversationHeaderView.healthRecordBtn.enabled=NO;
-        [self.self.conversationHeaderView.healthRecordBtn setTitleColor:[UIColor colorWithHexString:@"a7a7a7"] forState:UIControlStateNormal];
-    }else{
-        self.self.conversationHeaderView.healthRecordBtn.enabled=YES;
-        [self.self.conversationHeaderView.healthRecordBtn setTitleColor:[UIColor colorWithHexString:@"1a1a1a"] forState:UIControlStateNormal];
-    }
-}
 
 - (void)setupDoctorVoiceView{
     self.doctorVoiceView = [[WMDoctorVoiceView alloc] initWithFrame:CGRectMake(0, SafeAreaTopHeight + 36, kScreen_width, kScreen_height - SafeAreaTopHeight - 36)];

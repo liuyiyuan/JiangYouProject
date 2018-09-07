@@ -8,22 +8,8 @@
 
 #import "WMBaseWKWebController.h"
 
-#import "WMCricleMainViewController.h"  //圈子主页面
-#import "WMMyInformationTableViewController.h"  //个人信息
-#import "WMDoctorMainTableViewController.h" //我的服务
-#import "WMMyNameCardViewController.h"  //我的名片页面
-#import "WMMyNameStatusCardViewController.h"    //我的名片状态页面
-#import "WMMyWalletViewController.h"    //我的钱包
-#import "WMMyOrderTableViewController.h"    //我的订单
-#import "WMServiceViewController.h"     //小脉助手
-#import "WMShareWebViewController.h"    //分享给朋友
 #import "WMGetStatusAPIManager.h"
 #import "WMStatusModel.h"
-#import "WMMyNewServiceViewController.h"
-#import "WMQuestionsViewController.h"
-#import "WMMyMicroBeanViewController.h"
-#import "WMScoreTaskViewController.h"
-#import "WMReportDetailViewController.h"
 
 #import "AppConfig.h"
 
@@ -166,35 +152,18 @@ static void *KINContext = &KINContext;
     __weak typeof(self) weakself = self;
     //去到我的圈子
     [self.bridge registerHandler:@"goSocial" handler:^(id data, WVJBResponseCallback responseCallback) {
-//        UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        WMCricleMainViewController * settingVC = [[WMCricleMainViewController alloc]init];
-        
-        settingVC.hidesBottomBarWhenPushed = YES;
-        [weakself.navigationController pushViewController:settingVC animated:YES];
+//
     }];
     
     //去到个人信息
     [self.bridge registerHandler:@"goPersonInformation" handler:^(id data, WVJBResponseCallback responseCallback) {
-        UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Me" bundle:nil];
-        WMMyInformationTableViewController * settingVC = (WMMyInformationTableViewController *)[storyboard instantiateViewControllerWithIdentifier:@"WMMyInformationTableViewController"];
         
-        settingVC.hidesBottomBarWhenPushed = YES;
-        [weakself.navigationController pushViewController:settingVC animated:YES];
     }];
     
     //去到我的服务
     [self.bridge registerHandler:@"goMyProvider" handler:^(id data, WVJBResponseCallback responseCallback) {
-//        UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Me" bundle:nil];
-//        WMDoctorMainTableViewController * settingVC = (WMDoctorMainTableViewController *)[storyboard instantiateViewControllerWithIdentifier:@"WMDoctorMainTableViewController"];
 //
-//        settingVC.hidesBottomBarWhenPushed = YES;
-//        [weakself.navigationController pushViewController:settingVC animated:YES];
         
-        UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Me" bundle:nil];
-        WMMyNewServiceViewController * doctorVC = [storyboard instantiateViewControllerWithIdentifier:@"WMMyNewServiceViewController"];
-        doctorVC.backTitle = @"我";
-        doctorVC.hidesBottomBarWhenPushed = YES;
-        [weakself.navigationController pushViewController:doctorVC animated:YES];
     }];
     
     //去到我的名片
@@ -202,11 +171,7 @@ static void *KINContext = &KINContext;
         LoginModel * loginModel = [WMLoginCache getMemoryLoginModel];
         //                loginModel.certStatus = @"1";   //自测试
         if ([loginModel.certStatus isEqualToString:@"2"]) { //先判断内存中的状态，如果已认证通过就直接进去不请求接口了
-            UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Me" bundle:nil];
-            WMMyNameCardViewController * myNameCardVC = [storyboard instantiateViewControllerWithIdentifier:@"WMMyNameCardViewController"];
-            myNameCardVC.backTitle = @"我";
-            myNameCardVC.hidesBottomBarWhenPushed = YES;
-            [weakself.navigationController pushViewController:myNameCardVC animated:YES];
+            
         }else{
             WMGetStatusAPIManager * apiManager = [WMGetStatusAPIManager new];
             [apiManager loadDataWithParams:nil withSuccess:^(NSURLSessionDataTask *task, id responseObject) {
@@ -216,17 +181,9 @@ static void *KINContext = &KINContext;
                 [WMLoginCache setMemoryLoginModel:loginModel];
                 if ([statusModel.status isEqualToString:@"2"]) {
                     UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Me" bundle:nil];
-                    WMMyNameCardViewController * myNameCardVC = [storyboard instantiateViewControllerWithIdentifier:@"WMMyNameCardViewController"];
-                    myNameCardVC.backTitle = @"我";
-                    myNameCardVC.hidesBottomBarWhenPushed = YES;
-                    [weakself.navigationController pushViewController:myNameCardVC animated:YES];
+                    
                 }else{
-                    UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Me" bundle:nil];
-                    WMMyNameStatusCardViewController * myNameCardVC = [storyboard instantiateViewControllerWithIdentifier:@"WMMyNameStatusCardViewController"];
-                    myNameCardVC.backTitle = @"我";
-                    myNameCardVC.status = statusModel.status;
-                    myNameCardVC.hidesBottomBarWhenPushed = YES;
-                    [weakself.navigationController pushViewController:myNameCardVC animated:YES];
+                   
                 }
             } withFailure:^(ResponseResult *errorResult) {
                 
@@ -237,118 +194,65 @@ static void *KINContext = &KINContext;
     //去到我的钱包
     [self.bridge registerHandler:@"goMyWallet" handler:^(id data, WVJBResponseCallback responseCallback) {
 //        UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Me" bundle:nil];
-        WMMyWalletViewController * settingVC = [[WMMyWalletViewController alloc]init];
-        settingVC.urlString = ([AppConfig currentEnvir] == 0)?H5_URL_MYWALLET_FORMAL:([AppConfig currentEnvir] == 3)?H5_URL_MYWALLET_PRE:H5_URL_MYWALLET_TEST;
-        settingVC.hidesBottomBarWhenPushed = YES;
-        [weakself.navigationController pushViewController:settingVC animated:YES];
+        
     }];
     
     //去到我的订单
     [self.bridge registerHandler:@"goMyOrder" handler:^(id data, WVJBResponseCallback responseCallback) {
-        UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Me" bundle:nil];
-        WMMyOrderTableViewController * settingVC = (WMMyOrderTableViewController *)[storyboard instantiateViewControllerWithIdentifier:@"WMMyOrderTableViewController"];
         
-        settingVC.hidesBottomBarWhenPushed = YES;
-        [weakself.navigationController pushViewController:settingVC animated:YES];
     }];
     
     //去到小脉助手
     [self.bridge registerHandler:@"goWemayHelper" handler:^(id data, WVJBResponseCallback responseCallback) {
 //        UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Me" bundle:nil];
-        //小脉助手
-        WMServiceViewController *settingVC=[[WMServiceViewController alloc]init];
-        settingVC.conversationType = ConversationType_CUSTOMERSERVICE;
-        settingVC.targetId = RONGCLOUD_SERVICE_ID;
-        settingVC.title = @"小脉助手";
-        settingVC.backName=@"我";
-        [weakself.navigationController pushViewController:settingVC animated:YES];
+       
     }];
     
     //去分享给朋友
     
     [self.bridge registerHandler:@"goAppShare" handler:^(id data, WVJBResponseCallback responseCallback) {
-//        UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Me" bundle:nil];
-        WMShareWebViewController * settingVC = [[WMShareWebViewController alloc]init];
-//        settingVC.urlString = H5_URL_SHAREPAGE;
-        settingVC.urlString = ([AppConfig currentEnvir] == 0)?H5_URL_SHAREFRIEND:([AppConfig currentEnvir] == 3)?H5_URL_SHAREFRIEND_PRE:H5_URL_SHAREFRIEND_TEST;
-        settingVC.hidesBottomBarWhenPushed = YES;
-        [weakself.navigationController pushViewController:settingVC animated:YES];
+
     }];
     
     
     //弱提示交互
     [self.bridge registerHandler:@"goPersonInformation" handler:^(id data, WVJBResponseCallback responseCallback) {
-        UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Me" bundle:nil];
-        WMMyInformationTableViewController * settingVC = (WMMyInformationTableViewController *)[storyboard instantiateViewControllerWithIdentifier:@"WMMyInformationTableViewController"];
-        
-        settingVC.hidesBottomBarWhenPushed = YES;
-        [weakself.navigationController pushViewController:settingVC animated:YES];
+       
     }];
     
     //我的钱包余额
     [self.bridge registerHandler:@"goBalanceList" handler:^(id data, WVJBResponseCallback responseCallback) {
-        WMMyWalletViewController * walletVC = [[WMMyWalletViewController alloc]init];
-        walletVC.hidesBottomBarWhenPushed = YES;
-        
-        walletVC.urlString = ([AppConfig currentEnvir] == 0)?H5_URL_MYWALLETDETAIL_FORMAL:([AppConfig currentEnvir] == 3)?H5_URL_MYWALLETDETAIL_PRE:H5_URL_MYWALLETDETAIL_TEST;
-        
-        walletVC.backTitle = @"我";
-        [weakself.navigationController pushViewController:walletVC animated:YES];
+       
     }];
     
     //guide
     [self.bridge registerHandler:@"goMePage" handler:^(id data, WVJBResponseCallback responseCallback) {
-        UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Me" bundle:nil];
-        WMMyInformationTableViewController * settingVC = (WMMyInformationTableViewController *)[storyboard instantiateViewControllerWithIdentifier:@"WMMyInformationTableViewController"];
         
-        settingVC.hidesBottomBarWhenPushed = YES;
-        [weakself.navigationController pushViewController:settingVC animated:YES];
     }];
     
     //一问医答设置
     [self.bridge registerHandler:@"goDoctorAnswered" handler:^(id data, WVJBResponseCallback responseCallback) {
         
-        WMQuestionsViewController *questionsViewController = [[WMQuestionsViewController alloc] init];
-        questionsViewController.backTitle = @"";
-        questionsViewController.hidesBottomBarWhenPushed = YES;
-        [weakself.navigationController pushViewController:questionsViewController animated:YES];
+       
     }];
     
     //我的微豆
     [self.bridge registerHandler:@"goMyBean" handler:^(id data, WVJBResponseCallback responseCallback) {
-        WMMyMicroBeanViewController *myMicroBeanViewController = [[WMMyMicroBeanViewController alloc] init];
-        myMicroBeanViewController.backTitle = @"";
-        myMicroBeanViewController.hidesBottomBarWhenPushed = YES;
-        [weakself.navigationController pushViewController:myMicroBeanViewController animated:YES];
+       
     }];
     
     //积分不够?点此赚积分
     [self.bridge registerHandler:@"toScoreTaskList" handler:^(id data, WVJBResponseCallback responseCallback) {
-        UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Me" bundle:nil];
-        WMScoreTaskViewController * recordVC = (WMScoreTaskViewController *)[storyboard instantiateViewControllerWithIdentifier:@"WMScoreTaskViewController"];
-        recordVC.hidesBottomBarWhenPushed = YES;
-        [weakself.navigationController pushViewController:recordVC animated:YES];
+        
     }];
     
     //联系小脉助手兑换
     [self.bridge registerHandler:@"toWeimaiRobot" handler:^(id data, WVJBResponseCallback responseCallback) {
-        //小脉助手
-        WMServiceViewController *settingVC=[[WMServiceViewController alloc]init];
-        settingVC.conversationType = ConversationType_CUSTOMERSERVICE;
-        settingVC.targetId = RONGCLOUD_SERVICE_ID;
-        settingVC.title = @"小脉助手";
-        settingVC.backName=@"我";
-        [weakself.navigationController pushViewController:settingVC animated:YES];
+       
     }];
     
     [self.bridge registerHandler:@"goDetail" handler:^(id data, WVJBResponseCallback responseCallback) {
-        UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"WeiMai" bundle:nil];
-        WMReportDetailViewController * reportVC = [storyboard instantiateViewControllerWithIdentifier:@"WMReportDetailViewController"];
-        //        [WMHUDUntil showMessageToWindow:@"成功调用goDetail"];
-        //        id thedata = data[@"data"];
-        reportVC.title = data[@"name"];
-        reportVC.report_id = data[@"mid"];
-        [weakself.navigationController pushViewController:reportVC animated:YES];
+      
         
     }];
 }
@@ -362,7 +266,7 @@ static void *KINContext = &KINContext;
     if ([_webView canGoBack]) {
         [_webView goBack];
     }else{
-        [self.navigationController popViewControllerAnimated:YES];
+        
     }
 }
 //重写返回按钮

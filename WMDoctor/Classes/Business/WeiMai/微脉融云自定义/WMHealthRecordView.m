@@ -11,7 +11,6 @@
 #import "WMPatientsHealthAPIManager.h"
 #import "WMPatientsHealthParamModel.h"
 #import "WMPatientsHealthModel.h"
-#import "WMHealthDetailViewController.h"
 @implementation WMHealthRecordView
 
 - (id)initWithFrame:(CGRect)frame withDingdanhao:(NSString *)dingdanhao{
@@ -112,10 +111,7 @@
 
 #pragma mark--UITableViewDelegate
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    WMPatientsHealthDetailModel *patientsHealthDetailModel=self.dataSource[indexPath.row];
-    WMHealthDetailViewController *healthDetailVC=[[WMHealthDetailViewController alloc]init];
-    healthDetailVC.urlString=[CommonUtil utf8WithString:patientsHealthDetailModel.jiuzhenmxlb];
-    [self.superviewcontroller.navigationController pushViewController:healthDetailVC animated:YES];
+    
     
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

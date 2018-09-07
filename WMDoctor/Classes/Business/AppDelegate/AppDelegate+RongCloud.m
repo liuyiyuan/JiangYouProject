@@ -14,17 +14,12 @@
 #import <PINCache.h>
 #import "WMTabBarController.h"
 #import "WMNavgationController.h"
-#import "WMRCConversationViewController.h"
-#import "WMServiceViewController.h"
 #import "WMSystemMessageViewController.h"
 #import "WMRCBusinessCardMessage.h"
 #import "WMJSONUtil.h"
-#import "WMCardiotocographyReportViewController.h"
 #import "WMGroupRCDataManager.h"
 #import "WMRCGroupNewsMessage.h"
-#import "WMQuestionsViewController.h"
 #import "WMTabBarController.h"
-#import "WMDoctorIndexViewController.h"
 #import "WMReplyMessage.h"
 
 
@@ -243,72 +238,28 @@
             if ([cTypeString isEqualToString:@"PR"]) {
                 //胎心监护
                 if ([tIdString isEqualToString:@"system000003"]) {
-                    [[RCIMClient sharedRCIMClient] clearMessagesUnreadStatus:ConversationType_PRIVATE targetId:tIdString];
-                    UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"WeiMai" bundle:nil];
-                    WMCardiotocographyReportViewController * settingVC = (WMCardiotocographyReportViewController *)[storyboard instantiateViewControllerWithIdentifier:@"WMCardiotocographyReportViewController"];
                     
-                    settingVC.hidesBottomBarWhenPushed = YES;
-                    [navController showViewController:settingVC sender:nil];
-                    return;
                 }
                 
                 //一问医答
                 if ([tIdString isEqualToString:@"system000004"]) {
                     
-                    //为一问医答消息
-                    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"functionCode1001"];
-                    [[NSUserDefaults standardUserDefaults] synchronize];
-                    NSNotification *notification =[NSNotification notificationWithName:@"InfoNotification" object:nil userInfo:nil];
-                    [[NSNotificationCenter defaultCenter] postNotification:notification];
                     
-                    [[RCIMClient sharedRCIMClient] clearMessagesUnreadStatus:ConversationType_PRIVATE targetId:tIdString];
-                    WMQuestionsViewController *questionsViewController = [[WMQuestionsViewController alloc] init];
-                    questionsViewController.backTitle = @"";
-                    questionsViewController.hidesBottomBarWhenPushed = YES;
-                    [navController showViewController:questionsViewController sender:nil];
-                    return;
                 }
                 
                 //单聊
                 [[WMRCDataManager shareManager] getUserInfoWithUserId:tIdString completion:^(RCUserInfo *userInfo) {
                     
                     //咨询服务
-                    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"functionCode1002"];
-                    [[NSUserDefaults standardUserDefaults] synchronize];
-                    NSNotification *notification =[NSNotification notificationWithName:@"InfoNotification" object:nil userInfo:nil];
-                    [[NSNotificationCenter defaultCenter] postNotification:notification];
-                    
-                    WMRCConversationViewController *_conversationVC = [[WMRCConversationViewController alloc]init];
-                    _conversationVC.conversationType = ConversationType_PRIVATE;
-                    _conversationVC.targetId = tIdString;
-                    _conversationVC.title=userInfo.name;
-                    _conversationVC.hidesBottomBarWhenPushed = YES;
-                    _conversationVC.backName=@"返回";
-                    [navController showViewController:_conversationVC sender:nil];
+                   
                     
                 }];
             } else if ([cTypeString isEqualToString:@"CS"]){
-                //小脉助手
-                WMServiceViewController *serviceVC=[[WMServiceViewController alloc]init];
-                serviceVC.conversationType = ConversationType_CUSTOMERSERVICE;
-                serviceVC.targetId = RONGCLOUD_SERVICE_ID;
-                serviceVC.title = @"小脉助手";
-                serviceVC.backName=@"返回";
-                //serviceVC.csInfo=customerServiceInfo;
-                serviceVC.hidesBottomBarWhenPushed = YES;
-                [navController showViewController:serviceVC sender:nil];
+                
             } else if ([cTypeString isEqualToString:@"SYS"]){
                 //系统消息  跳转到列表
                 //系统消息
-                NSString *oNameString=[[userInfo objectForKey:@"rc"] objectForKey:@"oName"];
-                if ([oNameString isEqualToString:@"RC:TxtMsg"]) {
-                    WMSystemMessageViewController *systemMessageVC=[[WMSystemMessageViewController alloc]init];
-                    systemMessageVC.hidesBottomBarWhenPushed=YES;
-                    NSMutableArray *array= [[NSMutableArray alloc] initWithObjects:@"tIdString", nil];
-                    systemMessageVC.systemTargetIdArr= array;
-                    systemMessageVC.backTitle=@"返回";
-                    [navController showViewController:systemMessageVC sender:nil];
-                }
+               
             } else if ([cTypeString isEqualToString:@"GRP"]){
                 //医疗圈红点设置
                 [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"functionCode1003"];

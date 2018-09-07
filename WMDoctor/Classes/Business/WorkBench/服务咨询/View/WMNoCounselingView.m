@@ -10,8 +10,6 @@
 
 #import "WMTabBarController.h"
 #import "WMNavgationController.h"
-#import "WMShareWebViewController.h"
-#import "WMQuestionsViewController.h"
 
 @implementation WMNoCounselingView
 

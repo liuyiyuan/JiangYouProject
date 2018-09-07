@@ -15,7 +15,6 @@
 #import "WMRCUserInfoEntitys+CoreDataClass.h"
 #import "WMDoctorVoiceAPIManager.h"
 #import "WMRCDataManager.h"
-#import "WMDoctorRecordViewController.h"
 #import "WMTabBarController.h"
 #import "WMNavgationController.h"
 
@@ -260,12 +259,7 @@
 
 //发布今日医声
 - (void)haveIntroducedClickAction:(UIButton *)button{
-    UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Circle" bundle:nil];
-    WMDoctorRecordViewController * doctorRecordViewController = (WMDoctorRecordViewController *)[storyboard instantiateViewControllerWithIdentifier:@"WMDoctorRecordViewController"];
-    doctorRecordViewController.theGroupId = self.targetId;
-    WMTabBarController * tabBarController = (WMTabBarController *)self.window.rootViewController;
-    WMNavgationController * navController = (WMNavgationController*)tabBarController.viewControllers[tabBarController.selectedIndex];
-    [navController pushViewController:doctorRecordViewController animated:NO];
+    
     
 }
 
