@@ -30,10 +30,6 @@
 //融云
 #import <RongIMKit/RongIMKit.h>
 #import "AppDelegate+RongCloud.h"
-#import "RCUserInfo+WMAddition.h"
-#import "WMIMGroupModel.h"
-#import "WMGroupActivityModel.h"
-#import "WMGroupNewsModel.h"
 
 //公共类
 #import "UIColor+Hex.h"
@@ -47,7 +43,6 @@
 #import "MJWeiMaiFooter.h"
 #import "WMJSONModel.h"
 #import "WMLoginCache.h"
-#import "WMDoctorVoiceModel.h"
 
 #import "PopUpUtil.h"
 
@@ -55,7 +50,6 @@
 #import "WMShareData.h"
 #import "WMInformationModel.h"
 #import "WMStringUtil.h"
-#import "WMRCCommonUtil.h"
 #import <SobotKit/SobotKit.h>
 
 

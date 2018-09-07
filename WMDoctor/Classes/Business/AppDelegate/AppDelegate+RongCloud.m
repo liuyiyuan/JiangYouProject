@@ -7,20 +7,13 @@
 //
 
 #import "AppDelegate+RongCloud.h"
-#import "WMRCDataManager.h"
-#import "WMRCInquiryMessage.h"
 #import "AppConfig.h"
 #import "WMCacheModel.h"
 #import <PINCache.h>
 #import "WMTabBarController.h"
 #import "WMNavgationController.h"
-#import "WMSystemMessageViewController.h"
-#import "WMRCBusinessCardMessage.h"
 #import "WMJSONUtil.h"
-#import "WMGroupRCDataManager.h"
-#import "WMRCGroupNewsMessage.h"
 #import "WMTabBarController.h"
-#import "WMReplyMessage.h"
 
 
 @implementation AppDelegate (RongCloud)
@@ -36,16 +29,7 @@
     //设置接收消息代理
     [RCIM sharedRCIM].receiveMessageDelegate=self;
     //[RCIM sharedRCIM].userInfoDataSource=self;
-    [RCIM sharedRCIM].userInfoDataSource = [WMRCDataManager shareManager];
-    [RCIM sharedRCIM].groupInfoDataSource = [WMGroupRCDataManager shareManager];
-    
-    // 注册自定义消息的方法
-    // 这里注册初次问诊的消息
-    [[RCIM sharedRCIM] registerMessageType:[WMRCInquiryMessage class]];
-    [[RCIM sharedRCIM] registerMessageType:[WMRCBusinessCardMessage class]];
-    [[RCIM sharedRCIM] registerMessageType:[WMRCGroupNewsMessage class]];
-    [[RCIM sharedRCIM] registerMessageType:[WMReplyMessage class]];
-    
+   
     //设置IMKit连接状态的监听器
     [RCIM sharedRCIM].connectionStatusDelegate=self;
     //从服务端获取token 然后建立与服务器的连接
@@ -247,13 +231,7 @@
                     
                 }
                 
-                //单聊
-                [[WMRCDataManager shareManager] getUserInfoWithUserId:tIdString completion:^(RCUserInfo *userInfo) {
-                    
-                    //咨询服务
-                   
-                    
-                }];
+                
             } else if ([cTypeString isEqualToString:@"CS"]){
                 
             } else if ([cTypeString isEqualToString:@"SYS"]){

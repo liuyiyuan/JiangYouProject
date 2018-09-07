@@ -9,7 +9,6 @@
 #import "AppDelegate+GeTui.h"
 #import "WMTabBarController.h"
 #import "WMNavgationController.h"
-#import "WMSystemMessageViewController.h"
 @implementation AppDelegate (GeTui)
 
 
